@@ -70,6 +70,38 @@ namespace Polideportivo
         {
             Application.Exit();
         }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLateral_Click(object sender, EventArgs e)
+        {
+            if (panelLateralInterno.Width >= 270)
+            {
+                panelLateralInterno.Width = 68;
+                panelLateralWrapper.Width = 90;
+                separadorLogo.Width = 52;
+            }
+            else
+            {
+                panelLateralInterno.Width = 270;
+                panelLateralWrapper.Width = 300;
+                separadorLogo.Width = 252;
+            }
+                  
+        }
+
+        private void ContenidoPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 

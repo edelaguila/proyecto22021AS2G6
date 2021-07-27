@@ -31,34 +31,33 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelLateralWrapper = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.panelLateralInterno = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnMenuJugador = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.separadorLogo = new ReaLTaiizor.Controls.AirSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ContenidoPanel = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.MenuSuperiorPanel = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.btnLateral = new System.Windows.Forms.PictureBox();
             this.Restaurar = new System.Windows.Forms.PictureBox();
             this.Salir = new System.Windows.Forms.PictureBox();
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.Maximizar = new System.Windows.Forms.PictureBox();
             this.Polideportivo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnLateral = new System.Windows.Forms.PictureBox();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panelLateralWrapper.SuspendLayout();
             this.panelLateralInterno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.ContenidoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.MenuSuperiorPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLateral)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLateral)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLateralWrapper
@@ -93,7 +92,7 @@
             this.panelLateralInterno.Controls.Add(this.button5);
             this.panelLateralInterno.Controls.Add(this.button4);
             this.panelLateralInterno.Controls.Add(this.button3);
-            this.panelLateralInterno.Controls.Add(this.button2);
+            this.panelLateralInterno.Controls.Add(this.btnMenuJugador);
             this.panelLateralInterno.Controls.Add(this.button1);
             this.panelLateralInterno.Controls.Add(this.separadorLogo);
             this.panelLateralInterno.Controls.Add(this.label1);
@@ -103,13 +102,90 @@
             this.panelLateralInterno.Name = "panelLateralInterno";
             this.panelLateralInterno.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             this.panelLateralInterno.PrimerColor = System.Drawing.Color.White;
-            this.panelLateralInterno.Size = new System.Drawing.Size(250, 612);
+            this.panelLateralInterno.Size = new System.Drawing.Size(250, 770);
             this.panelLateralInterno.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             this.panelLateralInterno.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
             this.panelLateralInterno.TabIndex = 0;
             this.panelLateralInterno.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.panelLateralInterno.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.panelLateralInterno.TopRight = System.Drawing.Color.Fuchsia;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Transparent;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(15, 418);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(221, 53);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "DEPORTES";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Transparent;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(15, 344);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(221, 53);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "DEPORTES";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(15, 270);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(221, 53);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "DEPORTES";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // btnMenuJugador
+            // 
+            this.btnMenuJugador.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuJugador.FlatAppearance.BorderSize = 0;
+            this.btnMenuJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuJugador.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuJugador.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuJugador.Image")));
+            this.btnMenuJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuJugador.Location = new System.Drawing.Point(15, 196);
+            this.btnMenuJugador.Name = "btnMenuJugador";
+            this.btnMenuJugador.Size = new System.Drawing.Size(221, 53);
+            this.btnMenuJugador.TabIndex = 9;
+            this.btnMenuJugador.Text = "    JUGADORES";
+            this.btnMenuJugador.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(15, 122);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(221, 53);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "     DEPORTES";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // separadorLogo
             // 
@@ -154,7 +230,7 @@
             this.ContenidoPanel.BottomLeft = System.Drawing.Color.Black;
             this.ContenidoPanel.BottomRight = System.Drawing.Color.Fuchsia;
             this.ContenidoPanel.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.ContenidoPanel.Controls.Add(this.pictureBox2);
+            this.ContenidoPanel.Controls.Add(this.panelPrincipal);
             this.ContenidoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContenidoPanel.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             this.ContenidoPanel.Location = new System.Drawing.Point(281, 77);
@@ -169,17 +245,6 @@
             this.ContenidoPanel.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.ContenidoPanel.TopRight = System.Drawing.Color.Fuchsia;
             this.ContenidoPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ContenidoPanel_Paint);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(342, 148);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(364, 300);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
             // 
             // MenuSuperiorPanel
             // 
@@ -205,6 +270,18 @@
             this.MenuSuperiorPanel.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.MenuSuperiorPanel.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.MenuSuperiorPanel.TopRight = System.Drawing.Color.Fuchsia;
+            // 
+            // btnLateral
+            // 
+            this.btnLateral.BackColor = System.Drawing.Color.Transparent;
+            this.btnLateral.Image = ((System.Drawing.Image)(resources.GetObject("btnLateral.Image")));
+            this.btnLateral.Location = new System.Drawing.Point(37, 23);
+            this.btnLateral.Name = "btnLateral";
+            this.btnLateral.Size = new System.Drawing.Size(32, 32);
+            this.btnLateral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnLateral.TabIndex = 6;
+            this.btnLateral.TabStop = false;
+            this.btnLateral.Click += new System.EventHandler(this.btnLateral_Click);
             // 
             // Restaurar
             // 
@@ -271,97 +348,16 @@
             this.Polideportivo.TabIndex = 1;
             this.Polideportivo.Text = "P O L I D E P O R T I V O";
             // 
-            // button1
+            // panelPrincipal
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::Polideportivo.Properties.Resources.icons8_cancel_32px;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(15, 122);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 53);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "DEPORTES";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Image = global::Polideportivo.Properties.Resources.icons8_cancel_32px;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(15, 196);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(221, 53);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "DEPORTES";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Image = global::Polideportivo.Properties.Resources.icons8_cancel_32px;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(15, 270);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(221, 53);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "DEPORTES";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Image = global::Polideportivo.Properties.Resources.icons8_cancel_32px;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(15, 344);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(221, 53);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "DEPORTES";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Transparent;
-            this.button5.Image = global::Polideportivo.Properties.Resources.icons8_cancel_32px;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(15, 418);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(221, 53);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "DEPORTES";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // btnLateral
-            // 
-            this.btnLateral.BackColor = System.Drawing.Color.Transparent;
-            this.btnLateral.Image = ((System.Drawing.Image)(resources.GetObject("btnLateral.Image")));
-            this.btnLateral.Location = new System.Drawing.Point(37, 23);
-            this.btnLateral.Name = "btnLateral";
-            this.btnLateral.Size = new System.Drawing.Size(32, 32);
-            this.btnLateral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnLateral.TabIndex = 6;
-            this.btnLateral.TabStop = false;
-            this.btnLateral.Click += new System.EventHandler(this.btnLateral_Click);
+            this.panelPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.panelPrincipal.Location = new System.Drawing.Point(30, 23);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(1060, 770);
+            this.panelPrincipal.TabIndex = 0;
             // 
             // Form1
             // 
@@ -380,14 +376,13 @@
             this.panelLateralInterno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ContenidoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.MenuSuperiorPanel.ResumeLayout(false);
             this.MenuSuperiorPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLateral)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLateral)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -405,14 +400,14 @@
         private ReaLTaiizor.Controls.ParrotGradientPanel panelLateralInterno;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private ReaLTaiizor.Controls.AirSeparator separadorLogo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMenuJugador;
         private System.Windows.Forms.PictureBox btnLateral;
+        private System.Windows.Forms.Panel panelPrincipal;
     }
 }
 

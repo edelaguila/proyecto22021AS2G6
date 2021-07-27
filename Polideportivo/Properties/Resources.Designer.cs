@@ -63,9 +63,9 @@ namespace Polideportivo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_cancel_32px {
+        internal static System.Drawing.Bitmap imgDeportes {
             get {
-                object obj = ResourceManager.GetObject("icons8_cancel_32px", resourceCulture);
+                object obj = ResourceManager.GetObject("imgDeportes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

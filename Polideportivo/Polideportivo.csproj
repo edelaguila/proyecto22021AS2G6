@@ -51,16 +51,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PolideportivoForm.cs">
+    <Compile Include="Vista\formJugador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PolideportivoForm.Designer.cs">
-      <DependentUpon>PolideportivoForm.cs</DependentUpon>
+    <Compile Include="Vista\formJugador.Designer.cs">
+      <DependentUpon>formJugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\formPolideportivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formPolideportivo.Designer.cs">
+      <DependentUpon>formPolideportivo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PolideportivoForm.resx">
-      <DependentUpon>PolideportivoForm.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\formPolideportivo.resx">
+      <DependentUpon>formPolideportivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +94,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagenes\icons8_cancel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\icons8_user_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\imgDeportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controlador\" />
+    <Folder Include="Modelo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

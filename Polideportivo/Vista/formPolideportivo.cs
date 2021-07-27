@@ -104,32 +104,34 @@ namespace Polideportivo
 
         }
 
-        
+        private Form formActivo = null;
         private void btnDeportes_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new formJugador());
+            
+        }
+
+        
+        private void abrirFormHijo(Form formHijo)
         {
             if (formActivo == null)
             {
-                formActivo = new formJugador();
-                abrirFormHijo(formActivo);
+                formActivo = formHijo;
+                formHijo.TopLevel = false;
+                formHijo.FormBorderStyle = FormBorderStyle.None;
+                formHijo.Dock = DockStyle.Fill;
+                panelPrincipal.Controls.Add(formHijo);
+                panelPrincipal.Tag = formHijo;
+                formHijo.BringToFront();
+                formHijo.Show();
             }
             else
             {
                 formActivo.Close();
                 formActivo = null;
             }
-            
-        }
 
-        private Form formActivo = null;
-        private void abrirFormHijo(Form formHijo)
-        {
-            formHijo.TopLevel = false;
-            formHijo.FormBorderStyle = FormBorderStyle.None;
-            formHijo.Dock = DockStyle.Fill;
-            panelPrincipal.Controls.Add(formHijo);
-            panelPrincipal.Tag = formHijo;
-            formHijo.BringToFront();
-            formHijo.Show();
+            
         }
 
     }

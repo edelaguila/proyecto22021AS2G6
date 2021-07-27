@@ -11,3 +11,16 @@ C:\Users\RM\Desktop\U\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.c
 C:\Users\RM\Desktop\U\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.csproj.CopyComplete
 C:\Users\RM\Desktop\U\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.exe
 C:\Users\RM\Desktop\U\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.pdb
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\bin\Debug\Polideportivo.exe.config
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\bin\Debug\Polideportivo.exe
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\bin\Debug\Polideportivo.pdb
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\bin\Debug\ReaLTaiizor.dll
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\bin\Debug\ReaLTaiizor.xml
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.csproj.AssemblyReference.cache
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.Form1.resources
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.Properties.Resources.resources
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.csproj.GenerateResource.cache
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.csproj.CopyComplete
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.exe
+C:\Users\USUARIO 1\Grupo 6\pro\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.pdb

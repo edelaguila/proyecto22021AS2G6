@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Polideportivo.AccesoDatos;
+using Polideportivo.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +22,32 @@ namespace Polideportivo.Vista
         private void formJugador_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //modeloJugador modelo = new modeloJugador(nombreTexto.Text);
+            modeloJugador modelo = new modeloJugador();
+            //EquipoModelo modelo1 = new EquipoModelo(); CTRL + SHIFT + ESPACIO para ver sobrecargas
+            //Si no se pasara como propiedad a la función, se puede hacer así:
+            //modelo.Nombre = nombreTexto.Text;
+
+            //// Pruebas acaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //foreach (IConexionDatos db in GlobalConfig.Conexiones)
+            //{
+            //    db.CrearEquipo(modelo);
+            //}
+            controladorJugador db = new controladorJugador();
+            db.agregarJugador(modelo); 
+
+            //nombreTexto.Text = ""; 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            IEnumerable<modeloJugador> modelo = new modeloJugador();
+            controladorJugador db = new controladorJugador();
+            modelo = db.mostrarJugadores();
         }
     }
 }

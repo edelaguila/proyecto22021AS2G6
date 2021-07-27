@@ -26,5 +26,51 @@ namespace Polideportivo
         {
 
         }
+
+        private void MenuLateralWrapPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        protected override void OnResizeBegin(EventArgs e)
+        {
+            SuspendLayout();
+            base.OnResizeBegin(e);
+        }
+        protected override void OnResizeEnd(EventArgs e)
+        {
+            ResumeLayout();
+            base.OnResizeEnd(e);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Restaurar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            Maximizar.Visible = true;
+            Restaurar.Visible = false;
+        }
+
+        private void Minimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void Maximizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            Maximizar.Visible = false;
+            Restaurar.Visible = true;
+        }
+
+        private void Salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
+
+
 }

@@ -45,9 +45,10 @@ namespace Polideportivo.Vista
 
         private void button2_Click(object sender, EventArgs e)
         {
-            IEnumerable<modeloJugador> modelo = new modeloJugador();
+            IEnumerable<modeloJugador> modelo;
             controladorJugador db = new controladorJugador();
             modelo = db.mostrarJugadores();
+            tablaJugadores.DataSource = modelo;
         }
     }
 }

@@ -31,6 +31,8 @@ namespace Polideportivo.Vista
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.tablaJugadores = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -53,17 +55,29 @@ namespace Polideportivo.Vista
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // tablaJugadores
+            // 
+            this.tablaJugadores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tablaJugadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaJugadores.Location = new System.Drawing.Point(26, 29);
+            this.tablaJugadores.Name = "tablaJugadores";
+            this.tablaJugadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tablaJugadores.Size = new System.Drawing.Size(809, 255);
+            this.tablaJugadores.TabIndex = 2;
+            // 
             // formJugador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 595);
+            this.Controls.Add(this.tablaJugadores);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formJugador";
             this.Text = "formJugador";
             this.Load += new System.EventHandler(this.formJugador_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -72,5 +86,6 @@ namespace Polideportivo.Vista
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView tablaJugadores;
     }
 }

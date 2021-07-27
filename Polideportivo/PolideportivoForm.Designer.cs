@@ -28,70 +28,113 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new ReaLTaiizor.Controls.Panel();
-            this.panel2 = new ReaLTaiizor.Controls.Panel();
-            this.panel3 = new ReaLTaiizor.Controls.Panel();
+            this.MenuLateralWrapPanel = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.ContenidoPanel = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.MenuSuperiorPanel = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.parrotPictureBox1 = new ReaLTaiizor.Controls.ParrotPictureBox();
+            this.MenuSuperiorPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // MenuLateralWrapPanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(1400, 117);
-            this.panel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel1.TabIndex = 0;
-            this.panel1.Text = "panel1";
+            this.MenuLateralWrapPanel.BottomLeft = System.Drawing.Color.Black;
+            this.MenuLateralWrapPanel.BottomRight = System.Drawing.Color.Fuchsia;
+            this.MenuLateralWrapPanel.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.MenuLateralWrapPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MenuLateralWrapPanel.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.MenuLateralWrapPanel.Location = new System.Drawing.Point(0, 83);
+            this.MenuLateralWrapPanel.Name = "MenuLateralWrapPanel";
+            this.MenuLateralWrapPanel.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.MenuLateralWrapPanel.PrimerColor = System.Drawing.Color.White;
+            this.MenuLateralWrapPanel.Size = new System.Drawing.Size(329, 817);
+            this.MenuLateralWrapPanel.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.MenuLateralWrapPanel.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
+            this.MenuLateralWrapPanel.TabIndex = 2;
+            this.MenuLateralWrapPanel.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.MenuLateralWrapPanel.TopLeft = System.Drawing.Color.DeepSkyBlue;
+            this.MenuLateralWrapPanel.TopRight = System.Drawing.Color.Fuchsia;
             // 
-            // panel2
+            // ContenidoPanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel2.Location = new System.Drawing.Point(187, 117);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.panel2.Size = new System.Drawing.Size(1213, 783);
-            this.panel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel2.TabIndex = 1;
-            this.panel2.Text = "panel2";
+            this.ContenidoPanel.BottomLeft = System.Drawing.Color.Black;
+            this.ContenidoPanel.BottomRight = System.Drawing.Color.Fuchsia;
+            this.ContenidoPanel.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.ContenidoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContenidoPanel.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.ContenidoPanel.Location = new System.Drawing.Point(329, 83);
+            this.ContenidoPanel.Name = "ContenidoPanel";
+            this.ContenidoPanel.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.ContenidoPanel.PrimerColor = System.Drawing.Color.White;
+            this.ContenidoPanel.Size = new System.Drawing.Size(1071, 817);
+            this.ContenidoPanel.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.ContenidoPanel.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
+            this.ContenidoPanel.TabIndex = 2;
+            this.ContenidoPanel.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.ContenidoPanel.TopLeft = System.Drawing.Color.DeepSkyBlue;
+            this.ContenidoPanel.TopRight = System.Drawing.Color.Fuchsia;
             // 
-            // panel3
+            // MenuSuperiorPanel
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel3.Location = new System.Drawing.Point(0, 117);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(5);
-            this.panel3.Size = new System.Drawing.Size(187, 783);
-            this.panel3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel3.TabIndex = 1;
-            this.panel3.Text = "panel3";
+            this.MenuSuperiorPanel.BottomLeft = System.Drawing.Color.Black;
+            this.MenuSuperiorPanel.BottomRight = System.Drawing.Color.Fuchsia;
+            this.MenuSuperiorPanel.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.MenuSuperiorPanel.Controls.Add(this.parrotPictureBox1);
+            this.MenuSuperiorPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MenuSuperiorPanel.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.MenuSuperiorPanel.Location = new System.Drawing.Point(0, 0);
+            this.MenuSuperiorPanel.Name = "MenuSuperiorPanel";
+            this.MenuSuperiorPanel.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.MenuSuperiorPanel.PrimerColor = System.Drawing.Color.White;
+            this.MenuSuperiorPanel.Size = new System.Drawing.Size(1400, 83);
+            this.MenuSuperiorPanel.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.MenuSuperiorPanel.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
+            this.MenuSuperiorPanel.TabIndex = 1;
+            this.MenuSuperiorPanel.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.MenuSuperiorPanel.TopLeft = System.Drawing.Color.DeepSkyBlue;
+            this.MenuSuperiorPanel.TopRight = System.Drawing.Color.Fuchsia;
+            // 
+            // parrotPictureBox1
+            // 
+            this.parrotPictureBox1.ColorLeft = System.Drawing.Color.DodgerBlue;
+            this.parrotPictureBox1.ColorRight = System.Drawing.Color.DodgerBlue;
+            this.parrotPictureBox1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotPictureBox1.FilterAlpha = 200;
+            this.parrotPictureBox1.FilterEnabled = true;
+            this.parrotPictureBox1.Image = null;
+            this.parrotPictureBox1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.parrotPictureBox1.IsElipse = false;
+            this.parrotPictureBox1.IsParallax = false;
+            this.parrotPictureBox1.Location = new System.Drawing.Point(12, 10);
+            this.parrotPictureBox1.Name = "parrotPictureBox1";
+            this.parrotPictureBox1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.parrotPictureBox1.Size = new System.Drawing.Size(97, 67);
+            this.parrotPictureBox1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.parrotPictureBox1.TabIndex = 0;
+            this.parrotPictureBox1.Text = "parrotPictureBox1";
+            this.parrotPictureBox1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1400, 900);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ContenidoPanel);
+            this.Controls.Add(this.MenuLateralWrapPanel);
+            this.Controls.Add(this.MenuSuperiorPanel);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.MenuSuperiorPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ReaLTaiizor.Controls.Panel panel1;
-        private ReaLTaiizor.Controls.Panel panel2;
-        private ReaLTaiizor.Controls.Panel panel3;
+        private ReaLTaiizor.Controls.ParrotGradientPanel MenuLateralWrapPanel;
+        private ReaLTaiizor.Controls.ParrotGradientPanel ContenidoPanel;
+        private ReaLTaiizor.Controls.ParrotGradientPanel MenuSuperiorPanel;
+        private ReaLTaiizor.Controls.ParrotPictureBox parrotPictureBox1;
     }
 }
 

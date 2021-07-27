@@ -39,7 +39,7 @@
             this.separadorLogo = new ReaLTaiizor.Controls.AirSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.ContenidoPanel = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.panelPrincipalWrapper = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.MenuSuperiorPanel = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.btnLateral = new System.Windows.Forms.PictureBox();
@@ -51,7 +51,7 @@
             this.panelLateralWrapper.SuspendLayout();
             this.panelLateralInterno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.ContenidoPanel.SuspendLayout();
+            this.panelPrincipalWrapper.SuspendLayout();
             this.MenuSuperiorPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLateral)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar)).BeginInit();
@@ -72,7 +72,7 @@
             this.panelLateralWrapper.Name = "panelLateralWrapper";
             this.panelLateralWrapper.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             this.panelLateralWrapper.PrimerColor = System.Drawing.Color.White;
-            this.panelLateralWrapper.Size = new System.Drawing.Size(281, 643);
+            this.panelLateralWrapper.Size = new System.Drawing.Size(280, 643);
             this.panelLateralWrapper.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             this.panelLateralWrapper.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
             this.panelLateralWrapper.TabIndex = 2;
@@ -227,32 +227,32 @@
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
             // 
-            // ContenidoPanel
+            // panelPrincipalWrapper
             // 
-            this.ContenidoPanel.BottomLeft = System.Drawing.Color.Black;
-            this.ContenidoPanel.BottomRight = System.Drawing.Color.Fuchsia;
-            this.ContenidoPanel.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.ContenidoPanel.Controls.Add(this.panelPrincipal);
-            this.ContenidoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContenidoPanel.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            this.ContenidoPanel.Location = new System.Drawing.Point(281, 77);
-            this.ContenidoPanel.Name = "ContenidoPanel";
-            this.ContenidoPanel.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.ContenidoPanel.PrimerColor = System.Drawing.Color.White;
-            this.ContenidoPanel.Size = new System.Drawing.Size(959, 643);
-            this.ContenidoPanel.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.ContenidoPanel.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
-            this.ContenidoPanel.TabIndex = 2;
-            this.ContenidoPanel.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.ContenidoPanel.TopLeft = System.Drawing.Color.DeepSkyBlue;
-            this.ContenidoPanel.TopRight = System.Drawing.Color.Fuchsia;
-            this.ContenidoPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ContenidoPanel_Paint);
+            this.panelPrincipalWrapper.BottomLeft = System.Drawing.Color.Black;
+            this.panelPrincipalWrapper.BottomRight = System.Drawing.Color.Fuchsia;
+            this.panelPrincipalWrapper.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.panelPrincipalWrapper.Controls.Add(this.panelPrincipal);
+            this.panelPrincipalWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrincipalWrapper.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.panelPrincipalWrapper.Location = new System.Drawing.Point(280, 77);
+            this.panelPrincipalWrapper.Name = "panelPrincipalWrapper";
+            this.panelPrincipalWrapper.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.panelPrincipalWrapper.PrimerColor = System.Drawing.Color.White;
+            this.panelPrincipalWrapper.Size = new System.Drawing.Size(960, 643);
+            this.panelPrincipalWrapper.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.panelPrincipalWrapper.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
+            this.panelPrincipalWrapper.TabIndex = 2;
+            this.panelPrincipalWrapper.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.panelPrincipalWrapper.TopLeft = System.Drawing.Color.DeepSkyBlue;
+            this.panelPrincipalWrapper.TopRight = System.Drawing.Color.Fuchsia;
+            this.panelPrincipalWrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipalWrapper_Paint);
             // 
             // panelPrincipal
             // 
             this.panelPrincipal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelPrincipal.BackColor = System.Drawing.Color.Transparent;
-            this.panelPrincipal.Location = new System.Drawing.Point(30, 23);
+            this.panelPrincipal.Location = new System.Drawing.Point(31, 23);
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(900, 595);
             this.panelPrincipal.TabIndex = 0;
@@ -364,7 +364,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 720);
-            this.Controls.Add(this.ContenidoPanel);
+            this.Controls.Add(this.panelPrincipalWrapper);
             this.Controls.Add(this.panelLateralWrapper);
             this.Controls.Add(this.MenuSuperiorPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -375,7 +375,7 @@
             this.panelLateralInterno.ResumeLayout(false);
             this.panelLateralInterno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.ContenidoPanel.ResumeLayout(false);
+            this.panelPrincipalWrapper.ResumeLayout(false);
             this.MenuSuperiorPanel.ResumeLayout(false);
             this.MenuSuperiorPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLateral)).EndInit();
@@ -390,7 +390,7 @@
         #endregion
 
         private ReaLTaiizor.Controls.ParrotGradientPanel panelLateralWrapper;
-        private ReaLTaiizor.Controls.ParrotGradientPanel ContenidoPanel;
+        private ReaLTaiizor.Controls.ParrotGradientPanel panelPrincipalWrapper;
         private ReaLTaiizor.Controls.ParrotGradientPanel MenuSuperiorPanel;
         private System.Windows.Forms.Label Polideportivo;
         private System.Windows.Forms.PictureBox Minimizar;

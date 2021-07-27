@@ -84,25 +84,21 @@ namespace Polideportivo
 
         private void btnLateral_Click(object sender, EventArgs e)
         {
-            if (panelLateralInterno.Width >= 270)
+            if (panelLateralInterno.Width == 250)
             {
-                panelLateralInterno.Width = 68;
-                panelLateralWrapper.Width = 90;
-                separadorLogo.Width = 52;
+                panelLateralInterno.Width = 100;
+                panelLateralWrapper.Width = 140;
+                separadorLogo.Width = 50;
             }
             else
             {
-                panelLateralInterno.Width = 270;
-                panelLateralWrapper.Width = 300;
-                separadorLogo.Width = 252;
+                panelLateralInterno.Width = 250;
+                panelLateralWrapper.Width = 280;
+                separadorLogo.Width = 220;
             }
                   
         }
 
-        private void ContenidoPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private Form formActivo = null;
         private void btnDeportes_Click(object sender, EventArgs e)
@@ -134,6 +130,10 @@ namespace Polideportivo
             
         }
 
+        private void panelPrincipalWrapper_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 

@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\controladorPolideportivo.cs" />
     <Compile Include="Vista\formJugador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,7 +106,6 @@
     <None Include="Imagenes\imgDeportes.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controlador\" />
     <Folder Include="Modelo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

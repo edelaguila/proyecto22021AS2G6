@@ -79,11 +79,11 @@
             this.panelLateralWrapper.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.panelLateralWrapper.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.panelLateralWrapper.TopRight = System.Drawing.Color.Fuchsia;
-            this.panelLateralWrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuLateralWrapPanel_Paint);
             // 
             // panelLateralInterno
             // 
-            this.panelLateralInterno.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelLateralInterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelLateralInterno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelLateralInterno.BottomLeft = System.Drawing.Color.Black;
             this.panelLateralInterno.BottomRight = System.Drawing.Color.Fuchsia;
@@ -210,7 +210,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(66, 21);
+            this.label1.Location = new System.Drawing.Point(85, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 25);
             this.label1.TabIndex = 6;
@@ -220,9 +220,9 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(15, 14);
+            this.pictureBox3.Location = new System.Drawing.Point(19, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.Size = new System.Drawing.Size(42, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
@@ -246,11 +246,12 @@
             this.panelPrincipalWrapper.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.panelPrincipalWrapper.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.panelPrincipalWrapper.TopRight = System.Drawing.Color.Fuchsia;
-            this.panelPrincipalWrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipalWrapper_Paint);
             // 
             // panelPrincipal
             // 
-            this.panelPrincipal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.panelPrincipal.Location = new System.Drawing.Point(31, 23);
             this.panelPrincipal.Name = "panelPrincipal";

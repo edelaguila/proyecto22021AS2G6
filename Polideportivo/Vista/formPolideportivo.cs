@@ -18,20 +18,7 @@ namespace Polideportivo
             InitializeComponent();
         }
 
-        private void aloneTextBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void bigLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MenuLateralWrapPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         protected override void OnResizeBegin(EventArgs e)
         {
             SuspendLayout();
@@ -41,11 +28,6 @@ namespace Polideportivo
         {
             ResumeLayout();
             base.OnResizeEnd(e);
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Restaurar_Click(object sender, EventArgs e)
@@ -72,22 +54,12 @@ namespace Polideportivo
             Application.Exit();
         }
 
-        private void materialButton1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLateral_Click(object sender, EventArgs e)
         {
             if (panelLateralInterno.Width == 250)
             {
-                panelLateralInterno.Width = 100;
-                panelLateralWrapper.Width = 140;
+                panelLateralInterno.Width = 77;
+                panelLateralWrapper.Width = 110;
                 separadorLogo.Width = 50;
             }
             else
@@ -130,10 +102,6 @@ namespace Polideportivo
             
         }
 
-        private void panelPrincipalWrapper_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 
 

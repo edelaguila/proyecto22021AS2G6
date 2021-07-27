@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Polideportivo.Vista
 {
-    public partial class Form1 : Form
+    public partial class formJugador : Form
     {
-        public Form1()
+        public formJugador()
         {
             InitializeComponent();
+        }
+
+        private void formJugador_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

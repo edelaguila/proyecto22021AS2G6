@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Polideportivo.Vista;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Polideportivo
 {
-    public partial class Form1 : Form
+    public partial class formPolideportivo : Form
     {
-        public Form1()
+        public formPolideportivo()
         {
             InitializeComponent();
         }
@@ -102,6 +103,35 @@ namespace Polideportivo
         {
 
         }
+
+        
+        private void btnDeportes_Click(object sender, EventArgs e)
+        {
+            if (formActivo == null)
+            {
+                formActivo = new formJugador();
+                abrirFormHijo(formActivo);
+            }
+            else
+            {
+                formActivo.Close();
+                formActivo = null;
+            }
+            
+        }
+
+        private Form formActivo = null;
+        private void abrirFormHijo(Form formHijo)
+        {
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            panelPrincipal.Controls.Add(formHijo);
+            panelPrincipal.Tag = formHijo;
+            formHijo.BringToFront();
+            formHijo.Show();
+        }
+
     }
 
 

@@ -1,7 +1,7 @@
 ﻿
 namespace Polideportivo.Vista
 {
-    partial class Form1
+    partial class formJugador
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,19 @@ namespace Polideportivo.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // formJugador
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "formJugador";
+            this.Text = "formJugador";
+            this.Load += new System.EventHandler(this.formJugador_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

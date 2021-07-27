@@ -1,6 +1,6 @@
 ﻿namespace Polideportivo
 {
-    partial class Form1
+    partial class formPolideportivo
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formPolideportivo));
             this.panelLateralWrapper = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.panelLateralInterno = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.btnDeportes = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnMenuJugador = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.separadorLogo = new ReaLTaiizor.Controls.AirSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ContenidoPanel = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.MenuSuperiorPanel = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.btnLateral = new System.Windows.Forms.PictureBox();
             this.Restaurar = new System.Windows.Forms.PictureBox();
@@ -47,7 +48,6 @@
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.Maximizar = new System.Windows.Forms.PictureBox();
             this.Polideportivo = new System.Windows.Forms.Label();
-            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panelLateralWrapper.SuspendLayout();
             this.panelLateralInterno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -72,7 +72,7 @@
             this.panelLateralWrapper.Name = "panelLateralWrapper";
             this.panelLateralWrapper.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             this.panelLateralWrapper.PrimerColor = System.Drawing.Color.White;
-            this.panelLateralWrapper.Size = new System.Drawing.Size(281, 823);
+            this.panelLateralWrapper.Size = new System.Drawing.Size(281, 643);
             this.panelLateralWrapper.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             this.panelLateralWrapper.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
             this.panelLateralWrapper.TabIndex = 2;
@@ -83,17 +83,16 @@
             // 
             // panelLateralInterno
             // 
-            this.panelLateralInterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelLateralInterno.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelLateralInterno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelLateralInterno.BottomLeft = System.Drawing.Color.Black;
             this.panelLateralInterno.BottomRight = System.Drawing.Color.Fuchsia;
             this.panelLateralInterno.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.panelLateralInterno.Controls.Add(this.btnDeportes);
             this.panelLateralInterno.Controls.Add(this.button5);
             this.panelLateralInterno.Controls.Add(this.button4);
             this.panelLateralInterno.Controls.Add(this.button3);
             this.panelLateralInterno.Controls.Add(this.btnMenuJugador);
-            this.panelLateralInterno.Controls.Add(this.button1);
             this.panelLateralInterno.Controls.Add(this.separadorLogo);
             this.panelLateralInterno.Controls.Add(this.label1);
             this.panelLateralInterno.Controls.Add(this.pictureBox3);
@@ -102,13 +101,32 @@
             this.panelLateralInterno.Name = "panelLateralInterno";
             this.panelLateralInterno.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             this.panelLateralInterno.PrimerColor = System.Drawing.Color.White;
-            this.panelLateralInterno.Size = new System.Drawing.Size(250, 770);
+            this.panelLateralInterno.Size = new System.Drawing.Size(250, 595);
             this.panelLateralInterno.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             this.panelLateralInterno.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
             this.panelLateralInterno.TabIndex = 0;
             this.panelLateralInterno.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.panelLateralInterno.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.panelLateralInterno.TopRight = System.Drawing.Color.Fuchsia;
+            // 
+            // btnDeportes
+            // 
+            this.btnDeportes.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeportes.FlatAppearance.BorderSize = 0;
+            this.btnDeportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDeportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.btnDeportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeportes.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeportes.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDeportes.Image = ((System.Drawing.Image)(resources.GetObject("btnDeportes.Image")));
+            this.btnDeportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeportes.Location = new System.Drawing.Point(15, 111);
+            this.btnDeportes.Name = "btnDeportes";
+            this.btnDeportes.Size = new System.Drawing.Size(221, 53);
+            this.btnDeportes.TabIndex = 13;
+            this.btnDeportes.Text = "     DEPORTES";
+            this.btnDeportes.UseVisualStyleBackColor = false;
+            this.btnDeportes.Click += new System.EventHandler(this.btnDeportes_Click);
             // 
             // button5
             // 
@@ -171,22 +189,6 @@
             this.btnMenuJugador.Text = "    JUGADORES";
             this.btnMenuJugador.UseVisualStyleBackColor = false;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(15, 122);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 53);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "     DEPORTES";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // separadorLogo
             // 
             this.separadorLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
@@ -237,7 +239,7 @@
             this.ContenidoPanel.Name = "ContenidoPanel";
             this.ContenidoPanel.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             this.ContenidoPanel.PrimerColor = System.Drawing.Color.White;
-            this.ContenidoPanel.Size = new System.Drawing.Size(1119, 823);
+            this.ContenidoPanel.Size = new System.Drawing.Size(959, 643);
             this.ContenidoPanel.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             this.ContenidoPanel.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
             this.ContenidoPanel.TabIndex = 2;
@@ -245,6 +247,15 @@
             this.ContenidoPanel.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.ContenidoPanel.TopRight = System.Drawing.Color.Fuchsia;
             this.ContenidoPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ContenidoPanel_Paint);
+            // 
+            // panelPrincipal
+            // 
+            this.panelPrincipal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.panelPrincipal.Location = new System.Drawing.Point(30, 23);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(900, 595);
+            this.panelPrincipal.TabIndex = 0;
             // 
             // MenuSuperiorPanel
             // 
@@ -263,7 +274,7 @@
             this.MenuSuperiorPanel.Name = "MenuSuperiorPanel";
             this.MenuSuperiorPanel.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             this.MenuSuperiorPanel.PrimerColor = System.Drawing.Color.White;
-            this.MenuSuperiorPanel.Size = new System.Drawing.Size(1400, 77);
+            this.MenuSuperiorPanel.Size = new System.Drawing.Size(1240, 77);
             this.MenuSuperiorPanel.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             this.MenuSuperiorPanel.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
             this.MenuSuperiorPanel.TabIndex = 1;
@@ -288,7 +299,7 @@
             this.Restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Restaurar.BackColor = System.Drawing.Color.Transparent;
             this.Restaurar.Image = ((System.Drawing.Image)(resources.GetObject("Restaurar.Image")));
-            this.Restaurar.Location = new System.Drawing.Point(1304, 23);
+            this.Restaurar.Location = new System.Drawing.Point(1144, 23);
             this.Restaurar.Name = "Restaurar";
             this.Restaurar.Size = new System.Drawing.Size(32, 32);
             this.Restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -302,7 +313,7 @@
             this.Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Salir.BackColor = System.Drawing.Color.Transparent;
             this.Salir.Image = ((System.Drawing.Image)(resources.GetObject("Salir.Image")));
-            this.Salir.Location = new System.Drawing.Point(1342, 23);
+            this.Salir.Location = new System.Drawing.Point(1182, 23);
             this.Salir.Name = "Salir";
             this.Salir.Size = new System.Drawing.Size(32, 32);
             this.Salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -315,7 +326,7 @@
             this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Minimizar.BackColor = System.Drawing.Color.Transparent;
             this.Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Minimizar.Image")));
-            this.Minimizar.Location = new System.Drawing.Point(1266, 23);
+            this.Minimizar.Location = new System.Drawing.Point(1106, 23);
             this.Minimizar.Name = "Minimizar";
             this.Minimizar.Size = new System.Drawing.Size(32, 32);
             this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -328,7 +339,7 @@
             this.Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Maximizar.BackColor = System.Drawing.Color.Transparent;
             this.Maximizar.Image = ((System.Drawing.Image)(resources.GetObject("Maximizar.Image")));
-            this.Maximizar.Location = new System.Drawing.Point(1304, 23);
+            this.Maximizar.Location = new System.Drawing.Point(1144, 23);
             this.Maximizar.Name = "Maximizar";
             this.Maximizar.Size = new System.Drawing.Size(32, 32);
             this.Maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -348,29 +359,18 @@
             this.Polideportivo.TabIndex = 1;
             this.Polideportivo.Text = "P O L I D E P O R T I V O";
             // 
-            // panelPrincipal
-            // 
-            this.panelPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelPrincipal.BackColor = System.Drawing.Color.Transparent;
-            this.panelPrincipal.Location = new System.Drawing.Point(30, 23);
-            this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(1060, 770);
-            this.panelPrincipal.TabIndex = 0;
-            // 
-            // Form1
+            // formPolideportivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 900);
+            this.ClientSize = new System.Drawing.Size(1240, 720);
             this.Controls.Add(this.ContenidoPanel);
             this.Controls.Add(this.panelLateralWrapper);
             this.Controls.Add(this.MenuSuperiorPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "formPolideportivo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "formPolideportivo";
             this.panelLateralWrapper.ResumeLayout(false);
             this.panelLateralInterno.ResumeLayout(false);
             this.panelLateralInterno.PerformLayout();
@@ -401,13 +401,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private ReaLTaiizor.Controls.AirSeparator separadorLogo;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnMenuJugador;
         private System.Windows.Forms.PictureBox btnLateral;
         private System.Windows.Forms.Panel panelPrincipal;
+        private System.Windows.Forms.Button btnDeportes;
     }
 }
 

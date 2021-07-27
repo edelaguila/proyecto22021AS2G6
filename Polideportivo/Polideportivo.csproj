@@ -65,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vista\formJugador.resx">
+      <DependentUpon>formJugador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\formPolideportivo.resx">
       <DependentUpon>formPolideportivo.cs</DependentUpon>
     </EmbeddedResource>

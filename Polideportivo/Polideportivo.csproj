@@ -97,21 +97,6 @@
   <ItemGroup>
     <Compile Include="Controlador\controladorJugador.cs" />
     <Compile Include="Controlador\controladorPolideportivo.cs" />
-    <Compile Include="datosJugador.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>datosJugador.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="datosJugadorEquipo.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>datosJugadorEquipo.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="datosJugadorEquipoPrueba2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>datosJugadorEquipoPrueba2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Modelo\modeloJugador.cs" />
     <Compile Include="Vista\formJugador.cs">
       <SubType>Form</SubType>
@@ -148,39 +133,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="datosJugador.xsc">
-      <DependentUpon>datosJugador.xsd</DependentUpon>
-    </None>
-    <None Include="datosJugador.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>datosJugador.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="datosJugador.xss">
-      <DependentUpon>datosJugador.xsd</DependentUpon>
-    </None>
-    <None Include="datosJugadorEquipo.xsc">
-      <DependentUpon>datosJugadorEquipo.xsd</DependentUpon>
-    </None>
-    <None Include="datosJugadorEquipo.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>datosJugadorEquipo.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="datosJugadorEquipo.xss">
-      <DependentUpon>datosJugadorEquipo.xsd</DependentUpon>
-    </None>
-    <None Include="datosJugadorEquipoPrueba2.xsc">
-      <DependentUpon>datosJugadorEquipoPrueba2.xsd</DependentUpon>
-    </None>
-    <None Include="datosJugadorEquipoPrueba2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>datosJugadorEquipoPrueba2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="datosJugadorEquipoPrueba2.xss">
-      <DependentUpon>datosJugadorEquipoPrueba2.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -12,16 +12,18 @@
               <DbSource ConnectionRef="bdpolideportivoConnectionString (Settings)" DbObjectName="bdpolideportivo.vwjugador" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `nombre`, `anotaciones`, `rol`, `equipo` FROM `bdpolideportivo`.`vwjugador`</CommandText>
+                    <CommandText>SELECT `pkIdJugador`, `nombre`, `anotaciones`, `rol`, `pkIdEquipo`, `equipo` FROM `bdpolideportivo`.`vwjugador`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
+              <Mapping SourceColumn="pkIdJugador" DataSetColumn="pkIdJugador" />
               <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
               <Mapping SourceColumn="anotaciones" DataSetColumn="anotaciones" />
               <Mapping SourceColumn="rol" DataSetColumn="rol" />
+              <Mapping SourceColumn="pkIdEquipo" DataSetColumn="pkIdEquipo" />
               <Mapping SourceColumn="equipo" DataSetColumn="equipo" />
             </Mappings>
             <Sources />
@@ -37,6 +39,7 @@
         <xs:element name="vwjugador" msprop:Generator_TableClassName="vwjugadorDataTable" msprop:Generator_TableVarName="tablevwjugador" msprop:Generator_TablePropName="vwjugador" msprop:Generator_RowDeletingName="vwjugadorRowDeleting" msprop:Generator_RowChangingName="vwjugadorRowChanging" msprop:Generator_RowEvHandlerName="vwjugadorRowChangeEventHandler" msprop:Generator_RowDeletedName="vwjugadorRowDeleted" msprop:Generator_UserTableName="vwjugador" msprop:Generator_RowChangedName="vwjugadorRowChanged" msprop:Generator_RowEvArgName="vwjugadorRowChangeEvent" msprop:Generator_RowClassName="vwjugadorRow">
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="pkIdJugador" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdJugador" msprop:Generator_ColumnPropNameInRow="pkIdJugador" msprop:Generator_ColumnPropNameInTable="pkIdJugadorColumn" msprop:Generator_UserColumnName="pkIdJugador" type="xs:int" />
               <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -52,6 +55,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="pkIdEquipo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdEquipo" msprop:Generator_ColumnPropNameInRow="pkIdEquipo" msprop:Generator_ColumnPropNameInTable="pkIdEquipoColumn" msprop:Generator_UserColumnName="pkIdEquipo" type="xs:int" minOccurs="0" />
               <xs:element name="equipo" msprop:Generator_ColumnVarNameInTable="columnequipo" msprop:Generator_ColumnPropNameInRow="equipo" msprop:Generator_ColumnPropNameInTable="equipoColumn" msprop:Generator_UserColumnName="equipo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -64,5 +68,10 @@
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:vwjugador" />
+      <xs:field xpath="mstns:pkIdJugador" />
+      <xs:field xpath="mstns:pkIdEquipo" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

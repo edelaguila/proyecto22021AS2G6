@@ -23,6 +23,7 @@ namespace Polideportivo.Vista
         {
             // TODO: esta línea de código carga datos en la tabla 'vwJugador.vwjugador' Puede moverla o quitarla según sea necesario.
             this.vwjugadorTableAdapter.Fill(this.vwJugador.vwjugador);
+            // TODO: esta línea de código carga datos en la tabla 'vwJugador.vwjugador' Puede moverla o quitarla según sea necesario.
             // TODO: esta línea de código carga datos en la tabla 'datosJugador.jugador' Puede moverla o quitarla según sea necesario.
             // TODO: esta línea de código carga datos en la tabla 'tablajugadorespruba1.tablajugadores' Puede moverla o quitarla según sea necesario.
 
@@ -60,9 +61,5 @@ namespace Polideportivo.Vista
 
         }
 
-        private void advancedDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

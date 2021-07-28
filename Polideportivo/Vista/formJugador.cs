@@ -21,6 +21,8 @@ namespace Polideportivo.Vista
 
         private void formJugador_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'tablajugadorespruba1.tablajugadores' Puede moverla o quitarla según sea necesario.
+            this.tablajugadoresTableAdapter.Fill(this.tablajugadorespruba1.tablajugadores);
 
         }
 

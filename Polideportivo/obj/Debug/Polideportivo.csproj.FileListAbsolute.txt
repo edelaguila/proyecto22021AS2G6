@@ -59,3 +59,7 @@ C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\AdvancedDataGridView.dll
+C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\MySql.Data.dll
+C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\Zstandard.Net.dll
+C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\MySql.Data.xml

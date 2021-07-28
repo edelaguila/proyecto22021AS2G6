@@ -29,14 +29,26 @@ namespace Polideportivo.Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tablaJugadores = new System.Windows.Forms.DataGridView();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtJugadorFiltrar = new System.Windows.Forms.TextBox();
             this.tablaAvanzada = new Zuby.ADGV.AdvancedDataGridView();
+            this.tablajugadorespruba1 = new Polideportivo.tablajugadorespruba1();
+            this.tablajugadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablajugadoresTableAdapter = new Polideportivo.tablajugadorespruba1TableAdapters.tablajugadoresTableAdapter();
+            this.rolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.advancedDataGridView1 = new Zuby.ADGV.AdvancedDataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaAvanzada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablajugadorespruba1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablajugadoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -97,11 +109,75 @@ namespace Polideportivo.Vista
             this.tablaAvanzada.Size = new System.Drawing.Size(640, 142);
             this.tablaAvanzada.TabIndex = 5;
             // 
+            // tablajugadorespruba1
+            // 
+            this.tablajugadorespruba1.DataSetName = "tablajugadorespruba1";
+            this.tablajugadorespruba1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tablajugadoresBindingSource
+            // 
+            this.tablajugadoresBindingSource.DataMember = "tablajugadores";
+            this.tablajugadoresBindingSource.DataSource = this.tablajugadorespruba1;
+            // 
+            // tablajugadoresTableAdapter
+            // 
+            this.tablajugadoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // rolDataGridViewTextBoxColumn
+            // 
+            this.rolDataGridViewTextBoxColumn.DataPropertyName = "rol";
+            this.rolDataGridViewTextBoxColumn.HeaderText = "rol";
+            this.rolDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.rolDataGridViewTextBoxColumn.Name = "rolDataGridViewTextBoxColumn";
+            this.rolDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // equipoDataGridViewTextBoxColumn
+            // 
+            this.equipoDataGridViewTextBoxColumn.DataPropertyName = "equipo";
+            this.equipoDataGridViewTextBoxColumn.HeaderText = "equipo";
+            this.equipoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.equipoDataGridViewTextBoxColumn.Name = "equipoDataGridViewTextBoxColumn";
+            this.equipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // advancedDataGridView1
+            // 
+            this.advancedDataGridView1.AutoGenerateColumns = false;
+            this.advancedDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.equipoDataGridViewTextBoxColumn,
+            this.rolDataGridViewTextBoxColumn});
+            this.advancedDataGridView1.DataSource = this.tablajugadoresBindingSource;
+            this.advancedDataGridView1.FilterAndSortEnabled = true;
+            this.advancedDataGridView1.Location = new System.Drawing.Point(162, 148);
+            this.advancedDataGridView1.Name = "advancedDataGridView1";
+            this.advancedDataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.advancedDataGridView1.Size = new System.Drawing.Size(511, 150);
+            this.advancedDataGridView1.TabIndex = 6;
+            // 
             // formJugador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 595);
+            this.Controls.Add(this.advancedDataGridView1);
             this.Controls.Add(this.tablaAvanzada);
             this.Controls.Add(this.txtJugadorFiltrar);
             this.Controls.Add(this.txtId);
@@ -114,6 +190,9 @@ namespace Polideportivo.Vista
             this.Load += new System.EventHandler(this.formJugador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaAvanzada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablajugadorespruba1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablajugadoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +206,13 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtJugadorFiltrar;
         private Zuby.ADGV.AdvancedDataGridView tablaAvanzada;
+        private tablajugadorespruba1 tablajugadorespruba1;
+        private System.Windows.Forms.BindingSource tablajugadoresBindingSource;
+        private tablajugadorespruba1TableAdapters.tablajugadoresTableAdapter tablajugadoresTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rolDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private Zuby.ADGV.AdvancedDataGridView advancedDataGridView1;
     }
 }

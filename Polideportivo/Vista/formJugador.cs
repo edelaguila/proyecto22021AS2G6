@@ -49,6 +49,14 @@ namespace Polideportivo.Vista
             controladorJugador db = new controladorJugador();
             modelo = db.mostrarJugadores();
             tablaJugadores.DataSource = modelo;
+            tablaAvanzada.DataSource = modelo;
+        }
+
+        private void tablaJugadores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
+        
+           
         }
     }
 }

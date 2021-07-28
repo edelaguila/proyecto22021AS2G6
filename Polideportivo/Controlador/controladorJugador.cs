@@ -5,14 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
-using MySql.Data.MySqlClient;
-
+using System.Data.Odbc;
+using System.Data;
 
 namespace Polideportivo.AccesoDatos
 {
     class controladorJugador
     {
-        string conexion = @"Server=localhost; Database=prueba1; Uid=root; Pwd=jm;";
+        
+        
         //Falta hacer que de verdad guarde en la base de datos
         /// <summary>
         /// Guarda un nuevo equipo a la base de datos
@@ -21,29 +22,31 @@ namespace Polideportivo.AccesoDatos
         /// <returns>La información del equipo incluyendo el Id</returns>
         public modeloJugador agregarJugador(modeloJugador modelo)
         {
-            using (var db = new MySqlConnection(conexion))
-            {
-                var sqlinsertar = "INSERT INTO tabladeporte (id, nombre) VALUES (NULL, @nombre);";
-                var resultadoinsertar = db.Execute(sqlinsertar,
-                    new
-                    {
-                        nombre = "PruebadesdeVisualStudio"
-                    });
-            }
+            OdbcConnection pruebas = new OdbcConnection("DSN=prueba");
+            pruebas.Open();
+            OdbcCommand sql = pruebas.CreateCommand();
+            sql.CommandText = "INSERT INTO tabladeporte (id, nombre) VALUES (NULL, ?);";
+            sql.Parameters.Add("@n", OdbcType.VarChar).Value = "Gaucho";
 
-            modelo.id = 1;
+            sql.ExecuteNonQuery();
+            sql.Dispose();
+            pruebas.Close();
+
+
+            modelo.id = 5;
             return modelo;
         }
 
         public IEnumerable<modeloJugador> mostrarJugadores()
         {
             IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();
-            using (var db = new MySqlConnection(conexion))
-            {
-                var sqlconsulta = "SELECT * FROM tablajugadores;";
-                var sqlresultado = db.Query<modeloJugador>(sqlconsulta);
-                modeloList = sqlresultado;
-            }
+
+            OdbcConnection pruebas = new OdbcConnection("DSN=prueba");
+            pruebas.Open();
+            string sqlconsulta = "SELECT * FROM tablajugadores;";
+            var sqlresultado = pruebas.Query<modeloJugador>(sqlconsulta);
+            modeloList = sqlresultado;
+            pruebas.Close();
             return modeloList;
         }
     }

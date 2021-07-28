@@ -24,12 +24,13 @@ namespace Polideportivo.AccesoDatos
         {
             OdbcConnection pruebas = new OdbcConnection("DSN=prueba");
             pruebas.Open();
-            OdbcCommand sql = pruebas.CreateCommand();
-            sql.CommandText = "INSERT INTO tabladeporte (id, nombre) VALUES (NULL, ?);";
-            sql.Parameters.Add("@n", OdbcType.VarChar).Value = "Gaucho";
+            var sqlinsertar = "INSERT INTO tabladeporte (id, nombre) VALUES (NULL, @nombre);";
+            var resultadoinsertar = pruebas.Execute(sqlinsertar,
+                    new
+                    {
+                        nombre = "Gaucho"
+                    });
 
-            sql.ExecuteNonQuery();
-            sql.Dispose();
             pruebas.Close();
 
 

@@ -22,7 +22,6 @@ namespace Polideportivo.Vista
         private void formJugador_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'tablajugadorespruba1.tablajugadores' Puede moverla o quitarla según sea necesario.
-            this.tablajugadoresTableAdapter.Fill(this.tablajugadorespruba1.tablajugadores);
 
         }
 
@@ -50,15 +49,12 @@ namespace Polideportivo.Vista
             IEnumerable<modeloJugador> modelo;
             controladorJugador db = new controladorJugador();
             modelo = db.mostrarJugadores();
-            tablaJugadores.DataSource = modelo;
-            tablaAvanzada.DataSource = modelo;
         }
 
-        private void tablaJugadores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void txtJugadorFiltrar_TextChanged(object sender, EventArgs e)
         {
-            txtId.Text = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
-        
-           
+
         }
     }
 }

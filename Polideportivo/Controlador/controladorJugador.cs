@@ -12,7 +12,7 @@ namespace Polideportivo.AccesoDatos
 {
     class controladorJugador
     {
-        OdbcConnection pruebas = new OdbcConnection("DSN=prueba");
+        OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
         public modeloJugador agregarJugador(modeloJugador modelo)
         {
             pruebas.Open();

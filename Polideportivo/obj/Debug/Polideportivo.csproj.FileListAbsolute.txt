@@ -30,7 +30,6 @@ C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\ReaLTaiizor.dll
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\ReaLTaiizor.xml
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.csproj.AssemblyReference.cache
-C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.Vista.formJugador.resources
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.Properties.Resources.resources
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.csproj.GenerateResource.cache
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.csproj.CoreCompileInputs.cache

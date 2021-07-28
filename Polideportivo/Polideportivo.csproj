@@ -97,22 +97,7 @@
   <ItemGroup>
     <Compile Include="Controlador\controladorJugador.cs" />
     <Compile Include="Controlador\controladorPolideportivo.cs" />
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Modelo\modeloJugador.cs" />
-    <Compile Include="prueba1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>prueba1DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="tablajugadorespruba1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tablajugadorespruba1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Vista\formJugador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,17 +128,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -164,28 +138,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="prueba1DataSet.xsc">
-      <DependentUpon>prueba1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="prueba1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>prueba1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="prueba1DataSet.xss">
-      <DependentUpon>prueba1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="tablajugadorespruba1.xsc">
-      <DependentUpon>tablajugadorespruba1.xsd</DependentUpon>
-    </None>
-    <None Include="tablajugadorespruba1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>tablajugadorespruba1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="tablajugadorespruba1.xss">
-      <DependentUpon>tablajugadorespruba1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

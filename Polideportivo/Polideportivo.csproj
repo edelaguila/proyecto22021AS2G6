@@ -97,6 +97,21 @@
   <ItemGroup>
     <Compile Include="Controlador\controladorJugador.cs" />
     <Compile Include="Controlador\controladorPolideportivo.cs" />
+    <Compile Include="datosJugador.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datosJugador.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datosJugadorEquipo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datosJugadorEquipo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datosJugadorEquipoPrueba2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datosJugadorEquipoPrueba2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\modeloJugador.cs" />
     <Compile Include="Vista\formJugador.cs">
       <SubType>Form</SubType>
@@ -112,6 +127,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vwJugador.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwJugador.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Vista\formJugador.resx">
       <DependentUpon>formJugador.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +148,39 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="datosJugador.xsc">
+      <DependentUpon>datosJugador.xsd</DependentUpon>
+    </None>
+    <None Include="datosJugador.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datosJugador.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datosJugador.xss">
+      <DependentUpon>datosJugador.xsd</DependentUpon>
+    </None>
+    <None Include="datosJugadorEquipo.xsc">
+      <DependentUpon>datosJugadorEquipo.xsd</DependentUpon>
+    </None>
+    <None Include="datosJugadorEquipo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datosJugadorEquipo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datosJugadorEquipo.xss">
+      <DependentUpon>datosJugadorEquipo.xsd</DependentUpon>
+    </None>
+    <None Include="datosJugadorEquipoPrueba2.xsc">
+      <DependentUpon>datosJugadorEquipoPrueba2.xsd</DependentUpon>
+    </None>
+    <None Include="datosJugadorEquipoPrueba2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datosJugadorEquipoPrueba2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datosJugadorEquipoPrueba2.xss">
+      <DependentUpon>datosJugadorEquipoPrueba2.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -138,6 +191,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="vwJugador.xsc">
+      <DependentUpon>vwJugador.xsd</DependentUpon>
+    </None>
+    <None Include="vwJugador.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwJugador.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vwJugador.xss">
+      <DependentUpon>vwJugador.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

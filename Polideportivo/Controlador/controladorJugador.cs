@@ -57,7 +57,7 @@ namespace Polideportivo.AccesoDatos
                     });
             pruebas.Close();
 
-            modelo.id = 5;
+            //modelo.id = 5;
             return modelo;
         }
 

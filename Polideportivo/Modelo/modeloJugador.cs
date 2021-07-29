@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Polideportivo.Modelo
 {
-    class modeloJugador
+    public class modeloJugador
     {
         public int pkId { get; set; }
         public string nombre { get; set; }

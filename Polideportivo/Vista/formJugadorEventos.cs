@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Polideportivo.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,12 @@ namespace Polideportivo.Vista
         {
             InitializeComponent();
         }
-
-        public formJugadorEventos()
+        public formJugadorEventos(modeloJugador modelo)
         {
             InitializeComponent();
+            txtId.Text = modelo.pkId.ToString();
         }
+
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {

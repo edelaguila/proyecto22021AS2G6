@@ -22,8 +22,9 @@ namespace Polideportivo.Vista
 
         private void formJugador_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'datosJugador.vwjugador' Puede moverla o quitarla según sea necesario.
+            this.vwjugadorTableAdapter.Fill(this.datosJugador.vwjugador);
             // TODO: esta línea de código carga datos en la tabla 'vwJugador.vwjugador' Puede moverla o quitarla según sea necesario.
-            this.vwjugadorTableAdapter.Fill(this.vwJugador.vwjugador);
             // TODO: esta línea de código carga datos en la tabla 'vwJugador.vwjugador' Puede moverla o quitarla según sea necesario.
             // TODO: esta línea de código carga datos en la tabla 'datosJugador.jugador' Puede moverla o quitarla según sea necesario.
             // TODO: esta línea de código carga datos en la tabla 'tablajugadorespruba1.tablajugadores' Puede moverla o quitarla según sea necesario.
@@ -67,9 +68,13 @@ namespace Polideportivo.Vista
             txtId.Text = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
         }
 
+        modeloJugador modeloFila = new modeloJugador();
         private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtId.Text = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
+
+            //modeloFila.pkId = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
+            string pkId = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
+            modeloFila.pkId = Int32.Parse(pkId);
         }
 
         private void txtId_TextChanged(object sender, EventArgs e)
@@ -88,7 +93,7 @@ namespace Polideportivo.Vista
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
-            form.abrirForm(new formJugadorEventos());
+            form.abrirForm(new formJugadorEventos(modeloFila));
         }
     }
 }

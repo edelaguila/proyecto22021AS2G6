@@ -25,8 +25,6 @@ namespace Polideportivo.Vista
 
         private void formJugador_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'bdpolideportivoDataSet.vwjugador' Puede moverla o quitarla según sea necesario.
-            this.vwjugadorTableAdapter1.Fill(this.bdpolideportivoDataSet.vwjugador);
             // TODO: esta línea de código carga datos en la tabla 'datosJugador.vwjugador' Puede moverla o quitarla según sea necesario.
             this.vwjugadorTableAdapter.Fill(this.datosJugador.vwjugador);
             // TODO: esta línea de código carga datos en la tabla 'vwJugador.vwjugador' Puede moverla o quitarla según sea necesario.

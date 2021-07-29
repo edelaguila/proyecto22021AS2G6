@@ -95,11 +95,6 @@
     <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bdpolideportivoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="cboEquipos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -118,6 +113,11 @@
       <DependentUpon>datosJugador.xsd</DependentUpon>
     </Compile>
     <Compile Include="Modelo\modeloJugador.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Vista\formJugador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,17 +161,6 @@
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bdpolideportivoDataSet.xsc">
-      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bdpolideportivoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bdpolideportivoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bdpolideportivoDataSet.xss">
-      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
-    </None>
     <None Include="cboEquipos.xsc">
       <DependentUpon>cboEquipos.xsd</DependentUpon>
     </None>
@@ -210,11 +199,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config">

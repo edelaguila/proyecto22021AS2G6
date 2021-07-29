@@ -3,7 +3,7 @@
 *.exe
 *.pdb
 AppSettings.config
-*/**/Properties/ConnectionStrings.config
+*/**/ConnectionStrings.config
 */**/bin/Debug
 */**/bin/Release
 */**/obj/Debug

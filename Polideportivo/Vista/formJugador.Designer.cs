@@ -47,10 +47,15 @@ namespace Polideportivo.Vista
             this.btnModificarJugador = new System.Windows.Forms.Button();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.vwjugadorTableAdapter = new Polideportivo.datosJugadorTableAdapters.vwjugadorTableAdapter();
+            this.bdpolideportivoDataSet = new Polideportivo.bdpolideportivoDataSet();
+            this.vwjugadorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vwjugadorTableAdapter1 = new Polideportivo.bdpolideportivoDataSetTableAdapters.vwjugadorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosJugador)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -230,6 +235,20 @@ namespace Polideportivo.Vista
             // 
             this.vwjugadorTableAdapter.ClearBeforeFill = true;
             // 
+            // bdpolideportivoDataSet
+            // 
+            this.bdpolideportivoDataSet.DataSetName = "bdpolideportivoDataSet";
+            this.bdpolideportivoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vwjugadorBindingSource1
+            // 
+            this.vwjugadorBindingSource1.DataMember = "vwjugador";
+            this.vwjugadorBindingSource1.DataSource = this.bdpolideportivoDataSet;
+            // 
+            // vwjugadorTableAdapter1
+            // 
+            this.vwjugadorTableAdapter1.ClearBeforeFill = true;
+            // 
             // formJugador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,6 +264,8 @@ namespace Polideportivo.Vista
             ((System.ComponentModel.ISupportInitialize)(this.datosJugador)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
             this.parrotGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -267,5 +288,8 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn rolDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEquipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
+        private bdpolideportivoDataSet bdpolideportivoDataSet;
+        private System.Windows.Forms.BindingSource vwjugadorBindingSource1;
+        private bdpolideportivoDataSetTableAdapters.vwjugadorTableAdapter vwjugadorTableAdapter1;
     }
 }

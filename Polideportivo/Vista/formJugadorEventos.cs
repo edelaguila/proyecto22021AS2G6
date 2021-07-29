@@ -57,10 +57,11 @@ namespace Polideportivo.Vista
 
         private void formJugadorEventos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'cboRoles.rol' Puede moverla o quitarla según sea necesario.
-            this.rolTableAdapter.Fill(this.cboRoles.rol);
-            // TODO: esta línea de código carga datos en la tabla 'cboEquipos.equipo' Puede moverla o quitarla según sea necesario.
-            this.equipoTableAdapter.Fill(this.cboEquipos.equipo);
+            // TODO: esta línea de código carga datos en la tabla 'cboRol1.rol' Puede moverla o quitarla según sea necesario.
+            this.rolTableAdapter.Fill(this.cboRol1.rol);
+            // TODO: esta línea de código carga datos en la tabla 'cboEquipo1.equipo' Puede moverla o quitarla según sea necesario.
+            this.equipoTableAdapter.Fill(this.cboEquipo1.equipo);
+
 
         }
 
@@ -70,6 +71,11 @@ namespace Polideportivo.Vista
         }
 
         private void parrotGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
         {
 
         }

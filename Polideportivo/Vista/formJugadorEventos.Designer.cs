@@ -36,22 +36,22 @@ namespace Polideportivo.Vista
             this.lblAnotaciones = new System.Windows.Forms.Label();
             this.btnAgregarJugador = new System.Windows.Forms.Button();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.cboRol = new System.Windows.Forms.ComboBox();
-            this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cboRoles = new Polideportivo.cboRoles();
-            this.cboEquipo = new System.Windows.Forms.ComboBox();
-            this.equipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cboEquipos = new Polideportivo.cboEquipos();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.txtAnotaciones = new System.Windows.Forms.TextBox();
             this.lblRol = new System.Windows.Forms.Label();
-            this.equipoTableAdapter = new Polideportivo.cboEquiposTableAdapters.equipoTableAdapter();
-            this.rolTableAdapter = new Polideportivo.cboRolesTableAdapters.rolTableAdapter();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.cboEquipo = new System.Windows.Forms.ComboBox();
+            this.cboRol = new System.Windows.Forms.ComboBox();
+            this.cboEquipo1 = new Polideportivo.cboEquipo();
+            this.equipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.equipoTableAdapter = new Polideportivo.cboEquipoTableAdapters.equipoTableAdapter();
+            this.cboRol1 = new Polideportivo.cboRol();
+            this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rolTableAdapter = new Polideportivo.cboRolTableAdapters.rolTableAdapter();
             this.parrotGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboRoles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboEquipo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboEquipos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboRol1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -104,9 +104,9 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.Fuchsia;
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.parrotGradientPanel1.Controls.Add(this.btnModificar);
             this.parrotGradientPanel1.Controls.Add(this.cboRol);
             this.parrotGradientPanel1.Controls.Add(this.cboEquipo);
+            this.parrotGradientPanel1.Controls.Add(this.btnModificar);
             this.parrotGradientPanel1.Controls.Add(this.txtAnotaciones);
             this.parrotGradientPanel1.Controls.Add(this.lblRol);
             this.parrotGradientPanel1.Controls.Add(this.lblEquipo);
@@ -129,49 +129,15 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.Fuchsia;
             this.parrotGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.parrotGradientPanel1_Paint);
             // 
-            // cboRol
+            // btnModificar
             // 
-            this.cboRol.DataSource = this.rolBindingSource;
-            this.cboRol.DisplayMember = "nombre";
-            this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRol.FormattingEnabled = true;
-            this.cboRol.Location = new System.Drawing.Point(138, 165);
-            this.cboRol.Name = "cboRol";
-            this.cboRol.Size = new System.Drawing.Size(121, 21);
-            this.cboRol.TabIndex = 12;
-            this.cboRol.ValueMember = "pkId";
-            // 
-            // rolBindingSource
-            // 
-            this.rolBindingSource.DataMember = "rol";
-            this.rolBindingSource.DataSource = this.cboRoles;
-            // 
-            // cboRoles
-            // 
-            this.cboRoles.DataSetName = "cboRoles";
-            this.cboRoles.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cboEquipo
-            // 
-            this.cboEquipo.DataSource = this.equipoBindingSource;
-            this.cboEquipo.DisplayMember = "nombre";
-            this.cboEquipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEquipo.FormattingEnabled = true;
-            this.cboEquipo.Location = new System.Drawing.Point(138, 124);
-            this.cboEquipo.Name = "cboEquipo";
-            this.cboEquipo.Size = new System.Drawing.Size(121, 21);
-            this.cboEquipo.TabIndex = 11;
-            this.cboEquipo.ValueMember = "pkId";
-            // 
-            // equipoBindingSource
-            // 
-            this.equipoBindingSource.DataMember = "equipo";
-            this.equipoBindingSource.DataSource = this.cboEquipos;
-            // 
-            // cboEquipos
-            // 
-            this.cboEquipos.DataSetName = "cboEquipos";
-            this.cboEquipos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnModificar.Location = new System.Drawing.Point(150, 237);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 13;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtAnotaciones
             // 
@@ -189,22 +155,55 @@ namespace Polideportivo.Vista
             this.lblRol.TabIndex = 9;
             this.lblRol.Text = "Rol:";
             // 
+            // cboEquipo
+            // 
+            this.cboEquipo.DataSource = this.equipoBindingSource;
+            this.cboEquipo.DisplayMember = "nombre";
+            this.cboEquipo.FormattingEnabled = true;
+            this.cboEquipo.Location = new System.Drawing.Point(138, 129);
+            this.cboEquipo.Name = "cboEquipo";
+            this.cboEquipo.Size = new System.Drawing.Size(121, 21);
+            this.cboEquipo.TabIndex = 14;
+            this.cboEquipo.ValueMember = "pkId";
+            // 
+            // cboRol
+            // 
+            this.cboRol.DataSource = this.rolBindingSource;
+            this.cboRol.DisplayMember = "nombre";
+            this.cboRol.FormattingEnabled = true;
+            this.cboRol.Location = new System.Drawing.Point(138, 165);
+            this.cboRol.Name = "cboRol";
+            this.cboRol.Size = new System.Drawing.Size(121, 21);
+            this.cboRol.TabIndex = 15;
+            this.cboRol.ValueMember = "pkId";
+            // 
+            // cboEquipo1
+            // 
+            this.cboEquipo1.DataSetName = "cboEquipo";
+            this.cboEquipo1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // equipoBindingSource
+            // 
+            this.equipoBindingSource.DataMember = "equipo";
+            this.equipoBindingSource.DataSource = this.cboEquipo1;
+            // 
             // equipoTableAdapter
             // 
             this.equipoTableAdapter.ClearBeforeFill = true;
             // 
+            // cboRol1
+            // 
+            this.cboRol1.DataSetName = "cboRol";
+            this.cboRol1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rolBindingSource
+            // 
+            this.rolBindingSource.DataMember = "rol";
+            this.rolBindingSource.DataSource = this.cboRol1;
+            // 
             // rolTableAdapter
             // 
             this.rolTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(150, 237);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 13;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // formJugadorEventos
             // 
@@ -217,10 +216,10 @@ namespace Polideportivo.Vista
             this.Load += new System.EventHandler(this.formJugadorEventos_Load);
             this.parrotGradientPanel1.ResumeLayout(false);
             this.parrotGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboRoles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboEquipo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboEquipos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboRol1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -234,15 +233,15 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Button btnAgregarJugador;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
         private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.TextBox txtAnotaciones;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.ComboBox cboRol;
         private System.Windows.Forms.ComboBox cboEquipo;
-        private System.Windows.Forms.TextBox txtAnotaciones;
-        private cboEquipos cboEquipos;
+        private cboEquipo cboEquipo1;
         private System.Windows.Forms.BindingSource equipoBindingSource;
-        private cboEquiposTableAdapters.equipoTableAdapter equipoTableAdapter;
-        private cboRoles cboRoles;
+        private cboEquipoTableAdapters.equipoTableAdapter equipoTableAdapter;
+        private cboRol cboRol1;
         private System.Windows.Forms.BindingSource rolBindingSource;
-        private cboRolesTableAdapters.rolTableAdapter rolTableAdapter;
-        private System.Windows.Forms.Button btnModificar;
+        private cboRolTableAdapters.rolTableAdapter rolTableAdapter;
     }
 }

@@ -292,6 +292,7 @@
             this.MenuSuperiorPanel.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.MenuSuperiorPanel.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.MenuSuperiorPanel.TopRight = System.Drawing.Color.DarkBlue;
+            this.MenuSuperiorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuSuperiorPanel_Paint);
             // 
             // btnLateral
             // 

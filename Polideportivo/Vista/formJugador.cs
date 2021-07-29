@@ -74,7 +74,7 @@ namespace Polideportivo.Vista
 
             //modeloFila.pkId = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
             string pkId = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
-            modeloFila.pkId = Int32.Parse(pkId);
+            modeloFila.pkId = form.stringAInt(pkId);
         }
 
         private void txtId_TextChanged(object sender, EventArgs e)

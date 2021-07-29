@@ -24,5 +24,11 @@ namespace Polideportivo.Vista
             formEvento.Close();
         }
 
+        public int stringAInt(string str)
+        {
+            int num = Int32.Parse(str);
+            return num;
+        }
+
     }
 }

@@ -95,6 +95,16 @@
     <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cboEquipos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cboEquipos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cboRoles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cboRoles.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controlador\controladorJugador.cs" />
     <Compile Include="Controlador\controladorPolideportivo.cs" />
     <Compile Include="datosJugador.Designer.cs">
@@ -146,6 +156,28 @@
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="cboEquipos.xsc">
+      <DependentUpon>cboEquipos.xsd</DependentUpon>
+    </None>
+    <None Include="cboEquipos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cboEquipos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cboEquipos.xss">
+      <DependentUpon>cboEquipos.xsd</DependentUpon>
+    </None>
+    <None Include="cboRoles.xsc">
+      <DependentUpon>cboRoles.xsd</DependentUpon>
+    </None>
+    <None Include="cboRoles.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cboRoles.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cboRoles.xss">
+      <DependentUpon>cboRoles.xsd</DependentUpon>
+    </None>
     <None Include="datosJugador.xsc">
       <DependentUpon>datosJugador.xsd</DependentUpon>
     </None>

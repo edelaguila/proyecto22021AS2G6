@@ -16,15 +16,22 @@ namespace Polideportivo.AccesoDatos
         public modeloJugador agregarJugador(modeloJugador modelo)
         {
             pruebas.Open();
-            var sqlinsertar = "INSERT INTO tabladeporte (id, nombre) VALUES (NULL, ?g?);";
-            var resultadoinsertar = pruebas.Execute(sqlinsertar,
-                    new
-                    {
-                        g = "Gaucho"
-                    });
+            string nombre = modelo.nombre;
+            int anotaciones = modelo.anotaciones;
+            int fkIdEquipo = modelo.fkIdEquipo;
+            int fkIdRol = modelo.fkIdRol;
+            var sqlinsertar = 
+                "INSERT INTO tabladeporte (pkId, nombre, anotaciones, fkIdEquipo, fkIdRol) " +
+                "VALUES (NULL, ?nombre?, ?anotaciones?, ?fkIdEquipo?, ?fkIdRol?);";
+            var resultadoinsertar = pruebas.Execute(sqlinsertar);
+            //var resultadoinsertar = pruebas.Execute(sqlinsertar,
+            //        new
+            //        {
+            //            nombre = "Gaucho"
+            //        });
             pruebas.Close();
 
-            modelo.id = 5;
+            //modelo.id = 5;
             return modelo;
         }
 

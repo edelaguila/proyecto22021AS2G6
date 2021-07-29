@@ -31,11 +31,9 @@ namespace Polideportivo.Vista
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAnotaciones = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAgregarJugador = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -56,28 +54,12 @@ namespace Polideportivo.Vista
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 1;
             // 
-            // textBox2
+            // txtAnotaciones
             // 
-            this.textBox2.Location = new System.Drawing.Point(149, 144);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 195);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(157, 195);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtAnotaciones.Location = new System.Drawing.Point(149, 144);
+            this.txtAnotaciones.Name = "txtAnotaciones";
+            this.txtAnotaciones.Size = new System.Drawing.Size(100, 20);
+            this.txtAnotaciones.TabIndex = 3;
             // 
             // label3
             // 
@@ -88,12 +70,12 @@ namespace Polideportivo.Vista
             this.label3.TabIndex = 4;
             this.label3.Text = "label3";
             // 
-            // textBox4
+            // txtNombre
             // 
-            this.textBox4.Location = new System.Drawing.Point(157, 100);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtNombre.Location = new System.Drawing.Point(157, 100);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 7;
             // 
             // label4
             // 
@@ -120,12 +102,10 @@ namespace Polideportivo.Vista
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 359);
             this.Controls.Add(this.btnAgregarJugador);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtAnotaciones);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Name = "formJugadorEventos";
@@ -140,11 +120,9 @@ namespace Polideportivo.Vista
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAnotaciones;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAgregarJugador;
     }

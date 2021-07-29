@@ -22,20 +22,22 @@ namespace Polideportivo.Vista
             InitializeComponent();
         }
         formJugador formOriginal = new formJugador();
+
         public formJugadorEventos(modeloJugador modelo, formJugador form)
         {
-            
+            // Este constructor es el que se utiliza para modificar datos
             InitializeComponent();
             btnAgregarJugador.Visible = false;
             btnModificar.Visible = true;
             formOriginal = form;
-            txtNombre.Text = modelo.pkId.ToString();
+            txtNombre.Text = modelo.nombre;
+            txtAnotaciones.Text = modelo.anotaciones.ToString();
         }
 
         
         public formJugadorEventos(formJugador form)
         {
-            
+            // Este constructor es el que se utiliza para agregar datos
             InitializeComponent();
             btnAgregarJugador.Visible = true;
             btnModificar.Visible = false;
@@ -61,7 +63,7 @@ namespace Polideportivo.Vista
             this.rolTableAdapter.Fill(this.cboRol1.rol);
             // TODO: esta línea de código carga datos en la tabla 'cboEquipo1.equipo' Puede moverla o quitarla según sea necesario.
             this.equipoTableAdapter.Fill(this.cboEquipo1.equipo);
-
+            
 
         }
 
@@ -77,7 +79,15 @@ namespace Polideportivo.Vista
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            controladorJugador modeloModificar = new controladorJugador();
+            modeloJugador modelo = new modeloJugador();
+            modelo.nombre = txtNombre.Text;
+            modelo.anotaciones = utilidadForms.stringAInt(txtAnotaciones.Text);
+            modelo.fkIdEquipo = utilidadForms.stringAInt(cboEquipo.SelectedValue.ToString());
+            modelo.fkIdRol = utilidadForms.stringAInt(cboRol.SelectedValue.ToString());
+            modeloModificar.modificarJugador(modelo);
+            formOriginal.actualizarTablaJugadores();
+            utilidadForms.cerrarForm(this);
         }
     }
 }

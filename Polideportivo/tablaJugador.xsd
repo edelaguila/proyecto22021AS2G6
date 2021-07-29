@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="datosJugador" targetNamespace="http://tempuri.org/datosJugador.xsd" xmlns:mstns="http://tempuri.org/datosJugador.xsd" xmlns="http://tempuri.org/datosJugador.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="tablaJugador" targetNamespace="http://tempuri.org/tablaJugador.xsd" xmlns:mstns="http://tempuri.org/tablaJugador.xsd" xmlns="http://tempuri.org/tablaJugador.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="bdpolideportivoConnectionString (Settings)" DbObjectName="bdpolideportivo.vwjugador" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `pkIdJugador`, `nombre`, `anotaciones`, `pkIdRol`, `rol`, `pkIdEquipo`, `equipo` FROM `bdpolideportivo`.`vwjugador`</CommandText>
+                    <CommandText>SELECT `pkIdJugador`, `nombre`, `anotaciones`, `pkIdRol`, `rol`, `pkIdEquipo`, `equipo`, `deporte` FROM `bdpolideportivo`.`vwjugador`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -26,6 +26,7 @@
               <Mapping SourceColumn="rol" DataSetColumn="rol" />
               <Mapping SourceColumn="pkIdEquipo" DataSetColumn="pkIdEquipo" />
               <Mapping SourceColumn="equipo" DataSetColumn="equipo" />
+              <Mapping SourceColumn="deporte" DataSetColumn="deporte" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -34,22 +35,22 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="datosJugador" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="datosJugador" msprop:Generator_UserDSName="datosJugador">
+  <xs:element name="tablaJugador" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="tablaJugador" msprop:Generator_UserDSName="tablaJugador">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="vwjugador" msprop:Generator_TableClassName="vwjugadorDataTable" msprop:Generator_TableVarName="tablevwjugador" msprop:Generator_TablePropName="vwjugador" msprop:Generator_RowDeletingName="vwjugadorRowDeleting" msprop:Generator_RowChangingName="vwjugadorRowChanging" msprop:Generator_RowEvHandlerName="vwjugadorRowChangeEventHandler" msprop:Generator_RowDeletedName="vwjugadorRowDeleted" msprop:Generator_UserTableName="vwjugador" msprop:Generator_RowChangedName="vwjugadorRowChanged" msprop:Generator_RowEvArgName="vwjugadorRowChangeEvent" msprop:Generator_RowClassName="vwjugadorRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="pkIdJugador" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdJugador" msprop:Generator_ColumnPropNameInRow="pkIdJugador" msprop:Generator_ColumnPropNameInTable="pkIdJugadorColumn" msprop:Generator_UserColumnName="pkIdJugador" type="xs:int" />
-              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+              <xs:element name="pkIdJugador" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdJugador" msprop:Generator_ColumnPropNameInRow="pkIdJugador" msprop:Generator_ColumnPropNameInTable="pkIdJugadorColumn" msprop:Generator_UserColumnName="pkIdJugador" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="45" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="anotaciones" msprop:Generator_ColumnVarNameInTable="columnanotaciones" msprop:Generator_ColumnPropNameInRow="anotaciones" msprop:Generator_ColumnPropNameInTable="anotacionesColumn" msprop:Generator_UserColumnName="anotaciones" type="xs:int" />
-              <xs:element name="pkIdRol" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdRol" msprop:Generator_ColumnPropNameInRow="pkIdRol" msprop:Generator_ColumnPropNameInTable="pkIdRolColumn" msprop:Generator_UserColumnName="pkIdRol" type="xs:int" />
+              <xs:element name="anotaciones" msprop:Generator_ColumnVarNameInTable="columnanotaciones" msprop:Generator_ColumnPropNameInRow="anotaciones" msprop:Generator_ColumnPropNameInTable="anotacionesColumn" msprop:Generator_UserColumnName="anotaciones" type="xs:int" minOccurs="0" />
+              <xs:element name="pkIdRol" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdRol" msprop:Generator_ColumnPropNameInRow="pkIdRol" msprop:Generator_ColumnPropNameInTable="pkIdRolColumn" msprop:Generator_UserColumnName="pkIdRol" type="xs:int" minOccurs="0" />
               <xs:element name="rol" msprop:Generator_ColumnVarNameInTable="columnrol" msprop:Generator_ColumnPropNameInRow="rol" msprop:Generator_ColumnPropNameInTable="rolColumn" msprop:Generator_UserColumnName="rol" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -59,6 +60,13 @@
               </xs:element>
               <xs:element name="pkIdEquipo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdEquipo" msprop:Generator_ColumnPropNameInRow="pkIdEquipo" msprop:Generator_ColumnPropNameInTable="pkIdEquipoColumn" msprop:Generator_UserColumnName="pkIdEquipo" type="xs:int" minOccurs="0" />
               <xs:element name="equipo" msprop:Generator_ColumnVarNameInTable="columnequipo" msprop:Generator_ColumnPropNameInRow="equipo" msprop:Generator_ColumnPropNameInTable="equipoColumn" msprop:Generator_UserColumnName="equipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="deporte" msprop:Generator_ColumnVarNameInTable="columndeporte" msprop:Generator_ColumnPropNameInRow="deporte" msprop:Generator_ColumnPropNameInTable="deporteColumn" msprop:Generator_UserColumnName="deporte">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="45" />

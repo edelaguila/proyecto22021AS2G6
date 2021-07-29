@@ -25,8 +25,9 @@ namespace Polideportivo.Vista
 
         private void formJugador_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'datosJugador.vwjugador' Puede moverla o quitarla según sea necesario.
-            this.vwjugadorTableAdapter.Fill(this.datosJugador.vwjugador);
+            // TODO: esta línea de código carga datos en la tabla 'tablaJugador.vwjugador' Puede moverla o quitarla según sea necesario.
+            this.vwjugadorTableAdapter.Fill(this.tablaJugador.vwjugador);
+
             // TODO: esta línea de código carga datos en la tabla 'vwJugador.vwjugador' Puede moverla o quitarla según sea necesario.
             // TODO: esta línea de código carga datos en la tabla 'vwJugador.vwjugador' Puede moverla o quitarla según sea necesario.
             // TODO: esta línea de código carga datos en la tabla 'datosJugador.jugador' Puede moverla o quitarla según sea necesario.
@@ -63,7 +64,7 @@ namespace Polideportivo.Vista
 
         public void actualizarTablaJugadores()
         {
-            this.vwjugadorTableAdapter.Fill(this.datosJugador.vwjugador);
+            //this.vwjugadorTableAdapter.Fill(this.datosJugador.vwjugador);
         }
 
 
@@ -82,9 +83,21 @@ namespace Polideportivo.Vista
         {
 
             //modeloFila.pkId = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
-            string pkId = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
-            modeloFila.pkId = utilidadForms.stringAInt(pkId);
-            
+            string nombre = tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
+            int anotaciones = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
+            int fkIdEquipo = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
+            int fkIdRol = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
+            modeloFila.nombre = nombre;
+            modeloFila.anotaciones = anotaciones;
+            modeloFila.fkIdEquipo = fkIdEquipo;
+            modeloFila.fkIdRol = fkIdRol;
+
+            // Para que la selección de filas funcione para modificar, tiene que enviarse el
+            // modelo a la función de abrirForm:
+            // utilidadForms.abrirForm(new formJugadorEventos(modeloFila, this));
+            // Además de eso, modificar el construtor del form que va a utilizar los datos
+            // para la modificación, en este caso sería el ctor de formJugadorEventos que recibe el modelo
+
         }
 
         private void txtId_TextChanged(object sender, EventArgs e)
@@ -103,7 +116,7 @@ namespace Polideportivo.Vista
 
 
 
-            private void btnModificarJugador_Click(object sender, EventArgs e)
+        private void btnModificarJugador_Click(object sender, EventArgs e)
         {
             utilidadForms.abrirForm(new formJugadorEventos(modeloFila, this));
         }

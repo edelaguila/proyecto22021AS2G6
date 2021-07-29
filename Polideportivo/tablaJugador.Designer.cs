@@ -20,9 +20,9 @@ namespace Polideportivo {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("datosJugador")]
+    [global::System.Xml.Serialization.XmlRootAttribute("tablaJugador")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class datosJugador : global::System.Data.DataSet {
+    public partial class tablaJugador : global::System.Data.DataSet {
         
         private vwjugadorDataTable tablevwjugador;
         
@@ -30,7 +30,7 @@ namespace Polideportivo {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public datosJugador() {
+        public tablaJugador() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Polideportivo {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected datosJugador(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected tablaJugador(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Polideportivo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            datosJugador cln = ((datosJugador)(base.Clone()));
+            tablaJugador cln = ((tablaJugador)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Polideportivo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "datosJugador";
+            this.DataSetName = "tablaJugador";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/datosJugador.xsd";
+            this.Namespace = "http://tempuri.org/tablaJugador.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablevwjugador = new vwjugadorDataTable();
@@ -225,7 +225,7 @@ namespace Polideportivo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            datosJugador ds = new datosJugador();
+            tablaJugador ds = new tablaJugador();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -292,6 +292,8 @@ namespace Polideportivo {
             private global::System.Data.DataColumn columnpkIdEquipo;
             
             private global::System.Data.DataColumn columnequipo;
+            
+            private global::System.Data.DataColumn columndeporte;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -384,6 +386,14 @@ namespace Polideportivo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn deporteColumn {
+                get {
+                    return this.columndeporte;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -419,7 +429,7 @@ namespace Polideportivo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwjugadorRow AddvwjugadorRow(string nombre, int anotaciones, string rol, string equipo) {
+            public vwjugadorRow AddvwjugadorRow(string nombre, int anotaciones, string rol, string equipo, string deporte) {
                 vwjugadorRow rowvwjugadorRow = ((vwjugadorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -428,7 +438,8 @@ namespace Polideportivo {
                         null,
                         rol,
                         null,
-                        equipo};
+                        equipo,
+                        deporte};
                 rowvwjugadorRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowvwjugadorRow);
                 return rowvwjugadorRow;
@@ -458,6 +469,7 @@ namespace Polideportivo {
                 this.columnrol = base.Columns["rol"];
                 this.columnpkIdEquipo = base.Columns["pkIdEquipo"];
                 this.columnequipo = base.Columns["equipo"];
+                this.columndeporte = base.Columns["deporte"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -477,6 +489,8 @@ namespace Polideportivo {
                 base.Columns.Add(this.columnpkIdEquipo);
                 this.columnequipo = new global::System.Data.DataColumn("equipo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnequipo);
+                this.columndeporte = new global::System.Data.DataColumn("deporte", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndeporte);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnpkIdJugador,
                                 this.columnpkIdRol,
@@ -484,19 +498,17 @@ namespace Polideportivo {
                 this.columnpkIdJugador.AutoIncrement = true;
                 this.columnpkIdJugador.AutoIncrementSeed = -1;
                 this.columnpkIdJugador.AutoIncrementStep = -1;
-                this.columnpkIdJugador.AllowDBNull = false;
-                this.columnnombre.AllowDBNull = false;
                 this.columnnombre.MaxLength = 45;
-                this.columnanotaciones.AllowDBNull = false;
                 this.columnpkIdRol.AutoIncrement = true;
                 this.columnpkIdRol.AutoIncrementSeed = -1;
                 this.columnpkIdRol.AutoIncrementStep = -1;
-                this.columnpkIdRol.AllowDBNull = false;
                 this.columnrol.MaxLength = 45;
                 this.columnpkIdEquipo.AutoIncrement = true;
                 this.columnpkIdEquipo.AutoIncrementSeed = -1;
                 this.columnpkIdEquipo.AutoIncrementStep = -1;
                 this.columnequipo.MaxLength = 45;
+                this.columndeporte.AllowDBNull = false;
+                this.columndeporte.MaxLength = 45;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -564,7 +576,7 @@ namespace Polideportivo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                datosJugador ds = new datosJugador();
+                tablaJugador ds = new tablaJugador();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -641,7 +653,12 @@ namespace Polideportivo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int pkIdJugador {
                 get {
-                    return ((int)(this[this.tablevwjugador.pkIdJugadorColumn]));
+                    try {
+                        return ((int)(this[this.tablevwjugador.pkIdJugadorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'pkIdJugador\' de la tabla \'vwjugador\' es DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablevwjugador.pkIdJugadorColumn] = value;
@@ -652,7 +669,12 @@ namespace Polideportivo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string nombre {
                 get {
-                    return ((string)(this[this.tablevwjugador.nombreColumn]));
+                    try {
+                        return ((string)(this[this.tablevwjugador.nombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'vwjugador\' es DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablevwjugador.nombreColumn] = value;
@@ -663,7 +685,12 @@ namespace Polideportivo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int anotaciones {
                 get {
-                    return ((int)(this[this.tablevwjugador.anotacionesColumn]));
+                    try {
+                        return ((int)(this[this.tablevwjugador.anotacionesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'anotaciones\' de la tabla \'vwjugador\' es DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablevwjugador.anotacionesColumn] = value;
@@ -674,7 +701,12 @@ namespace Polideportivo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int pkIdRol {
                 get {
-                    return ((int)(this[this.tablevwjugador.pkIdRolColumn]));
+                    try {
+                        return ((int)(this[this.tablevwjugador.pkIdRolColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'pkIdRol\' de la tabla \'vwjugador\' es DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablevwjugador.pkIdRolColumn] = value;
@@ -727,6 +759,65 @@ namespace Polideportivo {
                 set {
                     this[this.tablevwjugador.equipoColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string deporte {
+                get {
+                    return ((string)(this[this.tablevwjugador.deporteColumn]));
+                }
+                set {
+                    this[this.tablevwjugador.deporteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IspkIdJugadorNull() {
+                return this.IsNull(this.tablevwjugador.pkIdJugadorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetpkIdJugadorNull() {
+                this[this.tablevwjugador.pkIdJugadorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsnombreNull() {
+                return this.IsNull(this.tablevwjugador.nombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetnombreNull() {
+                this[this.tablevwjugador.nombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsanotacionesNull() {
+                return this.IsNull(this.tablevwjugador.anotacionesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetanotacionesNull() {
+                this[this.tablevwjugador.anotacionesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IspkIdRolNull() {
+                return this.IsNull(this.tablevwjugador.pkIdRolColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetpkIdRolNull() {
+                this[this.tablevwjugador.pkIdRolColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -801,7 +892,7 @@ namespace Polideportivo {
         }
     }
 }
-namespace Polideportivo.datosJugadorTableAdapters {
+namespace Polideportivo.tablaJugadorTableAdapters {
     
     
     /// <summary>
@@ -932,6 +1023,7 @@ namespace Polideportivo.datosJugadorTableAdapters {
             tableMapping.ColumnMappings.Add("rol", "rol");
             tableMapping.ColumnMappings.Add("pkIdEquipo", "pkIdEquipo");
             tableMapping.ColumnMappings.Add("equipo", "equipo");
+            tableMapping.ColumnMappings.Add("deporte", "deporte");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -949,7 +1041,7 @@ namespace Polideportivo.datosJugadorTableAdapters {
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `pkIdJugador`, `nombre`, `anotaciones`, `pkIdRol`, `rol`, `pkIdEquipo`, `e" +
-                "quipo` FROM `bdpolideportivo`.`vwjugador`";
+                "quipo`, `deporte` FROM `bdpolideportivo`.`vwjugador`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -957,7 +1049,7 @@ namespace Polideportivo.datosJugadorTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(datosJugador.vwjugadorDataTable dataTable) {
+        public virtual int Fill(tablaJugador.vwjugadorDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -970,9 +1062,9 @@ namespace Polideportivo.datosJugadorTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual datosJugador.vwjugadorDataTable GetData() {
+        public virtual tablaJugador.vwjugadorDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            datosJugador.vwjugadorDataTable dataTable = new datosJugador.vwjugadorDataTable();
+            tablaJugador.vwjugadorDataTable dataTable = new tablaJugador.vwjugadorDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1046,7 +1138,7 @@ namespace Polideportivo.datosJugadorTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(datosJugador dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(tablaJugador dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1056,7 +1148,7 @@ namespace Polideportivo.datosJugadorTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(datosJugador dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(tablaJugador dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1066,7 +1158,7 @@ namespace Polideportivo.datosJugadorTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(datosJugador dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(tablaJugador dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1100,7 +1192,7 @@ namespace Polideportivo.datosJugadorTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(datosJugador dataSet) {
+        public virtual int UpdateAll(tablaJugador dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

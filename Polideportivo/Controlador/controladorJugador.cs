@@ -47,15 +47,32 @@ namespace Polideportivo.AccesoDatos
             return modeloList;
         }
 
+        public IEnumerable<modeloJugador> mostrarJugadoresPorDeporte()
+        {
+            IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();
+            pruebas.Open();
+            string sqlconsulta = "SELECT * FROM tablajugadores;";
+            var sqlresultado = pruebas.Query<modeloJugador>(sqlconsulta);
+            modeloList = sqlresultado;
+            pruebas.Close();
+            return modeloList;
+        }
+
         public modeloJugador modificarJugador(modeloJugador modelo)
         {
-            pruebas.Open();
-            var sqlinsertar = "INSERT INTO tabladeporte (id, nombre) VALUES (NULL, ?g?);";
-            var resultadoinsertar = pruebas.Execute(sqlinsertar,
-                    new
-                    {
-                        g = "Gaucho"
-                    });
+            var sqlmodificar =
+                "UPDATE jugador SET nombre = ?nombre?, anotaciones = ?anotaciones?," +
+                " fkIdEquipo = ?fkIdEquipo?, fkIdRol = ?fkIdRol? " +
+                "WHERE pkId = ?pkId?;";
+            var parameters = new
+            {
+                nombre = modelo.nombre,
+                anotaciones = modelo.anotaciones,
+                fkIdEquipo = modelo.fkIdEquipo,
+                fkIdRol = modelo.fkIdRol
+            };
+            var resultadomodificar = pruebas.Execute(sqlmodificar, parameters);
+
             pruebas.Close();
 
             //modelo.id = 5;

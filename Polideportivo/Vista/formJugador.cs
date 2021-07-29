@@ -14,7 +14,10 @@ namespace Polideportivo.Vista
 {
     public partial class formJugador : Form
     {
-        utilidadForms form = new utilidadForms();
+
+
+      
+
         public formJugador()
         {
             InitializeComponent();
@@ -52,9 +55,15 @@ namespace Polideportivo.Vista
 
         private void button2_Click(object sender, EventArgs e)
         {
-            IEnumerable<modeloJugador> modelo;
-            controladorJugador db = new controladorJugador();
-            modelo = db.mostrarJugadores();
+            actualizarTablaJugadores();
+            //IEnumerable<modeloJugador> modelo;
+            //controladorJugador db = new controladorJugador();
+            //modelo = db.mostrarJugadores();
+        }
+
+        public void actualizarTablaJugadores()
+        {
+            this.vwjugadorTableAdapter.Fill(this.datosJugador.vwjugador);
         }
 
 
@@ -74,7 +83,8 @@ namespace Polideportivo.Vista
 
             //modeloFila.pkId = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
             string pkId = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
-            modeloFila.pkId = form.stringAInt(pkId);
+            modeloFila.pkId = utilidadForms.stringAInt(pkId);
+            
         }
 
         private void txtId_TextChanged(object sender, EventArgs e)
@@ -84,16 +94,18 @@ namespace Polideportivo.Vista
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
-            form.abrirForm(new formJugadorEventos());
+            utilidadForms.abrirForm(new formJugadorEventos(this));
             //modeloJugador modelo = new modeloJugador();
             //controladorJugador db = new controladorJugador();
             //db.agregarJugador(modelo);
         }
 
 
-        private void btnModificarJugador_Click(object sender, EventArgs e)
+
+
+            private void btnModificarJugador_Click(object sender, EventArgs e)
         {
-            form.abrirForm(new formJugadorEventos(modeloFila));
+            utilidadForms.abrirForm(new formJugadorEventos(modeloFila, this));
         }
     }
 }

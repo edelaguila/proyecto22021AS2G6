@@ -7,9 +7,12 @@ using System.Windows.Forms;
 
 namespace Polideportivo.Vista
 {
-    public class utilidadForms 
+    public static class utilidadForms 
     {
-        public void abrirForm(Form formEvento)
+
+
+
+        public static void abrirForm(Form formEvento)
         {
 
             //formEvento.TopLevel = false;
@@ -19,12 +22,12 @@ namespace Polideportivo.Vista
             formEvento.BringToFront();
             formEvento.Show();
         }
-        public void cerrarForm(Form formEvento)
+        public static void cerrarForm(Form formEvento)
         {
             formEvento.Close();
         }
 
-        public int stringAInt(string str)
+        public static int stringAInt(string str)
         {
             int num = Int32.Parse(str);
             return num;

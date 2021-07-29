@@ -3,8 +3,13 @@ select * from equipo;
 select * from deporte;
 select * from rol;
 INSERT INTO deporte(pkId, nombre) VALUES (NULL, "Fútbol");
+INSERT INTO deporte(pkId, nombre) VALUES (NULL, "Tenis");
+INSERT INTO deporte(pkId, nombre) VALUES (NULL, "Basketball");
 INSERT INTO rol(pkId, nombre, fkIdDeporte) VALUES (NULL, "Delantero", 1);
+INSERT INTO rol(pkId, nombre, fkIdDeporte) VALUES (NULL, "Defensa", 1);
 INSERT INTO equipo(pkId, nombre, fkIdDeporte) VALUES (NULL, "Barcelona", "1");
+INSERT INTO equipo(pkId, nombre, fkIdDeporte) VALUES (NULL, "Madrid", "1");
+select * from vwjugador;
 INSERT INTO jugador(pkId, nombre, anotaciones, fotografia, fkIdEquipo, fkIdRol) VALUES (NULL, "Melanie Revolorio", "90", NULL, 1, 1);
 INSERT INTO jugador(pkId, nombre, anotaciones, fotografia, fkIdEquipo, fkIdRol) VALUES (NULL, "Jorge González", "50", NULL, 1, 1);
 

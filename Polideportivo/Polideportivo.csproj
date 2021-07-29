@@ -104,6 +104,12 @@
     <Compile Include="Vista\formJugador.Designer.cs">
       <DependentUpon>formJugador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\formJugadorEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formJugadorEventos.Designer.cs">
+      <DependentUpon>formJugadorEventos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\formPolideportivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\utilidadForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vwJugador.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\formJugador.resx">
       <DependentUpon>formJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formJugadorEventos.resx">
+      <DependentUpon>formJugadorEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formPolideportivo.resx">
       <DependentUpon>formPolideportivo.cs</DependentUpon>

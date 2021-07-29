@@ -43,7 +43,7 @@ namespace Polideportivo.Vista
             //    db.CrearEquipo(modelo);
             //}
             controladorJugador db = new controladorJugador();
-            db.agregarJugador(modelo); 
+            db.agregarJugador(modelo);
 
             //nombreTexto.Text = ""; 
         }
@@ -61,5 +61,52 @@ namespace Polideportivo.Vista
 
         }
 
+        private void tablaJugadores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
+        }
+
+        private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarJugador_Click(object sender, EventArgs e)
+        {
+            abrirForm(new formJugadorEventos());
+            //modeloJugador modelo = new modeloJugador();
+            //controladorJugador db = new controladorJugador();
+            //db.agregarJugador(modelo);
+        }
+
+        private void abrirForm(Form formEvento)
+        {
+
+            //formEvento.TopLevel = false;
+            //formEvento.FormBorderStyle = FormBorderStyle.None;
+            //formEvento.Dock = DockStyle.Fill;
+            formEvento.StartPosition = FormStartPosition.CenterScreen;
+            formEvento.BringToFront();
+            formEvento.Show();
+            
+
+
+
+        }
+        private void cerrarForm(Form formEvento)
+        {
+            formEvento.Close();
+            formEvento = null;
+        }
+
+        private void btnModificarJugador_Click(object sender, EventArgs e)
+        {
+            abrirForm(new formJugadorEventos());
+        }
     }
 }

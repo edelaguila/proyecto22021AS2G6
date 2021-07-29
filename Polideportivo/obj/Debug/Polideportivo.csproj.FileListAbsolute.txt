@@ -63,3 +63,4 @@ C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\Zstandard.Net.dll
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\MySql.Data.xml
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.Vista.formJugador.resources
+C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.Vista.formJugadorEventos.resources

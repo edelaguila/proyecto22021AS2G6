@@ -30,7 +30,6 @@ namespace Polideportivo.Vista
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtJugadorFiltrar = new System.Windows.Forms.TextBox();
@@ -44,43 +43,37 @@ namespace Polideportivo.Vista
             this.rolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkIdEquipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregarJugador = new System.Windows.Forms.Button();
+            this.btnModificarJugador = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.vwJugador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(320, 518);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Ingresar jugador";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(171, 311);
+            this.button2.Location = new System.Drawing.Point(711, 52);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(417, 76);
+            this.button2.Size = new System.Drawing.Size(61, 30);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Ver jugadores";
+            this.button2.Text = "Actualizar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(643, 340);
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(246, 43);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 3;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // txtJugadorFiltrar
             // 
-            this.txtJugadorFiltrar.Location = new System.Drawing.Point(227, 29);
+            this.txtJugadorFiltrar.Location = new System.Drawing.Point(113, 88);
             this.txtJugadorFiltrar.Name = "txtJugadorFiltrar";
-            this.txtJugadorFiltrar.Size = new System.Drawing.Size(100, 20);
+            this.txtJugadorFiltrar.Size = new System.Drawing.Size(659, 20);
             this.txtJugadorFiltrar.TabIndex = 4;
             this.txtJugadorFiltrar.TextChanged += new System.EventHandler(this.txtJugadorFiltrar_TextChanged);
             // 
@@ -117,8 +110,10 @@ namespace Polideportivo.Vista
             this.tablaJugadores.ReadOnly = true;
             this.tablaJugadores.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tablaJugadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaJugadores.Size = new System.Drawing.Size(659, 150);
+            this.tablaJugadores.Size = new System.Drawing.Size(659, 405);
             this.tablaJugadores.TabIndex = 5;
+            this.tablaJugadores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaJugadores_CellClick);
+            this.tablaJugadores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaJugadores_CellContentClick);
             // 
             // pkIdJugadorDataGridViewTextBoxColumn
             // 
@@ -182,16 +177,37 @@ namespace Polideportivo.Vista
             this.equipoDataGridViewTextBoxColumn.ReadOnly = true;
             this.equipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
+            // btnAgregarJugador
+            // 
+            this.btnAgregarJugador.Location = new System.Drawing.Point(113, 43);
+            this.btnAgregarJugador.Name = "btnAgregarJugador";
+            this.btnAgregarJugador.Size = new System.Drawing.Size(108, 23);
+            this.btnAgregarJugador.TabIndex = 6;
+            this.btnAgregarJugador.Text = "Agregar jugador";
+            this.btnAgregarJugador.UseVisualStyleBackColor = true;
+            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
+            // 
+            // btnModificarJugador
+            // 
+            this.btnModificarJugador.Location = new System.Drawing.Point(374, 43);
+            this.btnModificarJugador.Name = "btnModificarJugador";
+            this.btnModificarJugador.Size = new System.Drawing.Size(121, 23);
+            this.btnModificarJugador.TabIndex = 7;
+            this.btnModificarJugador.Text = "Modificar jugador";
+            this.btnModificarJugador.UseVisualStyleBackColor = true;
+            this.btnModificarJugador.Click += new System.EventHandler(this.btnModificarJugador_Click);
+            // 
             // formJugador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 595);
+            this.Controls.Add(this.btnModificarJugador);
+            this.Controls.Add(this.btnAgregarJugador);
             this.Controls.Add(this.tablaJugadores);
             this.Controls.Add(this.txtJugadorFiltrar);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formJugador";
             this.Text = "formJugador";
@@ -205,8 +221,6 @@ namespace Polideportivo.Vista
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtJugadorFiltrar;
@@ -220,5 +234,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn rolDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEquipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnAgregarJugador;
+        private System.Windows.Forms.Button btnModificarJugador;
     }
 }

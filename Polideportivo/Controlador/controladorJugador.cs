@@ -38,5 +38,21 @@ namespace Polideportivo.AccesoDatos
             pruebas.Close();
             return modeloList;
         }
+
+        public modeloJugador modificarJugador(modeloJugador modelo)
+        {
+            pruebas.Open();
+            var sqlinsertar = "INSERT INTO tabladeporte (id, nombre) VALUES (NULL, ?g?);";
+            var resultadoinsertar = pruebas.Execute(sqlinsertar,
+                    new
+                    {
+                        g = "Gaucho"
+                    });
+            pruebas.Close();
+
+            modelo.id = 5;
+            return modelo;
+        }
+
     }
 }

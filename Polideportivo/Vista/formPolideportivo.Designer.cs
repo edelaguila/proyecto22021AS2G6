@@ -63,7 +63,7 @@
             // panelLateralWrapper
             // 
             this.panelLateralWrapper.BottomLeft = System.Drawing.Color.Black;
-            this.panelLateralWrapper.BottomRight = System.Drawing.Color.Fuchsia;
+            this.panelLateralWrapper.BottomRight = System.Drawing.Color.SkyBlue;
             this.panelLateralWrapper.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             this.panelLateralWrapper.Controls.Add(this.panelLateralInterno);
             this.panelLateralWrapper.Dock = System.Windows.Forms.DockStyle.Left;
@@ -78,7 +78,7 @@
             this.panelLateralWrapper.TabIndex = 2;
             this.panelLateralWrapper.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.panelLateralWrapper.TopLeft = System.Drawing.Color.DeepSkyBlue;
-            this.panelLateralWrapper.TopRight = System.Drawing.Color.Fuchsia;
+            this.panelLateralWrapper.TopRight = System.Drawing.Color.Navy;
             // 
             // panelLateralInterno
             // 
@@ -86,7 +86,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelLateralInterno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelLateralInterno.BottomLeft = System.Drawing.Color.Black;
-            this.panelLateralInterno.BottomRight = System.Drawing.Color.Fuchsia;
+            this.panelLateralInterno.BottomRight = System.Drawing.Color.SkyBlue;
             this.panelLateralInterno.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             this.panelLateralInterno.Controls.Add(this.btnDeportes);
             this.panelLateralInterno.Controls.Add(this.button5);
@@ -107,14 +107,15 @@
             this.panelLateralInterno.TabIndex = 0;
             this.panelLateralInterno.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.panelLateralInterno.TopLeft = System.Drawing.Color.DeepSkyBlue;
-            this.panelLateralInterno.TopRight = System.Drawing.Color.Fuchsia;
+            this.panelLateralInterno.TopRight = System.Drawing.Color.MidnightBlue;
             // 
             // btnDeportes
             // 
             this.btnDeportes.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeportes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnDeportes.FlatAppearance.BorderSize = 0;
-            this.btnDeportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDeportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.btnDeportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(116)))), ((int)(((byte)(154)))));
+            this.btnDeportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(135)))), ((int)(((byte)(164)))));
             this.btnDeportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeportes.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeportes.ForeColor = System.Drawing.Color.Transparent;
@@ -132,6 +133,8 @@
             // 
             this.button5.BackColor = System.Drawing.Color.Transparent;
             this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Transparent;
@@ -147,6 +150,8 @@
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Transparent;
@@ -162,6 +167,8 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(116)))), ((int)(((byte)(154)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(137)))), ((int)(((byte)(162)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Transparent;
@@ -176,7 +183,10 @@
             // btnMenuJugador
             // 
             this.btnMenuJugador.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuJugador.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnMenuJugador.FlatAppearance.BorderSize = 0;
+            this.btnMenuJugador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(116)))), ((int)(((byte)(154)))));
+            this.btnMenuJugador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(135)))), ((int)(((byte)(164)))));
             this.btnMenuJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuJugador.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuJugador.ForeColor = System.Drawing.Color.Transparent;
@@ -230,7 +240,7 @@
             // panelPrincipalWrapper
             // 
             this.panelPrincipalWrapper.BottomLeft = System.Drawing.Color.Black;
-            this.panelPrincipalWrapper.BottomRight = System.Drawing.Color.Fuchsia;
+            this.panelPrincipalWrapper.BottomRight = System.Drawing.Color.MidnightBlue;
             this.panelPrincipalWrapper.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             this.panelPrincipalWrapper.Controls.Add(this.panelPrincipal);
             this.panelPrincipalWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -245,7 +255,7 @@
             this.panelPrincipalWrapper.TabIndex = 2;
             this.panelPrincipalWrapper.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.panelPrincipalWrapper.TopLeft = System.Drawing.Color.DeepSkyBlue;
-            this.panelPrincipalWrapper.TopRight = System.Drawing.Color.Fuchsia;
+            this.panelPrincipalWrapper.TopRight = System.Drawing.Color.Navy;
             // 
             // panelPrincipal
             // 
@@ -261,7 +271,7 @@
             // MenuSuperiorPanel
             // 
             this.MenuSuperiorPanel.BottomLeft = System.Drawing.Color.Black;
-            this.MenuSuperiorPanel.BottomRight = System.Drawing.Color.Fuchsia;
+            this.MenuSuperiorPanel.BottomRight = System.Drawing.Color.DarkBlue;
             this.MenuSuperiorPanel.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             this.MenuSuperiorPanel.Controls.Add(this.btnLateral);
             this.MenuSuperiorPanel.Controls.Add(this.Restaurar);
@@ -281,7 +291,7 @@
             this.MenuSuperiorPanel.TabIndex = 1;
             this.MenuSuperiorPanel.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.MenuSuperiorPanel.TopLeft = System.Drawing.Color.DeepSkyBlue;
-            this.MenuSuperiorPanel.TopRight = System.Drawing.Color.Fuchsia;
+            this.MenuSuperiorPanel.TopRight = System.Drawing.Color.DarkBlue;
             // 
             // btnLateral
             // 

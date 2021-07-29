@@ -63,3 +63,41 @@ C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\Ubiety.Dns.Core.dll
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\Zstandard.Net.dll
 C:\Users\CORE i7 6TA WIN10\Documents\proyecto22021AS2G6\Polideportivo\bin\Debug\MySql.Data.xml
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\Polideportivo.exe.config
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\Polideportivo.exe
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\Polideportivo.pdb
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\AdvancedDataGridView.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\Dapper.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\Google.Protobuf.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\ReaLTaiizor.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\System.Buffers.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\System.Memory.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\Zstandard.Net.dll
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\Dapper.xml
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\Google.Protobuf.pdb
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\Google.Protobuf.xml
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\MySql.Data.xml
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\ReaLTaiizor.xml
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\System.Buffers.xml
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\System.Memory.xml
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.csprojAssemblyReference.cache
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.Vista.formJugador.resources
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.formPolideportivo.resources
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.Properties.Resources.resources
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.csproj.GenerateResource.cache
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.csproj.CoreCompileInputs.cache
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.csproj.CopyComplete
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.exe
+C:\Users\Melanie\Desktop\Git\proyecto22021AS2G6\Polideportivo\obj\Debug\Polideportivo.pdb

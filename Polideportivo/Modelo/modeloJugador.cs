@@ -10,17 +10,19 @@ namespace Polideportivo.Modelo
     {
         public int id { get; set; }
         public string nombre { get; set; }
-        public string equipo { get; set; }
-        public string rol { get; set; }
+        public int anotaciones { get; set; }
+        public int idRol { get; set; }
+        public int idEquipo { get; set; }
 
         public modeloJugador(){}
 
-        public modeloJugador(int Id, string Nombre, string Equipo, string Rol)
+        public modeloJugador(int Id, string Nombre, int Anotaciones, int IdRol, int IdEquipo)
         {
             id = Id;
             nombre = Nombre;
-            equipo = Equipo;
-            rol = Rol;
+            anotaciones = Anotaciones;
+            idRol = IdRol;
+            idEquipo = IdEquipo;
             //para cuando sean ints
             //int numeroValor = 0;
             //int.TryParse(numero, out numeroValor);

@@ -12,7 +12,12 @@ namespace Polideportivo.Vista
 {
     public partial class formJugadorEventos : Form
     {
-        utilidadForms prueba = new utilidadForms();
+        utilidadForms form = new utilidadForms();
+        public formJugadorEventos()
+        {
+            InitializeComponent();
+        }
+
         public formJugadorEventos()
         {
             InitializeComponent();
@@ -20,7 +25,12 @@ namespace Polideportivo.Vista
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
-            prueba.cerrarForm();
+            form.cerrarForm(this);
+        }
+
+        private void formJugadorEventos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -14,6 +14,7 @@ namespace Polideportivo.Vista
 {
     public partial class formJugador : Form
     {
+        utilidadForms form = new utilidadForms();
         public formJugador()
         {
             InitializeComponent();
@@ -78,35 +79,16 @@ namespace Polideportivo.Vista
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
-            abrirForm(new formJugadorEventos());
+            form.abrirForm(new formJugadorEventos());
             //modeloJugador modelo = new modeloJugador();
             //controladorJugador db = new controladorJugador();
             //db.agregarJugador(modelo);
         }
 
-        private void abrirForm(Form formEvento)
-        {
-
-            //formEvento.TopLevel = false;
-            //formEvento.FormBorderStyle = FormBorderStyle.None;
-            //formEvento.Dock = DockStyle.Fill;
-            formEvento.StartPosition = FormStartPosition.CenterScreen;
-            formEvento.BringToFront();
-            formEvento.Show();
-            
-
-
-
-        }
-        private void cerrarForm(Form formEvento)
-        {
-            formEvento.Close();
-            formEvento = null;
-        }
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
-            abrirForm(new formJugadorEventos());
+            form.abrirForm(new formJugadorEventos());
         }
     }
 }

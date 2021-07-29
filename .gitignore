@@ -2,3 +2,9 @@
 *.suo
 *.exe
 *.pdb
+AppSettings.config
+ConnectionStrings.config
+*/**/bin/Debug
+*/**/bin/Release
+*/**/obj/Debug
+*/**/obj/Release

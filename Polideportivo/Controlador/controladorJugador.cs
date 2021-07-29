@@ -15,7 +15,6 @@ namespace Polideportivo.AccesoDatos
         OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
         public modeloJugador agregarJugador(modeloJugador modelo)
         {
-            pruebas.Open();
             
             var sqlinsertar = 
                 "INSERT INTO jugador (pkId, nombre, anotaciones, fkIdEquipo, fkIdRol) " +

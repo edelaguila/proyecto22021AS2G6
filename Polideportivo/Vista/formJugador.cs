@@ -25,13 +25,8 @@ namespace Polideportivo.Vista
 
         private void formJugador_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'tablaJugador.vwjugador' Puede moverla o quitarla según sea necesario.
-            this.vwjugadorTableAdapter.Fill(this.tablaJugador.vwjugador);
-
-            // TODO: esta línea de código carga datos en la tabla 'vwJugador.vwjugador' Puede moverla o quitarla según sea necesario.
-            // TODO: esta línea de código carga datos en la tabla 'vwJugador.vwjugador' Puede moverla o quitarla según sea necesario.
-            // TODO: esta línea de código carga datos en la tabla 'datosJugador.jugador' Puede moverla o quitarla según sea necesario.
-            // TODO: esta línea de código carga datos en la tabla 'tablajugadorespruba1.tablajugadores' Puede moverla o quitarla según sea necesario.
+            // TODO: esta línea de código carga datos en la tabla 'tablaJugadores1.vwjugador' Puede moverla o quitarla según sea necesario.
+            this.vwjugadorTableAdapter.Fill(this.tablaJugadores1.vwjugador);
 
         }
 
@@ -87,11 +82,12 @@ namespace Polideportivo.Vista
             int anotaciones = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
             int fkIdEquipo = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
             int fkIdRol = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
+            int fkIdDeporte = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[7].Value.ToString());
             modeloFila.nombre = nombre;
             modeloFila.anotaciones = anotaciones;
             modeloFila.fkIdEquipo = fkIdEquipo;
             modeloFila.fkIdRol = fkIdRol;
-
+            modeloFila.fkIdDeporte = fkIdDeporte;
             // Para que la selección de filas funcione para modificar, tiene que enviarse el
             // modelo a la función de abrirForm:
             // utilidadForms.abrirForm(new formJugadorEventos(modeloFila, this));

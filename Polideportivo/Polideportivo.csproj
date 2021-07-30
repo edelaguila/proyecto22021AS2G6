@@ -118,17 +118,19 @@
     </Compile>
     <Compile Include="Controlador\controladorJugador.cs" />
     <Compile Include="Controlador\controladorPolideportivo.cs" />
-    <Compile Include="Modelo\modeloComboboxRol.cs" />
+    <Compile Include="Modelo\modeloDeporte.cs" />
+    <Compile Include="Modelo\modeloEquipo.cs" />
+    <Compile Include="Modelo\modeloRol.cs" />
     <Compile Include="Modelo\modeloJugador.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="tablaJugador.Designer.cs">
+    <Compile Include="tablaJugadores.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>tablaJugador.xsd</DependentUpon>
+      <DependentUpon>tablaJugadores.xsd</DependentUpon>
     </Compile>
     <Compile Include="Vista\formJugador.cs">
       <SubType>Form</SubType>
@@ -211,16 +213,16 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="tablaJugador.xsc">
-      <DependentUpon>tablaJugador.xsd</DependentUpon>
+    <None Include="tablaJugadores.xsc">
+      <DependentUpon>tablaJugadores.xsd</DependentUpon>
     </None>
-    <None Include="tablaJugador.xsd">
+    <None Include="tablaJugadores.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>tablaJugador.Designer.cs</LastGenOutput>
+      <LastGenOutput>tablaJugadores.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="tablaJugador.xss">
-      <DependentUpon>tablaJugador.xsd</DependentUpon>
+    <None Include="tablaJugadores.xss">
+      <DependentUpon>tablaJugadores.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Polideportivo.Modelo
 {
-    class modeloComboboxRol
+    class modeloRol
     {
         public int pkId { get; set; }
         public string nombre { get; set; }
         public int fkIdDeporte { get; set; }
 
-        public modeloComboboxRol() { }
+        public modeloRol() { }
 
-        public modeloComboboxRol(int Id, string Nombre, int FkIdDeporte)
+        public modeloRol(int Id, string Nombre, int FkIdDeporte)
         {
             pkId = Id;
             nombre = Nombre;

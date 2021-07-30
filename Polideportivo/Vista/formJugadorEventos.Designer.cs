@@ -35,11 +35,13 @@ namespace Polideportivo.Vista
             this.lblAnotaciones = new System.Windows.Forms.Label();
             this.btnAgregarJugador = new System.Windows.Forms.Button();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.cboRol = new System.Windows.Forms.ComboBox();
+            this.cboEquipo = new System.Windows.Forms.ComboBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.txtAnotaciones = new System.Windows.Forms.TextBox();
             this.lblRol = new System.Windows.Forms.Label();
-            this.cboEquipo = new System.Windows.Forms.ComboBox();
-            this.cboRol = new System.Windows.Forms.ComboBox();
+            this.cboDeporte = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.parrotGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +95,8 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.Fuchsia;
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotGradientPanel1.Controls.Add(this.label1);
+            this.parrotGradientPanel1.Controls.Add(this.cboDeporte);
             this.parrotGradientPanel1.Controls.Add(this.cboRol);
             this.parrotGradientPanel1.Controls.Add(this.cboEquipo);
             this.parrotGradientPanel1.Controls.Add(this.btnModificar);
@@ -118,9 +122,27 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.Fuchsia;
             this.parrotGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.parrotGradientPanel1_Paint);
             // 
+            // cboRol
+            // 
+            this.cboRol.FormattingEnabled = true;
+            this.cboRol.Location = new System.Drawing.Point(138, 173);
+            this.cboRol.Name = "cboRol";
+            this.cboRol.Size = new System.Drawing.Size(121, 21);
+            this.cboRol.TabIndex = 17;
+            this.cboRol.SelectedIndexChanged += new System.EventHandler(this.cboRol_SelectedIndexChanged);
+            // 
+            // cboEquipo
+            // 
+            this.cboEquipo.FormattingEnabled = true;
+            this.cboEquipo.Location = new System.Drawing.Point(138, 129);
+            this.cboEquipo.Name = "cboEquipo";
+            this.cboEquipo.Size = new System.Drawing.Size(121, 21);
+            this.cboEquipo.TabIndex = 16;
+            this.cboEquipo.SelectedIndexChanged += new System.EventHandler(this.cboEquipo_SelectedIndexChanged);
+            // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(150, 237);
+            this.btnModificar.Location = new System.Drawing.Point(150, 254);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 13;
@@ -138,29 +160,28 @@ namespace Polideportivo.Vista
             // lblRol
             // 
             this.lblRol.AutoSize = true;
-            this.lblRol.Location = new System.Drawing.Point(50, 173);
+            this.lblRol.Location = new System.Drawing.Point(71, 176);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(26, 13);
             this.lblRol.TabIndex = 9;
             this.lblRol.Text = "Rol:";
             // 
-            // cboEquipo
+            // cboDeporte
             // 
-            this.cboEquipo.FormattingEnabled = true;
-            this.cboEquipo.Location = new System.Drawing.Point(138, 129);
-            this.cboEquipo.Name = "cboEquipo";
-            this.cboEquipo.Size = new System.Drawing.Size(121, 21);
-            this.cboEquipo.TabIndex = 16;
-            this.cboEquipo.SelectedIndexChanged += new System.EventHandler(this.cboEquipo_SelectedIndexChanged);
+            this.cboDeporte.FormattingEnabled = true;
+            this.cboDeporte.Location = new System.Drawing.Point(138, 210);
+            this.cboDeporte.Name = "cboDeporte";
+            this.cboDeporte.Size = new System.Drawing.Size(121, 21);
+            this.cboDeporte.TabIndex = 18;
             // 
-            // cboRol
+            // label1
             // 
-            this.cboRol.FormattingEnabled = true;
-            this.cboRol.Location = new System.Drawing.Point(138, 173);
-            this.cboRol.Name = "cboRol";
-            this.cboRol.Size = new System.Drawing.Size(217, 21);
-            this.cboRol.TabIndex = 17;
-            this.cboRol.SelectedIndexChanged += new System.EventHandler(this.cboRol_SelectedIndexChanged);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(50, 213);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Deporte:";
             // 
             // formJugadorEventos
             // 
@@ -190,5 +211,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.ComboBox cboEquipo;
         private System.Windows.Forms.ComboBox cboRol;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboDeporte;
     }
 }

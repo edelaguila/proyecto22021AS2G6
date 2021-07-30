@@ -33,13 +33,13 @@ namespace Polideportivo.Vista
             this.button2 = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtJugadorFiltrar = new System.Windows.Forms.TextBox();
+            this.btnModificarJugador = new System.Windows.Forms.Button();
             this.tablaJugadores = new Zuby.ADGV.AdvancedDataGridView();
             this.btnAgregarJugador = new System.Windows.Forms.Button();
-            this.btnModificarJugador = new System.Windows.Forms.Button();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.tablaJugador = new Polideportivo.tablaJugador();
+            this.tablaJugadores1 = new Polideportivo.tablaJugadores();
             this.vwjugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwjugadorTableAdapter = new Polideportivo.tablaJugadorTableAdapters.vwjugadorTableAdapter();
+            this.vwjugadorTableAdapter = new Polideportivo.tablaJugadoresTableAdapters.vwjugadorTableAdapter();
             this.pkIdJugadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anotacionesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,10 +47,11 @@ namespace Polideportivo.Vista
             this.rolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkIdEquipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaJugador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +82,16 @@ namespace Polideportivo.Vista
             this.txtJugadorFiltrar.TabIndex = 4;
             this.txtJugadorFiltrar.TextChanged += new System.EventHandler(this.txtJugadorFiltrar_TextChanged);
             // 
+            // btnModificarJugador
+            // 
+            this.btnModificarJugador.Location = new System.Drawing.Point(518, 28);
+            this.btnModificarJugador.Name = "btnModificarJugador";
+            this.btnModificarJugador.Size = new System.Drawing.Size(121, 23);
+            this.btnModificarJugador.TabIndex = 7;
+            this.btnModificarJugador.Text = "Modificar jugador";
+            this.btnModificarJugador.UseVisualStyleBackColor = true;
+            this.btnModificarJugador.Click += new System.EventHandler(this.btnModificarJugador_Click);
+            // 
             // tablaJugadores
             // 
             this.tablaJugadores.AutoGenerateColumns = false;
@@ -94,6 +105,7 @@ namespace Polideportivo.Vista
             this.rolDataGridViewTextBoxColumn,
             this.pkIdEquipoDataGridViewTextBoxColumn,
             this.equipoDataGridViewTextBoxColumn,
+            this.pkIdDeporteDataGridViewTextBoxColumn,
             this.deporteDataGridViewTextBoxColumn});
             this.tablaJugadores.DataSource = this.vwjugadorBindingSource;
             this.tablaJugadores.FilterAndSortEnabled = true;
@@ -116,16 +128,6 @@ namespace Polideportivo.Vista
             this.btnAgregarJugador.Text = "Agregar jugador";
             this.btnAgregarJugador.UseVisualStyleBackColor = true;
             this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
-            // 
-            // btnModificarJugador
-            // 
-            this.btnModificarJugador.Location = new System.Drawing.Point(518, 28);
-            this.btnModificarJugador.Name = "btnModificarJugador";
-            this.btnModificarJugador.Size = new System.Drawing.Size(121, 23);
-            this.btnModificarJugador.TabIndex = 7;
-            this.btnModificarJugador.Text = "Modificar jugador";
-            this.btnModificarJugador.UseVisualStyleBackColor = true;
-            this.btnModificarJugador.Click += new System.EventHandler(this.btnModificarJugador_Click);
             // 
             // parrotGradientPanel1
             // 
@@ -152,15 +154,15 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.Fuchsia;
             // 
-            // tablaJugador
+            // tablaJugadores1
             // 
-            this.tablaJugador.DataSetName = "tablaJugador";
-            this.tablaJugador.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tablaJugadores1.DataSetName = "tablaJugadores";
+            this.tablaJugadores1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // vwjugadorBindingSource
             // 
             this.vwjugadorBindingSource.DataMember = "vwjugador";
-            this.vwjugadorBindingSource.DataSource = this.tablaJugador;
+            this.vwjugadorBindingSource.DataSource = this.tablaJugadores1;
             // 
             // vwjugadorTableAdapter
             // 
@@ -174,7 +176,6 @@ namespace Polideportivo.Vista
             this.pkIdJugadorDataGridViewTextBoxColumn.Name = "pkIdJugadorDataGridViewTextBoxColumn";
             this.pkIdJugadorDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdJugadorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.pkIdJugadorDataGridViewTextBoxColumn.Visible = false;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -202,7 +203,6 @@ namespace Polideportivo.Vista
             this.pkIdRolDataGridViewTextBoxColumn.Name = "pkIdRolDataGridViewTextBoxColumn";
             this.pkIdRolDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdRolDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.pkIdRolDataGridViewTextBoxColumn.Visible = false;
             // 
             // rolDataGridViewTextBoxColumn
             // 
@@ -221,7 +221,6 @@ namespace Polideportivo.Vista
             this.pkIdEquipoDataGridViewTextBoxColumn.Name = "pkIdEquipoDataGridViewTextBoxColumn";
             this.pkIdEquipoDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdEquipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.pkIdEquipoDataGridViewTextBoxColumn.Visible = false;
             // 
             // equipoDataGridViewTextBoxColumn
             // 
@@ -231,6 +230,15 @@ namespace Polideportivo.Vista
             this.equipoDataGridViewTextBoxColumn.Name = "equipoDataGridViewTextBoxColumn";
             this.equipoDataGridViewTextBoxColumn.ReadOnly = true;
             this.equipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // pkIdDeporteDataGridViewTextBoxColumn
+            // 
+            this.pkIdDeporteDataGridViewTextBoxColumn.DataPropertyName = "pkIdDeporte";
+            this.pkIdDeporteDataGridViewTextBoxColumn.HeaderText = "pkIdDeporte";
+            this.pkIdDeporteDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdDeporteDataGridViewTextBoxColumn.Name = "pkIdDeporteDataGridViewTextBoxColumn";
+            this.pkIdDeporteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdDeporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // deporteDataGridViewTextBoxColumn
             // 
@@ -254,23 +262,24 @@ namespace Polideportivo.Vista
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
             this.parrotGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaJugador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtJugadorFiltrar;
+        private System.Windows.Forms.Button btnModificarJugador;
         private Zuby.ADGV.AdvancedDataGridView tablaJugadores;
         private System.Windows.Forms.Button btnAgregarJugador;
-        private System.Windows.Forms.Button btnModificarJugador;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private tablaJugador tablaJugador;
+        private tablaJugadores tablaJugadores1;
         private System.Windows.Forms.BindingSource vwjugadorBindingSource;
-        private tablaJugadorTableAdapters.vwjugadorTableAdapter vwjugadorTableAdapter;
+        private tablaJugadoresTableAdapters.vwjugadorTableAdapter vwjugadorTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdJugadorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anotacionesDataGridViewTextBoxColumn;
@@ -278,6 +287,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn rolDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEquipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDeporteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
     }
 }

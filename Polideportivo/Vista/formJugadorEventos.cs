@@ -32,6 +32,7 @@ namespace Polideportivo.Vista
             formOriginal = form;
             txtNombre.Text = modelo.nombre;
             txtAnotaciones.Text = modelo.anotaciones.ToString();
+
         }
 
         
@@ -42,11 +43,13 @@ namespace Polideportivo.Vista
             btnAgregarJugador.Visible = true;
             btnModificar.Visible = false;
             // Llenar combobox de roles
-            controladorJugador e = new controladorJugador();
-            cboRol.DataSource = e.mostrarRolesPorDeporte();
+            controladorJugador datosParaComboBox = new controladorJugador();
+            //cboRol.DataSource = datosParaComboBox.mostrarRolesPorDeporte();
             cboRol.DisplayMember = "nombre";
             cboRol.ValueMember = "pkId";
+
         }
+
 
         public void btnAgregarJugador_Click(object sender, EventArgs e)
         {

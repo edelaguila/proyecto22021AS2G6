@@ -47,6 +47,16 @@ namespace Polideportivo.AccesoDatos
             return modeloList;
         }
 
+        public List<modeloComboboxRol> mostrarRolesPorDeporte()
+        {
+            pruebas.Open();
+            //string sqlconsulta = "SELECT pkId, nombre, fkIdDeporte FROM rol WHERE fkIdDeporte = 1;";
+            string sqlconsulta = "SELECT pkId, nombre, fkIdDeporte FROM rol WHERE fkIdDeporte = 2;";
+            var sqlresultado = pruebas.Query<modeloComboboxRol>(sqlconsulta).ToList();
+            pruebas.Close();
+            return sqlresultado;
+        }
+
         public IEnumerable<modeloJugador> mostrarJugadoresPorDeporte()
         {
             IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();

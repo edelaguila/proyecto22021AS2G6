@@ -41,6 +41,11 @@ namespace Polideportivo.Vista
             InitializeComponent();
             btnAgregarJugador.Visible = true;
             btnModificar.Visible = false;
+            // Llenar combobox de roles
+            controladorJugador e = new controladorJugador();
+            cboRol.DataSource = e.mostrarRolesPorDeporte();
+            cboRol.DisplayMember = "nombre";
+            cboRol.ValueMember = "pkId";
         }
 
         public void btnAgregarJugador_Click(object sender, EventArgs e)
@@ -59,10 +64,6 @@ namespace Polideportivo.Vista
 
         private void formJugadorEventos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'cboRol1.rol' Puede moverla o quitarla según sea necesario.
-            this.rolTableAdapter.Fill(this.cboRol1.rol);
-            // TODO: esta línea de código carga datos en la tabla 'cboEquipo1.equipo' Puede moverla o quitarla según sea necesario.
-            this.equipoTableAdapter.Fill(this.cboEquipo1.equipo);
             
 
         }
@@ -88,6 +89,16 @@ namespace Polideportivo.Vista
             modeloModificar.modificarJugador(modelo);
             formOriginal.actualizarTablaJugadores();
             utilidadForms.cerrarForm(this);
+        }
+
+        private void cboEquipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

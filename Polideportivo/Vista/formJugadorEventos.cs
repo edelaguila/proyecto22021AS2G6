@@ -22,7 +22,9 @@ namespace Polideportivo.Vista
         {
             InitializeComponent();
         }
+
         formJugador formOriginal = new formJugador();
+
 
         public formJugadorEventos(modeloJugador modelo, formJugador form)
         {
@@ -49,10 +51,10 @@ namespace Polideportivo.Vista
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
             // Llenar combobox de roles
-            controladorJugador datosParaComboBox = new controladorJugador();
-            //cboRol.DataSource = datosParaComboBox.mostrarRolesPorDeporte();
-            cboRol.DisplayMember = "nombre";
-            cboRol.ValueMember = "pkId";
+            //controladorJugador datosParaComboBox = new controladorJugador();
+            ////cboRol.DataSource = datosParaComboBox.mostrarRolesPorDeporte();
+            //cboRol.DisplayMember = "nombre";
+            //cboRol.ValueMember = "pkId";
 
         }
 
@@ -138,6 +140,11 @@ namespace Polideportivo.Vista
             cboRol.DataSource = rol.mostrarRolesPorDeporte(modelo);
             cboRol.DisplayMember = "nombre";
             cboRol.ValueMember = "pkId";
+        }
+
+        private void cboDeporte_Layout(object sender, LayoutEventArgs e)
+        {
+
         }
     }
 }

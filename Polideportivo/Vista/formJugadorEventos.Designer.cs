@@ -140,6 +140,7 @@ namespace Polideportivo.Vista
             this.cboDeporte.TabIndex = 18;
             this.cboDeporte.SelectedIndexChanged += new System.EventHandler(this.cboDeporte_SelectedIndexChanged);
             this.cboDeporte.SelectionChangeCommitted += new System.EventHandler(this.cboDeporte_SelectionChangeCommitted);
+            this.cboDeporte.Layout += new System.Windows.Forms.LayoutEventHandler(this.cboDeporte_Layout);
             this.cboDeporte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cboDeporte_MouseClick);
             // 
             // cboRol

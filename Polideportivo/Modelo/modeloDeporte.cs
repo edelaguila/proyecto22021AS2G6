@@ -22,5 +22,6 @@ namespace Polideportivo.Modelo
             //int.TryParse(numero, out numeroValor);
             //Numero = numeroValor;
         }
+
     }
 }

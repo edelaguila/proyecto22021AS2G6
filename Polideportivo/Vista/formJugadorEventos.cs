@@ -1,4 +1,5 @@
 ﻿using Polideportivo.AccesoDatos;
+using Polideportivo.Controlador;
 using Polideportivo.Modelo;
 using System;
 using System.Collections.Generic;
@@ -42,6 +43,11 @@ namespace Polideportivo.Vista
             InitializeComponent();
             btnAgregarJugador.Visible = true;
             btnModificar.Visible = false;
+            // Llenar combobox de deportes
+            controladorDeporte deportes = new controladorDeporte();
+            cboDeporte.DataSource = deportes.mostrarDeportes();
+            cboDeporte.DisplayMember = "nombre";
+            cboDeporte.ValueMember = "pkId";
             // Llenar combobox de roles
             controladorJugador datosParaComboBox = new controladorJugador();
             //cboRol.DataSource = datosParaComboBox.mostrarRolesPorDeporte();
@@ -96,12 +102,42 @@ namespace Polideportivo.Vista
 
         private void cboEquipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void cboRol_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboDeporte.SelectedIndex > -1)
+            {
+                controladorRol rol = new controladorRol();
+                modeloRol modelo = new modeloRol();
+                modelo.fkIdDeporte = utilidadForms.stringAInt(cboDeporte.SelectedValue.ToString());
+                cboRol.DataSource = rol.mostrarRolesPorDeporte(modelo);
+                cboRol.DisplayMember = "nombre";
+                cboRol.ValueMember = "pkId";
+            }
+            
+
+        }
+
+        private void cboDeporte_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void cboDeporte_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            controladorRol rol = new controladorRol();
+            modeloRol modelo = new modeloRol();
+            modelo.fkIdDeporte = utilidadForms.stringAInt(cboDeporte.SelectedValue.ToString());
+            cboRol.DataSource = rol.mostrarRolesPorDeporte(modelo);
+            cboRol.DisplayMember = "nombre";
+            cboRol.ValueMember = "pkId";
         }
     }
 }

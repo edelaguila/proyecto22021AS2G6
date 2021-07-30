@@ -29,8 +29,19 @@ namespace Polideportivo.Vista
 
         public static int stringAInt(string str)
         {
-            int num = Int32.Parse(str);
-            return num;
+            int num;
+            bool seConvirtioAInt = int.TryParse(str, out num);
+            if (seConvirtioAInt)
+            {
+                Console.WriteLine($"Converted '{str}' to {num}.");
+                return num;
+            }
+            else
+            {
+                Console.WriteLine($"Attempted conversion of '{str ?? "<null>"}' failed.");
+                return 0;
+            }
+            
         }
 
     }

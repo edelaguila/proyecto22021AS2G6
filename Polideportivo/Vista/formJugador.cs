@@ -21,6 +21,7 @@ namespace Polideportivo.Vista
         {
             // TODO: esta línea de código carga datos en la tabla 'tablaJugadores1.vwjugador' Puede moverla o quitarla según sea necesario.
             vwjugadorTableAdapter.Fill(tablaJugadores1.vwjugador);
+            cboBuscar.SelectedIndex = 1;
 
         }
 
@@ -80,6 +81,18 @@ namespace Polideportivo.Vista
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
             abrirForm(new formJugadorEventos(modeloFila, this));
+        }
+
+        private void txtFiltrar_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtFiltrar.Text))
+            {
+                vwjugadorBindingSource.Filter = string.Empty;
+            }
+            else
+            {
+                vwjugadorBindingSource.Filter = string.Format("{0}='{1}'",cboBuscar.Text,txtFiltrar.Text);
+            }
         }
     }
 }

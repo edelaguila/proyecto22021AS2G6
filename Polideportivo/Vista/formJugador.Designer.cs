@@ -46,25 +46,25 @@ namespace Polideportivo.Vista
             this.vwjugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tablaJugadores1 = new Polideportivo.tablaJugadores();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.panelBuscarCol = new System.Windows.Forms.Panel();
+            this.cboBuscar = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtFiltrar = new System.Windows.Forms.TextBox();
+            this.vwjugadorTableAdapter = new Polideportivo.tablaJugadoresTableAdapters.vwjugadorTableAdapter();
+            this.btnEliminarJugador = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarJugador = new System.Windows.Forms.Button();
             this.btnAgregarJugador = new System.Windows.Forms.Button();
-            this.vwjugadorTableAdapter = new Polideportivo.tablaJugadoresTableAdapters.vwjugadorTableAdapter();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtFiltrar = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.cboBuscar = new System.Windows.Forms.ComboBox();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores1)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
+            this.panelBuscarCol.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tablaJugadores
@@ -218,9 +218,9 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.parrotGradientPanel1.Controls.Add(this.button1);
+            this.parrotGradientPanel1.Controls.Add(this.btnEliminarJugador);
             this.parrotGradientPanel1.Controls.Add(this.btnActualizar);
-            this.parrotGradientPanel1.Controls.Add(this.panel1);
+            this.parrotGradientPanel1.Controls.Add(this.panelBuscarCol);
             this.parrotGradientPanel1.Controls.Add(this.panel2);
             this.parrotGradientPanel1.Controls.Add(this.btnModificarJugador);
             this.parrotGradientPanel1.Controls.Add(this.btnAgregarJugador);
@@ -237,100 +237,25 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.TabIndex = 8;
             this.parrotGradientPanel1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.parrotGradientPanel1.TopLeft = System.Drawing.Color.DeepSkyBlue;
-            this.parrotGradientPanel1.TopRight = System.Drawing.Color.Navy;
+            this.parrotGradientPanel1.TopRight = System.Drawing.Color.CornflowerBlue;
             // 
-            // btnModificarJugador
+            // panelBuscarCol
             // 
-            this.btnModificarJugador.BackColor = System.Drawing.Color.White;
-            this.btnModificarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarJugador.FlatAppearance.BorderSize = 0;
-            this.btnModificarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarJugador.ForeColor = System.Drawing.Color.Black;
-            this.btnModificarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarJugador.Image")));
-            this.btnModificarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarJugador.Location = new System.Drawing.Point(627, 71);
-            this.btnModificarJugador.Name = "btnModificarJugador";
-            this.btnModificarJugador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnModificarJugador.Size = new System.Drawing.Size(210, 36);
-            this.btnModificarJugador.TabIndex = 28;
-            this.btnModificarJugador.Text = "    M O D I F I C A R";
-            this.btnModificarJugador.UseVisualStyleBackColor = false;
-            this.btnModificarJugador.Click += new System.EventHandler(this.btnModificarJugador_Click);
-            // 
-            // btnAgregarJugador
-            // 
-            this.btnAgregarJugador.BackColor = System.Drawing.Color.White;
-            this.btnAgregarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarJugador.FlatAppearance.BorderSize = 0;
-            this.btnAgregarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarJugador.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarJugador.Image")));
-            this.btnAgregarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarJugador.Location = new System.Drawing.Point(387, 71);
-            this.btnAgregarJugador.Name = "btnAgregarJugador";
-            this.btnAgregarJugador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnAgregarJugador.Size = new System.Drawing.Size(210, 36);
-            this.btnAgregarJugador.TabIndex = 27;
-            this.btnAgregarJugador.Text = "     A G R E G A R";
-            this.btnAgregarJugador.UseVisualStyleBackColor = false;
-            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
-            // 
-            // vwjugadorTableAdapter
-            // 
-            this.vwjugadorTableAdapter.ClearBeforeFill = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.txtFiltrar);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(69, 71);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(299, 36);
-            this.panel2.TabIndex = 30;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // txtFiltrar
-            // 
-            this.txtFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFiltrar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltrar.Location = new System.Drawing.Point(37, 9);
-            this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(252, 20);
-            this.txtFiltrar.TabIndex = 1;
-            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.cboBuscar);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(69, 22);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(299, 36);
-            this.panel1.TabIndex = 31;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(5, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.panelBuscarCol.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBuscarCol.BackColor = System.Drawing.Color.White;
+            this.panelBuscarCol.Controls.Add(this.cboBuscar);
+            this.panelBuscarCol.Controls.Add(this.pictureBox2);
+            this.panelBuscarCol.Location = new System.Drawing.Point(69, 20);
+            this.panelBuscarCol.Name = "panelBuscarCol";
+            this.panelBuscarCol.Size = new System.Drawing.Size(299, 36);
+            this.panelBuscarCol.TabIndex = 31;
             // 
             // cboBuscar
             // 
+            this.cboBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboBuscar.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -347,17 +272,69 @@ namespace Polideportivo.Vista
             this.cboBuscar.TabIndex = 32;
             this.cboBuscar.SelectedIndexChanged += new System.EventHandler(this.cboBuscar_SelectedIndexChanged);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.txtFiltrar);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(69, 69);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(299, 36);
+            this.panel2.TabIndex = 30;
+            // 
+            // txtFiltrar
+            // 
+            this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFiltrar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltrar.Location = new System.Drawing.Point(37, 9);
+            this.txtFiltrar.Name = "txtFiltrar";
+            this.txtFiltrar.Size = new System.Drawing.Size(252, 20);
+            this.txtFiltrar.TabIndex = 1;
+            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
+            // 
+            // vwjugadorTableAdapter
+            // 
+            this.vwjugadorTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnEliminarJugador
+            // 
+            this.btnEliminarJugador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarJugador.BackColor = System.Drawing.Color.White;
+            this.btnEliminarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarJugador.FlatAppearance.BorderSize = 0;
+            this.btnEliminarJugador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEliminarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarJugador.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarJugador.Image")));
+            this.btnEliminarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarJugador.Location = new System.Drawing.Point(627, 20);
+            this.btnEliminarJugador.Name = "btnEliminarJugador";
+            this.btnEliminarJugador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnEliminarJugador.Size = new System.Drawing.Size(210, 36);
+            this.btnEliminarJugador.TabIndex = 33;
+            this.btnEliminarJugador.Text = "   E L I M I N A R";
+            this.btnEliminarJugador.UseVisualStyleBackColor = false;
+            this.btnEliminarJugador.Click += new System.EventHandler(this.btnEliminarJugador_Click);
+            // 
             // btnActualizar
             // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActualizar.BackColor = System.Drawing.Color.White;
             this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.Black;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(387, 22);
+            this.btnActualizar.Location = new System.Drawing.Point(392, 20);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btnActualizar.Size = new System.Drawing.Size(210, 36);
@@ -366,23 +343,65 @@ namespace Polideportivo.Vista
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // button1
+            // pictureBox2
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(627, 22);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(210, 36);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "   E L I M I N A R";
-            this.button1.UseVisualStyleBackColor = false;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(5, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(5, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnModificarJugador
+            // 
+            this.btnModificarJugador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificarJugador.BackColor = System.Drawing.Color.White;
+            this.btnModificarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarJugador.FlatAppearance.BorderSize = 0;
+            this.btnModificarJugador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnModificarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarJugador.ForeColor = System.Drawing.Color.Black;
+            this.btnModificarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarJugador.Image")));
+            this.btnModificarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarJugador.Location = new System.Drawing.Point(627, 69);
+            this.btnModificarJugador.Name = "btnModificarJugador";
+            this.btnModificarJugador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnModificarJugador.Size = new System.Drawing.Size(210, 36);
+            this.btnModificarJugador.TabIndex = 28;
+            this.btnModificarJugador.Text = "    M O D I F I C A R";
+            this.btnModificarJugador.UseVisualStyleBackColor = false;
+            this.btnModificarJugador.Click += new System.EventHandler(this.btnModificarJugador_Click);
+            // 
+            // btnAgregarJugador
+            // 
+            this.btnAgregarJugador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarJugador.BackColor = System.Drawing.Color.White;
+            this.btnAgregarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarJugador.FlatAppearance.BorderSize = 0;
+            this.btnAgregarJugador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAgregarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarJugador.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarJugador.Image")));
+            this.btnAgregarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarJugador.Location = new System.Drawing.Point(392, 69);
+            this.btnAgregarJugador.Name = "btnAgregarJugador";
+            this.btnAgregarJugador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnAgregarJugador.Size = new System.Drawing.Size(210, 36);
+            this.btnAgregarJugador.TabIndex = 27;
+            this.btnAgregarJugador.Text = "     A G R E G A R";
+            this.btnAgregarJugador.UseVisualStyleBackColor = false;
+            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
             // 
             // formJugador
             // 
@@ -398,11 +417,11 @@ namespace Polideportivo.Vista
             ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores1)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
+            this.panelBuscarCol.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -427,10 +446,10 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtFiltrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelBuscarCol;
         private System.Windows.Forms.ComboBox cboBuscar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEliminarJugador;
     }
 }

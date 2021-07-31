@@ -23,12 +23,6 @@ namespace Polideportivo.AccesoDatos
             fkIdEquipo = modelo.fkIdEquipo, fkIdRol = modelo.fkIdRol, fkIdDeporte = modelo.fkIdDeporte};
             var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
 
-            //var resultadoinsertar = pruebas.Execute(sqlinsertar);
-            //var resultadoinsertar = pruebas.Execute(sqlinsertar,
-            //        new
-            //        {
-            //            nombre = "Gaucho"
-            //        });
 
             pruebas.Close();
 
@@ -53,17 +47,7 @@ namespace Polideportivo.AccesoDatos
                 pkId = modelo.pkId
             };
             var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-
-            //var resultadoinsertar = pruebas.Execute(sqlinsertar);
-            //var resultadoinsertar = pruebas.Execute(sqlinsertar,
-            //        new
-            //        {
-            //            nombre = "Gaucho"
-            //        });
-
             pruebas.Close();
-
-            //modelo.id = 5;
             return modelo;
         }
 
@@ -91,7 +75,21 @@ namespace Polideportivo.AccesoDatos
             return modeloList;
         }
 
-      
+        public modeloJugador eliminarJugador(modeloJugador modelo)
+        {
+
+            var sqlinsertar =
+                "DELETE FROM jugador WHERE pkId = ?pkId?;";
+            var ValorDeVariables = new
+            {
+                pkId = modelo.pkId
+            };
+            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
+            pruebas.Close();
+            return modelo;
+        }
+
+
 
     }
 }

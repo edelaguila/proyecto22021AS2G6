@@ -99,5 +99,15 @@ namespace Polideportivo.Vista
         {
             actualizarTablaJugadores();
         }
+
+        private void btnEliminarJugador_Click(object sender, EventArgs e)
+        {
+            int id = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
+            controladorJugador controlador = new controladorJugador();
+            modeloJugador modelo = new modeloJugador();
+            modelo.pkId = id;
+            controlador.eliminarJugador(modelo);
+            actualizarTablaJugadores();
+        }
     }
 }

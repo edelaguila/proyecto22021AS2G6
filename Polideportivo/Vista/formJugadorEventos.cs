@@ -31,8 +31,8 @@ namespace Polideportivo.Vista
         {
             // Este constructor es el que se utiliza para modificar datos
             InitializeComponent();
-            btnAgregarJugador.Visible = false;
             btnModificarJugador.Visible = true;
+            btnAgregarJugador.Visible = false;
             formOriginal = form;
             txtNombre.Text = modelo.nombre;
             txtAnotaciones.Text = modelo.anotaciones.ToString();
@@ -96,20 +96,6 @@ namespace Polideportivo.Vista
             cerrarForm(this);
         }
 
-        private void btnModificarJugador_Click(object sender, EventArgs e)
-        {
-            controladorJugador modeloModificar = new controladorJugador();
-            modeloJugador modelo = new modeloJugador();
-            modelo.pkId = modeloOriginal.pkId;
-            modelo.nombre = txtNombre.Text;
-            modelo.anotaciones = stringAInt(txtAnotaciones.Text);
-            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-            modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
-            modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
-            modeloModificar.modificarJugador(modelo);
-            formOriginal.actualizarTablaJugadores();
-            cerrarForm(this);
-        }
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
@@ -121,6 +107,21 @@ namespace Polideportivo.Vista
             modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
             modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
             modeloAgregar.agregarJugador(modelo);
+            formOriginal.actualizarTablaJugadores();
+            cerrarForm(this);
+        }
+
+        private void btnModificarJugador_Click(object sender, EventArgs e)
+        {
+            controladorJugador modeloModificar = new controladorJugador();
+            modeloJugador modelo = new modeloJugador();
+            modelo.pkId = modeloOriginal.pkId;
+            modelo.nombre = txtNombre.Text;
+            modelo.anotaciones = stringAInt(txtAnotaciones.Text);
+            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
+            modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
+            modeloModificar.modificarJugador(modelo);
             formOriginal.actualizarTablaJugadores();
             cerrarForm(this);
         }

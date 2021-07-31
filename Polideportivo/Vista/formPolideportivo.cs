@@ -66,6 +66,7 @@ namespace Polideportivo
             {
                 panelLateralInterno.Width = 250;
                 panelLateralWrapper.Width = 280;
+
                 separadorLogo.Width = 220;
             }
                   

@@ -1,0 +1,3 @@
+/Polideportivo/connectionStrings.config
+/Polideportivo/Properties/Settings.Designer.cs
+/Polideportivo/Properties/Settings.settings

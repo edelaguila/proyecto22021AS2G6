@@ -1,0 +1,12 @@
+*.cache
+*.suo
+*.exe
+*.pdb
+AppSettings.config
+*/**/Polideporti	vo/ConnectionStrings.config
+*/**/bin/Debug
+*/**/bin/Release
+*/**/obj/Debug
+*/**/obj/Release
+*/**/Properties/Settings.settings
+*/**/Properties/Settings.Designer.cs

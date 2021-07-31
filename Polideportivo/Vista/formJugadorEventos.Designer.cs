@@ -29,234 +29,282 @@ namespace Polideportivo.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNombre = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formJugadorEventos));
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblEquipo = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.lblAnotaciones = new System.Windows.Forms.Label();
-            this.panelJugadorEventos = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.btnAgregarJugador = new ReaLTaiizor.Controls.HopeButton();
-            this.btnModificarJugador = new ReaLTaiizor.Controls.HopeButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboDeporte = new System.Windows.Forms.ComboBox();
-            this.cboRol = new System.Windows.Forms.ComboBox();
             this.cboEquipo = new System.Windows.Forms.ComboBox();
-            this.txtAnotaciones = new System.Windows.Forms.TextBox();
             this.lblRol = new System.Windows.Forms.Label();
-            this.panelJugadorEventos.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboRol = new System.Windows.Forms.ComboBox();
+            this.txtAnotaciones = new System.Windows.Forms.TextBox();
+            this.cboDeporte = new System.Windows.Forms.ComboBox();
+            this.parrotGradientPanel2 = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.btnModificarJugador = new System.Windows.Forms.Button();
+            this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.lblJugadorEvento = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.PictureBox();
+            this.btnAgregarJugador = new System.Windows.Forms.Button();
+            this.parrotGradientPanel2.SuspendLayout();
+            this.parrotGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombre.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(82, 52);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 18);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(170, 52);
+            this.txtNombre.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(52, 56);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(121, 21);
+            this.txtNombre.Size = new System.Drawing.Size(121, 23);
             this.txtNombre.TabIndex = 1;
             // 
             // lblEquipo
             // 
             this.lblEquipo.AutoSize = true;
             this.lblEquipo.BackColor = System.Drawing.Color.Transparent;
-            this.lblEquipo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEquipo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEquipo.ForeColor = System.Drawing.Color.White;
-            this.lblEquipo.Location = new System.Drawing.Point(91, 177);
+            this.lblEquipo.Location = new System.Drawing.Point(222, 89);
             this.lblEquipo.Name = "lblEquipo";
-            this.lblEquipo.Size = new System.Drawing.Size(56, 18);
+            this.lblEquipo.Size = new System.Drawing.Size(60, 18);
             this.lblEquipo.TabIndex = 4;
-            this.lblEquipo.Text = "Equipo:";
+            this.lblEquipo.Text = "EQUIPO";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(52, 36);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(69, 18);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "NOMBRE";
             // 
             // lblAnotaciones
             // 
             this.lblAnotaciones.AutoSize = true;
             this.lblAnotaciones.BackColor = System.Drawing.Color.Transparent;
-            this.lblAnotaciones.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnotaciones.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnotaciones.ForeColor = System.Drawing.Color.White;
-            this.lblAnotaciones.Location = new System.Drawing.Point(52, 93);
+            this.lblAnotaciones.Location = new System.Drawing.Point(52, 89);
             this.lblAnotaciones.Name = "lblAnotaciones";
-            this.lblAnotaciones.Size = new System.Drawing.Size(95, 18);
+            this.lblAnotaciones.Size = new System.Drawing.Size(110, 18);
             this.lblAnotaciones.TabIndex = 6;
-            this.lblAnotaciones.Text = "Anotaciones:";
-            // 
-            // panelJugadorEventos
-            // 
-            this.panelJugadorEventos.BottomLeft = System.Drawing.Color.Black;
-            this.panelJugadorEventos.BottomRight = System.Drawing.Color.MidnightBlue;
-            this.panelJugadorEventos.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.panelJugadorEventos.Controls.Add(this.btnAgregarJugador);
-            this.panelJugadorEventos.Controls.Add(this.btnModificarJugador);
-            this.panelJugadorEventos.Controls.Add(this.label1);
-            this.panelJugadorEventos.Controls.Add(this.cboDeporte);
-            this.panelJugadorEventos.Controls.Add(this.cboRol);
-            this.panelJugadorEventos.Controls.Add(this.cboEquipo);
-            this.panelJugadorEventos.Controls.Add(this.txtAnotaciones);
-            this.panelJugadorEventos.Controls.Add(this.lblRol);
-            this.panelJugadorEventos.Controls.Add(this.lblEquipo);
-            this.panelJugadorEventos.Controls.Add(this.lblAnotaciones);
-            this.panelJugadorEventos.Controls.Add(this.lblNombre);
-            this.panelJugadorEventos.Controls.Add(this.txtNombre);
-            this.panelJugadorEventos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelJugadorEventos.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            this.panelJugadorEventos.Location = new System.Drawing.Point(0, 0);
-            this.panelJugadorEventos.Name = "panelJugadorEventos";
-            this.panelJugadorEventos.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.panelJugadorEventos.PrimerColor = System.Drawing.Color.White;
-            this.panelJugadorEventos.Size = new System.Drawing.Size(401, 359);
-            this.panelJugadorEventos.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.panelJugadorEventos.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
-            this.panelJugadorEventos.TabIndex = 9;
-            this.panelJugadorEventos.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.panelJugadorEventos.TopLeft = System.Drawing.Color.DeepSkyBlue;
-            this.panelJugadorEventos.TopRight = System.Drawing.Color.Navy;
-            // 
-            // btnAgregarJugador
-            // 
-            this.btnAgregarJugador.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAgregarJugador.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.btnAgregarJugador.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
-            this.btnAgregarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarJugador.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.btnAgregarJugador.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnAgregarJugador.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAgregarJugador.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAgregarJugador.HoverTextColor = System.Drawing.Color.White;
-            this.btnAgregarJugador.InfoColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
-            this.btnAgregarJugador.Location = new System.Drawing.Point(155, 277);
-            this.btnAgregarJugador.Name = "btnAgregarJugador";
-            this.btnAgregarJugador.PrimaryColor = System.Drawing.Color.SteelBlue;
-            this.btnAgregarJugador.Size = new System.Drawing.Size(96, 30);
-            this.btnAgregarJugador.SuccessColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.btnAgregarJugador.TabIndex = 22;
-            this.btnAgregarJugador.Text = "Agregar";
-            this.btnAgregarJugador.TextColor = System.Drawing.Color.White;
-            this.btnAgregarJugador.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
-            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
-            // 
-            // btnModificarJugador
-            // 
-            this.btnModificarJugador.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnModificarJugador.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.btnModificarJugador.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
-            this.btnModificarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarJugador.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.btnModificarJugador.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnModificarJugador.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnModificarJugador.ForeColor = System.Drawing.Color.Transparent;
-            this.btnModificarJugador.HoverTextColor = System.Drawing.Color.White;
-            this.btnModificarJugador.InfoColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
-            this.btnModificarJugador.Location = new System.Drawing.Point(155, 277);
-            this.btnModificarJugador.Name = "btnModificarJugador";
-            this.btnModificarJugador.PrimaryColor = System.Drawing.Color.SteelBlue;
-            this.btnModificarJugador.Size = new System.Drawing.Size(96, 30);
-            this.btnModificarJugador.SuccessColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
-            this.btnModificarJugador.TabIndex = 21;
-            this.btnModificarJugador.Text = "Modificar";
-            this.btnModificarJugador.TextColor = System.Drawing.Color.White;
-            this.btnModificarJugador.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
-            this.btnModificarJugador.Click += new System.EventHandler(this.btnModificarJugador_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(83, 131);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 18);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Deporte:";
-            // 
-            // cboDeporte
-            // 
-            this.cboDeporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDeporte.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboDeporte.FormattingEnabled = true;
-            this.cboDeporte.Location = new System.Drawing.Point(170, 132);
-            this.cboDeporte.Name = "cboDeporte";
-            this.cboDeporte.Size = new System.Drawing.Size(121, 21);
-            this.cboDeporte.TabIndex = 18;
-            this.cboDeporte.SelectedIndexChanged += new System.EventHandler(this.cboDeporte_SelectedIndexChanged);
-            // 
-            // cboRol
-            // 
-            this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRol.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboRol.FormattingEnabled = true;
-            this.cboRol.Location = new System.Drawing.Point(170, 215);
-            this.cboRol.Name = "cboRol";
-            this.cboRol.Size = new System.Drawing.Size(121, 21);
-            this.cboRol.TabIndex = 17;
+            this.lblAnotaciones.Text = "ANOTACIONES";
             // 
             // cboEquipo
             // 
             this.cboEquipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEquipo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEquipo.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEquipo.FormattingEnabled = true;
-            this.cboEquipo.Location = new System.Drawing.Point(170, 175);
+            this.cboEquipo.Location = new System.Drawing.Point(222, 109);
             this.cboEquipo.Name = "cboEquipo";
-            this.cboEquipo.Size = new System.Drawing.Size(121, 21);
+            this.cboEquipo.Size = new System.Drawing.Size(121, 23);
             this.cboEquipo.TabIndex = 16;
-            // 
-            // txtAnotaciones
-            // 
-            this.txtAnotaciones.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnotaciones.Location = new System.Drawing.Point(170, 92);
-            this.txtAnotaciones.Name = "txtAnotaciones";
-            this.txtAnotaciones.Size = new System.Drawing.Size(121, 21);
-            this.txtAnotaciones.TabIndex = 10;
             // 
             // lblRol
             // 
             this.lblRol.AutoSize = true;
             this.lblRol.BackColor = System.Drawing.Color.Transparent;
-            this.lblRol.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.Color.White;
-            this.lblRol.Location = new System.Drawing.Point(103, 218);
+            this.lblRol.Location = new System.Drawing.Point(222, 142);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(34, 18);
+            this.lblRol.Size = new System.Drawing.Size(35, 18);
             this.lblRol.TabIndex = 9;
-            this.lblRol.Text = "Rol:";
+            this.lblRol.Text = "ROL";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(222, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 18);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "DEPORTE";
+            // 
+            // cboRol
+            // 
+            this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboRol.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboRol.FormattingEnabled = true;
+            this.cboRol.Location = new System.Drawing.Point(222, 162);
+            this.cboRol.Name = "cboRol";
+            this.cboRol.Size = new System.Drawing.Size(121, 23);
+            this.cboRol.TabIndex = 17;
+            // 
+            // txtAnotaciones
+            // 
+            this.txtAnotaciones.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnotaciones.Location = new System.Drawing.Point(52, 109);
+            this.txtAnotaciones.Name = "txtAnotaciones";
+            this.txtAnotaciones.Size = new System.Drawing.Size(121, 23);
+            this.txtAnotaciones.TabIndex = 10;
+            // 
+            // cboDeporte
+            // 
+            this.cboDeporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDeporte.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDeporte.FormattingEnabled = true;
+            this.cboDeporte.Location = new System.Drawing.Point(222, 56);
+            this.cboDeporte.Name = "cboDeporte";
+            this.cboDeporte.Size = new System.Drawing.Size(121, 23);
+            this.cboDeporte.TabIndex = 18;
+            this.cboDeporte.SelectedIndexChanged += new System.EventHandler(this.cboDeporte_SelectedIndexChanged);
+            // 
+            // parrotGradientPanel2
+            // 
+            this.parrotGradientPanel2.BottomLeft = System.Drawing.Color.Black;
+            this.parrotGradientPanel2.BottomRight = System.Drawing.Color.MidnightBlue;
+            this.parrotGradientPanel2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotGradientPanel2.Controls.Add(this.btnAgregarJugador);
+            this.parrotGradientPanel2.Controls.Add(this.btnModificarJugador);
+            this.parrotGradientPanel2.Controls.Add(this.cboDeporte);
+            this.parrotGradientPanel2.Controls.Add(this.cboRol);
+            this.parrotGradientPanel2.Controls.Add(this.label1);
+            this.parrotGradientPanel2.Controls.Add(this.lblRol);
+            this.parrotGradientPanel2.Controls.Add(this.txtNombre);
+            this.parrotGradientPanel2.Controls.Add(this.cboEquipo);
+            this.parrotGradientPanel2.Controls.Add(this.lblNombre);
+            this.parrotGradientPanel2.Controls.Add(this.lblEquipo);
+            this.parrotGradientPanel2.Controls.Add(this.txtAnotaciones);
+            this.parrotGradientPanel2.Controls.Add(this.lblAnotaciones);
+            this.parrotGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.parrotGradientPanel2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.parrotGradientPanel2.Location = new System.Drawing.Point(0, 62);
+            this.parrotGradientPanel2.Name = "parrotGradientPanel2";
+            this.parrotGradientPanel2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.parrotGradientPanel2.PrimerColor = System.Drawing.Color.White;
+            this.parrotGradientPanel2.Size = new System.Drawing.Size(401, 297);
+            this.parrotGradientPanel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.parrotGradientPanel2.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
+            this.parrotGradientPanel2.TabIndex = 10;
+            this.parrotGradientPanel2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotGradientPanel2.TopLeft = System.Drawing.Color.DeepSkyBlue;
+            this.parrotGradientPanel2.TopRight = System.Drawing.Color.Navy;
+            // 
+            // btnModificarJugador
+            // 
+            this.btnModificarJugador.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnModificarJugador.FlatAppearance.BorderSize = 0;
+            this.btnModificarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarJugador.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnModificarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarJugador.Image")));
+            this.btnModificarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarJugador.Location = new System.Drawing.Point(55, 221);
+            this.btnModificarJugador.Name = "btnModificarJugador";
+            this.btnModificarJugador.Size = new System.Drawing.Size(288, 32);
+            this.btnModificarJugador.TabIndex = 25;
+            this.btnModificarJugador.Text = "M O D I F I C A R";
+            this.btnModificarJugador.UseVisualStyleBackColor = false;
+            this.btnModificarJugador.Click += new System.EventHandler(this.btnModificarJugador_Click);
+            // 
+            // parrotGradientPanel1
+            // 
+            this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
+            this.parrotGradientPanel1.BottomRight = System.Drawing.Color.DarkBlue;
+            this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotGradientPanel1.Controls.Add(this.lblJugadorEvento);
+            this.parrotGradientPanel1.Controls.Add(this.btnSalir);
+            this.parrotGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.parrotGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.parrotGradientPanel1.Name = "parrotGradientPanel1";
+            this.parrotGradientPanel1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.parrotGradientPanel1.PrimerColor = System.Drawing.Color.White;
+            this.parrotGradientPanel1.Size = new System.Drawing.Size(401, 62);
+            this.parrotGradientPanel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.parrotGradientPanel1.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
+            this.parrotGradientPanel1.TabIndex = 11;
+            this.parrotGradientPanel1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotGradientPanel1.TopLeft = System.Drawing.Color.DeepSkyBlue;
+            this.parrotGradientPanel1.TopRight = System.Drawing.Color.DarkBlue;
+            // 
+            // lblJugadorEvento
+            // 
+            this.lblJugadorEvento.AutoSize = true;
+            this.lblJugadorEvento.BackColor = System.Drawing.Color.Transparent;
+            this.lblJugadorEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJugadorEvento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblJugadorEvento.Location = new System.Drawing.Point(52, 20);
+            this.lblJugadorEvento.Name = "lblJugadorEvento";
+            this.lblJugadorEvento.Size = new System.Drawing.Size(239, 25);
+            this.lblJugadorEvento.TabIndex = 23;
+            this.lblJugadorEvento.Text = "AGREGAR JUGADOR";
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(352, 16);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(32, 32);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnAgregarJugador
+            // 
+            this.btnAgregarJugador.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAgregarJugador.FlatAppearance.BorderSize = 0;
+            this.btnAgregarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarJugador.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAgregarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarJugador.Image")));
+            this.btnAgregarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarJugador.Location = new System.Drawing.Point(55, 223);
+            this.btnAgregarJugador.Name = "btnAgregarJugador";
+            this.btnAgregarJugador.Size = new System.Drawing.Size(288, 32);
+            this.btnAgregarJugador.TabIndex = 26;
+            this.btnAgregarJugador.Text = "A G R E G A R";
+            this.btnAgregarJugador.UseVisualStyleBackColor = false;
+            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
             // 
             // formJugadorEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 359);
-            this.Controls.Add(this.panelJugadorEventos);
+            this.Controls.Add(this.parrotGradientPanel2);
+            this.Controls.Add(this.parrotGradientPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formJugadorEventos";
             this.Text = "formJugadorEventos";
-            this.panelJugadorEventos.ResumeLayout(false);
-            this.panelJugadorEventos.PerformLayout();
+            this.parrotGradientPanel2.ResumeLayout(false);
+            this.parrotGradientPanel2.PerformLayout();
+            this.parrotGradientPanel1.ResumeLayout(false);
+            this.parrotGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblEquipo;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblAnotaciones;
-        private ReaLTaiizor.Controls.ParrotGradientPanel panelJugadorEventos;
-        private System.Windows.Forms.Label lblRol;
-        private System.Windows.Forms.TextBox txtAnotaciones;
         private System.Windows.Forms.ComboBox cboEquipo;
-        private System.Windows.Forms.ComboBox cboRol;
+        private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboRol;
+        private System.Windows.Forms.TextBox txtAnotaciones;
         private System.Windows.Forms.ComboBox cboDeporte;
-        private ReaLTaiizor.Controls.HopeButton btnModificarJugador;
-        private ReaLTaiizor.Controls.HopeButton btnAgregarJugador;
+        private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel2;
+        private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
+        private System.Windows.Forms.PictureBox btnSalir;
+        private System.Windows.Forms.Label lblJugadorEvento;
+        private System.Windows.Forms.Button btnModificarJugador;
+        private System.Windows.Forms.Button btnAgregarJugador;
     }
 }

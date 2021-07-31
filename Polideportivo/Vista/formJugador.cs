@@ -31,10 +31,6 @@ namespace Polideportivo.Vista
             db.agregarJugador(modelo);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            actualizarTablaJugadores();
-        }
 
         public void actualizarTablaJugadores()
         {
@@ -71,14 +67,15 @@ namespace Polideportivo.Vista
 
         }
 
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            actualizarTablaJugadores();
+        }
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
             abrirForm(new formJugadorEventos(this));
         }
-
-
-
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {

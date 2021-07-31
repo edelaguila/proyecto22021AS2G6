@@ -76,16 +76,6 @@ namespace Polideportivo.Vista
 
         }
 
-        private void parrotGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void cboEquipo_SelectedIndexChanged(object sender, EventArgs e)
         {
             

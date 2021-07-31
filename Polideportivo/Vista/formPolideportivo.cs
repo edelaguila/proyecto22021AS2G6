@@ -75,7 +75,6 @@ namespace Polideportivo
         private Form formActivo = null;
         private void btnDeportes_Click(object sender, EventArgs e)
         {
-            abrirFormHijo(new formJugador());
             
         }
 
@@ -105,6 +104,11 @@ namespace Polideportivo
         private void MenuSuperiorPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnMenuJugador_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new formJugador());
         }
     }
 

@@ -7,11 +7,8 @@ using System.Windows.Forms;
 
 namespace Polideportivo.Vista
 {
-    public static class utilidadForms 
+    class utilidadForms 
     {
-
-
-
         public static void abrirForm(Form formEvento)
         {
 

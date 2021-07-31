@@ -101,22 +101,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cboDeporte.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cboDeporte.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="cboEquipo.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cboEquipo.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="cboRol.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cboRol.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Controlador\controladorDeporte.cs" />
+    <Compile Include="Controlador\controladorEquipo.cs" />
     <Compile Include="Controlador\controladorJugador.cs" />
     <Compile Include="Controlador\controladorPolideportivo.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
@@ -177,39 +163,6 @@
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="cboDeporte.xsc">
-      <DependentUpon>cboDeporte.xsd</DependentUpon>
-    </None>
-    <None Include="cboDeporte.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cboDeporte.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="cboDeporte.xss">
-      <DependentUpon>cboDeporte.xsd</DependentUpon>
-    </None>
-    <None Include="cboEquipo.xsc">
-      <DependentUpon>cboEquipo.xsd</DependentUpon>
-    </None>
-    <None Include="cboEquipo.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cboEquipo.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="cboEquipo.xss">
-      <DependentUpon>cboEquipo.xsd</DependentUpon>
-    </None>
-    <None Include="cboRol.xsc">
-      <DependentUpon>cboRol.xsd</DependentUpon>
-    </None>
-    <None Include="cboRol.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cboRol.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="cboRol.xss">
-      <DependentUpon>cboRol.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -10,18 +10,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Polideportivo.Vista.utilidadForms;
 
 namespace Polideportivo.Vista
 {
     public partial class formJugadorEventos : Form
     {
 
-        
 
         public formJugadorEventos()
         {
             InitializeComponent();
         }
+
 
         formJugador formOriginal = new formJugador();
 
@@ -31,40 +32,32 @@ namespace Polideportivo.Vista
             // Este constructor es el que se utiliza para modificar datos
             InitializeComponent();
             btnAgregarJugador.Visible = false;
-            btnModificar.Visible = true;
+            btnModificarJugador.Visible = true;
             formOriginal = form;
             txtNombre.Text = modelo.nombre;
             txtAnotaciones.Text = modelo.anotaciones.ToString();
-
         }
 
-        
+
         public formJugadorEventos(formJugador form)
         {
             // Este constructor es el que se utiliza para agregar datos
             InitializeComponent();
             btnAgregarJugador.Visible = true;
-            btnModificar.Visible = false;
+            btnModificarJugador.Visible = false;
             // Llenar combobox de deportes
             controladorDeporte deportes = new controladorDeporte();
             cboDeporte.DataSource = deportes.mostrarDeportes();
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
-
+            cboDeporte.SelectedIndex = -1;
+            formOriginal = form;
         }
 
 
         public void btnAgregarJugador_Click(object sender, EventArgs e)
         {
-            controladorJugador modeloAgregar = new controladorJugador();
-            modeloJugador modelo = new modeloJugador();
-            modelo.nombre = txtNombre.Text;
-            modelo.anotaciones = utilidadForms.stringAInt(txtAnotaciones.Text);
-            modelo.fkIdEquipo = utilidadForms.stringAInt(cboEquipo.SelectedValue.ToString());
-            modelo.fkIdRol = utilidadForms.stringAInt(cboRol.SelectedValue.ToString());
-            modeloAgregar.agregarJugador(modelo);
-            formOriginal.actualizarTablaJugadores();
-            utilidadForms.cerrarForm(this);
+            
             
         }
 
@@ -89,9 +82,9 @@ namespace Polideportivo.Vista
             controladorJugador modeloModificar = new controladorJugador();
             modeloJugador modelo = new modeloJugador();
             modelo.nombre = txtNombre.Text;
-            modelo.anotaciones = utilidadForms.stringAInt(txtAnotaciones.Text);
-            modelo.fkIdEquipo = utilidadForms.stringAInt(cboEquipo.SelectedValue.ToString());
-            modelo.fkIdRol = utilidadForms.stringAInt(cboRol.SelectedValue.ToString());
+            modelo.anotaciones = stringAInt(txtAnotaciones.Text);
+            modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
+            modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
             modeloModificar.modificarJugador(modelo);
             formOriginal.actualizarTablaJugadores();
             utilidadForms.cerrarForm(this);
@@ -112,12 +105,21 @@ namespace Polideportivo.Vista
         {
             if (cboDeporte.SelectedIndex > -1)
             {
-                modeloRol modelo = new modeloRol();
-                controladorRol rol = new controladorRol(modelo);
-                modelo.fkIdDeporte = utilidadForms.stringAInt(cboDeporte.SelectedValue.ToString());
+                // Llenar la combobox de rol dependiendo del deporte elegido
+                modeloRol modelorol = new modeloRol();
+                modelorol.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+                controladorRol rol = new controladorRol(modelorol);
                 cboRol.DataSource = rol.mostrarRolesPorDeporte();
                 cboRol.DisplayMember = "nombre";
                 cboRol.ValueMember = "pkId";
+
+                // Llenar la combobox de equipo dependiendo del deporte elegido
+                modeloEquipo modeloequipo = new modeloEquipo();
+                modeloequipo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+                controladorEquipo equipo = new controladorEquipo(modeloequipo);
+                cboEquipo.DataSource = equipo.mostrarEquipoPorDeporte();
+                cboEquipo.DisplayMember = "nombre";
+                cboEquipo.ValueMember = "pkId";
             }
         }
 
@@ -139,6 +141,19 @@ namespace Polideportivo.Vista
         private void cboDeporte_Layout(object sender, LayoutEventArgs e)
         {
 
+        }
+
+        private void btnAgregarJugador_Click_1(object sender, EventArgs e)
+        {
+            controladorJugador modeloAgregar = new controladorJugador();
+            modeloJugador modelo = new modeloJugador();
+            modelo.nombre = txtNombre.Text;
+            modelo.anotaciones = utilidadForms.stringAInt(txtAnotaciones.Text);
+            modelo.fkIdEquipo = utilidadForms.stringAInt(cboEquipo.SelectedValue.ToString());
+            modelo.fkIdRol = utilidadForms.stringAInt(cboRol.SelectedValue.ToString());
+            modeloAgregar.agregarJugador(modelo);
+            formOriginal.actualizarTablaJugadores();
+            utilidadForms.cerrarForm(this);
         }
     }
 }

@@ -198,6 +198,7 @@
             this.btnMenuJugador.TabIndex = 9;
             this.btnMenuJugador.Text = "    JUGADORES";
             this.btnMenuJugador.UseVisualStyleBackColor = false;
+            this.btnMenuJugador.Click += new System.EventHandler(this.btnMenuJugador_Click);
             // 
             // separadorLogo
             // 

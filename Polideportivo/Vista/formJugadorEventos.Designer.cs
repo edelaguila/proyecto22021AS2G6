@@ -51,7 +51,7 @@ namespace Polideportivo.Vista
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(50, 47);
+            this.lblNombre.Location = new System.Drawing.Point(82, 52);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(65, 18);
             this.lblNombre.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace Polideportivo.Vista
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(138, 47);
+            this.txtNombre.Location = new System.Drawing.Point(170, 52);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 21);
             this.txtNombre.TabIndex = 1;
@@ -72,7 +72,7 @@ namespace Polideportivo.Vista
             this.lblEquipo.BackColor = System.Drawing.Color.Transparent;
             this.lblEquipo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEquipo.ForeColor = System.Drawing.Color.White;
-            this.lblEquipo.Location = new System.Drawing.Point(33, 132);
+            this.lblEquipo.Location = new System.Drawing.Point(91, 177);
             this.lblEquipo.Name = "lblEquipo";
             this.lblEquipo.Size = new System.Drawing.Size(56, 18);
             this.lblEquipo.TabIndex = 4;
@@ -84,7 +84,7 @@ namespace Polideportivo.Vista
             this.lblAnotaciones.BackColor = System.Drawing.Color.Transparent;
             this.lblAnotaciones.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnotaciones.ForeColor = System.Drawing.Color.White;
-            this.lblAnotaciones.Location = new System.Drawing.Point(20, 85);
+            this.lblAnotaciones.Location = new System.Drawing.Point(52, 93);
             this.lblAnotaciones.Name = "lblAnotaciones";
             this.lblAnotaciones.Size = new System.Drawing.Size(95, 18);
             this.lblAnotaciones.TabIndex = 6;
@@ -134,7 +134,7 @@ namespace Polideportivo.Vista
             this.btnAgregarJugador.ForeColor = System.Drawing.Color.Transparent;
             this.btnAgregarJugador.HoverTextColor = System.Drawing.Color.White;
             this.btnAgregarJugador.InfoColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
-            this.btnAgregarJugador.Location = new System.Drawing.Point(138, 257);
+            this.btnAgregarJugador.Location = new System.Drawing.Point(155, 277);
             this.btnAgregarJugador.Name = "btnAgregarJugador";
             this.btnAgregarJugador.PrimaryColor = System.Drawing.Color.SteelBlue;
             this.btnAgregarJugador.Size = new System.Drawing.Size(96, 30);
@@ -143,7 +143,7 @@ namespace Polideportivo.Vista
             this.btnAgregarJugador.Text = "Agregar";
             this.btnAgregarJugador.TextColor = System.Drawing.Color.White;
             this.btnAgregarJugador.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
-            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click_1);
+            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
             // 
             // btnModificarJugador
             // 
@@ -157,7 +157,7 @@ namespace Polideportivo.Vista
             this.btnModificarJugador.ForeColor = System.Drawing.Color.Transparent;
             this.btnModificarJugador.HoverTextColor = System.Drawing.Color.White;
             this.btnModificarJugador.InfoColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
-            this.btnModificarJugador.Location = new System.Drawing.Point(138, 257);
+            this.btnModificarJugador.Location = new System.Drawing.Point(155, 303);
             this.btnModificarJugador.Name = "btnModificarJugador";
             this.btnModificarJugador.PrimaryColor = System.Drawing.Color.SteelBlue;
             this.btnModificarJugador.Size = new System.Drawing.Size(96, 30);
@@ -166,6 +166,7 @@ namespace Polideportivo.Vista
             this.btnModificarJugador.Text = "Modificar";
             this.btnModificarJugador.TextColor = System.Drawing.Color.White;
             this.btnModificarJugador.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
+            this.btnModificarJugador.Click += new System.EventHandler(this.btnModificarJugador_Click);
             // 
             // label1
             // 
@@ -173,7 +174,7 @@ namespace Polideportivo.Vista
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(50, 213);
+            this.label1.Location = new System.Drawing.Point(83, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 18);
             this.label1.TabIndex = 19;
@@ -184,7 +185,7 @@ namespace Polideportivo.Vista
             this.cboDeporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDeporte.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDeporte.FormattingEnabled = true;
-            this.cboDeporte.Location = new System.Drawing.Point(138, 210);
+            this.cboDeporte.Location = new System.Drawing.Point(170, 132);
             this.cboDeporte.Name = "cboDeporte";
             this.cboDeporte.Size = new System.Drawing.Size(121, 21);
             this.cboDeporte.TabIndex = 18;
@@ -198,7 +199,7 @@ namespace Polideportivo.Vista
             this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRol.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboRol.FormattingEnabled = true;
-            this.cboRol.Location = new System.Drawing.Point(138, 173);
+            this.cboRol.Location = new System.Drawing.Point(170, 215);
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(121, 21);
             this.cboRol.TabIndex = 17;
@@ -209,7 +210,7 @@ namespace Polideportivo.Vista
             this.cboEquipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEquipo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEquipo.FormattingEnabled = true;
-            this.cboEquipo.Location = new System.Drawing.Point(138, 129);
+            this.cboEquipo.Location = new System.Drawing.Point(170, 175);
             this.cboEquipo.Name = "cboEquipo";
             this.cboEquipo.Size = new System.Drawing.Size(121, 21);
             this.cboEquipo.TabIndex = 16;
@@ -218,7 +219,7 @@ namespace Polideportivo.Vista
             // txtAnotaciones
             // 
             this.txtAnotaciones.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnotaciones.Location = new System.Drawing.Point(138, 82);
+            this.txtAnotaciones.Location = new System.Drawing.Point(170, 92);
             this.txtAnotaciones.Name = "txtAnotaciones";
             this.txtAnotaciones.Size = new System.Drawing.Size(121, 21);
             this.txtAnotaciones.TabIndex = 10;
@@ -229,7 +230,7 @@ namespace Polideportivo.Vista
             this.lblRol.BackColor = System.Drawing.Color.Transparent;
             this.lblRol.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.Color.White;
-            this.lblRol.Location = new System.Drawing.Point(71, 176);
+            this.lblRol.Location = new System.Drawing.Point(103, 218);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(34, 18);
             this.lblRol.TabIndex = 9;

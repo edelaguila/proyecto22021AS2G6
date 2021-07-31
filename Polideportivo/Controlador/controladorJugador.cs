@@ -17,11 +17,42 @@ namespace Polideportivo.AccesoDatos
         {
             
             var sqlinsertar = 
-                "INSERT INTO jugador (pkId, nombre, anotaciones, fkIdEquipo, fkIdRol) " +
-                "VALUES (NULL, ?nombre?, ?anotaciones?, ?fkIdEquipo?, ?fkIdRol?);";
-            var parameters = new{ nombre = modelo.nombre, anotaciones = modelo.anotaciones,
-            fkIdEquipo = modelo.fkIdEquipo, fkIdRol = modelo.fkIdRol};
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, parameters);
+                "INSERT INTO jugador (pkId, nombre, anotaciones, fkIdEquipo, fkIdRol, fkIdDeporte) " +
+                "VALUES (NULL, ?nombre?, ?anotaciones?, ?fkIdEquipo?, ?fkIdRol?, ?fkIdDeporte?);";
+            var ValorDeVariables = new{ nombre = modelo.nombre, anotaciones = modelo.anotaciones,
+            fkIdEquipo = modelo.fkIdEquipo, fkIdRol = modelo.fkIdRol, fkIdDeporte = modelo.fkIdDeporte};
+            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
+
+            //var resultadoinsertar = pruebas.Execute(sqlinsertar);
+            //var resultadoinsertar = pruebas.Execute(sqlinsertar,
+            //        new
+            //        {
+            //            nombre = "Gaucho"
+            //        });
+
+            pruebas.Close();
+
+            //modelo.id = 5;
+            return modelo;
+        }
+
+        public modeloJugador modificarJugador(modeloJugador modelo)
+        {
+
+            var sqlinsertar =
+                "UPDATE jugador SET nombre = ?nombre?, anotaciones = ?anotaciones?, " +
+                "fkIdEquipo = ?fkIdEquipo?, fkIdRol = ?fkIdRol?, fkIdDeporte = ?fkIdDeporte? " +
+                "WHERE pkId = ?pkId?;";
+            var ValorDeVariables = new
+            {
+                nombre = modelo.nombre,
+                anotaciones = modelo.anotaciones,
+                fkIdEquipo = modelo.fkIdEquipo,
+                fkIdRol = modelo.fkIdRol,
+                fkIdDeporte = modelo.fkIdDeporte,
+                pkId = modelo.pkId
+            };
+            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
 
             //var resultadoinsertar = pruebas.Execute(sqlinsertar);
             //var resultadoinsertar = pruebas.Execute(sqlinsertar,
@@ -60,26 +91,7 @@ namespace Polideportivo.AccesoDatos
             return modeloList;
         }
 
-        public modeloJugador modificarJugador(modeloJugador modelo)
-        {
-            var sqlmodificar =
-                "UPDATE jugador SET nombre = ?nombre?, anotaciones = ?anotaciones?," +
-                " fkIdEquipo = ?fkIdEquipo?, fkIdRol = ?fkIdRol? " +
-                "WHERE pkId = ?pkId?;";
-            var parameters = new
-            {
-                nombre = modelo.nombre,
-                anotaciones = modelo.anotaciones,
-                fkIdEquipo = modelo.fkIdEquipo,
-                fkIdRol = modelo.fkIdRol
-            };
-            var resultadomodificar = pruebas.Execute(sqlmodificar, parameters);
-
-            pruebas.Close();
-
-            //modelo.id = 5;
-            return modelo;
-        }
+      
 
     }
 }

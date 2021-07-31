@@ -59,7 +59,7 @@ namespace Polideportivo.Vista
 
         public void actualizarTablaJugadores()
         {
-            //this.vwjugadorTableAdapter.Fill(this.datosJugador.vwjugador);
+            this.vwjugadorTableAdapter.Fill(this.tablaJugadores1.vwjugador);
         }
 
 
@@ -79,10 +79,12 @@ namespace Polideportivo.Vista
 
             //modeloFila.pkId = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
             string nombre = tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
+            int id = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
             int anotaciones = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
             int fkIdEquipo = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
             int fkIdRol = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
             int fkIdDeporte = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[7].Value.ToString());
+            modeloFila.pkId = id;
             modeloFila.nombre = nombre;
             modeloFila.anotaciones = anotaciones;
             modeloFila.fkIdEquipo = fkIdEquipo;

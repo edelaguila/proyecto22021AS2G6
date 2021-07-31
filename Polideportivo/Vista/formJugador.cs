@@ -1,14 +1,8 @@
 ﻿using Polideportivo.AccesoDatos;
 using Polideportivo.Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Polideportivo.Vista.utilidadForms;
 
 namespace Polideportivo.Vista
 {
@@ -16,7 +10,7 @@ namespace Polideportivo.Vista
     {
 
 
-      
+
 
         public formJugador()
         {
@@ -26,7 +20,7 @@ namespace Polideportivo.Vista
         private void formJugador_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'tablaJugadores1.vwjugador' Puede moverla o quitarla según sea necesario.
-            this.vwjugadorTableAdapter.Fill(this.tablaJugadores1.vwjugador);
+            vwjugadorTableAdapter.Fill(tablaJugadores1.vwjugador);
 
         }
 
@@ -58,11 +52,11 @@ namespace Polideportivo.Vista
         {
 
             string nombre = tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
-            int id = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
-            int anotaciones = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
-            int fkIdEquipo = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
-            int fkIdRol = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
-            int fkIdDeporte = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[7].Value.ToString());
+            int id = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
+            int anotaciones = stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
+            int fkIdEquipo = stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
+            int fkIdRol = stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
+            int fkIdDeporte = stringAInt(tablaJugadores.SelectedRows[0].Cells[7].Value.ToString());
             modeloFila.pkId = id;
             modeloFila.nombre = nombre;
             modeloFila.anotaciones = anotaciones;
@@ -80,7 +74,7 @@ namespace Polideportivo.Vista
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
-            utilidadForms.abrirForm(new formJugadorEventos(this));
+            abrirForm(new formJugadorEventos(this));
         }
 
 
@@ -88,7 +82,7 @@ namespace Polideportivo.Vista
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
-            utilidadForms.abrirForm(new formJugadorEventos(modeloFila, this));
+            abrirForm(new formJugadorEventos(modeloFila, this));
         }
     }
 }

@@ -30,12 +30,10 @@ namespace Polideportivo.Vista
             bool seConvirtioAInt = int.TryParse(str, out num);
             if (seConvirtioAInt)
             {
-                Console.WriteLine($"Converted '{str}' to {num}.");
                 return num;
             }
             else
             {
-                Console.WriteLine($"Attempted conversion of '{str ?? "<null>"}' failed.");
                 return 0;
             }
             

@@ -65,27 +65,6 @@ namespace Polideportivo.Vista
 
 
 
-        private void formJugadorEventos_Load(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void txtId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboEquipo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cboRol_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         // Actualizar el combobox de roles dependiendo del deporte seleccionado
         private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -107,26 +86,6 @@ namespace Polideportivo.Vista
                 cboEquipo.DisplayMember = "nombre";
                 cboEquipo.ValueMember = "pkId";
             }
-        }
-
-        private void cboDeporte_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void cboDeporte_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            //controladorRol rol = new controladorRol();
-            //modeloRol modelo = new modeloRol();
-            //modelo.fkIdDeporte = utilidadForms.stringAInt(cboDeporte.SelectedValue.ToString());
-            //cboRol.DataSource = rol.mostrarRolesPorDeporte(modelo);
-            //cboRol.DisplayMember = "nombre";
-            //cboRol.ValueMember = "pkId";
-        }
-
-        private void cboDeporte_Layout(object sender, LayoutEventArgs e)
-        {
-
         }
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)

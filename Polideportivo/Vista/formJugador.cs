@@ -32,29 +32,14 @@ namespace Polideportivo.Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //modeloJugador modelo = new modeloJugador(nombreTexto.Text);
             modeloJugador modelo = new modeloJugador();
-            //EquipoModelo modelo1 = new EquipoModelo(); CTRL + SHIFT + ESPACIO para ver sobrecargas
-            //Si no se pasara como propiedad a la función, se puede hacer así:
-            //modelo.Nombre = nombreTexto.Text;
-
-            //// Pruebas acaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            //foreach (IConexionDatos db in GlobalConfig.Conexiones)
-            //{
-            //    db.CrearEquipo(modelo);
-            //}
             controladorJugador db = new controladorJugador();
             db.agregarJugador(modelo);
-
-            //nombreTexto.Text = ""; 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             actualizarTablaJugadores();
-            //IEnumerable<modeloJugador> modelo;
-            //controladorJugador db = new controladorJugador();
-            //modelo = db.mostrarJugadores();
         }
 
         public void actualizarTablaJugadores()
@@ -68,16 +53,10 @@ namespace Polideportivo.Vista
 
         }
 
-        private void tablaJugadores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtId.Text = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
-        }
-
         modeloJugador modeloFila = new modeloJugador();
         private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            //modeloFila.pkId = tablaJugadores.SelectedRows[0].Cells[0].Value.ToString();
             string nombre = tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
             int id = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
             int anotaciones = utilidadForms.stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
@@ -98,17 +77,10 @@ namespace Polideportivo.Vista
 
         }
 
-        private void txtId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
             utilidadForms.abrirForm(new formJugadorEventos(this));
-            //modeloJugador modelo = new modeloJugador();
-            //controladorJugador db = new controladorJugador();
-            //db.agregarJugador(modelo);
         }
 
 

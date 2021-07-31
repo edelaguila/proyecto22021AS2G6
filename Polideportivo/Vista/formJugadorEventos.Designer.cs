@@ -64,7 +64,6 @@ namespace Polideportivo.Vista
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 21);
             this.txtNombre.TabIndex = 1;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // lblEquipo
             // 
@@ -189,9 +188,6 @@ namespace Polideportivo.Vista
             this.cboDeporte.Size = new System.Drawing.Size(121, 21);
             this.cboDeporte.TabIndex = 18;
             this.cboDeporte.SelectedIndexChanged += new System.EventHandler(this.cboDeporte_SelectedIndexChanged);
-            this.cboDeporte.SelectionChangeCommitted += new System.EventHandler(this.cboDeporte_SelectionChangeCommitted);
-            this.cboDeporte.Layout += new System.Windows.Forms.LayoutEventHandler(this.cboDeporte_Layout);
-            this.cboDeporte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cboDeporte_MouseClick);
             // 
             // cboRol
             // 
@@ -202,7 +198,6 @@ namespace Polideportivo.Vista
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(121, 21);
             this.cboRol.TabIndex = 17;
-            this.cboRol.SelectedIndexChanged += new System.EventHandler(this.cboRol_SelectedIndexChanged);
             // 
             // cboEquipo
             // 
@@ -213,7 +208,6 @@ namespace Polideportivo.Vista
             this.cboEquipo.Name = "cboEquipo";
             this.cboEquipo.Size = new System.Drawing.Size(121, 21);
             this.cboEquipo.TabIndex = 16;
-            this.cboEquipo.SelectedIndexChanged += new System.EventHandler(this.cboEquipo_SelectedIndexChanged);
             // 
             // txtAnotaciones
             // 
@@ -243,7 +237,6 @@ namespace Polideportivo.Vista
             this.Controls.Add(this.panelJugadorEventos);
             this.Name = "formJugadorEventos";
             this.Text = "formJugadorEventos";
-            this.Load += new System.EventHandler(this.formJugadorEventos_Load);
             this.panelJugadorEventos.ResumeLayout(false);
             this.panelJugadorEventos.PerformLayout();
             this.ResumeLayout(false);

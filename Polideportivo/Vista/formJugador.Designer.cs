@@ -31,15 +31,9 @@ namespace Polideportivo.Vista
         {
             this.components = new System.ComponentModel.Container();
             this.button2 = new System.Windows.Forms.Button();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.txtJugadorFiltrar = new System.Windows.Forms.TextBox();
             this.btnModificarJugador = new System.Windows.Forms.Button();
             this.tablaJugadores = new Zuby.ADGV.AdvancedDataGridView();
-            this.btnAgregarJugador = new System.Windows.Forms.Button();
-            this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.tablaJugadores1 = new Polideportivo.tablaJugadores();
-            this.vwjugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwjugadorTableAdapter = new Polideportivo.tablaJugadoresTableAdapters.vwjugadorTableAdapter();
             this.pkIdJugadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anotacionesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,10 +43,15 @@ namespace Polideportivo.Vista
             this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwjugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablaJugadores1 = new Polideportivo.tablaJugadores();
+            this.btnAgregarJugador = new System.Windows.Forms.Button();
+            this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.vwjugadorTableAdapter = new Polideportivo.tablaJugadoresTableAdapters.vwjugadorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
-            this.parrotGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores1)).BeginInit();
+            this.parrotGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -64,15 +63,6 @@ namespace Polideportivo.Vista
             this.button2.Text = "Actualizar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txtId
-            // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(111, 28);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 20);
-            this.txtId.TabIndex = 3;
-            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // txtJugadorFiltrar
             // 
@@ -117,56 +107,6 @@ namespace Polideportivo.Vista
             this.tablaJugadores.Size = new System.Drawing.Size(659, 405);
             this.tablaJugadores.TabIndex = 5;
             this.tablaJugadores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaJugadores_CellClick);
-            this.tablaJugadores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaJugadores_CellContentClick);
-            // 
-            // btnAgregarJugador
-            // 
-            this.btnAgregarJugador.Location = new System.Drawing.Point(404, 28);
-            this.btnAgregarJugador.Name = "btnAgregarJugador";
-            this.btnAgregarJugador.Size = new System.Drawing.Size(108, 23);
-            this.btnAgregarJugador.TabIndex = 6;
-            this.btnAgregarJugador.Text = "Agregar jugador";
-            this.btnAgregarJugador.UseVisualStyleBackColor = true;
-            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
-            // 
-            // parrotGradientPanel1
-            // 
-            this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
-            this.parrotGradientPanel1.BottomRight = System.Drawing.Color.Fuchsia;
-            this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.parrotGradientPanel1.Controls.Add(this.btnAgregarJugador);
-            this.parrotGradientPanel1.Controls.Add(this.tablaJugadores);
-            this.parrotGradientPanel1.Controls.Add(this.btnModificarJugador);
-            this.parrotGradientPanel1.Controls.Add(this.txtJugadorFiltrar);
-            this.parrotGradientPanel1.Controls.Add(this.txtId);
-            this.parrotGradientPanel1.Controls.Add(this.button2);
-            this.parrotGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            this.parrotGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.parrotGradientPanel1.Name = "parrotGradientPanel1";
-            this.parrotGradientPanel1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.parrotGradientPanel1.PrimerColor = System.Drawing.Color.White;
-            this.parrotGradientPanel1.Size = new System.Drawing.Size(900, 595);
-            this.parrotGradientPanel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.parrotGradientPanel1.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
-            this.parrotGradientPanel1.TabIndex = 8;
-            this.parrotGradientPanel1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.parrotGradientPanel1.TopLeft = System.Drawing.Color.DeepSkyBlue;
-            this.parrotGradientPanel1.TopRight = System.Drawing.Color.Fuchsia;
-            // 
-            // tablaJugadores1
-            // 
-            this.tablaJugadores1.DataSetName = "tablaJugadores";
-            this.tablaJugadores1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vwjugadorBindingSource
-            // 
-            this.vwjugadorBindingSource.DataMember = "vwjugador";
-            this.vwjugadorBindingSource.DataSource = this.tablaJugadores1;
-            // 
-            // vwjugadorTableAdapter
-            // 
-            this.vwjugadorTableAdapter.ClearBeforeFill = true;
             // 
             // pkIdJugadorDataGridViewTextBoxColumn
             // 
@@ -249,6 +189,54 @@ namespace Polideportivo.Vista
             this.deporteDataGridViewTextBoxColumn.ReadOnly = true;
             this.deporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
+            // vwjugadorBindingSource
+            // 
+            this.vwjugadorBindingSource.DataMember = "vwjugador";
+            this.vwjugadorBindingSource.DataSource = this.tablaJugadores1;
+            // 
+            // tablaJugadores1
+            // 
+            this.tablaJugadores1.DataSetName = "tablaJugadores";
+            this.tablaJugadores1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnAgregarJugador
+            // 
+            this.btnAgregarJugador.Location = new System.Drawing.Point(404, 28);
+            this.btnAgregarJugador.Name = "btnAgregarJugador";
+            this.btnAgregarJugador.Size = new System.Drawing.Size(108, 23);
+            this.btnAgregarJugador.TabIndex = 6;
+            this.btnAgregarJugador.Text = "Agregar jugador";
+            this.btnAgregarJugador.UseVisualStyleBackColor = true;
+            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
+            // 
+            // parrotGradientPanel1
+            // 
+            this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
+            this.parrotGradientPanel1.BottomRight = System.Drawing.Color.Fuchsia;
+            this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotGradientPanel1.Controls.Add(this.btnAgregarJugador);
+            this.parrotGradientPanel1.Controls.Add(this.tablaJugadores);
+            this.parrotGradientPanel1.Controls.Add(this.btnModificarJugador);
+            this.parrotGradientPanel1.Controls.Add(this.txtJugadorFiltrar);
+            this.parrotGradientPanel1.Controls.Add(this.button2);
+            this.parrotGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.parrotGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.parrotGradientPanel1.Name = "parrotGradientPanel1";
+            this.parrotGradientPanel1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.parrotGradientPanel1.PrimerColor = System.Drawing.Color.White;
+            this.parrotGradientPanel1.Size = new System.Drawing.Size(900, 595);
+            this.parrotGradientPanel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.parrotGradientPanel1.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
+            this.parrotGradientPanel1.TabIndex = 8;
+            this.parrotGradientPanel1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.parrotGradientPanel1.TopLeft = System.Drawing.Color.DeepSkyBlue;
+            this.parrotGradientPanel1.TopRight = System.Drawing.Color.Fuchsia;
+            // 
+            // vwjugadorTableAdapter
+            // 
+            this.vwjugadorTableAdapter.ClearBeforeFill = true;
+            // 
             // formJugador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,10 +248,10 @@ namespace Polideportivo.Vista
             this.Text = "formJugador";
             this.Load += new System.EventHandler(this.formJugador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores1)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
             this.parrotGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,7 +259,6 @@ namespace Polideportivo.Vista
         #endregion
 
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtJugadorFiltrar;
         private System.Windows.Forms.Button btnModificarJugador;
         private Zuby.ADGV.AdvancedDataGridView tablaJugadores;

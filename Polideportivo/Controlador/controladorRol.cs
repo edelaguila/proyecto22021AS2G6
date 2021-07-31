@@ -11,8 +11,13 @@ namespace Polideportivo.Controlador
 {
     class controladorRol
     {
+        modeloRol modelo;
+        public controladorRol(modeloRol Modelo)
+        {
+            modelo = Modelo;
+        }
         OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
-        public List<modeloRol> mostrarRolesPorDeporte(modeloRol modelo)
+        public List<modeloRol> mostrarRolesPorDeporte()
         {
             pruebas.Open();
             //string sqlconsulta = "SELECT pkId, nombre, fkIdDeporte FROM rol WHERE fkIdDeporte = 1;";

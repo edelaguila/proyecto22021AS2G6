@@ -48,7 +48,7 @@
             this.Salir = new System.Windows.Forms.PictureBox();
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.Maximizar = new System.Windows.Forms.PictureBox();
-            this.Polideportivo = new System.Windows.Forms.Label();
+            this.lblTituloPrincipal = new System.Windows.Forms.Label();
             this.panelLateralWrapper.SuspendLayout();
             this.panelLateralInterno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -309,7 +309,7 @@
             this.MenuSuperiorPanel.Controls.Add(this.Salir);
             this.MenuSuperiorPanel.Controls.Add(this.Minimizar);
             this.MenuSuperiorPanel.Controls.Add(this.Maximizar);
-            this.MenuSuperiorPanel.Controls.Add(this.Polideportivo);
+            this.MenuSuperiorPanel.Controls.Add(this.lblTituloPrincipal);
             this.MenuSuperiorPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.MenuSuperiorPanel.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             this.MenuSuperiorPanel.Location = new System.Drawing.Point(0, 0);
@@ -395,17 +395,17 @@
             this.Maximizar.TabStop = false;
             this.Maximizar.Click += new System.EventHandler(this.Maximizar_Click);
             // 
-            // Polideportivo
+            // lblTituloPrincipal
             // 
-            this.Polideportivo.AutoSize = true;
-            this.Polideportivo.BackColor = System.Drawing.Color.Transparent;
-            this.Polideportivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Polideportivo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Polideportivo.Location = new System.Drawing.Point(97, 26);
-            this.Polideportivo.Name = "Polideportivo";
-            this.Polideportivo.Size = new System.Drawing.Size(194, 25);
-            this.Polideportivo.TabIndex = 1;
-            this.Polideportivo.Text = "POLIDEPORTIVO";
+            this.lblTituloPrincipal.AutoSize = true;
+            this.lblTituloPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloPrincipal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTituloPrincipal.Location = new System.Drawing.Point(97, 26);
+            this.lblTituloPrincipal.Name = "lblTituloPrincipal";
+            this.lblTituloPrincipal.Size = new System.Drawing.Size(194, 25);
+            this.lblTituloPrincipal.TabIndex = 1;
+            this.lblTituloPrincipal.Text = "POLIDEPORTIVO";
             // 
             // formPolideportivo
             // 
@@ -442,7 +442,7 @@
         private ReaLTaiizor.Controls.ParrotGradientPanel panelLateralWrapper;
         private ReaLTaiizor.Controls.ParrotGradientPanel panelPrincipalWrapper;
         private ReaLTaiizor.Controls.ParrotGradientPanel MenuSuperiorPanel;
-        private System.Windows.Forms.Label Polideportivo;
+        private System.Windows.Forms.Label lblTituloPrincipal;
         private System.Windows.Forms.PictureBox Minimizar;
         private System.Windows.Forms.PictureBox Maximizar;
         private System.Windows.Forms.PictureBox Restaurar;

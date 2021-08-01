@@ -78,21 +78,23 @@ namespace Polideportivo
 
         private void btnDeportes_Click(object sender, EventArgs e)
         {
-            gestorDeFormActivo(new formDeporte(), "deporte");
+            gestorDeFormActivo(new formDeporte(), "DEPORTES");
         }
 
         private void btnMenuJugador_Click(object sender, EventArgs e)
         {
-            gestorDeFormActivo(new formJugador(), "jugador");
+            gestorDeFormActivo(new formJugador(), "JUGADORES");
         }
 
 
         private void gestorDeFormActivo(Form formHijo, string formHijoActual)
         {
+            lblTituloPrincipal.Text = formHijoActual;
             if (formHijoAnterior == formHijoActual)
             {
                 cerrarFormActivo();
                 formHijoAnterior = "";
+                lblTituloPrincipal.Text = "POLIDEPORTIVO";
             }
             else
             {

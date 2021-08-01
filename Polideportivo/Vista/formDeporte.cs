@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Polideportivo.Vista
 {
-    public partial class Form1 : Form
+    public partial class formDeporte : Form
     {
-        public Form1()
+        public formDeporte()
         {
             InitializeComponent();
         }

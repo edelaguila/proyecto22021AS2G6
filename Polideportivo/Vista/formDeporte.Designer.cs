@@ -29,6 +29,7 @@ namespace Polideportivo.Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formDeporte));
@@ -44,12 +45,19 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarJugador = new System.Windows.Forms.Button();
             this.btnAgregarJugador = new System.Windows.Forms.Button();
+            this.vwDeportes = new Polideportivo.vwDeportes();
+            this.deporteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.deporteTableAdapter = new Polideportivo.vwDeportesTableAdapters.deporteTableAdapter();
+            this.pkIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             this.panelBuscarCol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwDeportes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deporteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tablaJugadores
@@ -57,6 +65,7 @@ namespace Polideportivo.Vista
             this.tablaJugadores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tablaJugadores.AutoGenerateColumns = false;
             this.tablaJugadores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaJugadores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tablaJugadores.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
@@ -71,6 +80,10 @@ namespace Polideportivo.Vista
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tablaJugadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tablaJugadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaJugadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pkIdDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn});
+            this.tablaJugadores.DataSource = this.deporteBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,6 +290,38 @@ namespace Polideportivo.Vista
             this.btnAgregarJugador.UseVisualStyleBackColor = false;
             this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
             // 
+            // vwDeportes
+            // 
+            this.vwDeportes.DataSetName = "vwDeportes";
+            this.vwDeportes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // deporteBindingSource
+            // 
+            this.deporteBindingSource.DataMember = "deporte";
+            this.deporteBindingSource.DataSource = this.vwDeportes;
+            // 
+            // deporteTableAdapter
+            // 
+            this.deporteTableAdapter.ClearBeforeFill = true;
+            // 
+            // pkIdDataGridViewTextBoxColumn
+            // 
+            this.pkIdDataGridViewTextBoxColumn.DataPropertyName = "pkId";
+            this.pkIdDataGridViewTextBoxColumn.HeaderText = "pkId";
+            this.pkIdDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdDataGridViewTextBoxColumn.Name = "pkIdDataGridViewTextBoxColumn";
+            this.pkIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // formDeporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,6 +339,8 @@ namespace Polideportivo.Vista
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwDeportes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deporteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -311,5 +358,10 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminarJugador;
+        private vwDeportes vwDeportes;
+        private System.Windows.Forms.BindingSource deporteBindingSource;
+        private vwDeportesTableAdapters.deporteTableAdapter deporteTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
     }
 }

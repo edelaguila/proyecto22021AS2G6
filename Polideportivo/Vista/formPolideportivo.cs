@@ -74,39 +74,33 @@ namespace Polideportivo
 
 
         private Form formActivo = null;
-        private string actual = "";
+        private string formHijoAnterior = "";
+
         private void btnDeportes_Click(object sender, EventArgs e)
         {
-            if (actual == "deporte")
-            {
-                cerrarFormActivo();
-                actual = "";
-            }
-            else
-            {
-                actual = "deporte";
-                cerrarFormActivo();
-                abrirFormHijo(new formDeporte());
-            }
-            
+            gestorDeFormActivo(new formDeporte(), "deporte");
         }
 
         private void btnMenuJugador_Click(object sender, EventArgs e)
         {
-            if (actual == "jugador")
-            {
-                cerrarFormActivo();
-                actual = "";
-            }
-            else
-            {
-                actual = "jugador";
-                cerrarFormActivo();
-                abrirFormHijo(new formJugador());
-            }
+            gestorDeFormActivo(new formJugador(), "jugador");
         }
 
 
+        private void gestorDeFormActivo(Form formHijo, string formHijoActual)
+        {
+            if (formHijoAnterior == formHijoActual)
+            {
+                cerrarFormActivo();
+                formHijoAnterior = "";
+            }
+            else
+            {
+                formHijoAnterior = formHijoActual;
+                cerrarFormActivo();
+                abrirFormHijo(formHijo);
+            }
+        }
 
         private void abrirFormHijo(Form formHijo)
         {

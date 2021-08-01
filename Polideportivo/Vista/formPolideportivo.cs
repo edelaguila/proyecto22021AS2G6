@@ -74,34 +74,43 @@ namespace Polideportivo
 
 
         private Form formActivo = null;
+        private string actual = "";
         private void btnDeportes_Click(object sender, EventArgs e)
         {
-            abrirFormHijo(new formDeporte());
+            if (actual == "deporte")
+            {
+                cerrarFormActivo();
+                actual = "";
+            }
+            else
+            {
+                actual = "deporte";
+                cerrarFormActivo();
+                abrirFormHijo(new formDeporte());
+            }
+            
         }
 
         private void btnMenuJugador_Click(object sender, EventArgs e)
         {
-            abrirFormHijo(new formJugador());
+            if (actual == "jugador")
+            {
+                cerrarFormActivo();
+                actual = "";
+            }
+            else
+            {
+                actual = "jugador";
+                cerrarFormActivo();
+                abrirFormHijo(new formJugador());
+            }
         }
+
 
 
         private void abrirFormHijo(Form formHijo)
         {
-            if (formActivo == null )
-            {
-                formActivo = formHijo;
-                abrir(formHijo);
-            }
-            else
-            {
-                cerrarFormActivo();
-            }
-
-            
-        }
-
-        private void abrir(Form formHijo)
-        {
+            formActivo = formHijo;
             formHijo.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
             formHijo.Dock = DockStyle.Fill;
@@ -110,11 +119,16 @@ namespace Polideportivo
             formHijo.BringToFront();
             formHijo.Show();
         }
+
         
         private void cerrarFormActivo()
         {
-            formActivo.Close();
-            formActivo = null;
+            if(formActivo != null)
+            {
+                formActivo.Close();
+                formActivo = null;
+            }
+            
         }
 
         private void MenuSuperiorPanel_Paint(object sender, PaintEventArgs e)

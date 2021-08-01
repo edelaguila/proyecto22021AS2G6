@@ -79,27 +79,42 @@ namespace Polideportivo
             abrirFormHijo(new formDeporte());
         }
 
-        
+        private void btnMenuJugador_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new formJugador());
+        }
+
+
         private void abrirFormHijo(Form formHijo)
         {
-            if (formActivo == null)
+            if (formActivo == null )
             {
                 formActivo = formHijo;
-                formHijo.TopLevel = false;
-                formHijo.FormBorderStyle = FormBorderStyle.None;
-                formHijo.Dock = DockStyle.Fill;
-                panelPrincipal.Controls.Add(formHijo);
-                panelPrincipal.Tag = formHijo;
-                formHijo.BringToFront();
-                formHijo.Show();
+                abrir(formHijo);
             }
             else
             {
-                formActivo.Close();
-                formActivo = null;
+                cerrarFormActivo();
             }
 
             
+        }
+
+        private void abrir(Form formHijo)
+        {
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            panelPrincipal.Controls.Add(formHijo);
+            panelPrincipal.Tag = formHijo;
+            formHijo.BringToFront();
+            formHijo.Show();
+        }
+        
+        private void cerrarFormActivo()
+        {
+            formActivo.Close();
+            formActivo = null;
         }
 
         private void MenuSuperiorPanel_Paint(object sender, PaintEventArgs e)
@@ -107,10 +122,7 @@ namespace Polideportivo
 
         }
 
-        private void btnMenuJugador_Click(object sender, EventArgs e)
-        {
-            abrirFormHijo(new formJugador());
-        }
+        
     }
 
 

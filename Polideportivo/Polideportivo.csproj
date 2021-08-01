@@ -120,6 +120,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>tablaJugadores.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Vista\formDeporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formDeporte.Designer.cs">
+      <DependentUpon>formDeporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\formJugador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,14 +192,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\icons8_cancel_32px.png" />
+    <Folder Include="Imagenes\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Imagenes\icons8_user_500px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Imagenes\imgDeportes.png" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

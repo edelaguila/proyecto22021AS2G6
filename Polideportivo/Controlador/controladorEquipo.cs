@@ -13,6 +13,11 @@ namespace Polideportivo.Controlador
     {
         modeloEquipo modelo;
 
+        public controladorEquipo()
+        {
+
+
+        }
         public controladorEquipo(modeloEquipo Modelo)
         {
             modelo = Modelo;

@@ -76,7 +76,7 @@ namespace Polideportivo
         private Form formActivo = null;
         private void btnDeportes_Click(object sender, EventArgs e)
         {
-            
+            abrirFormHijo(new formDeporte());
         }
 
         

@@ -126,6 +126,12 @@
     <Compile Include="Vista\formDeporte.Designer.cs">
       <DependentUpon>formDeporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\formDeporteEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formDeporteEventos.Designer.cs">
+      <DependentUpon>formDeporteEventos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\formJugador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vista\utilidadForms.cs" />
+    <EmbeddedResource Include="Vista\formDeporte.resx">
+      <DependentUpon>formDeporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formDeporteEventos.resx">
+      <DependentUpon>formDeporteEventos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\formJugador.resx">
       <DependentUpon>formJugador.cs</DependentUpon>
     </EmbeddedResource>

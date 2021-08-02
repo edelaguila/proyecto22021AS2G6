@@ -125,5 +125,10 @@ namespace Polideportivo.Vista
             formOriginal.actualizarTablaJugadores();
             cerrarForm(this);
         }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

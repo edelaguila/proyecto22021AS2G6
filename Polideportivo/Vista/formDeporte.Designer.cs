@@ -43,23 +43,23 @@ namespace Polideportivo.Vista
             this.txtNombreDeporte = new System.Windows.Forms.TextBox();
             this.btnEliminarDeporte = new System.Windows.Forms.Button();
             this.btnActualizarDeporte = new System.Windows.Forms.Button();
+            this.panelBuscarCol = new System.Windows.Forms.Panel();
+            this.cboBuscarDeporte = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtFiltrarDeporte = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarDeporte = new System.Windows.Forms.Button();
             this.btnAgregarDeporte = new System.Windows.Forms.Button();
             this.deporteTableAdapter = new Polideportivo.vwDeportesTableAdapters.deporteTableAdapter();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panelBuscarCol = new System.Windows.Forms.Panel();
-            this.cboBuscarDeporte = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDeportes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deporteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwDeportes)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
+            this.panelBuscarCol.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panelBuscarCol.SuspendLayout();
             this.SuspendLayout();
             // 
             // tablaDeportes
@@ -168,7 +168,7 @@ namespace Polideportivo.Vista
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(502, 249);
+            this.lblNombre.Location = new System.Drawing.Point(484, 249);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(69, 18);
             this.lblNombre.TabIndex = 35;
@@ -177,7 +177,7 @@ namespace Polideportivo.Vista
             // txtNombreDeporte
             // 
             this.txtNombreDeporte.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreDeporte.Location = new System.Drawing.Point(505, 270);
+            this.txtNombreDeporte.Location = new System.Drawing.Point(487, 270);
             this.txtNombreDeporte.Name = "txtNombreDeporte";
             this.txtNombreDeporte.Size = new System.Drawing.Size(378, 27);
             this.txtNombreDeporte.TabIndex = 34;
@@ -194,10 +194,10 @@ namespace Polideportivo.Vista
             this.btnEliminarDeporte.ForeColor = System.Drawing.Color.Black;
             this.btnEliminarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarDeporte.Image")));
             this.btnEliminarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarDeporte.Location = new System.Drawing.Point(470, 515);
+            this.btnEliminarDeporte.Location = new System.Drawing.Point(470, 493);
             this.btnEliminarDeporte.Name = "btnEliminarDeporte";
             this.btnEliminarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnEliminarDeporte.Size = new System.Drawing.Size(160, 36);
+            this.btnEliminarDeporte.Size = new System.Drawing.Size(160, 58);
             this.btnEliminarDeporte.TabIndex = 33;
             this.btnEliminarDeporte.Text = "   E L I M I N A R";
             this.btnEliminarDeporte.UseVisualStyleBackColor = false;
@@ -215,14 +215,56 @@ namespace Polideportivo.Vista
             this.btnActualizarDeporte.ForeColor = System.Drawing.Color.Black;
             this.btnActualizarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarDeporte.Image")));
             this.btnActualizarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarDeporte.Location = new System.Drawing.Point(666, 515);
+            this.btnActualizarDeporte.Location = new System.Drawing.Point(666, 493);
             this.btnActualizarDeporte.Name = "btnActualizarDeporte";
             this.btnActualizarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnActualizarDeporte.Size = new System.Drawing.Size(174, 36);
+            this.btnActualizarDeporte.Size = new System.Drawing.Size(174, 58);
             this.btnActualizarDeporte.TabIndex = 32;
             this.btnActualizarDeporte.Text = "      A C T U A L I Z A R";
             this.btnActualizarDeporte.UseVisualStyleBackColor = false;
             this.btnActualizarDeporte.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // panelBuscarCol
+            // 
+            this.panelBuscarCol.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBuscarCol.BackColor = System.Drawing.Color.White;
+            this.panelBuscarCol.Controls.Add(this.cboBuscarDeporte);
+            this.panelBuscarCol.Controls.Add(this.pictureBox2);
+            this.panelBuscarCol.Location = new System.Drawing.Point(69, 20);
+            this.panelBuscarCol.Name = "panelBuscarCol";
+            this.panelBuscarCol.Size = new System.Drawing.Size(299, 36);
+            this.panelBuscarCol.TabIndex = 31;
+            // 
+            // cboBuscarDeporte
+            // 
+            this.cboBuscarDeporte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboBuscarDeporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboBuscarDeporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboBuscarDeporte.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBuscarDeporte.FormattingEnabled = true;
+            this.cboBuscarDeporte.Items.AddRange(new object[] {
+            "nombre",
+            "anotaciones",
+            "deporte",
+            "rol",
+            "equipo"});
+            this.cboBuscarDeporte.Location = new System.Drawing.Point(36, 6);
+            this.cboBuscarDeporte.Name = "cboBuscarDeporte";
+            this.cboBuscarDeporte.Size = new System.Drawing.Size(263, 26);
+            this.cboBuscarDeporte.TabIndex = 32;
+            this.cboBuscarDeporte.SelectedIndexChanged += new System.EventHandler(this.cboBuscar_SelectedIndexChanged);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(5, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
@@ -270,14 +312,14 @@ namespace Polideportivo.Vista
             this.btnModificarDeporte.ForeColor = System.Drawing.Color.Black;
             this.btnModificarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarDeporte.Image")));
             this.btnModificarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarDeporte.Location = new System.Drawing.Point(270, 515);
+            this.btnModificarDeporte.Location = new System.Drawing.Point(270, 493);
             this.btnModificarDeporte.Name = "btnModificarDeporte";
             this.btnModificarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnModificarDeporte.Size = new System.Drawing.Size(168, 36);
+            this.btnModificarDeporte.Size = new System.Drawing.Size(168, 58);
             this.btnModificarDeporte.TabIndex = 28;
             this.btnModificarDeporte.Text = "    M O D I F I C A R";
             this.btnModificarDeporte.UseVisualStyleBackColor = false;
-            this.btnModificarDeporte.Click += new System.EventHandler(this.btnModificarJugador_Click);
+            this.btnModificarDeporte.Click += new System.EventHandler(this.btnModificarDeporte_Click);
             // 
             // btnAgregarDeporte
             // 
@@ -291,10 +333,10 @@ namespace Polideportivo.Vista
             this.btnAgregarDeporte.ForeColor = System.Drawing.Color.Black;
             this.btnAgregarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarDeporte.Image")));
             this.btnAgregarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarDeporte.Location = new System.Drawing.Point(86, 515);
+            this.btnAgregarDeporte.Location = new System.Drawing.Point(86, 493);
             this.btnAgregarDeporte.Name = "btnAgregarDeporte";
             this.btnAgregarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnAgregarDeporte.Size = new System.Drawing.Size(153, 36);
+            this.btnAgregarDeporte.Size = new System.Drawing.Size(153, 58);
             this.btnAgregarDeporte.TabIndex = 27;
             this.btnAgregarDeporte.Text = "     A G R E G A R";
             this.btnAgregarDeporte.UseVisualStyleBackColor = false;
@@ -303,48 +345,6 @@ namespace Polideportivo.Vista
             // deporteTableAdapter
             // 
             this.deporteTableAdapter.ClearBeforeFill = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(5, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panelBuscarCol
-            // 
-            this.panelBuscarCol.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBuscarCol.BackColor = System.Drawing.Color.White;
-            this.panelBuscarCol.Controls.Add(this.cboBuscarDeporte);
-            this.panelBuscarCol.Controls.Add(this.pictureBox2);
-            this.panelBuscarCol.Location = new System.Drawing.Point(69, 20);
-            this.panelBuscarCol.Name = "panelBuscarCol";
-            this.panelBuscarCol.Size = new System.Drawing.Size(299, 36);
-            this.panelBuscarCol.TabIndex = 31;
-            // 
-            // cboBuscarDeporte
-            // 
-            this.cboBuscarDeporte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboBuscarDeporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboBuscarDeporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboBuscarDeporte.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboBuscarDeporte.FormattingEnabled = true;
-            this.cboBuscarDeporte.Items.AddRange(new object[] {
-            "nombre",
-            "anotaciones",
-            "deporte",
-            "rol",
-            "equipo"});
-            this.cboBuscarDeporte.Location = new System.Drawing.Point(36, 6);
-            this.cboBuscarDeporte.Name = "cboBuscarDeporte";
-            this.cboBuscarDeporte.Size = new System.Drawing.Size(263, 26);
-            this.cboBuscarDeporte.TabIndex = 32;
-            this.cboBuscarDeporte.SelectedIndexChanged += new System.EventHandler(this.cboBuscar_SelectedIndexChanged);
             // 
             // formDeporte
             // 
@@ -361,11 +361,11 @@ namespace Polideportivo.Vista
             ((System.ComponentModel.ISupportInitialize)(this.vwDeportes)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
             this.parrotGradientPanel1.PerformLayout();
+            this.panelBuscarCol.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panelBuscarCol.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

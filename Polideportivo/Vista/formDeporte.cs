@@ -19,6 +19,7 @@ namespace Polideportivo.Vista
         }
 
         
+       
 
 
         private void formDeporte_Load(object sender, EventArgs e)
@@ -88,9 +89,18 @@ namespace Polideportivo.Vista
             
         }
 
-        private void btnModificarJugador_Click(object sender, EventArgs e)
+        private void btnModificarDeporte_Click(object sender, EventArgs e)
         {
-            abrirForm(new formDeporteEventos(modeloFila, this));
+            controladorDeporte modeloModificar = new controladorDeporte();
+            modeloDeporte modelo = new modeloDeporte();
+            //modelo.pkId = pkId;
+            modelo.nombre = txtNombreDeporte.Text;
+            //modelo.anotaciones = stringAInt(txtAnotaciones.Text);
+            //modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            //modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
+            //modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
+            //modeloModificar.modificarJugador(modelo);
+            actualizarTablaDeporte();
         }
 
         private void txtFiltrar_TextChanged(object sender, EventArgs e)

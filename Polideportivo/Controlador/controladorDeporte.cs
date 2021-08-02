@@ -29,11 +29,11 @@ namespace Polideportivo.Controlador
             return modelo;
         }
 
-        public modeloDeporte modificarJugador(modeloDeporte modelo)
+        public modeloDeporte modificarDeporte(modeloDeporte modelo)
         {
-
+            pruebas.Open();
             var sqlinsertar =
-                "UPDATE jugador SET nombre = ?nombre?"+
+                "UPDATE deporte SET nombre = ?nombre? "+
                 "WHERE pkId = ?pkId?;";
             var ValorDeVariables = new
             {

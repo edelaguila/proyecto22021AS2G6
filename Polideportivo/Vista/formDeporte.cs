@@ -44,7 +44,7 @@ namespace Polideportivo.Vista
 
         public void actualizarTablaDeporte()
         {
-           // this.vwjugadorTableAdapter.Fill(this.tablaJugadores1.vwjugador);
+            this.deporteTableAdapter.Fill(this.vwDeportes.deporte);
         }
 
 
@@ -56,50 +56,27 @@ namespace Polideportivo.Vista
         modeloDeporte modeloFila = new modeloDeporte();
         private void tablaDeporte_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            string nombre = tablaDeportes.SelectedRows[0].Cells[1].Value.ToString();
             int id = stringAInt(tablaDeportes.SelectedRows[0].Cells[0].Value.ToString());
+            string nombre = tablaDeportes.SelectedRows[0].Cells[1].Value.ToString();
+            txtNombreDeporte.Text = nombre;
             modeloFila.pkId = id;
-            modeloFila.nombre = nombre;
-            //modeloFila.anotaciones = anotaciones;
-            //modeloFila.fkIdEquipo = fkIdEquipo;
-            //modeloFila.fkIdRol = fkIdRol;
-            //modeloFila.fkIdDeporte = fkIdDeporte;
-            // Para que la selección de filas funcione para modificar, tiene que enviarse el
-            // modelo a la función de abrirForm:
-            // utilidadForms.abrirForm(new formDeporteEventos(modeloFila, this));
-            // Además de eso, modificar el construtor del form que va a utilizar los datos
-            // para la modificación, en este caso sería el ctor de formDeporteEventos que recibe el modelo
-
+            
         }
 
         private void btnAgregarDeporte_Click(object sender, EventArgs e)
         {
             controladorDeporte modeloAgregar = new controladorDeporte();
             modeloDeporte modelo = new modeloDeporte();
-
             modelo.nombre = txtNombreDeporte.Text;
-
-
-            
             modeloAgregar.agregarDeporte(modelo);
-
-            //formOriginal.actualizarTablaDeporte();
-
-            
+            actualizarTablaDeporte();
         }
 
         private void btnModificarDeporte_Click(object sender, EventArgs e)
         {
             controladorDeporte modeloModificar = new controladorDeporte();
-            modeloDeporte modelo = new modeloDeporte();
-            //modelo.pkId = pkId;
-            modelo.nombre = txtNombreDeporte.Text;
-            //modelo.anotaciones = stringAInt(txtAnotaciones.Text);
-            //modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-            //modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
-            //modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
-            //modeloModificar.modificarJugador(modelo);
+            modeloFila.nombre = txtNombreDeporte.Text;
+            modeloModificar.modificarDeporte(modeloFila);
             actualizarTablaDeporte();
         }
 

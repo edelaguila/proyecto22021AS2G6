@@ -201,7 +201,7 @@ namespace Polideportivo.Vista
             this.btnEliminarDeporte.TabIndex = 33;
             this.btnEliminarDeporte.Text = "   E L I M I N A R";
             this.btnEliminarDeporte.UseVisualStyleBackColor = false;
-            this.btnEliminarDeporte.Click += new System.EventHandler(this.btnEliminarJugador_Click);
+            this.btnEliminarDeporte.Click += new System.EventHandler(this.btnEliminarDeporte_Click);
             // 
             // btnActualizarDeporte
             // 

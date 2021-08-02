@@ -96,13 +96,13 @@ namespace Polideportivo.Vista
             actualizarTablaDeporte();
         }
 
-        private void btnEliminarJugador_Click(object sender, EventArgs e)
+        private void btnEliminarDeporte_Click(object sender, EventArgs e)
         {
             int id = stringAInt(tablaDeportes.SelectedRows[0].Cells[0].Value.ToString());
             controladorDeporte controlador = new controladorDeporte();
             modeloDeporte modelo = new modeloDeporte();
             modelo.pkId = id;
-            //controlador.eliminarJugador(modelo);
+            controlador.eliminarDeporte(modelo);
             actualizarTablaDeporte();
         }
     }

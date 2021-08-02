@@ -45,6 +45,22 @@ namespace Polideportivo.Controlador
             return modelo;
         }
 
+        public modeloDeporte eliminarDeporte(modeloDeporte modelo)
+        {
+
+            var sqlinsertar =
+                "DELETE FROM deporte WHERE pkId = ?pkId?;";
+            
+           var ValorDeVariables = new
+            {
+                pkId = modelo.pkId
+            };
+            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
+            pruebas.Close();
+            return modelo;
+        }
+
+
         public List<modeloDeporte> mostrarDeportes()
         {
             pruebas.Open();

@@ -24,12 +24,7 @@ namespace Polideportivo.Vista
 
         private void formDeporte_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'vwDeportes.deporte' Puede moverla o quitarla según sea necesario.
             this.deporteTableAdapter.Fill(this.vwDeportes.deporte);
-
-
-            // TODO: esta línea de código carga datos en la tabla 'tablaJugadores1.vwjugador' Puede moverla o quitarla según sea necesario.
-            // vwjugadorTableAdapter.Fill(tablaJugadores1.vwjugador);
             cboBuscarDeporte.SelectedIndex = 0;
 
         }
@@ -38,7 +33,6 @@ namespace Polideportivo.Vista
         {
             modeloDeporte modelo = new modeloDeporte();
             controladorDeporte db = new controladorDeporte();
-            //db.agregarJugador(modelo);
         }
 
 

@@ -50,7 +50,10 @@ namespace Polideportivo.Vista
             this.btnModificarDeporte = new System.Windows.Forms.Button();
             this.btnAgregarDeporte = new System.Windows.Forms.Button();
             this.deporteTableAdapter = new Polideportivo.vwDeportesTableAdapters.deporteTableAdapter();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textCodigo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDeportes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deporteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwDeportes)).BeginInit();
@@ -101,7 +104,7 @@ namespace Polideportivo.Vista
             this.tablaDeportes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tablaDeportes.RowHeadersVisible = false;
             this.tablaDeportes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaDeportes.Size = new System.Drawing.Size(318, 311);
+            this.tablaDeportes.Size = new System.Drawing.Size(400, 311);
             this.tablaDeportes.TabIndex = 5;
             this.tablaDeportes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaJugadores_CellClick);
             // 
@@ -138,7 +141,10 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.parrotGradientPanel1.Controls.Add(this.textBox1);
+            this.parrotGradientPanel1.Controls.Add(this.label1);
+            this.parrotGradientPanel1.Controls.Add(this.textCodigo);
+            this.parrotGradientPanel1.Controls.Add(this.lblNombre);
+            this.parrotGradientPanel1.Controls.Add(this.txtNombre);
             this.parrotGradientPanel1.Controls.Add(this.btnEliminarDeporte);
             this.parrotGradientPanel1.Controls.Add(this.btnActualizarDeporte);
             this.parrotGradientPanel1.Controls.Add(this.panelBuscarCol);
@@ -172,7 +178,7 @@ namespace Polideportivo.Vista
             this.btnEliminarDeporte.ForeColor = System.Drawing.Color.Black;
             this.btnEliminarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarDeporte.Image")));
             this.btnEliminarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarDeporte.Location = new System.Drawing.Point(430, 515);
+            this.btnEliminarDeporte.Location = new System.Drawing.Point(470, 515);
             this.btnEliminarDeporte.Name = "btnEliminarDeporte";
             this.btnEliminarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btnEliminarDeporte.Size = new System.Drawing.Size(160, 36);
@@ -193,10 +199,10 @@ namespace Polideportivo.Vista
             this.btnActualizarDeporte.ForeColor = System.Drawing.Color.Black;
             this.btnActualizarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarDeporte.Image")));
             this.btnActualizarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarDeporte.Location = new System.Drawing.Point(392, 20);
+            this.btnActualizarDeporte.Location = new System.Drawing.Point(666, 515);
             this.btnActualizarDeporte.Name = "btnActualizarDeporte";
             this.btnActualizarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnActualizarDeporte.Size = new System.Drawing.Size(210, 36);
+            this.btnActualizarDeporte.Size = new System.Drawing.Size(174, 36);
             this.btnActualizarDeporte.TabIndex = 32;
             this.btnActualizarDeporte.Text = "      A C T U A L I Z A R";
             this.btnActualizarDeporte.UseVisualStyleBackColor = false;
@@ -253,7 +259,7 @@ namespace Polideportivo.Vista
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(69, 69);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(299, 36);
+            this.panel2.Size = new System.Drawing.Size(400, 36);
             this.panel2.TabIndex = 30;
             // 
             // txtFiltrarDeporte
@@ -265,7 +271,7 @@ namespace Polideportivo.Vista
             this.txtFiltrarDeporte.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltrarDeporte.Location = new System.Drawing.Point(37, 9);
             this.txtFiltrarDeporte.Name = "txtFiltrarDeporte";
-            this.txtFiltrarDeporte.Size = new System.Drawing.Size(252, 20);
+            this.txtFiltrarDeporte.Size = new System.Drawing.Size(353, 20);
             this.txtFiltrarDeporte.TabIndex = 1;
             this.txtFiltrarDeporte.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
@@ -290,7 +296,7 @@ namespace Polideportivo.Vista
             this.btnModificarDeporte.ForeColor = System.Drawing.Color.Black;
             this.btnModificarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarDeporte.Image")));
             this.btnModificarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarDeporte.Location = new System.Drawing.Point(243, 515);
+            this.btnModificarDeporte.Location = new System.Drawing.Point(270, 515);
             this.btnModificarDeporte.Name = "btnModificarDeporte";
             this.btnModificarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btnModificarDeporte.Size = new System.Drawing.Size(168, 36);
@@ -311,7 +317,7 @@ namespace Polideportivo.Vista
             this.btnAgregarDeporte.ForeColor = System.Drawing.Color.Black;
             this.btnAgregarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarDeporte.Image")));
             this.btnAgregarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarDeporte.Location = new System.Drawing.Point(69, 515);
+            this.btnAgregarDeporte.Location = new System.Drawing.Point(86, 515);
             this.btnAgregarDeporte.Name = "btnAgregarDeporte";
             this.btnAgregarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btnAgregarDeporte.Size = new System.Drawing.Size(153, 36);
@@ -324,12 +330,45 @@ namespace Polideportivo.Vista
             // 
             this.deporteTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(538, 202);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 20);
-            this.textBox1.TabIndex = 34;
+            this.txtNombre.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(505, 222);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(378, 27);
+            this.txtNombre.TabIndex = 34;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(502, 201);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(69, 18);
+            this.lblNombre.TabIndex = 35;
+            this.lblNombre.Text = "NOMBRE";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(502, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 18);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "CODIGO";
+            // 
+            // textCodigo
+            // 
+            this.textCodigo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textCodigo.Location = new System.Drawing.Point(505, 146);
+            this.textCodigo.Name = "textCodigo";
+            this.textCodigo.Size = new System.Drawing.Size(134, 27);
+            this.textCodigo.TabIndex = 36;
             // 
             // formDeporte
             // 
@@ -373,6 +412,9 @@ namespace Polideportivo.Vista
         private vwDeportesTableAdapters.deporteTableAdapter deporteTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textCodigo;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

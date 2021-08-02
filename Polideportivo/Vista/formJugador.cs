@@ -19,8 +19,10 @@ namespace Polideportivo.Vista
 
         private void formJugador_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'tablaJugadores1.vwjugador' Puede moverla o quitarla según sea necesario.
-            vwjugadorTableAdapter.Fill(tablaJugadores1.vwjugador);
+            // TODO: esta línea de código carga datos en la tabla 'vwJugador.vwjugador' Puede moverla o quitarla según sea necesario.
+            this.vwjugadorTableAdapter.Fill(this.vwJugador.vwjugador);
+            // TODO: esta línea de código carga datos en la tabla 'vwJugador.vwjugador' Puede moverla o quitarla según sea necesario.
+            //this.vwjugadorTableAdapter.Fill(this.vwJugador.vwjugador);
             cboBuscar.SelectedIndex = 0;
 
         }
@@ -35,7 +37,7 @@ namespace Polideportivo.Vista
 
         public void actualizarTablaJugadores()
         {
-            this.vwjugadorTableAdapter.Fill(this.tablaJugadores1.vwjugador);
+            this.vwjugadorTableAdapter.Fill(this.vwJugador.vwjugador);
         }
 
 

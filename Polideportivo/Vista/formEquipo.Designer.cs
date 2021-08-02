@@ -44,7 +44,6 @@ namespace Polideportivo.Vista
             this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwjugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaJugadores1 = new Polideportivo.tablaJugadores();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.btnEliminarJugador = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -56,10 +55,8 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarJugador = new System.Windows.Forms.Button();
             this.btnAgregarJugador = new System.Windows.Forms.Button();
-            this.vwjugadorTableAdapter = new Polideportivo.tablaJugadoresTableAdapters.vwjugadorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores1)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             this.panelBuscarCol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -206,12 +203,7 @@ namespace Polideportivo.Vista
             // vwjugadorBindingSource
             // 
             this.vwjugadorBindingSource.DataMember = "vwjugador";
-            this.vwjugadorBindingSource.DataSource = this.tablaJugadores1;
             // 
-            // tablaJugadores1
-            // 
-            this.tablaJugadores1.DataSetName = "tablaJugadores";
-            this.tablaJugadores1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // parrotGradientPanel1
             // 
@@ -399,10 +391,7 @@ namespace Polideportivo.Vista
             this.btnAgregarJugador.UseVisualStyleBackColor = false;
             this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
             // 
-            // vwjugadorTableAdapter
-            // 
-            this.vwjugadorTableAdapter.ClearBeforeFill = true;
-            // 
+
             // formEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,7 +404,6 @@ namespace Polideportivo.Vista
             this.Load += new System.EventHandler(this.formJugador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores1)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
             this.panelBuscarCol.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -429,9 +417,7 @@ namespace Polideportivo.Vista
         #endregion
         private Zuby.ADGV.AdvancedDataGridView tablaJugadores;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private tablaJugadores tablaJugadores1;
         private System.Windows.Forms.BindingSource vwjugadorBindingSource;
-        private tablaJugadoresTableAdapters.vwjugadorTableAdapter vwjugadorTableAdapter;
         private System.Windows.Forms.Button btnAgregarJugador;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdJugadorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;

@@ -117,11 +117,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="tablaJugadores.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tablaJugadores.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Vista\formCampeonato.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +184,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwDeportes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="vwJugador.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwJugador.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Vista\formCampeonato.resx">
       <DependentUpon>formCampeonato.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,17 +234,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="tablaJugadores.xsc">
-      <DependentUpon>tablaJugadores.xsd</DependentUpon>
-    </None>
-    <None Include="tablaJugadores.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>tablaJugadores.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="tablaJugadores.xss">
-      <DependentUpon>tablaJugadores.xsd</DependentUpon>
-    </None>
     <None Include="vwCampeonato.xsc">
       <DependentUpon>vwCampeonato.xsd</DependentUpon>
     </None>
@@ -266,6 +255,17 @@
     </None>
     <None Include="vwDeportes.xss">
       <DependentUpon>vwDeportes.xsd</DependentUpon>
+    </None>
+    <None Include="vwJugador.xsc">
+      <DependentUpon>vwJugador.xsd</DependentUpon>
+    </None>
+    <None Include="vwJugador.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwJugador.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vwJugador.xss">
+      <DependentUpon>vwJugador.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -26,7 +26,7 @@ namespace Polideportivo.Vista
 
             // TODO: esta línea de código carga datos en la tabla 'tablaJugadores1.vwjugador' Puede moverla o quitarla según sea necesario.
             // vwjugadorTableAdapter.Fill(tablaJugadores1.vwjugador);
-            cboBuscar.SelectedIndex = 0;
+            cboBuscarDeporte.SelectedIndex = 0;
 
         }
 
@@ -53,12 +53,12 @@ namespace Polideportivo.Vista
         private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            string nombre = tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
-            int id = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
-            int anotaciones = stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
-            int fkIdEquipo = stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
-            int fkIdRol = stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
-            int fkIdDeporte = stringAInt(tablaJugadores.SelectedRows[0].Cells[7].Value.ToString());
+            string nombre = tablaDeportes.SelectedRows[0].Cells[1].Value.ToString();
+            int id = stringAInt(tablaDeportes.SelectedRows[0].Cells[0].Value.ToString());
+            int anotaciones = stringAInt(tablaDeportes.SelectedRows[0].Cells[2].Value.ToString());
+            int fkIdEquipo = stringAInt(tablaDeportes.SelectedRows[0].Cells[3].Value.ToString());
+            int fkIdRol = stringAInt(tablaDeportes.SelectedRows[0].Cells[5].Value.ToString());
+            int fkIdDeporte = stringAInt(tablaDeportes.SelectedRows[0].Cells[7].Value.ToString());
             modeloFila.pkId = id;
             modeloFila.nombre = nombre;
             //modeloFila.anotaciones = anotaciones;
@@ -75,7 +75,15 @@ namespace Polideportivo.Vista
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
-            abrirForm(new formDeporteEventos(this));
+            controladorJugador modeloAgregar = new controladorJugador();
+            modeloEquipo modelo = new modeloEquipo();
+            modelo.nombre = txtNombre.Text;
+            //modelo.anotaciones = stringAInt(txtAnotaciones.Text);
+            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            //modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
+            //modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
+            //modeloAgregar.agregarJugador(modelo);
+            formOriginal.actualizarTablaJugadores();
         }
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
@@ -85,7 +93,7 @@ namespace Polideportivo.Vista
 
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtFiltrar.Text))
+            if (string.IsNullOrEmpty(txtFiltrarDeporte.Text))
             {
                // vwjugadorBindingSource.Filter = string.Empty;
             }
@@ -97,7 +105,7 @@ namespace Polideportivo.Vista
 
         private void cboBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtFiltrar.Text = "";
+            txtFiltrarDeporte.Text = "";
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -107,7 +115,7 @@ namespace Polideportivo.Vista
 
         private void btnEliminarJugador_Click(object sender, EventArgs e)
         {
-            int id = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
+            int id = stringAInt(tablaDeportes.SelectedRows[0].Cells[0].Value.ToString());
             controladorDeporte controlador = new controladorDeporte();
             modeloDeporte modelo = new modeloDeporte();
             modelo.pkId = id;

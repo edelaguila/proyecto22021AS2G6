@@ -34,6 +34,8 @@ namespace Polideportivo.Vista
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formCampeonato));
             this.tablaJugadores = new Zuby.ADGV.AdvancedDataGridView();
+            this.vwcampeonatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vwCampeonato = new Polideportivo.vwCampeonato();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.btnEliminarJugador = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -45,8 +47,6 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarJugador = new System.Windows.Forms.Button();
             this.btnAgregarJugador = new System.Windows.Forms.Button();
-            this.vwCampeonato = new Polideportivo.vwCampeonato();
-            this.vwcampeonatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vwcampeonatoTableAdapter = new Polideportivo.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter();
             this.pkIdCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.campeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,13 +57,13 @@ namespace Polideportivo.Vista
             this.pkIdTipoCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwcampeonatoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwCampeonato)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             this.panelBuscarCol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwCampeonato)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwcampeonatoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tablaJugadores
@@ -115,6 +115,16 @@ namespace Polideportivo.Vista
             this.tablaJugadores.Size = new System.Drawing.Size(768, 413);
             this.tablaJugadores.TabIndex = 5;
             this.tablaJugadores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaJugadores_CellClick);
+            // 
+            // vwcampeonatoBindingSource
+            // 
+            this.vwcampeonatoBindingSource.DataMember = "vwcampeonato";
+            this.vwcampeonatoBindingSource.DataSource = this.vwCampeonato;
+            // 
+            // vwCampeonato
+            // 
+            this.vwCampeonato.DataSetName = "vwCampeonato";
+            this.vwCampeonato.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // parrotGradientPanel1
             // 
@@ -302,16 +312,6 @@ namespace Polideportivo.Vista
             this.btnAgregarJugador.UseVisualStyleBackColor = false;
             this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
             // 
-            // vwCampeonato
-            // 
-            this.vwCampeonato.DataSetName = "vwCampeonato";
-            this.vwCampeonato.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vwcampeonatoBindingSource
-            // 
-            this.vwcampeonatoBindingSource.DataMember = "vwcampeonato";
-            this.vwcampeonatoBindingSource.DataSource = this.vwCampeonato;
-            // 
             // vwcampeonatoTableAdapter
             // 
             this.vwcampeonatoTableAdapter.ClearBeforeFill = true;
@@ -324,6 +324,7 @@ namespace Polideportivo.Vista
             this.pkIdCampeonatoDataGridViewTextBoxColumn.Name = "pkIdCampeonatoDataGridViewTextBoxColumn";
             this.pkIdCampeonatoDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdCampeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdCampeonatoDataGridViewTextBoxColumn.Visible = false;
             // 
             // campeonatoDataGridViewTextBoxColumn
             // 
@@ -360,6 +361,7 @@ namespace Polideportivo.Vista
             this.pkIdDeporteDataGridViewTextBoxColumn.Name = "pkIdDeporteDataGridViewTextBoxColumn";
             this.pkIdDeporteDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdDeporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdDeporteDataGridViewTextBoxColumn.Visible = false;
             // 
             // deporteDataGridViewTextBoxColumn
             // 
@@ -378,6 +380,7 @@ namespace Polideportivo.Vista
             this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.Name = "pkIdTipoCampeonatoDataGridViewTextBoxColumn";
             this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.Visible = false;
             // 
             // tipoCampeonatoDataGridViewTextBoxColumn
             // 
@@ -399,14 +402,14 @@ namespace Polideportivo.Vista
             this.Text = "formCampeonato";
             this.Load += new System.EventHandler(this.formCampeonato_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwcampeonatoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwCampeonato)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
             this.panelBuscarCol.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwCampeonato)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwcampeonatoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

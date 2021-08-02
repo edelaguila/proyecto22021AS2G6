@@ -27,3 +27,32 @@ FROM jugador A
 INNER JOIN equipo B ON B.pkId = A.fkIdEquipo
 INNER JOIN rol C ON  C.pkId = A.fkIdRol
 INNER JOIN deporte D ON D.pkId = A.fkIdDeporte ORDER BY pkIdJugador ASC;
+
+/* Vista de equipo */
+DROP VIEW `vwEquipo`;
+CREATE VIEW `vwEquipo` AS
+SELECT 
+A.pkId AS pkIdEquipo, A.nombre, 
+C.pkId AS pkIdEntrenador, C.nombre AS entrenador,
+B.pkId as pkIdDeporte, B.nombre AS deporte
+FROM equipo A
+INNER JOIN entrenador C ON C.pkId = A.fkIdEntrenador
+INNER JOIN deporte B ON B.pkId = A.fkIdDeporte ORDER BY pkIdEquipo ASC;
+
+/* Vista de campeonato */
+DROP VIEW `vwcampeonato`;
+CREATE VIEW `vwcampeonato` AS
+    SELECT 
+        `a`.`pkId` AS `pkIdCampeonato`,
+        `a`.`nombre` AS `campeonato`,
+        `a`.`fechaInicio` AS `fechaInicio`,
+        `a`.`fechaFinal` AS `fechaFinal`,
+        `b`.`pkId` AS `pkIdDeporte`,
+        `b`.`nombre` AS `deporte`,
+        `c`.`pkId` AS `pkIdTipoCampeonato`,
+        `c`.`tipo` AS `tipoCampeonato`
+    FROM
+        ((`campeonato` `a`
+        JOIN `equipo` `b` ON ((`b`.`pkId` = `a`.`fkIdDeporte`)))
+        JOIN `tipocampeonato` `c` ON ((`c`.`pkId` = `a`.`fkIdTipoCampeonato`)))
+    ORDER BY `a`.`pkId`;

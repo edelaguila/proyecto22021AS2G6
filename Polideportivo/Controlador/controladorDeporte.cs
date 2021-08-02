@@ -12,6 +12,23 @@ namespace Polideportivo.Controlador
     class controladorDeporte
     {
         OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
+
+        public modeloDeporte agregarDeporte(modeloDeporte modelo)
+        {
+
+            var sqlinsertar =
+                "INSERT INTO jugador (pkId, nombre) " +
+                "VALUES (NULL, ?nombre?);";
+            var ValorDeVariables = new
+            {
+                nombre = modelo.nombre
+                
+            };
+            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
+            pruebas.Close();
+            return modelo;
+        }
+
         public List<modeloDeporte> mostrarDeportes()
         {
             pruebas.Open();

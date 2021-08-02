@@ -21,7 +21,7 @@ namespace Polideportivo.Vista
         
 
 
-        private void formJugador_Load(object sender, EventArgs e)
+        private void formDeporte_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'vwDeportes.deporte' Puede moverla o quitarla según sea necesario.
             this.deporteTableAdapter.Fill(this.vwDeportes.deporte);
@@ -53,15 +53,11 @@ namespace Polideportivo.Vista
         }
 
         modeloDeporte modeloFila = new modeloDeporte();
-        private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void tablaDeporte_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             string nombre = tablaDeportes.SelectedRows[0].Cells[1].Value.ToString();
             int id = stringAInt(tablaDeportes.SelectedRows[0].Cells[0].Value.ToString());
-            int anotaciones = stringAInt(tablaDeportes.SelectedRows[0].Cells[2].Value.ToString());
-            int fkIdEquipo = stringAInt(tablaDeportes.SelectedRows[0].Cells[3].Value.ToString());
-            int fkIdRol = stringAInt(tablaDeportes.SelectedRows[0].Cells[5].Value.ToString());
-            int fkIdDeporte = stringAInt(tablaDeportes.SelectedRows[0].Cells[7].Value.ToString());
             modeloFila.pkId = id;
             modeloFila.nombre = nombre;
             //modeloFila.anotaciones = anotaciones;
@@ -79,16 +75,13 @@ namespace Polideportivo.Vista
         private void btnAgregarDeporte_Click(object sender, EventArgs e)
         {
             controladorDeporte modeloAgregar = new controladorDeporte();
-            modeloEquipo modelo = new modeloEquipo();
+            modeloDeporte modelo = new modeloDeporte();
 
             modelo.nombre = txtNombreDeporte.Text;
 
 
-            //modelo.anotaciones = stringAInt(txtAnotaciones.Text);
-            //modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-            //modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
-            //modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
-            //modeloAgregar.agregarJugador(modelo);
+            
+            modeloAgregar.agregarDeporte(modelo);
 
             //formOriginal.actualizarTablaDeporte();
 

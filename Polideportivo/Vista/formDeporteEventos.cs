@@ -107,7 +107,7 @@ namespace Polideportivo.Vista
             //modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
             //modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
             //modeloAgregar.agregarJugador(modelo);
-            formOriginal.actualizarTablaJugadores();
+            formOriginal.actualizarTablaDeporte();
             cerrarForm(this);
         }
 
@@ -122,7 +122,7 @@ namespace Polideportivo.Vista
             //modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
             //modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
             //modeloModificar.modificarJugador(modelo);
-            formOriginal.actualizarTablaJugadores();
+            formOriginal.actualizarTablaDeporte();
             cerrarForm(this);
         }
     }

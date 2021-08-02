@@ -18,6 +18,9 @@ namespace Polideportivo.Vista
             InitializeComponent();
         }
 
+        
+
+
         private void formJugador_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'vwDeportes.deporte' Puede moverla o quitarla según sea necesario.
@@ -38,7 +41,7 @@ namespace Polideportivo.Vista
         }
 
 
-        public void actualizarTablaJugadores()
+        public void actualizarTablaDeporte()
         {
            // this.vwjugadorTableAdapter.Fill(this.tablaJugadores1.vwjugador);
         }
@@ -73,17 +76,17 @@ namespace Polideportivo.Vista
 
         }
 
-        private void btnAgregarJugador_Click(object sender, EventArgs e)
+        private void btnAgregarDeporte_Click(object sender, EventArgs e)
         {
-            controladorJugador modeloAgregar = new controladorJugador();
+            controladorDeporte modeloAgregar = new controladorDeporte();
             modeloEquipo modelo = new modeloEquipo();
-            modelo.nombre = txtNombre.Text;
+            modelo.nombre = txtNombreDeporte.Text;
             //modelo.anotaciones = stringAInt(txtAnotaciones.Text);
-            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            //modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
             //modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
             //modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
             //modeloAgregar.agregarJugador(modelo);
-            formOriginal.actualizarTablaJugadores();
+            //formOriginal.actualizarTablaDeporte();
         }
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
@@ -110,7 +113,7 @@ namespace Polideportivo.Vista
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            actualizarTablaJugadores();
+            actualizarTablaDeporte();
         }
 
         private void btnEliminarJugador_Click(object sender, EventArgs e)
@@ -120,7 +123,7 @@ namespace Polideportivo.Vista
             modeloDeporte modelo = new modeloDeporte();
             modelo.pkId = id;
             //controlador.eliminarJugador(modelo);
-            actualizarTablaJugadores();
+            actualizarTablaDeporte();
         }
     }
 }

@@ -50,7 +50,7 @@ namespace Polideportivo.Vista
             this.btnModificarDeporte = new System.Windows.Forms.Button();
             this.btnAgregarDeporte = new System.Windows.Forms.Button();
             this.deporteTableAdapter = new Polideportivo.vwDeportesTableAdapters.deporteTableAdapter();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtNombreDeporte = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textCodigo = new System.Windows.Forms.TextBox();
@@ -144,7 +144,7 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.Controls.Add(this.label1);
             this.parrotGradientPanel1.Controls.Add(this.textCodigo);
             this.parrotGradientPanel1.Controls.Add(this.lblNombre);
-            this.parrotGradientPanel1.Controls.Add(this.txtNombre);
+            this.parrotGradientPanel1.Controls.Add(this.txtNombreDeporte);
             this.parrotGradientPanel1.Controls.Add(this.btnEliminarDeporte);
             this.parrotGradientPanel1.Controls.Add(this.btnActualizarDeporte);
             this.parrotGradientPanel1.Controls.Add(this.panelBuscarCol);
@@ -324,19 +324,19 @@ namespace Polideportivo.Vista
             this.btnAgregarDeporte.TabIndex = 27;
             this.btnAgregarDeporte.Text = "     A G R E G A R";
             this.btnAgregarDeporte.UseVisualStyleBackColor = false;
-            this.btnAgregarDeporte.Click += new System.EventHandler(this.btnAgregarJugador_Click);
+            this.btnAgregarDeporte.Click += new System.EventHandler(this.btnAgregarDeporte_Click);
             // 
             // deporteTableAdapter
             // 
             this.deporteTableAdapter.ClearBeforeFill = true;
             // 
-            // txtNombre
+            // txtNombreDeporte
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(505, 222);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(378, 27);
-            this.txtNombre.TabIndex = 34;
+            this.txtNombreDeporte.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreDeporte.Location = new System.Drawing.Point(505, 222);
+            this.txtNombreDeporte.Name = "txtNombreDeporte";
+            this.txtNombreDeporte.Size = new System.Drawing.Size(378, 27);
+            this.txtNombreDeporte.TabIndex = 34;
             // 
             // lblNombre
             // 
@@ -412,7 +412,7 @@ namespace Polideportivo.Vista
         private vwDeportesTableAdapters.deporteTableAdapter deporteTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtNombreDeporte;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textCodigo;
         private System.Windows.Forms.Label lblNombre;

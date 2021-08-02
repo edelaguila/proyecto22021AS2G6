@@ -96,13 +96,13 @@ namespace Polideportivo.Vista
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tablaDeportes.DefaultCellStyle = dataGridViewCellStyle2;
             this.tablaDeportes.FilterAndSortEnabled = true;
-            this.tablaDeportes.Location = new System.Drawing.Point(69, 123);
+            this.tablaDeportes.Location = new System.Drawing.Point(85, 143);
             this.tablaDeportes.Name = "tablaDeportes";
             this.tablaDeportes.ReadOnly = true;
             this.tablaDeportes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tablaDeportes.RowHeadersVisible = false;
             this.tablaDeportes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaDeportes.Size = new System.Drawing.Size(400, 311);
+            this.tablaDeportes.Size = new System.Drawing.Size(400, 407);
             this.tablaDeportes.TabIndex = 5;
             this.tablaDeportes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDeporte_CellClick);
             // 
@@ -168,7 +168,7 @@ namespace Polideportivo.Vista
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(484, 249);
+            this.lblNombre.Location = new System.Drawing.Point(568, 92);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(69, 18);
             this.lblNombre.TabIndex = 35;
@@ -177,9 +177,9 @@ namespace Polideportivo.Vista
             // txtNombreDeporte
             // 
             this.txtNombreDeporte.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreDeporte.Location = new System.Drawing.Point(487, 270);
+            this.txtNombreDeporte.Location = new System.Drawing.Point(571, 113);
             this.txtNombreDeporte.Name = "txtNombreDeporte";
-            this.txtNombreDeporte.Size = new System.Drawing.Size(378, 27);
+            this.txtNombreDeporte.Size = new System.Drawing.Size(226, 27);
             this.txtNombreDeporte.TabIndex = 34;
             // 
             // btnEliminarDeporte
@@ -194,10 +194,10 @@ namespace Polideportivo.Vista
             this.btnEliminarDeporte.ForeColor = System.Drawing.Color.Black;
             this.btnEliminarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarDeporte.Image")));
             this.btnEliminarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarDeporte.Location = new System.Drawing.Point(470, 493);
+            this.btnEliminarDeporte.Location = new System.Drawing.Point(571, 357);
             this.btnEliminarDeporte.Name = "btnEliminarDeporte";
             this.btnEliminarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnEliminarDeporte.Size = new System.Drawing.Size(160, 58);
+            this.btnEliminarDeporte.Size = new System.Drawing.Size(226, 58);
             this.btnEliminarDeporte.TabIndex = 33;
             this.btnEliminarDeporte.Text = "   E L I M I N A R";
             this.btnEliminarDeporte.UseVisualStyleBackColor = false;
@@ -215,10 +215,10 @@ namespace Polideportivo.Vista
             this.btnActualizarDeporte.ForeColor = System.Drawing.Color.Black;
             this.btnActualizarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarDeporte.Image")));
             this.btnActualizarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarDeporte.Location = new System.Drawing.Point(666, 493);
+            this.btnActualizarDeporte.Location = new System.Drawing.Point(571, 441);
             this.btnActualizarDeporte.Name = "btnActualizarDeporte";
             this.btnActualizarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnActualizarDeporte.Size = new System.Drawing.Size(174, 58);
+            this.btnActualizarDeporte.Size = new System.Drawing.Size(226, 58);
             this.btnActualizarDeporte.TabIndex = 32;
             this.btnActualizarDeporte.Text = "      A C T U A L I Z A R";
             this.btnActualizarDeporte.UseVisualStyleBackColor = false;
@@ -231,9 +231,9 @@ namespace Polideportivo.Vista
             this.panelBuscarCol.BackColor = System.Drawing.Color.White;
             this.panelBuscarCol.Controls.Add(this.cboBuscarDeporte);
             this.panelBuscarCol.Controls.Add(this.pictureBox2);
-            this.panelBuscarCol.Location = new System.Drawing.Point(69, 20);
+            this.panelBuscarCol.Location = new System.Drawing.Point(85, 40);
             this.panelBuscarCol.Name = "panelBuscarCol";
-            this.panelBuscarCol.Size = new System.Drawing.Size(299, 36);
+            this.panelBuscarCol.Size = new System.Drawing.Size(400, 36);
             this.panelBuscarCol.TabIndex = 31;
             // 
             // cboBuscarDeporte
@@ -253,7 +253,7 @@ namespace Polideportivo.Vista
             "equipo"});
             this.cboBuscarDeporte.Location = new System.Drawing.Point(36, 6);
             this.cboBuscarDeporte.Name = "cboBuscarDeporte";
-            this.cboBuscarDeporte.Size = new System.Drawing.Size(263, 26);
+            this.cboBuscarDeporte.Size = new System.Drawing.Size(364, 26);
             this.cboBuscarDeporte.TabIndex = 32;
             this.cboBuscarDeporte.SelectedIndexChanged += new System.EventHandler(this.cboBuscar_SelectedIndexChanged);
             // 
@@ -273,7 +273,7 @@ namespace Polideportivo.Vista
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.txtFiltrarDeporte);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(69, 69);
+            this.panel2.Location = new System.Drawing.Point(85, 89);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(400, 36);
             this.panel2.TabIndex = 30;
@@ -312,10 +312,10 @@ namespace Polideportivo.Vista
             this.btnModificarDeporte.ForeColor = System.Drawing.Color.Black;
             this.btnModificarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarDeporte.Image")));
             this.btnModificarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarDeporte.Location = new System.Drawing.Point(270, 493);
+            this.btnModificarDeporte.Location = new System.Drawing.Point(571, 271);
             this.btnModificarDeporte.Name = "btnModificarDeporte";
             this.btnModificarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnModificarDeporte.Size = new System.Drawing.Size(168, 58);
+            this.btnModificarDeporte.Size = new System.Drawing.Size(226, 58);
             this.btnModificarDeporte.TabIndex = 28;
             this.btnModificarDeporte.Text = "    M O D I F I C A R";
             this.btnModificarDeporte.UseVisualStyleBackColor = false;
@@ -333,10 +333,10 @@ namespace Polideportivo.Vista
             this.btnAgregarDeporte.ForeColor = System.Drawing.Color.Black;
             this.btnAgregarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarDeporte.Image")));
             this.btnAgregarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarDeporte.Location = new System.Drawing.Point(86, 493);
+            this.btnAgregarDeporte.Location = new System.Drawing.Point(571, 185);
             this.btnAgregarDeporte.Name = "btnAgregarDeporte";
             this.btnAgregarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnAgregarDeporte.Size = new System.Drawing.Size(153, 58);
+            this.btnAgregarDeporte.Size = new System.Drawing.Size(226, 58);
             this.btnAgregarDeporte.TabIndex = 27;
             this.btnAgregarDeporte.Text = "     A G R E G A R";
             this.btnAgregarDeporte.UseVisualStyleBackColor = false;

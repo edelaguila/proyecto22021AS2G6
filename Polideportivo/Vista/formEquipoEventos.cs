@@ -31,20 +31,17 @@ namespace Polideportivo.Vista
         {
             // Este constructor es el que se utiliza para modificar datos
             InitializeComponent();
-            btnModificarJugador.Visible = true;
-            btnAgregarJugador.Visible = false;
+            btnModificarEquipo.Visible = true;
+            btnAgregarEquipo.Visible = false;
             formOriginal = form;
             txtNombre.Text = modelo.nombre;
             //txtAnotaciones.Text = modelo.anotaciones.ToString();
             // Llenar combobox de deportes
             controladorDeporte deportes = new controladorDeporte();
-            cboDeporte.DataSource = deportes.mostrarDeportes();
-            cboDeporte.DisplayMember = "nombre";
-            cboDeporte.ValueMember = "pkId";
             // Para obtener el Id original que se va a modificar
             modeloOriginal = modelo;
             // Modificar el texto del label
-            lblJugadorEvento.Text = "MODIFICAR JUGADOR";
+            lblEquipoEvento.Text = "MODIFICAR JUGADOR";
 
         }
 
@@ -53,43 +50,18 @@ namespace Polideportivo.Vista
         {
             // Este constructor es el que se utiliza para agregar datos
             InitializeComponent();
-            btnAgregarJugador.Visible = true;
-            btnModificarJugador.Visible = false;
+            btnAgregarEquipo.Visible = true;
+            btnModificarEquipo.Visible = false;
             // Llenar combobox de deportes
             controladorDeporte deportes = new controladorDeporte();
-            cboDeporte.DataSource = deportes.mostrarDeportes();
-            cboDeporte.DisplayMember = "nombre";
-            cboDeporte.ValueMember = "pkId";
-            cboDeporte.SelectedIndex = -1;
             formOriginal = form;
             // Modificar el texto del título
-            lblJugadorEvento.Text = "AGREGAR JUGADOR";
+            lblEquipoEvento.Text = "AGREGAR JUGADOR";
         }
 
 
 
-        // Actualizar el combobox de roles dependiendo del deporte seleccionado
-        private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cboDeporte.SelectedIndex > -1)
-            {
-                // Llenar la combobox de rol dependiendo del deporte elegido
-                modeloRol modelorol = new modeloRol();
-                modelorol.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-                controladorRol rol = new controladorRol(modelorol);
-                cboRol.DataSource = rol.mostrarRolesPorDeporte();
-                cboRol.DisplayMember = "nombre";
-                cboRol.ValueMember = "pkId";
-
-                // Llenar la combobox de equipo dependiendo del deporte elegido
-                modeloEquipo modeloequipo = new modeloEquipo();
-                modeloequipo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-                controladorEquipo equipo = new controladorEquipo(modeloequipo);
-                cboEquipo.DataSource = equipo.mostrarEquipoPorDeporte();
-                cboEquipo.DisplayMember = "nombre";
-                cboEquipo.ValueMember = "pkId";
-            }
-        }
+       
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -103,7 +75,6 @@ namespace Polideportivo.Vista
             modeloEquipo modelo = new modeloEquipo();
             modelo.nombre = txtNombre.Text;
             //modelo.anotaciones = stringAInt(txtAnotaciones.Text);
-            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
             //modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
             //modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
             //modeloAgregar.agregarJugador(modelo);
@@ -118,7 +89,6 @@ namespace Polideportivo.Vista
             modelo.pkId = modeloOriginal.pkId;
             modelo.nombre = txtNombre.Text;
             //modelo.anotaciones = stringAInt(txtAnotaciones.Text);
-            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
             //modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
             //modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
             //modeloModificar.modificarJugador(modelo);

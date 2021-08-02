@@ -17,7 +17,7 @@ namespace Polideportivo.Controlador
         {
 
             var sqlinsertar =
-                "INSERT INTO jugador (pkId, nombre) " +
+                "INSERT INTO deporte (pkId, nombre) " +
                 "VALUES (NULL, ?nombre?);";
             var ValorDeVariables = new
             {

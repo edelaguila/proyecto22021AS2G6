@@ -33,7 +33,7 @@
             this.panelLateralInterno = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.btnDeportes = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnMenuEquipo = new System.Windows.Forms.Button();
             this.btnRol = new System.Windows.Forms.Button();
             this.btnMenuJugador = new System.Windows.Forms.Button();
             this.separadorLogo = new ReaLTaiizor.Controls.AirSeparator();
@@ -93,7 +93,7 @@
             this.panelLateralInterno.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             this.panelLateralInterno.Controls.Add(this.btnDeportes);
             this.panelLateralInterno.Controls.Add(this.button5);
-            this.panelLateralInterno.Controls.Add(this.button4);
+            this.panelLateralInterno.Controls.Add(this.btnMenuEquipo);
             this.panelLateralInterno.Controls.Add(this.btnRol);
             this.panelLateralInterno.Controls.Add(this.btnMenuJugador);
             this.panelLateralInterno.Controls.Add(this.separadorLogo);
@@ -154,24 +154,25 @@
             this.button5.Text = "DEPORTES";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnMenuEquipo
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnMenuEquipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(15, 344);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(221, 53);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "DEPORTES";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnMenuEquipo.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuEquipo.FlatAppearance.BorderSize = 0;
+            this.btnMenuEquipo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
+            this.btnMenuEquipo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
+            this.btnMenuEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuEquipo.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuEquipo.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuEquipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuEquipo.Location = new System.Drawing.Point(15, 344);
+            this.btnMenuEquipo.Name = "btnMenuEquipo";
+            this.btnMenuEquipo.Size = new System.Drawing.Size(221, 53);
+            this.btnMenuEquipo.TabIndex = 11;
+            this.btnMenuEquipo.Text = "EQUIPO";
+            this.btnMenuEquipo.UseVisualStyleBackColor = false;
+            this.btnMenuEquipo.Click += new System.EventHandler(this.btnMenuEquipo_Click);
             // 
             // btnRol
             // 
@@ -452,7 +453,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private ReaLTaiizor.Controls.AirSeparator separadorLogo;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnMenuEquipo;
         private System.Windows.Forms.Button btnRol;
         private System.Windows.Forms.Button btnMenuJugador;
         private System.Windows.Forms.PictureBox btnLateral;

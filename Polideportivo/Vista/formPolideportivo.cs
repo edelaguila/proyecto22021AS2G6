@@ -86,6 +86,11 @@ namespace Polideportivo
             gestorDeFormActivo(new formJugador(), "JUGADORES");
         }
 
+        private void btnMenuEquipo_Click(object sender, EventArgs e)
+        {
+            gestorDeFormActivo(new formEquipo(), "EQUIPO");
+        }
+
 
         private void gestorDeFormActivo(Form formHijo, string formHijoActual)
         {

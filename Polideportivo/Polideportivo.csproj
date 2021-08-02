@@ -184,6 +184,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwDeportes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="vwEquipo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwEquipo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="vwJugador.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -255,6 +260,17 @@
     </None>
     <None Include="vwDeportes.xss">
       <DependentUpon>vwDeportes.xsd</DependentUpon>
+    </None>
+    <None Include="vwEquipo.xsc">
+      <DependentUpon>vwEquipo.xsd</DependentUpon>
+    </None>
+    <None Include="vwEquipo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwEquipo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vwEquipo.xss">
+      <DependentUpon>vwEquipo.xsd</DependentUpon>
     </None>
     <None Include="vwJugador.xsc">
       <DependentUpon>vwJugador.xsd</DependentUpon>

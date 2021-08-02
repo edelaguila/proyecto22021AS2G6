@@ -166,6 +166,7 @@
             this.btnMenuEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuEquipo.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuEquipo.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuEquipo.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEquipo.Image")));
             this.btnMenuEquipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuEquipo.Location = new System.Drawing.Point(15, 344);
             this.btnMenuEquipo.Name = "btnMenuEquipo";

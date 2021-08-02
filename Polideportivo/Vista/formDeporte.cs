@@ -77,13 +77,13 @@ namespace Polideportivo.Vista
         {
             controladorJugador modeloAgregar = new controladorJugador();
             modeloEquipo modelo = new modeloEquipo();
-            modelo.nombre = txtNombre.Text;
+            //modelo.nombre = txtNombre.Text;
             //modelo.anotaciones = stringAInt(txtAnotaciones.Text);
-            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            //modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
             //modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
             //modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
             //modeloAgregar.agregarJugador(modelo);
-            formOriginal.actualizarTablaJugadores();
+            //formOriginal.actualizarTablaJugadores();
         }
 
         private void btnModificarJugador_Click(object sender, EventArgs e)

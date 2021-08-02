@@ -101,11 +101,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\controladorCampeonato.cs" />
     <Compile Include="Controlador\controladorDeporte.cs" />
     <Compile Include="Controlador\controladorEquipo.cs" />
     <Compile Include="Controlador\controladorJugador.cs" />
     <Compile Include="Controlador\controladorPolideportivo.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
+    <Compile Include="Modelo\modeloCampeonato.cs" />
     <Compile Include="Modelo\modeloDeporte.cs" />
     <Compile Include="Modelo\modeloEquipo.cs" />
     <Compile Include="Modelo\modeloRol.cs" />
@@ -119,6 +121,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>tablaJugadores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\formCampeonato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formCampeonato.Designer.cs">
+      <DependentUpon>formCampeonato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\formCampeonatoEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formCampeonatoEventos.Designer.cs">
+      <DependentUpon>formCampeonatoEventos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\formDeporte.cs">
       <SubType>Form</SubType>
@@ -170,6 +184,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwDeportes.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vista\formCampeonato.resx">
+      <DependentUpon>formCampeonato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formCampeonatoEventos.resx">
+      <DependentUpon>formCampeonatoEventos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\formDeporte.resx">
       <DependentUpon>formDeporte.cs</DependentUpon>
     </EmbeddedResource>

@@ -20,8 +20,8 @@ namespace Polideportivo.Vista
 
         private void formCampeonato_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'vwCampeonatos.vwcampeonato' Puede moverla o quitarla según sea necesario.
-            this.vwcampeonatoTableAdapter.Fill(this.vwCampeonatos.vwcampeonato);
+            // TODO: esta línea de código carga datos en la tabla 'vwCampeonato.vwcampeonato' Puede moverla o quitarla según sea necesario.
+            this.vwcampeonatoTableAdapter.Fill(this.vwCampeonato.vwcampeonato);
 
             cboBuscar.SelectedIndex = 0;
 

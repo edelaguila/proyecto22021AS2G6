@@ -45,9 +45,9 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarJugador = new System.Windows.Forms.Button();
             this.btnAgregarJugador = new System.Windows.Forms.Button();
-            this.vwCampeonatos = new Polideportivo.vwCampeonatos();
+            this.vwCampeonato = new Polideportivo.vwCampeonato();
             this.vwcampeonatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwcampeonatoTableAdapter = new Polideportivo.vwCampeonatosTableAdapters.vwcampeonatoTableAdapter();
+            this.vwcampeonatoTableAdapter = new Polideportivo.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter();
             this.pkIdCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.campeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +62,7 @@ namespace Polideportivo.Vista
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwCampeonatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwCampeonato)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwcampeonatoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -302,15 +302,15 @@ namespace Polideportivo.Vista
             this.btnAgregarJugador.UseVisualStyleBackColor = false;
             this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
             // 
-            // vwCampeonatos
+            // vwCampeonato
             // 
-            this.vwCampeonatos.DataSetName = "vwCampeonatos";
-            this.vwCampeonatos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.vwCampeonato.DataSetName = "vwCampeonato";
+            this.vwCampeonato.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // vwcampeonatoBindingSource
             // 
             this.vwcampeonatoBindingSource.DataMember = "vwcampeonato";
-            this.vwcampeonatoBindingSource.DataSource = this.vwCampeonatos;
+            this.vwcampeonatoBindingSource.DataSource = this.vwCampeonato;
             // 
             // vwcampeonatoTableAdapter
             // 
@@ -405,7 +405,7 @@ namespace Polideportivo.Vista
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwCampeonatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwCampeonato)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwcampeonatoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -424,9 +424,9 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminarJugador;
-        private vwCampeonatos vwCampeonatos;
+        private vwCampeonato vwCampeonato;
         private System.Windows.Forms.BindingSource vwcampeonatoBindingSource;
-        private vwCampeonatosTableAdapters.vwcampeonatoTableAdapter vwcampeonatoTableAdapter;
+        private vwCampeonatoTableAdapters.vwcampeonatoTableAdapter vwcampeonatoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdCampeonatoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn campeonatoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicioDataGridViewTextBoxColumn;

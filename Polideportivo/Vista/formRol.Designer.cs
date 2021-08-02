@@ -45,7 +45,7 @@ namespace Polideportivo.Vista
             this.txtFiltrarDeporte = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarDeporte = new System.Windows.Forms.Button();
-            this.btnAgregarDeporte = new System.Windows.Forms.Button();
+            this.btnAgregarRol = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDeportes)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             this.panelBuscarCol.SuspendLayout();
@@ -104,7 +104,7 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.Controls.Add(this.panelBuscarCol);
             this.parrotGradientPanel1.Controls.Add(this.panel2);
             this.parrotGradientPanel1.Controls.Add(this.btnModificarDeporte);
-            this.parrotGradientPanel1.Controls.Add(this.btnAgregarDeporte);
+            this.parrotGradientPanel1.Controls.Add(this.btnAgregarRol);
             this.parrotGradientPanel1.Controls.Add(this.tablaDeportes);
             this.parrotGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
@@ -279,26 +279,26 @@ namespace Polideportivo.Vista
             this.btnModificarDeporte.UseVisualStyleBackColor = false;
             this.btnModificarDeporte.Click += new System.EventHandler(this.btnModificarDeporte_Click);
             // 
-            // btnAgregarDeporte
+            // btnAgregarRol
             // 
-            this.btnAgregarDeporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarDeporte.BackColor = System.Drawing.Color.White;
-            this.btnAgregarDeporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarDeporte.FlatAppearance.BorderSize = 0;
-            this.btnAgregarDeporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAgregarDeporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarDeporte.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarDeporte.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarDeporte.Image")));
-            this.btnAgregarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarDeporte.Location = new System.Drawing.Point(571, 185);
-            this.btnAgregarDeporte.Name = "btnAgregarDeporte";
-            this.btnAgregarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnAgregarDeporte.Size = new System.Drawing.Size(226, 58);
-            this.btnAgregarDeporte.TabIndex = 27;
-            this.btnAgregarDeporte.Text = "     A G R E G A R";
-            this.btnAgregarDeporte.UseVisualStyleBackColor = false;
-            this.btnAgregarDeporte.Click += new System.EventHandler(this.btnAgregarDeporte_Click);
+            this.btnAgregarRol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarRol.BackColor = System.Drawing.Color.White;
+            this.btnAgregarRol.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarRol.FlatAppearance.BorderSize = 0;
+            this.btnAgregarRol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAgregarRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarRol.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarRol.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarRol.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarRol.Image")));
+            this.btnAgregarRol.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarRol.Location = new System.Drawing.Point(571, 185);
+            this.btnAgregarRol.Name = "btnAgregarRol";
+            this.btnAgregarRol.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnAgregarRol.Size = new System.Drawing.Size(226, 58);
+            this.btnAgregarRol.TabIndex = 27;
+            this.btnAgregarRol.Text = "     A G R E G A R";
+            this.btnAgregarRol.UseVisualStyleBackColor = false;
+            this.btnAgregarRol.Click += new System.EventHandler(this.btnAgregarRol_Click);
             // 
             // formRol
             // 
@@ -325,7 +325,7 @@ namespace Polideportivo.Vista
         #endregion
         private Zuby.ADGV.AdvancedDataGridView tablaDeportes;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private System.Windows.Forms.Button btnAgregarDeporte;
+        private System.Windows.Forms.Button btnAgregarRol;
         private System.Windows.Forms.Button btnModificarDeporte;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtFiltrarDeporte;

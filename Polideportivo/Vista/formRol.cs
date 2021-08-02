@@ -105,5 +105,10 @@ namespace Polideportivo.Vista
             controlador.eliminarDeporte(modelo);
             actualizarTablaDeporte();
         }
+
+        private void btnAgregarRol_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

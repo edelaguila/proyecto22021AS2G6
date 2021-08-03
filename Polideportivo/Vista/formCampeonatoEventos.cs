@@ -128,8 +128,8 @@ namespace Polideportivo.Vista
             modelo.nombre = txtNombre.Text;
             modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
             modelo.fkIdTipoCampeonato = stringAInt(cboTipo.SelectedValue.ToString());
-            modelo.fechaInicio = dateFechaFinal.Text.Replace("-","/");
-            modelo.fechaFinal = dateFechaInicio.Text.Replace("-", "/");
+            modelo.fechaInicio = dateFechaInicio.Value.ToString("yyyy-MM-dd");
+            modelo.fechaFinal = dateFechaFinal.Value.ToString("yyyy-MM-dd");
             controlador.AgregarCampeonato(modelo);
         }
     }

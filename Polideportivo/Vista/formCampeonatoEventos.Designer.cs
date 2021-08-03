@@ -179,13 +179,9 @@ namespace Polideportivo.Vista
             // dateFechaFinal
             // 
             this.dateFechaFinal.CalendarFont = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateFechaFinal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateFechaFinal.CustomFormat = "yyyy/MM/dd";
             this.dateFechaFinal.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateFechaFinal.Location = new System.Drawing.Point(121, 188);
             this.dateFechaFinal.Name = "dateFechaFinal";
-            this.dateFechaFinal.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateFechaFinal.Size = new System.Drawing.Size(294, 27);
             this.dateFechaFinal.TabIndex = 32;
             this.dateFechaFinal.Value = new System.DateTime(2021, 8, 3, 19, 48, 0, 0);
@@ -193,13 +189,10 @@ namespace Polideportivo.Vista
             // dateFechaInicio
             // 
             this.dateFechaInicio.CalendarFont = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateFechaInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateFechaInicio.CustomFormat = "yyyy/MM/dd";
+            this.dateFechaInicio.CustomFormat = "dd - yyyy";
             this.dateFechaInicio.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateFechaInicio.Location = new System.Drawing.Point(121, 123);
             this.dateFechaInicio.Name = "dateFechaInicio";
-            this.dateFechaInicio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateFechaInicio.Size = new System.Drawing.Size(294, 27);
             this.dateFechaInicio.TabIndex = 31;
             this.dateFechaInicio.Value = new System.DateTime(2021, 8, 3, 19, 48, 0, 0);

@@ -96,6 +96,11 @@ namespace Polideportivo
             gestorDeFormActivo(new formCampeonato(), "CAMPEONATO");
         }
 
+        private void btnRol_Click(object sender, EventArgs e)
+        {
+            gestorDeFormActivo(new formRol(), "ROLES");
+        }
+
         private void gestorDeFormActivo(Form formHijo, string formHijoActual)
         {
             lblTituloPrincipal.Text = formHijoActual;

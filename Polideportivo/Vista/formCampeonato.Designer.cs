@@ -292,11 +292,8 @@ namespace Polideportivo.Vista
             this.cboBuscar.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBuscar.FormattingEnabled = true;
             this.cboBuscar.Items.AddRange(new object[] {
-            "nombre",
-            "anotaciones",
-            "deporte",
-            "rol",
-            "equipo"});
+            "campeonato",
+            "deporte"});
             this.cboBuscar.Location = new System.Drawing.Point(36, 6);
             this.cboBuscar.Name = "cboBuscar";
             this.cboBuscar.Size = new System.Drawing.Size(263, 26);

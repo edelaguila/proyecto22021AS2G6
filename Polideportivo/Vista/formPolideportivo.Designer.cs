@@ -49,6 +49,7 @@
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.Maximizar = new System.Windows.Forms.PictureBox();
             this.lblTituloPrincipal = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelLateralWrapper.SuspendLayout();
             this.panelLateralInterno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLateralWrapper
@@ -91,6 +93,7 @@
             this.panelLateralInterno.BottomLeft = System.Drawing.Color.Black;
             this.panelLateralInterno.BottomRight = System.Drawing.Color.SkyBlue;
             this.panelLateralInterno.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.panelLateralInterno.Controls.Add(this.pictureBox2);
             this.panelLateralInterno.Controls.Add(this.btnDeportes);
             this.panelLateralInterno.Controls.Add(this.btnMenuCampeonato);
             this.panelLateralInterno.Controls.Add(this.btnMenuEquipo);
@@ -140,18 +143,20 @@
             this.btnMenuCampeonato.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMenuCampeonato.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuCampeonato.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuCampeonato.FlatAppearance.BorderSize = 0;
             this.btnMenuCampeonato.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
             this.btnMenuCampeonato.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
             this.btnMenuCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuCampeonato.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuCampeonato.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuCampeonato.Image")));
             this.btnMenuCampeonato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuCampeonato.Location = new System.Drawing.Point(15, 418);
             this.btnMenuCampeonato.Name = "btnMenuCampeonato";
             this.btnMenuCampeonato.Size = new System.Drawing.Size(221, 53);
             this.btnMenuCampeonato.TabIndex = 12;
-            this.btnMenuCampeonato.Text = "CAMPEONATOS";
+            this.btnMenuCampeonato.Text = "            CAMPEONATOS";
             this.btnMenuCampeonato.UseVisualStyleBackColor = false;
             this.btnMenuCampeonato.Click += new System.EventHandler(this.btnMenuCampeonato_Click);
             // 
@@ -160,6 +165,7 @@
             this.btnMenuEquipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMenuEquipo.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuEquipo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuEquipo.FlatAppearance.BorderSize = 0;
             this.btnMenuEquipo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
             this.btnMenuEquipo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
@@ -172,7 +178,8 @@
             this.btnMenuEquipo.Name = "btnMenuEquipo";
             this.btnMenuEquipo.Size = new System.Drawing.Size(221, 53);
             this.btnMenuEquipo.TabIndex = 11;
-            this.btnMenuEquipo.Text = "EQUIPOS";
+            this.btnMenuEquipo.Text = "             EQUIPOS";
+            this.btnMenuEquipo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuEquipo.UseVisualStyleBackColor = false;
             this.btnMenuEquipo.Click += new System.EventHandler(this.btnMenuEquipo_Click);
             // 
@@ -197,6 +204,7 @@
             this.btnRol.Text = "             ROLES";
             this.btnRol.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRol.UseVisualStyleBackColor = false;
+            this.btnRol.Click += new System.EventHandler(this.btnRol_Click);
             // 
             // btnMenuJugador
             // 
@@ -412,6 +420,19 @@
             this.lblTituloPrincipal.TabIndex = 1;
             this.lblTituloPrincipal.Text = "POLIDEPORTIVO";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(191, 542);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
             // formPolideportivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,6 +459,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -464,6 +486,7 @@
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Button btnDeportes;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

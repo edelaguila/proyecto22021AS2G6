@@ -87,11 +87,11 @@ namespace Polideportivo.Vista
         {
             if (string.IsNullOrEmpty(txtFiltrar.Text))
             {
-                //vwjugadorBindingSource.Filter = string.Empty;
+                vwcampeonatoBindingSource.Filter = string.Empty;
             }
             else
             {
-                //vwjugadorBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
+                vwcampeonatoBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
             }
         }
 

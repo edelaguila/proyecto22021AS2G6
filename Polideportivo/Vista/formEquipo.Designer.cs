@@ -246,10 +246,7 @@ namespace Polideportivo.Vista
             this.cboBuscar.FormattingEnabled = true;
             this.cboBuscar.Items.AddRange(new object[] {
             "nombre",
-            "anotaciones",
-            "deporte",
-            "rol",
-            "equipo"});
+            "deporte"});
             this.cboBuscar.Location = new System.Drawing.Point(36, 6);
             this.cboBuscar.Name = "cboBuscar";
             this.cboBuscar.Size = new System.Drawing.Size(263, 26);

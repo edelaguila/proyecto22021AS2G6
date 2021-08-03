@@ -25,7 +25,7 @@ namespace Polideportivo.Vista
         private void formDeporte_Load(object sender, EventArgs e)
         {
             this.deporteTableAdapter.Fill(this.vwDeportes.deporte);
-            cboBuscarDeporte.SelectedIndex = 0;
+            cboBuscar.SelectedIndex = 0;
 
         }
 
@@ -76,19 +76,19 @@ namespace Polideportivo.Vista
 
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtFiltrarDeporte.Text))
+            if (string.IsNullOrEmpty(txtFiltrar.Text))
             {
-               // vwjugadorBindingSource.Filter = string.Empty;
+                deporteBindingSource.Filter = string.Empty;
             }
             else
             {
-               // vwjugadorBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
+                deporteBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
             }
         }
 
         private void cboBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtFiltrarDeporte.Text = "";
+            txtFiltrar.Text = "";
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

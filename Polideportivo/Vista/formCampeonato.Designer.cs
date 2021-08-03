@@ -246,7 +246,7 @@ namespace Polideportivo.Vista
             this.btnEliminarCampeonato.TabIndex = 33;
             this.btnEliminarCampeonato.Text = "   E L I M I N A R";
             this.btnEliminarCampeonato.UseVisualStyleBackColor = false;
-            this.btnEliminarCampeonato.Click += new System.EventHandler(this.btnEliminarJugador_Click);
+            this.btnEliminarCampeonato.Click += new System.EventHandler(this.btnEliminarCampeonato_Click);
             // 
             // btnActualizar
             // 

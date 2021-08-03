@@ -39,6 +39,12 @@ namespace Polideportivo.Vista
             cboDeporte.DataSource = deportes.mostrarDeportes();
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
+            // Llenar combobox de tipo de campeonatos
+            controladorTipoCampeonato tipo = new controladorTipoCampeonato();
+            cboTipo.DataSource = tipo.mostrarTipoDeCampeonatos();
+            cboTipo.DisplayMember = "tipo";
+            cboTipo.ValueMember = "pkId";
+            cboTipo.SelectedIndex = -1;
             // Para obtener el Id original que se va a modificar
             modeloOriginal = modelo;
             // Modificar el texto del label
@@ -99,7 +105,7 @@ namespace Polideportivo.Vista
             //modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
             //modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
             //modeloAgregar.agregarJugador(modelo);
-            formOriginal.actualizarTablaJugadores();
+            formOriginal.actualizarTabla();
             cerrarForm(this);
         }
 
@@ -116,8 +122,13 @@ namespace Polideportivo.Vista
         private void btnModificarCampeonato_Click(object sender, EventArgs e)
         {
             controladorCampeonato controlador = new controladorCampeonato();
+            modeloOriginal.nombre = txtNombre.Text;
+            modeloOriginal.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            modeloOriginal.fkIdTipoCampeonato = stringAInt(cboTipo.SelectedValue.ToString());
+            modeloOriginal.fechaInicio = dateFechaInicio.Value.ToString("yyyy-MM-dd");
+            modeloOriginal.fechaFinal = dateFechaFinal.Value.ToString("yyyy-MM-dd");
             controlador.ModificarCampeonato(modeloOriginal);
-            formOriginal.actualizarTablaJugadores();
+            formOriginal.actualizarTabla();
             cerrarForm(this);
         }
 
@@ -131,6 +142,7 @@ namespace Polideportivo.Vista
             modelo.fechaInicio = dateFechaInicio.Value.ToString("yyyy-MM-dd");
             modelo.fechaFinal = dateFechaFinal.Value.ToString("yyyy-MM-dd");
             controlador.AgregarCampeonato(modelo);
+            formOriginal.actualizarTabla();
         }
     }
 }

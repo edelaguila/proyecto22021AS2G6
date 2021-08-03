@@ -16,6 +16,9 @@ INSERT INTO tipocampeonato(pkId, tipo) VALUES (NULL, "Eliminatorias");
 INSERT INTO jugador(pkId, nombre, anotaciones, fotografia, fkIdEquipo, fkIdRol) VALUES (NULL, "Tenis Jorge", "90", NULL, 2, 2);
 INSERT INTO jugador(pkId, nombre, anotaciones, fotografia, fkIdEquipo, fkIdRol) VALUES (NULL, "Basket Jorge", "90", NULL, 2, 3);
 INSERT INTO jugador(pkId, nombre, anotaciones, fotografia, fkIdEquipo, fkIdRol) VALUES (NULL, "Basket Luis", "50", NULL, 2, 3);
+INSERT INTO campeonato(pkId, nombre, fechaInicio, fechaFinal, fkIdDeporte, fkIdTipoCampeonato) VALUES  (NULL, "LaLiga", "2021-01-01", "2021-01-01", 1, 1);
+INSERT INTO campeonato(pkId, nombre, fechaInicio, fechaFinal, fkIdDeporte, fkIdTipoCampeonato) VALUES  (NULL, "FE", "2021 - 01 - 01", "2021-01-01", 1, 1);
+
 /* Vista de jugador */
 DROP VIEW  IF EXISTS `vwJugador`;
 CREATE VIEW `vwJugador` AS
@@ -53,11 +56,7 @@ CREATE VIEW `vwcampeonato` AS
         `c`.`tipo` AS `tipoCampeonato`
     FROM
         ((`campeonato` `a`
-        JOIN `equipo` `b` ON ((`b`.`pkId` = `a`.`fkIdDeporte`)))
+        JOIN `deporte` `b` ON ((`b`.`pkId` = `a`.`fkIdDeporte`)))
         JOIN `tipocampeonato` `c` ON ((`c`.`pkId` = `a`.`fkIdTipoCampeonato`)))
     ORDER BY `a`.`pkId`;
-    
-select * from campeonato;
-select * from tipocampeonato;
 
-INSERT INTO campeonato(pkId, nombre, fechaInicio, fechaFinal, fkIdDeporte, fkIdTipoCampeonato) VALUES  

@@ -35,9 +35,9 @@ namespace Polideportivo.Vista
         }
 
 
-        public void actualizarTablaJugadores()
+        public void actualizarTabla()
         {
-            //this.vwjugadorTableAdapter.Fill(this.tablaJugadores1.vwjugador);
+            this.vwcampeonatoTableAdapter.Fill(this.vwCampeonato.vwcampeonato);
         }
 
 
@@ -92,19 +92,17 @@ namespace Polideportivo.Vista
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            actualizarTablaJugadores();
+            actualizarTabla();
         }
 
-        private void btnEliminarJugador_Click(object sender, EventArgs e)
+        private void btnEliminarCampeonato_Click(object sender, EventArgs e)
         {
             int id = stringAInt(tablaCampeonatos.SelectedRows[0].Cells[0].Value.ToString());
             controladorCampeonato controlador = new controladorCampeonato();
             modeloCampeonato modelo = new modeloCampeonato();
-            //modelo.pkId = id;
-            //controlador.eliminarJugador(modelo);
-            actualizarTablaJugadores();
+            modelo.pkId = id;
+            controlador.eliminarCampeonato(modelo);
+            actualizarTabla();
         }
-
-        
     }
 }

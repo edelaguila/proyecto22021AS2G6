@@ -56,5 +56,19 @@ namespace Polideportivo.Controlador
             conexionOdbc.Close();
             return modelo;
         }
+
+        public modeloCampeonato eliminarCampeonato(modeloCampeonato modelo)
+        {
+
+            var sqlinsertar =
+                "DELETE FROM campeonato WHERE pkId = ?pkId?;";
+            var ValorDeVariables = new
+            {
+                pkId = modelo.pkId
+            };
+            var resultadoinsertar = conexionOdbc.Execute(sqlinsertar, ValorDeVariables);
+            conexionOdbc.Close();
+            return modelo;
+        }
     }
 }

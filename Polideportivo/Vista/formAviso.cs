@@ -14,15 +14,17 @@ using static Polideportivo.Vista.utilidadForms;
 
 namespace Polideportivo.Vista
 {
-    public partial class formInformativo : Form
+    public partial class formAviso : Form
     {
 
 
-        public formInformativo(Exception e)
+        public formAviso(string mensaje)
         {
+
             InitializeComponent();
-            lblError.Text = e.Message;
-            lblError.MaximumSize = new Size(300, 250);
+            lblAviso.MaximumSize = new Size(300, 250);
+            lblAviso.Text = mensaje;
+            
         }
 
 

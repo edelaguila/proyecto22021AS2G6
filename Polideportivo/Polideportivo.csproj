@@ -157,11 +157,11 @@
     <Compile Include="Vista\formError.Designer.cs">
       <DependentUpon>formError.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\formInformativo.cs">
+    <Compile Include="Vista\formAviso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\formInformativo.Designer.cs">
-      <DependentUpon>formInformativo.cs</DependentUpon>
+    <Compile Include="Vista\formAviso.Designer.cs">
+      <DependentUpon>formAviso.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\formJugador.cs">
       <SubType>Form</SubType>
@@ -245,8 +245,8 @@
     <EmbeddedResource Include="Vista\formError.resx">
       <DependentUpon>formError.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\formInformativo.resx">
-      <DependentUpon>formInformativo.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\formAviso.resx">
+      <DependentUpon>formAviso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formJugador.resx">
       <DependentUpon>formJugador.cs</DependentUpon>

@@ -107,6 +107,7 @@ namespace Polideportivo.Vista
             this.tablaDeportes.Size = new System.Drawing.Size(400, 407);
             this.tablaDeportes.TabIndex = 5;
             this.tablaDeportes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDeporte_CellClick);
+            this.tablaDeportes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDeportes_CellContentClick);
             this.tablaDeportes.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.tablaDeportes_DataError);
             // 
             // pkIdDataGridViewTextBoxColumn
@@ -186,6 +187,7 @@ namespace Polideportivo.Vista
             this.txtNombreDeporte.Name = "txtNombreDeporte";
             this.txtNombreDeporte.Size = new System.Drawing.Size(226, 27);
             this.txtNombreDeporte.TabIndex = 34;
+            this.txtNombreDeporte.TextChanged += new System.EventHandler(this.txtNombreDeporte_TextChanged);
             // 
             // btnEliminarDeporte
             // 
@@ -300,6 +302,7 @@ namespace Polideportivo.Vista
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnModificarDeporte
             // 

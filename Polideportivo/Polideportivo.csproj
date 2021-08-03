@@ -118,12 +118,14 @@
     <Compile Include="Controlador\controladorPartido.cs" />
     <Compile Include="Controlador\controladorPolideportivo.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
+    <Compile Include="Controlador\controladorTipoCampeonato.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />
     <Compile Include="Modelo\modeloDeporte.cs" />
     <Compile Include="Modelo\modeloEquipo.cs" />
     <Compile Include="Modelo\modeloPartido.cs" />
     <Compile Include="Modelo\modeloRol.cs" />
     <Compile Include="Modelo\modeloJugador.cs" />
+    <Compile Include="Modelo\modeloTipoCampeonato.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -158,6 +160,12 @@
     </Compile>
     <Compile Include="Vista\formEquipoEventos.Designer.cs">
       <DependentUpon>formEquipoEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\formError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formError.Designer.cs">
+      <DependentUpon>formError.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\formJugador.cs">
       <SubType>Form</SubType>
@@ -238,6 +246,9 @@
     <EmbeddedResource Include="Vista\formEquipoEventos.resx">
       <DependentUpon>formEquipoEventos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formError.resx">
+      <DependentUpon>formError.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\formJugador.resx">
       <DependentUpon>formJugador.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +257,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formPartido.resx">
       <DependentUpon>formPartido.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formPartidoEventos.resx">
       <DependentUpon>formPartidoEventos.cs</DependentUpon>

@@ -105,5 +105,10 @@ namespace Polideportivo.Vista
             controlador.eliminarDeporte(modelo);
             actualizarTablaDeporte();
         }
+
+        private void tablaDeportes_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
+        }
     }
 }

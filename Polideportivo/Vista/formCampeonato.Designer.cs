@@ -1,4 +1,4 @@
-﻿
+﻿using static Polideportivo.Vista.utilidadForms;
 namespace Polideportivo.Vista
 {
     partial class formCampeonato
@@ -33,21 +33,7 @@ namespace Polideportivo.Vista
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formCampeonato));
-            this.tablaJugadores = new Zuby.ADGV.AdvancedDataGridView();
-            this.vwcampeonatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwCampeonato = new Polideportivo.vwCampeonato();
-            this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.btnEliminarJugador = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.panelBuscarCol = new System.Windows.Forms.Panel();
-            this.cboBuscar = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtFiltrar = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnModificarJugador = new System.Windows.Forms.Button();
-            this.btnAgregarJugador = new System.Windows.Forms.Button();
-            this.vwcampeonatoTableAdapter = new Polideportivo.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter();
+            this.tablaCampeonatos = new Zuby.ADGV.AdvancedDataGridView();
             this.pkIdCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.campeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +42,21 @@ namespace Polideportivo.Vista
             this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkIdTipoCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
+            this.vwcampeonatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vwCampeonato = new Polideportivo.vwCampeonato();
+            this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.btnEliminarCampeonato = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.panelBuscarCol = new System.Windows.Forms.Panel();
+            this.cboBuscar = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtFiltrar = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnModificarCampeonato = new System.Windows.Forms.Button();
+            this.btnAgregarCampeonato = new System.Windows.Forms.Button();
+            this.vwcampeonatoTableAdapter = new Polideportivo.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaCampeonatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwcampeonatoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwCampeonato)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
@@ -66,17 +66,17 @@ namespace Polideportivo.Vista
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tablaJugadores
+            // tablaCampeonatos
             // 
-            this.tablaJugadores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tablaCampeonatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tablaJugadores.AutoGenerateColumns = false;
-            this.tablaJugadores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tablaJugadores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tablaJugadores.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tablaJugadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tablaJugadores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tablaCampeonatos.AutoGenerateColumns = false;
+            this.tablaCampeonatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tablaCampeonatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tablaCampeonatos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tablaCampeonatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tablaCampeonatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,9 +84,9 @@ namespace Polideportivo.Vista
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaJugadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.tablaJugadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaJugadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tablaCampeonatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.tablaCampeonatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaCampeonatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.pkIdCampeonatoDataGridViewTextBoxColumn,
             this.campeonatoDataGridViewTextBoxColumn,
             this.fechaInicioDataGridViewTextBoxColumn,
@@ -95,7 +95,7 @@ namespace Polideportivo.Vista
             this.deporteDataGridViewTextBoxColumn,
             this.pkIdTipoCampeonatoDataGridViewTextBoxColumn,
             this.tipoCampeonatoDataGridViewTextBoxColumn});
-            this.tablaJugadores.DataSource = this.vwcampeonatoBindingSource;
+            this.tablaCampeonatos.DataSource = this.vwcampeonatoBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -104,17 +104,93 @@ namespace Polideportivo.Vista
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaJugadores.DefaultCellStyle = dataGridViewCellStyle2;
-            this.tablaJugadores.FilterAndSortEnabled = true;
-            this.tablaJugadores.Location = new System.Drawing.Point(69, 123);
-            this.tablaJugadores.Name = "tablaJugadores";
-            this.tablaJugadores.ReadOnly = true;
-            this.tablaJugadores.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tablaJugadores.RowHeadersVisible = false;
-            this.tablaJugadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaJugadores.Size = new System.Drawing.Size(768, 413);
-            this.tablaJugadores.TabIndex = 5;
-            this.tablaJugadores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaJugadores_CellClick);
+            this.tablaCampeonatos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.tablaCampeonatos.FilterAndSortEnabled = true;
+            this.tablaCampeonatos.Location = new System.Drawing.Point(69, 123);
+            this.tablaCampeonatos.Name = "tablaCampeonatos";
+            this.tablaCampeonatos.ReadOnly = true;
+            this.tablaCampeonatos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tablaCampeonatos.RowHeadersVisible = false;
+            this.tablaCampeonatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tablaCampeonatos.Size = new System.Drawing.Size(768, 413);
+            this.tablaCampeonatos.TabIndex = 5;
+            this.tablaCampeonatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaCampeonatos_CellClick);
+            this.tablaCampeonatos.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.tablaCampeonatos_DataError);
+            // 
+            // pkIdCampeonatoDataGridViewTextBoxColumn
+            // 
+            this.pkIdCampeonatoDataGridViewTextBoxColumn.DataPropertyName = "pkIdCampeonato";
+            this.pkIdCampeonatoDataGridViewTextBoxColumn.HeaderText = "pkIdCampeonato";
+            this.pkIdCampeonatoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdCampeonatoDataGridViewTextBoxColumn.Name = "pkIdCampeonatoDataGridViewTextBoxColumn";
+            this.pkIdCampeonatoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdCampeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdCampeonatoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // campeonatoDataGridViewTextBoxColumn
+            // 
+            this.campeonatoDataGridViewTextBoxColumn.DataPropertyName = "campeonato";
+            this.campeonatoDataGridViewTextBoxColumn.HeaderText = "campeonato";
+            this.campeonatoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.campeonatoDataGridViewTextBoxColumn.Name = "campeonatoDataGridViewTextBoxColumn";
+            this.campeonatoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.campeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // fechaInicioDataGridViewTextBoxColumn
+            // 
+            this.fechaInicioDataGridViewTextBoxColumn.DataPropertyName = "fechaInicio";
+            this.fechaInicioDataGridViewTextBoxColumn.HeaderText = "fechaInicio";
+            this.fechaInicioDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.fechaInicioDataGridViewTextBoxColumn.Name = "fechaInicioDataGridViewTextBoxColumn";
+            this.fechaInicioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaInicioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // fechaFinalDataGridViewTextBoxColumn
+            // 
+            this.fechaFinalDataGridViewTextBoxColumn.DataPropertyName = "fechaFinal";
+            this.fechaFinalDataGridViewTextBoxColumn.HeaderText = "fechaFinal";
+            this.fechaFinalDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.fechaFinalDataGridViewTextBoxColumn.Name = "fechaFinalDataGridViewTextBoxColumn";
+            this.fechaFinalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaFinalDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // pkIdDeporteDataGridViewTextBoxColumn
+            // 
+            this.pkIdDeporteDataGridViewTextBoxColumn.DataPropertyName = "pkIdDeporte";
+            this.pkIdDeporteDataGridViewTextBoxColumn.HeaderText = "pkIdDeporte";
+            this.pkIdDeporteDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdDeporteDataGridViewTextBoxColumn.Name = "pkIdDeporteDataGridViewTextBoxColumn";
+            this.pkIdDeporteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdDeporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdDeporteDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // deporteDataGridViewTextBoxColumn
+            // 
+            this.deporteDataGridViewTextBoxColumn.DataPropertyName = "deporte";
+            this.deporteDataGridViewTextBoxColumn.HeaderText = "deporte";
+            this.deporteDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.deporteDataGridViewTextBoxColumn.Name = "deporteDataGridViewTextBoxColumn";
+            this.deporteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // pkIdTipoCampeonatoDataGridViewTextBoxColumn
+            // 
+            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.DataPropertyName = "pkIdTipoCampeonato";
+            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.HeaderText = "pkIdTipoCampeonato";
+            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.Name = "pkIdTipoCampeonatoDataGridViewTextBoxColumn";
+            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tipoCampeonatoDataGridViewTextBoxColumn
+            // 
+            this.tipoCampeonatoDataGridViewTextBoxColumn.DataPropertyName = "tipoCampeonato";
+            this.tipoCampeonatoDataGridViewTextBoxColumn.HeaderText = "tipoCampeonato";
+            this.tipoCampeonatoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.tipoCampeonatoDataGridViewTextBoxColumn.Name = "tipoCampeonatoDataGridViewTextBoxColumn";
+            this.tipoCampeonatoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipoCampeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // vwcampeonatoBindingSource
             // 
@@ -131,13 +207,13 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.parrotGradientPanel1.Controls.Add(this.btnEliminarJugador);
+            this.parrotGradientPanel1.Controls.Add(this.btnEliminarCampeonato);
             this.parrotGradientPanel1.Controls.Add(this.btnActualizar);
             this.parrotGradientPanel1.Controls.Add(this.panelBuscarCol);
             this.parrotGradientPanel1.Controls.Add(this.panel2);
-            this.parrotGradientPanel1.Controls.Add(this.btnModificarJugador);
-            this.parrotGradientPanel1.Controls.Add(this.btnAgregarJugador);
-            this.parrotGradientPanel1.Controls.Add(this.tablaJugadores);
+            this.parrotGradientPanel1.Controls.Add(this.btnModificarCampeonato);
+            this.parrotGradientPanel1.Controls.Add(this.btnAgregarCampeonato);
+            this.parrotGradientPanel1.Controls.Add(this.tablaCampeonatos);
             this.parrotGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             this.parrotGradientPanel1.Location = new System.Drawing.Point(0, 0);
@@ -152,26 +228,26 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.CornflowerBlue;
             // 
-            // btnEliminarJugador
+            // btnEliminarCampeonato
             // 
-            this.btnEliminarJugador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminarJugador.BackColor = System.Drawing.Color.White;
-            this.btnEliminarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarJugador.FlatAppearance.BorderSize = 0;
-            this.btnEliminarJugador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEliminarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarJugador.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarJugador.Image")));
-            this.btnEliminarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarJugador.Location = new System.Drawing.Point(627, 20);
-            this.btnEliminarJugador.Name = "btnEliminarJugador";
-            this.btnEliminarJugador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnEliminarJugador.Size = new System.Drawing.Size(210, 36);
-            this.btnEliminarJugador.TabIndex = 33;
-            this.btnEliminarJugador.Text = "   E L I M I N A R";
-            this.btnEliminarJugador.UseVisualStyleBackColor = false;
-            this.btnEliminarJugador.Click += new System.EventHandler(this.btnEliminarJugador_Click);
+            this.btnEliminarCampeonato.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarCampeonato.BackColor = System.Drawing.Color.White;
+            this.btnEliminarCampeonato.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarCampeonato.FlatAppearance.BorderSize = 0;
+            this.btnEliminarCampeonato.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEliminarCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarCampeonato.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarCampeonato.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarCampeonato.Image")));
+            this.btnEliminarCampeonato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarCampeonato.Location = new System.Drawing.Point(627, 20);
+            this.btnEliminarCampeonato.Name = "btnEliminarCampeonato";
+            this.btnEliminarCampeonato.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnEliminarCampeonato.Size = new System.Drawing.Size(210, 36);
+            this.btnEliminarCampeonato.TabIndex = 33;
+            this.btnEliminarCampeonato.Text = "   E L I M I N A R";
+            this.btnEliminarCampeonato.UseVisualStyleBackColor = false;
+            this.btnEliminarCampeonato.Click += new System.EventHandler(this.btnEliminarCampeonato_Click);
             // 
             // btnActualizar
             // 
@@ -270,126 +346,51 @@ namespace Polideportivo.Vista
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnModificarJugador
+            // btnModificarCampeonato
             // 
-            this.btnModificarJugador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificarJugador.BackColor = System.Drawing.Color.White;
-            this.btnModificarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarJugador.FlatAppearance.BorderSize = 0;
-            this.btnModificarJugador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnModificarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarJugador.ForeColor = System.Drawing.Color.Black;
-            this.btnModificarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarJugador.Image")));
-            this.btnModificarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarJugador.Location = new System.Drawing.Point(627, 69);
-            this.btnModificarJugador.Name = "btnModificarJugador";
-            this.btnModificarJugador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnModificarJugador.Size = new System.Drawing.Size(210, 36);
-            this.btnModificarJugador.TabIndex = 28;
-            this.btnModificarJugador.Text = "    M O D I F I C A R";
-            this.btnModificarJugador.UseVisualStyleBackColor = false;
-            this.btnModificarJugador.Click += new System.EventHandler(this.btnModificarJugador_Click);
+            this.btnModificarCampeonato.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificarCampeonato.BackColor = System.Drawing.Color.White;
+            this.btnModificarCampeonato.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarCampeonato.FlatAppearance.BorderSize = 0;
+            this.btnModificarCampeonato.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnModificarCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarCampeonato.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarCampeonato.ForeColor = System.Drawing.Color.Black;
+            this.btnModificarCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarCampeonato.Image")));
+            this.btnModificarCampeonato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarCampeonato.Location = new System.Drawing.Point(627, 69);
+            this.btnModificarCampeonato.Name = "btnModificarCampeonato";
+            this.btnModificarCampeonato.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnModificarCampeonato.Size = new System.Drawing.Size(210, 36);
+            this.btnModificarCampeonato.TabIndex = 28;
+            this.btnModificarCampeonato.Text = "    M O D I F I C A R";
+            this.btnModificarCampeonato.UseVisualStyleBackColor = false;
+            this.btnModificarCampeonato.Click += new System.EventHandler(this.btnModificarJugador_Click);
             // 
-            // btnAgregarJugador
+            // btnAgregarCampeonato
             // 
-            this.btnAgregarJugador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarJugador.BackColor = System.Drawing.Color.White;
-            this.btnAgregarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarJugador.FlatAppearance.BorderSize = 0;
-            this.btnAgregarJugador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAgregarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarJugador.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarJugador.Image")));
-            this.btnAgregarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarJugador.Location = new System.Drawing.Point(392, 69);
-            this.btnAgregarJugador.Name = "btnAgregarJugador";
-            this.btnAgregarJugador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnAgregarJugador.Size = new System.Drawing.Size(210, 36);
-            this.btnAgregarJugador.TabIndex = 27;
-            this.btnAgregarJugador.Text = "     A G R E G A R";
-            this.btnAgregarJugador.UseVisualStyleBackColor = false;
-            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
+            this.btnAgregarCampeonato.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarCampeonato.BackColor = System.Drawing.Color.White;
+            this.btnAgregarCampeonato.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarCampeonato.FlatAppearance.BorderSize = 0;
+            this.btnAgregarCampeonato.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAgregarCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarCampeonato.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCampeonato.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarCampeonato.Image")));
+            this.btnAgregarCampeonato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarCampeonato.Location = new System.Drawing.Point(392, 69);
+            this.btnAgregarCampeonato.Name = "btnAgregarCampeonato";
+            this.btnAgregarCampeonato.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnAgregarCampeonato.Size = new System.Drawing.Size(210, 36);
+            this.btnAgregarCampeonato.TabIndex = 27;
+            this.btnAgregarCampeonato.Text = "     A G R E G A R";
+            this.btnAgregarCampeonato.UseVisualStyleBackColor = false;
+            this.btnAgregarCampeonato.Click += new System.EventHandler(this.btnAgregarJugador_Click);
             // 
             // vwcampeonatoTableAdapter
             // 
             this.vwcampeonatoTableAdapter.ClearBeforeFill = true;
-            // 
-            // pkIdCampeonatoDataGridViewTextBoxColumn
-            // 
-            this.pkIdCampeonatoDataGridViewTextBoxColumn.DataPropertyName = "pkIdCampeonato";
-            this.pkIdCampeonatoDataGridViewTextBoxColumn.HeaderText = "pkIdCampeonato";
-            this.pkIdCampeonatoDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.pkIdCampeonatoDataGridViewTextBoxColumn.Name = "pkIdCampeonatoDataGridViewTextBoxColumn";
-            this.pkIdCampeonatoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pkIdCampeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.pkIdCampeonatoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // campeonatoDataGridViewTextBoxColumn
-            // 
-            this.campeonatoDataGridViewTextBoxColumn.DataPropertyName = "campeonato";
-            this.campeonatoDataGridViewTextBoxColumn.HeaderText = "campeonato";
-            this.campeonatoDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.campeonatoDataGridViewTextBoxColumn.Name = "campeonatoDataGridViewTextBoxColumn";
-            this.campeonatoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.campeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // fechaInicioDataGridViewTextBoxColumn
-            // 
-            this.fechaInicioDataGridViewTextBoxColumn.DataPropertyName = "fechaInicio";
-            this.fechaInicioDataGridViewTextBoxColumn.HeaderText = "fechaInicio";
-            this.fechaInicioDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.fechaInicioDataGridViewTextBoxColumn.Name = "fechaInicioDataGridViewTextBoxColumn";
-            this.fechaInicioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // fechaFinalDataGridViewTextBoxColumn
-            // 
-            this.fechaFinalDataGridViewTextBoxColumn.DataPropertyName = "fechaFinal";
-            this.fechaFinalDataGridViewTextBoxColumn.HeaderText = "fechaFinal";
-            this.fechaFinalDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.fechaFinalDataGridViewTextBoxColumn.Name = "fechaFinalDataGridViewTextBoxColumn";
-            this.fechaFinalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaFinalDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // pkIdDeporteDataGridViewTextBoxColumn
-            // 
-            this.pkIdDeporteDataGridViewTextBoxColumn.DataPropertyName = "pkIdDeporte";
-            this.pkIdDeporteDataGridViewTextBoxColumn.HeaderText = "pkIdDeporte";
-            this.pkIdDeporteDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.pkIdDeporteDataGridViewTextBoxColumn.Name = "pkIdDeporteDataGridViewTextBoxColumn";
-            this.pkIdDeporteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pkIdDeporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.pkIdDeporteDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // deporteDataGridViewTextBoxColumn
-            // 
-            this.deporteDataGridViewTextBoxColumn.DataPropertyName = "deporte";
-            this.deporteDataGridViewTextBoxColumn.HeaderText = "deporte";
-            this.deporteDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.deporteDataGridViewTextBoxColumn.Name = "deporteDataGridViewTextBoxColumn";
-            this.deporteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // pkIdTipoCampeonatoDataGridViewTextBoxColumn
-            // 
-            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.DataPropertyName = "pkIdTipoCampeonato";
-            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.HeaderText = "pkIdTipoCampeonato";
-            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.Name = "pkIdTipoCampeonatoDataGridViewTextBoxColumn";
-            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.pkIdTipoCampeonatoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tipoCampeonatoDataGridViewTextBoxColumn
-            // 
-            this.tipoCampeonatoDataGridViewTextBoxColumn.DataPropertyName = "tipoCampeonato";
-            this.tipoCampeonatoDataGridViewTextBoxColumn.HeaderText = "tipoCampeonato";
-            this.tipoCampeonatoDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.tipoCampeonatoDataGridViewTextBoxColumn.Name = "tipoCampeonatoDataGridViewTextBoxColumn";
-            this.tipoCampeonatoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tipoCampeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // formCampeonato
             // 
@@ -401,7 +402,7 @@ namespace Polideportivo.Vista
             this.Name = "formCampeonato";
             this.Text = "formCampeonato";
             this.Load += new System.EventHandler(this.formCampeonato_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaCampeonatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwcampeonatoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwCampeonato)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
@@ -415,10 +416,10 @@ namespace Polideportivo.Vista
         }
 
         #endregion
-        private Zuby.ADGV.AdvancedDataGridView tablaJugadores;
+        private Zuby.ADGV.AdvancedDataGridView tablaCampeonatos;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private System.Windows.Forms.Button btnAgregarJugador;
-        private System.Windows.Forms.Button btnModificarJugador;
+        private System.Windows.Forms.Button btnAgregarCampeonato;
+        private System.Windows.Forms.Button btnModificarCampeonato;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtFiltrar;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -426,7 +427,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.ComboBox cboBuscar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnEliminarJugador;
+        private System.Windows.Forms.Button btnEliminarCampeonato;
         private vwCampeonato vwCampeonato;
         private System.Windows.Forms.BindingSource vwcampeonatoBindingSource;
         private vwCampeonatoTableAdapters.vwcampeonatoTableAdapter vwcampeonatoTableAdapter;

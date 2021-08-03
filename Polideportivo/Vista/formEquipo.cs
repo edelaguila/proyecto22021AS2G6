@@ -96,6 +96,9 @@ namespace Polideportivo.Vista
             actualizarTablaJugadores();
         }
 
-        
+        private void tablaEquipo_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
+        }
     }
 }

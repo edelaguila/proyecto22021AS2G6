@@ -118,24 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnModificarCampeonato.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAp1JREFUSEvV
-        lUmLFDEUx0vFDUT8BDrouHZXUtU9OuhBDwpePAmDHl1ghJGWqSTtoCNSCIoHPbiAu+DBhUZnOkn1XMWb
-        M+7e/AQe9DuM759ON40erF4O+oeikrzK+yXvvVSC/0Zhkm3kUt+mRwZputQPD05cNLZE0nzhMjvIlb7O
-        pX00MBA53smVeUlOv8bCcj8ccGUvke1B3yCe2F1Mmp9u9dIsYDfe5ERjF5nQ94NgcYkf6k5MZUUXHmWm
-        CmltRZg0QoDYWb3Vf+JE31xmyp7x3e5EkyeQZLS50DORqO+Jqnbz76BY1Q/QQu76bn5Fk7ND5OwzPS8i
-        Ya+MVubWlhI9zIW56t7SzIfSbotlfQeg5Sm73k/NpyZAf0LCEWsu7C2AQqn3wjF2xNRMESAAUNZ+aj75
-        HXyMEz3ih0gEkuYmQGRfR207XJlbGSdmH6rOf5RPsWxsACCUWRmJhmO8m1bsyNxAktFjSp8j+4/mbnMK
-        AJrwnlVtCX2UJTk95YxtuR09BgxnpicAVVBcHr+3PBLm2O6kttqb2/IJX6CwneaJKfjhvwtVwZR5F1Ub
-        EQCIMfVPwuac0WFDuwVA4tHPrWJ1dhNNnEfND6WvV1EIMqqkI7D5mL9yYFo1vsOO3cS8+hNgbBsgzXkC
-        Ph8bqy3rE2DfdgJo5UdhA4Dy86wTgLJ2E/PKbV/qb5HSqTsTytZaVUQOKwDiDCAHyFVpMtvuJnYjpuqj
-        iL1f8RtqX8O4B5gWANXWEwCiVR+iEp1GG3cDwobfBgA4eH0DIArPcXIy7rt0X5gCdgTnLQB+et7cm1Ca
-        lI8nnZcM7gv3CPOhbwBEjh5SaBaZME9p1XRf2Au4K2js+0AAEDlXVF133FvoE9Q+zITdX5iorfGf/OsK
-        gl95jnrN+Bm1AwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnAgregarCampeonato.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnErrorEntendido.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAA1dJREFUSEvl
         VVlrU0EUjrviihsoLlWLrTSde9M81Lq1D6KiDy5YQVHwRdFiMffeSUpdalwKbi9WEGrdilprtE3m3jRW

@@ -1,4 +1,4 @@
-﻿using Polideportivo.AccesoDatos;
+using Polideportivo.AccesoDatos;
 using Polideportivo.Modelo;
 using System;
 using System.Windows.Forms;

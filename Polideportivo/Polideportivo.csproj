@@ -105,11 +105,13 @@
     <Compile Include="Controlador\controladorDeporte.cs" />
     <Compile Include="Controlador\controladorEquipo.cs" />
     <Compile Include="Controlador\controladorJugador.cs" />
+    <Compile Include="Controlador\controladorPartido.cs" />
     <Compile Include="Controlador\controladorPolideportivo.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />
     <Compile Include="Modelo\modeloDeporte.cs" />
     <Compile Include="Modelo\modeloEquipo.cs" />
+    <Compile Include="Modelo\modeloPartido.cs" />
     <Compile Include="Modelo\modeloRol.cs" />
     <Compile Include="Modelo\modeloJugador.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -164,6 +166,12 @@
     </Compile>
     <Compile Include="Vista\formJugadorEventos.Designer.cs">
       <DependentUpon>formJugadorEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\formPartido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formPartido.Designer.cs">
+      <DependentUpon>formPartido.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\formPolideportivo.cs">
       <SubType>Form</SubType>
@@ -223,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formJugadorEventos.resx">
       <DependentUpon>formJugadorEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formPartido.resx">
+      <DependentUpon>formPartido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formPolideportivo.resx">
       <DependentUpon>formPolideportivo.cs</DependentUpon>

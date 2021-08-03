@@ -24,12 +24,6 @@ namespace Polideportivo.Vista
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            modeloJugador modelo = new modeloJugador();
-            controladorJugador db = new controladorJugador();
-            db.agregarJugador(modelo);
-        }
 
 
         public void actualizarTablaJugadores()
@@ -43,10 +37,10 @@ namespace Polideportivo.Vista
 
         }
 
+
         modeloJugador modeloFila = new modeloJugador();
         private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             string nombre = tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
             int id = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
             int anotaciones = stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
@@ -59,12 +53,6 @@ namespace Polideportivo.Vista
             modeloFila.fkIdEquipo = fkIdEquipo;
             modeloFila.fkIdRol = fkIdRol;
             modeloFila.fkIdDeporte = fkIdDeporte;
-            // Para que la selección de filas funcione para modificar, tiene que enviarse el
-            // modelo a la función de abrirForm:
-            // utilidadForms.abrirForm(new formJugadorEventos(modeloFila, this));
-            // Además de eso, modificar el construtor del form que va a utilizar los datos
-            // para la modificación, en este caso sería el ctor de formJugadorEventos que recibe el modelo
-
         }
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
@@ -74,7 +62,15 @@ namespace Polideportivo.Vista
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
-            abrirForm(new formJugadorEventos(modeloFila, this));
+
+            if (modeloFila.pkId > 0)
+            {
+                abrirForm(new formJugadorEventos(modeloFila, this));
+            }
+            else
+            {
+
+            }
         }
 
         private void txtFiltrar_TextChanged(object sender, EventArgs e)

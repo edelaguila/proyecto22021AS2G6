@@ -11,7 +11,6 @@ namespace Polideportivo.Controlador
 {
     class controladorRol
     {
-        OdbcConnection prueba = new OdbcConnection("DSN=bdpolideportivo");
         modeloRol modelo;
         public controladorRol(modeloRol Modelo)
         {

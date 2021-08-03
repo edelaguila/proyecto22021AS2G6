@@ -120,5 +120,10 @@ namespace Polideportivo.Vista
         {
 
         }
+
+        private void tablaDeportes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -69,12 +69,12 @@ namespace Polideportivo.Vista
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
-            abrirForm(new formJugadorEventos(this));
+            //abrirForm(new formJugadorEventos(this));
         }
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
-            abrirForm(new formJugadorEventos(modeloFila, this));
+            //abrirForm(new formJugadorEventos(modeloFila, this));
         }
 
         private void txtFiltrar_TextChanged(object sender, EventArgs e)

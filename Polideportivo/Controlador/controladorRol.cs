@@ -30,5 +30,8 @@ namespace Polideportivo.Controlador
             pruebas.Close();
             return sqlresultado;
         }
+
+
+
     }
 }

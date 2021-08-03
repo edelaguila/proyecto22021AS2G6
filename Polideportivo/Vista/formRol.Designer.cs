@@ -29,8 +29,8 @@ namespace Polideportivo.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formRol));
             this.tablaRol = new Zuby.ADGV.AdvancedDataGridView();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
@@ -64,24 +64,24 @@ namespace Polideportivo.Vista
             this.tablaRol.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tablaRol.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tablaRol.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaRol.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaRol.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.tablaRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaRol.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaRol.DefaultCellStyle = dataGridViewCellStyle10;
             this.tablaRol.FilterAndSortEnabled = true;
             this.tablaRol.Location = new System.Drawing.Point(85, 143);
             this.tablaRol.Name = "tablaRol";
@@ -91,6 +91,9 @@ namespace Polideportivo.Vista
             this.tablaRol.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaRol.Size = new System.Drawing.Size(400, 407);
             this.tablaRol.TabIndex = 5;
+            this.tablaRol.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaRol_CellClick);
+            this.tablaRol.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaRol_CellContentClick);
+            this.tablaRol.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.tablaRol_DataError);
             // 
             // parrotGradientPanel1
             // 
@@ -139,6 +142,7 @@ namespace Polideportivo.Vista
             this.txtNombreRol.Name = "txtNombreRol";
             this.txtNombreRol.Size = new System.Drawing.Size(226, 27);
             this.txtNombreRol.TabIndex = 34;
+            this.txtNombreRol.TextChanged += new System.EventHandler(this.txtNombreRol_TextChanged);
             // 
             // btnEliminarRol
             // 
@@ -159,6 +163,7 @@ namespace Polideportivo.Vista
             this.btnEliminarRol.TabIndex = 33;
             this.btnEliminarRol.Text = "   E L I M I N A R";
             this.btnEliminarRol.UseVisualStyleBackColor = false;
+            this.btnEliminarRol.Click += new System.EventHandler(this.btnElinimarRol_Click);
             // 
             // btnActualizarRol
             // 
@@ -179,6 +184,7 @@ namespace Polideportivo.Vista
             this.btnActualizarRol.TabIndex = 32;
             this.btnActualizarRol.Text = "      A C T U A L I Z A R";
             this.btnActualizarRol.UseVisualStyleBackColor = false;
+            this.btnActualizarRol.Click += new System.EventHandler(this.btnActualizarRol_Click);
             // 
             // panelBuscarCol
             // 
@@ -211,6 +217,7 @@ namespace Polideportivo.Vista
             this.cboBuscarRol.Name = "cboBuscarRol";
             this.cboBuscarRol.Size = new System.Drawing.Size(364, 26);
             this.cboBuscarRol.TabIndex = 32;
+            this.cboBuscarRol.SelectedIndexChanged += new System.EventHandler(this.cboBuscar_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
@@ -244,6 +251,7 @@ namespace Polideportivo.Vista
             this.txtFiltrarRol.Name = "txtFiltrarRol";
             this.txtFiltrarRol.Size = new System.Drawing.Size(353, 20);
             this.txtFiltrarRol.TabIndex = 1;
+            this.txtFiltrarRol.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
             // pictureBox1
             // 
@@ -273,6 +281,7 @@ namespace Polideportivo.Vista
             this.btnModificarRol.TabIndex = 28;
             this.btnModificarRol.Text = "    M O D I F I C A R";
             this.btnModificarRol.UseVisualStyleBackColor = false;
+            this.btnModificarRol.Click += new System.EventHandler(this.btnModificarRol_Click);
             // 
             // btnAgregarRol
             // 

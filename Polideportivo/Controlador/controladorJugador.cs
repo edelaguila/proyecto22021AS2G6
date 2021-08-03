@@ -17,10 +17,10 @@ namespace Polideportivo.AccesoDatos
         {
             
             var sqlinsertar = 
-                "INSERT INTO jugador (pkId, nombre, anotaciones, fkIdEquipo, fkIdRol, fkIdDeporte) " +
-                "VALUES (NULL, ?nombre?, ?anotaciones?, ?fkIdEquipo?, ?fkIdRol?, ?fkIdDeporte?);";
+                "INSERT INTO jugador (pkId, nombre, anotaciones, fkIdEquipo, fkIdRol) " +
+                "VALUES (NULL, ?nombre?, ?anotaciones?, ?fkIdEquipo?, ?fkIdRol?);";
             var ValorDeVariables = new{ nombre = modelo.nombre, anotaciones = modelo.anotaciones,
-            fkIdEquipo = modelo.fkIdEquipo, fkIdRol = modelo.fkIdRol, fkIdDeporte = modelo.fkIdDeporte};
+            fkIdEquipo = modelo.fkIdEquipo, fkIdRol = modelo.fkIdRol};
             var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
 
 
@@ -35,15 +35,14 @@ namespace Polideportivo.AccesoDatos
 
             var sqlinsertar =
                 "UPDATE jugador SET nombre = ?nombre?, anotaciones = ?anotaciones?, " +
-                "fkIdEquipo = ?fkIdEquipo?, fkIdRol = ?fkIdRol?, fkIdDeporte = ?fkIdDeporte? " +
-                "WHERE pkId = ?pkId?;";
+                "fkIdEquipo = ?fkIdEquipo?, fkIdRol = ?fkIdRol?" +
+                " WHERE pkId = ?pkId?;";
             var ValorDeVariables = new
             {
                 nombre = modelo.nombre,
                 anotaciones = modelo.anotaciones,
-                fkIdEquipo = modelo.fkIdEquipo,
+                fkIdEquipo = modelo.fkIdEquipo, 
                 fkIdRol = modelo.fkIdRol,
-                fkIdDeporte = modelo.fkIdDeporte,
                 pkId = modelo.pkId
             };
             var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);

@@ -11,20 +11,14 @@ namespace Polideportivo.Modelo
         public int pkId { get; set; }
         public string nombre { get; set; }
         public int fkIdDeporte { get; set; }
-        public int fkIdEntrenador { get; set; }
 
         public modeloEquipo() { }
 
-        public modeloEquipo(int Id, string Nombre, int IdDeporte, int IdEntrenador)
+        public modeloEquipo(int Id, string Nombre, int IdDeporte)
         {
             pkId = Id;
             nombre = Nombre;
             fkIdDeporte = IdDeporte;
-            fkIdEntrenador = IdEntrenador;
-            //para cuando sean ints
-            //int numeroValor = 0;
-            //int.TryParse(numero, out numeroValor);
-            //Numero = numeroValor;
         }
     }
 }

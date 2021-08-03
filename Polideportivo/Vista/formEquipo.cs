@@ -19,10 +19,14 @@ namespace Polideportivo.Vista
         }
 
 
+
+
         private void formEquipo_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'vwEquipo.vwequipo' Puede moverla o quitarla según sea necesario.
             this.vwequipoTableAdapter.Fill(this.vwEquipo.vwequipo);
+            // TODO: esta línea de código carga datos en la tabla 'vwEquipo.vwequipo' Puede moverla o quitarla según sea necesario.
+            //this.vwequipoTableAdapter.Fill(this.vwEquipo.vwequipo);
 
         }
 
@@ -42,24 +46,12 @@ namespace Polideportivo.Vista
         private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            string nombre = tablaEquipo.SelectedRows[0].Cells[1].Value.ToString();
             int id = stringAInt(tablaEquipo.SelectedRows[0].Cells[0].Value.ToString());
-            int anotaciones = stringAInt(tablaEquipo.SelectedRows[0].Cells[2].Value.ToString());
-            int fkIdEquipo = stringAInt(tablaEquipo.SelectedRows[0].Cells[3].Value.ToString());
-            int fkIdRol = stringAInt(tablaEquipo.SelectedRows[0].Cells[5].Value.ToString());
-            int fkIdDeporte = stringAInt(tablaEquipo.SelectedRows[0].Cells[7].Value.ToString());
+            string nombre = tablaEquipo.SelectedRows[0].Cells[1].Value.ToString();
+            int fkIdDeporte = stringAInt(tablaEquipo.SelectedRows[0].Cells[2].Value.ToString());
             modeloFila.pkId = id;
             modeloFila.nombre = nombre;
-            //modeloFila.anotaciones = anotaciones;
-            //modeloFila.fkIdEquipo = fkIdEquipo;
-            //modeloFila.fkIdRol = fkIdRol;
             modeloFila.fkIdDeporte = fkIdDeporte;
-            // Para que la selección de filas funcione para modificar, tiene que enviarse el
-            // modelo a la función de abrirForm:
-            // utilidadForms.abrirForm(new formEquipoEventos(modeloFila, this));
-            // Además de eso, modificar el construtor del form que va a utilizar los datos
-            // para la modificación, en este caso sería el ctor de formEquipoEventos que recibe el modelo
-
         }
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)

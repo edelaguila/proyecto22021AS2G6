@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`deporte` (
   PRIMARY KEY (`pkId`),
   UNIQUE INDEX `nombre_UNIQUE` (`nombre` ASC) VISIBLE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 24
+AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -47,7 +47,9 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`equipo` (
   INDEX `fk_equipo_deporte1_idx` (`fkIdDeporte` ASC) VISIBLE,
   CONSTRAINT `fk_equipo_deporte1`
     FOREIGN KEY (`fkIdDeporte`)
-    REFERENCES `bdpolideportivo`.`deporte` (`pkId`))
+    REFERENCES `bdpolideportivo`.`deporte` (`pkId`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb4
@@ -67,7 +69,9 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`rol` (
   INDEX `fk_rol_deporte1_idx` (`fkIdDeporte` ASC) VISIBLE,
   CONSTRAINT `fk_rol_deporte1`
     FOREIGN KEY (`fkIdDeporte`)
-    REFERENCES `bdpolideportivo`.`deporte` (`pkId`))
+    REFERENCES `bdpolideportivo`.`deporte` (`pkId`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8mb4
@@ -84,19 +88,23 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`jugador` (
   `nombre` VARCHAR(45) NOT NULL,
   `anotaciones` INT NOT NULL,
   `fotografia` BLOB NULL DEFAULT NULL,
-  `fkIdEquipo` INT NULL,
-  `fkIdRol` INT NULL,
+  `fkIdEquipo` INT NULL DEFAULT NULL,
+  `fkIdRol` INT NULL DEFAULT NULL,
   PRIMARY KEY (`pkId`),
   INDEX `fk_jugador_equipo1_idx` (`fkIdEquipo` ASC) VISIBLE,
   INDEX `fk_jugador_rol1_idx` (`fkIdRol` ASC) VISIBLE,
   CONSTRAINT `fk_jugador_equipo1`
     FOREIGN KEY (`fkIdEquipo`)
-    REFERENCES `bdpolideportivo`.`equipo` (`pkId`),
+    REFERENCES `bdpolideportivo`.`equipo` (`pkId`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_jugador_rol1`
     FOREIGN KEY (`fkIdRol`)
-    REFERENCES `bdpolideportivo`.`rol` (`pkId`))
+    REFERENCES `bdpolideportivo`.`rol` (`pkId`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 7
+AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -133,11 +141,14 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`campeonato` (
   INDEX `fk_campeonato_tipo_campeonato1_idx` (`fkIdTipoCampeonato` ASC) VISIBLE,
   CONSTRAINT `fk_campeonato_deporte1`
     FOREIGN KEY (`fkIdDeporte`)
-    REFERENCES `bdpolideportivo`.`deporte` (`pkId`),
+    REFERENCES `bdpolideportivo`.`deporte` (`pkId`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_campeonato_tipo_campeonato1`
     FOREIGN KEY (`fkIdTipoCampeonato`)
     REFERENCES `bdpolideportivo`.`tipocampeonato` (`pkId`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -238,14 +249,14 @@ DROP TABLE IF EXISTS `bdpolideportivo`.`entrenador` ;
 CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`entrenador` (
   `pkId` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL DEFAULT NULL,
-  `fkIdEquipo` INT NULL,
+  `fkIdEquipo` INT NULL DEFAULT NULL,
   PRIMARY KEY (`pkId`),
   INDEX `fk_entrenador_equipo1_idx` (`fkIdEquipo` ASC) VISIBLE,
   CONSTRAINT `fk_entrenador_equipo1`
     FOREIGN KEY (`fkIdEquipo`)
     REFERENCES `bdpolideportivo`.`equipo` (`pkId`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb4
@@ -265,7 +276,9 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`tipofalta` (
   INDEX `fk_tipo_deporte1_idx` (`fkIdDeporte` ASC) VISIBLE,
   CONSTRAINT `fk_tipo_deporte1`
     FOREIGN KEY (`fkIdDeporte`)
-    REFERENCES `bdpolideportivo`.`deporte` (`pkId`))
+    REFERENCES `bdpolideportivo`.`deporte` (`pkId`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -361,7 +374,6 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
-
 ALTER TABLE anotacion AUTO_INCREMENT = 1;
 ALTER TABLE campeonato AUTO_INCREMENT = 1;
 ALTER TABLE deporte AUTO_INCREMENT = 1;
@@ -381,4 +393,3 @@ ALTER TABLE rol AUTO_INCREMENT = 1;
 ALTER TABLE tipocampeonato AUTO_INCREMENT = 1;
 ALTER TABLE tipofalta AUTO_INCREMENT = 1;
 ALTER TABLE usuario AUTO_INCREMENT = 1;
-

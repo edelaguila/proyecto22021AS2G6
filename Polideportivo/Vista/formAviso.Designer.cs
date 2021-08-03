@@ -1,7 +1,7 @@
 ﻿
 namespace Polideportivo.Vista
 {
-    partial class formInformativo
+    partial class formAviso
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@ namespace Polideportivo.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formInformativo));
-            this.lblError = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAviso));
+            this.lblAviso = new System.Windows.Forms.Label();
             this.parrotGradientPanel2 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.btnErrorEntendido = new System.Windows.Forms.Button();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
@@ -43,18 +43,18 @@ namespace Polideportivo.Vista
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblError
+            // lblAviso
             // 
-            this.lblError.AutoSize = true;
-            this.lblError.BackColor = System.Drawing.Color.Transparent;
-            this.lblError.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.ForeColor = System.Drawing.Color.White;
-            this.lblError.Location = new System.Drawing.Point(52, 36);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(54, 18);
-            this.lblError.TabIndex = 0;
-            this.lblError.Text = "ERROR";
-            this.lblError.Click += new System.EventHandler(this.lblError_Click);
+            this.lblAviso.AutoSize = true;
+            this.lblAviso.BackColor = System.Drawing.Color.Transparent;
+            this.lblAviso.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAviso.ForeColor = System.Drawing.Color.White;
+            this.lblAviso.Location = new System.Drawing.Point(52, 36);
+            this.lblAviso.Name = "lblAviso";
+            this.lblAviso.Size = new System.Drawing.Size(108, 18);
+            this.lblAviso.TabIndex = 0;
+            this.lblAviso.Text = "INFORMACIÓN";
+            this.lblAviso.Click += new System.EventHandler(this.lblError_Click);
             // 
             // parrotGradientPanel2
             // 
@@ -62,7 +62,7 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel2.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             this.parrotGradientPanel2.Controls.Add(this.btnErrorEntendido);
-            this.parrotGradientPanel2.Controls.Add(this.lblError);
+            this.parrotGradientPanel2.Controls.Add(this.lblAviso);
             this.parrotGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parrotGradientPanel2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             this.parrotGradientPanel2.Location = new System.Drawing.Point(0, 62);
@@ -176,7 +176,7 @@ namespace Polideportivo.Vista
         }
 
         #endregion
-        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label lblAviso;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel2;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
         private System.Windows.Forms.PictureBox btnSalir;

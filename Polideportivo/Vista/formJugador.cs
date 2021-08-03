@@ -21,7 +21,7 @@ namespace Polideportivo.Vista
         {
             this.vwjugadorTableAdapter.Fill(this.vwJugador.vwjugador);
             cboBuscar.SelectedIndex = 0;
-
+            //tablaJugadores.Selec
         }
 
 
@@ -69,7 +69,7 @@ namespace Polideportivo.Vista
             }
             else
             {
-
+                abrirForm(new formAviso("Por favor, seleccione el jugador que desea modificar"));
             }
         }
 

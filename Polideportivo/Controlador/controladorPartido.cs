@@ -10,7 +10,7 @@ using System.Data;
 
 namespace Polideportivo.AccesoDatos
 {
-    class controladorPatido
+    class controladorPartido
     {
         OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
         public modeloPartido agregarPartido(modeloPartido modelo)
@@ -80,18 +80,18 @@ namespace Polideportivo.AccesoDatos
 
 
 
-        public IEnumerable<modeloJugador> mostrarJugadoresPorDeporte()
-        {
-            IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();
-            pruebas.Open();
-            string sqlconsulta = "SELECT * FROM tablajugadores;";
-            var sqlresultado = pruebas.Query<modeloJugador>(sqlconsulta);
-            modeloList = sqlresultado;
-            pruebas.Close();
-            return modeloList;
-        }
+        //public IEnumerable<modeloPartido> mostrarJugadoresPorDeporte()
+        //{
+        //    IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();
+        //    pruebas.Open();
+        //    string sqlconsulta = "SELECT * FROM tablajugadores;";
+        //    var sqlresultado = pruebas.Query<modeloJugador>(sqlconsulta);
+        //    modeloList = sqlresultado;
+        //    pruebas.Close();
+        //   return modeloList;
+        //}
 
-        public modeloPartido eliminarJugador(modeloPartido modelo)
+        public modeloPartido eliminarPartido(modeloPartido modelo)
         {
 
             var sqlinsertar =

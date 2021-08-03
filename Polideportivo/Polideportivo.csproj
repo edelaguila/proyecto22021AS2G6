@@ -101,6 +101,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bdpolideportivoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdpolideportivoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdpolideportivoDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controlador\controladorCampeonato.cs" />
     <Compile Include="Controlador\controladorDeporte.cs" />
     <Compile Include="Controlador\controladorEquipo.cs" />
@@ -167,6 +177,12 @@
     <Compile Include="Vista\formPartido.Designer.cs">
       <DependentUpon>formPartido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\formPartidoEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formPartidoEventos.Designer.cs">
+      <DependentUpon>formPartidoEventos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\formPolideportivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +218,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwJugador.xsd</DependentUpon>
     </Compile>
+    <Compile Include="vwPartido.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwPartido.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Vista\formCampeonato.resx">
       <DependentUpon>formCampeonato.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +247,9 @@
     <EmbeddedResource Include="Vista\formPartido.resx">
       <DependentUpon>formPartido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formPartidoEventos.resx">
+      <DependentUpon>formPartidoEventos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\formPolideportivo.resx">
       <DependentUpon>formPolideportivo.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +269,28 @@
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bdpolideportivoDataSet.xsc">
+      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdpolideportivoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdpolideportivoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdpolideportivoDataSet.xss">
+      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdpolideportivoDataSet1.xsc">
+      <DependentUpon>bdpolideportivoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bdpolideportivoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdpolideportivoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdpolideportivoDataSet1.xss">
+      <DependentUpon>bdpolideportivoDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -293,6 +339,17 @@
     </None>
     <None Include="vwJugador.xss">
       <DependentUpon>vwJugador.xsd</DependentUpon>
+    </None>
+    <None Include="vwPartido.xsc">
+      <DependentUpon>vwPartido.xsd</DependentUpon>
+    </None>
+    <None Include="vwPartido.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwPartido.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vwPartido.xss">
+      <DependentUpon>vwPartido.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

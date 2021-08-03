@@ -125,5 +125,10 @@ namespace Polideportivo.Vista
             formOriginal.actualizarTablaJugadores();
             cerrarForm(this);
         }
+
+        private void cboRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

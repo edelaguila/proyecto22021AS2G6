@@ -29,12 +29,11 @@ namespace Polideportivo.Controlador
         {
 
             var sqlinsertar =
-                "INSERT INTO equipo (pkId, nombre, fkIdEntrenador, fkIdDeporte) " +
-                "VALUES (NULL, ?nombre?, ?fkIdEntrenador?, ?fkIdDeporte?);";
+                "INSERT INTO equipo (pkId, nombre, fkIdDeporte) " +
+                "VALUES (NULL, ?nombre?, ?fkIdDeporte?);";
             var ValorDeVariables = new
             {
                 nombre = modelo.nombre,
-                fkIdEntrenador = modelo.fkIdEntrenador,
                 fkIdDeporte = modelo.fkIdDeporte
             };
             var resultadoinsertar = conexionOdbc.Execute(sqlinsertar, ValorDeVariables);
@@ -49,13 +48,11 @@ namespace Polideportivo.Controlador
         {
 
             var sqlinsertar =
-                "UPDATE jugador SET nombre = ?nombre?, anotaciones = ?anotaciones?, " +
-                "fkIdEquipo = ?fkIdEquipo?, fkIdRol = ?fkIdRol?, fkIdDeporte = ?fkIdDeporte? " +
+                "UPDATE equipo SET nombre = ?nombre?, fkIdDeporte = ?fkIdDeporte? " +
                 "WHERE pkId = ?pkId?;";
             var ValorDeVariables = new
             {
                 nombre = modelo.nombre,
-                fkIdEntrenador = modelo.fkIdEntrenador,
                 fkIdDeporte = modelo.fkIdDeporte,
                 pkId = modelo.pkId
             };

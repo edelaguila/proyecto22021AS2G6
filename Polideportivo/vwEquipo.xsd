@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="bdpolideportivoConnectionString (Settings)" DbObjectName="bdpolideportivo.vwequipo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `pkIdEquipo`, `nombre`, `pkIdEntrenador`, `entrenador`, `pkIdDeporte`, `deporte` FROM `bdpolideportivo`.`vwequipo`</CommandText>
+                    <CommandText>SELECT `pkIdEquipo`, `nombre`, `pkIdDeporte`, `deporte` FROM `bdpolideportivo`.`vwequipo`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -21,8 +21,6 @@
             <Mappings>
               <Mapping SourceColumn="pkIdEquipo" DataSetColumn="pkIdEquipo" />
               <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
-              <Mapping SourceColumn="pkIdEntrenador" DataSetColumn="pkIdEntrenador" />
-              <Mapping SourceColumn="entrenador" DataSetColumn="entrenador" />
               <Mapping SourceColumn="pkIdDeporte" DataSetColumn="pkIdDeporte" />
               <Mapping SourceColumn="deporte" DataSetColumn="deporte" />
             </Mappings>
@@ -47,14 +45,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="pkIdEntrenador" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdEntrenador" msprop:Generator_ColumnPropNameInRow="pkIdEntrenador" msprop:Generator_ColumnPropNameInTable="pkIdEntrenadorColumn" msprop:Generator_UserColumnName="pkIdEntrenador" type="xs:int" />
-              <xs:element name="entrenador" msprop:Generator_ColumnVarNameInTable="columnentrenador" msprop:Generator_ColumnPropNameInRow="entrenador" msprop:Generator_ColumnPropNameInTable="entrenadorColumn" msprop:Generator_UserColumnName="entrenador" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="pkIdDeporte" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdDeporte" msprop:Generator_ColumnPropNameInRow="pkIdDeporte" msprop:Generator_ColumnPropNameInTable="pkIdDeporteColumn" msprop:Generator_UserColumnName="pkIdDeporte" type="xs:int" />
               <xs:element name="deporte" msprop:Generator_ColumnVarNameInTable="columndeporte" msprop:Generator_ColumnPropNameInRow="deporte" msprop:Generator_ColumnPropNameInTable="deporteColumn" msprop:Generator_UserColumnName="deporte">
                 <xs:simpleType>
@@ -71,7 +61,6 @@
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:vwequipo" />
       <xs:field xpath="mstns:pkIdEquipo" />
-      <xs:field xpath="mstns:pkIdEntrenador" />
       <xs:field xpath="mstns:pkIdDeporte" />
     </xs:unique>
   </xs:element>

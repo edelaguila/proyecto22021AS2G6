@@ -135,12 +135,6 @@
     <Compile Include="Vista\formDeporte.Designer.cs">
       <DependentUpon>formDeporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\formDeporteEventos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\formDeporteEventos.Designer.cs">
-      <DependentUpon>formDeporteEventos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\formEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,9 +202,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formDeporte.resx">
       <DependentUpon>formDeporte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\formDeporteEventos.resx">
-      <DependentUpon>formDeporteEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formEquipo.resx">
       <DependentUpon>formEquipo.cs</DependentUpon>

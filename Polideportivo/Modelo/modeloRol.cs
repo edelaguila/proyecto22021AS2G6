@@ -8,6 +8,8 @@ namespace Polideportivo.Modelo
 {
     class modeloRol
     {
+
+
         public int pkId { get; set; }
         public string nombre { get; set; }
         public int fkIdDeporte { get; set; }
@@ -24,5 +26,8 @@ namespace Polideportivo.Modelo
             //int.TryParse(numero, out numeroValor);
             //Numero = numeroValor;
         }
+
+
     }
+
 }

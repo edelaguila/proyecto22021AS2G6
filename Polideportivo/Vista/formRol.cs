@@ -20,7 +20,7 @@ namespace Polideportivo.Vista
 
         private void btnAgregarRol_Click(object sender, EventArgs e)
         {
-            //PRUEBA DE PULL REQUEST DESDE UNA RAMA
+            
         }
     }
 }

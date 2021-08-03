@@ -32,21 +32,21 @@ namespace Polideportivo.Vista
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formRol));
-            this.tablaDeportes = new Zuby.ADGV.AdvancedDataGridView();
+            this.tablaRol = new Zuby.ADGV.AdvancedDataGridView();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombreDeporte = new System.Windows.Forms.TextBox();
-            this.btnEliminarDeporte = new System.Windows.Forms.Button();
-            this.btnActualizarDeporte = new System.Windows.Forms.Button();
+            this.txtNombreRol = new System.Windows.Forms.TextBox();
+            this.btnEliminarRol = new System.Windows.Forms.Button();
+            this.btnActualizarRol = new System.Windows.Forms.Button();
             this.panelBuscarCol = new System.Windows.Forms.Panel();
-            this.cboBuscarDeporte = new System.Windows.Forms.ComboBox();
+            this.cboBuscarRol = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtFiltrarDeporte = new System.Windows.Forms.TextBox();
+            this.txtFiltrarRol = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnModificarDeporte = new System.Windows.Forms.Button();
+            this.btnModificarRol = new System.Windows.Forms.Button();
             this.btnAgregarRol = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaDeportes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaRol)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             this.panelBuscarCol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -54,16 +54,16 @@ namespace Polideportivo.Vista
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tablaDeportes
+            // tablaRol
             // 
-            this.tablaDeportes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tablaRol.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tablaDeportes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tablaDeportes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tablaDeportes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tablaDeportes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tablaDeportes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tablaRol.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tablaRol.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tablaRol.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tablaRol.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tablaRol.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -71,8 +71,8 @@ namespace Polideportivo.Vista
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaDeportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.tablaDeportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaRol.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.tablaRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,16 +81,16 @@ namespace Polideportivo.Vista
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaDeportes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.tablaDeportes.FilterAndSortEnabled = true;
-            this.tablaDeportes.Location = new System.Drawing.Point(85, 143);
-            this.tablaDeportes.Name = "tablaDeportes";
-            this.tablaDeportes.ReadOnly = true;
-            this.tablaDeportes.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tablaDeportes.RowHeadersVisible = false;
-            this.tablaDeportes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaDeportes.Size = new System.Drawing.Size(400, 407);
-            this.tablaDeportes.TabIndex = 5;
+            this.tablaRol.DefaultCellStyle = dataGridViewCellStyle2;
+            this.tablaRol.FilterAndSortEnabled = true;
+            this.tablaRol.Location = new System.Drawing.Point(85, 143);
+            this.tablaRol.Name = "tablaRol";
+            this.tablaRol.ReadOnly = true;
+            this.tablaRol.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tablaRol.RowHeadersVisible = false;
+            this.tablaRol.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tablaRol.Size = new System.Drawing.Size(400, 407);
+            this.tablaRol.TabIndex = 5;
             // 
             // parrotGradientPanel1
             // 
@@ -98,14 +98,14 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             this.parrotGradientPanel1.Controls.Add(this.lblNombre);
-            this.parrotGradientPanel1.Controls.Add(this.txtNombreDeporte);
-            this.parrotGradientPanel1.Controls.Add(this.btnEliminarDeporte);
-            this.parrotGradientPanel1.Controls.Add(this.btnActualizarDeporte);
+            this.parrotGradientPanel1.Controls.Add(this.txtNombreRol);
+            this.parrotGradientPanel1.Controls.Add(this.btnEliminarRol);
+            this.parrotGradientPanel1.Controls.Add(this.btnActualizarRol);
             this.parrotGradientPanel1.Controls.Add(this.panelBuscarCol);
             this.parrotGradientPanel1.Controls.Add(this.panel2);
-            this.parrotGradientPanel1.Controls.Add(this.btnModificarDeporte);
+            this.parrotGradientPanel1.Controls.Add(this.btnModificarRol);
             this.parrotGradientPanel1.Controls.Add(this.btnAgregarRol);
-            this.parrotGradientPanel1.Controls.Add(this.tablaDeportes);
+            this.parrotGradientPanel1.Controls.Add(this.tablaRol);
             this.parrotGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             this.parrotGradientPanel1.Location = new System.Drawing.Point(0, 0);
@@ -132,88 +132,85 @@ namespace Polideportivo.Vista
             this.lblNombre.TabIndex = 35;
             this.lblNombre.Text = "NOMBRE";
             // 
-            // txtNombreDeporte
+            // txtNombreRol
             // 
-            this.txtNombreDeporte.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreDeporte.Location = new System.Drawing.Point(571, 113);
-            this.txtNombreDeporte.Name = "txtNombreDeporte";
-            this.txtNombreDeporte.Size = new System.Drawing.Size(226, 27);
-            this.txtNombreDeporte.TabIndex = 34;
+            this.txtNombreRol.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreRol.Location = new System.Drawing.Point(571, 113);
+            this.txtNombreRol.Name = "txtNombreRol";
+            this.txtNombreRol.Size = new System.Drawing.Size(226, 27);
+            this.txtNombreRol.TabIndex = 34;
             // 
-            // btnEliminarDeporte
+            // btnEliminarRol
             // 
-            this.btnEliminarDeporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminarDeporte.BackColor = System.Drawing.Color.White;
-            this.btnEliminarDeporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarDeporte.FlatAppearance.BorderSize = 0;
-            this.btnEliminarDeporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEliminarDeporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarDeporte.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarDeporte.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarDeporte.Image")));
-            this.btnEliminarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarDeporte.Location = new System.Drawing.Point(571, 357);
-            this.btnEliminarDeporte.Name = "btnEliminarDeporte";
-            this.btnEliminarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnEliminarDeporte.Size = new System.Drawing.Size(226, 58);
-            this.btnEliminarDeporte.TabIndex = 33;
-            this.btnEliminarDeporte.Text = "   E L I M I N A R";
-            this.btnEliminarDeporte.UseVisualStyleBackColor = false;
-            this.btnEliminarDeporte.Click += new System.EventHandler(this.btnEliminarDeporte_Click);
+            this.btnEliminarRol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarRol.BackColor = System.Drawing.Color.White;
+            this.btnEliminarRol.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarRol.FlatAppearance.BorderSize = 0;
+            this.btnEliminarRol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEliminarRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarRol.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarRol.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarRol.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarRol.Image")));
+            this.btnEliminarRol.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarRol.Location = new System.Drawing.Point(571, 357);
+            this.btnEliminarRol.Name = "btnEliminarRol";
+            this.btnEliminarRol.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnEliminarRol.Size = new System.Drawing.Size(226, 58);
+            this.btnEliminarRol.TabIndex = 33;
+            this.btnEliminarRol.Text = "   E L I M I N A R";
+            this.btnEliminarRol.UseVisualStyleBackColor = false;
             // 
-            // btnActualizarDeporte
+            // btnActualizarRol
             // 
-            this.btnActualizarDeporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizarDeporte.BackColor = System.Drawing.Color.White;
-            this.btnActualizarDeporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizarDeporte.FlatAppearance.BorderSize = 0;
-            this.btnActualizarDeporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnActualizarDeporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarDeporte.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarDeporte.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarDeporte.Image")));
-            this.btnActualizarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarDeporte.Location = new System.Drawing.Point(571, 441);
-            this.btnActualizarDeporte.Name = "btnActualizarDeporte";
-            this.btnActualizarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnActualizarDeporte.Size = new System.Drawing.Size(226, 58);
-            this.btnActualizarDeporte.TabIndex = 32;
-            this.btnActualizarDeporte.Text = "      A C T U A L I Z A R";
-            this.btnActualizarDeporte.UseVisualStyleBackColor = false;
-            this.btnActualizarDeporte.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.btnActualizarRol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizarRol.BackColor = System.Drawing.Color.White;
+            this.btnActualizarRol.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizarRol.FlatAppearance.BorderSize = 0;
+            this.btnActualizarRol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnActualizarRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarRol.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarRol.ForeColor = System.Drawing.Color.Black;
+            this.btnActualizarRol.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarRol.Image")));
+            this.btnActualizarRol.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizarRol.Location = new System.Drawing.Point(571, 441);
+            this.btnActualizarRol.Name = "btnActualizarRol";
+            this.btnActualizarRol.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnActualizarRol.Size = new System.Drawing.Size(226, 58);
+            this.btnActualizarRol.TabIndex = 32;
+            this.btnActualizarRol.Text = "      A C T U A L I Z A R";
+            this.btnActualizarRol.UseVisualStyleBackColor = false;
             // 
             // panelBuscarCol
             // 
             this.panelBuscarCol.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBuscarCol.BackColor = System.Drawing.Color.White;
-            this.panelBuscarCol.Controls.Add(this.cboBuscarDeporte);
+            this.panelBuscarCol.Controls.Add(this.cboBuscarRol);
             this.panelBuscarCol.Controls.Add(this.pictureBox2);
             this.panelBuscarCol.Location = new System.Drawing.Point(85, 40);
             this.panelBuscarCol.Name = "panelBuscarCol";
             this.panelBuscarCol.Size = new System.Drawing.Size(400, 36);
             this.panelBuscarCol.TabIndex = 31;
             // 
-            // cboBuscarDeporte
+            // cboBuscarRol
             // 
-            this.cboBuscarDeporte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cboBuscarRol.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboBuscarDeporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboBuscarDeporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboBuscarDeporte.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboBuscarDeporte.FormattingEnabled = true;
-            this.cboBuscarDeporte.Items.AddRange(new object[] {
+            this.cboBuscarRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboBuscarRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboBuscarRol.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBuscarRol.FormattingEnabled = true;
+            this.cboBuscarRol.Items.AddRange(new object[] {
             "nombre",
             "anotaciones",
             "deporte",
             "rol",
             "equipo"});
-            this.cboBuscarDeporte.Location = new System.Drawing.Point(36, 6);
-            this.cboBuscarDeporte.Name = "cboBuscarDeporte";
-            this.cboBuscarDeporte.Size = new System.Drawing.Size(364, 26);
-            this.cboBuscarDeporte.TabIndex = 32;
-            this.cboBuscarDeporte.SelectedIndexChanged += new System.EventHandler(this.cboBuscar_SelectedIndexChanged);
+            this.cboBuscarRol.Location = new System.Drawing.Point(36, 6);
+            this.cboBuscarRol.Name = "cboBuscarRol";
+            this.cboBuscarRol.Size = new System.Drawing.Size(364, 26);
+            this.cboBuscarRol.TabIndex = 32;
             // 
             // pictureBox2
             // 
@@ -229,25 +226,24 @@ namespace Polideportivo.Vista
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.txtFiltrarDeporte);
+            this.panel2.Controls.Add(this.txtFiltrarRol);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(85, 89);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(400, 36);
             this.panel2.TabIndex = 30;
             // 
-            // txtFiltrarDeporte
+            // txtFiltrarRol
             // 
-            this.txtFiltrarDeporte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtFiltrarRol.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFiltrarDeporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFiltrarDeporte.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltrarDeporte.Location = new System.Drawing.Point(37, 9);
-            this.txtFiltrarDeporte.Name = "txtFiltrarDeporte";
-            this.txtFiltrarDeporte.Size = new System.Drawing.Size(353, 20);
-            this.txtFiltrarDeporte.TabIndex = 1;
-            this.txtFiltrarDeporte.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
+            this.txtFiltrarRol.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFiltrarRol.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltrarRol.Location = new System.Drawing.Point(37, 9);
+            this.txtFiltrarRol.Name = "txtFiltrarRol";
+            this.txtFiltrarRol.Size = new System.Drawing.Size(353, 20);
+            this.txtFiltrarRol.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -258,26 +254,25 @@ namespace Polideportivo.Vista
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnModificarDeporte
+            // btnModificarRol
             // 
-            this.btnModificarDeporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificarDeporte.BackColor = System.Drawing.Color.White;
-            this.btnModificarDeporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarDeporte.FlatAppearance.BorderSize = 0;
-            this.btnModificarDeporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnModificarDeporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarDeporte.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarDeporte.ForeColor = System.Drawing.Color.Black;
-            this.btnModificarDeporte.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarDeporte.Image")));
-            this.btnModificarDeporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarDeporte.Location = new System.Drawing.Point(571, 271);
-            this.btnModificarDeporte.Name = "btnModificarDeporte";
-            this.btnModificarDeporte.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnModificarDeporte.Size = new System.Drawing.Size(226, 58);
-            this.btnModificarDeporte.TabIndex = 28;
-            this.btnModificarDeporte.Text = "    M O D I F I C A R";
-            this.btnModificarDeporte.UseVisualStyleBackColor = false;
-            this.btnModificarDeporte.Click += new System.EventHandler(this.btnModificarDeporte_Click);
+            this.btnModificarRol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificarRol.BackColor = System.Drawing.Color.White;
+            this.btnModificarRol.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarRol.FlatAppearance.BorderSize = 0;
+            this.btnModificarRol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnModificarRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarRol.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarRol.ForeColor = System.Drawing.Color.Black;
+            this.btnModificarRol.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarRol.Image")));
+            this.btnModificarRol.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarRol.Location = new System.Drawing.Point(571, 271);
+            this.btnModificarRol.Name = "btnModificarRol";
+            this.btnModificarRol.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnModificarRol.Size = new System.Drawing.Size(226, 58);
+            this.btnModificarRol.TabIndex = 28;
+            this.btnModificarRol.Text = "    M O D I F I C A R";
+            this.btnModificarRol.UseVisualStyleBackColor = false;
             // 
             // btnAgregarRol
             // 
@@ -309,8 +304,7 @@ namespace Polideportivo.Vista
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formRol";
             this.Text = "formRol";
-            this.Load += new System.EventHandler(this.formDeporte_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tablaDeportes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaRol)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
             this.parrotGradientPanel1.PerformLayout();
             this.panelBuscarCol.ResumeLayout(false);
@@ -323,19 +317,19 @@ namespace Polideportivo.Vista
         }
 
         #endregion
-        private Zuby.ADGV.AdvancedDataGridView tablaDeportes;
+        private Zuby.ADGV.AdvancedDataGridView tablaRol;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
         private System.Windows.Forms.Button btnAgregarRol;
-        private System.Windows.Forms.Button btnModificarDeporte;
+        private System.Windows.Forms.Button btnModificarRol;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtFiltrarDeporte;
+        private System.Windows.Forms.TextBox txtFiltrarRol;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnActualizarDeporte;
-        private System.Windows.Forms.Button btnEliminarDeporte;
-        private System.Windows.Forms.TextBox txtNombreDeporte;
+        private System.Windows.Forms.Button btnActualizarRol;
+        private System.Windows.Forms.Button btnEliminarRol;
+        private System.Windows.Forms.TextBox txtNombreRol;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel panelBuscarCol;
-        private System.Windows.Forms.ComboBox cboBuscarDeporte;
+        private System.Windows.Forms.ComboBox cboBuscarRol;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

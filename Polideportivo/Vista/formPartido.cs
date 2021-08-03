@@ -108,5 +108,10 @@ namespace Polideportivo.Vista
             controlador.eliminarJugador(modelo);
             actualizarTablaJugadores();
         }
+
+        private void tablaJugadores_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
+        }
     }
 }

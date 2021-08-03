@@ -7,24 +7,40 @@ using System.Threading.Tasks;
 using Dapper;
 using System.Data.Odbc;
 using System.Data;
+using static Polideportivo.Vista.utilidadForms;
+using Polideportivo.Vista;
 
 namespace Polideportivo.AccesoDatos
 {
     class controladorJugador
     {
-        OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
+        OdbcConnection conexionODBC = new OdbcConnection("DSN=bdpolideportivo");
         public modeloJugador agregarJugador(modeloJugador modelo)
         {
-            
-            var sqlinsertar = 
+            try
+            {
+                conexionODBC.Open();
+                var sqlinsertar =
                 "INSERT INTO jugador (pkId, nombre, anotaciones, fkIdEquipo, fkIdRol) " +
                 "VALUES (NULL, ?nombre?, ?anotaciones?, ?fkIdEquipo?, ?fkIdRol?);";
-            var ValorDeVariables = new{ nombre = modelo.nombre, anotaciones = modelo.anotaciones,
-            fkIdEquipo = modelo.fkIdEquipo, fkIdRol = modelo.fkIdRol};
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
+                var ValorDeVariables = new
+                {
+                    nombre = modelo.nombre,
+                    anotaciones = modelo.anotaciones,
+                    fkIdEquipo = modelo.fkIdEquipo,
+                    fkIdRol = modelo.fkIdRol
+                };
+                var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
 
 
-            pruebas.Close();
+                conexionODBC.Close();
+            }
+            catch (OdbcException e)
+            {
+
+                abrirForm(new formError(e));
+            }
+            
 
             //modelo.id = 5;
             return modelo;
@@ -45,19 +61,19 @@ namespace Polideportivo.AccesoDatos
                 fkIdRol = modelo.fkIdRol,
                 pkId = modelo.pkId
             };
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-            pruebas.Close();
+            var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+            conexionODBC.Close();
             return modelo;
         }
 
         public IEnumerable<modeloJugador> mostrarJugadores()
         {
             IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();
-            pruebas.Open();
+            conexionODBC.Open();
             string sqlconsulta = "SELECT * FROM tablajugadores;";
-            var sqlresultado = pruebas.Query<modeloJugador>(sqlconsulta);
+            var sqlresultado = conexionODBC.Query<modeloJugador>(sqlconsulta);
             modeloList = sqlresultado;
-            pruebas.Close();
+            conexionODBC.Close();
             return modeloList;
         }
 
@@ -66,11 +82,11 @@ namespace Polideportivo.AccesoDatos
         public IEnumerable<modeloJugador> mostrarJugadoresPorDeporte()
         {
             IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();
-            pruebas.Open();
+            conexionODBC.Open();
             string sqlconsulta = "SELECT * FROM tablajugadores;";
-            var sqlresultado = pruebas.Query<modeloJugador>(sqlconsulta);
+            var sqlresultado = conexionODBC.Query<modeloJugador>(sqlconsulta);
             modeloList = sqlresultado;
-            pruebas.Close();
+            conexionODBC.Close();
             return modeloList;
         }
 
@@ -83,8 +99,8 @@ namespace Polideportivo.AccesoDatos
             {
                 pkId = modelo.pkId
             };
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-            pruebas.Close();
+            var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+            conexionODBC.Close();
             return modelo;
         }
 

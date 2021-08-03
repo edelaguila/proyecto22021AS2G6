@@ -105,6 +105,7 @@ namespace Polideportivo.Vista
             this.tablaDeportes.Size = new System.Drawing.Size(400, 407);
             this.tablaDeportes.TabIndex = 5;
             this.tablaDeportes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDeporte_CellClick);
+            this.tablaDeportes.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.tablaDeportes_DataError);
             // 
             // pkIdDataGridViewTextBoxColumn
             // 

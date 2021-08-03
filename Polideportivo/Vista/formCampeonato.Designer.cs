@@ -1,4 +1,4 @@
-﻿
+﻿using static Polideportivo.Vista.utilidadForms;
 namespace Polideportivo.Vista
 {
     partial class formCampeonato
@@ -115,6 +115,7 @@ namespace Polideportivo.Vista
             this.tablaCampeonatos.Size = new System.Drawing.Size(768, 413);
             this.tablaCampeonatos.TabIndex = 5;
             this.tablaCampeonatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaCampeonatos_CellClick);
+            this.tablaCampeonatos.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.tablaCampeonatos_DataError);
             // 
             // pkIdCampeonatoDataGridViewTextBoxColumn
             // 

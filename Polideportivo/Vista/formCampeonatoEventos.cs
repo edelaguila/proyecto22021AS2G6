@@ -31,11 +31,9 @@ namespace Polideportivo.Vista
         {
             // Este constructor es el que se utiliza para modificar datos
             InitializeComponent();
-            btnModificarJugador.Visible = true;
-            btnAgregarJugador.Visible = false;
+            btnModificarCampeonato.Visible = true;
+            btnAgregarCampeonato.Visible = false;
             formOriginal = form;
-            //txtNombre.Text = modelo.nombre;
-            //txtAnotaciones.Text = modelo.anotaciones.ToString();
             // Llenar combobox de deportes
             controladorDeporte deportes = new controladorDeporte();
             cboDeporte.DataSource = deportes.mostrarDeportes();
@@ -44,26 +42,31 @@ namespace Polideportivo.Vista
             // Para obtener el Id original que se va a modificar
             modeloOriginal = modelo;
             // Modificar el texto del label
-            lblJugadorEvento.Text = "MODIFICAR JUGADOR";
+            lblJugadorEvento.Text = "MODIFICAR CAMPEONATO";
 
         }
 
 
         public formCampeonatoEventos(formCampeonato form)
         {
+            formOriginal = form;
             // Este constructor es el que se utiliza para agregar datos
             InitializeComponent();
-            btnAgregarJugador.Visible = true;
-            btnModificarJugador.Visible = false;
+            btnModificarCampeonato.Visible = false;
+            btnAgregarCampeonato.Visible = true;
             // Llenar combobox de deportes
             controladorDeporte deportes = new controladorDeporte();
             cboDeporte.DataSource = deportes.mostrarDeportes();
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
-            cboDeporte.SelectedIndex = -1;
-            formOriginal = form;
+            // Llenar combobox de tipo de campeonatos
+            controladorTipoCampeonato tipo = new controladorTipoCampeonato();
+            cboTipo.DataSource = tipo.mostrarTipoDeCampeonatos();
+            cboTipo.DisplayMember = "tipo";
+            cboTipo.ValueMember = "pkId";
+            cboTipo.SelectedIndex = -1;
             // Modificar el texto del título
-            lblJugadorEvento.Text = "AGREGAR JUGADOR";
+            lblJugadorEvento.Text = "AGREGAR CAMPEONATO";
         }
 
 
@@ -73,21 +76,10 @@ namespace Polideportivo.Vista
         {
             if (cboDeporte.SelectedIndex > -1)
             {
-                // Llenar la combobox de rol dependiendo del deporte elegido
-                modeloRol modelorol = new modeloRol();
-                modelorol.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-                controladorRol rol = new controladorRol(modelorol);
-                cboRol.DataSource = rol.mostrarRolesPorDeporte();
-                cboRol.DisplayMember = "nombre";
-                cboRol.ValueMember = "pkId";
-
                 // Llenar la combobox de equipo dependiendo del deporte elegido
                 modeloEquipo modeloequipo = new modeloEquipo();
                 modeloequipo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
                 controladorEquipo equipo = new controladorEquipo(modeloequipo);
-                cboEquipo.DataSource = equipo.mostrarEquipoPorDeporte();
-                cboEquipo.DisplayMember = "nombre";
-                cboEquipo.ValueMember = "pkId";
             }
         }
 
@@ -113,17 +105,32 @@ namespace Polideportivo.Vista
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
-            controladorJugador modeloModificar = new controladorJugador();
-            modeloCampeonato modelo = new modeloCampeonato();
-            //modelo.pkId = modeloOriginal.pkId;
-            //modelo.nombre = txtNombre.Text;
-            //modelo.anotaciones = stringAInt(txtAnotaciones.Text);
-            //modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-            //modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
-            //modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
-            //modeloModificar.modificarJugador(modelo);
+            
+        }
+
+        private void cboTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificarCampeonato_Click(object sender, EventArgs e)
+        {
+            controladorCampeonato controlador = new controladorCampeonato();
+            controlador.ModificarCampeonato(modeloOriginal);
             formOriginal.actualizarTablaJugadores();
             cerrarForm(this);
+        }
+
+        private void btnAgregarCampeonato_Click(object sender, EventArgs e)
+        {
+            controladorCampeonato controlador = new controladorCampeonato();
+            modeloCampeonato modelo = new modeloCampeonato();
+            modelo.nombre = txtNombre.Text;
+            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            modelo.fkIdTipoCampeonato = stringAInt(cboTipo.SelectedValue.ToString());
+            modelo.fechaInicio = dateFechaFinal.Text.Replace("-","/");
+            modelo.fechaFinal = dateFechaInicio.Text.Replace("-", "/");
+            controlador.AgregarCampeonato(modelo);
         }
     }
 }

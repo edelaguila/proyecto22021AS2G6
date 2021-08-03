@@ -124,7 +124,7 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnEliminarJugador.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnEliminarCampeonato.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAO9JREFUSEvt
         lUsOgjAQQDmFbnSjWyi68Hcqw0ePpQjEk7jDjd7AC6gdnUkavh2KrnjJhAz9PFqmqdVjhOslS7E/jzBl
@@ -174,7 +174,7 @@
         /BcjHIZnYuSpeILivwA70mYSh+Q5hVMaxXEOALohBVHQA8mzAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnModificarJugador.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnModificarCampeonato.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAp1JREFUSEvV
         lUmLFDEUx0vFDUT8BDrouHZXUtU9OuhBDwpePAmDHl1ghJGWqSTtoCNSCIoHPbiAu+DBhUZnOkn1XMWb
@@ -191,7 +191,7 @@
         gl95jnrN+Bm1AwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnAgregarJugador.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAgregarCampeonato.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAA1dJREFUSEvl
         VVlrU0EUjrviihsoLlWLrTSde9M81Lq1D6KiDy5YQVHwRdFiMffeSUpdalwKbi9WEGrdilprtE3m3jRW

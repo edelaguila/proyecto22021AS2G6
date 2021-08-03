@@ -108,12 +108,14 @@
     <Compile Include="Controlador\controladorPartido.cs" />
     <Compile Include="Controlador\controladorPolideportivo.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
+    <Compile Include="Controlador\controladorTipoCampeonato.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />
     <Compile Include="Modelo\modeloDeporte.cs" />
     <Compile Include="Modelo\modeloEquipo.cs" />
     <Compile Include="Modelo\modeloPartido.cs" />
     <Compile Include="Modelo\modeloRol.cs" />
     <Compile Include="Modelo\modeloJugador.cs" />
+    <Compile Include="Modelo\modeloTipoCampeonato.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

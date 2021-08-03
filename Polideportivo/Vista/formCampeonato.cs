@@ -47,27 +47,20 @@ namespace Polideportivo.Vista
         }
 
         modeloCampeonato modeloFila = new modeloCampeonato();
-        private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void tablaCampeonatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            string nombre = tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
-            int id = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
-            int anotaciones = stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
-            int fkIdEquipo = stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
-            int fkIdRol = stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
-            int fkIdDeporte = stringAInt(tablaJugadores.SelectedRows[0].Cells[7].Value.ToString());
-            //modeloFila.pkId = id;
-            //modeloFila.nombre = nombre;
-            //modeloFila.anotaciones = anotaciones;
-            //modeloFila.fkIdEquipo = fkIdEquipo;
-            //modeloFila.fkIdRol = fkIdRol;
-            //modeloFila.fkIdDeporte = fkIdDeporte;
-            // Para que la selección de filas funcione para modificar, tiene que enviarse el
-            // modelo a la función de abrirForm:
-            // utilidadForms.abrirForm(new formCampeonatoEventos(modeloFila, this));
-            // Además de eso, modificar el construtor del form que va a utilizar los datos
-            // para la modificación, en este caso sería el ctor de formCampeonatoEventos que recibe el modelo
-
+            int id = stringAInt(tablaCampeonatos.SelectedRows[0].Cells[0].Value.ToString());
+            string nombre = tablaCampeonatos.SelectedRows[0].Cells[1].Value.ToString();
+            string fechaInicio = tablaCampeonatos.SelectedRows[0].Cells[2].Value.ToString();
+            string fechaFinal = tablaCampeonatos.SelectedRows[0].Cells[3].Value.ToString();
+            int fkIdDeporte = stringAInt(tablaCampeonatos.SelectedRows[0].Cells[4].Value.ToString());
+            int fkIdTipoCampeonato = stringAInt(tablaCampeonatos.SelectedRows[0].Cells[6].Value.ToString());
+            modeloFila.pkId = id;
+            modeloFila.nombre = nombre;
+            modeloFila.fechaInicio = fechaInicio;
+            modeloFila.fechaFinal = fechaFinal;
+            modeloFila.fkIdDeporte = fkIdDeporte;
+            modeloFila.fkIdTipoCampeonato = fkIdTipoCampeonato;
         }
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
@@ -104,12 +97,14 @@ namespace Polideportivo.Vista
 
         private void btnEliminarJugador_Click(object sender, EventArgs e)
         {
-            int id = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
+            int id = stringAInt(tablaCampeonatos.SelectedRows[0].Cells[0].Value.ToString());
             controladorCampeonato controlador = new controladorCampeonato();
             modeloCampeonato modelo = new modeloCampeonato();
             //modelo.pkId = id;
             //controlador.eliminarJugador(modelo);
             actualizarTablaJugadores();
         }
+
+        
     }
 }

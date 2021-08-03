@@ -1,4 +1,6 @@
 ﻿
+using Polideportivo.Datos;
+
 namespace Polideportivo.Vista
 {
     partial class formEquipo
@@ -39,7 +41,7 @@ namespace Polideportivo.Vista
             this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwequipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwEquipo = new Polideportivo.vwEquipo();
+            this.vwEquipo = new Polideportivo.Datos.vwEquipo();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.btnEliminarJugador = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -51,7 +53,7 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarJugador = new System.Windows.Forms.Button();
             this.btnAgregarJugador = new System.Windows.Forms.Button();
-            this.vwequipoTableAdapter = new Polideportivo.vwEquipoTableAdapters.vwequipoTableAdapter();
+            this.vwequipoTableAdapter = new Polideportivo.Datos.vwEquipoTableAdapters.vwequipoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEquipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwequipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwEquipo)).BeginInit();
@@ -380,7 +382,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Button btnEliminarJugador;
         private vwEquipo vwEquipo;
         private System.Windows.Forms.BindingSource vwequipoBindingSource;
-        private vwEquipoTableAdapters.vwequipoTableAdapter vwequipoTableAdapter;
+        private Datos.vwEquipoTableAdapters.vwequipoTableAdapter vwequipoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEquipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDeporteDataGridViewTextBoxColumn;

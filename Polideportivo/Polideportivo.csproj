@@ -196,27 +196,27 @@
       <DependentUpon>formRol.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\utilidadForms.cs" />
-    <Compile Include="vwCampeonato.Designer.cs">
+    <Compile Include="Datos\vwCampeonato.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>vwCampeonato.xsd</DependentUpon>
     </Compile>
-    <Compile Include="vwDeportes.Designer.cs">
+    <Compile Include="Datos\vwDeportes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>vwDeportes.xsd</DependentUpon>
     </Compile>
-    <Compile Include="vwEquipo.Designer.cs">
+    <Compile Include="Datos\vwEquipo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>vwEquipo.xsd</DependentUpon>
     </Compile>
-    <Compile Include="vwJugador.Designer.cs">
+    <Compile Include="Datos\vwJugador.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>vwJugador.xsd</DependentUpon>
     </Compile>
-    <Compile Include="vwPartido.Designer.cs">
+    <Compile Include="Datos\vwPartido.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>vwPartido.xsd</DependentUpon>
@@ -276,59 +276,59 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="vwCampeonato.xsc">
+    <None Include="Datos\vwCampeonato.xsc">
       <DependentUpon>vwCampeonato.xsd</DependentUpon>
     </None>
-    <None Include="vwCampeonato.xsd">
+    <None Include="Datos\vwCampeonato.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>vwCampeonato.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="vwCampeonato.xss">
+    <None Include="Datos\vwCampeonato.xss">
       <DependentUpon>vwCampeonato.xsd</DependentUpon>
     </None>
-    <None Include="vwDeportes.xsc">
+    <None Include="Datos\vwDeportes.xsc">
       <DependentUpon>vwDeportes.xsd</DependentUpon>
     </None>
-    <None Include="vwDeportes.xsd">
+    <None Include="Datos\vwDeportes.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>vwDeportes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="vwDeportes.xss">
+    <None Include="Datos\vwDeportes.xss">
       <DependentUpon>vwDeportes.xsd</DependentUpon>
     </None>
-    <None Include="vwEquipo.xsc">
+    <None Include="Datos\vwEquipo.xsc">
       <DependentUpon>vwEquipo.xsd</DependentUpon>
     </None>
-    <None Include="vwEquipo.xsd">
+    <None Include="Datos\vwEquipo.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>vwEquipo.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="vwEquipo.xss">
+    <None Include="Datos\vwEquipo.xss">
       <DependentUpon>vwEquipo.xsd</DependentUpon>
     </None>
-    <None Include="vwJugador.xsc">
+    <None Include="Datos\vwJugador.xsc">
       <DependentUpon>vwJugador.xsd</DependentUpon>
     </None>
-    <None Include="vwJugador.xsd">
+    <None Include="Datos\vwJugador.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>vwJugador.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="vwJugador.xss">
+    <None Include="Datos\vwJugador.xss">
       <DependentUpon>vwJugador.xsd</DependentUpon>
     </None>
-    <None Include="vwPartido.xsc">
+    <None Include="Datos\vwPartido.xsc">
       <DependentUpon>vwPartido.xsd</DependentUpon>
     </None>
-    <None Include="vwPartido.xsd">
+    <None Include="Datos\vwPartido.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>vwPartido.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="vwPartido.xss">
+    <None Include="Datos\vwPartido.xss">
       <DependentUpon>vwPartido.xsd</DependentUpon>
     </None>
   </ItemGroup>

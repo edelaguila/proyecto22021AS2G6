@@ -1,4 +1,6 @@
 ﻿
+using Polideportivo.Datos;
+
 namespace Polideportivo.Vista
 {
     partial class formJugador
@@ -44,7 +46,7 @@ namespace Polideportivo.Vista
             this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwjugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwJugador = new Polideportivo.vwJugador();
+            this.vwJugador = new Polideportivo.Datos.vwJugador();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.btnEliminarJugador = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -57,7 +59,7 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarJugador = new System.Windows.Forms.Button();
             this.btnAgregarJugador = new System.Windows.Forms.Button();
-            this.vwjugadorTableAdapter = new Polideportivo.vwJugadorTableAdapters.vwjugadorTableAdapter();
+            this.vwjugadorTableAdapter = new Polideportivo.Datos.vwJugadorTableAdapters.vwjugadorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwjugadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwJugador)).BeginInit();
@@ -453,7 +455,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Label label1;
         private vwJugador vwJugador;
         private System.Windows.Forms.BindingSource vwjugadorBindingSource;
-        private vwJugadorTableAdapters.vwjugadorTableAdapter vwjugadorTableAdapter;
+        private Datos.vwJugadorTableAdapters.vwjugadorTableAdapter vwjugadorTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdJugadorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anotacionesDataGridViewTextBoxColumn;

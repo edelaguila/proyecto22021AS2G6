@@ -1,4 +1,5 @@
-﻿using static Polideportivo.Vista.utilidadForms;
+﻿using Polideportivo.Datos;
+using static Polideportivo.Vista.utilidadForms;
 namespace Polideportivo.Vista
 {
     partial class formCampeonato
@@ -43,7 +44,7 @@ namespace Polideportivo.Vista
             this.pkIdTipoCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwcampeonatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwCampeonato = new Polideportivo.vwCampeonato();
+            this.vwCampeonato = new Polideportivo.Datos.vwCampeonato();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.btnEliminarCampeonato = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -55,7 +56,7 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarCampeonato = new System.Windows.Forms.Button();
             this.btnAgregarCampeonato = new System.Windows.Forms.Button();
-            this.vwcampeonatoTableAdapter = new Polideportivo.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter();
+            this.vwcampeonatoTableAdapter = new Polideportivo.Datos.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaCampeonatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwcampeonatoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwCampeonato)).BeginInit();
@@ -427,7 +428,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Button btnEliminarCampeonato;
         private vwCampeonato vwCampeonato;
         private System.Windows.Forms.BindingSource vwcampeonatoBindingSource;
-        private vwCampeonatoTableAdapters.vwcampeonatoTableAdapter vwcampeonatoTableAdapter;
+        private Datos.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter vwcampeonatoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdCampeonatoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn campeonatoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicioDataGridViewTextBoxColumn;

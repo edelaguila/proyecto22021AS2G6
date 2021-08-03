@@ -78,11 +78,11 @@ namespace Polideportivo.Vista
         {
             if (string.IsNullOrEmpty(txtFiltrar.Text))
             {
-                deporteBindingSource.Filter = string.Empty;
+                vwDeporteBindingSource.Filter = string.Empty;
             }
             else
             {
-                deporteBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
+                vwDeporteBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
             }
         }
 

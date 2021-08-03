@@ -13,19 +13,23 @@ namespace Polideportivo.AccesoDatos
     class controladorPatido
     {
         OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
-        public modeloJugador agregarJugador(modeloJugador modelo)
+        public modeloPartido agregarPartido(modeloPartido modelo)
         {
 
             var sqlinsertar =
                 "INSERT INTO jugador (pkId, equipo1, equipo2, campo, fecha, estado, fase, fkIdCampeonato, fkIdEmpleado, fkIdResultado) " +
-                "VALUES (NULL, ?equipo1?, ?equipo2?, ?campo??fkId?, ?fkIdRol?, ?fkIdDeporte?);";
+                "VALUES (NULL, ?equipo1?, ?equipo2?, ?campo?, ?fecha?, ?estado?, ?fase?, ?fkIdCampeonato?, ?fkIdEmpleado?, ?fkIdResultado?);";
             var ValorDeVariables = new
             {
-                nombre = modelo.nombre,
-                anotaciones = modelo.anotaciones,
-                fkIdEquipo = modelo.fkIdEquipo,
-                fkIdRol = modelo.fkIdRol,
-                fkIdDeporte = modelo.fkIdDeporte
+                equipo1 = modelo.equipo1,
+                equipo2 = modelo.equipo2,
+                campo = modelo.campo,
+                fecha = modelo.fecha,
+                estado = modelo.estado,
+                fase = modelo.fase,
+                fkIdCampeonato = modelo.fkIdCampeonato,
+                fkIdEmpleado = modelo.fkIdEmpleado,
+                fkIdResultado = modelo.fkIdResultado
             };
             var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
 
@@ -36,20 +40,26 @@ namespace Polideportivo.AccesoDatos
             return modelo;
         }
 
-        public modeloJugador modificarJugador(modeloJugador modelo)
+        public modeloPartido modificarPartido(modeloPartido modelo)
         {
 
             var sqlinsertar =
-                "UPDATE jugador SET nombre = ?nombre?, anotaciones = ?anotaciones?, " +
-                "fkIdEquipo = ?fkIdEquipo?, fkIdRol = ?fkIdRol?, fkIdDeporte = ?fkIdDeporte? " +
+                "UPDATE partido SET equipo1 = ?equipo1?, equipo2 = ?equipo2?, " +
+                "campo = ?campo?, fecha = ?fecha?, estado = ?estado? " +
+                "fase = ?fase?, fkIdCampeonato = ?fkIdCampeonato?, fkIdEmpleado = ?fkIdEmpleado? " +
+                "fkIdResultado = ?fkIdResultado?, " +
                 "WHERE pkId = ?pkId?;";
             var ValorDeVariables = new
             {
-                nombre = modelo.nombre,
-                anotaciones = modelo.anotaciones,
-                fkIdEquipo = modelo.fkIdEquipo,
-                fkIdRol = modelo.fkIdRol,
-                fkIdDeporte = modelo.fkIdDeporte,
+                equipo1 = modelo.equipo1,
+                equipo2 = modelo.equipo2,
+                campo = modelo.campo,
+                fecha = modelo.fecha,
+                estado = modelo.estado,
+                fase = modelo.fase,
+                fkIdCampeonato = modelo.fkIdCampeonato,
+                fkIdEmpleado = modelo.fkIdEmpleado,
+                fkIdResultado = modelo.fkIdResultado,
                 pkId = modelo.pkId
             };
             var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
@@ -57,12 +67,12 @@ namespace Polideportivo.AccesoDatos
             return modelo;
         }
 
-        public IEnumerable<modeloJugador> mostrarJugadores()
+        public IEnumerable<modeloPartido> mostrarPartidos()
         {
-            IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();
+            IEnumerable<modeloPartido> modeloList = new List<modeloPartido>();
             pruebas.Open();
-            string sqlconsulta = "SELECT * FROM tablajugadores;";
-            var sqlresultado = pruebas.Query<modeloJugador>(sqlconsulta);
+            string sqlconsulta = "SELECT * FROM tablapartidos;";
+            var sqlresultado = pruebas.Query<modeloPartido>(sqlconsulta);
             modeloList = sqlresultado;
             pruebas.Close();
             return modeloList;
@@ -81,11 +91,11 @@ namespace Polideportivo.AccesoDatos
             return modeloList;
         }
 
-        public modeloJugador eliminarJugador(modeloJugador modelo)
+        public modeloPartido eliminarJugador(modeloPartido modelo)
         {
 
             var sqlinsertar =
-                "DELETE FROM jugador WHERE pkId = ?pkId?;";
+                "DELETE FROM partido WHERE pkId = ?pkId?;";
             var ValorDeVariables = new
             {
                 pkId = modelo.pkId

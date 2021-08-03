@@ -29,8 +29,9 @@ namespace Polideportivo.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formRol));
             this.tablaRol = new Zuby.ADGV.AdvancedDataGridView();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
@@ -46,12 +47,29 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarRol = new System.Windows.Forms.Button();
             this.btnAgregarRol = new System.Windows.Forms.Button();
+            this.bdpolideportivoDataSet = new Polideportivo.bdpolideportivoDataSet();
+            this.vwrolBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vwrolTableAdapter = new Polideportivo.bdpolideportivoDataSetTableAdapters.vwrolTableAdapter();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdpolideportivoDataSet1 = new Polideportivo.bdpolideportivoDataSet1();
+            this.vwrolBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vwrolTableAdapter1 = new Polideportivo.bdpolideportivoDataSet1TableAdapters.vwrolTableAdapter();
+            this.bdpolideportivoDataSet2 = new Polideportivo.bdpolideportivoDataSet2();
+            this.vwrolBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.vwrolTableAdapter2 = new Polideportivo.bdpolideportivoDataSet2TableAdapters.vwrolTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaRol)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             this.panelBuscarCol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // tablaRol
@@ -59,29 +77,34 @@ namespace Polideportivo.Vista
             this.tablaRol.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tablaRol.AutoGenerateColumns = false;
             this.tablaRol.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaRol.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tablaRol.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tablaRol.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tablaRol.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaRol.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaRol.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tablaRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaRol.DefaultCellStyle = dataGridViewCellStyle10;
+            this.tablaRol.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreDataGridViewTextBoxColumn,
+            this.deporteDataGridViewTextBoxColumn});
+            this.tablaRol.DataSource = this.vwrolBindingSource2;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaRol.DefaultCellStyle = dataGridViewCellStyle2;
             this.tablaRol.FilterAndSortEnabled = true;
             this.tablaRol.Location = new System.Drawing.Point(85, 143);
             this.tablaRol.Name = "tablaRol";
@@ -304,6 +327,66 @@ namespace Polideportivo.Vista
             this.btnAgregarRol.UseVisualStyleBackColor = false;
             this.btnAgregarRol.Click += new System.EventHandler(this.btnAgregarRol_Click);
             // 
+            // bdpolideportivoDataSet
+            // 
+            this.bdpolideportivoDataSet.DataSetName = "bdpolideportivoDataSet";
+            this.bdpolideportivoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vwrolBindingSource
+            // 
+            this.vwrolBindingSource.DataMember = "vwrol";
+            this.vwrolBindingSource.DataSource = this.bdpolideportivoDataSet;
+            // 
+            // vwrolTableAdapter
+            // 
+            this.vwrolTableAdapter.ClearBeforeFill = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // deporteDataGridViewTextBoxColumn
+            // 
+            this.deporteDataGridViewTextBoxColumn.DataPropertyName = "deporte";
+            this.deporteDataGridViewTextBoxColumn.HeaderText = "deporte";
+            this.deporteDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.deporteDataGridViewTextBoxColumn.Name = "deporteDataGridViewTextBoxColumn";
+            this.deporteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // bdpolideportivoDataSet1
+            // 
+            this.bdpolideportivoDataSet1.DataSetName = "bdpolideportivoDataSet1";
+            this.bdpolideportivoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vwrolBindingSource1
+            // 
+            this.vwrolBindingSource1.DataMember = "vwrol";
+            this.vwrolBindingSource1.DataSource = this.bdpolideportivoDataSet1;
+            // 
+            // vwrolTableAdapter1
+            // 
+            this.vwrolTableAdapter1.ClearBeforeFill = true;
+            // 
+            // bdpolideportivoDataSet2
+            // 
+            this.bdpolideportivoDataSet2.DataSetName = "bdpolideportivoDataSet2";
+            this.bdpolideportivoDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vwrolBindingSource2
+            // 
+            this.vwrolBindingSource2.DataMember = "vwrol";
+            this.vwrolBindingSource2.DataSource = this.bdpolideportivoDataSet2;
+            // 
+            // vwrolTableAdapter2
+            // 
+            this.vwrolTableAdapter2.ClearBeforeFill = true;
+            // 
             // formRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,6 +396,7 @@ namespace Polideportivo.Vista
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formRol";
             this.Text = "formRol";
+            this.Load += new System.EventHandler(this.formRol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaRol)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
             this.parrotGradientPanel1.PerformLayout();
@@ -321,6 +405,12 @@ namespace Polideportivo.Vista
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,5 +430,16 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Panel panelBuscarCol;
         private System.Windows.Forms.ComboBox cboBuscarRol;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private bdpolideportivoDataSet bdpolideportivoDataSet;
+        private System.Windows.Forms.BindingSource vwrolBindingSource;
+        private bdpolideportivoDataSetTableAdapters.vwrolTableAdapter vwrolTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
+        private bdpolideportivoDataSet1 bdpolideportivoDataSet1;
+        private System.Windows.Forms.BindingSource vwrolBindingSource1;
+        private bdpolideportivoDataSet1TableAdapters.vwrolTableAdapter vwrolTableAdapter1;
+        private bdpolideportivoDataSet2 bdpolideportivoDataSet2;
+        private System.Windows.Forms.BindingSource vwrolBindingSource2;
+        private bdpolideportivoDataSet2TableAdapters.vwrolTableAdapter vwrolTableAdapter2;
     }
 }

@@ -101,6 +101,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bdpolideportivoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdpolideportivoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdpolideportivoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdpolideportivoDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdpolideportivoDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controlador\controladorCampeonato.cs" />
     <Compile Include="Controlador\controladorDeporte.cs" />
     <Compile Include="Controlador\controladorEquipo.cs" />
@@ -271,6 +286,39 @@
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bdpolideportivoDataSet.xsc">
+      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdpolideportivoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdpolideportivoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdpolideportivoDataSet.xss">
+      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdpolideportivoDataSet1.xsc">
+      <DependentUpon>bdpolideportivoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bdpolideportivoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdpolideportivoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdpolideportivoDataSet1.xss">
+      <DependentUpon>bdpolideportivoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bdpolideportivoDataSet2.xsc">
+      <DependentUpon>bdpolideportivoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bdpolideportivoDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdpolideportivoDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdpolideportivoDataSet2.xss">
+      <DependentUpon>bdpolideportivoDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

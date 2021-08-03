@@ -19,8 +19,6 @@ namespace Polideportivo.Vista
         }
 
         
-       
-
 
         private void formDeporte_Load(object sender, EventArgs e)
         {

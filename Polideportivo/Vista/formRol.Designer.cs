@@ -58,6 +58,8 @@ namespace Polideportivo.Vista
             this.bdpolideportivoDataSet2 = new Polideportivo.bdpolideportivoDataSet2();
             this.vwrolBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.vwrolTableAdapter2 = new Polideportivo.bdpolideportivoDataSet2TableAdapters.vwrolTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNombreDeporte = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tablaRol)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             this.panelBuscarCol.SuspendLayout();
@@ -123,6 +125,8 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotGradientPanel1.Controls.Add(this.txtNombreDeporte);
+            this.parrotGradientPanel1.Controls.Add(this.label1);
             this.parrotGradientPanel1.Controls.Add(this.lblNombre);
             this.parrotGradientPanel1.Controls.Add(this.txtNombreRol);
             this.parrotGradientPanel1.Controls.Add(this.btnEliminarRol);
@@ -152,16 +156,16 @@ namespace Polideportivo.Vista
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(568, 92);
+            this.lblNombre.Location = new System.Drawing.Point(638, 40);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(69, 18);
+            this.lblNombre.Size = new System.Drawing.Size(100, 18);
             this.lblNombre.TabIndex = 35;
-            this.lblNombre.Text = "NOMBRE";
+            this.lblNombre.Text = "NOMBRE ROL";
             // 
             // txtNombreRol
             // 
             this.txtNombreRol.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreRol.Location = new System.Drawing.Point(571, 113);
+            this.txtNombreRol.Location = new System.Drawing.Point(571, 61);
             this.txtNombreRol.Name = "txtNombreRol";
             this.txtNombreRol.Size = new System.Drawing.Size(226, 27);
             this.txtNombreRol.TabIndex = 34;
@@ -387,6 +391,27 @@ namespace Polideportivo.Vista
             // 
             this.vwrolTableAdapter2.ClearBeforeFill = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(620, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 18);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "NOMBRE DEPORTE";
+            // 
+            // txtNombreDeporte
+            // 
+            this.txtNombreDeporte.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreDeporte.Location = new System.Drawing.Point(571, 128);
+            this.txtNombreDeporte.Name = "txtNombreDeporte";
+            this.txtNombreDeporte.Size = new System.Drawing.Size(226, 27);
+            this.txtNombreDeporte.TabIndex = 37;
+            this.txtNombreDeporte.TextChanged += new System.EventHandler(this.txtNombreDeporte_TextChanged);
+            // 
             // formRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,5 +466,7 @@ namespace Polideportivo.Vista
         private bdpolideportivoDataSet2 bdpolideportivoDataSet2;
         private System.Windows.Forms.BindingSource vwrolBindingSource2;
         private bdpolideportivoDataSet2TableAdapters.vwrolTableAdapter vwrolTableAdapter2;
+        private System.Windows.Forms.TextBox txtNombreDeporte;
+        private System.Windows.Forms.Label label1;
     }
 }

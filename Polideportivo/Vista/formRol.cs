@@ -17,10 +17,13 @@ namespace Polideportivo.Vista
             InitializeComponent();
         }
 
+    
         private void btnAgregarRol_Click(object sender, EventArgs e)
         {
-            
+          
         }
+
+    
 
         private void btnModificarRol_Click(object sender, EventArgs e)
         {
@@ -34,7 +37,7 @@ namespace Polideportivo.Vista
 
         private void btnActualizarRol_Click(object sender, EventArgs e)
         {
-          
+           
         }
 
         private void tablaRol_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -75,6 +78,12 @@ namespace Polideportivo.Vista
             this.vwrolTableAdapter1.Fill(this.bdpolideportivoDataSet1.vwrol);
             // TODO: esta línea de código carga datos en la tabla 'bdpolideportivoDataSet.vwrol' Puede moverla o quitarla según sea necesario.
             this.vwrolTableAdapter.Fill(this.bdpolideportivoDataSet.vwrol);
+
+
+        }
+
+        private void txtNombreDeporte_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

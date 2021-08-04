@@ -11,7 +11,12 @@ namespace Polideportivo.Vista
 {
     public partial class formCampeonato : Form
     {
-
+        int id;
+        string nombre;
+        string fechaInicio;
+        string fechaFinal;
+        int fkIdDeporte;
+        int fkIdTipoCampeonato;
 
 
 
@@ -53,25 +58,35 @@ namespace Polideportivo.Vista
 
         private void txtJugadorFiltrar_TextChanged(object sender, EventArgs e)
         {
+            filtrarTabla();
+           
+            }
 
-        }
-
-        modeloCampeonato modeloFila = new modeloCampeonato();
-        private void tablaCampeonatos_CellClick(object sender, DataGridViewCellEventArgs e)
+        public void llenarModeloConFilaSeleccionada()
         {
-            int id = stringAInt(tablaCampeonatos.SelectedRows[0].Cells[0].Value.ToString());
-            string nombre = tablaCampeonatos.SelectedRows[0].Cells[1].Value.ToString();
-            string fechaInicio = tablaCampeonatos.SelectedRows[0].Cells[2].Value.ToString();
-            string fechaFinal = tablaCampeonatos.SelectedRows[0].Cells[3].Value.ToString();
-            int fkIdDeporte = stringAInt(tablaCampeonatos.SelectedRows[0].Cells[4].Value.ToString());
-            int fkIdTipoCampeonato = stringAInt(tablaCampeonatos.SelectedRows[0].Cells[6].Value.ToString());
+             id = stringAInt(tablaCampeonatos.SelectedRows[0].Cells[0].Value.ToString());
+             nombre = tablaCampeonatos.SelectedRows[0].Cells[1].Value.ToString();
+             fechaInicio = tablaCampeonatos.SelectedRows[0].Cells[2].Value.ToString();
+             fechaFinal = tablaCampeonatos.SelectedRows[0].Cells[3].Value.ToString();
+             fkIdDeporte = stringAInt(tablaCampeonatos.SelectedRows[0].Cells[4].Value.ToString());
+             fkIdTipoCampeonato = stringAInt(tablaCampeonatos.SelectedRows[0].Cells[6].Value.ToString());
             modeloFila.pkId = id;
             modeloFila.nombre = nombre;
             modeloFila.fechaInicio = fechaInicio;
             modeloFila.fechaFinal = fechaFinal;
             modeloFila.fkIdDeporte = fkIdDeporte;
             modeloFila.fkIdTipoCampeonato = fkIdTipoCampeonato;
+
         }
+
+
+
+            modeloCampeonato modeloFila = new modeloCampeonato();
+        private void tablaCampeonatos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            llenarModeloConFilaSeleccionada();
+        }
+
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
@@ -85,14 +100,7 @@ namespace Polideportivo.Vista
 
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtFiltrar.Text))
-            {
-                vwcampeonatoBindingSource.Filter = string.Empty;
-            }
-            else
-            {
-                vwcampeonatoBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
-            }
+            
         }
 
         private void cboBuscar_SelectedIndexChanged(object sender, EventArgs e)
@@ -107,15 +115,25 @@ namespace Polideportivo.Vista
 
         private void btnEliminarCampeonato_Click(object sender, EventArgs e)
         {
-            int id = stringAInt(tablaCampeonatos.SelectedRows[0].Cells[0].Value.ToString());
+            llenarModeloConFilaSeleccionada();
             controladorCampeonato controlador = new controladorCampeonato();
-            modeloCampeonato modelo = new modeloCampeonato();
-            modelo.pkId = id;
-            controlador.eliminarCampeonato(modelo);
+            controlador.eliminarCampeonato(modeloFila);
             actualizarTabla();
         }
 
-        private void tablaCampeonatos_DataError(object sender, DataGridViewDataErrorEventArgs anError)
+        private void filtrarTabla()
+        {
+            if (string.IsNullOrEmpty(txtFiltrar.Text))
+            {
+                vwcampeonatoBindingSource.Filter = string.Empty;
+            }
+            else
+            {
+                vwcampeonatoBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
+            }
+        }
+
+private void tablaCampeonatos_DataError(object sender, DataGridViewDataErrorEventArgs anError)
         {
 
             //MessageBox.Show(anError.RowIndex + " " + anError.ColumnIndex);

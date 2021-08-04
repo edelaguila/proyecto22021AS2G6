@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`jugador` (
   CONSTRAINT `fk_jugador_rol1`
     FOREIGN KEY (`fkIdRol`)
     REFERENCES `bdpolideportivo`.`rol` (`pkId`)
-    ON DELETE CASCADE
+    ON DELETE SET NULL
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 4
@@ -146,7 +146,9 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`campeonato` (
     ON UPDATE CASCADE,
   CONSTRAINT `fk_campeonato_tipo_campeonato1`
     FOREIGN KEY (`fkIdTipoCampeonato`)
-    REFERENCES `bdpolideportivo`.`tipocampeonato` (`pkId`))
+    REFERENCES `bdpolideportivo`.`tipocampeonato` (`pkId`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8mb4
@@ -184,6 +186,18 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
+-- Table `bdpolideportivo`.`estado`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `bdpolideportivo`.`estado` ;
+
+CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`estado` (
+  `pkId` INT NOT NULL,
+  `nombre` VARCHAR(45) NULL,
+  PRIMARY KEY (`pkId`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `bdpolideportivo`.`partido`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `bdpolideportivo`.`partido` ;
@@ -194,24 +208,35 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`partido` (
   `equipo2` VARCHAR(45) NOT NULL,
   `campo` VARCHAR(45) NOT NULL,
   `fecha` DATE NOT NULL,
-  `estado` VARCHAR(45) NOT NULL,
   `fase` VARCHAR(45) NOT NULL,
   `fkIdCampeonato` INT NOT NULL,
-  `fkIdEmpleado` INT NOT NULL,
+  `fkIdEmpleado` INT NULL,
   `fkIdResultado` INT NOT NULL,
+  `fkIdEstado` INT NULL,
   PRIMARY KEY (`pkId`),
   INDEX `fk_partido_campeonato1_idx` (`fkIdCampeonato` ASC) VISIBLE,
   INDEX `fk_partido_empleado1_idx` (`fkIdEmpleado` ASC) VISIBLE,
   INDEX `fk_partido_resultado1_idx` (`fkIdResultado` ASC) VISIBLE,
+  INDEX `fk_partido_estado1_idx` (`fkIdEstado` ASC) VISIBLE,
   CONSTRAINT `fk_partido_campeonato1`
     FOREIGN KEY (`fkIdCampeonato`)
-    REFERENCES `bdpolideportivo`.`campeonato` (`pkId`),
+    REFERENCES `bdpolideportivo`.`campeonato` (`pkId`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_partido_empleado1`
     FOREIGN KEY (`fkIdEmpleado`)
-    REFERENCES `bdpolideportivo`.`empleado` (`pkId`),
+    REFERENCES `bdpolideportivo`.`empleado` (`pkId`)
+    ON DELETE SET NULL,
   CONSTRAINT `fk_partido_resultado1`
     FOREIGN KEY (`fkIdResultado`)
-    REFERENCES `bdpolideportivo`.`resultado` (`pkId`))
+    REFERENCES `bdpolideportivo`.`resultado` (`pkId`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_partido_estado1`
+    FOREIGN KEY (`fkIdEstado`)
+    REFERENCES `bdpolideportivo`.`estado` (`pkId`)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -292,16 +317,19 @@ DROP TABLE IF EXISTS `bdpolideportivo`.`infraccion` ;
 CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`infraccion` (
   `pkId` INT NOT NULL AUTO_INCREMENT,
   `fkIdJugador` INT NOT NULL,
-  `tipo_id` INT NOT NULL,
+  `fkIdTipoFalta` INT NULL,
   PRIMARY KEY (`pkId`),
   INDEX `fk_infraccion_jugador1_idx` (`fkIdJugador` ASC) VISIBLE,
-  INDEX `fk_infraccion_tipo1_idx` (`tipo_id` ASC) VISIBLE,
+  INDEX `fk_infraccion_tipo1_idx` (`fkIdTipoFalta` ASC) VISIBLE,
   CONSTRAINT `fk_infraccion_jugador1`
     FOREIGN KEY (`fkIdJugador`)
-    REFERENCES `bdpolideportivo`.`jugador` (`pkId`),
+    REFERENCES `bdpolideportivo`.`jugador` (`pkId`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_infraccion_tipo1`
-    FOREIGN KEY (`tipo_id`)
-    REFERENCES `bdpolideportivo`.`tipofalta` (`pkId`))
+    FOREIGN KEY (`fkIdTipoFalta`)
+    REFERENCES `bdpolideportivo`.`tipofalta` (`pkId`)
+    ON DELETE SET NULL)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -368,11 +396,63 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
+USE `bdpolideportivo` ;
+
+-- -----------------------------------------------------
+-- Placeholder table for view `bdpolideportivo`.`vwcampeonato`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`vwcampeonato` (`pkIdCampeonato` INT, `campeonato` INT, `fechaInicio` INT, `fechaFinal` INT, `pkIdDeporte` INT, `deporte` INT, `pkIdTipoCampeonato` INT, `tipoCampeonato` INT);
+
+-- -----------------------------------------------------
+-- Placeholder table for view `bdpolideportivo`.`vwequipo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`vwequipo` (`pkIdEquipo` INT, `nombre` INT, `pkIdDeporte` INT, `deporte` INT);
+
+-- -----------------------------------------------------
+-- Placeholder table for view `bdpolideportivo`.`vwjugador`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`vwjugador` (`pkIdJugador` INT, `nombre` INT, `anotaciones` INT, `pkIdEquipo` INT, `equipo` INT, `pkIdRol` INT, `rol` INT, `pkIdDeporte` INT, `deporte` INT);
+
+-- -----------------------------------------------------
+-- Placeholder table for view `bdpolideportivo`.`vwpartido`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`vwpartido` (`pkIdPartido` INT, `equipo1` INT, `equipo2` INT, `campo` INT, `fecha` INT, `estado` INT, `fase` INT, `pkIdCampeonato` INT, `campeonato` INT, `pkIdEmpleado` INT, `empleado` INT, `pkIdResultado` INT, `resultado1` INT, `resultado2` INT);
+
+-- -----------------------------------------------------
+-- View `bdpolideportivo`.`vwcampeonato`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `bdpolideportivo`.`vwcampeonato`;
+DROP VIEW IF EXISTS `bdpolideportivo`.`vwcampeonato` ;
+USE `bdpolideportivo`;
+CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `bdpolideportivo`.`vwcampeonato` AS select `a`.`pkId` AS `pkIdCampeonato`,`a`.`nombre` AS `campeonato`,`a`.`fechaInicio` AS `fechaInicio`,`a`.`fechaFinal` AS `fechaFinal`,`b`.`pkId` AS `pkIdDeporte`,`b`.`nombre` AS `deporte`,`c`.`pkId` AS `pkIdTipoCampeonato`,`c`.`tipo` AS `tipoCampeonato` from ((`bdpolideportivo`.`campeonato` `a` join `bdpolideportivo`.`deporte` `b` on((`b`.`pkId` = `a`.`fkIdDeporte`))) join `bdpolideportivo`.`tipocampeonato` `c` on((`c`.`pkId` = `a`.`fkIdTipoCampeonato`))) order by `a`.`pkId`;
+
+-- -----------------------------------------------------
+-- View `bdpolideportivo`.`vwequipo`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `bdpolideportivo`.`vwequipo`;
+DROP VIEW IF EXISTS `bdpolideportivo`.`vwequipo` ;
+USE `bdpolideportivo`;
+CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `bdpolideportivo`.`vwequipo` AS select `a`.`pkId` AS `pkIdEquipo`,`a`.`nombre` AS `nombre`,`b`.`pkId` AS `pkIdDeporte`,`b`.`nombre` AS `deporte` from (`bdpolideportivo`.`equipo` `a` join `bdpolideportivo`.`deporte` `b` on((`b`.`pkId` = `a`.`fkIdDeporte`))) order by `a`.`pkId`;
+
+-- -----------------------------------------------------
+-- View `bdpolideportivo`.`vwjugador`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `bdpolideportivo`.`vwjugador`;
+DROP VIEW IF EXISTS `bdpolideportivo`.`vwjugador` ;
+USE `bdpolideportivo`;
+CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `bdpolideportivo`.`vwjugador` AS select `a`.`pkId` AS `pkIdJugador`,`a`.`nombre` AS `nombre`,`a`.`anotaciones` AS `anotaciones`,`b`.`pkId` AS `pkIdEquipo`,`b`.`nombre` AS `equipo`,`c`.`pkId` AS `pkIdRol`,`c`.`nombre` AS `rol`,`d`.`pkId` AS `pkIdDeporte`,`d`.`nombre` AS `deporte` from (((`bdpolideportivo`.`jugador` `a` join `bdpolideportivo`.`equipo` `b` on((`b`.`pkId` = `a`.`fkIdEquipo`))) join `bdpolideportivo`.`deporte` `d` on((`b`.`fkIdDeporte` = `d`.`pkId`))) join `bdpolideportivo`.`rol` `c` on((`c`.`pkId` = `a`.`fkIdRol`))) order by `a`.`pkId`;
+
+-- -----------------------------------------------------
+-- View `bdpolideportivo`.`vwpartido`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `bdpolideportivo`.`vwpartido`;
+DROP VIEW IF EXISTS `bdpolideportivo`.`vwpartido` ;
+USE `bdpolideportivo`;
+CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `bdpolideportivo`.`vwpartido` AS select `a`.`pkId` AS `pkIdPartido`,`a`.`equipo1` AS `equipo1`,`a`.`equipo2` AS `equipo2`,`a`.`campo` AS `campo`,`a`.`fecha` AS `fecha`,`a`.`fase` AS `fase`,`b`.`pkId` AS `pkIdCampeonato`,`b`.`nombre` AS `campeonato`,`c`.`pkId` AS `pkIdEmpleado`,`c`.`nombre` AS `empleado`,`d`.`pkId` AS `pkIdResultado`,`d`.`anotacionEquipo1` AS `resultado1`,`d`.`anotacionEquipo2` AS `resultado2` from (((`bdpolideportivo`.`partido` `a` join `bdpolideportivo`.`campeonato` `b` on((`b`.`pkId` = `a`.`fkIdCampeonato`))) join `bdpolideportivo`.`empleado` `c` on((`c`.`pkId` = `a`.`fkIdEmpleado`))) join `bdpolideportivo`.`resultado` `d` on((`d`.`pkId` = `a`.`fkIdResultado`))) order by `a`.`pkId`;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
 
 ALTER TABLE anotacion AUTO_INCREMENT = 1;
 ALTER TABLE campeonato AUTO_INCREMENT = 1;

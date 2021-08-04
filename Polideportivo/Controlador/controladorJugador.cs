@@ -9,17 +9,18 @@ using System.Data.Odbc;
 using System.Data;
 using static Polideportivo.Vista.utilidadForms;
 using Polideportivo.Vista;
+using Polideportivo.Conexion;
 
 namespace Polideportivo.AccesoDatos
 {
     class controladorJugador
     {
-        OdbcConnection conexionODBC = new OdbcConnection("DSN=bdpolideportivo");
+        ConexionODBC ODBC = new ConexionODBC();
         public modeloJugador agregarJugador(modeloJugador modelo)
         {
-            try
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
             {
-                conexionODBC.Open();
                 var sqlinsertar =
                 "INSERT INTO jugador (pkId, nombre, anotaciones, fkIdEquipo, fkIdRol) " +
                 "VALUES (NULL, ?nombre?, ?anotaciones?, ?fkIdEquipo?, ?fkIdRol?);";
@@ -31,16 +32,11 @@ namespace Polideportivo.AccesoDatos
                     fkIdRol = modelo.fkIdRol
                 };
                 var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-
-
-                conexionODBC.Close();
+                ODBC.cerrarConexion(conexionODBC);
             }
-            catch (OdbcException e)
-            {
 
-                abrirForm(new formError(e));
-            }
-            
+
+
 
             //modelo.id = 5;
             return modelo;
@@ -48,59 +44,73 @@ namespace Polideportivo.AccesoDatos
 
         public modeloJugador modificarJugador(modeloJugador modelo)
         {
-
-            var sqlinsertar =
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                var sqlinsertar =
                 "UPDATE jugador SET nombre = ?nombre?, anotaciones = ?anotaciones?, " +
                 "fkIdEquipo = ?fkIdEquipo?, fkIdRol = ?fkIdRol?" +
                 " WHERE pkId = ?pkId?;";
-            var ValorDeVariables = new
-            {
-                nombre = modelo.nombre,
-                anotaciones = modelo.anotaciones,
-                fkIdEquipo = modelo.fkIdEquipo, 
-                fkIdRol = modelo.fkIdRol,
-                pkId = modelo.pkId
-            };
-            var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-            conexionODBC.Close();
+                var ValorDeVariables = new
+                {
+                    nombre = modelo.nombre,
+                    anotaciones = modelo.anotaciones,
+                    fkIdEquipo = modelo.fkIdEquipo,
+                    fkIdRol = modelo.fkIdRol,
+                    pkId = modelo.pkId
+                };
+                var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+            }
+
+
+            ODBC.cerrarConexion(conexionODBC);
+
             return modelo;
         }
 
         public IEnumerable<modeloJugador> mostrarJugadores()
         {
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
             IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();
-            conexionODBC.Open();
-            string sqlconsulta = "SELECT * FROM tablajugadores;";
-            var sqlresultado = conexionODBC.Query<modeloJugador>(sqlconsulta);
-            modeloList = sqlresultado;
-            conexionODBC.Close();
+            if (conexionODBC != null)
+            {
+                string sqlconsulta = "SELECT * FROM tablajugadores;";
+                var sqlresultado = conexionODBC.Query<modeloJugador>(sqlconsulta);
+                modeloList = sqlresultado;
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return modeloList;
         }
 
-        
 
         public IEnumerable<modeloJugador> mostrarJugadoresPorDeporte()
         {
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
             IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();
-            conexionODBC.Open();
-            string sqlconsulta = "SELECT * FROM tablajugadores;";
-            var sqlresultado = conexionODBC.Query<modeloJugador>(sqlconsulta);
-            modeloList = sqlresultado;
-            conexionODBC.Close();
+            if (conexionODBC != null)
+            {
+                string sqlconsulta = "SELECT * FROM tablajugadores;";
+                var sqlresultado = conexionODBC.Query<modeloJugador>(sqlconsulta);
+                modeloList = sqlresultado;
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return modeloList;
         }
 
         public modeloJugador eliminarJugador(modeloJugador modelo)
         {
-
-            var sqlinsertar =
-                "DELETE FROM jugador WHERE pkId = ?pkId?;";
-            var ValorDeVariables = new
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
             {
-                pkId = modelo.pkId
-            };
-            var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-            conexionODBC.Close();
+                var sqlinsertar =
+                "DELETE FROM jugador WHERE pkId = ?pkId?;";
+                var ValorDeVariables = new
+                {
+                    pkId = modelo.pkId
+                };
+                var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return modelo;
         }
 

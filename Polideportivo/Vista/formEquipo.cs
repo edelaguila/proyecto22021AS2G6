@@ -9,7 +9,9 @@ namespace Polideportivo.Vista
 {
     public partial class formEquipo : Form
     {
-
+        int id;
+        string nombre;
+        int fkIdDeporte;
 
 
 
@@ -43,15 +45,21 @@ namespace Polideportivo.Vista
         }
 
         modeloEquipo modeloFila = new modeloEquipo();
-        private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-            int id = stringAInt(tablaEquipo.SelectedRows[0].Cells[0].Value.ToString());
-            string nombre = tablaEquipo.SelectedRows[0].Cells[1].Value.ToString();
-            int fkIdDeporte = stringAInt(tablaEquipo.SelectedRows[0].Cells[2].Value.ToString());
+        public void llenarModeloConFilaSeleccionada()
+        {
+            id = stringAInt(tablaEquipo.SelectedRows[0].Cells[0].Value.ToString());
+            nombre = tablaEquipo.SelectedRows[0].Cells[1].Value.ToString();
+            fkIdDeporte = stringAInt(tablaEquipo.SelectedRows[0].Cells[2].Value.ToString());
             modeloFila.pkId = id;
             modeloFila.nombre = nombre;
             modeloFila.fkIdDeporte = fkIdDeporte;
+
+        }
+            
+            private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            llenarModeloConFilaSeleccionada();
         }
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
@@ -87,13 +95,11 @@ namespace Polideportivo.Vista
             actualizarTablaJugadores();
         }
 
-        private void btnEliminarJugador_Click(object sender, EventArgs e)
+        private void btnEliminarEquipo_Click(object sender, EventArgs e)
         {
-            int id = stringAInt(tablaEquipo.SelectedRows[0].Cells[0].Value.ToString());
+            llenarModeloConFilaSeleccionada();
             controladorEquipo controlador = new controladorEquipo();
-            modeloEquipo modelo = new modeloEquipo();
-            modelo.pkId = id;
-            //controlador.eliminarJugador(modelo);
+           // controlador.eliminarEquipo(modeloFinal);
             actualizarTablaJugadores();
         }
 
@@ -101,5 +107,16 @@ namespace Polideportivo.Vista
         {
             // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
         }
-    }
+        private void filtrarTabla()
+        {
+            if (string.IsNullOrEmpty(txtFiltrar.Text))
+            {
+               // vwjugadorBindingSource.Filter = string.Empty;
+            }
+            else
+            {
+              //  vwjugadorBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
+            }
+        }
+        }
 }

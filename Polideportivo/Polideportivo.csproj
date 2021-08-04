@@ -101,6 +101,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bdpolideportivoDataSet.cs">
+      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bdpolideportivoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

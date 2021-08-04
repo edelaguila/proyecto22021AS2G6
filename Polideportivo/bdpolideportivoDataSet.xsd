@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bdpolideportivoDataSet" targetNamespace="http://tempuri.org/bdpolideportivoDataSet.xsd" xmlns:mstns="http://tempuri.org/bdpolideportivoDataSet.xsd" xmlns="http://tempuri.org/bdpolideportivoDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bdpolideportivoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bdpolideportivoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Polideportivo.Properties.Settings.GlobalReference.Default.bdpolideportivoConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwrolTableAdapter" GeneratorDataComponentClassName="vwrolTableAdapter" Name="vwrol" UserDataComponentName="vwrolTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdpolideportivoConnectionString (Settings)" DbObjectName="bdpolideportivo.vwrol" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `pkIdRol`, `nombre`, `pkIdDeporte`, `deporte` FROM `bdpolideportivo`.`vwrol`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="pkIdRol" DataSetColumn="pkIdRol" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="pkIdDeporte" DataSetColumn="pkIdDeporte" />
+              <Mapping SourceColumn="deporte" DataSetColumn="deporte" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bdpolideportivoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bdpolideportivoDataSet" msprop:Generator_UserDSName="bdpolideportivoDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwrol" msprop:Generator_TableClassName="vwrolDataTable" msprop:Generator_TableVarName="tablevwrol" msprop:Generator_TablePropName="vwrol" msprop:Generator_RowDeletingName="vwrolRowDeleting" msprop:Generator_RowChangingName="vwrolRowChanging" msprop:Generator_RowEvHandlerName="vwrolRowChangeEventHandler" msprop:Generator_RowDeletedName="vwrolRowDeleted" msprop:Generator_UserTableName="vwrol" msprop:Generator_RowChangedName="vwrolRowChanged" msprop:Generator_RowEvArgName="vwrolRowChangeEvent" msprop:Generator_RowClassName="vwrolRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pkIdRol" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdRol" msprop:Generator_ColumnPropNameInRow="pkIdRol" msprop:Generator_ColumnPropNameInTable="pkIdRolColumn" msprop:Generator_UserColumnName="pkIdRol" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pkIdDeporte" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdDeporte" msprop:Generator_ColumnPropNameInRow="pkIdDeporte" msprop:Generator_ColumnPropNameInTable="pkIdDeporteColumn" msprop:Generator_UserColumnName="pkIdDeporte" type="xs:int" />
+              <xs:element name="deporte" msprop:Generator_ColumnVarNameInTable="columndeporte" msprop:Generator_ColumnPropNameInRow="deporte" msprop:Generator_ColumnPropNameInTable="deporteColumn" msprop:Generator_UserColumnName="deporte">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwrol" />
+      <xs:field xpath="mstns:pkIdRol" />
+      <xs:field xpath="mstns:pkIdDeporte" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

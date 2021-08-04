@@ -10,8 +10,8 @@ namespace Polideportivo.Vista
     public partial class formDeporte : Form
     {
 
-
-
+        int id;
+        string nombre;
 
         public formDeporte()
         {
@@ -48,12 +48,17 @@ namespace Polideportivo.Vista
         modeloDeporte modeloFila = new modeloDeporte();
         private void tablaDeporte_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = stringAInt(tablaDeportes.SelectedRows[0].Cells[0].Value.ToString());
-            string nombre = tablaDeportes.SelectedRows[0].Cells[1].Value.ToString();
+            llenarModeloConFilaSeleccionada();   
             txtNombreDeporte.Text = nombre;
-            modeloFila.pkId = id;
-            
         }
+
+        private void llenarModeloConFilaSeleccionada()
+        {
+            id = stringAInt(tablaDeportes.SelectedRows[0].Cells[0].Value.ToString());
+            nombre = tablaDeportes.SelectedRows[0].Cells[1].Value.ToString();
+            modeloFila.pkId = id;
+        }
+
 
         private void btnAgregarDeporte_Click(object sender, EventArgs e)
         {

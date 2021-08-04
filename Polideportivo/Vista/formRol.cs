@@ -72,12 +72,6 @@ namespace Polideportivo.Vista
 
         private void formRol_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'bdpolideportivoDataSet2.vwrol' Puede moverla o quitarla según sea necesario.
-            //this.vwrolTableAdapter2.Fill(this.bdpolideportivoDataSet2.vwrol);
-            //// TODO: esta línea de código carga datos en la tabla 'bdpolideportivoDataSet1.vwrol' Puede moverla o quitarla según sea necesario.
-            //this.vwrolTableAdapter1.Fill(this.bdpolideportivoDataSet1.vwrol);
-            //// TODO: esta línea de código carga datos en la tabla 'bdpolideportivoDataSet.vwrol' Puede moverla o quitarla según sea necesario.
-            //this.vwrolTableAdapter.Fill(this.bdpolideportivoDataSet.vwrol);
 
 
         }

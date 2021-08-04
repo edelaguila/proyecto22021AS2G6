@@ -100,6 +100,7 @@ namespace Polideportivo.Vista
             // cboEquipo
             // 
             this.cboEquipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEquipo.Enabled = false;
             this.cboEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboEquipo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEquipo.FormattingEnabled = true;
@@ -135,6 +136,7 @@ namespace Polideportivo.Vista
             // cboRol
             // 
             this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboRol.Enabled = false;
             this.cboRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboRol.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboRol.FormattingEnabled = true;
@@ -142,7 +144,6 @@ namespace Polideportivo.Vista
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(121, 27);
             this.cboRol.TabIndex = 17;
-            this.cboRol.SelectedIndexChanged += new System.EventHandler(this.cboRol_SelectedIndexChanged);
             // 
             // txtAnotaciones
             // 

@@ -41,6 +41,7 @@ namespace Polideportivo.Vista
             cboDeporte.DataSource = deportes.mostrarDeportes();
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
+            cboDeporte.SelectedItem = cboDeporte.Items[0];
             // Para obtener el Id original que se va a modificar
             modeloOriginal = modelo;
             // Modificar el texto del label
@@ -100,20 +101,31 @@ namespace Polideportivo.Vista
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
-            controladorJugador modeloAgregar = new controladorJugador();
-            llenarModeloConDatosIngresados();
-            modeloAgregar.agregarJugador(modelo);
-            formOriginal.actualizarTablaJugadores();
-            cerrarForm(this);
+            if (validarFormEventos())
+            {
+                controladorJugador modeloAgregar = new controladorJugador();
+                llenarModeloConDatosIngresados();
+                modeloAgregar.agregarJugador(modelo);
+                formOriginal.actualizarTablaJugadores();
+                cerrarForm(this);
+            }
+            
         }
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
-            controladorJugador modeloModificar = new controladorJugador();
-            llenarModeloConDatosIngresados();
-            modeloModificar.modificarJugador(modelo);
-            formOriginal.actualizarTablaJugadores();
-            cerrarForm(this);
+            if (validarFormEventos())
+            {
+                controladorJugador modeloModificar = new controladorJugador();
+                llenarModeloConDatosIngresados();
+
+                modeloModificar.modificarJugador(modelo);
+                formOriginal.actualizarTablaJugadores();
+                cerrarForm(this);
+            }
+            
+            
+            
         }
 
         private void llenarModeloConDatosIngresados()
@@ -124,6 +136,17 @@ namespace Polideportivo.Vista
             modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
             modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
             modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
+        }
+
+        private bool validarFormEventos()
+        {
+            bool validado = false;
+            if (txtNombre.Text != "" && cboDeporte.SelectedValue != null
+                 && cboEquipo.SelectedValue != null/* && cboRol.SelectedValue != null*/)
+            {
+                validado = true;
+            }
+            return validado;
         }
     }
 }

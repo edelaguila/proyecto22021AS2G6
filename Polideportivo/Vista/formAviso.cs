@@ -18,12 +18,13 @@ namespace Polideportivo.Vista
     {
 
 
-        public formAviso(string mensaje)
+        public formAviso(string mensaje, int y)
         {
 
             InitializeComponent();
-            lblAviso.MaximumSize = new Size(300, 250);
+            lblAviso.MaximumSize = new Size(250, y-50);
             lblAviso.Text = mensaje;
+            this.Height = y;
             
         }
 
@@ -36,12 +37,17 @@ namespace Polideportivo.Vista
 
         private void btnErrorEntendido_Click(object sender, EventArgs e)
         {
-
+            cerrarForm(this);
         }
 
         private void lblError_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAvisoEntendido_Click(object sender, EventArgs e)
+        {
+            cerrarForm(this);
         }
     }
 }

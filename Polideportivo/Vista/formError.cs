@@ -23,6 +23,15 @@ namespace Polideportivo.Vista
             InitializeComponent();
             lblError.Text = e.Message;
             lblError.MaximumSize = new Size(300, 250);
+            this.Height = 300;
+        }
+
+        public formError(string e)
+        {
+            InitializeComponent();
+            lblError.Text = e;
+            lblError.MaximumSize = new Size(300, 250);
+            this.Height = 300;
         }
 
 

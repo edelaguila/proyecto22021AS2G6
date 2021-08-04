@@ -7,7 +7,7 @@ namespace Polideportivo.Conexion
 {
     class ConexionODBC
     {
-        string dsn = "Dsn=polideportivo";
+        string dsn = "Dsn=bdpolideportivo";
         public OdbcConnection abrirConexion()
         {
             OdbcConnection conexion = new OdbcConnection(dsn);

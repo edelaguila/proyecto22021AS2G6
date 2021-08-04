@@ -17,6 +17,8 @@ namespace Polideportivo.Vista
     public partial class formEquipoEventos : Form
     {
 
+        controladorEquipo controlador = new controladorEquipo();
+        modeloEquipo modelo = new modeloEquipo();
 
         public formEquipoEventos()
         {
@@ -26,7 +28,7 @@ namespace Polideportivo.Vista
 
         formEquipo formOriginal = new formEquipo();
 
-        modeloEquipo modeloOriginal;
+        modeloEquipo modeloOriginal = new modeloEquipo();
         public formEquipoEventos(modeloEquipo modelo, formEquipo form)
         {
             // Este constructor es el que se utiliza para modificar datos
@@ -35,12 +37,8 @@ namespace Polideportivo.Vista
             btnAgregarEquipo.Visible = false;
             formOriginal = form;
             txtNombre.Text = modelo.nombre;
-            //txtAnotaciones.Text = modelo.anotaciones.ToString();
             // Llenar combobox de deportes
-            controladorDeporte deportes = new controladorDeporte();
-            cboDeporte.DataSource = deportes.mostrarDeportes();
-            cboDeporte.DisplayMember = "nombre";
-            cboDeporte.ValueMember = "pkId";
+            llenarCboDeporte();
             // Para obtener el Id original que se va a modificar
             modeloOriginal = modelo;
             // Modificar el texto del label
@@ -56,19 +54,12 @@ namespace Polideportivo.Vista
             btnAgregarEquipo.Visible = true;
             btnModificarEquipo.Visible = false;
             // Llenar combobox de deportes
-            controladorDeporte deportes = new controladorDeporte();
-            cboDeporte.DataSource = deportes.mostrarDeportes();
-            cboDeporte.DisplayMember = "nombre";
-            cboDeporte.ValueMember = "pkId";
+            llenarCboDeporte();
             cboDeporte.SelectedIndex = -1;
             formOriginal = form;
             // Modificar el texto del título
             lblEquipoEvento.Text = "AGREGAR JUGADOR";
         }
-
-
-
-       
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -78,10 +69,7 @@ namespace Polideportivo.Vista
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
-            controladorEquipo controlador = new controladorEquipo();
-            modeloEquipo modelo = new modeloEquipo();
-            modelo.nombre = txtNombre.Text;
-            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            llenarModeloConOpcionesSeleccionadas();
             controlador.agregarEquipo(modelo);
             formOriginal.actualizarTablaJugadores();
             cerrarForm(this);
@@ -89,14 +77,25 @@ namespace Polideportivo.Vista
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
-            controladorEquipo controlador = new controladorEquipo();
-            modeloEquipo modelo = new modeloEquipo();
-            modelo.pkId = modeloOriginal.pkId;
-            modelo.nombre = txtNombre.Text;
-            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            llenarModeloConOpcionesSeleccionadas();
             controlador.modificarEquipo(modelo);
             formOriginal.actualizarTablaJugadores();
             cerrarForm(this);
+        }
+
+        private void llenarCboDeporte()
+        {
+            controladorDeporte deportes = new controladorDeporte();
+            cboDeporte.DataSource = deportes.mostrarDeportes();
+            cboDeporte.DisplayMember = "nombre";
+            cboDeporte.ValueMember = "pkId";
+        }
+
+        private void llenarModeloConOpcionesSeleccionadas()
+        {
+            modelo.pkId = modeloOriginal.pkId;
+            modelo.nombre = txtNombre.Text;
+            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)

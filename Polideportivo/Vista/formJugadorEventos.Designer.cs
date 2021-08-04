@@ -142,7 +142,6 @@ namespace Polideportivo.Vista
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(121, 27);
             this.cboRol.TabIndex = 17;
-            this.cboRol.SelectedIndexChanged += new System.EventHandler(this.cboRol_SelectedIndexChanged);
             // 
             // txtAnotaciones
             // 

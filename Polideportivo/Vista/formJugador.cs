@@ -9,8 +9,16 @@ namespace Polideportivo.Vista
     public partial class formJugador : Form
     {
 
+        // Se declaran los campos que se van a llenar a partir de la fila seleccionada de la tabla
+        int id;
+        string nombre;
+        int anotaciones;
+        int fkIdEquipo;
+        int fkIdRol;
+        int fkIdDeporte;
 
-
+        // Se declara un modelo jugador para que guarde los datos de la fila sin perderlos
+        modeloJugador modeloFila = new modeloJugador();
 
         public formJugador()
         {
@@ -20,8 +28,11 @@ namespace Polideportivo.Vista
         private void formJugador_Load(object sender, EventArgs e)
         {
             this.vwjugadorTableAdapter.Fill(this.vwJugador.vwjugador);
+            // Se asigna la primera opción posible en la combobox de filtración
             cboBuscar.SelectedIndex = 0;
-            //tablaJugadores.Selec
+            // Se asigna la primera fila posible de la tabla y se llena el modelo
+            tablaJugadores.CurrentCell = tablaJugadores.Rows[0].Cells[1];
+            llenarModeloConFilaSeleccionada();
         }
 
 
@@ -32,28 +43,14 @@ namespace Polideportivo.Vista
         }
 
 
-        private void txtJugadorFiltrar_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-
-        modeloJugador modeloFila = new modeloJugador();
+        
         private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string nombre = tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
-            int id = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
-            int anotaciones = stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
-            int fkIdEquipo = stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
-            int fkIdRol = stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
-            int fkIdDeporte = stringAInt(tablaJugadores.SelectedRows[0].Cells[7].Value.ToString());
-            modeloFila.pkId = id;
-            modeloFila.nombre = nombre;
-            modeloFila.anotaciones = anotaciones;
-            modeloFila.fkIdEquipo = fkIdEquipo;
-            modeloFila.fkIdRol = fkIdRol;
-            modeloFila.fkIdDeporte = fkIdDeporte;
+            llenarModeloConFilaSeleccionada();
         }
+
+        
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
@@ -62,28 +59,16 @@ namespace Polideportivo.Vista
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
+            abrirForm(new formJugadorEventos(modeloFila, this));
 
-            if (modeloFila.pkId > 0)
-            {
-                abrirForm(new formJugadorEventos(modeloFila, this));
-            }
-            else
-            {
-                abrirForm(new formAviso("Por favor, seleccione el jugador que desea modificar"));
-            }
         }
 
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtFiltrar.Text))
-            {
-                vwjugadorBindingSource.Filter = string.Empty;
-            }
-            else
-            {
-                vwjugadorBindingSource.Filter = string.Format("{0}='{1}'",cboBuscar.Text,txtFiltrar.Text);
-            }
+            filtrarTabla();
         }
+
+        
 
         private void cboBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -97,11 +82,9 @@ namespace Polideportivo.Vista
 
         private void btnEliminarJugador_Click(object sender, EventArgs e)
         {
-            int id = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
+            llenarModeloConFilaSeleccionada();
             controladorJugador controlador = new controladorJugador();
-            modeloJugador modelo = new modeloJugador();
-            modelo.pkId = id;
-            controlador.eliminarJugador(modelo);
+            controlador.eliminarJugador(modeloFila);
             actualizarTablaJugadores();
         }
 
@@ -109,5 +92,34 @@ namespace Polideportivo.Vista
         {
             // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
         }
+
+        public void llenarModeloConFilaSeleccionada()
+        {
+            id = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
+            nombre = tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
+            anotaciones = stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
+            fkIdEquipo = stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
+            fkIdRol = stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
+            fkIdDeporte = stringAInt(tablaJugadores.SelectedRows[0].Cells[7].Value.ToString());
+            modeloFila.pkId = id;
+            modeloFila.nombre = nombre;
+            modeloFila.anotaciones = anotaciones;
+            modeloFila.fkIdEquipo = fkIdEquipo;
+            modeloFila.fkIdRol = fkIdRol;
+            modeloFila.fkIdDeporte = fkIdDeporte;
+        }
+
+        private void filtrarTabla()
+        {
+            if (string.IsNullOrEmpty(txtFiltrar.Text))
+            {
+                vwjugadorBindingSource.Filter = string.Empty;
+            }
+            else
+            {
+                vwjugadorBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
+            }
+        }
+
     }
 }

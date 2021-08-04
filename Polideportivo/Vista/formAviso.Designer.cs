@@ -32,7 +32,7 @@ namespace Polideportivo.Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAviso));
             this.lblAviso = new System.Windows.Forms.Label();
             this.parrotGradientPanel2 = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.btnErrorEntendido = new System.Windows.Forms.Button();
+            this.btnAvisoEntendido = new System.Windows.Forms.Button();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblJugadorEvento = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@ namespace Polideportivo.Vista
             this.lblAviso.BackColor = System.Drawing.Color.Transparent;
             this.lblAviso.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAviso.ForeColor = System.Drawing.Color.White;
-            this.lblAviso.Location = new System.Drawing.Point(52, 36);
+            this.lblAviso.Location = new System.Drawing.Point(75, 36);
             this.lblAviso.Name = "lblAviso";
             this.lblAviso.Size = new System.Drawing.Size(108, 18);
             this.lblAviso.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel2.BottomLeft = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel2.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.parrotGradientPanel2.Controls.Add(this.btnErrorEntendido);
+            this.parrotGradientPanel2.Controls.Add(this.btnAvisoEntendido);
             this.parrotGradientPanel2.Controls.Add(this.lblAviso);
             this.parrotGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parrotGradientPanel2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
@@ -77,25 +77,24 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel2.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.parrotGradientPanel2.TopRight = System.Drawing.Color.CornflowerBlue;
             // 
-            // btnErrorEntendido
+            // btnAvisoEntendido
             // 
-            this.btnErrorEntendido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnErrorEntendido.BackColor = System.Drawing.Color.White;
-            this.btnErrorEntendido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnErrorEntendido.FlatAppearance.BorderSize = 0;
-            this.btnErrorEntendido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnErrorEntendido.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnErrorEntendido.ForeColor = System.Drawing.Color.Black;
-            this.btnErrorEntendido.Image = ((System.Drawing.Image)(resources.GetObject("btnErrorEntendido.Image")));
-            this.btnErrorEntendido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnErrorEntendido.Location = new System.Drawing.Point(52, 218);
-            this.btnErrorEntendido.Name = "btnErrorEntendido";
-            this.btnErrorEntendido.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnErrorEntendido.Size = new System.Drawing.Size(291, 36);
-            this.btnErrorEntendido.TabIndex = 29;
-            this.btnErrorEntendido.Text = "    ENTENDIDO";
-            this.btnErrorEntendido.UseVisualStyleBackColor = false;
-            this.btnErrorEntendido.Click += new System.EventHandler(this.btnErrorEntendido_Click);
+            this.btnAvisoEntendido.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAvisoEntendido.BackColor = System.Drawing.Color.White;
+            this.btnAvisoEntendido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAvisoEntendido.FlatAppearance.BorderSize = 0;
+            this.btnAvisoEntendido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAvisoEntendido.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAvisoEntendido.ForeColor = System.Drawing.Color.Black;
+            this.btnAvisoEntendido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAvisoEntendido.Location = new System.Drawing.Point(78, 217);
+            this.btnAvisoEntendido.Name = "btnAvisoEntendido";
+            this.btnAvisoEntendido.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnAvisoEntendido.Size = new System.Drawing.Size(244, 36);
+            this.btnAvisoEntendido.TabIndex = 29;
+            this.btnAvisoEntendido.Text = "    ENTENDIDO";
+            this.btnAvisoEntendido.UseVisualStyleBackColor = false;
+            this.btnAvisoEntendido.Click += new System.EventHandler(this.btnAvisoEntendido_Click);
             // 
             // parrotGradientPanel1
             // 
@@ -124,9 +123,9 @@ namespace Polideportivo.Vista
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 49);
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
@@ -136,11 +135,11 @@ namespace Polideportivo.Vista
             this.lblJugadorEvento.BackColor = System.Drawing.Color.Transparent;
             this.lblJugadorEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJugadorEvento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblJugadorEvento.Location = new System.Drawing.Point(79, 20);
+            this.lblJugadorEvento.Location = new System.Drawing.Point(66, 19);
             this.lblJugadorEvento.Name = "lblJugadorEvento";
-            this.lblJugadorEvento.Size = new System.Drawing.Size(92, 25);
+            this.lblJugadorEvento.Size = new System.Drawing.Size(80, 25);
             this.lblJugadorEvento.TabIndex = 23;
-            this.lblJugadorEvento.Text = "ERROR";
+            this.lblJugadorEvento.Text = "AVISO";
             // 
             // btnSalir
             // 
@@ -155,7 +154,7 @@ namespace Polideportivo.Vista
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // formInformativo
+            // formAviso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -163,7 +162,7 @@ namespace Polideportivo.Vista
             this.Controls.Add(this.parrotGradientPanel2);
             this.Controls.Add(this.parrotGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "formInformativo";
+            this.Name = "formAviso";
             this.Text = "formInformativo";
             this.parrotGradientPanel2.ResumeLayout(false);
             this.parrotGradientPanel2.PerformLayout();
@@ -181,7 +180,7 @@ namespace Polideportivo.Vista
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.Label lblJugadorEvento;
-        private System.Windows.Forms.Button btnErrorEntendido;
+        private System.Windows.Forms.Button btnAvisoEntendido;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

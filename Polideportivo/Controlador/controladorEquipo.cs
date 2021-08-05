@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Polideportivo.Conexion;
 using Polideportivo.Modelo;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace Polideportivo.Controlador
     class controladorEquipo
     {
         modeloEquipo modelo;
-
+        ConexionODBC ODBC = new ConexionODBC();
         public controladorEquipo()
         {
 
@@ -60,6 +61,24 @@ namespace Polideportivo.Controlador
             conexionOdbc.Close();
             return modelo;
         }
+
+        public modeloEquipo eliminarEquipo(modeloEquipo modelo)
+        {
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                var sqlinsertar =
+                "DELETE FROM equipo WHERE pkId = ?pkId?;";
+                var ValorDeVariables = new
+                {
+                    pkId = modelo.pkId
+                };
+                var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
+            }
+            return modelo;
+        }
+
         public IEnumerable<modeloEquipo> mostrarEquipos()
         {
             IEnumerable<modeloEquipo> modeloList = new List<modeloEquipo>();

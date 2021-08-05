@@ -16,9 +16,16 @@ namespace Polideportivo.Vista
         public formEntrenador()
         {
             InitializeComponent();
+            // Este constructor es el que se utiliza para agregar datos
+            btnAgregarEntrenador.Visible = true;
+            // Llenar combobox de deportes
+            controladorDeporte deportes = new controladorDeporte();
+            cboDeporte.DataSource = deportes.mostrarDeportes();
+            cboDeporte.DisplayMember = "nombre";
+            cboDeporte.ValueMember = "pkId";
+            cboDeporte.SelectedIndex = -1;
+            // Modificar el texto del título
         }
-
-
 
 
 
@@ -26,10 +33,11 @@ namespace Polideportivo.Vista
         {
             // TODO: esta línea de código carga datos en la tabla 'vwEntrenador.vwentrenador' Puede moverla o quitarla según sea necesario.
             this.vwentrenadorTableAdapter.Fill(this.vwEntrenador.vwentrenador);
+            // TODO: esta línea de código carga datos en la tabla 'vwEntrenador.vwentrenador' Puede moverla o quitarla según sea necesario.
             cboBuscar.SelectedIndex = 0;
 
         }
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
             modeloDeporte modelo = new modeloDeporte();
@@ -43,26 +51,37 @@ namespace Polideportivo.Vista
         }
 
 
-        private void txtEntrenadorFiltrar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         modeloEntrenador modeloFila = new modeloEntrenador();
         private void tablaEntrenador_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = stringAInt(tablaEntrenador.SelectedRows[0].Cells[0].Value.ToString());
             string nombre = tablaEntrenador.SelectedRows[0].Cells[1].Value.ToString();
-            txtNombreEntrenador.Text = nombre;
+            txtNombre.Text = nombre;
             modeloFila.pkId = id;
 
+        }
+         private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboDeporte.SelectedIndex > -1)
+            {
+               
+                // Llenar la combobox de equipo dependiendo del deporte elegido
+                modeloEquipo modeloequipo = new modeloEquipo();
+                modeloequipo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+                controladorEquipo equipo = new controladorEquipo(modeloequipo);
+                cboEquipo.DataSource = equipo.mostrarEquipoPorDeporte();
+                cboEquipo.DisplayMember = "nombre";
+                cboEquipo.ValueMember = "pkId";
+            }
         }
 
         private void btnAgregarEntrenador_Click(object sender, EventArgs e)
         {
             controladorEntrenador modeloAgregar = new controladorEntrenador();
             modeloEntrenador modelo = new modeloEntrenador();
-            modelo.nombre = txtNombreEntrenador.Text;
+            modelo.nombre = txtNombre.Text;
+            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
             modeloAgregar.agregarEntrenador(modelo);
             actualizarTablaEntrenador();
         }
@@ -70,8 +89,11 @@ namespace Polideportivo.Vista
         private void btnModificarEntrenador_Click(object sender, EventArgs e)
         {
             controladorEntrenador modeloModificar = new controladorEntrenador();
-            modeloFila.nombre = txtNombreEntrenador.Text;
-            modeloModificar.modificarEntrenador(modeloFila);
+            modeloEntrenador modelo = new modeloEntrenador();
+            modelo.nombre = txtNombre.Text;
+            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
+            modeloModificar.modificarEntrenador(modelo);
             actualizarTablaEntrenador();
         }
 

@@ -102,6 +102,10 @@ namespace Polideportivo
         {
             gestorDeFormActivo(new formRol(), "ROLES");
         }
+        private void btnMenuEntrenador_Click(object sender, EventArgs e)
+        {
+            gestorDeFormActivo(new formEntrenador(), "ENTRENADOR");
+        }
 
         private void gestorDeFormActivo(Form formHijo, string formHijoActual)
         {
@@ -173,6 +177,7 @@ namespace Polideportivo
 
         }
 
+
         private void panelPrincipal_Paint(object sender, PaintEventArgs e)
         {
 
@@ -182,6 +187,7 @@ namespace Polideportivo
         {
             gestorDeFormActivo(new menu2(), "POLIDEPORTIVO");
         }
+
     }
 
 

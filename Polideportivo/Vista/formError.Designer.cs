@@ -49,7 +49,7 @@ namespace Polideportivo.Vista
             this.lblError.BackColor = System.Drawing.Color.Transparent;
             this.lblError.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.White;
-            this.lblError.Location = new System.Drawing.Point(52, 36);
+            this.lblError.Location = new System.Drawing.Point(52, 50);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(54, 18);
             this.lblError.TabIndex = 0;
@@ -79,7 +79,7 @@ namespace Polideportivo.Vista
             // 
             // btnErrorEntendido
             // 
-            this.btnErrorEntendido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnErrorEntendido.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnErrorEntendido.BackColor = System.Drawing.Color.White;
             this.btnErrorEntendido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnErrorEntendido.FlatAppearance.BorderSize = 0;

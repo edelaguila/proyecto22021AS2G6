@@ -119,6 +119,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdpolideportivoDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Conexion\ConexionODBC.cs" />
     <Compile Include="Controlador\controladorCampeonato.cs" />
     <Compile Include="Controlador\controladorDeporte.cs" />
     <Compile Include="Controlador\controladorEntrenador.cs" />

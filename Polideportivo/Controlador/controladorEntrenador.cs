@@ -17,7 +17,7 @@ namespace Polideportivo.Controlador
         {
             pruebas.Open();
             var sqlinsertar =
-                "INSERT INTO deporte (pkId, nombre, fkIdEquipo,) " +
+                "INSERT INTO entrenador (pkId, nombre, fkIdEquipo) " +
                 "VALUES (NULL, ?nombre?, ?fkIdEquipo?);";
             var ValorDeVariables = new
             {
@@ -34,7 +34,7 @@ namespace Polideportivo.Controlador
         {
             pruebas.Open();
             var sqlinsertar =
-                "UPDATE deporte SET nombre = ?nombre? " +
+                "UPDATE entrenador SET nombre = ?nombre? ," +
                 "fkIdEquipo = ?fkIdEquipo? " +
                 "WHERE pkId = ?pkId?;";
             var ValorDeVariables = new

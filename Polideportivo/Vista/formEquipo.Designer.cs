@@ -43,7 +43,7 @@ namespace Polideportivo.Vista
             this.vwequipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vwEquipo = new Polideportivo.Datos.vwEquipo();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.btnEliminarJugador = new System.Windows.Forms.Button();
+            this.btnEliminarEquipo = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.panelBuscarCol = new System.Windows.Forms.Panel();
             this.cboBuscar = new System.Windows.Forms.ComboBox();
@@ -162,7 +162,7 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.parrotGradientPanel1.Controls.Add(this.btnEliminarJugador);
+            this.parrotGradientPanel1.Controls.Add(this.btnEliminarEquipo);
             this.parrotGradientPanel1.Controls.Add(this.btnActualizar);
             this.parrotGradientPanel1.Controls.Add(this.panelBuscarCol);
             this.parrotGradientPanel1.Controls.Add(this.panel2);
@@ -183,26 +183,26 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.CornflowerBlue;
             // 
-            // btnEliminarJugador
+            // btnEliminarEquipo
             // 
-            this.btnEliminarJugador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminarJugador.BackColor = System.Drawing.Color.White;
-            this.btnEliminarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarJugador.FlatAppearance.BorderSize = 0;
-            this.btnEliminarJugador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEliminarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarJugador.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarJugador.Image")));
-            this.btnEliminarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarJugador.Location = new System.Drawing.Point(627, 20);
-            this.btnEliminarJugador.Name = "btnEliminarJugador";
-            this.btnEliminarJugador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnEliminarJugador.Size = new System.Drawing.Size(210, 36);
-            this.btnEliminarJugador.TabIndex = 33;
-            this.btnEliminarJugador.Text = "   E L I M I N A R";
-            this.btnEliminarJugador.UseVisualStyleBackColor = false;
-            this.btnEliminarJugador.Click += new System.EventHandler(this.btnEliminarJugador_Click);
+            this.btnEliminarEquipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarEquipo.BackColor = System.Drawing.Color.White;
+            this.btnEliminarEquipo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarEquipo.FlatAppearance.BorderSize = 0;
+            this.btnEliminarEquipo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEliminarEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarEquipo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarEquipo.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarEquipo.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarEquipo.Image")));
+            this.btnEliminarEquipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarEquipo.Location = new System.Drawing.Point(627, 20);
+            this.btnEliminarEquipo.Name = "btnEliminarEquipo";
+            this.btnEliminarEquipo.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnEliminarEquipo.Size = new System.Drawing.Size(210, 36);
+            this.btnEliminarEquipo.TabIndex = 33;
+            this.btnEliminarEquipo.Text = "   E L I M I N A R";
+            this.btnEliminarEquipo.UseVisualStyleBackColor = false;
+            this.btnEliminarEquipo.Click += new System.EventHandler(this.btnEliminarEquipo_Click);
             // 
             // btnActualizar
             // 
@@ -379,7 +379,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.ComboBox cboBuscar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnEliminarJugador;
+        private System.Windows.Forms.Button btnEliminarEquipo;
         private vwEquipo vwEquipo;
         private System.Windows.Forms.BindingSource vwequipoBindingSource;
         private Datos.vwEquipoTableAdapters.vwequipoTableAdapter vwequipoTableAdapter;

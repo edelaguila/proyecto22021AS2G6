@@ -63,10 +63,9 @@ namespace Polideportivo
         {
             if (panelLateralInterno.Width == 250)
             {
-                lblMenuTitulo.Visible = false;
                 panelLateralInterno.Width = 77;
-                panelLateralWrapper.Width = 91;
-                separadorLogo.Width = 55;
+                panelLateralWrapper.Width = 105;
+                separadorLogo.Width = 57;
             }
             else
             {

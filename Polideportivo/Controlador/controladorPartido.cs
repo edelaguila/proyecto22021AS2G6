@@ -17,8 +17,10 @@ namespace Polideportivo.AccesoDatos
         {
 
             var sqlinsertar =
-                "INSERT INTO jugador (pkId, equipo1, equipo2, campo, fecha, fase, fkIdCampeonato, fkIdEmpleado, fkIdResultado, fkIdEstado) " +
-                "VALUES (NULL, ?equipo1?, ?equipo2?, ?campo?, ?fecha?, ?fase?, ?fkIdCampeonato?, ?fkIdEmpleado?, ?fkIdResultado?, ?fkIdEstado?);";
+                "INSERT INTO jugador (pkId, equipo1, equipo2, campo, fecha, fase, fkIdCampeonato, " +
+                "fkIdEmpleado, fkIdResultado, fkIdEstado) " +
+                "VALUES (NULL, ?equipo1?, ?equipo2?, ?campo?, ?fecha?, ?fase?, ?fkIdCampeonato?, " +
+                "?fkIdEmpleado?, ?fkIdResultado?, ?fkIdEstado?);";
             var ValorDeVariables = new
             {
                 equipo1 = modelo.equipo1,

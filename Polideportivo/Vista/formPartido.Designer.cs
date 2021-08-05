@@ -31,7 +31,6 @@ namespace Polideportivo.Vista
         /// </summary>
         private void InitializeComponent()
         {
-
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -349,6 +348,7 @@ namespace Polideportivo.Vista
             this.pkIdPartidoDataGridViewTextBoxColumn.Name = "pkIdPartidoDataGridViewTextBoxColumn";
             this.pkIdPartidoDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdPartidoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdPartidoDataGridViewTextBoxColumn.Visible = false;
             // 
             // equipo1DataGridViewTextBoxColumn
             // 
@@ -412,6 +412,7 @@ namespace Polideportivo.Vista
             this.pkIdCampeonatoDataGridViewTextBoxColumn.Name = "pkIdCampeonatoDataGridViewTextBoxColumn";
             this.pkIdCampeonatoDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdCampeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdCampeonatoDataGridViewTextBoxColumn.Visible = false;
             // 
             // campeonatoDataGridViewTextBoxColumn
             // 
@@ -430,6 +431,7 @@ namespace Polideportivo.Vista
             this.pkIdEmpleadoDataGridViewTextBoxColumn.Name = "pkIdEmpleadoDataGridViewTextBoxColumn";
             this.pkIdEmpleadoDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdEmpleadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdEmpleadoDataGridViewTextBoxColumn.Visible = false;
             // 
             // empleadoDataGridViewTextBoxColumn
             // 
@@ -448,6 +450,7 @@ namespace Polideportivo.Vista
             this.pkIdResultadoDataGridViewTextBoxColumn.Name = "pkIdResultadoDataGridViewTextBoxColumn";
             this.pkIdResultadoDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdResultadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdResultadoDataGridViewTextBoxColumn.Visible = false;
             // 
             // resultado1DataGridViewTextBoxColumn
             // 
@@ -488,7 +491,6 @@ namespace Polideportivo.Vista
             ((System.ComponentModel.ISupportInitialize)(this.vwpartidoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
-
         }
 
         #endregion
@@ -505,7 +507,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminarJugador;
         private System.Windows.Forms.Label label1;
-        private vwPartido vwPartido;
+        private Datos.vwPartido vwPartido;
         private System.Windows.Forms.BindingSource vwpartidoBindingSource;
         private Datos.vwPartidoTableAdapters.vwpartidoTableAdapter vwpartidoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdPartidoDataGridViewTextBoxColumn;

@@ -32,10 +32,12 @@ namespace Polideportivo.Vista
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formEntrenador));
             this.tablaEntrenador = new Zuby.ADGV.AdvancedDataGridView();
+            this.vwentrenadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vwEntrenador = new Polideportivo.vwEntrenador();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.cboDeporte = new System.Windows.Forms.ComboBox();
@@ -53,8 +55,6 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarEntrenador = new System.Windows.Forms.Button();
             this.btnAgregarEntrenador = new System.Windows.Forms.Button();
-            this.vwEntrenador = new Polideportivo.vwEntrenador();
-            this.vwentrenadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vwentrenadorTableAdapter = new Polideportivo.vwEntrenadorTableAdapters.vwentrenadorTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,13 +63,13 @@ namespace Polideportivo.Vista
             this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEntrenador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwentrenadorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwEntrenador)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             this.panelBuscarCol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwEntrenador)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwentrenadorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tablaEntrenador
@@ -83,14 +83,14 @@ namespace Polideportivo.Vista
             this.tablaEntrenador.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tablaEntrenador.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tablaEntrenador.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaEntrenador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaEntrenador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tablaEntrenador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaEntrenador.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -100,15 +100,15 @@ namespace Polideportivo.Vista
             this.pkIdDeporteDataGridViewTextBoxColumn,
             this.deporteDataGridViewTextBoxColumn});
             this.tablaEntrenador.DataSource = this.vwentrenadorBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaEntrenador.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaEntrenador.DefaultCellStyle = dataGridViewCellStyle2;
             this.tablaEntrenador.FilterAndSortEnabled = true;
             this.tablaEntrenador.Location = new System.Drawing.Point(85, 143);
             this.tablaEntrenador.Name = "tablaEntrenador";
@@ -121,11 +121,21 @@ namespace Polideportivo.Vista
             this.tablaEntrenador.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEntrenador_CellClick);
             this.tablaEntrenador.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.tablaEntrenador_DataError);
             // 
+            // vwentrenadorBindingSource
+            // 
+            this.vwentrenadorBindingSource.DataMember = "vwentrenador";
+            this.vwentrenadorBindingSource.DataSource = this.vwEntrenador;
+            // 
+            // vwEntrenador
+            // 
+            this.vwEntrenador.DataSetName = "vwEntrenador";
+            this.vwEntrenador.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // parrotGradientPanel1
             // 
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.MidnightBlue;
-            this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
             this.parrotGradientPanel1.Controls.Add(this.label2);
             this.parrotGradientPanel1.Controls.Add(this.cboDeporte);
             this.parrotGradientPanel1.Controls.Add(this.cboEquipo);
@@ -140,10 +150,10 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.Controls.Add(this.btnAgregarEntrenador);
             this.parrotGradientPanel1.Controls.Add(this.tablaEntrenador);
             this.parrotGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.Low;
             this.parrotGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.parrotGradientPanel1.Name = "parrotGradientPanel1";
-            this.parrotGradientPanel1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.parrotGradientPanel1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighSpeed;
             this.parrotGradientPanel1.PrimerColor = System.Drawing.Color.White;
             this.parrotGradientPanel1.Size = new System.Drawing.Size(900, 595);
             this.parrotGradientPanel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
@@ -168,6 +178,7 @@ namespace Polideportivo.Vista
             // 
             // cboDeporte
             // 
+            this.cboDeporte.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cboDeporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDeporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboDeporte.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,6 +191,7 @@ namespace Polideportivo.Vista
             // 
             // cboEquipo
             // 
+            this.cboEquipo.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cboEquipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboEquipo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -226,7 +238,7 @@ namespace Polideportivo.Vista
             // 
             // btnEliminarEntrenador
             // 
-            this.btnEliminarEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarEntrenador.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEliminarEntrenador.BackColor = System.Drawing.Color.White;
             this.btnEliminarEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarEntrenador.FlatAppearance.BorderSize = 0;
@@ -247,7 +259,7 @@ namespace Polideportivo.Vista
             // 
             // btnActualizarEntrenador
             // 
-            this.btnActualizarEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizarEntrenador.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnActualizarEntrenador.BackColor = System.Drawing.Color.White;
             this.btnActualizarEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizarEntrenador.FlatAppearance.BorderSize = 0;
@@ -340,7 +352,7 @@ namespace Polideportivo.Vista
             // 
             // btnModificarEntrenador
             // 
-            this.btnModificarEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificarEntrenador.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnModificarEntrenador.BackColor = System.Drawing.Color.White;
             this.btnModificarEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificarEntrenador.FlatAppearance.BorderSize = 0;
@@ -361,7 +373,7 @@ namespace Polideportivo.Vista
             // 
             // btnAgregarEntrenador
             // 
-            this.btnAgregarEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarEntrenador.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnAgregarEntrenador.BackColor = System.Drawing.Color.White;
             this.btnAgregarEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarEntrenador.FlatAppearance.BorderSize = 0;
@@ -380,16 +392,6 @@ namespace Polideportivo.Vista
             this.btnAgregarEntrenador.UseVisualStyleBackColor = false;
             this.btnAgregarEntrenador.Click += new System.EventHandler(this.btnAgregarEntrenador_Click);
             // 
-            // vwEntrenador
-            // 
-            this.vwEntrenador.DataSetName = "vwEntrenador";
-            this.vwEntrenador.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vwentrenadorBindingSource
-            // 
-            this.vwentrenadorBindingSource.DataMember = "vwentrenador";
-            this.vwentrenadorBindingSource.DataSource = this.vwEntrenador;
-            // 
             // vwentrenadorTableAdapter
             // 
             this.vwentrenadorTableAdapter.ClearBeforeFill = true;
@@ -402,6 +404,7 @@ namespace Polideportivo.Vista
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -420,6 +423,7 @@ namespace Polideportivo.Vista
             this.pkIdEquipoDataGridViewTextBoxColumn.Name = "pkIdEquipoDataGridViewTextBoxColumn";
             this.pkIdEquipoDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdEquipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdEquipoDataGridViewTextBoxColumn.Visible = false;
             // 
             // equipoDataGridViewTextBoxColumn
             // 
@@ -438,6 +442,7 @@ namespace Polideportivo.Vista
             this.pkIdDeporteDataGridViewTextBoxColumn.Name = "pkIdDeporteDataGridViewTextBoxColumn";
             this.pkIdDeporteDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdDeporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdDeporteDataGridViewTextBoxColumn.Visible = false;
             // 
             // deporteDataGridViewTextBoxColumn
             // 
@@ -459,6 +464,8 @@ namespace Polideportivo.Vista
             this.Text = "formEntrenador";
             this.Load += new System.EventHandler(this.formDeporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaEntrenador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwentrenadorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwEntrenador)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
             this.parrotGradientPanel1.PerformLayout();
             this.panelBuscarCol.ResumeLayout(false);
@@ -466,8 +473,6 @@ namespace Polideportivo.Vista
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwEntrenador)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwentrenadorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

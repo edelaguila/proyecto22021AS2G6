@@ -20,17 +20,17 @@ namespace Polideportivo {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("bdpolideportivoDataSet2")]
+    [global::System.Xml.Serialization.XmlRootAttribute("vwPartido")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class bdpolideportivoDataSet2 : global::System.Data.DataSet {
+    public partial class vwPartido : global::System.Data.DataSet {
         
-        private vwrolDataTable tablevwrol;
+        private vwpartidoDataTable tablevwpartido;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public bdpolideportivoDataSet2() {
+        public vwPartido() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Polideportivo {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected bdpolideportivoDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected vwPartido(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Polideportivo {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["vwrol"] != null)) {
-                    base.Tables.Add(new vwrolDataTable(ds.Tables["vwrol"]));
+                if ((ds.Tables["vwpartido"] != null)) {
+                    base.Tables.Add(new vwpartidoDataTable(ds.Tables["vwpartido"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Polideportivo {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public vwrolDataTable vwrol {
+        public vwpartidoDataTable vwpartido {
             get {
-                return this.tablevwrol;
+                return this.tablevwpartido;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Polideportivo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            bdpolideportivoDataSet2 cln = ((bdpolideportivoDataSet2)(base.Clone()));
+            vwPartido cln = ((vwPartido)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Polideportivo {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["vwrol"] != null)) {
-                    base.Tables.Add(new vwrolDataTable(ds.Tables["vwrol"]));
+                if ((ds.Tables["vwpartido"] != null)) {
+                    base.Tables.Add(new vwpartidoDataTable(ds.Tables["vwpartido"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Polideportivo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablevwrol = ((vwrolDataTable)(base.Tables["vwrol"]));
+            this.tablevwpartido = ((vwpartidoDataTable)(base.Tables["vwpartido"]));
             if ((initTable == true)) {
-                if ((this.tablevwrol != null)) {
-                    this.tablevwrol.InitVars();
+                if ((this.tablevwpartido != null)) {
+                    this.tablevwpartido.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Polideportivo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "bdpolideportivoDataSet2";
+            this.DataSetName = "vwPartido";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/bdpolideportivoDataSet2.xsd";
+            this.Namespace = "http://tempuri.org/vwPartido.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablevwrol = new vwrolDataTable();
-            base.Tables.Add(this.tablevwrol);
+            this.tablevwpartido = new vwpartidoDataTable();
+            base.Tables.Add(this.tablevwpartido);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializevwrol() {
+        private bool ShouldSerializevwpartido() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Polideportivo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            bdpolideportivoDataSet2 ds = new bdpolideportivoDataSet2();
+            vwPartido ds = new vwPartido();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,23 +270,49 @@ namespace Polideportivo {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void vwrolRowChangeEventHandler(object sender, vwrolRowChangeEvent e);
+        public delegate void vwpartidoRowChangeEventHandler(object sender, vwpartidoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class vwrolDataTable : global::System.Data.TypedTableBase<vwrolRow> {
+        public partial class vwpartidoDataTable : global::System.Data.TypedTableBase<vwpartidoRow> {
             
-            private global::System.Data.DataColumn columnnombre;
+            private global::System.Data.DataColumn columnpkIdPartido;
             
-            private global::System.Data.DataColumn columndeporte;
+            private global::System.Data.DataColumn columnequipo1;
+            
+            private global::System.Data.DataColumn columnequipo2;
+            
+            private global::System.Data.DataColumn columncampo;
+            
+            private global::System.Data.DataColumn columnfecha;
+            
+            private global::System.Data.DataColumn columnfase;
+            
+            private global::System.Data.DataColumn columnpkIdCampeonato;
+            
+            private global::System.Data.DataColumn columncampeonato;
+            
+            private global::System.Data.DataColumn columnpkIdEmpleado;
+            
+            private global::System.Data.DataColumn columnempleado;
+            
+            private global::System.Data.DataColumn columnpkIdResultado;
+            
+            private global::System.Data.DataColumn columnresultado1;
+            
+            private global::System.Data.DataColumn columnresultado2;
+            
+            private global::System.Data.DataColumn columnpkIdEstado;
+            
+            private global::System.Data.DataColumn columnestado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwrolDataTable() {
-                this.TableName = "vwrol";
+            public vwpartidoDataTable() {
+                this.TableName = "vwpartido";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +320,7 @@ namespace Polideportivo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal vwrolDataTable(global::System.Data.DataTable table) {
+            internal vwpartidoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,24 +337,128 @@ namespace Polideportivo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected vwrolDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected vwpartidoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn nombreColumn {
+            public global::System.Data.DataColumn pkIdPartidoColumn {
                 get {
-                    return this.columnnombre;
+                    return this.columnpkIdPartido;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn deporteColumn {
+            public global::System.Data.DataColumn equipo1Column {
                 get {
-                    return this.columndeporte;
+                    return this.columnequipo1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn equipo2Column {
+                get {
+                    return this.columnequipo2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn campoColumn {
+                get {
+                    return this.columncampo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn fechaColumn {
+                get {
+                    return this.columnfecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn faseColumn {
+                get {
+                    return this.columnfase;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn pkIdCampeonatoColumn {
+                get {
+                    return this.columnpkIdCampeonato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn campeonatoColumn {
+                get {
+                    return this.columncampeonato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn pkIdEmpleadoColumn {
+                get {
+                    return this.columnpkIdEmpleado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn empleadoColumn {
+                get {
+                    return this.columnempleado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn pkIdResultadoColumn {
+                get {
+                    return this.columnpkIdResultado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn resultado1Column {
+                get {
+                    return this.columnresultado1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn resultado2Column {
+                get {
+                    return this.columnresultado2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn pkIdEstadoColumn {
+                get {
+                    return this.columnpkIdEstado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn estadoColumn {
+                get {
+                    return this.columnestado;
                 }
             }
             
@@ -343,46 +473,70 @@ namespace Polideportivo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwrolRow this[int index] {
+            public vwpartidoRow this[int index] {
                 get {
-                    return ((vwrolRow)(this.Rows[index]));
+                    return ((vwpartidoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event vwrolRowChangeEventHandler vwrolRowChanging;
+            public event vwpartidoRowChangeEventHandler vwpartidoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event vwrolRowChangeEventHandler vwrolRowChanged;
+            public event vwpartidoRowChangeEventHandler vwpartidoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event vwrolRowChangeEventHandler vwrolRowDeleting;
+            public event vwpartidoRowChangeEventHandler vwpartidoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event vwrolRowChangeEventHandler vwrolRowDeleted;
+            public event vwpartidoRowChangeEventHandler vwpartidoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddvwrolRow(vwrolRow row) {
+            public void AddvwpartidoRow(vwpartidoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwrolRow AddvwrolRow(string nombre, string deporte) {
-                vwrolRow rowvwrolRow = ((vwrolRow)(this.NewRow()));
+            public vwpartidoRow AddvwpartidoRow(string equipo1, string equipo2, string campo, System.DateTime fecha, string fase, string campeonato, string empleado, int resultado1, int resultado2, int pkIdEstado, string estado) {
+                vwpartidoRow rowvwpartidoRow = ((vwpartidoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        nombre,
-                        deporte};
-                rowvwrolRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowvwrolRow);
-                return rowvwrolRow;
+                        null,
+                        equipo1,
+                        equipo2,
+                        campo,
+                        fecha,
+                        fase,
+                        null,
+                        campeonato,
+                        null,
+                        empleado,
+                        null,
+                        resultado1,
+                        resultado2,
+                        pkIdEstado,
+                        estado};
+                rowvwpartidoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowvwpartidoRow);
+                return rowvwpartidoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public vwpartidoRow FindBypkIdPartidopkIdCampeonatopkIdEmpleadopkIdResultadopkIdEstado(int pkIdPartido, int pkIdCampeonato, int pkIdEmpleado, int pkIdResultado, int pkIdEstado) {
+                return ((vwpartidoRow)(this.Rows.Find(new object[] {
+                            pkIdPartido,
+                            pkIdCampeonato,
+                            pkIdEmpleado,
+                            pkIdResultado,
+                            pkIdEstado})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                vwrolDataTable cln = ((vwrolDataTable)(base.Clone()));
+                vwpartidoDataTable cln = ((vwpartidoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -390,53 +544,127 @@ namespace Polideportivo {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new vwrolDataTable();
+                return new vwpartidoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnnombre = base.Columns["nombre"];
-                this.columndeporte = base.Columns["deporte"];
+                this.columnpkIdPartido = base.Columns["pkIdPartido"];
+                this.columnequipo1 = base.Columns["equipo1"];
+                this.columnequipo2 = base.Columns["equipo2"];
+                this.columncampo = base.Columns["campo"];
+                this.columnfecha = base.Columns["fecha"];
+                this.columnfase = base.Columns["fase"];
+                this.columnpkIdCampeonato = base.Columns["pkIdCampeonato"];
+                this.columncampeonato = base.Columns["campeonato"];
+                this.columnpkIdEmpleado = base.Columns["pkIdEmpleado"];
+                this.columnempleado = base.Columns["empleado"];
+                this.columnpkIdResultado = base.Columns["pkIdResultado"];
+                this.columnresultado1 = base.Columns["resultado1"];
+                this.columnresultado2 = base.Columns["resultado2"];
+                this.columnpkIdEstado = base.Columns["pkIdEstado"];
+                this.columnestado = base.Columns["estado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre);
-                this.columndeporte = new global::System.Data.DataColumn("deporte", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndeporte);
-                this.columnnombre.AllowDBNull = false;
-                this.columnnombre.MaxLength = 45;
-                this.columndeporte.AllowDBNull = false;
-                this.columndeporte.MaxLength = 45;
+                this.columnpkIdPartido = new global::System.Data.DataColumn("pkIdPartido", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpkIdPartido);
+                this.columnequipo1 = new global::System.Data.DataColumn("equipo1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnequipo1);
+                this.columnequipo2 = new global::System.Data.DataColumn("equipo2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnequipo2);
+                this.columncampo = new global::System.Data.DataColumn("campo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncampo);
+                this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha);
+                this.columnfase = new global::System.Data.DataColumn("fase", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfase);
+                this.columnpkIdCampeonato = new global::System.Data.DataColumn("pkIdCampeonato", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpkIdCampeonato);
+                this.columncampeonato = new global::System.Data.DataColumn("campeonato", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncampeonato);
+                this.columnpkIdEmpleado = new global::System.Data.DataColumn("pkIdEmpleado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpkIdEmpleado);
+                this.columnempleado = new global::System.Data.DataColumn("empleado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnempleado);
+                this.columnpkIdResultado = new global::System.Data.DataColumn("pkIdResultado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpkIdResultado);
+                this.columnresultado1 = new global::System.Data.DataColumn("resultado1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnresultado1);
+                this.columnresultado2 = new global::System.Data.DataColumn("resultado2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnresultado2);
+                this.columnpkIdEstado = new global::System.Data.DataColumn("pkIdEstado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpkIdEstado);
+                this.columnestado = new global::System.Data.DataColumn("estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnestado);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnpkIdPartido,
+                                this.columnpkIdCampeonato,
+                                this.columnpkIdEmpleado,
+                                this.columnpkIdResultado,
+                                this.columnpkIdEstado}, true));
+                this.columnpkIdPartido.AutoIncrement = true;
+                this.columnpkIdPartido.AutoIncrementSeed = -1;
+                this.columnpkIdPartido.AutoIncrementStep = -1;
+                this.columnpkIdPartido.AllowDBNull = false;
+                this.columnequipo1.AllowDBNull = false;
+                this.columnequipo1.MaxLength = 45;
+                this.columnequipo2.AllowDBNull = false;
+                this.columnequipo2.MaxLength = 45;
+                this.columncampo.AllowDBNull = false;
+                this.columncampo.MaxLength = 45;
+                this.columnfecha.AllowDBNull = false;
+                this.columnfase.AllowDBNull = false;
+                this.columnfase.MaxLength = 45;
+                this.columnpkIdCampeonato.AutoIncrement = true;
+                this.columnpkIdCampeonato.AutoIncrementSeed = -1;
+                this.columnpkIdCampeonato.AutoIncrementStep = -1;
+                this.columnpkIdCampeonato.AllowDBNull = false;
+                this.columncampeonato.AllowDBNull = false;
+                this.columncampeonato.MaxLength = 45;
+                this.columnpkIdEmpleado.AutoIncrement = true;
+                this.columnpkIdEmpleado.AutoIncrementSeed = -1;
+                this.columnpkIdEmpleado.AutoIncrementStep = -1;
+                this.columnpkIdEmpleado.AllowDBNull = false;
+                this.columnempleado.AllowDBNull = false;
+                this.columnempleado.MaxLength = 45;
+                this.columnpkIdResultado.AutoIncrement = true;
+                this.columnpkIdResultado.AutoIncrementSeed = -1;
+                this.columnpkIdResultado.AutoIncrementStep = -1;
+                this.columnpkIdResultado.AllowDBNull = false;
+                this.columnresultado1.AllowDBNull = false;
+                this.columnresultado2.AllowDBNull = false;
+                this.columnpkIdEstado.AllowDBNull = false;
+                this.columnestado.MaxLength = 45;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwrolRow NewvwrolRow() {
-                return ((vwrolRow)(this.NewRow()));
+            public vwpartidoRow NewvwpartidoRow() {
+                return ((vwpartidoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new vwrolRow(builder);
+                return new vwpartidoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(vwrolRow);
+                return typeof(vwpartidoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.vwrolRowChanged != null)) {
-                    this.vwrolRowChanged(this, new vwrolRowChangeEvent(((vwrolRow)(e.Row)), e.Action));
+                if ((this.vwpartidoRowChanged != null)) {
+                    this.vwpartidoRowChanged(this, new vwpartidoRowChangeEvent(((vwpartidoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -444,8 +672,8 @@ namespace Polideportivo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.vwrolRowChanging != null)) {
-                    this.vwrolRowChanging(this, new vwrolRowChangeEvent(((vwrolRow)(e.Row)), e.Action));
+                if ((this.vwpartidoRowChanging != null)) {
+                    this.vwpartidoRowChanging(this, new vwpartidoRowChangeEvent(((vwpartidoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -453,8 +681,8 @@ namespace Polideportivo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.vwrolRowDeleted != null)) {
-                    this.vwrolRowDeleted(this, new vwrolRowChangeEvent(((vwrolRow)(e.Row)), e.Action));
+                if ((this.vwpartidoRowDeleted != null)) {
+                    this.vwpartidoRowDeleted(this, new vwpartidoRowChangeEvent(((vwpartidoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -462,14 +690,14 @@ namespace Polideportivo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.vwrolRowDeleting != null)) {
-                    this.vwrolRowDeleting(this, new vwrolRowChangeEvent(((vwrolRow)(e.Row)), e.Action));
+                if ((this.vwpartidoRowDeleting != null)) {
+                    this.vwpartidoRowDeleting(this, new vwpartidoRowChangeEvent(((vwpartidoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovevwrolRow(vwrolRow row) {
+            public void RemovevwpartidoRow(vwpartidoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -478,7 +706,7 @@ namespace Polideportivo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                bdpolideportivoDataSet2 ds = new bdpolideportivoDataSet2();
+                vwPartido ds = new vwPartido();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -496,7 +724,7 @@ namespace Polideportivo {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "vwrolDataTable";
+                attribute2.FixedValue = "vwpartidoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -540,37 +768,197 @@ namespace Polideportivo {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class vwrolRow : global::System.Data.DataRow {
+        public partial class vwpartidoRow : global::System.Data.DataRow {
             
-            private vwrolDataTable tablevwrol;
+            private vwpartidoDataTable tablevwpartido;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal vwrolRow(global::System.Data.DataRowBuilder rb) : 
+            internal vwpartidoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablevwrol = ((vwrolDataTable)(this.Table));
+                this.tablevwpartido = ((vwpartidoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string nombre {
+            public int pkIdPartido {
                 get {
-                    return ((string)(this[this.tablevwrol.nombreColumn]));
+                    return ((int)(this[this.tablevwpartido.pkIdPartidoColumn]));
                 }
                 set {
-                    this[this.tablevwrol.nombreColumn] = value;
+                    this[this.tablevwpartido.pkIdPartidoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string deporte {
+            public string equipo1 {
                 get {
-                    return ((string)(this[this.tablevwrol.deporteColumn]));
+                    return ((string)(this[this.tablevwpartido.equipo1Column]));
                 }
                 set {
-                    this[this.tablevwrol.deporteColumn] = value;
+                    this[this.tablevwpartido.equipo1Column] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string equipo2 {
+                get {
+                    return ((string)(this[this.tablevwpartido.equipo2Column]));
+                }
+                set {
+                    this[this.tablevwpartido.equipo2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string campo {
+                get {
+                    return ((string)(this[this.tablevwpartido.campoColumn]));
+                }
+                set {
+                    this[this.tablevwpartido.campoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime fecha {
+                get {
+                    return ((global::System.DateTime)(this[this.tablevwpartido.fechaColumn]));
+                }
+                set {
+                    this[this.tablevwpartido.fechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string fase {
+                get {
+                    return ((string)(this[this.tablevwpartido.faseColumn]));
+                }
+                set {
+                    this[this.tablevwpartido.faseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int pkIdCampeonato {
+                get {
+                    return ((int)(this[this.tablevwpartido.pkIdCampeonatoColumn]));
+                }
+                set {
+                    this[this.tablevwpartido.pkIdCampeonatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string campeonato {
+                get {
+                    return ((string)(this[this.tablevwpartido.campeonatoColumn]));
+                }
+                set {
+                    this[this.tablevwpartido.campeonatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int pkIdEmpleado {
+                get {
+                    return ((int)(this[this.tablevwpartido.pkIdEmpleadoColumn]));
+                }
+                set {
+                    this[this.tablevwpartido.pkIdEmpleadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string empleado {
+                get {
+                    return ((string)(this[this.tablevwpartido.empleadoColumn]));
+                }
+                set {
+                    this[this.tablevwpartido.empleadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int pkIdResultado {
+                get {
+                    return ((int)(this[this.tablevwpartido.pkIdResultadoColumn]));
+                }
+                set {
+                    this[this.tablevwpartido.pkIdResultadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int resultado1 {
+                get {
+                    return ((int)(this[this.tablevwpartido.resultado1Column]));
+                }
+                set {
+                    this[this.tablevwpartido.resultado1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int resultado2 {
+                get {
+                    return ((int)(this[this.tablevwpartido.resultado2Column]));
+                }
+                set {
+                    this[this.tablevwpartido.resultado2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int pkIdEstado {
+                get {
+                    return ((int)(this[this.tablevwpartido.pkIdEstadoColumn]));
+                }
+                set {
+                    this[this.tablevwpartido.pkIdEstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string estado {
+                get {
+                    try {
+                        return ((string)(this[this.tablevwpartido.estadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'estado\' de la tabla \'vwpartido\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwpartido.estadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsestadoNull() {
+                return this.IsNull(this.tablevwpartido.estadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetestadoNull() {
+                this[this.tablevwpartido.estadoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -578,22 +966,22 @@ namespace Polideportivo {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class vwrolRowChangeEvent : global::System.EventArgs {
+        public class vwpartidoRowChangeEvent : global::System.EventArgs {
             
-            private vwrolRow eventRow;
+            private vwpartidoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwrolRowChangeEvent(vwrolRow row, global::System.Data.DataRowAction action) {
+            public vwpartidoRowChangeEvent(vwpartidoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwrolRow Row {
+            public vwpartidoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -609,7 +997,7 @@ namespace Polideportivo {
         }
     }
 }
-namespace Polideportivo.bdpolideportivoDataSet2TableAdapters {
+namespace Polideportivo.vwPartidoTableAdapters {
     
     
     /// <summary>
@@ -621,7 +1009,7 @@ namespace Polideportivo.bdpolideportivoDataSet2TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class vwrolTableAdapter : global::System.ComponentModel.Component {
+    public partial class vwpartidoTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -635,7 +1023,7 @@ namespace Polideportivo.bdpolideportivoDataSet2TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public vwrolTableAdapter() {
+        public vwpartidoTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -732,9 +1120,22 @@ namespace Polideportivo.bdpolideportivoDataSet2TableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "vwrol";
-            tableMapping.ColumnMappings.Add("nombre", "nombre");
-            tableMapping.ColumnMappings.Add("deporte", "deporte");
+            tableMapping.DataSetTable = "vwpartido";
+            tableMapping.ColumnMappings.Add("pkIdPartido", "pkIdPartido");
+            tableMapping.ColumnMappings.Add("equipo1", "equipo1");
+            tableMapping.ColumnMappings.Add("equipo2", "equipo2");
+            tableMapping.ColumnMappings.Add("campo", "campo");
+            tableMapping.ColumnMappings.Add("fecha", "fecha");
+            tableMapping.ColumnMappings.Add("fase", "fase");
+            tableMapping.ColumnMappings.Add("pkIdCampeonato", "pkIdCampeonato");
+            tableMapping.ColumnMappings.Add("campeonato", "campeonato");
+            tableMapping.ColumnMappings.Add("pkIdEmpleado", "pkIdEmpleado");
+            tableMapping.ColumnMappings.Add("empleado", "empleado");
+            tableMapping.ColumnMappings.Add("pkIdResultado", "pkIdResultado");
+            tableMapping.ColumnMappings.Add("resultado1", "resultado1");
+            tableMapping.ColumnMappings.Add("resultado2", "resultado2");
+            tableMapping.ColumnMappings.Add("pkIdEstado", "pkIdEstado");
+            tableMapping.ColumnMappings.Add("estado", "estado");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -751,7 +1152,9 @@ namespace Polideportivo.bdpolideportivoDataSet2TableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `nombre`, `deporte` FROM `bdpolideportivo`.`vwrol`";
+            this._commandCollection[0].CommandText = "SELECT `pkIdPartido`, `equipo1`, `equipo2`, `campo`, `fecha`, `fase`, `pkIdCampeo" +
+                "nato`, `campeonato`, `pkIdEmpleado`, `empleado`, `pkIdResultado`, `resultado1`, " +
+                "`resultado2`, `pkIdEstado`, `estado` FROM `bdpolideportivo`.`vwpartido`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -759,7 +1162,7 @@ namespace Polideportivo.bdpolideportivoDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(bdpolideportivoDataSet2.vwrolDataTable dataTable) {
+        public virtual int Fill(vwPartido.vwpartidoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -772,9 +1175,9 @@ namespace Polideportivo.bdpolideportivoDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual bdpolideportivoDataSet2.vwrolDataTable GetData() {
+        public virtual vwPartido.vwpartidoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            bdpolideportivoDataSet2.vwrolDataTable dataTable = new bdpolideportivoDataSet2.vwrolDataTable();
+            vwPartido.vwpartidoDataTable dataTable = new vwPartido.vwpartidoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -848,7 +1251,7 @@ namespace Polideportivo.bdpolideportivoDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(bdpolideportivoDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(vwPartido dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -858,7 +1261,7 @@ namespace Polideportivo.bdpolideportivoDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(bdpolideportivoDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(vwPartido dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -868,7 +1271,7 @@ namespace Polideportivo.bdpolideportivoDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(bdpolideportivoDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(vwPartido dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -902,7 +1305,7 @@ namespace Polideportivo.bdpolideportivoDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(bdpolideportivoDataSet2 dataSet) {
+        public virtual int UpdateAll(vwPartido dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

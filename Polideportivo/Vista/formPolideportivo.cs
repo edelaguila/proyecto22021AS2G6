@@ -16,6 +16,11 @@ namespace Polideportivo
         public formPolideportivo()
         {
             InitializeComponent();
+            panelLateralInterno.HorizontalScroll.Maximum = 0;
+            panelLateralInterno.VerticalScroll.Maximum = 0;
+            panelLateralInterno.AutoScroll = false;
+            panelLateralInterno.VerticalScroll.Visible = false;
+            panelLateralInterno.AutoScroll = true;
         }
 
 
@@ -59,8 +64,8 @@ namespace Polideportivo
             if (panelLateralInterno.Width == 250)
             {
                 panelLateralInterno.Width = 77;
-                panelLateralWrapper.Width = 110;
-                separadorLogo.Width = 50;
+                panelLateralWrapper.Width = 105;
+                separadorLogo.Width = 57;
             }
             else
             {
@@ -185,9 +190,8 @@ namespace Polideportivo
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            gestorDeFormActivo(new menu2(), "POLIDEPORTIVO");
+            
         }
-
     }
 
 

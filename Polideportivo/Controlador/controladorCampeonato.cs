@@ -26,7 +26,7 @@ namespace Polideportivo.Controlador
                     fkIdTipoCampeonato = modelo.fkIdTipoCampeonato
                 };
 
-                var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
             }
             return modelo;
@@ -50,8 +50,7 @@ namespace Polideportivo.Controlador
                     fkIdDeporte = modelo.fkIdDeporte,
                     fkIdTipoCampeonato = modelo.fkIdTipoCampeonato
                 };
-
-                var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
             }
             
@@ -70,7 +69,7 @@ namespace Polideportivo.Controlador
                 {
                     pkId = modelo.pkId
                 };
-                var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
             }
                 

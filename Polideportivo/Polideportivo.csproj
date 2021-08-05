@@ -108,7 +108,6 @@
     <Compile Include="Controlador\controladorEquipo.cs" />
     <Compile Include="Controlador\controladorJugador.cs" />
     <Compile Include="Controlador\controladorPartido.cs" />
-    <Compile Include="Controlador\controladorPolideportivo.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
     <Compile Include="Controlador\controladorTipoCampeonato.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />

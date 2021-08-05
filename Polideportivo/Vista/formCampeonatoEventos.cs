@@ -143,6 +143,7 @@ namespace Polideportivo.Vista
             modelo.fechaFinal = dateFechaFinal.Value.ToString("yyyy-MM-dd");
             controlador.AgregarCampeonato(modelo);
             formOriginal.actualizarTabla();
+            cerrarForm(this);
         }
     }
 }

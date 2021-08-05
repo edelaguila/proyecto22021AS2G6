@@ -98,7 +98,7 @@
             this.panelLateralInterno.Controls.Add(this.btnMenuJugador);
             this.panelLateralInterno.Controls.Add(this.btnMenuEquipo);
             this.panelLateralInterno.Controls.Add(this.btnRol);
-            this.panelLateralInterno.Location = new System.Drawing.Point(12, 23);
+            this.panelLateralInterno.Location = new System.Drawing.Point(16, 23);
             this.panelLateralInterno.Name = "panelLateralInterno";
             this.panelLateralInterno.Size = new System.Drawing.Size(250, 595);
             this.panelLateralInterno.TabIndex = 0;
@@ -118,7 +118,7 @@
             this.btnDeportes.ForeColor = System.Drawing.Color.Transparent;
             this.btnDeportes.Image = ((System.Drawing.Image)(resources.GetObject("btnDeportes.Image")));
             this.btnDeportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeportes.Location = new System.Drawing.Point(10, 85);
+            this.btnDeportes.Location = new System.Drawing.Point(13, 85);
             this.btnDeportes.Name = "btnDeportes";
             this.btnDeportes.Size = new System.Drawing.Size(221, 53);
             this.btnDeportes.TabIndex = 17;
@@ -141,7 +141,7 @@
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(10, 568);
+            this.button1.Location = new System.Drawing.Point(13, 568);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(221, 53);
             this.button1.TabIndex = 16;
@@ -162,7 +162,7 @@
             this.btnMenuEntrenador.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuEntrenador.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEntrenador.Image")));
             this.btnMenuEntrenador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuEntrenador.Location = new System.Drawing.Point(10, 475);
+            this.btnMenuEntrenador.Location = new System.Drawing.Point(13, 475);
             this.btnMenuEntrenador.Name = "btnMenuEntrenador";
             this.btnMenuEntrenador.Size = new System.Drawing.Size(221, 53);
             this.btnMenuEntrenador.TabIndex = 15;
@@ -226,7 +226,7 @@
             this.btnMenuCampeonato.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuCampeonato.Image")));
             this.btnMenuCampeonato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuCampeonato.Location = new System.Drawing.Point(12, 397);
+            this.btnMenuCampeonato.Location = new System.Drawing.Point(15, 397);
             this.btnMenuCampeonato.Name = "btnMenuCampeonato";
             this.btnMenuCampeonato.Size = new System.Drawing.Size(221, 53);
             this.btnMenuCampeonato.TabIndex = 12;
@@ -249,7 +249,7 @@
             this.btnMenuJugador.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuJugador.Image")));
             this.btnMenuJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuJugador.Location = new System.Drawing.Point(10, 163);
+            this.btnMenuJugador.Location = new System.Drawing.Point(13, 163);
             this.btnMenuJugador.Name = "btnMenuJugador";
             this.btnMenuJugador.Size = new System.Drawing.Size(221, 53);
             this.btnMenuJugador.TabIndex = 9;
@@ -271,7 +271,7 @@
             this.btnMenuEquipo.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuEquipo.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEquipo.Image")));
             this.btnMenuEquipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuEquipo.Location = new System.Drawing.Point(10, 319);
+            this.btnMenuEquipo.Location = new System.Drawing.Point(13, 319);
             this.btnMenuEquipo.Name = "btnMenuEquipo";
             this.btnMenuEquipo.Size = new System.Drawing.Size(221, 53);
             this.btnMenuEquipo.TabIndex = 11;
@@ -294,7 +294,7 @@
             this.btnRol.ForeColor = System.Drawing.Color.Transparent;
             this.btnRol.Image = ((System.Drawing.Image)(resources.GetObject("btnRol.Image")));
             this.btnRol.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRol.Location = new System.Drawing.Point(10, 241);
+            this.btnRol.Location = new System.Drawing.Point(13, 241);
             this.btnRol.Name = "btnRol";
             this.btnRol.Size = new System.Drawing.Size(221, 53);
             this.btnRol.TabIndex = 10;

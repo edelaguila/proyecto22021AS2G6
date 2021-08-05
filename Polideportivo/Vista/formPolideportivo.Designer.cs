@@ -51,6 +51,7 @@
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.Maximizar = new System.Windows.Forms.PictureBox();
             this.lblTituloPrincipal = new System.Windows.Forms.Label();
+            this.btnMenuPartido = new System.Windows.Forms.Button();
             this.panelLateralWrapper.SuspendLayout();
             this.panelLateralInterno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -88,6 +89,7 @@
             // panelLateralInterno
             // 
             this.panelLateralInterno.BackColor = System.Drawing.Color.Transparent;
+            this.panelLateralInterno.Controls.Add(this.btnMenuPartido);
             this.panelLateralInterno.Controls.Add(this.btnDeportes);
             this.panelLateralInterno.Controls.Add(this.btnMenuResultado);
             this.panelLateralInterno.Controls.Add(this.btnMenuEntrenador);
@@ -141,7 +143,7 @@
             this.btnMenuResultado.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuResultado.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuResultado.Image")));
             this.btnMenuResultado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuResultado.Location = new System.Drawing.Point(14, 567);
+            this.btnMenuResultado.Location = new System.Drawing.Point(14, 511);
             this.btnMenuResultado.Name = "btnMenuResultado";
             this.btnMenuResultado.Size = new System.Drawing.Size(221, 53);
             this.btnMenuResultado.TabIndex = 16;
@@ -162,7 +164,7 @@
             this.btnMenuEntrenador.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuEntrenador.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEntrenador.Image")));
             this.btnMenuEntrenador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuEntrenador.Location = new System.Drawing.Point(13, 460);
+            this.btnMenuEntrenador.Location = new System.Drawing.Point(13, 440);
             this.btnMenuEntrenador.Name = "btnMenuEntrenador";
             this.btnMenuEntrenador.Size = new System.Drawing.Size(221, 53);
             this.btnMenuEntrenador.TabIndex = 15;
@@ -226,7 +228,7 @@
             this.btnMenuCampeonato.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuCampeonato.Image")));
             this.btnMenuCampeonato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuCampeonato.Location = new System.Drawing.Point(15, 385);
+            this.btnMenuCampeonato.Location = new System.Drawing.Point(15, 369);
             this.btnMenuCampeonato.Name = "btnMenuCampeonato";
             this.btnMenuCampeonato.Size = new System.Drawing.Size(221, 53);
             this.btnMenuCampeonato.TabIndex = 12;
@@ -249,7 +251,7 @@
             this.btnMenuJugador.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuJugador.Image")));
             this.btnMenuJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuJugador.Location = new System.Drawing.Point(13, 160);
+            this.btnMenuJugador.Location = new System.Drawing.Point(13, 156);
             this.btnMenuJugador.Name = "btnMenuJugador";
             this.btnMenuJugador.Size = new System.Drawing.Size(221, 53);
             this.btnMenuJugador.TabIndex = 9;
@@ -271,7 +273,7 @@
             this.btnMenuEquipo.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuEquipo.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEquipo.Image")));
             this.btnMenuEquipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuEquipo.Location = new System.Drawing.Point(13, 310);
+            this.btnMenuEquipo.Location = new System.Drawing.Point(13, 298);
             this.btnMenuEquipo.Name = "btnMenuEquipo";
             this.btnMenuEquipo.Size = new System.Drawing.Size(221, 53);
             this.btnMenuEquipo.TabIndex = 11;
@@ -294,7 +296,7 @@
             this.btnRol.ForeColor = System.Drawing.Color.Transparent;
             this.btnRol.Image = ((System.Drawing.Image)(resources.GetObject("btnRol.Image")));
             this.btnRol.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRol.Location = new System.Drawing.Point(13, 235);
+            this.btnRol.Location = new System.Drawing.Point(13, 227);
             this.btnRol.Name = "btnRol";
             this.btnRol.Size = new System.Drawing.Size(221, 53);
             this.btnRol.TabIndex = 10;
@@ -456,6 +458,27 @@
             this.lblTituloPrincipal.TabIndex = 1;
             this.lblTituloPrincipal.Text = "POLIDEPORTIVO";
             // 
+            // btnMenuPartido
+            // 
+            this.btnMenuPartido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMenuPartido.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuPartido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenuPartido.FlatAppearance.BorderSize = 0;
+            this.btnMenuPartido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
+            this.btnMenuPartido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
+            this.btnMenuPartido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuPartido.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuPartido.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuPartido.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuPartido.Image")));
+            this.btnMenuPartido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuPartido.Location = new System.Drawing.Point(16, 582);
+            this.btnMenuPartido.Name = "btnMenuPartido";
+            this.btnMenuPartido.Size = new System.Drawing.Size(221, 53);
+            this.btnMenuPartido.TabIndex = 18;
+            this.btnMenuPartido.Text = "PARTIDO";
+            this.btnMenuPartido.UseVisualStyleBackColor = false;
+            // 
             // formPolideportivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,6 +533,7 @@
         private System.Windows.Forms.Button btnMenuCampeonato;
         private System.Windows.Forms.Button btnMenuResultado;
         private System.Windows.Forms.Button btnDeportes;
+        private System.Windows.Forms.Button btnMenuPartido;
     }
 }
 

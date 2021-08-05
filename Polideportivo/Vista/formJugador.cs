@@ -95,17 +95,17 @@ namespace Polideportivo.Vista
 
         public void llenarModeloConFilaSeleccionada()
         {
-            id = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
-            nombre = tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
-            anotaciones = stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
-            fkIdEquipo = stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
-            fkIdRol = stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
-            fkIdDeporte = stringAInt(tablaJugadores.SelectedRows[0].Cells[7].Value.ToString());
-            modeloFila.pkId = id;
-            modeloFila.nombre = nombre;
+            id           = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
+            nombre       =            tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
+            anotaciones  = stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
+            fkIdEquipo   = stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
+            fkIdRol      = stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
+            fkIdDeporte  = stringAInt(tablaJugadores.SelectedRows[0].Cells[7].Value.ToString());
+            modeloFila.pkId        = id;
+            modeloFila.nombre      = nombre;
             modeloFila.anotaciones = anotaciones;
-            modeloFila.fkIdEquipo = fkIdEquipo;
-            modeloFila.fkIdRol = fkIdRol;
+            modeloFila.fkIdEquipo  = fkIdEquipo;
+            modeloFila.fkIdRol     = fkIdRol;
             modeloFila.fkIdDeporte = fkIdDeporte;
         }
 

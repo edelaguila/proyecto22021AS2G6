@@ -60,14 +60,14 @@ namespace Polideportivo.Vista
             // 
             this.parrotGradientPanel2.BottomLeft = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel2.BottomRight = System.Drawing.Color.MidnightBlue;
-            this.parrotGradientPanel2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotGradientPanel2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
             this.parrotGradientPanel2.Controls.Add(this.btnErrorEntendido);
             this.parrotGradientPanel2.Controls.Add(this.lblError);
             this.parrotGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parrotGradientPanel2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.parrotGradientPanel2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.Low;
             this.parrotGradientPanel2.Location = new System.Drawing.Point(0, 62);
             this.parrotGradientPanel2.Name = "parrotGradientPanel2";
-            this.parrotGradientPanel2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.parrotGradientPanel2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighSpeed;
             this.parrotGradientPanel2.PrimerColor = System.Drawing.Color.White;
             this.parrotGradientPanel2.Size = new System.Drawing.Size(401, 297);
             this.parrotGradientPanel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
@@ -101,15 +101,15 @@ namespace Polideportivo.Vista
             // 
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.DodgerBlue;
-            this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
             this.parrotGradientPanel1.Controls.Add(this.pictureBox1);
             this.parrotGradientPanel1.Controls.Add(this.lblJugadorEvento);
             this.parrotGradientPanel1.Controls.Add(this.btnSalir);
             this.parrotGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.Low;
             this.parrotGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.parrotGradientPanel1.Name = "parrotGradientPanel1";
-            this.parrotGradientPanel1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.parrotGradientPanel1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighSpeed;
             this.parrotGradientPanel1.PrimerColor = System.Drawing.Color.White;
             this.parrotGradientPanel1.Size = new System.Drawing.Size(401, 62);
             this.parrotGradientPanel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;

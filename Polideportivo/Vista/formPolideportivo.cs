@@ -191,7 +191,7 @@ namespace Polideportivo
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            gestorDeFormActivo(new menu2(), "POLIDEPORTIVO");
+            
         }
     }
 

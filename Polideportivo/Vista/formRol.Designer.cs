@@ -34,10 +34,6 @@ namespace Polideportivo.Vista
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formRol));
             this.tablaRol = new Zuby.ADGV.AdvancedDataGridView();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vwrolBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.bdpolideportivoDataSet2 = new Polideportivo.bdpolideportivoDataSet2();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.txtNombreDeporte = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,25 +49,21 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarRol = new System.Windows.Forms.Button();
             this.btnAgregarRol = new System.Windows.Forms.Button();
-            this.bdpolideportivoDataSet = new Polideportivo.bdpolideportivoDataSet();
+            this.vwRol = new Polideportivo.vwRol();
             this.vwrolBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwrolTableAdapter = new Polideportivo.bdpolideportivoDataSetTableAdapters.vwrolTableAdapter();
-            this.bdpolideportivoDataSet1 = new Polideportivo.bdpolideportivoDataSet1();
-            this.vwrolBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.vwrolTableAdapter1 = new Polideportivo.bdpolideportivoDataSet1TableAdapters.vwrolTableAdapter();
-            this.vwrolTableAdapter2 = new Polideportivo.bdpolideportivoDataSet2TableAdapters.vwrolTableAdapter();
+            this.vwrolTableAdapter = new Polideportivo.vwRolTableAdapters.vwrolTableAdapter();
+            this.pkIdRolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablaRol)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet2)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             this.panelBuscarCol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwRol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tablaRol
@@ -95,9 +87,11 @@ namespace Polideportivo.Vista
             this.tablaRol.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tablaRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaRol.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pkIdRolDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn,
+            this.pkIdDeporteDataGridViewTextBoxColumn,
             this.deporteDataGridViewTextBoxColumn});
-            this.tablaRol.DataSource = this.vwrolBindingSource2;
+            this.tablaRol.DataSource = this.vwrolBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,39 +114,11 @@ namespace Polideportivo.Vista
             this.tablaRol.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaRol_CellContentClick);
             this.tablaRol.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.tablaRol_DataError);
             // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // deporteDataGridViewTextBoxColumn
-            // 
-            this.deporteDataGridViewTextBoxColumn.DataPropertyName = "deporte";
-            this.deporteDataGridViewTextBoxColumn.HeaderText = "deporte";
-            this.deporteDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.deporteDataGridViewTextBoxColumn.Name = "deporteDataGridViewTextBoxColumn";
-            this.deporteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // vwrolBindingSource2
-            // 
-            this.vwrolBindingSource2.DataMember = "vwrol";
-            this.vwrolBindingSource2.DataSource = this.bdpolideportivoDataSet2;
-            // 
-            // bdpolideportivoDataSet2
-            // 
-            this.bdpolideportivoDataSet2.DataSetName = "bdpolideportivoDataSet2";
-            this.bdpolideportivoDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // parrotGradientPanel1
             // 
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.MidnightBlue;
-            this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
             this.parrotGradientPanel1.Controls.Add(this.txtNombreDeporte);
             this.parrotGradientPanel1.Controls.Add(this.label1);
             this.parrotGradientPanel1.Controls.Add(this.lblNombre);
@@ -165,10 +131,10 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.Controls.Add(this.btnAgregarRol);
             this.parrotGradientPanel1.Controls.Add(this.tablaRol);
             this.parrotGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.Low;
             this.parrotGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.parrotGradientPanel1.Name = "parrotGradientPanel1";
-            this.parrotGradientPanel1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.parrotGradientPanel1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighSpeed;
             this.parrotGradientPanel1.PrimerColor = System.Drawing.Color.White;
             this.parrotGradientPanel1.Size = new System.Drawing.Size(900, 595);
             this.parrotGradientPanel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
@@ -380,37 +346,55 @@ namespace Polideportivo.Vista
             this.btnAgregarRol.UseVisualStyleBackColor = false;
             this.btnAgregarRol.Click += new System.EventHandler(this.btnAgregarRol_Click);
             // 
-            // bdpolideportivoDataSet
+            // vwRol
             // 
-            this.bdpolideportivoDataSet.DataSetName = "bdpolideportivoDataSet";
-            this.bdpolideportivoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.vwRol.DataSetName = "vwRol";
+            this.vwRol.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // vwrolBindingSource
             // 
             this.vwrolBindingSource.DataMember = "vwrol";
-            this.vwrolBindingSource.DataSource = this.bdpolideportivoDataSet;
+            this.vwrolBindingSource.DataSource = this.vwRol;
             // 
             // vwrolTableAdapter
             // 
             this.vwrolTableAdapter.ClearBeforeFill = true;
             // 
-            // bdpolideportivoDataSet1
+            // pkIdRolDataGridViewTextBoxColumn
             // 
-            this.bdpolideportivoDataSet1.DataSetName = "bdpolideportivoDataSet1";
-            this.bdpolideportivoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.pkIdRolDataGridViewTextBoxColumn.DataPropertyName = "pkIdRol";
+            this.pkIdRolDataGridViewTextBoxColumn.HeaderText = "pkIdRol";
+            this.pkIdRolDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdRolDataGridViewTextBoxColumn.Name = "pkIdRolDataGridViewTextBoxColumn";
+            this.pkIdRolDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdRolDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // vwrolBindingSource1
+            // nombreDataGridViewTextBoxColumn
             // 
-            this.vwrolBindingSource1.DataMember = "vwrol";
-            this.vwrolBindingSource1.DataSource = this.bdpolideportivoDataSet1;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // vwrolTableAdapter1
+            // pkIdDeporteDataGridViewTextBoxColumn
             // 
-            this.vwrolTableAdapter1.ClearBeforeFill = true;
+            this.pkIdDeporteDataGridViewTextBoxColumn.DataPropertyName = "pkIdDeporte";
+            this.pkIdDeporteDataGridViewTextBoxColumn.HeaderText = "pkIdDeporte";
+            this.pkIdDeporteDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdDeporteDataGridViewTextBoxColumn.Name = "pkIdDeporteDataGridViewTextBoxColumn";
+            this.pkIdDeporteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdDeporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // vwrolTableAdapter2
+            // deporteDataGridViewTextBoxColumn
             // 
-            this.vwrolTableAdapter2.ClearBeforeFill = true;
+            this.deporteDataGridViewTextBoxColumn.DataPropertyName = "deporte";
+            this.deporteDataGridViewTextBoxColumn.HeaderText = "deporte";
+            this.deporteDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.deporteDataGridViewTextBoxColumn.Name = "deporteDataGridViewTextBoxColumn";
+            this.deporteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // formRol
             // 
@@ -423,8 +407,6 @@ namespace Polideportivo.Vista
             this.Text = "formRol";
             this.Load += new System.EventHandler(this.formRol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaRol)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet2)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
             this.parrotGradientPanel1.PerformLayout();
             this.panelBuscarCol.ResumeLayout(false);
@@ -432,10 +414,8 @@ namespace Polideportivo.Vista
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwRol)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdpolideportivoDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -455,18 +435,14 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Panel panelBuscarCol;
         private System.Windows.Forms.ComboBox cboBuscarRol;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private bdpolideportivoDataSet bdpolideportivoDataSet;
-        private System.Windows.Forms.BindingSource vwrolBindingSource;
-        private bdpolideportivoDataSetTableAdapters.vwrolTableAdapter vwrolTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
-        private bdpolideportivoDataSet1 bdpolideportivoDataSet1;
-        private System.Windows.Forms.BindingSource vwrolBindingSource1;
-        private bdpolideportivoDataSet1TableAdapters.vwrolTableAdapter vwrolTableAdapter1;
-        private bdpolideportivoDataSet2 bdpolideportivoDataSet2;
-        private System.Windows.Forms.BindingSource vwrolBindingSource2;
-        private bdpolideportivoDataSet2TableAdapters.vwrolTableAdapter vwrolTableAdapter2;
         private System.Windows.Forms.TextBox txtNombreDeporte;
         private System.Windows.Forms.Label label1;
+        private vwRol vwRol;
+        private System.Windows.Forms.BindingSource vwrolBindingSource;
+        private vwRolTableAdapters.vwrolTableAdapter vwrolTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdRolDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDeporteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
     }
 }

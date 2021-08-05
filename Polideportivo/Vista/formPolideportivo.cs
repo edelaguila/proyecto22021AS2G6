@@ -74,7 +74,9 @@ namespace Polideportivo
 
 
         private Form formActivo = null;
-        private string formHijoAnterior = "";
+        private string formPrincipalAnterior = "";
+
+       
 
         private void btnDeportes_Click(object sender, EventArgs e)
         {
@@ -104,33 +106,58 @@ namespace Polideportivo
         private void gestorDeFormActivo(Form formHijo, string formHijoActual)
         {
             lblTituloPrincipal.Text = formHijoActual;
-            if (formHijoAnterior == formHijoActual)
+            if (formPrincipalAnterior == formHijoActual)
             {
                 cerrarFormActivo();
-                formHijoAnterior = "";
+                formPrincipalAnterior = "";
                 lblTituloPrincipal.Text = "POLIDEPORTIVO";
             }
             else
             {
-                formHijoAnterior = formHijoActual;
+                formPrincipalAnterior = formHijoActual;
                 cerrarFormActivo();
-                abrirFormHijo(formHijo);
+                abrirFormHijo(formHijo, panelPrincipal);
+                
             }
         }
 
-        private void abrirFormHijo(Form formHijo)
+
+        private void gestorFormMenuActivo(Form formHijo, string formHijoActual)
+        {
+            lblTituloPrincipal.Text = formHijoActual;
+            if (formPrincipalAnterior == formHijoActual)
+            {
+                cerrarFormActivo();
+                formPrincipalAnterior = "";
+                lblTituloPrincipal.Text = "POLIDEPORTIVO";
+            }
+            else
+            {
+                formPrincipalAnterior = formHijoActual;
+                cerrarFormActivo();
+                abrirFormHijo(formHijo, panelPrincipal);
+
+            }
+        }
+
+        
+        private void abrirFormHijo(Form formHijo, Panel panel)
         {
             formActivo = formHijo;
             formHijo.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
             formHijo.Dock = DockStyle.Fill;
-            panelPrincipal.Controls.Add(formHijo);
-            panelPrincipal.Tag = formHijo;
+            panel.Controls.Add(formHijo);
+            panel.Tag = formHijo;
             formHijo.BringToFront();
             formHijo.Show();
         }
 
-        
+
+
+      
+
+
         private void cerrarFormActivo()
         {
             if(formActivo != null)
@@ -146,7 +173,15 @@ namespace Polideportivo
 
         }
 
-        
+        private void panelPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            gestorDeFormActivo(new menu2(), "POLIDEPORTIVO");
+        }
     }
 
 

@@ -67,3 +67,14 @@ A.pkId AS pkIdRol, A.nombre,
 B.pkId as pkIdDeporte, B.nombre AS deporte
 FROM rol A
 INNER JOIN deporte B ON B.pkId = A.fkIdDeporte ORDER BY pkIdRol ASC;
+
+/* Vista de entrenador */
+DROP VIEW IF EXISTS vwEntrenador;
+CREATE VIEW vwEntrenador AS
+SELECT 
+A.pkId AS pkIdEntrenador, A.nombre, 
+B.pkId as pkIdEquipo, B.nombre AS equipo,
+C.pkId AS pkIdDeporte, C.nombre AS deporte
+FROM entrenador A
+INNER JOIN equipo B ON B.pkId = A.fkIdEquipo
+INNER JOIN deporte C ON B.fkIdDeporte = C.pkId ORDER BY pkIdEntrenador ASC;

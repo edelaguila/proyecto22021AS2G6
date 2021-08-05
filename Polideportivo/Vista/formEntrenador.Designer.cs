@@ -232,6 +232,7 @@ namespace Polideportivo.Vista
             // 
             // cboDeporte
             // 
+            this.cboDeporte.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cboDeporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDeporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboDeporte.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -244,6 +245,7 @@ namespace Polideportivo.Vista
             // 
             // cboEquipo
             // 
+            this.cboEquipo.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cboEquipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboEquipo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -290,7 +292,7 @@ namespace Polideportivo.Vista
             // 
             // btnEliminarEntrenador
             // 
-            this.btnEliminarEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarEntrenador.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEliminarEntrenador.BackColor = System.Drawing.Color.White;
             this.btnEliminarEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarEntrenador.FlatAppearance.BorderSize = 0;
@@ -311,7 +313,7 @@ namespace Polideportivo.Vista
             // 
             // btnActualizarEntrenador
             // 
-            this.btnActualizarEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizarEntrenador.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnActualizarEntrenador.BackColor = System.Drawing.Color.White;
             this.btnActualizarEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizarEntrenador.FlatAppearance.BorderSize = 0;
@@ -404,7 +406,7 @@ namespace Polideportivo.Vista
             // 
             // btnModificarEntrenador
             // 
-            this.btnModificarEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificarEntrenador.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnModificarEntrenador.BackColor = System.Drawing.Color.White;
             this.btnModificarEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificarEntrenador.FlatAppearance.BorderSize = 0;
@@ -425,7 +427,7 @@ namespace Polideportivo.Vista
             // 
             // btnAgregarEntrenador
             // 
-            this.btnAgregarEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarEntrenador.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnAgregarEntrenador.BackColor = System.Drawing.Color.White;
             this.btnAgregarEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarEntrenador.FlatAppearance.BorderSize = 0;

@@ -68,8 +68,8 @@ namespace Polideportivo.Vista
                 // Llenar la combobox de equipo dependiendo del deporte elegido
                 modeloEquipo modeloequipo = new modeloEquipo();
                 modeloequipo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-                controladorEquipo equipo = new controladorEquipo(modeloequipo);
-                cboEquipo.DataSource = equipo.mostrarEquipoPorDeporte();
+                controladorEquipo equipo = new controladorEquipo();
+                cboEquipo.DataSource = equipo.mostrarEquipoPorDeporte(modeloequipo);
                 cboEquipo.DisplayMember = "nombre";
                 cboEquipo.ValueMember = "pkId";
             }

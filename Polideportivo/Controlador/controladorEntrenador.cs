@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Polideportivo.Conexion;
 using Polideportivo.Modelo;
 using System;
 using System.Collections.Generic;
@@ -11,66 +12,78 @@ namespace Polideportivo.Controlador
 {
     class controladorEntrenador
     {
-        OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
+        ConexionODBC ODBC = new ConexionODBC();
 
         public modeloEntrenador agregarEntrenador(modeloEntrenador modelo)
         {
-            pruebas.Open();
-            var sqlinsertar =
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                var sqlinsertar =
                 "INSERT INTO entrenador (pkId, nombre, fkIdEquipo) " +
                 "VALUES (NULL, ?nombre?, ?fkIdEquipo?);";
-            var ValorDeVariables = new
-            {
-                nombre = modelo.nombre,
-                fkIdEquipo = modelo.fkIdEquipo,
+                var ValorDeVariables = new
+                {
+                    nombre = modelo.nombre,
+                    fkIdEquipo = modelo.fkIdEquipo,
 
-            };
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-            pruebas.Close();
+                };
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return modelo;
         }
 
         public modeloEntrenador modificarEntrenador(modeloEntrenador modelo)
         {
-            pruebas.Open();
-            var sqlinsertar =
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                var sqlinsertar =
                 "UPDATE entrenador SET nombre = ?nombre? ," +
                 "fkIdEquipo = ?fkIdEquipo? " +
                 "WHERE pkId = ?pkId?;";
-            var ValorDeVariables = new
-            {
-                nombre = modelo.nombre,
-                fkIdEquipo = modelo.fkIdEquipo,
-                pkId = modelo.pkId
-            };
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-            pruebas.Close();
+                var ValorDeVariables = new
+                {
+                    nombre = modelo.nombre,
+                    fkIdEquipo = modelo.fkIdEquipo,
+                    pkId = modelo.pkId
+                };
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return modelo;
         }
 
         public modeloEntrenador eliminarEntrenador(modeloEntrenador modelo)
         {
-
-            var sqlinsertar =
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                var sqlinsertar =
                 "DELETE FROM entrenador WHERE pkId = ?pkId?;";
 
-            var ValorDeVariables = new
-            {
-                pkId = modelo.pkId
-            };
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-            pruebas.Close();
+                var ValorDeVariables = new
+                {
+                    pkId = modelo.pkId
+                };
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return modelo;
         }
 
 
         public List<modeloEntrenador> mostrarEntrenador()
         {
-            pruebas.Open();
-            //string sqlconsulta = "SELECT pkId, nombre, fkIdDeporte FROM rol WHERE fkIdDeporte = 1;";
-            string sqlconsulta = "SELECT * FROM entrenador;";
-            var sqlresultado = pruebas.Query<modeloEntrenador>(sqlconsulta).ToList();
-            pruebas.Close();
+            List<modeloEntrenador> sqlresultado = new List<modeloEntrenador>();
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                string sqlconsulta = "SELECT * FROM entrenador;";
+                sqlresultado = conexionODBC.Query<modeloEntrenador>(sqlconsulta).ToList();
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return sqlresultado;
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Polideportivo.Conexion;
 using Polideportivo.Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
@@ -8,14 +9,17 @@ namespace Polideportivo.Controlador
 {
     class controladorTipoCampeonato
     {
-        OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
+        ConexionODBC ODBC = new ConexionODBC();
         public List<modeloTipoCampeonato> mostrarTipoDeCampeonatos()
         {
-            pruebas.Open();
-            //string sqlconsulta = "SELECT pkId, nombre, fkIdDeporte FROM rol WHERE fkIdDeporte = 1;";
-            string sqlconsulta = "SELECT * FROM tipocampeonato;";
-            var sqlresultado = pruebas.Query<modeloTipoCampeonato>(sqlconsulta).ToList();
-            pruebas.Close();
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            List<modeloTipoCampeonato> sqlresultado = new List<modeloTipoCampeonato>();
+            if (conexionODBC != null)
+            {
+                string sqlconsulta = "SELECT * FROM tipocampeonato;";
+                sqlresultado = conexionODBC.Query<modeloTipoCampeonato>(sqlconsulta).ToList();
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return sqlresultado;
         }
     }

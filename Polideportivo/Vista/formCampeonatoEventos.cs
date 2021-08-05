@@ -85,7 +85,6 @@ namespace Polideportivo.Vista
                 // Llenar la combobox de equipo dependiendo del deporte elegido
                 modeloEquipo modeloequipo = new modeloEquipo();
                 modeloequipo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-                controladorEquipo equipo = new controladorEquipo(modeloequipo);
             }
         }
 
@@ -143,6 +142,7 @@ namespace Polideportivo.Vista
             modelo.fechaFinal = dateFechaFinal.Value.ToString("yyyy-MM-dd");
             controlador.AgregarCampeonato(modelo);
             formOriginal.actualizarTabla();
+            cerrarForm(this);
         }
     }
 }

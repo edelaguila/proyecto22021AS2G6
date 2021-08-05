@@ -17,19 +17,19 @@ namespace Polideportivo.AccesoDatos
         {
 
             var sqlinsertar =
-                "INSERT INTO jugador (pkId, equipo1, equipo2, campo, fecha, estado, fase, fkIdCampeonato, fkIdEmpleado, fkIdResultado) " +
-                "VALUES (NULL, ?equipo1?, ?equipo2?, ?campo?, ?fecha?, ?estado?, ?fase?, ?fkIdCampeonato?, ?fkIdEmpleado?, ?fkIdResultado?);";
+                "INSERT INTO jugador (pkId, equipo1, equipo2, campo, fecha, fase, fkIdCampeonato, fkIdEmpleado, fkIdResultado, fkIdEstado) " +
+                "VALUES (NULL, ?equipo1?, ?equipo2?, ?campo?, ?fecha?, ?fase?, ?fkIdCampeonato?, ?fkIdEmpleado?, ?fkIdResultado?, ?fkIdEstado?);";
             var ValorDeVariables = new
             {
                 equipo1 = modelo.equipo1,
                 equipo2 = modelo.equipo2,
                 campo = modelo.campo,
                 fecha = modelo.fecha,
-                estado = modelo.estado,
                 fase = modelo.fase,
                 fkIdCampeonato = modelo.fkIdCampeonato,
                 fkIdEmpleado = modelo.fkIdEmpleado,
-                fkIdResultado = modelo.fkIdResultado
+                fkIdResultado = modelo.fkIdResultado,
+                fkIdEstado = modelo.fkIdEstado
             };
             var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
 
@@ -47,7 +47,7 @@ namespace Polideportivo.AccesoDatos
                 "UPDATE partido SET equipo1 = ?equipo1?, equipo2 = ?equipo2?, " +
                 "campo = ?campo?, fecha = ?fecha?, estado = ?estado? " +
                 "fase = ?fase?, fkIdCampeonato = ?fkIdCampeonato?, fkIdEmpleado = ?fkIdEmpleado? " +
-                "fkIdResultado = ?fkIdResultado?, " +
+                "fkIdResultado = ?fkIdResultado?, " + "fkIdEstado = ?fkIdEstado?, " +
                 "WHERE pkId = ?pkId?;";
             var ValorDeVariables = new
             {
@@ -60,6 +60,7 @@ namespace Polideportivo.AccesoDatos
                 fkIdCampeonato = modelo.fkIdCampeonato,
                 fkIdEmpleado = modelo.fkIdEmpleado,
                 fkIdResultado = modelo.fkIdResultado,
+                fkIdEstado = modelo.fkIdEstado,
                 pkId = modelo.pkId
             };
             var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);

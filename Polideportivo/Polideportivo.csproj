@@ -241,6 +241,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwEntrenador1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="vwPartido.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwPartido.xsd</DependentUpon>
+    </Compile>
     <Compile Include="vwRol.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -372,6 +377,17 @@
     </None>
     <None Include="vwEntrenador1.xss">
       <DependentUpon>vwEntrenador1.xsd</DependentUpon>
+    </None>
+    <None Include="vwPartido.xsc">
+      <DependentUpon>vwPartido.xsd</DependentUpon>
+    </None>
+    <None Include="vwPartido.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwPartido.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vwPartido.xss">
+      <DependentUpon>vwPartido.xsd</DependentUpon>
     </None>
     <None Include="vwRol.xsc">
       <DependentUpon>vwRol.xsd</DependentUpon>

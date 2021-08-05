@@ -19,9 +19,11 @@ namespace Polideportivo.Modelo
         public int fkIdEmpleado { get; set; }
         public int fkIdResultado { get; set; }
 
+        public int fkIdEstado { get; set; }
+
         public modeloPartido() { }
 
-        public modeloPartido(int Id, string Equipo1, string Equipo2, string Campo, DateTime Fecha, string Estado, string Fase, int IdCampeonato, int IdEmpleado, int IdResultado)
+        public modeloPartido(int Id, string Equipo1, string Equipo2, string Campo, DateTime Fecha, string Estado, string Fase, int IdCampeonato, int IdEmpleado, int IdResultado, int IdEstado)
         {
             pkId = Id;
             equipo1 = Equipo1;
@@ -33,6 +35,7 @@ namespace Polideportivo.Modelo
             fkIdCampeonato = IdCampeonato;
             fkIdEmpleado = IdEmpleado;
             fkIdResultado = IdResultado;
+            fkIdEstado = IdEstado;
             //para cuando sean ints
             //int numeroValor = 0;
             //int.TryParse(numero, out numeroValor);

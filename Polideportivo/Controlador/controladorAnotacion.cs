@@ -55,7 +55,7 @@ namespace Polideportivo.Controlador
         {
 
             var sqlinsertar =
-                "DELETE FROM entrenador WHERE pkId = ?pkId?;";
+                "DELETE FROM antotacion WHERE pkId = ?pkId?;";
 
             var ValorDeVariables = new
             {
@@ -67,12 +67,11 @@ namespace Polideportivo.Controlador
         }
 
 
-        public List<modeloEntrenador> mostrarEntrenador()
+        public List<modeloAnotacion> mostrarAnotacion()
         {
             pruebas.Open();
-            //string sqlconsulta = "SELECT pkId, nombre, fkIdDeporte FROM rol WHERE fkIdDeporte = 1;";
-            string sqlconsulta = "SELECT * FROM entrenador;";
-            var sqlresultado = pruebas.Query<modeloEntrenador>(sqlconsulta).ToList();
+            string sqlconsulta = "SELECT * FROM anotacion;";
+            var sqlresultado = pruebas.Query<modeloAnotacion>(sqlconsulta).ToList();
             pruebas.Close();
             return sqlresultado;
         }

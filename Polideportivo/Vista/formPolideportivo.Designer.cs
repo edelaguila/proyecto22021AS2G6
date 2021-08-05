@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formPolideportivo));
             this.panelLateralWrapper = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.panelLateralInterno = new ReaLTaiizor.Controls.ParrotGradientPanel();
+
             this.btnMenuEntrenador = new System.Windows.Forms.Button();
+
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnDeportes = new System.Windows.Forms.Button();
             this.btnMenuCampeonato = new System.Windows.Forms.Button();
@@ -51,6 +53,9 @@
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.Maximizar = new System.Windows.Forms.PictureBox();
             this.lblTituloPrincipal = new System.Windows.Forms.Label();
+
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+
             this.panelLateralWrapper.SuspendLayout();
             this.panelLateralInterno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -104,6 +109,7 @@
             this.panelLateralInterno.Controls.Add(this.separadorLogo);
             this.panelLateralInterno.Controls.Add(this.label1);
             this.panelLateralInterno.Controls.Add(this.pictureBox3);
+            this.panelLateralInterno.Controls.Add(this.vScrollBar1);
             this.panelLateralInterno.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             this.panelLateralInterno.Location = new System.Drawing.Point(12, 23);
             this.panelLateralInterno.Name = "panelLateralInterno";
@@ -117,6 +123,7 @@
             this.panelLateralInterno.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.panelLateralInterno.TopRight = System.Drawing.Color.MidnightBlue;
             // 
+
             // btnMenuEntrenador
             // 
             this.btnMenuEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -139,6 +146,7 @@
             this.btnMenuEntrenador.UseVisualStyleBackColor = false;
             this.btnMenuEntrenador.Click += new System.EventHandler(this.btnMenuEntrenador_Click);
             // 
+
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -151,6 +159,10 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
+
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+
+
             // 
             // btnDeportes
             // 
@@ -335,6 +347,7 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(900, 595);
             this.panelPrincipal.TabIndex = 0;
+            this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipal_Paint);
             // 
             // pictureBox1
             // 
@@ -457,6 +470,16 @@
             this.lblTituloPrincipal.TabIndex = 1;
             this.lblTituloPrincipal.Text = "POLIDEPORTIVO";
             // 
+
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vScrollBar1.Location = new System.Drawing.Point(0, 0);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(250, 595);
+            this.vScrollBar1.TabIndex = 1;
+            // 
+
             // formPolideportivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,7 +534,11 @@
         private System.Windows.Forms.Button btnDeportes;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+
+        private System.Windows.Forms.VScrollBar vScrollBar1;
+
         private System.Windows.Forms.Button btnMenuEntrenador;
+
     }
 }
 

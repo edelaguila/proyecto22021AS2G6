@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Polideportivo.Conexion;
 using Polideportivo.Modelo;
 using System;
 using System.Collections.Generic;
@@ -11,63 +12,75 @@ namespace Polideportivo.Controlador
 {
     class controladorDeporte
     {
-        OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
+        ConexionODBC ODBC = new ConexionODBC();
 
         public modeloDeporte agregarDeporte(modeloDeporte modelo)
         {
-
-            var sqlinsertar =
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                var sqlinsertar =
                 "INSERT INTO deporte (pkId, nombre) " +
                 "VALUES (NULL, ?nombre?);";
-            var ValorDeVariables = new
-            {
-                nombre = modelo.nombre
-                
-            };
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-            pruebas.Close();
+                var ValorDeVariables = new
+                {
+                    nombre = modelo.nombre
+
+                };
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return modelo;
         }
 
         public modeloDeporte modificarDeporte(modeloDeporte modelo)
         {
-            pruebas.Open();
-            var sqlinsertar =
-                "UPDATE deporte SET nombre = ?nombre? "+
-                "WHERE pkId = ?pkId?;";
-            var ValorDeVariables = new
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
             {
-                nombre = modelo.nombre,
-                pkId = modelo.pkId
-            };
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-            pruebas.Close();
+                var sqlinsertar =
+                "UPDATE deporte SET nombre = ?nombre? " +
+                "WHERE pkId = ?pkId?;";
+                var ValorDeVariables = new
+                {
+                    nombre = modelo.nombre,
+                    pkId = modelo.pkId
+                };
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return modelo;
         }
 
         public modeloDeporte eliminarDeporte(modeloDeporte modelo)
         {
-
-            var sqlinsertar =
-                "DELETE FROM deporte WHERE pkId = ?pkId?;";
-            
-           var ValorDeVariables = new
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
             {
-                pkId = modelo.pkId
-            };
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-            pruebas.Close();
+                var sqlinsertar =
+                "DELETE FROM deporte WHERE pkId = ?pkId?;";
+
+                var ValorDeVariables = new
+                {
+                    pkId = modelo.pkId
+                };
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return modelo;
         }
 
 
         public List<modeloDeporte> mostrarDeportes()
         {
-            pruebas.Open();
-            //string sqlconsulta = "SELECT pkId, nombre, fkIdDeporte FROM rol WHERE fkIdDeporte = 1;";
-            string sqlconsulta = "SELECT * FROM deporte;";
-            var sqlresultado = pruebas.Query<modeloDeporte>(sqlconsulta).ToList();
-            pruebas.Close();
+            List<modeloDeporte> sqlresultado = new List<modeloDeporte>();
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                string sqlconsulta = "SELECT * FROM deporte;";
+                sqlresultado = conexionODBC.Query<modeloDeporte>(sqlconsulta).ToList();
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return sqlresultado;
         }
     }

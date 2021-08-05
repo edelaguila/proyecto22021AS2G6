@@ -30,18 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formPolideportivo));
             this.panelLateralWrapper = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.panelLateralInterno = new ReaLTaiizor.Controls.ParrotGradientPanel();
-
-            this.btnMenuEntrenador = new System.Windows.Forms.Button();
-
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnDeportes = new System.Windows.Forms.Button();
-            this.btnMenuCampeonato = new System.Windows.Forms.Button();
             this.btnMenuEquipo = new System.Windows.Forms.Button();
             this.btnRol = new System.Windows.Forms.Button();
             this.btnMenuJugador = new System.Windows.Forms.Button();
             this.separadorLogo = new ReaLTaiizor.Controls.AirSeparator();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblMenuTitulo = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelPrincipalWrapper = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.panelPrincipal = new System.Windows.Forms.Panel();
@@ -53,12 +46,12 @@
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.Maximizar = new System.Windows.Forms.PictureBox();
             this.lblTituloPrincipal = new System.Windows.Forms.Label();
-
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-
+            this.btnMenuCampeonato = new System.Windows.Forms.Button();
+            this.btnMenuEntrenador = new System.Windows.Forms.Button();
+            this.panelLateralInterno = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnDeportes = new System.Windows.Forms.Button();
             this.panelLateralWrapper.SuspendLayout();
-            this.panelLateralInterno.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelPrincipalWrapper.SuspendLayout();
             this.panelPrincipal.SuspendLayout();
@@ -69,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).BeginInit();
+            this.panelLateralInterno.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLateralWrapper
@@ -91,124 +85,6 @@
             this.panelLateralWrapper.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.panelLateralWrapper.TopRight = System.Drawing.Color.Navy;
             // 
-            // panelLateralInterno
-            // 
-            this.panelLateralInterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelLateralInterno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelLateralInterno.BottomLeft = System.Drawing.Color.Black;
-            this.panelLateralInterno.BottomRight = System.Drawing.Color.SkyBlue;
-            this.panelLateralInterno.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.panelLateralInterno.Controls.Add(this.btnMenuEntrenador);
-            this.panelLateralInterno.Controls.Add(this.pictureBox2);
-            this.panelLateralInterno.Controls.Add(this.btnDeportes);
-            this.panelLateralInterno.Controls.Add(this.btnMenuCampeonato);
-            this.panelLateralInterno.Controls.Add(this.btnMenuEquipo);
-            this.panelLateralInterno.Controls.Add(this.btnRol);
-            this.panelLateralInterno.Controls.Add(this.btnMenuJugador);
-            this.panelLateralInterno.Controls.Add(this.separadorLogo);
-            this.panelLateralInterno.Controls.Add(this.label1);
-            this.panelLateralInterno.Controls.Add(this.pictureBox3);
-            this.panelLateralInterno.Controls.Add(this.vScrollBar1);
-            this.panelLateralInterno.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            this.panelLateralInterno.Location = new System.Drawing.Point(12, 23);
-            this.panelLateralInterno.Name = "panelLateralInterno";
-            this.panelLateralInterno.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.panelLateralInterno.PrimerColor = System.Drawing.Color.White;
-            this.panelLateralInterno.Size = new System.Drawing.Size(250, 595);
-            this.panelLateralInterno.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.panelLateralInterno.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
-            this.panelLateralInterno.TabIndex = 0;
-            this.panelLateralInterno.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.panelLateralInterno.TopLeft = System.Drawing.Color.DeepSkyBlue;
-            this.panelLateralInterno.TopRight = System.Drawing.Color.MidnightBlue;
-            // 
-
-            // btnMenuEntrenador
-            // 
-            this.btnMenuEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenuEntrenador.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenuEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenuEntrenador.FlatAppearance.BorderSize = 0;
-            this.btnMenuEntrenador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
-            this.btnMenuEntrenador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
-            this.btnMenuEntrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuEntrenador.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuEntrenador.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMenuEntrenador.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEntrenador.Image")));
-            this.btnMenuEntrenador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuEntrenador.Location = new System.Drawing.Point(10, 474);
-            this.btnMenuEntrenador.Name = "btnMenuEntrenador";
-            this.btnMenuEntrenador.Size = new System.Drawing.Size(221, 53);
-            this.btnMenuEntrenador.TabIndex = 15;
-            this.btnMenuEntrenador.Text = "            ENTRENADOR";
-            this.btnMenuEntrenador.UseVisualStyleBackColor = false;
-            this.btnMenuEntrenador.Click += new System.EventHandler(this.btnMenuEntrenador_Click);
-            // 
-
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(191, 542);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-
-
-            // 
-            // btnDeportes
-            // 
-            this.btnDeportes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeportes.BackColor = System.Drawing.Color.Transparent;
-            this.btnDeportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeportes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDeportes.FlatAppearance.BorderSize = 0;
-            this.btnDeportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(116)))), ((int)(((byte)(154)))));
-            this.btnDeportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(135)))), ((int)(((byte)(164)))));
-            this.btnDeportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeportes.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeportes.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDeportes.Image = ((System.Drawing.Image)(resources.GetObject("btnDeportes.Image")));
-            this.btnDeportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeportes.Location = new System.Drawing.Point(10, 91);
-            this.btnDeportes.Name = "btnDeportes";
-            this.btnDeportes.Size = new System.Drawing.Size(221, 53);
-            this.btnDeportes.TabIndex = 13;
-            this.btnDeportes.Text = "   DEPORTES";
-            this.btnDeportes.UseVisualStyleBackColor = false;
-            this.btnDeportes.Click += new System.EventHandler(this.btnDeportes_Click);
-            // 
-            // btnMenuCampeonato
-            // 
-            this.btnMenuCampeonato.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenuCampeonato.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenuCampeonato.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenuCampeonato.FlatAppearance.BorderSize = 0;
-            this.btnMenuCampeonato.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
-            this.btnMenuCampeonato.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
-            this.btnMenuCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuCampeonato.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuCampeonato.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMenuCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuCampeonato.Image")));
-            this.btnMenuCampeonato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuCampeonato.Location = new System.Drawing.Point(10, 399);
-            this.btnMenuCampeonato.Name = "btnMenuCampeonato";
-            this.btnMenuCampeonato.Size = new System.Drawing.Size(221, 53);
-            this.btnMenuCampeonato.TabIndex = 12;
-            this.btnMenuCampeonato.Text = "            CAMPEONATOS";
-            this.btnMenuCampeonato.UseVisualStyleBackColor = false;
-            this.btnMenuCampeonato.Click += new System.EventHandler(this.btnMenuCampeonato_Click);
-            // 
             // btnMenuEquipo
             // 
             this.btnMenuEquipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -223,7 +99,7 @@
             this.btnMenuEquipo.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuEquipo.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEquipo.Image")));
             this.btnMenuEquipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuEquipo.Location = new System.Drawing.Point(10, 313);
+            this.btnMenuEquipo.Location = new System.Drawing.Point(10, 310);
             this.btnMenuEquipo.Name = "btnMenuEquipo";
             this.btnMenuEquipo.Size = new System.Drawing.Size(221, 53);
             this.btnMenuEquipo.TabIndex = 11;
@@ -246,7 +122,7 @@
             this.btnRol.ForeColor = System.Drawing.Color.Transparent;
             this.btnRol.Image = ((System.Drawing.Image)(resources.GetObject("btnRol.Image")));
             this.btnRol.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRol.Location = new System.Drawing.Point(10, 236);
+            this.btnRol.Location = new System.Drawing.Point(10, 233);
             this.btnRol.Name = "btnRol";
             this.btnRol.Size = new System.Drawing.Size(221, 53);
             this.btnRol.TabIndex = 10;
@@ -270,7 +146,7 @@
             this.btnMenuJugador.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuJugador.Image")));
             this.btnMenuJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuJugador.Location = new System.Drawing.Point(10, 162);
+            this.btnMenuJugador.Location = new System.Drawing.Point(10, 159);
             this.btnMenuJugador.Name = "btnMenuJugador";
             this.btnMenuJugador.Size = new System.Drawing.Size(221, 53);
             this.btnMenuJugador.TabIndex = 9;
@@ -280,12 +156,14 @@
             // 
             // separadorLogo
             // 
+            this.separadorLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.separadorLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.separadorLogo.Colors = new ReaLTaiizor.Util.BloomAir[0];
             this.separadorLogo.Customization = "";
             this.separadorLogo.Font = new System.Drawing.Font("Verdana", 8F);
             this.separadorLogo.Image = null;
-            this.separadorLogo.Location = new System.Drawing.Point(15, 65);
+            this.separadorLogo.Location = new System.Drawing.Point(7, 62);
             this.separadorLogo.Name = "separadorLogo";
             this.separadorLogo.NoRounding = false;
             this.separadorLogo.Size = new System.Drawing.Size(221, 1);
@@ -293,23 +171,25 @@
             this.separadorLogo.Text = "airSeparator1";
             this.separadorLogo.Transparent = false;
             // 
-            // label1
+            // lblMenuTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(85, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 25);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "TORNEOS";
+            this.lblMenuTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMenuTitulo.AutoSize = true;
+            this.lblMenuTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblMenuTitulo.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenuTitulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMenuTitulo.Location = new System.Drawing.Point(77, 22);
+            this.lblMenuTitulo.Name = "lblMenuTitulo";
+            this.lblMenuTitulo.Size = new System.Drawing.Size(108, 25);
+            this.lblMenuTitulo.TabIndex = 6;
+            this.lblMenuTitulo.Text = "TORNEOS";
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(21, 15);
+            this.pictureBox3.Location = new System.Drawing.Point(16, 13);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -470,16 +350,113 @@
             this.lblTituloPrincipal.TabIndex = 1;
             this.lblTituloPrincipal.Text = "POLIDEPORTIVO";
             // 
-
-            // vScrollBar1
+            // btnMenuCampeonato
             // 
-            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vScrollBar1.Location = new System.Drawing.Point(0, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(250, 595);
-            this.vScrollBar1.TabIndex = 1;
+            this.btnMenuCampeonato.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMenuCampeonato.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuCampeonato.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenuCampeonato.FlatAppearance.BorderSize = 0;
+            this.btnMenuCampeonato.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
+            this.btnMenuCampeonato.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
+            this.btnMenuCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuCampeonato.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuCampeonato.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuCampeonato.Image")));
+            this.btnMenuCampeonato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuCampeonato.Location = new System.Drawing.Point(10, 396);
+            this.btnMenuCampeonato.Name = "btnMenuCampeonato";
+            this.btnMenuCampeonato.Size = new System.Drawing.Size(221, 53);
+            this.btnMenuCampeonato.TabIndex = 12;
+            this.btnMenuCampeonato.Text = "            CAMPEONATOS";
+            this.btnMenuCampeonato.UseVisualStyleBackColor = false;
+            this.btnMenuCampeonato.Click += new System.EventHandler(this.btnMenuCampeonato_Click);
             // 
-
+            // btnMenuEntrenador
+            // 
+            this.btnMenuEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMenuEntrenador.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenuEntrenador.FlatAppearance.BorderSize = 0;
+            this.btnMenuEntrenador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
+            this.btnMenuEntrenador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
+            this.btnMenuEntrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuEntrenador.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuEntrenador.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuEntrenador.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEntrenador.Image")));
+            this.btnMenuEntrenador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuEntrenador.Location = new System.Drawing.Point(10, 472);
+            this.btnMenuEntrenador.Name = "btnMenuEntrenador";
+            this.btnMenuEntrenador.Size = new System.Drawing.Size(221, 53);
+            this.btnMenuEntrenador.TabIndex = 15;
+            this.btnMenuEntrenador.Text = "          ENTRENADOR";
+            this.btnMenuEntrenador.UseVisualStyleBackColor = false;
+            this.btnMenuEntrenador.Click += new System.EventHandler(this.btnMenuEntrenador_Click);
+            // 
+            // panelLateralInterno
+            // 
+            this.panelLateralInterno.BackColor = System.Drawing.Color.Transparent;
+            this.panelLateralInterno.Controls.Add(this.btnDeportes);
+            this.panelLateralInterno.Controls.Add(this.button1);
+            this.panelLateralInterno.Controls.Add(this.btnMenuEntrenador);
+            this.panelLateralInterno.Controls.Add(this.pictureBox3);
+            this.panelLateralInterno.Controls.Add(this.lblMenuTitulo);
+            this.panelLateralInterno.Controls.Add(this.separadorLogo);
+            this.panelLateralInterno.Controls.Add(this.btnMenuCampeonato);
+            this.panelLateralInterno.Controls.Add(this.btnMenuJugador);
+            this.panelLateralInterno.Controls.Add(this.btnMenuEquipo);
+            this.panelLateralInterno.Controls.Add(this.btnRol);
+            this.panelLateralInterno.Location = new System.Drawing.Point(12, 23);
+            this.panelLateralInterno.Name = "panelLateralInterno";
+            this.panelLateralInterno.Size = new System.Drawing.Size(250, 595);
+            this.panelLateralInterno.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(10, 568);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(221, 53);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "          ENTRENADOR";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnDeportes
+            // 
+            this.btnDeportes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeportes.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeportes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnDeportes.FlatAppearance.BorderSize = 0;
+            this.btnDeportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(116)))), ((int)(((byte)(154)))));
+            this.btnDeportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(135)))), ((int)(((byte)(164)))));
+            this.btnDeportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeportes.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeportes.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDeportes.Image = ((System.Drawing.Image)(resources.GetObject("btnDeportes.Image")));
+            this.btnDeportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeportes.Location = new System.Drawing.Point(10, 79);
+            this.btnDeportes.Name = "btnDeportes";
+            this.btnDeportes.Size = new System.Drawing.Size(221, 53);
+            this.btnDeportes.TabIndex = 17;
+            this.btnDeportes.Text = "            DEPORTES";
+            this.btnDeportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeportes.UseVisualStyleBackColor = false;
+            this.btnDeportes.Click += new System.EventHandler(this.btnDeportes_Click);
+            // 
             // formPolideportivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,9 +470,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formPolideportivo";
             this.panelLateralWrapper.ResumeLayout(false);
-            this.panelLateralInterno.ResumeLayout(false);
-            this.panelLateralInterno.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelPrincipalWrapper.ResumeLayout(false);
             this.panelPrincipal.ResumeLayout(false);
@@ -507,6 +481,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).EndInit();
+            this.panelLateralInterno.ResumeLayout(false);
+            this.panelLateralInterno.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -521,24 +497,20 @@
         private System.Windows.Forms.PictureBox Maximizar;
         private System.Windows.Forms.PictureBox Restaurar;
         private System.Windows.Forms.PictureBox Salir;
-        private ReaLTaiizor.Controls.ParrotGradientPanel panelLateralInterno;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMenuTitulo;
         private System.Windows.Forms.PictureBox pictureBox3;
         private ReaLTaiizor.Controls.AirSeparator separadorLogo;
-        private System.Windows.Forms.Button btnMenuCampeonato;
         private System.Windows.Forms.Button btnMenuEquipo;
         private System.Windows.Forms.Button btnRol;
         private System.Windows.Forms.Button btnMenuJugador;
         private System.Windows.Forms.PictureBox btnLateral;
         private System.Windows.Forms.Panel panelPrincipal;
-        private System.Windows.Forms.Button btnDeportes;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-
-        private System.Windows.Forms.VScrollBar vScrollBar1;
-
+        private System.Windows.Forms.Panel panelLateralInterno;
         private System.Windows.Forms.Button btnMenuEntrenador;
-
+        private System.Windows.Forms.Button btnMenuCampeonato;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDeportes;
     }
 }
 

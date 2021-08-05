@@ -192,6 +192,11 @@ namespace Polideportivo
         {
             
         }
+
+        private void btnMenuEmpleado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

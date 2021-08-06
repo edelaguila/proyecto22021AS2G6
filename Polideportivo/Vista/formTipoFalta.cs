@@ -1,11 +1,10 @@
-﻿using Polideportivo.AccesoDatos;
-using Polideportivo.Controlador;
-using Polideportivo.Modelo;
+﻿using Controlador;
+using Modelo;
 using System;
 using System.Windows.Forms;
-using static Polideportivo.Vista.utilidadForms;
+using static Vista.utilidadForms;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
     public partial class formTipoFalta : Form
     {
@@ -15,11 +14,11 @@ namespace Polideportivo.Vista
         {
             InitializeComponent();
             // Este constructor es el que se utiliza para agregar datos
-            btnAgregarEmpleado.Visible = true;
+            btnAgregarFalta.Visible = true;
             // Llenar combobox de deportes
-            controladorPuesto puesto = new controladorPuesto();
-            controladorEmpleado empleado = new controladorEmpleado();
-            cboDeporte.DataSource = puesto.mostrarPuesto();
+            controladorDeporte deporte = new controladorDeporte();
+            controladorTipoFalta tipofalta = new controladorTipoFalta();
+            cboDeporte.DataSource = deporte.mostrarDeportes();
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
             cboDeporte.SelectedIndex = -1;
@@ -28,26 +27,19 @@ namespace Polideportivo.Vista
 
 
 
-        private void formEmpleado_Load(object sender, EventArgs e)
+        private void formTipoFalta_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'vwEmpleado.vwempleado' Puede moverla o quitarla según sea necesario.
-            this.vwempleadoTableAdapter.Fill(this.vwEmpleado.vwempleado);
-
+            // TODO: esta línea de código carga datos en la tabla 'vwTipoFalta.vwtipofalta' Puede moverla o quitarla según sea necesario.
+            this.vwtipofaltaTableAdapter.Fill(this.vwTipoFalta.vwtipofalta);
             cboBuscar.SelectedIndex = 0;
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            modeloEmpleado modelo = new modeloEmpleado();
-            controladorEmpleado db = new controladorEmpleado();
-        }
 
-
-        public void actualizarTablaEmpleado
+        public void actualizarTablaTipoFalta
  ()
         {
-            this.vwempleadoTableAdapter.Fill(this.vwEmpleado.vwempleado);
+            this.vwtipofaltaTableAdapter.Fill(this.vwTipoFalta.vwtipofalta);
         }
         private void llenarModeloConFilaSeleccionada()
         {
@@ -56,44 +48,42 @@ namespace Polideportivo.Vista
             modeloFila.pkId = id;
         }
 
-        modeloEntrenador modeloFila = new modeloEntrenador();
-        private void tablaEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
+        modeloTipoFalta modeloFila = new modeloTipoFalta();
+        private void tablaTipoFalta_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             llenarModeloConFilaSeleccionada();
             txtNombre.Text = nombre;
-
         }
 
-        private void btnAgregarEmpleado_Click(object sender, EventArgs e)
+        private void btnAgregarTipoFalta_Click(object sender, EventArgs e)
         {
-            controladorEmpleado modeloAgregar = new controladorEmpleado();
-            modeloEmpleado modelo = new modeloEmpleado();
-            modelo.nombre = txtNombre.Text;
-            modelo.fkIdPuestoEmpleado = stringAInt(cboDeporte.SelectedValue.ToString());
-            modeloAgregar.agregarEmpleado(modelo);
-            actualizarTablaEmpleado();
+            controladorTipoFalta modeloAgregar = new controladorTipoFalta();
+            modeloTipoFalta modelo = new modeloTipoFalta();
+            modelo.tipo = txtNombre.Text;
+            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            modeloAgregar.agregarTipoFalta(modelo);
+            actualizarTablaTipoFalta();
         }
 
-        private void btnModificarEmpleado_Click(object sender, EventArgs e)
+        private void btnModificarTipoFalta_Click(object sender, EventArgs e)
         {
-            controladorEmpleado modeloModificar = new controladorEmpleado();
-            modeloEmpleado modelo = new modeloEmpleado();
-            modelo.nombre = txtNombre.Text;
-            modelo.fkIdPuestoEmpleado = stringAInt(cboDeporte.SelectedValue.ToString());
-            modeloModificar.modificarEmpleado(modelo);
-            actualizarTablaEmpleado();
+            controladorTipoFalta modeloModificar = new controladorTipoFalta();
+            modeloTipoFalta modelo = new modeloTipoFalta();
+            modeloFila.tipo = txtNombre.Text;
+            modeloFila.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            modeloModificar.modificarTipoFalta(modeloFila);
+            actualizarTablaTipoFalta();
         }
 
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtFiltrar.Text))
             {
-                vwempleadoBindingSource.Filter = string.Empty;
+                vwtipofaltaBindingSource.Filter = string.Empty;
             }
             else
             {
-                vwempleadoBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
+                vwtipofaltaBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
             }
         }
 
@@ -104,24 +94,29 @@ namespace Polideportivo.Vista
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            actualizarTablaEmpleado();
+            actualizarTablaTipoFalta();
         }
 
-        private void btnEliminarEmpleado_Click(object sender, EventArgs e)
+        private void btnEliminarTipoFalta_Click(object sender, EventArgs e)
         {
             int id = stringAInt(tablaTipoFalta.SelectedRows[0].Cells[0].Value.ToString());
-            controladorEmpleado controlador = new controladorEmpleado();
-            modeloEmpleado modelo = new modeloEmpleado();
+            controladorTipoFalta controlador = new controladorTipoFalta();
+            modeloTipoFalta modelo = new modeloTipoFalta();
             modelo.pkId = id;
-            controlador.eliminarEmpleado(modelo);
-            actualizarTablaEmpleado();
+            controlador.eliminarTipoFalta(modelo);
+            actualizarTablaTipoFalta();
         }
 
-        private void tablaEmpleado_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        private void tablaTipoFalta_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
         }
 
+        private void parrotGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+    
     }
 }

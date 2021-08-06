@@ -1,18 +1,1422 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/CORE i7 6TA WIN10/Documents/RespaldoGithub/Actual/proyecto22021AS2G6/Polideportivo",
+  "source_base_path": "C:/Users/RM/Desktop/U/proyecto/proyecto22021AS2G6/Polideportivo",
   "xrefmap": "xrefmap.yml",
   "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.controladorAnotacion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorAnotacion.html",
+          "hash": "WVR+egaPfEv9gGhq75mYxkpFRnxIL1w5kF0Nkx2UxBQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.controladorCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorCampeonato.html",
+          "hash": "qEhdftuL6+exBn/tCth0x4wv07KFiMv8eH+PXH/W7/k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.controladorDeporte.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorDeporte.html",
+          "hash": "2LmbO5r5LLkIYxJHAZBylRpR9QUjv8xqNjLcJq+x2yo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.controladorEmpleado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorEmpleado.html",
+          "hash": "jGC+BkF8/6pQUrqmm5TX95oUZlReBqcb0uB8dYtc+78="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.controladorEntrenador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorEntrenador.html",
+          "hash": "wxz4LDiC1gZ2brXCRBxknYWv2q2CJMcedUEhY3EX1hU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.controladorEquipo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorEquipo.html",
+          "hash": "sXQDe7Vw69xSSRcL7GYoirS58SoD6Mh1ASn6CuzmMbg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.controladorEstado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorEstado.html",
+          "hash": "3LEv9Ukj9cG9q/9pRuo9A90tM/3T1+6ZuSSk5aTXZIU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.controladorJugador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorJugador.html",
+          "hash": "4UGCeDzFKQanDOvUCA+WlpWJa5QYTWnVNaQlKEdFhgo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.controladorPartido.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorPartido.html",
+          "hash": "RRUEEbAUNfTfPB3jtnJy4I4DWUCtsvhUmHW0tri+XLY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.controladorPuesto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorPuesto.html",
+          "hash": "VeQakppzAPwJ5LyVIK2ArVFfWswa3f1bNP/lkOHXfmU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.controladorRol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorRol.html",
+          "hash": "l35BiZgfXrE0L6ZhR+ZthtNhcKEBfMxne7QYUJWCqaE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.controladorTipoCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorTipoCampeonato.html",
+          "hash": "dxM1loNsCDfSL2maI5Jaow3VpVW3fneYo9qc7sM80w8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Controlador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.html",
+          "hash": "gTDlPBG66z8QYkOJZO4F1hyIxv5ZSdM7qHPW1+HE6vA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwCampeonato.vwcampeonatoDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwCampeonato.vwcampeonatoDataTable.html",
+          "hash": "SXKOBGGeGp/7/rAR3kywn7QG2ZfLiCqvnmPvFCA3yh8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwCampeonato.vwcampeonatoRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwCampeonato.vwcampeonatoRow.html",
+          "hash": "CK+qopAoYDxXFZo9RXf5P4m4hIecPEilsx9lslULXXQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwCampeonato.vwcampeonatoRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwCampeonato.vwcampeonatoRowChangeEvent.html",
+          "hash": "mNyrEmS6YIkZT1Pbjb9A3JwcKmqUY0Hr2xkuw+BV6OY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwCampeonato.vwcampeonatoRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwCampeonato.vwcampeonatoRowChangeEventHandler.html",
+          "hash": "zzz5xZJf1u6c3LgRCE6J6/4CySwXcvPDtUK/4wtUth0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwCampeonato.html",
+          "hash": "CRp8EYcYk/7zorNj4lPE/72SsXaHYzdM8n9t0sDsWB0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "7AD7znfRFQGSKnUQhsYM5HQY6UiaMOuJXSJNGpIFtsw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwCampeonatoTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwCampeonatoTableAdapters.TableAdapterManager.html",
+          "hash": "byu9y8GxfmPEPzQ/ymKvkNcSFxNJc10wpwxF+cUihbo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter.html",
+          "hash": "xm10vlz+V9yTv31rzSIMb6Z4I0aG00LW5p3WZSzh1pY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwCampeonatoTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwCampeonatoTableAdapters.html",
+          "hash": "a8+y/u63JAZB5NsRrR0iYQZfnsY46U5Df3ByzAolYqg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwDeportes.deporteDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwDeportes.deporteDataTable.html",
+          "hash": "kyL01tvB3GydBmM7kOb+sXVqwxJocYXbzc5bCtD7MFo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwDeportes.deporteRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwDeportes.deporteRow.html",
+          "hash": "PvejHUP44ffM/hjI+qssw35+F5zM5YHcq54zctYBil8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwDeportes.deporteRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwDeportes.deporteRowChangeEvent.html",
+          "hash": "X/i2yaFpIgAQx6jluyR8Dbha9+lKdSPPS3dsUCSaMks="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwDeportes.deporteRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwDeportes.deporteRowChangeEventHandler.html",
+          "hash": "ax4apYJf7G43Xn7O00uZi5zlXXhxCSObS/0VgvypmXk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwDeportes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwDeportes.html",
+          "hash": "6pkOEhKAhZ8tJPCK9WxnqInKCOsno3yHUIQae123zW4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwDeportesTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwDeportesTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "idiAwDBOqgLmKXjlfr8BybFloEdvUv3jtxhPD42subc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwDeportesTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwDeportesTableAdapters.TableAdapterManager.html",
+          "hash": "V47qHNn3fkAbim7ixomRTDq7GwQZsFv/C3JMbaoD0+I="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwDeportesTableAdapters.deporteTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwDeportesTableAdapters.deporteTableAdapter.html",
+          "hash": "1mX1RfKB9eP4BFfD7q77gkNMFHSgWux+nH+cxl540qM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwDeportesTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwDeportesTableAdapters.html",
+          "hash": "uLf9yhTqBwxR3WvEfP3O/ghgzzXTiMOaShXxlJJcEWw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEmpleado.vwempleadoDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEmpleado.vwempleadoDataTable.html",
+          "hash": "72YooQuwDSZ6XNzBYi8w3GDk7EhLUDP3GUZ3z+moD8o="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEmpleado.vwempleadoRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEmpleado.vwempleadoRow.html",
+          "hash": "r23YkR1vz9cb9J74q9mdrQTDEbHs1yWwcI4gmjTdD0Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEmpleado.vwempleadoRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEmpleado.vwempleadoRowChangeEvent.html",
+          "hash": "PU16InoNrdOrnIb6cCuECdlR6ka47HOwMZLDRyfaD1s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEmpleado.vwempleadoRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEmpleado.vwempleadoRowChangeEventHandler.html",
+          "hash": "LeN5U6cR4M0W/OprTkcJpgTbASTZn12Rv9biDbZz0/k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEmpleado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEmpleado.html",
+          "hash": "KlMBrg90NcF6wspXqaELjO4KAUgEoibHaZ5pVYrpOj8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEmpleadoTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEmpleadoTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "T1VE4utCaNrNc9If0p81cFdK51fwYzGBje7O+kfbBog="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEmpleadoTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEmpleadoTableAdapters.TableAdapterManager.html",
+          "hash": "M2vxgvztP8XiXI7zlbwI6ZUgFo3Rcq0CUpnltlNgx1c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEmpleadoTableAdapters.vwempleadoTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEmpleadoTableAdapters.vwempleadoTableAdapter.html",
+          "hash": "8tnyAyBNm/lc3oN5yQ0WOheCKvTpxpSlryC9iwzalJc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEmpleadoTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEmpleadoTableAdapters.html",
+          "hash": "SQUNiDcSP4ohjuxAUrdi4QejiST2gIelxk6yxdDXO+0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEntrenador.vwentrenadorDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEntrenador.vwentrenadorDataTable.html",
+          "hash": "k2ofs0BE6h/5Z9G7578fGbZF7sYjoiNBmhjcjwD+v7I="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEntrenador.vwentrenadorRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEntrenador.vwentrenadorRow.html",
+          "hash": "MYNa5eDXxvzOWTl5rErkyXhY58RLybwBW/x8LO4npaM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEntrenador.vwentrenadorRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEntrenador.vwentrenadorRowChangeEvent.html",
+          "hash": "bKtUdLeWRFsVguRP3dK4JX5BRds6rwniG5ctrvvNEuk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEntrenador.vwentrenadorRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEntrenador.vwentrenadorRowChangeEventHandler.html",
+          "hash": "ybDzu674ESEca9oqVyUzHuHcA5RUXQT+/VA5cu9Nk0I="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEntrenador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEntrenador.html",
+          "hash": "QPzlQx7kokBZ6JPY5r4fTLFf9lKZO4qTL7glGXFqzV0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "DpXYQ9Q3CqbNoQu+DWjfW3ERhPLHVx2KbR9sW7sN5mA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEntrenadorTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEntrenadorTableAdapters.TableAdapterManager.html",
+          "hash": "rHJCHeKrHBojsASH6bMwD2dHOK9elxvMvw91IDLvvJ0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEntrenadorTableAdapters.vwentrenadorTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEntrenadorTableAdapters.vwentrenadorTableAdapter.html",
+          "hash": "YXDCYtwGX1z/Y2XGz9DYwok901UaizP+eYTGQ3y+OlI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEntrenadorTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEntrenadorTableAdapters.html",
+          "hash": "J0orpbUUBVJxvDPJ6zmBgVf1EHEIeVTlqhuUGmmy/RQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEquipo.vwequipoDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEquipo.vwequipoDataTable.html",
+          "hash": "JwKL+LLF8A+O4l1chZqFcKtQ4D3Kr/Wo6EVCplSClEs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEquipo.vwequipoRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEquipo.vwequipoRow.html",
+          "hash": "ELs+Q77asRPwBaWTPi68FTT5BheqvQG4hbcy9nRx2Nc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEquipo.vwequipoRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEquipo.vwequipoRowChangeEvent.html",
+          "hash": "nf2JzF6/C1RKceAWR2fyXgqmWgYxLwFKzuI/U51o9bo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEquipo.vwequipoRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEquipo.vwequipoRowChangeEventHandler.html",
+          "hash": "XKkOAl2/+Dv6bcrR+EOe/fcSkjahGYqT0YDZXUaRkaU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEquipo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEquipo.html",
+          "hash": "8QHCwwHeDtkoGD/bU4g9FwdZS+IgDsF1tSCdBfa23+c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEquipoTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEquipoTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "NcqBJOzbVw45c1PwbrIg0M80Ig2WbbnDBJrK5gkhPPU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEquipoTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEquipoTableAdapters.TableAdapterManager.html",
+          "hash": "Ehf/roPbgy0bnBYGtc0gOntI/nk23nknBel2vln9fLU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEquipoTableAdapters.vwequipoTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEquipoTableAdapters.vwequipoTableAdapter.html",
+          "hash": "sJzEZpD+dN7QZPDTqAXDKsS2AaC/iKA2e7zAXRfHR9s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwEquipoTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwEquipoTableAdapters.html",
+          "hash": "8NvOldlEL0bbOxLwRgKURqAGg3pHBolVZGYIzLKCID8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwJugador.vwjugadorDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwJugador.vwjugadorDataTable.html",
+          "hash": "+HxvgCw1QGJ4zmSqbCzcwleckFLz2/cpJWRmz8acBig="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwJugador.vwjugadorRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwJugador.vwjugadorRow.html",
+          "hash": "VgZ1mucRso5ymelQpqf3N/T8hvAPV8K1z78J0yfAwL4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwJugador.vwjugadorRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwJugador.vwjugadorRowChangeEvent.html",
+          "hash": "2c1PR1fgfuAWp7SG6ppeluIuR8grbCCVN7kLKiuhC0g="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwJugador.vwjugadorRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwJugador.vwjugadorRowChangeEventHandler.html",
+          "hash": "FYE+Qx7xTxADpmZ26fvplprK61wV0mLe8Lg55nFAZ5E="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwJugador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwJugador.html",
+          "hash": "/fRgoJGrAlmpCVN8MO/4gy7QflZKiFeZqsEG3XC8JJ4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwJugadorTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwJugadorTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "JGZi2XwzSqFLXcjq6HWRf+vpnlTYKUU3kaQSIt4RAJY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwJugadorTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwJugadorTableAdapters.TableAdapterManager.html",
+          "hash": "IVB4wo84DbEGukexWbN/NdyVtzu/n+ofCwfLMtkBlaE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwJugadorTableAdapters.vwjugadorTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwJugadorTableAdapters.vwjugadorTableAdapter.html",
+          "hash": "RwE6FgG0n7ONYUSzuDHvL56uU/wZ1+lBjP1pHezI1jM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwJugadorTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwJugadorTableAdapters.html",
+          "hash": "NRfnAWrx7/Inxiieb+dbnGzMcl95X8RfxhVCH0/ZKwU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwPartido.vwpartidoDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwPartido.vwpartidoDataTable.html",
+          "hash": "hXBkYOguNRHCg8MBg+ti0YG0JaYqgUwxKR/fVjnVgwg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwPartido.vwpartidoRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwPartido.vwpartidoRow.html",
+          "hash": "ZPGe1sSgDSUzJgTyois+8efv/6APuSHJ1o3JcjKoxgU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwPartido.vwpartidoRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwPartido.vwpartidoRowChangeEvent.html",
+          "hash": "QAiVWAz/e1kcCzrJegsJSWEPvf2xE+KlTZgfMTLDDHc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwPartido.vwpartidoRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwPartido.vwpartidoRowChangeEventHandler.html",
+          "hash": "462om27bsWDXS5PWhF2D3TJCVWJmK5AOVr7fVEleAgs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwPartido.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwPartido.html",
+          "hash": "gchPgq5gEYcH0QI0z4y5TaIZIrRG/f4hBSYhDkVNPsc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "0QgqtKmKgZsdugcRw0O6P6I/fGfcwc32wwmPbyNVymU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwPartidoTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwPartidoTableAdapters.TableAdapterManager.html",
+          "hash": "9rjjREXDJCGe/kXcuG+fpm6GoOMWCeQLmJuuA7rxuN8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwPartidoTableAdapters.vwpartidoTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwPartidoTableAdapters.vwpartidoTableAdapter.html",
+          "hash": "Ow0qJaQFFJFp+2Zq8+B+CzkPlkP6XU5bOgTXBgPJl7M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwPartidoTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwPartidoTableAdapters.html",
+          "hash": "sHZeMrwIXlXUu84OqRxqluEPs0pM42Nqkx13nctfDIc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwRol.vwrolDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwRol.vwrolDataTable.html",
+          "hash": "ZR3hRcaRvTESajMg3fx983nJeZaVunVxSrxyYpAatBs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwRol.vwrolRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwRol.vwrolRow.html",
+          "hash": "yvx8/VEAqyRMLo+YPFlxkD0kZ+P3j4mNN5kFNI7EWxc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwRol.vwrolRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwRol.vwrolRowChangeEvent.html",
+          "hash": "h7O4VZMd7SZTzPQR4nblbvAZu1yIrdQ0Y92INFDFA3M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwRol.vwrolRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwRol.vwrolRowChangeEventHandler.html",
+          "hash": "1z+7HzPXolEtkhndQjUckIsrWzrL/rcPHQBLHzY5yAk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwRol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwRol.html",
+          "hash": "dUdzz7jAhsJol6fGCi8kfpb5bv2mvkW6WJVZNvMLA9w="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "g0qeNMekFn9ocVuMGd0BQeRu//jnb4Z/0MdQtaRxU6Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwRolTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwRolTableAdapters.TableAdapterManager.html",
+          "hash": "f1M/7YShjNSX+kbpVT1BfcIF3GPFAi/0oFsqshP1XGg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwRolTableAdapters.vwrolTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwRolTableAdapters.vwrolTableAdapter.html",
+          "hash": "wXuSbjTL4IRHb5Tp6WP/uKR5mnNvXOjnA8Q+eg1Xaxs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.vwRolTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.vwRolTableAdapters.html",
+          "hash": "MD9ismx0fXmB1Ld3mBm4qfTfUYXYmvN3AiQo5D0z2nU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Datos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Datos.html",
+          "hash": "pMOjU9lnQwi/Tm9yhHxRzuHNTfBiPvxqEPlniDVsBPQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.modeloAnotacion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloAnotacion.html",
+          "hash": "k/07l7zMmguiA/fOWKR0BsAEsVUQK65okNU6DWyjrxw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.modeloCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloCampeonato.html",
+          "hash": "2/z/59pLLP+An+ZCPGVLYWdl8FRTZmcfRNX9Z9320ws="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.modeloDeporte.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloDeporte.html",
+          "hash": "dpjPsPVY+bEj6QZONyjXwVL0cnyMWo4c/Ub0TyKDK2Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.modeloEmpleado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloEmpleado.html",
+          "hash": "gjrMRFcsQjjJKd60a1k0NWW8UQTxTXSLJ+cssuLKfvQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.modeloEntrenador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloEntrenador.html",
+          "hash": "6KJQUQSpXvDmJCPjhSDk9wenZCEYAIFSUpyY9KlM4zM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.modeloEquipo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloEquipo.html",
+          "hash": "yCbbH4XJWib81YnLz9mkukUOTN3Fwo0M3yeKidz+UTY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.modeloEstado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloEstado.html",
+          "hash": "OZYvbFocTF0yuxg1B2Uzjx8w1EDTJs1Zq9DChhXoAto="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.modeloJugador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloJugador.html",
+          "hash": "sc7fNOKHar9FyNqp/Bq2OVUkNSB9vOtA2fk8yAU8GDQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.modeloPartido.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloPartido.html",
+          "hash": "fu2Lhg6PdkAPPk0IfR6bZHg3RpNAlfhdApSmVBldXPA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.modeloPuesto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloPuesto.html",
+          "hash": "fYiDm4ggP4AkibAVzVuAArPIjrXvqkDL3F1BhxHSTk0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.modeloRol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloRol.html",
+          "hash": "L2N2UFzckJctO015xJD3wa4+OGGBZ8TYbprXCWpdZuU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.modeloTipoCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloTipoCampeonato.html",
+          "hash": "ucoShJw+FGPQi6aWy0CcADQCQXOVY8RMgZr1x92GvRQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Modelo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.html",
+          "hash": "rnkv3NMMyzBaX6OW85hrQiqCkG2oZ4TWJgPsGLw7i1o="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formAviso.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formAviso.html",
+          "hash": "AkEewtPtZ3NC4G6q/VODeH4hx1/MMCMwSZ1E1BsXLDU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formCampeonato.html",
+          "hash": "StvMYGhdxlbt8LnxkGnmcaoAyBcv+uDcDrOodcJMZ+8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formCampeonatoEventos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formCampeonatoEventos.html",
+          "hash": "k02/9zahgmWYX54vNUMlk4I3h8DfOoTuizcBAqmKbpM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formDeporte.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formDeporte.html",
+          "hash": "wGVmYWN4qGuUTmqiMZewMHb4AA3vSA8SJoEY4vBGDQE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formEmpleado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formEmpleado.html",
+          "hash": "+CvIwa0Ne3KZKWcOZ1tfzUGt58rI9Z4mid0PiTE0QA8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formEntrenador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formEntrenador.html",
+          "hash": "FZqDsfs2XLM1BYra5UddLUsTxLco5oc7gmXJ+54mhyw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formEquipo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formEquipo.html",
+          "hash": "dMxC3kB7W2WWgsiTTd5GrIJPJMFVnP5eKUmjThVgBZE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formEquipoEventos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formEquipoEventos.html",
+          "hash": "aM9HxsXBI4osBCeAmEelcGUk9qejZfeRD9P/1khi5U0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formError.html",
+          "hash": "dDL82TzD2XkNc0B6wFl6F1zjvjQipYNZK03eziMpuXM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formJugador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formJugador.html",
+          "hash": "JXVsQEmwDMddEqmGN+zxVKGlqyNm7djJxL0bpx+Q3Jo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formJugadorEventos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formJugadorEventos.html",
+          "hash": "OWgr2fOTElh86Y0abgQ7hd+WPI3w6NZZPdjk0KLRedc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formPartido.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formPartido.html",
+          "hash": "xn3B+hiZXkOjYWtctcG1IR/Z/4Z3Mt2uNKPvxxebjrI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formPartidoEventos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formPartidoEventos.html",
+          "hash": "rm5Fb6M3QvaFYlv/AG8+rqZYK3ord2s6riRwRiYkl5g="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formPolideportivo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formPolideportivo.html",
+          "hash": "cbkdaswKG8WJxPT00feVopTchxvzTqn59nUuccX8CKI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.formRol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formRol.html",
+          "hash": "SiWPX+eakCr4GJhPycaVy3bf5Rb0rX2kOAvD18AvpG0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.utilidadForms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.utilidadForms.html",
+          "hash": "B2g/kQFA+JnRwljpvf5kN2ArvUZSnbKYUZxOvaI6mSE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vista.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.html",
+          "hash": "24cjHadHyCpShlTdISUNwTGo4fMDEMqTRV6Fvsno1uI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
     {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "85C6iC8M4CrLh4Z48E+KZKsKxOnP2H3ZJdcvVEZ30mo="
+          "hash": "TnaNZsSdv12ZE6mDpn+VjpH277kU7RmRhToQuFNFN8c="
         }
       },
       "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "4jJq5J/st34qDkp52QzST1Pp36rjMIFNDjuPKnOgfnU="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,7 +1425,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "8gApDOOfiWqq7O2SGjodnn/SAj5VJUkDuYfamrLsxnM="
+          "hash": "L4KY6wpkMej1ZaRbzVmLmXcnMBRJGNzdPO7ypCtOdsg="
         }
       },
       "is_incremental": true,
@@ -29,7 +1433,7 @@
     },
     {
       "type": "Toc",
-      "source_relative_path": "articles/toc.md",
+      "source_relative_path": "articles/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
@@ -45,538 +1449,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "/A31ut60TNWqBOtK10BuwvIagM/XBIXQ8c57orKmAxA="
+          "hash": "KJ7GcBo9tYOdg9njmRBHfbd2VFXdltIm8c88HUIrBdI="
         }
       },
       "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.controladorAnotacion.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.controladorAnotacion.html",
-          "hash": "ETxcVZiUuJxQwMXdYfIT7Gg9AI37O5JrIUnWgkFqImo="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.controladorCampeonato.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.controladorCampeonato.html",
-          "hash": "Vr99JYz4u1SZyHvlxHq31CQtVBIb6J5m2VMbbAwtIRQ="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.controladorDeporte.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.controladorDeporte.html",
-          "hash": "b+/g29F+Pjs0P788wE6+ykzpjo/FNDmIWDcxN7HlEoo="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.controladorEmpleado.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.controladorEmpleado.html",
-          "hash": "NMDypk6gxaOgrpHcSMetu3gkEreQz9S9QSWFF5IFHpM="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.controladorEntrenador.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.controladorEntrenador.html",
-          "hash": "MQKWVPmLQplNmwuxcqbInmOsZFfDmCQiKR7orOcxCaQ="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.controladorEquipo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.controladorEquipo.html",
-          "hash": "g0CgfSvNeymy9i/CosOAcFm51VL3c8D4sPc88qpOZW8="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.controladorEstado.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.controladorEstado.html",
-          "hash": "4kb4odTE2crYu1adXlRSXR+DLtRaYZOHbgT6uxmxkH4="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.controladorJugador.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.controladorJugador.html",
-          "hash": "Yx/vl5xv9f/slDup5dRjncclreGT9SNe+IJG8w1v0VU="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.controladorPartido.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.controladorPartido.html",
-          "hash": "NOX7cUZwQ1UV1zuRrrW1joPVsWH0+NLYxozLJ4FY8Zg="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.controladorPuesto.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.controladorPuesto.html",
-          "hash": "cdTCKC36qNGZt6s98Tng43SiE4tMal00YQTsnPBkb+M="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.controladorRol.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.controladorRol.html",
-          "hash": "rkRaOXfm7WhyIxej2/r+WmYK7TZJuTsHN2lCD8JBo+U="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.controladorTipoCampeonato.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.controladorTipoCampeonato.html",
-          "hash": "qG0fpony1nTUc6OX9Dwat8E0r7Ji2M8KQ8Y8fplVPIA="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Controlador.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Controlador.html",
-          "hash": "SETkvBltpsfC9Koczfq85XiUf4YbEp5ictHJRXmuBIU="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.modeloAnotacion.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.modeloAnotacion.html",
-          "hash": "VhfpXfSaxtfGDSOPeLY2jTFsL8TUiw66ve27u2v47iw="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.modeloCampeonato.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.modeloCampeonato.html",
-          "hash": "ATgVm1Xkh9tNSnmIczf8dd8hzP9fx31sQ4qrKd5OYxo="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.modeloDeporte.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.modeloDeporte.html",
-          "hash": "fSZrmoKx9v+KuV0By/TeglSXOlb4teODhCznHaTfeZo="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.modeloEmpleado.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.modeloEmpleado.html",
-          "hash": "/PiS/pSaQrQSC/gAgZ9YLZOYuR6diFMlr7jNzQBW4zI="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.modeloEntrenador.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.modeloEntrenador.html",
-          "hash": "JFXn8XTpe6kK9ayiZOlZ0ZckJUgXp/xQ4KOv00ppj4M="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.modeloEquipo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.modeloEquipo.html",
-          "hash": "/lrYFtRK08U43wABpLD+8qKinEtchF7XFBwPb4Rylik="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.modeloEstado.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.modeloEstado.html",
-          "hash": "UV2M4DIbIunSrN6FtGMfzAGg4LqYgAs8L93/3kc4teY="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.modeloJugador.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.modeloJugador.html",
-          "hash": "yIvMrwlaPHs5w37TYMVKDI2DMtpMVkRdxGzu6Zi2il8="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.modeloPartido.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.modeloPartido.html",
-          "hash": "n1IGJdI2LWNBHtRQOateS5t5BfWe7dXk9KDaDmOiYHE="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.modeloPuesto.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.modeloPuesto.html",
-          "hash": "VDQRQC+WwLaLv5SCIMu65IQESu7E9XLSiPPvO7evNVo="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.modeloRol.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.modeloRol.html",
-          "hash": "WveCnOK9+7sNcLzK9n0QrWly+SOC/ybD3NSn6gLWQgg="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.modeloTipoCampeonato.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.modeloTipoCampeonato.html",
-          "hash": "fPP5BvibdrM5uDfzwN1HD1GyMvl84/3d8zyqeu/Y7LA="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Modelo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Modelo.html",
-          "hash": "rnkv3NMMyzBaX6OW85hrQiqCkG2oZ4TWJgPsGLw7i1o="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formAviso.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formAviso.html",
-          "hash": "d0yGYrxenyNsdXcyhONaq5tA3i8Bh9TbmtwMpJOKoEM="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formCampeonato.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formCampeonato.html",
-          "hash": "FzKMlkMgMKtMx23gd3QFUlUOCl09TeCqApWjIGI0W10="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formCampeonatoEventos.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formCampeonatoEventos.html",
-          "hash": "TU6lAR7cyTuVjcXfetjvps30wCs5NxC9J74THXqjD98="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formDeporte.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formDeporte.html",
-          "hash": "Sqbqme0ONuS4/QZTQZG596b4QBt14mngF8+dfhbG/UU="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formEmpleado.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formEmpleado.html",
-          "hash": "yqU/nd6zSBoDb0KVhFGMcqLFqxq4vfVBd39XIgf5GW4="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formEntrenador.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formEntrenador.html",
-          "hash": "ckNBRE1zej7QWc1xsAVrHQ3h5cqJGunPaTy7ILIOKds="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formEquipo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formEquipo.html",
-          "hash": "6uzPns5PGBoI5+s/4eENdF9LWRnl6ire0HtHBQSVU6o="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formEquipoEventos.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formEquipoEventos.html",
-          "hash": "skOAh6xHAIpChKXVMq1Jfd03NmmIYQXCIi6JPntOwsY="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formError.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formError.html",
-          "hash": "yuy7J//T7s0vherSmB/7lAxEg1jPYqmnMJfuc/zz+o4="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formJugador.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formJugador.html",
-          "hash": "tIqKPNMltZ2JYCI2ifqOehtoYpK/3cq281ebNkMqkOk="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formJugadorEventos.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formJugadorEventos.html",
-          "hash": "1Id+NqdTyaZFvvO8oVjbSYJjJJsShco9ycRXcfVZskE="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formPartido.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formPartido.html",
-          "hash": "9Gs7i1x6JBaXA2PhI6RT+cMaIYGCSjqZYtvt2Un94vw="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formPartidoEventos.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formPartidoEventos.html",
-          "hash": "b+I3imrsIUrFAQNNPAnOJyqJmc8YRy1NCc2tEIeZ3kk="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formPolideportivo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formPolideportivo.html",
-          "hash": "ZHvQvvs9/Q2TwS84he4tWJ3dixQStm5AKTkWepqxtjg="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.formRol.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.formRol.html",
-          "hash": "HV+w/ETAnB46dRd6UJuQrCVOo+NSPms7MYTHIRl2XcI="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.utilidadForms.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.utilidadForms.html",
-          "hash": "jek/b/30I/xczZW11srvwO7Rtgg9uk7ikVkluxKUG78="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Vista.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Vista.html",
-          "hash": "24cjHadHyCpShlTdISUNwTGo4fMDEMqTRV6Fvsno1uI="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "obj/api/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "aZEJ0z7uVnBBg4udwjEdu/uS4aqJhhIXKbB4j1XJ0Zs="
-        }
-      },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -585,7 +1461,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "Oa9PuD4E1hvZnCkVjUgzNBX6S00Zo5YilamTERTZo54="
+          "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
         }
       },
       "is_incremental": false,
@@ -610,8 +1486,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 43,
-          "skipped_file_count": 43
+          "total_file_count": 116,
+          "skipped_file_count": 116
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

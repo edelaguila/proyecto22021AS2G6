@@ -110,7 +110,11 @@ namespace Vista
         {
             gestorDeFormActivo(new formPartido(), "PARTIDO");
         }
-        
+        private void btnMenuFalta_Click(object sender, EventArgs e)
+        {
+            gestorDeFormActivo(new formTipoFalta(), "Falta");
+        }
+
         private void gestorDeFormActivo(Form formHijo, string formHijoActual)
         {
             lblTituloPrincipal.Text = formHijoActual;
@@ -181,5 +185,7 @@ namespace Vista
         private void lblMenuTitulo_Click(object sender, EventArgs e)
         {
         }
+
+        
     }
 }

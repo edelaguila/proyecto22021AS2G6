@@ -116,6 +116,7 @@
     <Compile Include="Controlador\controladorPuesto.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
     <Compile Include="Controlador\controladorTipoCampeonato.cs" />
+    <Compile Include="Controlador\controladorTipoFalta.cs" />
     <Compile Include="Modelo\modeloEstado.cs" />
     <Compile Include="Modelo\modeloAnotacion.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="Modelo\modeloRol.cs" />
     <Compile Include="Modelo\modeloJugador.cs" />
     <Compile Include="Modelo\modeloTipoCampeonato.cs" />
+    <Compile Include="Modelo\modeloTipoFalta.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -272,6 +274,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwRol.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Datos\vwTipoFalta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwTipoFalta.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Vista\formCampeonato.resx">
       <DependentUpon>formCampeonato.cs</DependentUpon>
     </EmbeddedResource>
@@ -337,8 +344,6 @@
     <None Include="api\index.md" />
     <None Include="articles\intro.md" />
     <None Include="articles\toc.md" />
-    <None Include="docfx.json" />
-    <None Include="index.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -432,7 +437,17 @@
     <None Include="Datos\vwRol.xss">
       <DependentUpon>vwRol.xsd</DependentUpon>
     </None>
-    <None Include="toc.yml" />
+    <None Include="Datos\vwTipoFalta.xsc">
+      <DependentUpon>vwTipoFalta.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\vwTipoFalta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwTipoFalta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\vwTipoFalta.xss">
+      <DependentUpon>vwTipoFalta.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config">
@@ -443,11 +458,4 @@
     <Folder Include="Imagenes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\docfx.console.2.58.0\build\docfx.console.targets" Condition="Exists('..\packages\docfx.console.2.58.0\build\docfx.console.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\docfx.console.2.58.0\build\docfx.console.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\docfx.console.2.58.0\build\docfx.console.targets'))" />
-  </Target>
 </Project>

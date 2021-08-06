@@ -1,7 +1,7 @@
 ﻿
-using Polideportivo.Datos;
+using Datos;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
     partial class formTipoFalta
     {
@@ -31,26 +31,36 @@ namespace Polideportivo.Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formTipoFalta));
             this.tablaTipoFalta = new Zuby.ADGV.AdvancedDataGridView();
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwtipofaltaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vwTipoFalta = new Datos.vwTipoFalta();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.cboDeporte = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnEliminarEmpleado = new System.Windows.Forms.Button();
-            this.btnActualizarEmpleado = new System.Windows.Forms.Button();
+            this.btnEliminarFalta = new System.Windows.Forms.Button();
+            this.btnActualizarFalta = new System.Windows.Forms.Button();
             this.panelBuscarCol = new System.Windows.Forms.Panel();
             this.cboBuscar = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtFiltrar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnModificarEmpleado = new System.Windows.Forms.Button();
-            this.btnAgregarEmpleado = new System.Windows.Forms.Button();
+            this.btnModificarFalta = new System.Windows.Forms.Button();
+            this.btnAgregarFalta = new System.Windows.Forms.Button();
+            this.vwtipofaltaTableAdapter = new Datos.vwTipoFaltaTableAdapters.vwtipofaltaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaTipoFalta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwtipofaltaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwTipoFalta)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             this.panelBuscarCol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,6 +73,7 @@ namespace Polideportivo.Vista
             this.tablaTipoFalta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tablaTipoFalta.AutoGenerateColumns = false;
             this.tablaTipoFalta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaTipoFalta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tablaTipoFalta.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
@@ -77,6 +88,12 @@ namespace Polideportivo.Vista
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tablaTipoFalta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tablaTipoFalta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaTipoFalta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn,
+            this.tipoDataGridViewTextBoxColumn,
+            this.pkIdDeporteDataGridViewTextBoxColumn,
+            this.deporteDataGridViewTextBoxColumn});
+            this.tablaTipoFalta.DataSource = this.vwtipofaltaBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -95,6 +112,53 @@ namespace Polideportivo.Vista
             this.tablaTipoFalta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaTipoFalta.Size = new System.Drawing.Size(400, 407);
             this.tablaTipoFalta.TabIndex = 5;
+            this.tablaTipoFalta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaTipoFalta_CellClick);
+            // 
+            // pkIdTipoFaltaDataGridViewTextBoxColumn
+            // 
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.DataPropertyName = "pkIdTipoFalta";
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.HeaderText = "pkIdTipoFalta";
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.Name = "pkIdTipoFaltaDataGridViewTextBoxColumn";
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
+            this.tipoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // pkIdDeporteDataGridViewTextBoxColumn
+            // 
+            this.pkIdDeporteDataGridViewTextBoxColumn.DataPropertyName = "pkIdDeporte";
+            this.pkIdDeporteDataGridViewTextBoxColumn.HeaderText = "pkIdDeporte";
+            this.pkIdDeporteDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdDeporteDataGridViewTextBoxColumn.Name = "pkIdDeporteDataGridViewTextBoxColumn";
+            this.pkIdDeporteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdDeporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // deporteDataGridViewTextBoxColumn
+            // 
+            this.deporteDataGridViewTextBoxColumn.DataPropertyName = "deporte";
+            this.deporteDataGridViewTextBoxColumn.HeaderText = "deporte";
+            this.deporteDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.deporteDataGridViewTextBoxColumn.Name = "deporteDataGridViewTextBoxColumn";
+            this.deporteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // vwtipofaltaBindingSource
+            // 
+            this.vwtipofaltaBindingSource.DataMember = "vwtipofalta";
+            this.vwtipofaltaBindingSource.DataSource = this.vwTipoFalta;
+            // 
+            // vwTipoFalta
+            // 
+            this.vwTipoFalta.DataSetName = "vwTipoFalta";
+            this.vwTipoFalta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // parrotGradientPanel1
             // 
@@ -105,12 +169,12 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.Controls.Add(this.label1);
             this.parrotGradientPanel1.Controls.Add(this.lblNombre);
             this.parrotGradientPanel1.Controls.Add(this.txtNombre);
-            this.parrotGradientPanel1.Controls.Add(this.btnEliminarEmpleado);
-            this.parrotGradientPanel1.Controls.Add(this.btnActualizarEmpleado);
+            this.parrotGradientPanel1.Controls.Add(this.btnEliminarFalta);
+            this.parrotGradientPanel1.Controls.Add(this.btnActualizarFalta);
             this.parrotGradientPanel1.Controls.Add(this.panelBuscarCol);
             this.parrotGradientPanel1.Controls.Add(this.panel2);
-            this.parrotGradientPanel1.Controls.Add(this.btnModificarEmpleado);
-            this.parrotGradientPanel1.Controls.Add(this.btnAgregarEmpleado);
+            this.parrotGradientPanel1.Controls.Add(this.btnModificarFalta);
+            this.parrotGradientPanel1.Controls.Add(this.btnAgregarFalta);
             this.parrotGradientPanel1.Controls.Add(this.tablaTipoFalta);
             this.parrotGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.Low;
@@ -125,6 +189,7 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.parrotGradientPanel1.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.CornflowerBlue;
+            this.parrotGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.parrotGradientPanel1_Paint);
             // 
             // cboDeporte
             // 
@@ -160,9 +225,9 @@ namespace Polideportivo.Vista
             this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(568, 61);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(114, 18);
+            this.lblNombre.Size = new System.Drawing.Size(156, 18);
             this.lblNombre.TabIndex = 35;
-            this.lblNombre.Text = "NOMBRE FALTA";
+            this.lblNombre.Text = "AGREGAR TIPO FALTA";
             // 
             // txtNombre
             // 
@@ -173,45 +238,47 @@ namespace Polideportivo.Vista
             this.txtNombre.Size = new System.Drawing.Size(226, 27);
             this.txtNombre.TabIndex = 34;
             // 
-            // btnEliminarEmpleado
+            // btnEliminarFalta
             // 
-            this.btnEliminarEmpleado.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnEliminarEmpleado.BackColor = System.Drawing.Color.White;
-            this.btnEliminarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnEliminarEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEliminarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarEmpleado.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarEmpleado.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarEmpleado.Image")));
-            this.btnEliminarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarEmpleado.Location = new System.Drawing.Point(571, 379);
-            this.btnEliminarEmpleado.Name = "btnEliminarEmpleado";
-            this.btnEliminarEmpleado.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnEliminarEmpleado.Size = new System.Drawing.Size(226, 58);
-            this.btnEliminarEmpleado.TabIndex = 33;
-            this.btnEliminarEmpleado.Text = "   E L I M I N A R";
-            this.btnEliminarEmpleado.UseVisualStyleBackColor = false;
+            this.btnEliminarFalta.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnEliminarFalta.BackColor = System.Drawing.Color.White;
+            this.btnEliminarFalta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarFalta.FlatAppearance.BorderSize = 0;
+            this.btnEliminarFalta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEliminarFalta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarFalta.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarFalta.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarFalta.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarFalta.Image")));
+            this.btnEliminarFalta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarFalta.Location = new System.Drawing.Point(571, 379);
+            this.btnEliminarFalta.Name = "btnEliminarFalta";
+            this.btnEliminarFalta.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnEliminarFalta.Size = new System.Drawing.Size(226, 58);
+            this.btnEliminarFalta.TabIndex = 33;
+            this.btnEliminarFalta.Text = "   E L I M I N A R";
+            this.btnEliminarFalta.UseVisualStyleBackColor = false;
+            this.btnEliminarFalta.Click += new System.EventHandler(this.btnEliminarTipoFalta_Click);
             // 
-            // btnActualizarEmpleado
+            // btnActualizarFalta
             // 
-            this.btnActualizarEmpleado.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnActualizarEmpleado.BackColor = System.Drawing.Color.White;
-            this.btnActualizarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizarEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnActualizarEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnActualizarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarEmpleado.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarEmpleado.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizarEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarEmpleado.Image")));
-            this.btnActualizarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarEmpleado.Location = new System.Drawing.Point(571, 464);
-            this.btnActualizarEmpleado.Name = "btnActualizarEmpleado";
-            this.btnActualizarEmpleado.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnActualizarEmpleado.Size = new System.Drawing.Size(226, 58);
-            this.btnActualizarEmpleado.TabIndex = 32;
-            this.btnActualizarEmpleado.Text = "      A C T U A L I Z A R";
-            this.btnActualizarEmpleado.UseVisualStyleBackColor = false;
+            this.btnActualizarFalta.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnActualizarFalta.BackColor = System.Drawing.Color.White;
+            this.btnActualizarFalta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizarFalta.FlatAppearance.BorderSize = 0;
+            this.btnActualizarFalta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnActualizarFalta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarFalta.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarFalta.ForeColor = System.Drawing.Color.Black;
+            this.btnActualizarFalta.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarFalta.Image")));
+            this.btnActualizarFalta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizarFalta.Location = new System.Drawing.Point(571, 464);
+            this.btnActualizarFalta.Name = "btnActualizarFalta";
+            this.btnActualizarFalta.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnActualizarFalta.Size = new System.Drawing.Size(226, 58);
+            this.btnActualizarFalta.TabIndex = 32;
+            this.btnActualizarFalta.Text = "      A C T U A L I Z A R";
+            this.btnActualizarFalta.UseVisualStyleBackColor = false;
+            this.btnActualizarFalta.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // panelBuscarCol
             // 
@@ -285,45 +352,51 @@ namespace Polideportivo.Vista
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnModificarEmpleado
+            // btnModificarFalta
             // 
-            this.btnModificarEmpleado.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnModificarEmpleado.BackColor = System.Drawing.Color.White;
-            this.btnModificarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnModificarEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnModificarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarEmpleado.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarEmpleado.ForeColor = System.Drawing.Color.Black;
-            this.btnModificarEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarEmpleado.Image")));
-            this.btnModificarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarEmpleado.Location = new System.Drawing.Point(571, 294);
-            this.btnModificarEmpleado.Name = "btnModificarEmpleado";
-            this.btnModificarEmpleado.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnModificarEmpleado.Size = new System.Drawing.Size(226, 58);
-            this.btnModificarEmpleado.TabIndex = 28;
-            this.btnModificarEmpleado.Text = "    M O D I F I C A R";
-            this.btnModificarEmpleado.UseVisualStyleBackColor = false;
+            this.btnModificarFalta.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnModificarFalta.BackColor = System.Drawing.Color.White;
+            this.btnModificarFalta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarFalta.FlatAppearance.BorderSize = 0;
+            this.btnModificarFalta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnModificarFalta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarFalta.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarFalta.ForeColor = System.Drawing.Color.Black;
+            this.btnModificarFalta.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarFalta.Image")));
+            this.btnModificarFalta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarFalta.Location = new System.Drawing.Point(571, 292);
+            this.btnModificarFalta.Name = "btnModificarFalta";
+            this.btnModificarFalta.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnModificarFalta.Size = new System.Drawing.Size(226, 58);
+            this.btnModificarFalta.TabIndex = 28;
+            this.btnModificarFalta.Text = "    M O D I F I C A R";
+            this.btnModificarFalta.UseVisualStyleBackColor = false;
+            this.btnModificarFalta.Click += new System.EventHandler(this.btnModificarTipoFalta_Click);
             // 
-            // btnAgregarEmpleado
+            // btnAgregarFalta
             // 
-            this.btnAgregarEmpleado.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAgregarEmpleado.BackColor = System.Drawing.Color.White;
-            this.btnAgregarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnAgregarEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAgregarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarEmpleado.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarEmpleado.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarEmpleado.Image")));
-            this.btnAgregarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarEmpleado.Location = new System.Drawing.Point(571, 209);
-            this.btnAgregarEmpleado.Name = "btnAgregarEmpleado";
-            this.btnAgregarEmpleado.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnAgregarEmpleado.Size = new System.Drawing.Size(226, 58);
-            this.btnAgregarEmpleado.TabIndex = 27;
-            this.btnAgregarEmpleado.Text = "    A G R E G A R";
-            this.btnAgregarEmpleado.UseVisualStyleBackColor = false;
+            this.btnAgregarFalta.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAgregarFalta.BackColor = System.Drawing.Color.White;
+            this.btnAgregarFalta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarFalta.FlatAppearance.BorderSize = 0;
+            this.btnAgregarFalta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAgregarFalta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarFalta.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarFalta.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarFalta.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarFalta.Image")));
+            this.btnAgregarFalta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarFalta.Location = new System.Drawing.Point(571, 209);
+            this.btnAgregarFalta.Name = "btnAgregarFalta";
+            this.btnAgregarFalta.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnAgregarFalta.Size = new System.Drawing.Size(226, 58);
+            this.btnAgregarFalta.TabIndex = 27;
+            this.btnAgregarFalta.Text = "     A G R E G A R";
+            this.btnAgregarFalta.UseVisualStyleBackColor = false;
+            this.btnAgregarFalta.Click += new System.EventHandler(this.btnAgregarTipoFalta_Click);
+            // 
+            // vwtipofaltaTableAdapter
+            // 
+            this.vwtipofaltaTableAdapter.ClearBeforeFill = true;
             // 
             // formTipoFalta
             // 
@@ -334,8 +407,10 @@ namespace Polideportivo.Vista
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formTipoFalta";
             this.Text = "formTipoFalta";
-            this.Load += new System.EventHandler(this.formEmpleado_Load);
+            this.Load += new System.EventHandler(this.formTipoFalta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaTipoFalta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwtipofaltaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwTipoFalta)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
             this.parrotGradientPanel1.PerformLayout();
             this.panelBuscarCol.ResumeLayout(false);
@@ -350,13 +425,13 @@ namespace Polideportivo.Vista
         #endregion
         private Zuby.ADGV.AdvancedDataGridView tablaTipoFalta;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private System.Windows.Forms.Button btnAgregarEmpleado;
-        private System.Windows.Forms.Button btnModificarEmpleado;
+        private System.Windows.Forms.Button btnAgregarFalta;
+        private System.Windows.Forms.Button btnModificarFalta;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtFiltrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnActualizarEmpleado;
-        private System.Windows.Forms.Button btnEliminarEmpleado;
+        private System.Windows.Forms.Button btnActualizarFalta;
+        private System.Windows.Forms.Button btnEliminarFalta;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel panelBuscarCol;
@@ -365,5 +440,12 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboDeporte;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEntrenadorDataGridViewTextBoxColumn;
+        private vwTipoFalta vwTipoFalta;
+        private System.Windows.Forms.BindingSource vwtipofaltaBindingSource;
+        private Datos.vwTipoFaltaTableAdapters.vwtipofaltaTableAdapter vwtipofaltaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdTipoFaltaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDeporteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
     }
 }

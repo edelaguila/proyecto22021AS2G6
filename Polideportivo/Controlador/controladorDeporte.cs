@@ -1,18 +1,15 @@
 ﻿using Dapper;
 using Polideportivo.Conexion;
 using Polideportivo.Modelo;
-using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Polideportivo.Controlador
 {
-    class controladorDeporte
+    internal class controladorDeporte
     {
-        ConexionODBC ODBC = new ConexionODBC();
+        private ConexionODBC ODBC = new ConexionODBC();
 
         public modeloDeporte agregarDeporte(modeloDeporte modelo)
         {
@@ -25,7 +22,6 @@ namespace Polideportivo.Controlador
                 var ValorDeVariables = new
                 {
                     nombre = modelo.nombre
-
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
@@ -69,7 +65,6 @@ namespace Polideportivo.Controlador
             }
             return modelo;
         }
-
 
         public List<modeloDeporte> mostrarDeportes()
         {

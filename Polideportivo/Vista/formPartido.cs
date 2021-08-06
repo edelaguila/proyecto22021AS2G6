@@ -8,16 +8,10 @@ namespace Polideportivo.Vista
 {
     public partial class formPartido : Form
     {
-
-
-
-
         public formPartido()
         {
             InitializeComponent();
         }
-
-       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -26,19 +20,17 @@ namespace Polideportivo.Vista
             db.agregarJugador(modelo);
         }
 
-
         public void actualizarTablaJugadores()
         {
             this.vwpartidoTableAdapter.Fill(this.vwPartido.vwpartido);
         }
 
-
         private void txtJugadorFiltrar_TextChanged(object sender, EventArgs e)
         {
-
         }
 
-        modeloPartido modeloFila = new modeloPartido();
+        private modeloPartido modeloFila = new modeloPartido();
+
         private void tablaPartido_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = stringAInt(tablaPartido.SelectedRows[0].Cells[0].Value.ToString());
@@ -61,7 +53,6 @@ namespace Polideportivo.Vista
             // utilidadForms.abrirForm(new formJugadorEventos(modeloFila, this));
             // Además de eso, modificar el construtor del form que va a utilizar los datos
             // para la modificación, en este caso sería el ctor de formJugadorEventos que recibe el modelo
-
         }
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)

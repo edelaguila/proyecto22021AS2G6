@@ -1,19 +1,15 @@
 ﻿using Dapper;
 using Polideportivo.Conexion;
 using Polideportivo.Modelo;
-using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Polideportivo.Controlador
 {
-    class controladorEquipo
+    internal class controladorEquipo
     {
-
-        ConexionODBC ODBC = new ConexionODBC();
+        private ConexionODBC ODBC = new ConexionODBC();
 
         public modeloEquipo agregarEquipo(modeloEquipo modelo)
         {
@@ -101,6 +97,5 @@ namespace Polideportivo.Controlador
             }
             return sqlresultado;
         }
-
     }
 }

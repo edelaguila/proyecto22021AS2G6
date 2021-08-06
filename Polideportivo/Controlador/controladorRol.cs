@@ -1,20 +1,16 @@
 ﻿using Dapper;
 using Polideportivo.Modelo;
-using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Polideportivo.Controlador
 {
-    class controladorRol
+    internal class controladorRol
     {
-        OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
-  
-        modeloRol modelo;
+        private OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
 
+        private modeloRol modelo;
 
         public modeloRol agregarRol(modeloRol modelo)
         {
@@ -33,12 +29,11 @@ namespace Polideportivo.Controlador
             return modelo;
         }
 
-
         public controladorRol(modeloRol Modelo)
         {
             modelo = Modelo;
         }
- 
+
         public List<modeloRol> mostrarRolesPorDeporte()
         {
             pruebas.Open();
@@ -52,9 +47,5 @@ namespace Polideportivo.Controlador
             pruebas.Close();
             return sqlresultado;
         }
-       
-
-
-
     }
 }

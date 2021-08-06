@@ -5,9 +5,10 @@ using System.Data.Odbc;
 
 namespace Polideportivo.Controlador
 {
-    class controladorCampeonato
+    internal class controladorCampeonato
     {
-        ConexionODBC ODBC = new ConexionODBC();
+        private ConexionODBC ODBC = new ConexionODBC();
+
         public modeloCampeonato AgregarCampeonato(modeloCampeonato modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -53,7 +54,6 @@ namespace Polideportivo.Controlador
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
             }
-            
 
             return modelo;
         }
@@ -72,7 +72,7 @@ namespace Polideportivo.Controlador
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
             }
-                
+
             return modelo;
         }
     }

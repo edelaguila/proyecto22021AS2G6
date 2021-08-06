@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Polideportivo.Modelo
+﻿namespace Polideportivo.Modelo
 {
     public class modeloAnotacion
     {
@@ -13,7 +7,9 @@ namespace Polideportivo.Modelo
         public int fkIdJugador { get; set; }
         public int fkIdPartido { get; set; }
 
-        public modeloAnotacion() { }
+        public modeloAnotacion()
+        {
+        }
 
         public modeloAnotacion(int Id, int Cantidad, int IdJugador, int IdPartido)
         {
@@ -21,7 +17,6 @@ namespace Polideportivo.Modelo
             cantidad = Cantidad;
             fkIdJugador = IdJugador;
             fkIdPartido = IdPartido;
-         
         }
     }
 }

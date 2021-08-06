@@ -1,5 +1,4 @@
-﻿using Polideportivo.AccesoDatos;
-using Polideportivo.Controlador;
+﻿using Polideportivo.Controlador;
 using Polideportivo.Modelo;
 using System;
 using System.Windows.Forms;
@@ -9,22 +8,18 @@ namespace Polideportivo.Vista
 {
     public partial class formDeporte : Form
     {
-
-        int id;
-        string nombre;
+        private int id;
+        private string nombre;
 
         public formDeporte()
         {
             InitializeComponent();
         }
 
-        
-
         private void formDeporte_Load(object sender, EventArgs e)
         {
             this.deporteTableAdapter.Fill(this.vwDeportes.deporte);
             cboBuscar.SelectedIndex = 0;
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,22 +28,20 @@ namespace Polideportivo.Vista
             controladorDeporte db = new controladorDeporte();
         }
 
-
         public void actualizarTablaDeporte()
         {
             this.deporteTableAdapter.Fill(this.vwDeportes.deporte);
         }
 
-
         private void txtJugadorFiltrar_TextChanged(object sender, EventArgs e)
         {
-
         }
 
-        modeloDeporte modeloFila = new modeloDeporte();
+        private modeloDeporte modeloFila = new modeloDeporte();
+
         private void tablaDeporte_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            llenarModeloConFilaSeleccionada();   
+            llenarModeloConFilaSeleccionada();
             txtNombreDeporte.Text = nombre;
         }
 
@@ -58,7 +51,6 @@ namespace Polideportivo.Vista
             nombre = tablaDeportes.SelectedRows[0].Cells[1].Value.ToString();
             modeloFila.pkId = id;
         }
-
 
         private void btnAgregarDeporte_Click(object sender, EventArgs e)
         {
@@ -116,17 +108,14 @@ namespace Polideportivo.Vista
 
         private void txtNombreDeporte_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void tablaDeportes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
     }
 }

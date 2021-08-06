@@ -21,7 +21,7 @@ namespace Polideportivo.Controlador
             pruebas.Open();
 
             var sqlinsertar =
-               "INSERT INTO equipo (nombre, fkIdDeporte) " +
+               "INSERT INTO rol (nombre, fkIdDeporte) " +
                "VALUES (?nombre?, ?fkIdDeporte?);";
             var ValorDeVariables = new
             {

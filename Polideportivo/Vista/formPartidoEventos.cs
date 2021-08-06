@@ -54,8 +54,6 @@ namespace Polideportivo.Vista
             cboCampeonato.ValueMember = "pkId";
             cboCampeonato.SelectedIndex = -1;
 
-
-            //CORREGIIIIIIIIIIIIIIR
             controladorEmpleado empleado = new controladorEmpleado();
             cboEmpleado.DataSource = empleado.mostrarEmpleado();
             cboEmpleado.DisplayMember = "nombre";
@@ -69,13 +67,13 @@ namespace Polideportivo.Vista
             cboEstado.SelectedIndex = -1;
             formOriginal = form;
 
-            //controladorResultado estado = new controladorEstado();
-            //cboEmpleado.DataSource = estado.mostrarEstado();
-            //cboEmpleado.DisplayMember = "nombre";
-            //cboEmpleado.ValueMember = "pkId";
-            //cboEmpleado.SelectedIndex = -1;
-            //formOriginal = form;
-            // Modificar el texto del título
+            controladorResultado resultado = new controladorResultado();
+            cboResultado.DataSource = resultado.mostrarResultado();
+            cboEmpleado.DisplayMember = "nombre";
+            cboEmpleado.ValueMember = "pkId";
+            cboEmpleado.SelectedIndex = -1;
+            formOriginal = form;
+            //Modificar el texto del título
             lblJugadorEvento.Text = "AGREGAR PARTIDO";
         }
 

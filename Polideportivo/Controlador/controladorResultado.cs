@@ -7,21 +7,22 @@ using System.Linq;
 
 namespace Polideportivo.Controlador
 {
-    internal class controladorEstado
+    internal class controladorResultado
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
-        public modeloEstado agregarEstado(modeloEstado modelo)
+        public modeloResultado agregarResultado(modeloResultado modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "INSERT INTO estado (pkId, nombre) " +
-                "VALUES (NULL, ?nombre?);";
+                "INSERT INTO resultado (pkId, anotacionEquipo1, anotacionEquipo2) " +
+                "VALUES (NULL, ?anotacionEquipo1?, ?anotacionEquipo2?);";
                 var ValorDeVariables = new
                 {
-                    nombre = modelo.nombre
+                    anotacionEquipo1  = modelo.anotacionEquipo1,
+                    anotacionEquipo2 = modelo.anotacionEquipo2
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
@@ -29,18 +30,18 @@ namespace Polideportivo.Controlador
             return modelo;
         }
 
-        public modeloEstado modificarEstado(modeloEstado modelo)
+        public modeloResultado modificarResultado(modeloResultado modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "UPDATE estado SET nombre = ?nombre? " +
+                "UPDATE resultado SET anotacionEquipo1 = ?anotacionEquipo1?, anotacionEquipo2 = ?anotacionEquipo2? " +
                 "WHERE pkId = ?pkId?;";
                 var ValorDeVariables = new
                 {
-                    nombre = modelo.nombre,
-                    pkId = modelo.pkId
+                    anotacionEquipo1 = modelo.anotacionEquipo1,
+                    anotacionEquipo2 = modelo.anotacionEquipo2
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
@@ -48,13 +49,13 @@ namespace Polideportivo.Controlador
             return modelo;
         }
 
-        public modeloEstado eliminarEstado(modeloEstado modelo)
+        public modeloResultado eliminarResultado(modeloResultado modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "DELETE FROM estado WHERE pkId = ?pkId?;";
+                "DELETE FROM resultado WHERE pkId = ?pkId?;";
 
                 var ValorDeVariables = new
                 {
@@ -66,14 +67,14 @@ namespace Polideportivo.Controlador
             return modelo;
         }
 
-        public List<modeloEstado> mostrarEstado()
+        public List<modeloResultado> mostrarResultado()
         {
-            List<modeloEstado> sqlresultado = new List<modeloEstado>();
+            List<modeloResultado> sqlresultado = new List<modeloResultado>();
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
-                string sqlconsulta = "SELECT * FROM estado;";
-                sqlresultado = conexionODBC.Query<modeloEstado>(sqlconsulta).ToList();
+                string sqlconsulta = "SELECT * FROM resultado;";
+                sqlresultado = conexionODBC.Query<modeloResultado>(sqlconsulta).ToList();
                 ODBC.cerrarConexion(conexionODBC);
             }
             return sqlresultado;

@@ -32,8 +32,8 @@ namespace Polideportivo.Vista
 
         private void formPartido_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'vwPartido.vwpartido' Puede moverla o quitarla según sea necesario.
-            this.vwpartidoTableAdapter.Fill(this.vwPartido.vwpartido);
+            // TODO: esta línea de código carga datos en la tabla 'vwPartidos.vwpartido' Puede moverla o quitarla según sea necesario.
+            this.vwpartidoTableAdapter.Fill(this.vwPartidos.vwpartido);
             cboBuscar.SelectedIndex = 0;
             tablaPartidos.CurrentCell = tablaPartidos.Rows[0].Cells[1];
             llenarModeloConFilaSeleccionada();
@@ -43,7 +43,7 @@ namespace Polideportivo.Vista
 
         public void actualizarTablaPartido()
         {
-            this.vwpartidoTableAdapter.Fill(this.vwPartido.vwpartido);
+            this.vwpartidoTableAdapter.Fill(this.vwPartidos.vwpartido);
         }
 
 

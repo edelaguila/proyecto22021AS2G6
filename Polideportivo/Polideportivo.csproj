@@ -103,6 +103,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bdpolideportivoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Conexion\ConexionODBC.cs" />
     <Compile Include="Controlador\controladorEstado.cs" />
     <Compile Include="Controlador\controladorAnotacion.cs" />
@@ -268,6 +273,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwRol.xsd</DependentUpon>
     </Compile>
+    <Compile Include="vwPartidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwPartidos.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Vista\formCampeonato.resx">
       <DependentUpon>formCampeonato.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,6 +337,17 @@
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bdpolideportivoDataSet.xsc">
+      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdpolideportivoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdpolideportivoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdpolideportivoDataSet.xss">
+      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -419,6 +440,17 @@
     </None>
     <None Include="Datos\vwRol.xss">
       <DependentUpon>vwRol.xsd</DependentUpon>
+    </None>
+    <None Include="vwPartidos.xsc">
+      <DependentUpon>vwPartidos.xsd</DependentUpon>
+    </None>
+    <None Include="vwPartidos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwPartidos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vwPartidos.xss">
+      <DependentUpon>vwPartidos.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

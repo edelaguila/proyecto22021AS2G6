@@ -67,11 +67,7 @@ namespace Polideportivo.Vista
             cboEstado.SelectedIndex = -1;
             formOriginal = form;
 
-            controladorResultado resultado = new controladorResultado();
-            cboResultado.DataSource = resultado.mostrarResultado();
-            cboEmpleado.DisplayMember = "nombre";
-            cboEmpleado.ValueMember = "pkId";
-            cboEmpleado.SelectedIndex = -1;
+            
             formOriginal = form;
             //Modificar el texto del título
             lblJugadorEvento.Text = "AGREGAR PARTIDO";
@@ -115,7 +111,6 @@ namespace Polideportivo.Vista
             modelo.campo = txtCampo.Text;
             modelo.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
             modelo.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
-            modelo.fkIdResultado = stringAInt(cboResultado.SelectedValue.ToString());
             modelo.fkIdEstado = stringAInt(cboEstado.SelectedValue.ToString());
             modeloAgregar.agregarPartido(modelo);
             formOriginal.actualizarTablaPartido();
@@ -131,7 +126,6 @@ namespace Polideportivo.Vista
             modelo.anotaciones = stringAInt(txtEquipo1.Text);
             modelo.fkIdDeporte = stringAInt(cboCampeonato.SelectedValue.ToString());
             modelo.fkIdEquipo = stringAInt(cboEmpleado.SelectedValue.ToString());
-            modelo.fkIdRol = stringAInt(cboResultado.SelectedValue.ToString());
             modeloModificar.modificarJugador(modelo);
             formOriginal.actualizarTablaPartido();
             cerrarForm(this);

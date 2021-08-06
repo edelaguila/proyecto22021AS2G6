@@ -47,7 +47,6 @@ namespace Polideportivo.Vista
             this.label3 = new System.Windows.Forms.Label();
             this.txtCampo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtEquipo2 = new System.Windows.Forms.TextBox();
             this.btnModificarPartido = new System.Windows.Forms.Button();
             this.btnAgregarPartido = new System.Windows.Forms.Button();
@@ -55,6 +54,7 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblJugadorEvento = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.PictureBox();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
             this.parrotGradientPanel2.SuspendLayout();
             this.parrotGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -175,13 +175,13 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel2.BottomLeft = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel2.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
+            this.parrotGradientPanel2.Controls.Add(this.cboEstado);
             this.parrotGradientPanel2.Controls.Add(this.label5);
             this.parrotGradientPanel2.Controls.Add(this.cdrFecha);
             this.parrotGradientPanel2.Controls.Add(this.label4);
             this.parrotGradientPanel2.Controls.Add(this.label3);
             this.parrotGradientPanel2.Controls.Add(this.txtCampo);
             this.parrotGradientPanel2.Controls.Add(this.label2);
-            this.parrotGradientPanel2.Controls.Add(this.txtEstado);
             this.parrotGradientPanel2.Controls.Add(this.txtEquipo2);
             this.parrotGradientPanel2.Controls.Add(this.btnModificarPartido);
             this.parrotGradientPanel2.Controls.Add(this.btnAgregarPartido);
@@ -271,14 +271,6 @@ namespace Polideportivo.Vista
             this.label2.Size = new System.Drawing.Size(72, 18);
             this.label2.TabIndex = 33;
             this.label2.Text = "EQUIPO 2";
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.Location = new System.Drawing.Point(254, 38);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(121, 27);
-            this.txtEstado.TabIndex = 32;
             // 
             // txtEquipo2
             // 
@@ -386,6 +378,18 @@ namespace Polideportivo.Vista
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // cboEstado
+            // 
+            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboEstado.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(254, 38);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(121, 27);
+            this.cboEstado.TabIndex = 39;
+            this.cboEstado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // formPartidoEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,7 +435,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCampo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.TextBox txtEquipo2;
+        private System.Windows.Forms.ComboBox cboEstado;
     }
 }

@@ -9,13 +9,12 @@ namespace Polideportivo.Modelo
         public string equipo2 { get; set; }
         public string campo { get; set; }
         public DateTime fecha { get; set; }
-        public string estado { get; set; }
         public string fase { get; set; }
         public int fkIdCampeonato { get; set; }
         public int fkIdEmpleado { get; set; }
         public int fkIdResultado { get; set; }
-
         public int fkIdEstado { get; set; }
+
 
         public modeloPartido()
         {
@@ -28,7 +27,6 @@ namespace Polideportivo.Modelo
             equipo2 = Equipo2;
             campo = Campo;
             fecha = Fecha;
-            estado = Estado;
             fase = Fase;
             fkIdCampeonato = IdCampeonato;
             fkIdEmpleado = IdEmpleado;

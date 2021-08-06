@@ -34,8 +34,8 @@ namespace Polideportivo.Vista
         {
             // TODO: esta línea de código carga datos en la tabla 'vwPartido.vwpartido' Puede moverla o quitarla según sea necesario.
             this.vwpartidoTableAdapter.Fill(this.vwPartido.vwpartido);
-            tablaJugadores.CurrentCell = tablaJugadores.Rows[0].Cells[1];
             cboBuscar.SelectedIndex = 0;
+            tablaPartidos.CurrentCell = tablaPartidos.Rows[0].Cells[1];
             llenarModeloConFilaSeleccionada();
         }
 
@@ -49,21 +49,21 @@ namespace Polideportivo.Vista
 
 
 
-        private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void tablapartidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             llenarModeloConFilaSeleccionada();
         }
 
 
 
-        private void btnAgregarJugador_Click(object sender, EventArgs e)
+        private void btnAgregarPartido_Click(object sender, EventArgs e)
         {
             abrirForm(new formPartidoEventos(this));
         }
 
-        private void btnModificarJugador_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
-            //abrirForm(new formJugadorEventos(modeloFila, this));
+            abrirForm(new formPartidoEventos(modeloFila, this));
 
         }
 
@@ -92,25 +92,30 @@ namespace Polideportivo.Vista
             actualizarTablaPartido();
         }
 
-        private void tablaJugadores_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        private void tablaPartidos_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
         }
 
         public void llenarModeloConFilaSeleccionada()
         {
-            //id= stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
-            //nombre = tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
-            //anotaciones = stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
-            //fkIdEquipo = stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
-            //fkIdRol = stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
-            //fkIdDeporte = stringAInt(tablaJugadores.SelectedRows[0].Cells[7].Value.ToString());
-            //modeloFila.pkId = id;
-            //modeloFila.nombre = nombre;
-            //modeloFila.anotaciones = anotaciones;
-            //modeloFila.fkIdEquipo = fkIdEquipo;
-            //modeloFila.fkIdRol = fkIdRol;
-            //modeloFila.fkIdDeporte = fkIdDeporte;
+            id= stringAInt(tablaPartidos.SelectedRows[0].Cells[0].Value.ToString());
+            fase = tablaPartidos.SelectedRows[0].Cells[1].Value.ToString();
+            equipo1 = tablaPartidos.SelectedRows[0].Cells[2].Value.ToString();
+            equipo2 = tablaPartidos.SelectedRows[0].Cells[3].Value.ToString();
+            campo = tablaPartidos.SelectedRows[0].Cells[4].Value.ToString();
+            fkIdEstado = stringAInt(tablaPartidos.SelectedRows[0].Cells[5].Value.ToString());
+            fkIdCampeonato= stringAInt(tablaPartidos.SelectedRows[0].Cells[6].Value.ToString());
+            fkIdEmpleado = stringAInt(tablaPartidos.SelectedRows[0].Cells[7].Value.ToString());
+            fkIdResultado = stringAInt(tablaPartidos.SelectedRows[0].Cells[8].Value.ToString());
+            modeloFila.pkId = id;
+            modeloFila.equipo1 = equipo1;
+            modeloFila.equipo2 = equipo2;
+            modeloFila.fkIdEstado = fkIdEstado;
+            modeloFila.fkIdCampeonato = fkIdCampeonato;
+            modeloFila.fkIdEmpleado = fkIdEmpleado;
+            modeloFila.fkIdResultado = fkIdResultado;
+
         }
 
         private void filtrarTabla()
@@ -125,5 +130,9 @@ namespace Polideportivo.Vista
             }
         }
 
+        private void btnAgregarPartido_Click_1(object sender, EventArgs e)
+        {
+            abrirForm(new formPartidoEventos(this));
+        }
     }
 }

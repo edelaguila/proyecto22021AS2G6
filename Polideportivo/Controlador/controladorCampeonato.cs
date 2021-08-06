@@ -2,6 +2,8 @@
 using Polideportivo.Conexion;
 using Polideportivo.Modelo;
 using System.Data.Odbc;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Polideportivo.Controlador
 {
@@ -74,6 +76,20 @@ namespace Polideportivo.Controlador
             }
 
             return modelo;
+        }
+
+
+        public List<modeloCampeonato> mostrarCampeonato()
+        {
+            List<modeloCampeonato> sqlresultado = new List<modeloCampeonato>();
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                string sqlconsulta = "SELECT * FROM campeonato;";
+                sqlresultado = conexionODBC.Query<modeloCampeonato>(sqlconsulta).ToList();
+                ODBC.cerrarConexion(conexionODBC);
+            }
+            return sqlresultado;
         }
     }
 }

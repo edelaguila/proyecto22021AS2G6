@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="vwEmpleado" targetNamespace="http://tempuri.org/vwEmpleado.xsd" xmlns:mstns="http://tempuri.org/vwEmpleado.xsd" xmlns="http://tempuri.org/vwEmpleado.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bdpolideportivoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bdpolideportivoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Polideportivo.Properties.Settings.GlobalReference.Default.bdpolideportivoConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwempleadoTableAdapter" GeneratorDataComponentClassName="vwempleadoTableAdapter" Name="vwempleado" UserDataComponentName="vwempleadoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdpolideportivoConnectionString (Settings)" DbObjectName="bdpolideportivo.vwempleado" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `pkIdEmpleado`, `nombre`, `pkIdPuestoEmpleado`, `puestoempleado` FROM `bdpolideportivo`.`vwempleado`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="pkIdEmpleado" DataSetColumn="pkIdEmpleado" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="pkIdPuestoEmpleado" DataSetColumn="pkIdPuestoEmpleado" />
+              <Mapping SourceColumn="puestoempleado" DataSetColumn="puestoempleado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="vwEmpleado" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="vwEmpleado" msprop:Generator_UserDSName="vwEmpleado">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwempleado" msprop:Generator_TableClassName="vwempleadoDataTable" msprop:Generator_TableVarName="tablevwempleado" msprop:Generator_TablePropName="vwempleado" msprop:Generator_RowDeletingName="vwempleadoRowDeleting" msprop:Generator_RowChangingName="vwempleadoRowChanging" msprop:Generator_RowEvHandlerName="vwempleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="vwempleadoRowDeleted" msprop:Generator_UserTableName="vwempleado" msprop:Generator_RowChangedName="vwempleadoRowChanged" msprop:Generator_RowEvArgName="vwempleadoRowChangeEvent" msprop:Generator_RowClassName="vwempleadoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pkIdEmpleado" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdEmpleado" msprop:Generator_ColumnPropNameInRow="pkIdEmpleado" msprop:Generator_ColumnPropNameInTable="pkIdEmpleadoColumn" msprop:Generator_UserColumnName="pkIdEmpleado" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pkIdPuestoEmpleado" msprop:Generator_ColumnVarNameInTable="columnpkIdPuestoEmpleado" msprop:Generator_ColumnPropNameInRow="pkIdPuestoEmpleado" msprop:Generator_ColumnPropNameInTable="pkIdPuestoEmpleadoColumn" msprop:Generator_UserColumnName="pkIdPuestoEmpleado" type="xs:int" />
+              <xs:element name="puestoempleado" msprop:Generator_ColumnVarNameInTable="columnpuestoempleado" msprop:Generator_ColumnPropNameInRow="puestoempleado" msprop:Generator_ColumnPropNameInTable="puestoempleadoColumn" msprop:Generator_UserColumnName="puestoempleado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwempleado" />
+      <xs:field xpath="mstns:pkIdEmpleado" />
+      <xs:field xpath="mstns:pkIdPuestoEmpleado" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

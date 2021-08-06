@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Polideportivo.Modelo
+namespace Modelo
 {
     public class modeloPartido
     {
@@ -14,7 +14,6 @@ namespace Polideportivo.Modelo
         public int fkIdEmpleado { get; set; }
         public int fkIdResultado { get; set; }
         public int fkIdEstado { get; set; }
-
 
         public modeloPartido()
         {

@@ -1,7 +1,7 @@
 ﻿
-using Polideportivo.Datos;
+using Datos;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
     partial class formPartido
     {
@@ -52,7 +52,7 @@ namespace Polideportivo.Vista
             this.pkIdEstadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwpartidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwPartido = new Polideportivo.Datos.vwPartido();
+            this.vwPartido = new Datos.vwPartido();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregarPartido = new System.Windows.Forms.Button();
-            this.vwpartidoTableAdapter = new Polideportivo.Datos.vwPartidoTableAdapters.vwpartidoTableAdapter();
+            this.vwpartidoTableAdapter = new Datos.vwPartidoTableAdapters.vwpartidoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPartidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwpartidoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwPartido)).BeginInit();
@@ -521,7 +521,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Label label1;
         private vwPartido vwPartido;
         private System.Windows.Forms.BindingSource vwpartidoBindingSource;
-        private Polideportivo.Datos.vwPartidoTableAdapters.vwpartidoTableAdapter vwpartidoTableAdapter;
+        private Datos.vwPartidoTableAdapters.vwpartidoTableAdapter vwpartidoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdPartidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipo1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipo2DataGridViewTextBoxColumn;

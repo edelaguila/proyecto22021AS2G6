@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Polideportivo.Modelo
+namespace Modelo
 {
     public class modeloEmpleado
     {
@@ -12,7 +12,9 @@ namespace Polideportivo.Modelo
         public string nombre { get; set; }
         public int fkIdPuestoEmpleado { get; set; }
 
-        public modeloEmpleado() { }
+        public modeloEmpleado()
+        {
+        }
 
         public modeloEmpleado(int Id, string Nombre, int IdEquipo, int IdPuestoEmpleado)
         {
@@ -20,6 +22,5 @@ namespace Polideportivo.Modelo
             nombre = Nombre;
             fkIdPuestoEmpleado = IdPuestoEmpleado;
         }
-
     }
 }

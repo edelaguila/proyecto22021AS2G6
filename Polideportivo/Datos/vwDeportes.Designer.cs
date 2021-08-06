@@ -10,12 +10,9 @@
 
 #pragma warning disable 1591
 
-namespace Polideportivo.Datos {
+namespace Datos {
     
     
-    /// <summary>
-    ///Represents a strongly typed in-memory cache of data.
-    ///</summary>
     [global::System.Serializable()]
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
@@ -272,9 +269,6 @@ namespace Polideportivo.Datos {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void deporteRowChangeEventHandler(object sender, deporteRowChangeEvent e);
         
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class deporteDataTable : global::System.Data.TypedTableBase<deporteRow> {
@@ -549,9 +543,6 @@ namespace Polideportivo.Datos {
             }
         }
         
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class deporteRow : global::System.Data.DataRow {
             
             private deporteDataTable tabledeporte;
@@ -586,9 +577,6 @@ namespace Polideportivo.Datos {
             }
         }
         
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public class deporteRowChangeEvent : global::System.EventArgs {
             
@@ -621,12 +609,9 @@ namespace Polideportivo.Datos {
         }
     }
 }
-namespace Polideportivo.Datos.vwDeportesTableAdapters {
+namespace Datos.vwDeportesTableAdapters {
     
     
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.ComponentModel.DataObjectAttribute(true)]
@@ -970,9 +955,6 @@ namespace Polideportivo.Datos.vwDeportesTableAdapters {
         }
     }
     
-    /// <summary>
-    ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-    ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerDesigner, Microsoft.VSD" +
@@ -1056,9 +1038,6 @@ namespace Polideportivo.Datos.vwDeportesTableAdapters {
             }
         }
         
-        /// <summary>
-        ///Update rows in top-down order.
-        ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(vwDeportes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
@@ -1075,9 +1054,6 @@ namespace Polideportivo.Datos.vwDeportesTableAdapters {
             return result;
         }
         
-        /// <summary>
-        ///Insert rows in top-down order.
-        ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(vwDeportes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
@@ -1093,9 +1069,6 @@ namespace Polideportivo.Datos.vwDeportesTableAdapters {
             return result;
         }
         
-        /// <summary>
-        ///Delete rows in bottom-up order.
-        ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(vwDeportes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
@@ -1111,9 +1084,6 @@ namespace Polideportivo.Datos.vwDeportesTableAdapters {
             return result;
         }
         
-        /// <summary>
-        ///Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-        ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private global::System.Data.DataRow[] GetRealUpdatedRows(global::System.Data.DataRow[] updatedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
@@ -1135,9 +1105,6 @@ namespace Polideportivo.Datos.vwDeportesTableAdapters {
             return realUpdatedRows.ToArray();
         }
         
-        /// <summary>
-        ///Update all changes to the dataset.
-        ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public virtual int UpdateAll(vwDeportes dataSet) {
@@ -1289,9 +1256,6 @@ namespace Polideportivo.Datos.vwDeportesTableAdapters {
             return false;
         }
         
-        /// <summary>
-        ///Update Order Option
-        ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public enum UpdateOrderOption {
             
@@ -1300,9 +1264,6 @@ namespace Polideportivo.Datos.vwDeportesTableAdapters {
             UpdateInsertDelete = 1,
         }
         
-        /// <summary>
-        ///Used to sort self-referenced table's rows
-        ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private class SelfReferenceComparer : object, global::System.Collections.Generic.IComparer<global::System.Data.DataRow> {
             

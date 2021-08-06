@@ -1,11 +1,10 @@
-﻿using Polideportivo.AccesoDatos;
-using Polideportivo.Controlador;
-using Polideportivo.Modelo;
+﻿using Controlador;
+using Modelo;
 using System;
 using System.Windows.Forms;
-using static Polideportivo.Vista.utilidadForms;
+using static Vista.utilidadForms;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
     public partial class formPartidoEventos : Form
     {
@@ -47,13 +46,14 @@ namespace Polideportivo.Vista
             InitializeComponent();
             btnAgregarPartido.Visible = true;
             btnModificarPartido.Visible = false;
-            // Llenar combobox 
+            // Llenar combobox
             controladorCampeonato campeonato = new controladorCampeonato();
             cboCampeonato.DataSource = campeonato.mostrarCampeonato();
             cboCampeonato.DisplayMember = "nombre";
             cboCampeonato.ValueMember = "pkId";
             cboCampeonato.SelectedIndex = -1;
 
+            //CORREGIIIIIIIIIIIIIIR
             controladorEmpleado empleado = new controladorEmpleado();
             cboEmpleado.DataSource = empleado.mostrarEmpleado();
             cboEmpleado.DisplayMember = "nombre";
@@ -136,7 +136,6 @@ namespace Polideportivo.Vista
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

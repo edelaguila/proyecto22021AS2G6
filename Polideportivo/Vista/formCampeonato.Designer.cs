@@ -1,6 +1,6 @@
-﻿using Polideportivo.Datos;
-using static Polideportivo.Vista.utilidadForms;
-namespace Polideportivo.Vista
+﻿using Datos;
+using static Vista.utilidadForms;
+namespace Vista
 {
     partial class formCampeonato
     {
@@ -55,8 +55,8 @@ namespace Polideportivo.Vista
             this.pkIdTipoCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwcampeonatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwCampeonato = new Polideportivo.Datos.vwCampeonato();
-            this.vwcampeonatoTableAdapter = new Polideportivo.Datos.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter();
+            this.vwCampeonato = new Datos.vwCampeonato();
+            this.vwcampeonatoTableAdapter = new Datos.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaCampeonatos)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             this.panelBuscarCol.SuspendLayout();

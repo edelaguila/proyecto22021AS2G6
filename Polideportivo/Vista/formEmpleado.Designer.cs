@@ -1,7 +1,7 @@
 ﻿
-using Polideportivo.Datos;
+using Datos;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
     partial class formEmpleado
     {
@@ -41,7 +41,7 @@ namespace Polideportivo.Vista
             this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puestoempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwempleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwEmpleado = new Polideportivo.Datos.vwEmpleado();
+            this.vwEmpleado = new Datos.vwEmpleado();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.cboPuesto = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarEmpleado = new System.Windows.Forms.Button();
             this.btnAgregarEmpleado = new System.Windows.Forms.Button();
-            this.vwempleadoTableAdapter = new Polideportivo.Datos.vwEmpleadoTableAdapters.vwempleadoTableAdapter();
+            this.vwempleadoTableAdapter = new Datos.vwEmpleadoTableAdapters.vwempleadoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwempleadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwEmpleado)).BeginInit();
@@ -70,8 +70,8 @@ namespace Polideportivo.Vista
             // 
             // tablaEmpleado
             // 
-            this.tablaEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tablaEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tablaEmpleado.AutoGenerateColumns = false;
             this.tablaEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -282,7 +282,7 @@ namespace Polideportivo.Vista
             // 
             // panelBuscarCol
             // 
-            this.panelBuscarCol.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelBuscarCol.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBuscarCol.BackColor = System.Drawing.Color.White;
             this.panelBuscarCol.Controls.Add(this.cboBuscar);
@@ -294,8 +294,8 @@ namespace Polideportivo.Vista
             // 
             // cboBuscar
             // 
-            this.cboBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.cboBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -320,7 +320,7 @@ namespace Polideportivo.Vista
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.txtFiltrar);
@@ -332,8 +332,8 @@ namespace Polideportivo.Vista
             // 
             // txtFiltrar
             // 
-            this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFiltrar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -442,7 +442,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEntrenadorDataGridViewTextBoxColumn;
         private vwEmpleado vwEmpleado;
         private System.Windows.Forms.BindingSource vwempleadoBindingSource;
-        private Polideportivo.Datos.vwEmpleadoTableAdapters.vwempleadoTableAdapter vwempleadoTableAdapter;
+        private Datos.vwEmpleadoTableAdapters.vwempleadoTableAdapter vwempleadoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEmpleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdPuestoEmpleadoDataGridViewTextBoxColumn;

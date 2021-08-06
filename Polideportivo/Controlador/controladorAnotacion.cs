@@ -1,16 +1,22 @@
 ﻿using Dapper;
-using Polideportivo.Conexion;
-using Polideportivo.Modelo;
+using Conexion;
+using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
 
-namespace Polideportivo.Controlador
+namespace Controlador
 {
-    internal class controladorAnotacion
+    /// <summary>
+    /// Controlador para anotaciones
+    /// </summary>
+    public class controladorAnotacion
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
+        /// <summary>
+        /// Controlador para anotaciones
+        /// </summary>
         public modeloAnotacion agregarAnotacion(modeloAnotacion modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();

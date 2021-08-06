@@ -1,11 +1,10 @@
-﻿using Polideportivo.AccesoDatos;
-using Polideportivo.Controlador;
-using Polideportivo.Modelo;
+﻿using Controlador;
+using Modelo;
 using System;
 using System.Windows.Forms;
-using static Polideportivo.Vista.utilidadForms;
+using static Vista.utilidadForms;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
     public partial class formJugadorEventos : Form
     {
@@ -98,6 +97,11 @@ namespace Polideportivo.Vista
             }
         }
 
+        /// <summary>
+        /// Modifica jugador
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
             if (validarFormEventos())
@@ -111,6 +115,9 @@ namespace Polideportivo.Vista
             }
         }
 
+        /// <summary>
+        /// Hola
+        /// </summary>
         private void llenarModeloConDatosIngresados()
         {
             modelo.pkId = modeloOriginal.pkId;

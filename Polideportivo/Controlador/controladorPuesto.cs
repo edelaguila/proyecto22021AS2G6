@@ -1,19 +1,15 @@
 ﻿using Dapper;
-using Polideportivo.Conexion;
-using Polideportivo.Modelo;
-using System;
+using Conexion;
+using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Polideportivo.Controlador
+namespace Controlador
 {
-    class controladorPuesto
+    public class controladorPuesto
     {
-
-        ConexionODBC ODBC = new ConexionODBC();
+        private ConexionODBC ODBC = new ConexionODBC();
 
         public List<modeloPuesto> mostrarPuesto()
         {

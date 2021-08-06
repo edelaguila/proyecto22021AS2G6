@@ -8,9 +8,9 @@ namespace Polideportivo.Controlador
 {
     internal class controladorRol
     {
-        OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
+        private OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
 
-        modeloRol modelo;
+        private modeloRol modelo;
 
         public modeloRol agregarRol(modeloRol modelo)
         {
@@ -32,6 +32,7 @@ namespace Polideportivo.Controlador
         public controladorRol()
         {
         }
+
         public controladorRol(modeloRol Modelo)
         {
             modelo = Modelo;

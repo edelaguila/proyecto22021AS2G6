@@ -27,11 +27,11 @@ namespace Polideportivo.Vista
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            modeloDeporte modelo = new modeloDeporte();
-            controladorDeporte db = new controladorDeporte();
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    modeloDeporte modelo = new modeloDeporte();
+        //    controladorDeporte db = new controladorDeporte();
+        //}
 
 
         public void actualizarTablaDeporte()

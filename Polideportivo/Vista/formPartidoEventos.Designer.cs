@@ -36,7 +36,6 @@ namespace Polideportivo.Vista
             this.lblAnotaciones = new System.Windows.Forms.Label();
             this.cboEmpleado = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEquipo1 = new System.Windows.Forms.TextBox();
             this.cboCampeonato = new System.Windows.Forms.ComboBox();
             this.parrotGradientPanel2 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.cboEstado = new System.Windows.Forms.ComboBox();
@@ -46,7 +45,6 @@ namespace Polideportivo.Vista
             this.label3 = new System.Windows.Forms.Label();
             this.txtCampo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtEquipo2 = new System.Windows.Forms.TextBox();
             this.btnModificarPartido = new System.Windows.Forms.Button();
             this.btnAgregarPartido = new System.Windows.Forms.Button();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
@@ -55,6 +53,8 @@ namespace Polideportivo.Vista
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblRol = new System.Windows.Forms.Label();
+            this.txtEquipo2 = new System.Windows.Forms.TextBox();
+            this.txtEquipo1 = new System.Windows.Forms.TextBox();
             this.parrotGradientPanel2.SuspendLayout();
             this.parrotGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -127,14 +127,6 @@ namespace Polideportivo.Vista
             this.label1.Size = new System.Drawing.Size(108, 18);
             this.label1.TabIndex = 19;
             this.label1.Text = "CAMPEONATO";
-            // 
-            // txtEquipo1
-            // 
-            this.txtEquipo1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEquipo1.Location = new System.Drawing.Point(71, 86);
-            this.txtEquipo1.Name = "txtEquipo1";
-            this.txtEquipo1.Size = new System.Drawing.Size(121, 27);
-            this.txtEquipo1.TabIndex = 10;
             // 
             // cboCampeonato
             // 
@@ -261,14 +253,6 @@ namespace Polideportivo.Vista
             this.label2.TabIndex = 33;
             this.label2.Text = "EQUIPO 2";
             // 
-            // txtEquipo2
-            // 
-            this.txtEquipo2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEquipo2.Location = new System.Drawing.Point(71, 137);
-            this.txtEquipo2.Name = "txtEquipo2";
-            this.txtEquipo2.Size = new System.Drawing.Size(121, 27);
-            this.txtEquipo2.TabIndex = 31;
-            // 
             // btnModificarPartido
             // 
             this.btnModificarPartido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -387,6 +371,22 @@ namespace Polideportivo.Vista
             this.lblRol.TabIndex = 9;
             this.lblRol.Text = "HORA";
             // 
+            // txtEquipo2
+            // 
+            this.txtEquipo2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEquipo2.Location = new System.Drawing.Point(71, 137);
+            this.txtEquipo2.Name = "txtEquipo2";
+            this.txtEquipo2.Size = new System.Drawing.Size(121, 27);
+            this.txtEquipo2.TabIndex = 31;
+            // 
+            // txtEquipo1
+            // 
+            this.txtEquipo1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEquipo1.Location = new System.Drawing.Point(71, 86);
+            this.txtEquipo1.Name = "txtEquipo1";
+            this.txtEquipo1.Size = new System.Drawing.Size(121, 27);
+            this.txtEquipo1.TabIndex = 10;
+            // 
             // formPartidoEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,7 +415,6 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Label lblAnotaciones;
         private System.Windows.Forms.ComboBox cboEmpleado;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEquipo1;
         private System.Windows.Forms.ComboBox cboCampeonato;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel2;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
@@ -430,9 +429,10 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCampo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtEquipo2;
         private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.TextBox txtEquipo2;
+        private System.Windows.Forms.TextBox txtEquipo1;
     }
 }

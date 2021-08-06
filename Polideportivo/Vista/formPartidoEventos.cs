@@ -47,15 +47,20 @@ namespace Polideportivo.Vista
             InitializeComponent();
             btnAgregarPartido.Visible = true;
             btnModificarPartido.Visible = false;
-            // Llenar combobox de deportes
+            // Llenar combobox 
             controladorDeporte deportes = new controladorDeporte();
             cboCampeonato.DataSource = deportes.mostrarDeportes();
             cboCampeonato.DisplayMember = "nombre";
             cboCampeonato.ValueMember = "pkId";
             cboCampeonato.SelectedIndex = -1;
+
+            cboEmpleado.DataSource = deportes.mostrarDeportes();
+            cboEmpleado.DisplayMember = "nombre";
+            cboEmpleado.ValueMember = "pkId";
+            cboEmpleado.SelectedIndex = -1;
             formOriginal = form;
             // Modificar el texto del título
-            lblJugadorEvento.Text = "AGREGAR JUGADOR";
+            lblJugadorEvento.Text = "AGREGAR PARTIDO";
         }
 
         // Actualizar el combobox de roles dependiendo del deporte seleccionado
@@ -114,7 +119,7 @@ namespace Polideportivo.Vista
             modelo.fkIdEquipo = stringAInt(cboEmpleado.SelectedValue.ToString());
             modelo.fkIdRol = stringAInt(cboResultado.SelectedValue.ToString());
             modeloModificar.modificarJugador(modelo);
-            formOriginal.actualizarTablaJugadores();
+            formOriginal.actualizarTablaPartido();
             cerrarForm(this);
         }
     }

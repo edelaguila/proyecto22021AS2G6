@@ -9,7 +9,8 @@ namespace Polideportivo.Vista
 {
     public partial class formEmpleado : Form
     {
-
+        private int id;
+        private string nombre;
         public formEmpleado()
         {
             InitializeComponent();
@@ -48,15 +49,19 @@ namespace Polideportivo.Vista
         {
             this.vwempleadoTableAdapter.Fill(this.vwEmpleado.vwempleado);
         }
-
+        private void llenarModeloConFilaSeleccionada()
+        {
+            id = stringAInt(tablaEmpleado.SelectedRows[0].Cells[0].Value.ToString());
+            nombre = tablaEmpleado.SelectedRows[0].Cells[1].Value.ToString();
+            modeloFila.pkId = id;
+        }
 
         modeloEntrenador modeloFila = new modeloEntrenador();
         private void tablaEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = stringAInt(tablaEmpleado.SelectedRows[0].Cells[0].Value.ToString());
-            string nombre = tablaEmpleado.SelectedRows[0].Cells[1].Value.ToString();
+            
+            llenarModeloConFilaSeleccionada();
             txtNombre.Text = nombre;
-            modeloFila.pkId = id;
 
         }
 
@@ -117,9 +122,6 @@ namespace Polideportivo.Vista
             // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
         }
 
-        private void tablaEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -112,7 +112,7 @@ namespace Polideportivo.Vista
             this.tablaEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaEmpleado.Size = new System.Drawing.Size(400, 407);
             this.tablaEmpleado.TabIndex = 5;
-            this.tablaEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEmpleado_CellContentClick);
+            this.tablaEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEmpleado_CellClick);
             // 
             // pkIdEmpleadoDataGridViewTextBoxColumn
             // 

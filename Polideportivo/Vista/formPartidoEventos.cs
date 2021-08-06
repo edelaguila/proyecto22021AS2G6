@@ -2,13 +2,6 @@
 using Polideportivo.Controlador;
 using Polideportivo.Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Polideportivo.Vista.utilidadForms;
 
@@ -16,17 +9,15 @@ namespace Polideportivo.Vista
 {
     public partial class formPartidoEventos : Form
     {
-
-
         public formPartidoEventos()
         {
             InitializeComponent();
         }
 
+        private formPartido formOriginal = new formPartido();
 
-        formPartido formOriginal = new formPartido();
+        private modeloPartido modeloOriginal;
 
-        modeloPartido modeloOriginal;
         public formPartidoEventos(modeloPartido modelo, formPartido form)
         {
             // Este constructor es el que se utiliza para modificar datos
@@ -48,9 +39,7 @@ namespace Polideportivo.Vista
             modeloOriginal = modelo;
             // Modificar el texto del label
             lblJugadorEvento.Text = "MODIFICAR JUGADOR";
-
         }
-
 
         public formPartidoEventos(formPartido form)
         {
@@ -58,18 +47,21 @@ namespace Polideportivo.Vista
             InitializeComponent();
             btnAgregarPartido.Visible = true;
             btnModificarPartido.Visible = false;
-            // Llenar combobox de deportes
+            // Llenar combobox 
             controladorDeporte deportes = new controladorDeporte();
             cboCampeonato.DataSource = deportes.mostrarDeportes();
             cboCampeonato.DisplayMember = "nombre";
             cboCampeonato.ValueMember = "pkId";
             cboCampeonato.SelectedIndex = -1;
+
+            cboEmpleado.DataSource = deportes.mostrarDeportes();
+            cboEmpleado.DisplayMember = "nombre";
+            cboEmpleado.ValueMember = "pkId";
+            cboEmpleado.SelectedIndex = -1;
             formOriginal = form;
             // Modificar el texto del título
-            lblJugadorEvento.Text = "AGREGAR JUGADOR";
+            lblJugadorEvento.Text = "AGREGAR PARTIDO";
         }
-
-
 
         // Actualizar el combobox de roles dependiendo del deporte seleccionado
         //private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,7 +91,6 @@ namespace Polideportivo.Vista
             cerrarForm(this);
         }
 
-
         private void btnAgregarPartido_Click(object sender, EventArgs e)
         {
             controladorPartido modeloAgregar = new controladorPartido();
@@ -128,7 +119,7 @@ namespace Polideportivo.Vista
             modelo.fkIdEquipo = stringAInt(cboEmpleado.SelectedValue.ToString());
             modelo.fkIdRol = stringAInt(cboResultado.SelectedValue.ToString());
             modeloModificar.modificarJugador(modelo);
-            formOriginal.actualizarTablaJugadores();
+            formOriginal.actualizarTablaPartido();
             cerrarForm(this);
         }
     }

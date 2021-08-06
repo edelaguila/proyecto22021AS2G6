@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+  commentId: T:Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+  id: TableAdapterManager.UpdateOrderOption
+  parent: Polideportivo.Datos.vwCampeonatoTableAdapters
+  children:
+  - Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  - Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  langs:
+  - csharp
+  - vb
+  name: TableAdapterManager.UpdateOrderOption
+  nameWithType: TableAdapterManager.UpdateOrderOption
+  fullName: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+  type: Enum
+  source:
+    remote:
+      path: Polideportivo/Datos/vwCampeonato.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: UpdateOrderOption
+    path: Datos/vwCampeonato.Designer.cs
+    startLine: 1225
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Datos.vwCampeonatoTableAdapters
+  summary: "\nUpdate Order Option\n"
+  example: []
+  syntax:
+    content: public enum UpdateOrderOption
+    content.vb: Public Enum UpdateOrderOption
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  commentId: F:Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  id: InsertUpdateDelete
+  parent: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+  langs:
+  - csharp
+  - vb
+  name: InsertUpdateDelete
+  nameWithType: TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  fullName: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  type: Field
+  source:
+    remote:
+      path: Polideportivo/Datos/vwCampeonato.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: InsertUpdateDelete
+    path: Datos/vwCampeonato.Designer.cs
+    startLine: 1228
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Datos.vwCampeonatoTableAdapters
+  syntax:
+    content: InsertUpdateDelete = 0
+    return:
+      type: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  commentId: F:Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  id: UpdateInsertDelete
+  parent: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+  langs:
+  - csharp
+  - vb
+  name: UpdateInsertDelete
+  nameWithType: TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  fullName: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  type: Field
+  source:
+    remote:
+      path: Polideportivo/Datos/vwCampeonato.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: UpdateInsertDelete
+    path: Datos/vwCampeonato.Designer.cs
+    startLine: 1230
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Datos.vwCampeonatoTableAdapters
+  syntax:
+    content: UpdateInsertDelete = 1
+    return:
+      type: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Polideportivo.Datos.vwCampeonatoTableAdapters
+  commentId: N:Polideportivo.Datos.vwCampeonatoTableAdapters
+  name: Polideportivo.Datos.vwCampeonatoTableAdapters
+  nameWithType: Polideportivo.Datos.vwCampeonatoTableAdapters
+  fullName: Polideportivo.Datos.vwCampeonatoTableAdapters
+- uid: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+  commentId: T:Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+  parent: Polideportivo.Datos.vwCampeonatoTableAdapters
+  name: TableAdapterManager.UpdateOrderOption
+  nameWithType: TableAdapterManager.UpdateOrderOption
+  fullName: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption

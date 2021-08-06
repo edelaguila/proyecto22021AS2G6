@@ -7,9 +7,10 @@ using System.Linq;
 
 namespace Polideportivo.Controlador
 {
-    class controladorTipoCampeonato
+    internal class controladorTipoCampeonato
     {
-        ConexionODBC ODBC = new ConexionODBC();
+        private ConexionODBC ODBC = new ConexionODBC();
+
         public List<modeloTipoCampeonato> mostrarTipoDeCampeonatos()
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();

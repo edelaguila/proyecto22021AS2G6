@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formPolideportivo));
             this.panelLateralWrapper = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.panelLateralInterno = new System.Windows.Forms.Panel();
+            this.btnMenuEmpleado = new System.Windows.Forms.Button();
             this.btnMenuPartido = new System.Windows.Forms.Button();
             this.btnDeportes = new System.Windows.Forms.Button();
             this.btnMenuResultado = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.Maximizar = new System.Windows.Forms.PictureBox();
             this.lblTituloPrincipal = new System.Windows.Forms.Label();
-            this.btnMenuEmpleado = new System.Windows.Forms.Button();
             this.panelLateralWrapper.SuspendLayout();
             this.panelLateralInterno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -107,6 +107,28 @@
             this.panelLateralInterno.Size = new System.Drawing.Size(250, 595);
             this.panelLateralInterno.TabIndex = 0;
             // 
+            // btnMenuEmpleado
+            // 
+            this.btnMenuEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMenuEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenuEmpleado.FlatAppearance.BorderSize = 0;
+            this.btnMenuEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
+            this.btnMenuEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
+            this.btnMenuEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuEmpleado.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuEmpleado.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEmpleado.Image")));
+            this.btnMenuEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuEmpleado.Location = new System.Drawing.Point(16, 629);
+            this.btnMenuEmpleado.Name = "btnMenuEmpleado";
+            this.btnMenuEmpleado.Size = new System.Drawing.Size(221, 53);
+            this.btnMenuEmpleado.TabIndex = 19;
+            this.btnMenuEmpleado.Text = "EMPLEADO";
+            this.btnMenuEmpleado.UseVisualStyleBackColor = false;
+            this.btnMenuEmpleado.Click += new System.EventHandler(this.btnMenuEmpleado_Click);
+            // 
             // btnMenuPartido
             // 
             this.btnMenuPartido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -121,12 +143,13 @@
             this.btnMenuPartido.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuPartido.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuPartido.Image")));
             this.btnMenuPartido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuPartido.Location = new System.Drawing.Point(16, 561);
+            this.btnMenuPartido.Location = new System.Drawing.Point(16, 568);
             this.btnMenuPartido.Name = "btnMenuPartido";
             this.btnMenuPartido.Size = new System.Drawing.Size(221, 53);
             this.btnMenuPartido.TabIndex = 18;
             this.btnMenuPartido.Text = "PARTIDO";
             this.btnMenuPartido.UseVisualStyleBackColor = false;
+            this.btnMenuPartido.Click += new System.EventHandler(this.btnMenuPartido_Click);
             // 
             // btnDeportes
             // 
@@ -480,28 +503,6 @@
             this.lblTituloPrincipal.Size = new System.Drawing.Size(194, 25);
             this.lblTituloPrincipal.TabIndex = 1;
             this.lblTituloPrincipal.Text = "POLIDEPORTIVO";
-            // 
-            // btnMenuEmpleado
-            // 
-            this.btnMenuEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenuEmpleado.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenuEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenuEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnMenuEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
-            this.btnMenuEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
-            this.btnMenuEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuEmpleado.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuEmpleado.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMenuEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEmpleado.Image")));
-            this.btnMenuEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuEmpleado.Location = new System.Drawing.Point(16, 629);
-            this.btnMenuEmpleado.Name = "btnMenuEmpleado";
-            this.btnMenuEmpleado.Size = new System.Drawing.Size(221, 53);
-            this.btnMenuEmpleado.TabIndex = 19;
-            this.btnMenuEmpleado.Text = "EMPLEADO";
-            this.btnMenuEmpleado.UseVisualStyleBackColor = false;
-            this.btnMenuEmpleado.Click += new System.EventHandler(this.btnMenuEmpleado_Click);
             // 
             // formPolideportivo
             // 

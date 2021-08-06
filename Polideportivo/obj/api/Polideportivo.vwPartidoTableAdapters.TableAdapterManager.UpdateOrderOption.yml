@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+  commentId: T:Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+  id: TableAdapterManager.UpdateOrderOption
+  parent: Polideportivo.vwPartidoTableAdapters
+  children:
+  - Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  - Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  langs:
+  - csharp
+  - vb
+  name: TableAdapterManager.UpdateOrderOption
+  nameWithType: TableAdapterManager.UpdateOrderOption
+  fullName: Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+  type: Enum
+  source:
+    remote:
+      path: Polideportivo/vwPartido.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: UpdateOrderOption
+    path: vwPartido.Designer.cs
+    startLine: 1441
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.vwPartidoTableAdapters
+  summary: "\nUpdate Order Option\n"
+  example: []
+  syntax:
+    content: public enum UpdateOrderOption
+    content.vb: Public Enum UpdateOrderOption
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  commentId: F:Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  id: InsertUpdateDelete
+  parent: Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+  langs:
+  - csharp
+  - vb
+  name: InsertUpdateDelete
+  nameWithType: TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  fullName: Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  type: Field
+  source:
+    remote:
+      path: Polideportivo/vwPartido.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: InsertUpdateDelete
+    path: vwPartido.Designer.cs
+    startLine: 1444
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.vwPartidoTableAdapters
+  syntax:
+    content: InsertUpdateDelete = 0
+    return:
+      type: Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  commentId: F:Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  id: UpdateInsertDelete
+  parent: Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+  langs:
+  - csharp
+  - vb
+  name: UpdateInsertDelete
+  nameWithType: TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  fullName: Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  type: Field
+  source:
+    remote:
+      path: Polideportivo/vwPartido.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: UpdateInsertDelete
+    path: vwPartido.Designer.cs
+    startLine: 1446
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.vwPartidoTableAdapters
+  syntax:
+    content: UpdateInsertDelete = 1
+    return:
+      type: Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Polideportivo.vwPartidoTableAdapters
+  commentId: N:Polideportivo.vwPartidoTableAdapters
+  name: Polideportivo.vwPartidoTableAdapters
+  nameWithType: Polideportivo.vwPartidoTableAdapters
+  fullName: Polideportivo.vwPartidoTableAdapters
+- uid: Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+  commentId: T:Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+  parent: Polideportivo.vwPartidoTableAdapters
+  name: TableAdapterManager.UpdateOrderOption
+  nameWithType: TableAdapterManager.UpdateOrderOption
+  fullName: Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption

@@ -1,36 +1,37 @@
 ﻿using Dapper;
 using Polideportivo.Conexion;
 using Polideportivo.Modelo;
-using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Polideportivo.Controlador
 {
-    class controladorEntrenador
+    internal class controladorEntrenador
     {
-        ConexionODBC ODBC = new ConexionODBC();
+        private ConexionODBC ODBC = new ConexionODBC();
 
         public modeloEntrenador agregarEntrenador(modeloEntrenador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
+
             if (conexionODBC != null)
             {
                 var sqlinsertar =
+
                 "INSERT INTO entrenador (pkId, nombre, fkIdEquipo) " +
+
                 "VALUES (NULL, ?nombre?, ?fkIdEquipo?);";
                 var ValorDeVariables = new
                 {
                     nombre = modelo.nombre,
                     fkIdEquipo = modelo.fkIdEquipo,
-
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+
                 ODBC.cerrarConexion(conexionODBC);
             }
+
             return modelo;
         }
 
@@ -72,7 +73,6 @@ namespace Polideportivo.Controlador
             }
             return modelo;
         }
-
 
         public List<modeloEntrenador> mostrarEntrenador()
         {

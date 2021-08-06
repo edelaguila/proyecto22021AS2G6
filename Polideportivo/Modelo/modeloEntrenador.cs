@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Polideportivo.Modelo
+﻿namespace Polideportivo.Modelo
 {
     public class modeloEntrenador
     {
@@ -13,7 +7,9 @@ namespace Polideportivo.Modelo
         public int fkIdEquipo { get; set; }
         public int fkIdDeporte { get; set; }
 
-        public modeloEntrenador() { }
+        public modeloEntrenador()
+        {
+        }
 
         public modeloEntrenador(int Id, string Nombre, int IdEquipo, int IdDeporte)
         {
@@ -27,6 +23,5 @@ namespace Polideportivo.Modelo
             //int.TryParse(numero, out numeroValor);
             //Numero = numeroValor;
         }
-
     }
 }

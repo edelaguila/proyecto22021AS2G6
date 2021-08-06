@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Polideportivo.Modelo
 {
@@ -12,7 +8,7 @@ namespace Polideportivo.Modelo
         public string equipo1 { get; set; }
         public string equipo2 { get; set; }
         public string campo { get; set; }
-        public DateTime  fecha{ get; set; }
+        public DateTime fecha { get; set; }
         public string estado { get; set; }
         public string fase { get; set; }
         public int fkIdCampeonato { get; set; }
@@ -21,7 +17,9 @@ namespace Polideportivo.Modelo
 
         public int fkIdEstado { get; set; }
 
-        public modeloPartido() { }
+        public modeloPartido()
+        {
+        }
 
         public modeloPartido(int Id, string Equipo1, string Equipo2, string Campo, DateTime Fecha, string Estado, string Fase, int IdCampeonato, int IdEmpleado, int IdResultado, int IdEstado)
         {

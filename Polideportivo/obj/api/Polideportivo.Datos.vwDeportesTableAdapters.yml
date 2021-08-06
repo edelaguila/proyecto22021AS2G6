@@ -1,0 +1,41 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.Datos.vwDeportesTableAdapters
+  commentId: N:Polideportivo.Datos.vwDeportesTableAdapters
+  id: Polideportivo.Datos.vwDeportesTableAdapters
+  children:
+  - Polideportivo.Datos.vwDeportesTableAdapters.deporteTableAdapter
+  - Polideportivo.Datos.vwDeportesTableAdapters.TableAdapterManager
+  - Polideportivo.Datos.vwDeportesTableAdapters.TableAdapterManager.UpdateOrderOption
+  langs:
+  - csharp
+  - vb
+  name: Polideportivo.Datos.vwDeportesTableAdapters
+  nameWithType: Polideportivo.Datos.vwDeportesTableAdapters
+  fullName: Polideportivo.Datos.vwDeportesTableAdapters
+  type: Namespace
+  assemblies:
+  - Polideportivo
+references:
+- uid: Polideportivo.Datos.vwDeportesTableAdapters.deporteTableAdapter
+  commentId: T:Polideportivo.Datos.vwDeportesTableAdapters.deporteTableAdapter
+  parent: Polideportivo.Datos.vwDeportesTableAdapters
+  name: deporteTableAdapter
+  nameWithType: deporteTableAdapter
+  fullName: Polideportivo.Datos.vwDeportesTableAdapters.deporteTableAdapter
+- uid: Polideportivo.Datos.vwDeportesTableAdapters.TableAdapterManager
+  commentId: T:Polideportivo.Datos.vwDeportesTableAdapters.TableAdapterManager
+  name: TableAdapterManager
+  nameWithType: TableAdapterManager
+  fullName: Polideportivo.Datos.vwDeportesTableAdapters.TableAdapterManager
+- uid: Polideportivo.Datos.vwDeportesTableAdapters.TableAdapterManager.UpdateOrderOption
+  commentId: T:Polideportivo.Datos.vwDeportesTableAdapters.TableAdapterManager.UpdateOrderOption
+  parent: Polideportivo.Datos.vwDeportesTableAdapters
+  name: TableAdapterManager.UpdateOrderOption
+  nameWithType: TableAdapterManager.UpdateOrderOption
+  fullName: Polideportivo.Datos.vwDeportesTableAdapters.TableAdapterManager.UpdateOrderOption
+- uid: Polideportivo.Datos.vwDeportesTableAdapters
+  commentId: N:Polideportivo.Datos.vwDeportesTableAdapters
+  name: Polideportivo.Datos.vwDeportesTableAdapters
+  nameWithType: Polideportivo.Datos.vwDeportesTableAdapters
+  fullName: Polideportivo.Datos.vwDeportesTableAdapters

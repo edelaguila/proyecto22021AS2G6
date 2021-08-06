@@ -1,15 +1,16 @@
-﻿using Polideportivo.Modelo;
-using System.Collections.Generic;
-using Dapper;
+﻿using Dapper;
 using Polideportivo.Conexion;
+using Polideportivo.Modelo;
+using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
 
 namespace Polideportivo.AccesoDatos
 {
-    class controladorPartido
+    internal class controladorPartido
     {
-        ConexionODBC ODBC = new ConexionODBC();
+        private ConexionODBC ODBC = new ConexionODBC();
+
         public modeloPartido agregarPartido(modeloPartido modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -75,7 +76,6 @@ namespace Polideportivo.AccesoDatos
             List<modeloPartido> sqlresultado = new List<modeloPartido>();
             if (conexionODBC != null)
             {
-
                 string sqlconsulta = "SELECT * FROM tablapartidos;";
                 sqlresultado = conexionODBC.Query<modeloPartido>(sqlconsulta).ToList();
                 ODBC.cerrarConexion(conexionODBC);
@@ -99,8 +99,5 @@ namespace Polideportivo.AccesoDatos
             }
             return modelo;
         }
-
-
-
     }
 }

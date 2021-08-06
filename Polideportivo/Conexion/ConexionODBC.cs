@@ -1,13 +1,17 @@
-﻿using System;
-using static Polideportivo.Vista.utilidadForms;
+﻿using Polideportivo.Vista;
 using System.Data.Odbc;
-using Polideportivo.Vista;
+using static Polideportivo.Vista.utilidadForms;
 
 namespace Polideportivo.Conexion
 {
-    class ConexionODBC
+    internal class ConexionODBC
     {
-        string dsn = "Dsn=bdpolideportivo";
+        private string dsn = "Dsn=bdpolideportivo";
+
+        /// <summary>
+        /// Inicia la conexión hacia ODBC con el DSN especificado.
+        /// </summary>
+        /// <returns></returns>
         public OdbcConnection abrirConexion()
         {
             OdbcConnection conexion = new OdbcConnection(dsn);
@@ -21,9 +25,12 @@ namespace Polideportivo.Conexion
                 abrirForm(new formError("El dsn especificado no funciona correctamente, corríjalo e intente de nuevo"));
                 return null;
             }
-            
         }
 
+        /// <summary>
+        /// Cierra la conexión hacia ODBC con el DSN especificado.
+        /// </summary>
+        /// <param name="conexion"></param>
         public void cerrarConexion(OdbcConnection conexion)
         {
             try

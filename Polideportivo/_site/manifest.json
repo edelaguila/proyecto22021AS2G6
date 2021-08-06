@@ -1,0 +1,1290 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/CORE i7 6TA WIN10/Documents/Respaldo GitHub/Actual/proyecto22021AS2G6/Polideportivo",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "85C6iC8M4CrLh4Z48E+KZKsKxOnP2H3ZJdcvVEZ30mo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "8gApDOOfiWqq7O2SGjodnn/SAj5VJUkDuYfamrLsxnM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "/A31ut60TNWqBOtK10BuwvIagM/XBIXQ8c57orKmAxA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwCampeonato.vwcampeonatoDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwCampeonato.vwcampeonatoDataTable.html",
+          "hash": "JI0TBPDGrkpeaQE6EDUynr1jEkQA60vhsYtqz7sMRsY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwCampeonato.vwcampeonatoRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwCampeonato.vwcampeonatoRow.html",
+          "hash": "HPjtLc9aDNEUk1RAylYUODv2zz4Bn2clL2wj/BJytgQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwCampeonato.vwcampeonatoRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwCampeonato.vwcampeonatoRowChangeEvent.html",
+          "hash": "y32+fVessPf+C0ZB8IfdK7J6Ikg8M+CrL/vCo18WHkI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwCampeonato.vwcampeonatoRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwCampeonato.vwcampeonatoRowChangeEventHandler.html",
+          "hash": "JMQSkjfRJUr7TF5fvun0xd0Pr8eYb7CiwBR1y93LcBk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwCampeonato.html",
+          "hash": "lGOlPW7t23GSy+2NcDAJX8j9Ie8rN9S36IlR2/W/72Y="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "03RXsinjJgZRWX+6TQtRP/QbTdEenGPvD5rxqjtES98="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.html",
+          "hash": "yJLX6vXC0aKyGo8lQ+e+m8OiIY1xH2Sf4Kv4eEInxcg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter.html",
+          "hash": "IZCwRcVMpXHC3MfMcKmGoBHG/DJEgwaiqRTUEKXlrtY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwCampeonatoTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwCampeonatoTableAdapters.html",
+          "hash": "fhO6LOP9VcaMQYUU+FLwbVv3lieiE3Hb7SGHj1wOdBM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwDeportes.deporteDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwDeportes.deporteDataTable.html",
+          "hash": "agClP0/44/fhtu3G9EQXznfhwWYTHXXkha6osv0ReWs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwDeportes.deporteRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwDeportes.deporteRow.html",
+          "hash": "fDBNRB6tKQCFIxLhcPubWVNpGG0hC76D4l+ZGLV/9cs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwDeportes.deporteRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwDeportes.deporteRowChangeEvent.html",
+          "hash": "uS7yjR51484nXws4XRRu/zlWdxbOxSkvlyh+Uzc8syM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwDeportes.deporteRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwDeportes.deporteRowChangeEventHandler.html",
+          "hash": "UfJgHnAFSiKjKC0DtFxdSZkQGAjDhYU/umcAHE2Z2yk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwDeportes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwDeportes.html",
+          "hash": "4/JifNSoxknlxGK6xLQsnLsOxQBK9WPYDQvv/ENvrMg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwDeportesTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwDeportesTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "dkyJY6Phw+cuukrtmEi9BxoLig6Q21V/JZyTtMQ3K3E="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwDeportesTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwDeportesTableAdapters.TableAdapterManager.html",
+          "hash": "UCvHpyf5u/ZEB/TKPeEJT8NGLzLTK2eHVdst4lHwqCM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwDeportesTableAdapters.deporteTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwDeportesTableAdapters.deporteTableAdapter.html",
+          "hash": "clR3zWHWPWoffyaW51VmTLZdUKIkdw8GY7cRMdfiJLw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwDeportesTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwDeportesTableAdapters.html",
+          "hash": "0mchzOYCYLsjVPtDIae4BylgoXLsUo1R3TcNJZvAgy0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwEquipo.vwequipoDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwEquipo.vwequipoDataTable.html",
+          "hash": "CtbMRpHvVTIGzcV6Sx4R2uxCZQA7waWUZ5meiLvs0as="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwEquipo.vwequipoRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwEquipo.vwequipoRow.html",
+          "hash": "2rlrnr8ElAINz2sRM6YT3Bw8HEQYa6onTd3QVKWwJfs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwEquipo.vwequipoRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwEquipo.vwequipoRowChangeEvent.html",
+          "hash": "1z3SXQQzpEoSUBHZRKtV+hXZ6eLq6NXAeRaIWsnffVU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwEquipo.vwequipoRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwEquipo.vwequipoRowChangeEventHandler.html",
+          "hash": "E0mWoYZsp3hJClytJhg0hEyD+T4yvGJpzQwCbIb2aNw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwEquipo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwEquipo.html",
+          "hash": "ZyfaAK/I+6zfuVOzwBrqRtdmTjXcPsAS73gUK2RIcAY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwEquipoTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwEquipoTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "0v1IBwdFCFrDOifssipRvDKbvnwKTVAIHibEAUmGoAM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwEquipoTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwEquipoTableAdapters.TableAdapterManager.html",
+          "hash": "4xeNNeYhzRnXmHi6ndoyh0+K0OBFI6H4F8Hy+F7lABc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwEquipoTableAdapters.vwequipoTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwEquipoTableAdapters.vwequipoTableAdapter.html",
+          "hash": "bE3DF3ctGYjrGfmU2v5MwpSQZ0W14cHKu5wYAjT1e7c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwEquipoTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwEquipoTableAdapters.html",
+          "hash": "BVN3ifuV1Oz5VzmSpaCXTJ8ktQYGACVfLi9HbwRYr1Y="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwJugador.vwjugadorDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwJugador.vwjugadorDataTable.html",
+          "hash": "9BdtrEwJ/B9sYFe6Qm4bVtwQ2cmeKox8IuMNOt0eBnk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwJugador.vwjugadorRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwJugador.vwjugadorRow.html",
+          "hash": "posFmXi3PRF3AvIzNGTpPY1hurGJbdh+COV/qE7ME1Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwJugador.vwjugadorRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwJugador.vwjugadorRowChangeEvent.html",
+          "hash": "N7LSy5jd9LX8p0nuifXMAlQIa4gPzlAkxDzJocZfz1I="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwJugador.vwjugadorRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwJugador.vwjugadorRowChangeEventHandler.html",
+          "hash": "2Jyry+NkYiTRuFbqJsqf753DHDkCgBgxtfsKnLkMGvI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwJugador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwJugador.html",
+          "hash": "v5T2ocbeNge83C7VQN+gyJEViFSI7r3wuQkAtKIp43M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwJugadorTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwJugadorTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "whT0ZEW+nFEaL7FgJP30dx6oEjEXMl/EZvqWStlOj5M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwJugadorTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwJugadorTableAdapters.TableAdapterManager.html",
+          "hash": "DFGkfkReNEHRWV/Zc+m9l8Pstg9nko8Z/sIhFNzBHCk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwJugadorTableAdapters.vwjugadorTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwJugadorTableAdapters.vwjugadorTableAdapter.html",
+          "hash": "ZzsHNU3wyYhtWL7X3cuf873sxqygBPc/3UPRbN7XaIw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwJugadorTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwJugadorTableAdapters.html",
+          "hash": "i7Vy4ty+s8IYymiritt00hnTgxjNjVTOMPB/kcVEI/s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwPartido.vwpartidoDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwPartido.vwpartidoDataTable.html",
+          "hash": "zt5uPyf9xzsurix5ow2Zurrzip6poFjF87WAzb9UwxE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwPartido.vwpartidoRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwPartido.vwpartidoRow.html",
+          "hash": "6S8Xi6oIUQIEUuaXfVlrgpxA5Th4WDTIa+vdvo8eqA8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwPartido.vwpartidoRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwPartido.vwpartidoRowChangeEvent.html",
+          "hash": "Iv/5uPSYvVNG6lx7NiDqQ9eDc+vBhFRc8ASsc9HDV9g="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwPartido.vwpartidoRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwPartido.vwpartidoRowChangeEventHandler.html",
+          "hash": "UzOUbmYQn2MuiT0op95Oah+MjdzupxkdwIixaa0e0eM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwPartido.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwPartido.html",
+          "hash": "SXNaYn+ME09byZaLG6x034QK+OYTeTZi1xqFmBu3JaE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "h7Du53HZpIGOQgpvte5VgMKhxmhjN+0Pk5zbLE+pmCw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwPartidoTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwPartidoTableAdapters.TableAdapterManager.html",
+          "hash": "wE+RMQkjLT1m9TelG3+gWE2z/nSmdkZ6c8s9IKaZvnI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwPartidoTableAdapters.vwpartidoTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwPartidoTableAdapters.vwpartidoTableAdapter.html",
+          "hash": "oTpi+zC2ewKkX1y8QPWOchIJKa1sokV/dUdx4M0XOoE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.vwPartidoTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.vwPartidoTableAdapters.html",
+          "hash": "CBNPys44JfJV+MbErX7iaJAL+yGrfJ+8HZHo6ive5iI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Datos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Datos.html",
+          "hash": "ky4mFqYpBT2Z5oiWlJV93kWr+yngALa/8TSDswM8TwQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Modelo.modeloAnotacion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Modelo.modeloAnotacion.html",
+          "hash": "dgc0lQnHWFqOXZFwIc3vkY5EpAV3e6ykZjQObjWNL44="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Modelo.modeloCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Modelo.modeloCampeonato.html",
+          "hash": "yGSFroW2sCFjg3kiqJSlexQmyQdlOjlfOowojpSyj4w="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Modelo.modeloDeporte.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Modelo.modeloDeporte.html",
+          "hash": "ROoI4jcR+SbenXSYI0PduJn9Yhz1Svmc44WKnuQG9VY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Modelo.modeloEntrenador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Modelo.modeloEntrenador.html",
+          "hash": "pQyx/WcMSTlDHQGZAHGStm0URUml9YkNaTXJGVA/ryI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Modelo.modeloEquipo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Modelo.modeloEquipo.html",
+          "hash": "PYRZkr5ZVLLIL5Uy26WIFDZZNZOboJnJFa8ffDrv2/E="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Modelo.modeloJugador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Modelo.modeloJugador.html",
+          "hash": "OHkWGNFLc52e1C8qBHchL1MiOhOPIo3Qh88KjI+gDso="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Modelo.modeloPartido.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Modelo.modeloPartido.html",
+          "hash": "mewPooN+4qAlAkK2jaIDHPJPum5LrZs6BKS45qaPRTw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Modelo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Modelo.html",
+          "hash": "huxPYlH4aes8q5p2mtCX8zXjTZ8bG2EIXXDHhYXMuhI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formAviso.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formAviso.html",
+          "hash": "CwXgh2T1U1S33u9KPa6hlh+SQbE4Z1VX/sqS/HWvxL8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formCampeonato.html",
+          "hash": "V4s80zvrGLblubbToj3P2CmQrHPw/xv9CKnJfaT7NcY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formCampeonatoEventos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formCampeonatoEventos.html",
+          "hash": "/JfJZGldM7ErBgjr4NE70MTmqaXBcVQ949mKTHZHXx4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formDeporte.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formDeporte.html",
+          "hash": "CsVf/oBx0tXR1FhR+BM+zXC3QyoTtp1RKNGVinngx/o="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formEntrenador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formEntrenador.html",
+          "hash": "5FiEaPrDJJbrocYunbdsK1OsOtm3wO7r9PxzkPJ9BE0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formEquipo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formEquipo.html",
+          "hash": "TFiuGMAOj3lxVO/XbpbDsvG0LdzeQuZGOb9DWjoIWec="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formEquipoEventos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formEquipoEventos.html",
+          "hash": "WHF8L6r6jjQMjXPz77KIdqW8aJRUQEOVGcNB5puyLss="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formError.html",
+          "hash": "I0iE77r3sRkWHW0YlnZSjNlNaESPfwr5HNN54Po59/s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formJugador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formJugador.html",
+          "hash": "Cc9RLDHKGcM2F5oKtFo1x824rwXHmSfLUMw+Ak2xdnQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formJugadorEventos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formJugadorEventos.html",
+          "hash": "Q4oADuy2EMnZKsgwCqW6bDrsRyTjcM11BGYNxNrR5yM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formPartido.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formPartido.html",
+          "hash": "Rj+wRCYYZw4qJgneUjYEVl1u1uIPIGVUyc4PI/hCLQs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formPartidoEventos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formPartidoEventos.html",
+          "hash": "jIEmhTpemsq7AZ22HFkF6ESEQhsJITVQ+dc/nUIltg0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.formRol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.formRol.html",
+          "hash": "aITJ0KqTaV7waDS57clkoQel6v7opHTHmqx3byAzS2s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.Vista.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.Vista.html",
+          "hash": "lb+BJFbhHFRSXaMpTqhNiSnfKKw8t9OloLv9B38Ta9M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.formPolideportivo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.formPolideportivo.html",
+          "hash": "YF9KriWVHBqyVGHMps1BmZJwJmg0drnWQRTRa/mKcaw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwEntrenador.vwentrenadorDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwEntrenador.vwentrenadorDataTable.html",
+          "hash": "yDCXSlrDzav0OQogxfOpFx5UdVSjBJpjHWN/UUqYpD8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwEntrenador.vwentrenadorRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwEntrenador.vwentrenadorRow.html",
+          "hash": "sb0gmhyIQmcnIjvj9Fn8luQGRJN399lq7llQCe5jSWM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.html",
+          "hash": "U4Rmy6L6oW7ccXIf0mG+jFbnRnsgEaHT6ibPsMaNn5Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwEntrenador.vwentrenadorRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwEntrenador.vwentrenadorRowChangeEventHandler.html",
+          "hash": "+0kNyq+n9aDHnTkMOVSRhNfhcFFygb4EA6mGBeC9fok="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwEntrenador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwEntrenador.html",
+          "hash": "Dr7DvZqIk91ucODnqVIWex5IQs+CnA7i1ucNoGz5HII="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "4qzjw/YWikPcYuevdVvMufAim1oczdirRzPSDHxAHc0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.html",
+          "hash": "bSL7ThOZOtszrG/k+qTezbWEAHnySlkUIzGQHRkfD+g="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwEntrenadorTableAdapters.vwentrenadorTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwEntrenadorTableAdapters.vwentrenadorTableAdapter.html",
+          "hash": "No1wYmUKdrPU9VH4aLbSeroEoOaTUtByZXcP4Bs5C3Y="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwEntrenadorTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwEntrenadorTableAdapters.html",
+          "hash": "MLLLxOSKCb8zWfwpwGZiWlq5FWO9ojz8GpBs7TX5Jv0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwPartido.vwpartidoDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwPartido.vwpartidoDataTable.html",
+          "hash": "XJGWsiREwmys2t/JcEYv0npxDeT+Ksc+HYNHI5xKnSg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwPartido.vwpartidoRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwPartido.vwpartidoRow.html",
+          "hash": "omoMs+dujPIPNLV6zdsxxTpU1tPXVf7PyvMM07iCaJM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwPartido.vwpartidoRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwPartido.vwpartidoRowChangeEvent.html",
+          "hash": "EHsyR1i1uFA08Y1mZdvf6eifGqCrpbOBwTY7zc2SULc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwPartido.vwpartidoRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwPartido.vwpartidoRowChangeEventHandler.html",
+          "hash": "d22N3yRa8dB4s7LQGAFB/RIFlq5RWC12e65z+YNB9u4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwPartido.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwPartido.html",
+          "hash": "SkRt4LO4Di8OWohC4O4L7SvOUDwmLM+lVLZ/cw6XDW0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "jISBo1DAYWLzhuE6e/e6JKR+/oxkgVv1G8fv4IDagjs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwPartidoTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwPartidoTableAdapters.TableAdapterManager.html",
+          "hash": "Cmk4osyVpjGvKzqrW0CHp2Z2/VlTqr95alYzfqIGzk8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwPartidoTableAdapters.vwpartidoTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwPartidoTableAdapters.vwpartidoTableAdapter.html",
+          "hash": "n9qPPgKjZdHzKeD32T2v0jx7tEVhciT1JgWwSegFaTg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwPartidoTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwPartidoTableAdapters.html",
+          "hash": "Myqq/4NgNI3s/3fVYxzAz9Goo6Ycu2assw9ullC9Sqk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwRol.vwrolDataTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwRol.vwrolDataTable.html",
+          "hash": "bO9yQysXTeraKv4e3DIjtr33DWlwJKg/cUlnlt4whlc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwRol.vwrolRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwRol.vwrolRow.html",
+          "hash": "JVCboXrJOHNaV3XBMblV7gvgxam1hs2HucmB7QlfEy0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwRol.vwrolRowChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwRol.vwrolRowChangeEvent.html",
+          "hash": "IzxJXjZH2SJ8upRh1UPmxxbvK17SvV9kNaSEgMb2He0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwRol.vwrolRowChangeEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwRol.vwrolRowChangeEventHandler.html",
+          "hash": "lKyeNiW43nlGnfIdxtaZZn0YpYeEo4o09nMs4l3ozUg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwRol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwRol.html",
+          "hash": "FELyvC3CFruMY2TxZM9DAAgReA3UhP8E8YEXxDY1cwI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption.html",
+          "hash": "cM0eODG9+ybbj4IvkH5kVfqBsV5KsvC3LZUN0fEvB7A="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwRolTableAdapters.TableAdapterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwRolTableAdapters.TableAdapterManager.html",
+          "hash": "OxQFsV11yqtebKoCNLadb5MjFdCB60C3C9ZIYsDBhKs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwRolTableAdapters.vwrolTableAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwRolTableAdapters.vwrolTableAdapter.html",
+          "hash": "Y1avxwBXO/j630Ky/2glbthMUVDP0cj2Jvc0CEzZPNs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.vwRolTableAdapters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.vwRolTableAdapters.html",
+          "hash": "75S772Ks/Fd2lhuJFkwpwXydLho2OkrPtQMdIlBxdpw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Polideportivo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Polideportivo.html",
+          "hash": "5PvNTDVPsjyIWzLqog8ndO0bqltDjVjrbwdekHVI8LM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "ef4IcMxAQtyxY/SPbKX2qQB7olQpuX0cq3OLldlV/uI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Oa9PuD4E1hvZnCkVjUgzNBX6S00Zo5YilamTERTZo54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 97,
+          "skipped_file_count": 97
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

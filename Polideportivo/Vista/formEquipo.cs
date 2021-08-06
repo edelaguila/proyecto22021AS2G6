@@ -1,5 +1,4 @@
-﻿using Polideportivo.AccesoDatos;
-using Polideportivo.Controlador;
+﻿using Polideportivo.Controlador;
 using Polideportivo.Modelo;
 using System;
 using System.Windows.Forms;
@@ -9,9 +8,8 @@ namespace Polideportivo.Vista
 {
     public partial class formEquipo : Form
     {
-
-        controladorEquipo controladorEquipo = new controladorEquipo();
-        modeloEquipo modeloFila = new modeloEquipo();
+        private controladorEquipo controladorEquipo = new controladorEquipo();
+        private modeloEquipo modeloFila = new modeloEquipo();
 
         public formEquipo()
         {

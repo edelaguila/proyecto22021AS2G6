@@ -1,0 +1,504 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent
+  commentId: T:Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent
+  id: vwEntrenador.vwentrenadorRowChangeEvent
+  parent: Polideportivo
+  children:
+  - Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.#ctor(Polideportivo.vwEntrenador.vwentrenadorRow,System.Data.DataRowAction)
+  - Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Action
+  - Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Row
+  langs:
+  - csharp
+  - vb
+  name: vwEntrenador.vwentrenadorRowChangeEvent
+  nameWithType: vwEntrenador.vwentrenadorRowChangeEvent
+  fullName: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent
+  type: Class
+  source:
+    remote:
+      path: Polideportivo/vwEntrenador1.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: vwentrenadorRowChangeEvent
+    path: vwEntrenador1.Designer.cs
+    startLine: 722
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo
+  summary: "\nRow event argument class\n"
+  example: []
+  syntax:
+    content: 'public class vwentrenadorRowChangeEvent : EventArgs'
+    content.vb: >-
+      Public Class vwentrenadorRowChangeEvent
+          Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.#ctor(Polideportivo.vwEntrenador.vwentrenadorRow,System.Data.DataRowAction)
+  commentId: M:Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.#ctor(Polideportivo.vwEntrenador.vwentrenadorRow,System.Data.DataRowAction)
+  id: '#ctor(Polideportivo.vwEntrenador.vwentrenadorRow,System.Data.DataRowAction)'
+  parent: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent
+  langs:
+  - csharp
+  - vb
+  name: vwentrenadorRowChangeEvent(vwEntrenador.vwentrenadorRow, DataRowAction)
+  nameWithType: vwEntrenador.vwentrenadorRowChangeEvent.vwentrenadorRowChangeEvent(vwEntrenador.vwentrenadorRow, DataRowAction)
+  fullName: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.vwentrenadorRowChangeEvent(Polideportivo.vwEntrenador.vwentrenadorRow, System.Data.DataRowAction)
+  type: Constructor
+  source:
+    remote:
+      path: Polideportivo/vwEntrenador1.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: .ctor
+    path: vwEntrenador1.Designer.cs
+    startLine: 729
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo
+  syntax:
+    content: public vwentrenadorRowChangeEvent(vwEntrenador.vwentrenadorRow row, DataRowAction action)
+    parameters:
+    - id: row
+      type: Polideportivo.vwEntrenador.vwentrenadorRow
+    - id: action
+      type: System.Data.DataRowAction
+    content.vb: Public Sub New(row As vwEntrenador.vwentrenadorRow, action As DataRowAction)
+  overload: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Row
+  commentId: P:Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Row
+  id: Row
+  parent: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent
+  langs:
+  - csharp
+  - vb
+  name: Row
+  nameWithType: vwEntrenador.vwentrenadorRowChangeEvent.Row
+  fullName: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Row
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/vwEntrenador1.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: Row
+    path: vwEntrenador1.Designer.cs
+    startLine: 736
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo
+  syntax:
+    content: public vwEntrenador.vwentrenadorRow Row { get; }
+    parameters: []
+    return:
+      type: Polideportivo.vwEntrenador.vwentrenadorRow
+    content.vb: Public ReadOnly Property Row As vwEntrenador.vwentrenadorRow
+  overload: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Row*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Action
+  commentId: P:Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Action
+  id: Action
+  parent: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent
+  langs:
+  - csharp
+  - vb
+  name: Action
+  nameWithType: vwEntrenador.vwentrenadorRowChangeEvent.Action
+  fullName: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Action
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/vwEntrenador1.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: Action
+    path: vwEntrenador1.Designer.cs
+    startLine: 744
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo
+  syntax:
+    content: public DataRowAction Action { get; }
+    parameters: []
+    return:
+      type: System.Data.DataRowAction
+    content.vb: Public ReadOnly Property Action As DataRowAction
+  overload: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Action*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Polideportivo
+  commentId: N:Polideportivo
+  name: Polideportivo
+  nameWithType: Polideportivo
+  fullName: Polideportivo
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.#ctor*
+  commentId: Overload:Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.#ctor
+  name: vwentrenadorRowChangeEvent
+  nameWithType: vwEntrenador.vwentrenadorRowChangeEvent.vwentrenadorRowChangeEvent
+  fullName: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.vwentrenadorRowChangeEvent
+- uid: Polideportivo.vwEntrenador.vwentrenadorRow
+  commentId: T:Polideportivo.vwEntrenador.vwentrenadorRow
+  parent: Polideportivo
+  name: vwEntrenador.vwentrenadorRow
+  nameWithType: vwEntrenador.vwentrenadorRow
+  fullName: Polideportivo.vwEntrenador.vwentrenadorRow
+- uid: System.Data.DataRowAction
+  commentId: T:System.Data.DataRowAction
+  parent: System.Data
+  isExternal: true
+  name: DataRowAction
+  nameWithType: DataRowAction
+  fullName: System.Data.DataRowAction
+- uid: System.Data
+  commentId: N:System.Data
+  isExternal: true
+  name: System.Data
+  nameWithType: System.Data
+  fullName: System.Data
+- uid: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Row*
+  commentId: Overload:Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Row
+  name: Row
+  nameWithType: vwEntrenador.vwentrenadorRowChangeEvent.Row
+  fullName: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Row
+- uid: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Action*
+  commentId: Overload:Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Action
+  name: Action
+  nameWithType: vwEntrenador.vwentrenadorRowChangeEvent.Action
+  fullName: Polideportivo.vwEntrenador.vwentrenadorRowChangeEvent.Action

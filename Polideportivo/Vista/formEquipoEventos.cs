@@ -1,14 +1,6 @@
-﻿using Polideportivo.AccesoDatos;
-using Polideportivo.Controlador;
+﻿using Polideportivo.Controlador;
 using Polideportivo.Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Polideportivo.Vista.utilidadForms;
 
@@ -16,19 +8,18 @@ namespace Polideportivo.Vista
 {
     public partial class formEquipoEventos : Form
     {
-
-        controladorEquipo controlador = new controladorEquipo();
-        modeloEquipo modelo = new modeloEquipo();
+        private controladorEquipo controlador = new controladorEquipo();
+        private modeloEquipo modelo = new modeloEquipo();
 
         public formEquipoEventos()
         {
             InitializeComponent();
         }
 
+        private formEquipo formOriginal = new formEquipo();
 
-        formEquipo formOriginal = new formEquipo();
+        private modeloEquipo modeloOriginal = new modeloEquipo();
 
-        modeloEquipo modeloOriginal = new modeloEquipo();
         public formEquipoEventos(modeloEquipo modelo, formEquipo form)
         {
             // Este constructor es el que se utiliza para modificar datos
@@ -43,9 +34,7 @@ namespace Polideportivo.Vista
             modeloOriginal = modelo;
             // Modificar el texto del label
             lblEquipoEvento.Text = "MODIFICAR JUGADOR";
-
         }
-
 
         public formEquipoEventos(formEquipo form)
         {
@@ -65,7 +54,6 @@ namespace Polideportivo.Vista
         {
             cerrarForm(this);
         }
-
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
@@ -100,7 +88,6 @@ namespace Polideportivo.Vista
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

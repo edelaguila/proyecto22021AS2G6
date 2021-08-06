@@ -2,13 +2,6 @@
 using Polideportivo.Controlador;
 using Polideportivo.Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Polideportivo.Vista.utilidadForms;
 
@@ -16,17 +9,15 @@ namespace Polideportivo.Vista
 {
     public partial class formCampeonatoEventos : Form
     {
-
-
         public formCampeonatoEventos()
         {
             InitializeComponent();
         }
 
+        private formCampeonato formOriginal = new formCampeonato();
 
-        formCampeonato formOriginal = new formCampeonato();
+        private modeloCampeonato modeloOriginal;
 
-        modeloCampeonato modeloOriginal;
         public formCampeonatoEventos(modeloCampeonato modelo, formCampeonato form)
         {
             // Este constructor es el que se utiliza para modificar datos
@@ -49,9 +40,7 @@ namespace Polideportivo.Vista
             modeloOriginal = modelo;
             // Modificar el texto del label
             lblJugadorEvento.Text = "MODIFICAR CAMPEONATO";
-
         }
-
 
         public formCampeonatoEventos(formCampeonato form)
         {
@@ -75,8 +64,6 @@ namespace Polideportivo.Vista
             lblJugadorEvento.Text = "AGREGAR CAMPEONATO";
         }
 
-
-
         // Actualizar el combobox de roles dependiendo del deporte seleccionado
         private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -92,7 +79,6 @@ namespace Polideportivo.Vista
         {
             cerrarForm(this);
         }
-
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
@@ -110,12 +96,10 @@ namespace Polideportivo.Vista
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void cboTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void btnModificarCampeonato_Click(object sender, EventArgs e)

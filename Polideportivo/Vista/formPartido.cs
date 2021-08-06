@@ -8,17 +8,17 @@ namespace Polideportivo.Vista
 {
     public partial class formPartido : Form
     {
-
         // Se declaran los campos que se van a llenar a partir de la fila seleccionada de la tabla
-        int id;
-        string nombre;
-        int anotaciones;
-        int fkIdEquipo;
-        int fkIdRol;
-        int fkIdDeporte;
+        private int id;
+
+        private string nombre;
+        private int anotaciones;
+        private int fkIdEquipo;
+        private int fkIdRol;
+        private int fkIdDeporte;
 
         // Se declara un modelo jugador para que guarde los datos de la fila sin perderlos
-        modeloJugador modeloFila = new modeloJugador();
+        private modeloJugador modeloFila = new modeloJugador();
 
         public formPartido()
         {
@@ -35,40 +35,20 @@ namespace Polideportivo.Vista
             llenarModeloConFilaSeleccionada();
         }
 
-
-
         public void actualizarTablaJugadores()
         {
             this.vwjugadorTableAdapter.Fill(this.vwJugador.vwjugador);
         }
-
-
-
 
         private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             llenarModeloConFilaSeleccionada();
         }
 
-
-
-        private void btnAgregarJugador_Click(object sender, EventArgs e)
-        {
-            abrirForm(new formJugadorEventos(this));
-        }
-
-        private void btnModificarJugador_Click(object sender, EventArgs e)
-        {
-            abrirForm(new formJugadorEventos(modeloFila, this));
-
-        }
-
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
             filtrarTabla();
         }
-
-
 
         private void cboBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -120,6 +100,5 @@ namespace Polideportivo.Vista
                 vwjugadorBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
             }
         }
-
     }
 }

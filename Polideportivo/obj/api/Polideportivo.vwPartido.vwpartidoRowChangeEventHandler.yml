@@ -1,0 +1,64 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.vwPartido.vwpartidoRowChangeEventHandler
+  commentId: T:Polideportivo.vwPartido.vwpartidoRowChangeEventHandler
+  id: vwPartido.vwpartidoRowChangeEventHandler
+  parent: Polideportivo
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: vwPartido.vwpartidoRowChangeEventHandler
+  nameWithType: vwPartido.vwpartidoRowChangeEventHandler
+  fullName: Polideportivo.vwPartido.vwpartidoRowChangeEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Polideportivo/vwPartido.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: vwpartidoRowChangeEventHandler
+    path: vwPartido.Designer.cs
+    startLine: 271
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo
+  syntax:
+    content: public delegate void vwpartidoRowChangeEventHandler(object sender, vwPartido.vwpartidoRowChangeEvent e);
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: Polideportivo.vwPartido.vwpartidoRowChangeEvent
+    content.vb: Public Delegate Sub vwpartidoRowChangeEventHandler(sender As Object, e As vwPartido.vwpartidoRowChangeEvent)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: Polideportivo
+  commentId: N:Polideportivo
+  name: Polideportivo
+  nameWithType: Polideportivo
+  fullName: Polideportivo
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Polideportivo.vwPartido.vwpartidoRowChangeEvent
+  commentId: T:Polideportivo.vwPartido.vwpartidoRowChangeEvent
+  parent: Polideportivo
+  name: vwPartido.vwpartidoRowChangeEvent
+  nameWithType: vwPartido.vwpartidoRowChangeEvent
+  fullName: Polideportivo.vwPartido.vwpartidoRowChangeEvent
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

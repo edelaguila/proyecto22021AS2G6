@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption
+  commentId: T:Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption
+  id: TableAdapterManager.UpdateOrderOption
+  parent: Polideportivo.vwRolTableAdapters
+  children:
+  - Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  - Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  langs:
+  - csharp
+  - vb
+  name: TableAdapterManager.UpdateOrderOption
+  nameWithType: TableAdapterManager.UpdateOrderOption
+  fullName: Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption
+  type: Enum
+  source:
+    remote:
+      path: Polideportivo/vwRol.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: UpdateOrderOption
+    path: vwRol.Designer.cs
+    startLine: 1126
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.vwRolTableAdapters
+  summary: "\nUpdate Order Option\n"
+  example: []
+  syntax:
+    content: public enum UpdateOrderOption
+    content.vb: Public Enum UpdateOrderOption
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  commentId: F:Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  id: InsertUpdateDelete
+  parent: Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption
+  langs:
+  - csharp
+  - vb
+  name: InsertUpdateDelete
+  nameWithType: TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  fullName: Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  type: Field
+  source:
+    remote:
+      path: Polideportivo/vwRol.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: InsertUpdateDelete
+    path: vwRol.Designer.cs
+    startLine: 1129
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.vwRolTableAdapters
+  syntax:
+    content: InsertUpdateDelete = 0
+    return:
+      type: Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  commentId: F:Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  id: UpdateInsertDelete
+  parent: Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption
+  langs:
+  - csharp
+  - vb
+  name: UpdateInsertDelete
+  nameWithType: TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  fullName: Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  type: Field
+  source:
+    remote:
+      path: Polideportivo/vwRol.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: UpdateInsertDelete
+    path: vwRol.Designer.cs
+    startLine: 1131
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.vwRolTableAdapters
+  syntax:
+    content: UpdateInsertDelete = 1
+    return:
+      type: Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Polideportivo.vwRolTableAdapters
+  commentId: N:Polideportivo.vwRolTableAdapters
+  name: Polideportivo.vwRolTableAdapters
+  nameWithType: Polideportivo.vwRolTableAdapters
+  fullName: Polideportivo.vwRolTableAdapters
+- uid: Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption
+  commentId: T:Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption
+  parent: Polideportivo.vwRolTableAdapters
+  name: TableAdapterManager.UpdateOrderOption
+  nameWithType: TableAdapterManager.UpdateOrderOption
+  fullName: Polideportivo.vwRolTableAdapters.TableAdapterManager.UpdateOrderOption

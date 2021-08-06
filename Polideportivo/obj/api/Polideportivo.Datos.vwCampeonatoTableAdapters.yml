@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.Datos.vwCampeonatoTableAdapters
+  commentId: N:Polideportivo.Datos.vwCampeonatoTableAdapters
+  id: Polideportivo.Datos.vwCampeonatoTableAdapters
+  children:
+  - Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager
+  - Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+  - Polideportivo.Datos.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter
+  langs:
+  - csharp
+  - vb
+  name: Polideportivo.Datos.vwCampeonatoTableAdapters
+  nameWithType: Polideportivo.Datos.vwCampeonatoTableAdapters
+  fullName: Polideportivo.Datos.vwCampeonatoTableAdapters
+  type: Namespace
+  assemblies:
+  - Polideportivo
+references:
+- uid: Polideportivo.Datos.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter
+  commentId: T:Polideportivo.Datos.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter
+  name: vwcampeonatoTableAdapter
+  nameWithType: vwcampeonatoTableAdapter
+  fullName: Polideportivo.Datos.vwCampeonatoTableAdapters.vwcampeonatoTableAdapter
+- uid: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager
+  commentId: T:Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager
+  name: TableAdapterManager
+  nameWithType: TableAdapterManager
+  fullName: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager
+- uid: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+  commentId: T:Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+  parent: Polideportivo.Datos.vwCampeonatoTableAdapters
+  name: TableAdapterManager.UpdateOrderOption
+  nameWithType: TableAdapterManager.UpdateOrderOption
+  fullName: Polideportivo.Datos.vwCampeonatoTableAdapters.TableAdapterManager.UpdateOrderOption
+- uid: Polideportivo.Datos.vwCampeonatoTableAdapters
+  commentId: N:Polideportivo.Datos.vwCampeonatoTableAdapters
+  name: Polideportivo.Datos.vwCampeonatoTableAdapters
+  nameWithType: Polideportivo.Datos.vwCampeonatoTableAdapters
+  fullName: Polideportivo.Datos.vwCampeonatoTableAdapters

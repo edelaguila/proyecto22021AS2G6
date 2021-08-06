@@ -195,6 +195,7 @@
             this.btnMenuResultado.TabIndex = 16;
             this.btnMenuResultado.Text = "        RESULTADO";
             this.btnMenuResultado.UseVisualStyleBackColor = false;
+            this.btnMenuResultado.Click += new System.EventHandler(this.btnMenuResultado_Click);
             // 
             // btnMenuEntrenador
             // 

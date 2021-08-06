@@ -105,12 +105,16 @@ namespace Polideportivo
         {
             gestorDeFormActivo(new formEmpleado(), "EMPLEADO");
         }
+        private void btnMenuResultado_Click(object sender, EventArgs e)
+        {
+            gestorDeFormActivo(new formResultado(), "RESULTADO");
+        }
 
         private void btnMenuPartido_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formPartido(), "PARTIDO");
         }
-
+        
         private void gestorDeFormActivo(Form formHijo, string formHijoActual)
         {
             lblTituloPrincipal.Text = formHijoActual;
@@ -179,7 +183,10 @@ namespace Polideportivo
             
         }
 
-        
+        private void btnMenuResultado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
        

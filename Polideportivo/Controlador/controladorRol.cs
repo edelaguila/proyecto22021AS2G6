@@ -8,16 +8,16 @@ namespace Polideportivo.Controlador
 {
     internal class controladorRol
     {
-        private OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
+        OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
 
-        private modeloRol modelo;
+        modeloRol modelo;
 
         public modeloRol agregarRol(modeloRol modelo)
         {
             pruebas.Open();
 
             var sqlinsertar =
-               "INSERT INTO equipo (nombre, fkIdDeporte) " +
+               "INSERT INTO rol (nombre, fkIdDeporte) " +
                "VALUES (?nombre?, ?fkIdDeporte?);";
             var ValorDeVariables = new
             {
@@ -29,6 +29,9 @@ namespace Polideportivo.Controlador
             return modelo;
         }
 
+        public controladorRol()
+        {
+        }
         public controladorRol(modeloRol Modelo)
         {
             modelo = Modelo;

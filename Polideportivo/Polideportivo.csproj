@@ -286,7 +286,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formPartido.resx">
       <DependentUpon>formPartido.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formPartidoEventos.resx">
       <DependentUpon>formPartidoEventos.cs</DependentUpon>

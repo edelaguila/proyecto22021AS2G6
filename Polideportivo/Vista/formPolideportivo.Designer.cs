@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formPolideportivo));
             this.panelLateralWrapper = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.panelLateralInterno = new System.Windows.Forms.Panel();
+            this.btnMenuPartido = new System.Windows.Forms.Button();
             this.btnDeportes = new System.Windows.Forms.Button();
             this.btnMenuResultado = new System.Windows.Forms.Button();
             this.btnMenuEntrenador = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.Maximizar = new System.Windows.Forms.PictureBox();
             this.lblTituloPrincipal = new System.Windows.Forms.Label();
-            this.btnMenuPartido = new System.Windows.Forms.Button();
             this.panelLateralWrapper.SuspendLayout();
             this.panelLateralInterno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -104,6 +104,28 @@
             this.panelLateralInterno.Name = "panelLateralInterno";
             this.panelLateralInterno.Size = new System.Drawing.Size(250, 595);
             this.panelLateralInterno.TabIndex = 0;
+            // 
+            // btnMenuPartido
+            // 
+            this.btnMenuPartido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMenuPartido.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuPartido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenuPartido.FlatAppearance.BorderSize = 0;
+            this.btnMenuPartido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
+            this.btnMenuPartido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
+            this.btnMenuPartido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuPartido.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuPartido.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuPartido.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuPartido.Image")));
+            this.btnMenuPartido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuPartido.Location = new System.Drawing.Point(16, 582);
+            this.btnMenuPartido.Name = "btnMenuPartido";
+            this.btnMenuPartido.Size = new System.Drawing.Size(221, 53);
+            this.btnMenuPartido.TabIndex = 18;
+            this.btnMenuPartido.Text = "PARTIDO";
+            this.btnMenuPartido.UseVisualStyleBackColor = false;
+            this.btnMenuPartido.Click += new System.EventHandler(this.btnMenuPartido_Click);
             // 
             // btnDeportes
             // 
@@ -457,27 +479,6 @@
             this.lblTituloPrincipal.Size = new System.Drawing.Size(194, 25);
             this.lblTituloPrincipal.TabIndex = 1;
             this.lblTituloPrincipal.Text = "POLIDEPORTIVO";
-            // 
-            // btnMenuPartido
-            // 
-            this.btnMenuPartido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenuPartido.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenuPartido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenuPartido.FlatAppearance.BorderSize = 0;
-            this.btnMenuPartido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
-            this.btnMenuPartido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
-            this.btnMenuPartido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuPartido.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuPartido.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMenuPartido.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuPartido.Image")));
-            this.btnMenuPartido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuPartido.Location = new System.Drawing.Point(16, 582);
-            this.btnMenuPartido.Name = "btnMenuPartido";
-            this.btnMenuPartido.Size = new System.Drawing.Size(221, 53);
-            this.btnMenuPartido.TabIndex = 18;
-            this.btnMenuPartido.Text = "PARTIDO";
-            this.btnMenuPartido.UseVisualStyleBackColor = false;
             // 
             // formPolideportivo
             // 

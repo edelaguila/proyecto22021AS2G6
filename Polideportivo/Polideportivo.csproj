@@ -107,18 +107,22 @@
     <Compile Include="Controlador\controladorAnotacion.cs" />
     <Compile Include="Controlador\controladorCampeonato.cs" />
     <Compile Include="Controlador\controladorDeporte.cs" />
+    <Compile Include="Controlador\controladorEmpleado.cs" />
     <Compile Include="Controlador\controladorEntrenador.cs" />
     <Compile Include="Controlador\controladorEquipo.cs" />
     <Compile Include="Controlador\controladorJugador.cs" />
     <Compile Include="Controlador\controladorPartido.cs" />
+    <Compile Include="Controlador\controladorPuesto.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
     <Compile Include="Controlador\controladorTipoCampeonato.cs" />
     <Compile Include="Modelo\modeloAnotacion.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />
     <Compile Include="Modelo\modeloDeporte.cs" />
+    <Compile Include="Modelo\modeloEmpleado.cs" />
     <Compile Include="Modelo\modeloEntrenador.cs" />
     <Compile Include="Modelo\modeloEquipo.cs" />
     <Compile Include="Modelo\modeloPartido.cs" />
+    <Compile Include="Modelo\modeloPuesto.cs" />
     <Compile Include="Modelo\modeloRol.cs" />
     <Compile Include="Modelo\modeloJugador.cs" />
     <Compile Include="Modelo\modeloTipoCampeonato.cs" />
@@ -144,6 +148,12 @@
     </Compile>
     <Compile Include="Vista\formDeporte.Designer.cs">
       <DependentUpon>formDeporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\formEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formEmpleado.Designer.cs">
+      <DependentUpon>formEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\formEntrenador.cs">
       <SubType>Form</SubType>
@@ -244,6 +254,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwEntrenador.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Datos\vwEmpleado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwEmpleado.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datos\vwRol.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -257,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formDeporte.resx">
       <DependentUpon>formDeporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formEmpleado.resx">
+      <DependentUpon>formEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formEntrenador.resx">
       <DependentUpon>formEntrenador.cs</DependentUpon>
@@ -287,6 +305,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formPolideportivo.resx">
       <DependentUpon>formPolideportivo.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -366,6 +385,17 @@
     </None>
     <None Include="Datos\vwEntrenador.xsc">
       <DependentUpon>vwEntrenador.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\vwEmpleado.xsc">
+      <DependentUpon>vwEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\vwEmpleado.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwEmpleado.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\vwEmpleado.xss">
+      <DependentUpon>vwEmpleado.xsd</DependentUpon>
     </None>
     <None Include="Datos\vwEntrenador.xsd">
       <Generator>MSDataSetGenerator</Generator>

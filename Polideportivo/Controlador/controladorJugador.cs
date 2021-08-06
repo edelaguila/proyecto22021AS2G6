@@ -31,14 +31,9 @@ namespace Polideportivo.AccesoDatos
                     fkIdEquipo = modelo.fkIdEquipo,
                     fkIdRol = modelo.fkIdRol
                 };
-                var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
             }
-
-
-
-
-            //modelo.id = 5;
             return modelo;
         }
 
@@ -59,42 +54,37 @@ namespace Polideportivo.AccesoDatos
                     fkIdRol = modelo.fkIdRol,
                     pkId = modelo.pkId
                 };
-                var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
             }
-
-
-            ODBC.cerrarConexion(conexionODBC);
-
             return modelo;
         }
 
-        public IEnumerable<modeloJugador> mostrarJugadores()
+        public List<modeloJugador> mostrarJugadores()
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
-            IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();
+            List<modeloJugador> sqlresultado = new List<modeloJugador>();
             if (conexionODBC != null)
             {
                 string sqlconsulta = "SELECT * FROM tablajugadores;";
-                var sqlresultado = conexionODBC.Query<modeloJugador>(sqlconsulta);
-                modeloList = sqlresultado;
+                sqlresultado = conexionODBC.Query<modeloJugador>(sqlconsulta).ToList();
                 ODBC.cerrarConexion(conexionODBC);
             }
-            return modeloList;
+            return sqlresultado;
         }
 
 
-        public IEnumerable<modeloJugador> mostrarJugadoresPorDeporte()
+        public List<modeloJugador> mostrarJugadoresPorDeporte()
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
-            IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();
+            List<modeloJugador> sqlresultado = new List<modeloJugador>();
             if (conexionODBC != null)
             {
                 string sqlconsulta = "SELECT * FROM tablajugadores;";
-                var sqlresultado = conexionODBC.Query<modeloJugador>(sqlconsulta);
-                modeloList = sqlresultado;
+                sqlresultado = conexionODBC.Query<modeloJugador>(sqlconsulta).ToList();
                 ODBC.cerrarConexion(conexionODBC);
             }
-            return modeloList;
+            return sqlresultado;
         }
 
         public modeloJugador eliminarJugador(modeloJugador modelo)
@@ -108,7 +98,7 @@ namespace Polideportivo.AccesoDatos
                 {
                     pkId = modelo.pkId
                 };
-                var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
             }
             return modelo;

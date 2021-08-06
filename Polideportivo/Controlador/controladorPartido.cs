@@ -1,110 +1,102 @@
 ﻿using Polideportivo.Modelo;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Dapper;
+using Polideportivo.Conexion;
 using System.Data.Odbc;
-using System.Data;
+using System.Linq;
 
 namespace Polideportivo.AccesoDatos
 {
     class controladorPartido
     {
-        OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
+        ConexionODBC ODBC = new ConexionODBC();
         public modeloPartido agregarPartido(modeloPartido modelo)
         {
-
-            var sqlinsertar =
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                var sqlinsertar =
                 "INSERT INTO jugador (pkId, equipo1, equipo2, campo, fecha, fase, fkIdCampeonato, " +
                 "fkIdEmpleado, fkIdResultado, fkIdEstado) " +
                 "VALUES (NULL, ?equipo1?, ?equipo2?, ?campo?, ?fecha?, ?fase?, ?fkIdCampeonato?, " +
                 "?fkIdEmpleado?, ?fkIdResultado?, ?fkIdEstado?);";
-            var ValorDeVariables = new
-            {
-                equipo1 = modelo.equipo1,
-                equipo2 = modelo.equipo2,
-                campo = modelo.campo,
-                fecha = modelo.fecha,
-                fase = modelo.fase,
-                fkIdCampeonato = modelo.fkIdCampeonato,
-                fkIdEmpleado = modelo.fkIdEmpleado,
-                fkIdResultado = modelo.fkIdResultado,
-                fkIdEstado = modelo.fkIdEstado
-            };
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-
-
-            pruebas.Close();
-
-            //modelo.id = 5;
+                var ValorDeVariables = new
+                {
+                    equipo1 = modelo.equipo1,
+                    equipo2 = modelo.equipo2,
+                    campo = modelo.campo,
+                    fecha = modelo.fecha,
+                    fase = modelo.fase,
+                    fkIdCampeonato = modelo.fkIdCampeonato,
+                    fkIdEmpleado = modelo.fkIdEmpleado,
+                    fkIdResultado = modelo.fkIdResultado,
+                    fkIdEstado = modelo.fkIdEstado
+                };
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return modelo;
         }
 
         public modeloPartido modificarPartido(modeloPartido modelo)
         {
-
-            var sqlinsertar =
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                var sqlinsertar =
                 "UPDATE partido SET equipo1 = ?equipo1?, equipo2 = ?equipo2?, " +
                 "campo = ?campo?, fecha = ?fecha?, estado = ?estado? " +
                 "fase = ?fase?, fkIdCampeonato = ?fkIdCampeonato?, fkIdEmpleado = ?fkIdEmpleado? " +
                 "fkIdResultado = ?fkIdResultado?, " + "fkIdEstado = ?fkIdEstado?, " +
                 "WHERE pkId = ?pkId?;";
-            var ValorDeVariables = new
-            {
-                equipo1 = modelo.equipo1,
-                equipo2 = modelo.equipo2,
-                campo = modelo.campo,
-                fecha = modelo.fecha,
-                estado = modelo.estado,
-                fase = modelo.fase,
-                fkIdCampeonato = modelo.fkIdCampeonato,
-                fkIdEmpleado = modelo.fkIdEmpleado,
-                fkIdResultado = modelo.fkIdResultado,
-                fkIdEstado = modelo.fkIdEstado,
-                pkId = modelo.pkId
-            };
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-            pruebas.Close();
+                var ValorDeVariables = new
+                {
+                    equipo1 = modelo.equipo1,
+                    equipo2 = modelo.equipo2,
+                    campo = modelo.campo,
+                    fecha = modelo.fecha,
+                    estado = modelo.estado,
+                    fase = modelo.fase,
+                    fkIdCampeonato = modelo.fkIdCampeonato,
+                    fkIdEmpleado = modelo.fkIdEmpleado,
+                    fkIdResultado = modelo.fkIdResultado,
+                    fkIdEstado = modelo.fkIdEstado,
+                    pkId = modelo.pkId
+                };
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return modelo;
         }
 
-        public IEnumerable<modeloPartido> mostrarPartidos()
+        public List<modeloPartido> mostrarPartidos()
         {
-            IEnumerable<modeloPartido> modeloList = new List<modeloPartido>();
-            pruebas.Open();
-            string sqlconsulta = "SELECT * FROM tablapartidos;";
-            var sqlresultado = pruebas.Query<modeloPartido>(sqlconsulta);
-            modeloList = sqlresultado;
-            pruebas.Close();
-            return modeloList;
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            List<modeloPartido> sqlresultado = new List<modeloPartido>();
+            if (conexionODBC != null)
+            {
+
+                string sqlconsulta = "SELECT * FROM tablapartidos;";
+                sqlresultado = conexionODBC.Query<modeloPartido>(sqlconsulta).ToList();
+                ODBC.cerrarConexion(conexionODBC);
+            }
+            return sqlresultado;
         }
-
-
-
-        //public IEnumerable<modeloPartido> mostrarJugadoresPorDeporte()
-        //{
-        //    IEnumerable<modeloJugador> modeloList = new List<modeloJugador>();
-        //    pruebas.Open();
-        //    string sqlconsulta = "SELECT * FROM tablajugadores;";
-        //    var sqlresultado = pruebas.Query<modeloJugador>(sqlconsulta);
-        //    modeloList = sqlresultado;
-        //    pruebas.Close();
-        //   return modeloList;
-        //}
 
         public modeloPartido eliminarPartido(modeloPartido modelo)
         {
-
-            var sqlinsertar =
-                "DELETE FROM partido WHERE pkId = ?pkId?;";
-            var ValorDeVariables = new
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
             {
-                pkId = modelo.pkId
-            };
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-            pruebas.Close();
+                var sqlinsertar =
+                "DELETE FROM partido WHERE pkId = ?pkId?;";
+                var ValorDeVariables = new
+                {
+                    pkId = modelo.pkId
+                };
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return modelo;
         }
 

@@ -30,8 +30,8 @@ namespace Polideportivo.Vista
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formRol));
             this.tablaRol = new Zuby.ADGV.AdvancedDataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +41,7 @@ namespace Polideportivo.Vista
             this.vwrolBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vwRol = new Polideportivo.vwRol();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.cboDeporte = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombreRol = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@ namespace Polideportivo.Vista
             this.btnModificarRol = new System.Windows.Forms.Button();
             this.btnAgregarRol = new System.Windows.Forms.Button();
             this.vwrolTableAdapter = new Polideportivo.vwRolTableAdapters.vwrolTableAdapter();
-            this.cboRol = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.tablaRol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwRol)).BeginInit();
@@ -77,14 +77,14 @@ namespace Polideportivo.Vista
             this.tablaRol.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tablaRol.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tablaRol.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaRol.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaRol.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tablaRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaRol.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -92,15 +92,15 @@ namespace Polideportivo.Vista
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.tablaRol.DataSource = this.vwrolBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaRol.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaRol.DefaultCellStyle = dataGridViewCellStyle2;
             this.tablaRol.FilterAndSortEnabled = true;
             this.tablaRol.Location = new System.Drawing.Point(85, 143);
             this.tablaRol.Name = "tablaRol";
@@ -167,7 +167,7 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
-            this.parrotGradientPanel1.Controls.Add(this.cboRol);
+            this.parrotGradientPanel1.Controls.Add(this.cboDeporte);
             this.parrotGradientPanel1.Controls.Add(this.label1);
             this.parrotGradientPanel1.Controls.Add(this.lblNombre);
             this.parrotGradientPanel1.Controls.Add(this.txtNombreRol);
@@ -192,6 +192,17 @@ namespace Polideportivo.Vista
             this.parrotGradientPanel1.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.CornflowerBlue;
             // 
+            // cboDeporte
+            // 
+            this.cboDeporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDeporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboDeporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDeporte.FormattingEnabled = true;
+            this.cboDeporte.Location = new System.Drawing.Point(571, 128);
+            this.cboDeporte.Name = "cboDeporte";
+            this.cboDeporte.Size = new System.Drawing.Size(226, 28);
+            this.cboDeporte.TabIndex = 37;
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -201,9 +212,9 @@ namespace Polideportivo.Vista
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(571, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 18);
+            this.label1.Size = new System.Drawing.Size(81, 18);
             this.label1.TabIndex = 36;
-            this.label1.Text = "NOMBRE DEPORTE";
+            this.label1.Text = "DEPORTE";
             // 
             // lblNombre
             // 
@@ -212,11 +223,11 @@ namespace Polideportivo.Vista
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(567, 40);
+            this.lblNombre.Location = new System.Drawing.Point(570, 40);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(110, 18);
+            this.lblNombre.Size = new System.Drawing.Size(39, 18);
             this.lblNombre.TabIndex = 35;
-            this.lblNombre.Text = "NOMBRE ROL";
+            this.lblNombre.Text = "ROL";
             // 
             // txtNombreRol
             // 
@@ -392,17 +403,6 @@ namespace Polideportivo.Vista
             // 
             this.vwrolTableAdapter.ClearBeforeFill = true;
             // 
-            // cboRol
-            // 
-            this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboRol.FormattingEnabled = true;
-            this.cboRol.Location = new System.Drawing.Point(571, 128);
-            this.cboRol.Name = "cboRol";
-            this.cboRol.Size = new System.Drawing.Size(226, 28);
-            this.cboRol.TabIndex = 37;
-            // 
             // formRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,6 +455,6 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.ComboBox cboRol;
+        private System.Windows.Forms.ComboBox cboDeporte;
     }
 }

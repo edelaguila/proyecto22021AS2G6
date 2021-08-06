@@ -10,17 +10,37 @@ namespace Polideportivo.Vista
     public partial class formRol : Form
     {
 
-       
+        int id;
+        string nombre;
+        int fkIdDeporte;
+
 
         public formRol()
         {
             InitializeComponent();
         }
 
-    
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    modeloRol modelo = new modeloRol();
+        //    controladorRol db = new controladorRol();
+        //}
+
+        public void actualizarTablaRol()
+        {
+            this.vwrolTableAdapter.Fill(this.vwRol.vwrol);
+        }
+
+        modeloRol modeloFila = new modeloRol();
+
         private void btnAgregarRol_Click(object sender, EventArgs e)
         {
-          
+            controladorRol modeloAgregar = new controladorRol();
+            modeloRol modelo = new modeloRol();
+            modelo.nombre = txtNombreRol.Text;
+            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            modeloAgregar.agregarRol(modelo);
+            actualizarTablaRol();
         }
 
     

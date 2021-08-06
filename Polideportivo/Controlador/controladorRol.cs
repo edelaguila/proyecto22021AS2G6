@@ -12,7 +12,7 @@ namespace Polideportivo.Controlador
     class controladorRol
     {
         OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
-  
+
         modeloRol modelo;
 
 
@@ -33,12 +33,15 @@ namespace Polideportivo.Controlador
             return modelo;
         }
 
+        public controladorRol()
+        {
 
+        }
         public controladorRol(modeloRol Modelo)
         {
             modelo = Modelo;
         }
- 
+
         public List<modeloRol> mostrarRolesPorDeporte()
         {
             pruebas.Open();
@@ -52,7 +55,7 @@ namespace Polideportivo.Controlador
             pruebas.Close();
             return sqlresultado;
         }
-       
+
 
 
 

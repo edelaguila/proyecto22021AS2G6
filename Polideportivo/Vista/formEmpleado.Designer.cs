@@ -41,7 +41,7 @@ namespace Polideportivo.Vista
             this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puestoempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwempleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwEmpleado = new Polideportivo.vwEmpleado();
+            this.vwEmpleado = new Polideportivo.Datos.vwEmpleado();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.cboPuesto = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarEmpleado = new System.Windows.Forms.Button();
             this.btnAgregarEmpleado = new System.Windows.Forms.Button();
-            this.vwempleadoTableAdapter = new Polideportivo.vwEmpleadoTableAdapters.vwempleadoTableAdapter();
+            this.vwempleadoTableAdapter = new Polideportivo.Datos.vwEmpleadoTableAdapters.vwempleadoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwempleadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwEmpleado)).BeginInit();
@@ -442,7 +442,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEntrenadorDataGridViewTextBoxColumn;
         private vwEmpleado vwEmpleado;
         private System.Windows.Forms.BindingSource vwempleadoBindingSource;
-        private vwEmpleadoTableAdapters.vwempleadoTableAdapter vwempleadoTableAdapter;
+        private Polideportivo.Datos.vwEmpleadoTableAdapters.vwempleadoTableAdapter vwempleadoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEmpleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdPuestoEmpleadoDataGridViewTextBoxColumn;

@@ -1,4 +1,4 @@
-﻿namespace Polideportivo.Modelo
+﻿namespace Modelo
 {
     public class modeloAnotacion
     {

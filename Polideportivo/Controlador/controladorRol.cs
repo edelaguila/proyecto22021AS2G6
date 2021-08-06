@@ -1,12 +1,12 @@
 ﻿using Dapper;
-using Polideportivo.Modelo;
+using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
 
-namespace Polideportivo.Controlador
+namespace Controlador
 {
-    internal class controladorRol
+    public class controladorRol
     {
         private OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
 

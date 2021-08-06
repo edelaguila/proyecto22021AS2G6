@@ -1,13 +1,13 @@
 ﻿using Dapper;
-using Polideportivo.Conexion;
-using Polideportivo.Modelo;
+using Conexion;
+using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
 
-namespace Polideportivo.Controlador
+namespace Controlador
 {
-    internal class controladorDeporte
+    public class controladorDeporte
     {
         private ConexionODBC ODBC = new ConexionODBC();
 

@@ -1,11 +1,10 @@
-﻿using Polideportivo.AccesoDatos;
-using Polideportivo.Controlador;
-using Polideportivo.Modelo;
+﻿using Controlador;
+using Modelo;
 using System;
 using System.Windows.Forms;
-using static Polideportivo.Vista.utilidadForms;
+using static Vista.utilidadForms;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
     public partial class formCampeonatoEventos : Form
     {

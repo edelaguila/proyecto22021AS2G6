@@ -1,4 +1,4 @@
-﻿namespace Polideportivo
+﻿namespace Vista
 {
     partial class formPolideportivo
     {
@@ -242,6 +242,7 @@
             this.lblMenuTitulo.Size = new System.Drawing.Size(108, 25);
             this.lblMenuTitulo.TabIndex = 6;
             this.lblMenuTitulo.Text = "TORNEOS";
+            this.lblMenuTitulo.Click += new System.EventHandler(this.lblMenuTitulo_Click);
             // 
             // separadorLogo
             // 

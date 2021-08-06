@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using static Polideportivo.Vista.utilidadForms;
+using static Vista.utilidadForms;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
     public partial class formAviso : Form
     {

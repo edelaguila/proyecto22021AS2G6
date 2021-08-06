@@ -1,13 +1,13 @@
 ﻿using Dapper;
-using Polideportivo.Conexion;
-using Polideportivo.Modelo;
+using Conexion;
+using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
 
-namespace Polideportivo.AccesoDatos
+namespace Controlador
 {
-    internal class controladorJugador
+    public class controladorJugador
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
@@ -32,6 +32,11 @@ namespace Polideportivo.AccesoDatos
             return modelo;
         }
 
+        /// <summary>
+        /// Prueba de modificar
+        /// </summary>
+        /// <param name="modelo"></param>
+        /// <returns></returns>
         public modeloJugador modificarJugador(modeloJugador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();

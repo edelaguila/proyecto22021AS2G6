@@ -1,18 +1,15 @@
 ﻿using Dapper;
-using Polideportivo.Conexion;
-using Polideportivo.Modelo;
-using System;
+using Conexion;
+using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Polideportivo.Controlador
+namespace Controlador
 {
-    class controladorEmpleado
+    public class controladorEmpleado
     {
-        ConexionODBC ODBC = new ConexionODBC();
+        private ConexionODBC ODBC = new ConexionODBC();
 
         public modeloEmpleado agregarEmpleado(modeloEmpleado modelo)
         {
@@ -25,8 +22,7 @@ namespace Polideportivo.Controlador
                 var ValorDeVariables = new
                 {
                     nombre = modelo.nombre,
-                    fkIdPuestoEmpleado= modelo.fkIdPuestoEmpleado,
-
+                    fkIdPuestoEmpleado = modelo.fkIdPuestoEmpleado,
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
@@ -72,7 +68,6 @@ namespace Polideportivo.Controlador
             }
             return modelo;
         }
-
 
         public List<modeloEmpleado> mostrarEmpleado()
         {

@@ -1,7 +1,7 @@
 ﻿
-using Polideportivo.Datos;
+using Datos;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
     partial class formJugador
     {
@@ -58,8 +58,8 @@ namespace Polideportivo.Vista
             this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwjugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwJugador = new Polideportivo.Datos.vwJugador();
-            this.vwjugadorTableAdapter = new Polideportivo.Datos.vwJugadorTableAdapters.vwjugadorTableAdapter();
+            this.vwJugador = new Datos.vwJugador();
+            this.vwjugadorTableAdapter = new Datos.vwJugadorTableAdapters.vwjugadorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaJugadores)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             this.panelBuscarCol.SuspendLayout();

@@ -1,4 +1,4 @@
-using Polideportivo.AccesoDatos;
+﻿using Polideportivo.AccesoDatos;
 using Polideportivo.Modelo;
 using System;
 using System.Windows.Forms;
@@ -9,82 +9,66 @@ namespace Polideportivo.Vista
     public partial class formPartido : Form
     {
 
+        // Se declaran los campos que se van a llenar a partir de la fila seleccionada de la tabla
+        int id;
+        string nombre;
+        int anotaciones;
+        int fkIdEquipo;
+        int fkIdRol;
+        int fkIdDeporte;
 
-
+        // Se declara un modelo jugador para que guarde los datos de la fila sin perderlos
+        modeloJugador modeloFila = new modeloJugador();
 
         public formPartido()
         {
             InitializeComponent();
         }
 
-       
-
-        private void button1_Click(object sender, EventArgs e)
+        private void formJugador_Load(object sender, EventArgs e)
         {
-            modeloJugador modelo = new modeloJugador();
-            controladorJugador db = new controladorJugador();
-            db.agregarJugador(modelo);
+            this.vwjugadorTableAdapter.Fill(this.vwJugador.vwjugador);
+            // Se asigna la primera opción posible en la combobox de filtración
+            cboBuscar.SelectedIndex = 0;
+            // Se asigna la primera fila posible de la tabla y se llena el modelo
+            tablaJugadores.CurrentCell = tablaJugadores.Rows[0].Cells[1];
+            llenarModeloConFilaSeleccionada();
         }
+
 
 
         public void actualizarTablaJugadores()
         {
-            this.vwpartidoTableAdapter.Fill(this.vwPartido.vwpartido);
+            this.vwjugadorTableAdapter.Fill(this.vwJugador.vwjugador);
         }
 
 
-        private void txtJugadorFiltrar_TextChanged(object sender, EventArgs e)
+
+
+        private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            llenarModeloConFilaSeleccionada();
         }
 
-        modeloPartido modeloFila = new modeloPartido();
-        private void tablaPartido_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int id = stringAInt(tablaPartido.SelectedRows[0].Cells[0].Value.ToString());
-            string equipo1 = tablaPartido.SelectedRows[0].Cells[1].Value.ToString();
-            string equipo2 = tablaPartido.SelectedRows[0].Cells[2].Value.ToString();
-            string campo = tablaPartido.SelectedRows[0].Cells[3].Value.ToString();
-            string estado = tablaPartido.SelectedRows[0].Cells[4].Value.ToString();
-            string fase = tablaPartido.SelectedRows[0].Cells[5].Value.ToString();
-            int fkIdEquipo = stringAInt(tablaPartido.SelectedRows[0].Cells[3].Value.ToString());
-            int fkIdRol = stringAInt(tablaPartido.SelectedRows[0].Cells[5].Value.ToString());
-            int fkIdDeporte = stringAInt(tablaPartido.SelectedRows[0].Cells[7].Value.ToString());
-            modeloFila.pkId = id;
-            //modeloFila.nombre = nombre;
-            //modeloFila.anotaciones = anotaciones;
-            //modeloFila.fkIdEquipo = fkIdEquipo;
-            //modeloFila.fkIdRol = fkIdRol;
-            //modeloFila.fkIdDeporte = fkIdDeporte;
-            // Para que la selección de filas funcione para modificar, tiene que enviarse el
-            // modelo a la función de abrirForm:
-            // utilidadForms.abrirForm(new formJugadorEventos(modeloFila, this));
-            // Además de eso, modificar el construtor del form que va a utilizar los datos
-            // para la modificación, en este caso sería el ctor de formJugadorEventos que recibe el modelo
 
-        }
 
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
-            abrirForm(new formPartidoEventos(this));
+            abrirForm(new formJugadorEventos(this));
         }
 
-        private void btnModificarPartido_Click(object sender, EventArgs e)
+        private void btnModificarJugador_Click(object sender, EventArgs e)
         {
-            abrirForm(new formPartidoEventos(modeloFila, this));
+            abrirForm(new formJugadorEventos(modeloFila, this));
+
         }
 
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtFiltrar.Text))
-            {
-                vwpartidoBindingSource.Filter = string.Empty;
-            }
-            else
-            {
-                vwpartidoBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
-            }
+            filtrarTabla();
         }
+
+
 
         private void cboBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -98,12 +82,44 @@ namespace Polideportivo.Vista
 
         private void btnEliminarJugador_Click(object sender, EventArgs e)
         {
-            int id = stringAInt(tablaPartido.SelectedRows[0].Cells[0].Value.ToString());
+            llenarModeloConFilaSeleccionada();
             controladorJugador controlador = new controladorJugador();
-            modeloJugador modelo = new modeloJugador();
-            modelo.pkId = id;
-            controlador.eliminarJugador(modelo);
+            controlador.eliminarJugador(modeloFila);
             actualizarTablaJugadores();
         }
+
+        private void tablaJugadores_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
+        }
+
+        public void llenarModeloConFilaSeleccionada()
+        {
+            id = stringAInt(tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
+            nombre = tablaJugadores.SelectedRows[0].Cells[1].Value.ToString();
+            anotaciones = stringAInt(tablaJugadores.SelectedRows[0].Cells[2].Value.ToString());
+            fkIdEquipo = stringAInt(tablaJugadores.SelectedRows[0].Cells[3].Value.ToString());
+            fkIdRol = stringAInt(tablaJugadores.SelectedRows[0].Cells[5].Value.ToString());
+            fkIdDeporte = stringAInt(tablaJugadores.SelectedRows[0].Cells[7].Value.ToString());
+            modeloFila.pkId = id;
+            modeloFila.nombre = nombre;
+            modeloFila.anotaciones = anotaciones;
+            modeloFila.fkIdEquipo = fkIdEquipo;
+            modeloFila.fkIdRol = fkIdRol;
+            modeloFila.fkIdDeporte = fkIdDeporte;
+        }
+
+        private void filtrarTabla()
+        {
+            if (string.IsNullOrEmpty(txtFiltrar.Text))
+            {
+                vwjugadorBindingSource.Filter = string.Empty;
+            }
+            else
+            {
+                vwjugadorBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
+            }
+        }
+
     }
 }

@@ -110,7 +110,7 @@ namespace Polideportivo
         {
             gestorDeFormActivo(new formPartido(), "PARTIDO");
         }
-
+        
         private void gestorDeFormActivo(Form formHijo, string formHijoActual)
         {
             lblTituloPrincipal.Text = formHijoActual;
@@ -179,7 +179,7 @@ namespace Polideportivo
             
         }
 
-        
+
     }
 
        

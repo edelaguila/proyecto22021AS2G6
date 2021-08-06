@@ -110,7 +110,7 @@ namespace Vista
         {
             gestorDeFormActivo(new formPartido(), "PARTIDO");
         }
-
+        
         private void gestorDeFormActivo(Form formHijo, string formHijoActual)
         {
             lblTituloPrincipal.Text = formHijoActual;

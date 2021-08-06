@@ -67,13 +67,12 @@ namespace Vista
             cboEstado.SelectedIndex = -1;
             formOriginal = form;
 
-            //controladorResultado estado = new controladorEstado();
-            //cboEmpleado.DataSource = estado.mostrarEstado();
-            //cboEmpleado.DisplayMember = "nombre";
-            //cboEmpleado.ValueMember = "pkId";
-            //cboEmpleado.SelectedIndex = -1;
-            //formOriginal = form;
-            // Modificar el texto del título
+
+            cboEmpleado.DisplayMember = "nombre";
+            cboEmpleado.ValueMember = "pkId";
+            cboEmpleado.SelectedIndex = -1;
+            formOriginal = form;
+            //Modificar el texto del título
             lblJugadorEvento.Text = "AGREGAR PARTIDO";
         }
 
@@ -115,7 +114,6 @@ namespace Vista
             modelo.campo = txtCampo.Text;
             modelo.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
             modelo.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
-            modelo.fkIdResultado = stringAInt(cboResultado.SelectedValue.ToString());
             modelo.fkIdEstado = stringAInt(cboEstado.SelectedValue.ToString());
             modeloAgregar.agregarPartido(modelo);
             formOriginal.actualizarTablaPartido();
@@ -131,7 +129,6 @@ namespace Vista
             modelo.anotaciones = stringAInt(txtEquipo1.Text);
             modelo.fkIdDeporte = stringAInt(cboCampeonato.SelectedValue.ToString());
             modelo.fkIdEquipo = stringAInt(cboEmpleado.SelectedValue.ToString());
-            modelo.fkIdRol = stringAInt(cboResultado.SelectedValue.ToString());
             modeloModificar.modificarJugador(modelo);
             formOriginal.actualizarTablaPartido();
             cerrarForm(this);

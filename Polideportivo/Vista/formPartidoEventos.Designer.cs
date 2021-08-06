@@ -35,26 +35,26 @@ namespace Vista
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblAnotaciones = new System.Windows.Forms.Label();
             this.cboEmpleado = new System.Windows.Forms.ComboBox();
-            this.lblRol = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboResultado = new System.Windows.Forms.ComboBox();
-            this.txtEquipo1 = new System.Windows.Forms.TextBox();
             this.cboCampeonato = new System.Windows.Forms.ComboBox();
             this.parrotGradientPanel2 = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cdrFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCampo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtEquipo2 = new System.Windows.Forms.TextBox();
             this.btnModificarPartido = new System.Windows.Forms.Button();
             this.btnAgregarPartido = new System.Windows.Forms.Button();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblJugadorEvento = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.txtEquipo2 = new System.Windows.Forms.TextBox();
+            this.txtEquipo1 = new System.Windows.Forms.TextBox();
             this.parrotGradientPanel2.SuspendLayout();
             this.parrotGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,18 +116,6 @@ namespace Vista
             this.cboEmpleado.Size = new System.Drawing.Size(121, 27);
             this.cboEmpleado.TabIndex = 16;
             // 
-            // lblRol
-            // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.BackColor = System.Drawing.Color.Transparent;
-            this.lblRol.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.ForeColor = System.Drawing.Color.White;
-            this.lblRol.Location = new System.Drawing.Point(251, 170);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(89, 18);
-            this.lblRol.TabIndex = 9;
-            this.lblRol.Text = "RESULTADO";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -139,25 +127,6 @@ namespace Vista
             this.label1.Size = new System.Drawing.Size(108, 18);
             this.label1.TabIndex = 19;
             this.label1.Text = "CAMPEONATO";
-            // 
-            // cboResultado
-            // 
-            this.cboResultado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboResultado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboResultado.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboResultado.FormattingEnabled = true;
-            this.cboResultado.Location = new System.Drawing.Point(254, 188);
-            this.cboResultado.Name = "cboResultado";
-            this.cboResultado.Size = new System.Drawing.Size(121, 27);
-            this.cboResultado.TabIndex = 17;
-            // 
-            // txtEquipo1
-            // 
-            this.txtEquipo1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEquipo1.Location = new System.Drawing.Point(71, 86);
-            this.txtEquipo1.Name = "txtEquipo1";
-            this.txtEquipo1.Size = new System.Drawing.Size(121, 27);
-            this.txtEquipo1.TabIndex = 10;
             // 
             // cboCampeonato
             // 
@@ -175,6 +144,7 @@ namespace Vista
             this.parrotGradientPanel2.BottomLeft = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel2.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
+            this.parrotGradientPanel2.Controls.Add(this.dateTimePicker1);
             this.parrotGradientPanel2.Controls.Add(this.cboEstado);
             this.parrotGradientPanel2.Controls.Add(this.label5);
             this.parrotGradientPanel2.Controls.Add(this.cdrFecha);
@@ -186,7 +156,6 @@ namespace Vista
             this.parrotGradientPanel2.Controls.Add(this.btnModificarPartido);
             this.parrotGradientPanel2.Controls.Add(this.btnAgregarPartido);
             this.parrotGradientPanel2.Controls.Add(this.cboCampeonato);
-            this.parrotGradientPanel2.Controls.Add(this.cboResultado);
             this.parrotGradientPanel2.Controls.Add(this.label1);
             this.parrotGradientPanel2.Controls.Add(this.lblRol);
             this.parrotGradientPanel2.Controls.Add(this.txtFase);
@@ -208,6 +177,18 @@ namespace Vista
             this.parrotGradientPanel2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.parrotGradientPanel2.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.parrotGradientPanel2.TopRight = System.Drawing.Color.CornflowerBlue;
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboEstado.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(254, 38);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(121, 27);
+            this.cboEstado.TabIndex = 39;
+            this.cboEstado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -271,14 +252,6 @@ namespace Vista
             this.label2.Size = new System.Drawing.Size(72, 18);
             this.label2.TabIndex = 33;
             this.label2.Text = "EQUIPO 2";
-            // 
-            // txtEquipo2
-            // 
-            this.txtEquipo2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEquipo2.Location = new System.Drawing.Point(71, 137);
-            this.txtEquipo2.Name = "txtEquipo2";
-            this.txtEquipo2.Size = new System.Drawing.Size(121, 27);
-            this.txtEquipo2.TabIndex = 31;
             // 
             // btnModificarPartido
             // 
@@ -378,17 +351,41 @@ namespace Vista
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // cboEstado
+            // dateTimePicker1
             // 
-            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboEstado.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(254, 38);
-            this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(121, 27);
-            this.cboEstado.TabIndex = 39;
-            this.cboEstado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(251, 195);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(124, 20);
+            this.dateTimePicker1.TabIndex = 40;
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.BackColor = System.Drawing.Color.Transparent;
+            this.lblRol.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.Color.White;
+            this.lblRol.Location = new System.Drawing.Point(251, 174);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(48, 18);
+            this.lblRol.TabIndex = 9;
+            this.lblRol.Text = "HORA";
+            // 
+            // txtEquipo2
+            // 
+            this.txtEquipo2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEquipo2.Location = new System.Drawing.Point(71, 137);
+            this.txtEquipo2.Name = "txtEquipo2";
+            this.txtEquipo2.Size = new System.Drawing.Size(121, 27);
+            this.txtEquipo2.TabIndex = 31;
+            // 
+            // txtEquipo1
+            // 
+            this.txtEquipo1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEquipo1.Location = new System.Drawing.Point(71, 86);
+            this.txtEquipo1.Name = "txtEquipo1";
+            this.txtEquipo1.Size = new System.Drawing.Size(121, 27);
+            this.txtEquipo1.TabIndex = 10;
             // 
             // formPartidoEventos
             // 
@@ -417,10 +414,7 @@ namespace Vista
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblAnotaciones;
         private System.Windows.Forms.ComboBox cboEmpleado;
-        private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboResultado;
-        private System.Windows.Forms.TextBox txtEquipo1;
         private System.Windows.Forms.ComboBox cboCampeonato;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel2;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
@@ -435,7 +429,10 @@ namespace Vista
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCampo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtEquipo2;
         private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.TextBox txtEquipo2;
+        private System.Windows.Forms.TextBox txtEquipo1;
     }
 }

@@ -1,0 +1,682 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.Modelo.modeloCampeonato
+  commentId: T:Polideportivo.Modelo.modeloCampeonato
+  id: modeloCampeonato
+  parent: Polideportivo.Modelo
+  children:
+  - Polideportivo.Modelo.modeloCampeonato.#ctor
+  - Polideportivo.Modelo.modeloCampeonato.#ctor(System.Int32,System.String,System.String,System.String,System.Int32,System.Int32)
+  - Polideportivo.Modelo.modeloCampeonato.fechaFinal
+  - Polideportivo.Modelo.modeloCampeonato.fechaInicio
+  - Polideportivo.Modelo.modeloCampeonato.fkIdDeporte
+  - Polideportivo.Modelo.modeloCampeonato.fkIdTipoCampeonato
+  - Polideportivo.Modelo.modeloCampeonato.nombre
+  - Polideportivo.Modelo.modeloCampeonato.pkId
+  langs:
+  - csharp
+  - vb
+  name: modeloCampeonato
+  nameWithType: modeloCampeonato
+  fullName: Polideportivo.Modelo.modeloCampeonato
+  type: Class
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloCampeonato.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: modeloCampeonato
+    path: Modelo/modeloCampeonato.cs
+    startLine: 2
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public class modeloCampeonato
+    content.vb: Public Class modeloCampeonato
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Polideportivo.Modelo.modeloCampeonato.pkId
+  commentId: P:Polideportivo.Modelo.modeloCampeonato.pkId
+  id: pkId
+  parent: Polideportivo.Modelo.modeloCampeonato
+  langs:
+  - csharp
+  - vb
+  name: pkId
+  nameWithType: modeloCampeonato.pkId
+  fullName: Polideportivo.Modelo.modeloCampeonato.pkId
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloCampeonato.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: pkId
+    path: Modelo/modeloCampeonato.cs
+    startLine: 4
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public int pkId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property pkId As Integer
+  overload: Polideportivo.Modelo.modeloCampeonato.pkId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Modelo.modeloCampeonato.nombre
+  commentId: P:Polideportivo.Modelo.modeloCampeonato.nombre
+  id: nombre
+  parent: Polideportivo.Modelo.modeloCampeonato
+  langs:
+  - csharp
+  - vb
+  name: nombre
+  nameWithType: modeloCampeonato.nombre
+  fullName: Polideportivo.Modelo.modeloCampeonato.nombre
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloCampeonato.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: nombre
+    path: Modelo/modeloCampeonato.cs
+    startLine: 5
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public string nombre { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property nombre As String
+  overload: Polideportivo.Modelo.modeloCampeonato.nombre*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Modelo.modeloCampeonato.fechaInicio
+  commentId: P:Polideportivo.Modelo.modeloCampeonato.fechaInicio
+  id: fechaInicio
+  parent: Polideportivo.Modelo.modeloCampeonato
+  langs:
+  - csharp
+  - vb
+  name: fechaInicio
+  nameWithType: modeloCampeonato.fechaInicio
+  fullName: Polideportivo.Modelo.modeloCampeonato.fechaInicio
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloCampeonato.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: fechaInicio
+    path: Modelo/modeloCampeonato.cs
+    startLine: 6
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public string fechaInicio { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property fechaInicio As String
+  overload: Polideportivo.Modelo.modeloCampeonato.fechaInicio*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Modelo.modeloCampeonato.fechaFinal
+  commentId: P:Polideportivo.Modelo.modeloCampeonato.fechaFinal
+  id: fechaFinal
+  parent: Polideportivo.Modelo.modeloCampeonato
+  langs:
+  - csharp
+  - vb
+  name: fechaFinal
+  nameWithType: modeloCampeonato.fechaFinal
+  fullName: Polideportivo.Modelo.modeloCampeonato.fechaFinal
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloCampeonato.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: fechaFinal
+    path: Modelo/modeloCampeonato.cs
+    startLine: 7
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public string fechaFinal { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property fechaFinal As String
+  overload: Polideportivo.Modelo.modeloCampeonato.fechaFinal*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Modelo.modeloCampeonato.fkIdDeporte
+  commentId: P:Polideportivo.Modelo.modeloCampeonato.fkIdDeporte
+  id: fkIdDeporte
+  parent: Polideportivo.Modelo.modeloCampeonato
+  langs:
+  - csharp
+  - vb
+  name: fkIdDeporte
+  nameWithType: modeloCampeonato.fkIdDeporte
+  fullName: Polideportivo.Modelo.modeloCampeonato.fkIdDeporte
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloCampeonato.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: fkIdDeporte
+    path: Modelo/modeloCampeonato.cs
+    startLine: 8
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public int fkIdDeporte { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property fkIdDeporte As Integer
+  overload: Polideportivo.Modelo.modeloCampeonato.fkIdDeporte*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Modelo.modeloCampeonato.fkIdTipoCampeonato
+  commentId: P:Polideportivo.Modelo.modeloCampeonato.fkIdTipoCampeonato
+  id: fkIdTipoCampeonato
+  parent: Polideportivo.Modelo.modeloCampeonato
+  langs:
+  - csharp
+  - vb
+  name: fkIdTipoCampeonato
+  nameWithType: modeloCampeonato.fkIdTipoCampeonato
+  fullName: Polideportivo.Modelo.modeloCampeonato.fkIdTipoCampeonato
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloCampeonato.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: fkIdTipoCampeonato
+    path: Modelo/modeloCampeonato.cs
+    startLine: 9
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public int fkIdTipoCampeonato { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property fkIdTipoCampeonato As Integer
+  overload: Polideportivo.Modelo.modeloCampeonato.fkIdTipoCampeonato*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Modelo.modeloCampeonato.#ctor
+  commentId: M:Polideportivo.Modelo.modeloCampeonato.#ctor
+  id: '#ctor'
+  parent: Polideportivo.Modelo.modeloCampeonato
+  langs:
+  - csharp
+  - vb
+  name: modeloCampeonato()
+  nameWithType: modeloCampeonato.modeloCampeonato()
+  fullName: Polideportivo.Modelo.modeloCampeonato.modeloCampeonato()
+  type: Constructor
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloCampeonato.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: .ctor
+    path: Modelo/modeloCampeonato.cs
+    startLine: 11
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public modeloCampeonato()
+    content.vb: Public Sub New
+  overload: Polideportivo.Modelo.modeloCampeonato.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Modelo.modeloCampeonato.#ctor(System.Int32,System.String,System.String,System.String,System.Int32,System.Int32)
+  commentId: M:Polideportivo.Modelo.modeloCampeonato.#ctor(System.Int32,System.String,System.String,System.String,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.String,System.String,System.String,System.Int32,System.Int32)'
+  parent: Polideportivo.Modelo.modeloCampeonato
+  langs:
+  - csharp
+  - vb
+  name: modeloCampeonato(Int32, String, String, String, Int32, Int32)
+  nameWithType: modeloCampeonato.modeloCampeonato(Int32, String, String, String, Int32, Int32)
+  fullName: Polideportivo.Modelo.modeloCampeonato.modeloCampeonato(System.Int32, System.String, System.String, System.String, System.Int32, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloCampeonato.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: .ctor
+    path: Modelo/modeloCampeonato.cs
+    startLine: 15
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public modeloCampeonato(int Id, string Nombre, string FechaInicio, string FechaFinal, int FkIdDeporte, int FkIdTipoCampeonato)
+    parameters:
+    - id: Id
+      type: System.Int32
+    - id: Nombre
+      type: System.String
+    - id: FechaInicio
+      type: System.String
+    - id: FechaFinal
+      type: System.String
+    - id: FkIdDeporte
+      type: System.Int32
+    - id: FkIdTipoCampeonato
+      type: System.Int32
+    content.vb: Public Sub New(Id As Integer, Nombre As String, FechaInicio As String, FechaFinal As String, FkIdDeporte As Integer, FkIdTipoCampeonato As Integer)
+  overload: Polideportivo.Modelo.modeloCampeonato.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Polideportivo.Modelo
+  commentId: N:Polideportivo.Modelo
+  name: Polideportivo.Modelo
+  nameWithType: Polideportivo.Modelo
+  fullName: Polideportivo.Modelo
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Polideportivo.Modelo.modeloCampeonato.pkId*
+  commentId: Overload:Polideportivo.Modelo.modeloCampeonato.pkId
+  name: pkId
+  nameWithType: modeloCampeonato.pkId
+  fullName: Polideportivo.Modelo.modeloCampeonato.pkId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Polideportivo.Modelo.modeloCampeonato.nombre*
+  commentId: Overload:Polideportivo.Modelo.modeloCampeonato.nombre
+  name: nombre
+  nameWithType: modeloCampeonato.nombre
+  fullName: Polideportivo.Modelo.modeloCampeonato.nombre
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Polideportivo.Modelo.modeloCampeonato.fechaInicio*
+  commentId: Overload:Polideportivo.Modelo.modeloCampeonato.fechaInicio
+  name: fechaInicio
+  nameWithType: modeloCampeonato.fechaInicio
+  fullName: Polideportivo.Modelo.modeloCampeonato.fechaInicio
+- uid: Polideportivo.Modelo.modeloCampeonato.fechaFinal*
+  commentId: Overload:Polideportivo.Modelo.modeloCampeonato.fechaFinal
+  name: fechaFinal
+  nameWithType: modeloCampeonato.fechaFinal
+  fullName: Polideportivo.Modelo.modeloCampeonato.fechaFinal
+- uid: Polideportivo.Modelo.modeloCampeonato.fkIdDeporte*
+  commentId: Overload:Polideportivo.Modelo.modeloCampeonato.fkIdDeporte
+  name: fkIdDeporte
+  nameWithType: modeloCampeonato.fkIdDeporte
+  fullName: Polideportivo.Modelo.modeloCampeonato.fkIdDeporte
+- uid: Polideportivo.Modelo.modeloCampeonato.fkIdTipoCampeonato*
+  commentId: Overload:Polideportivo.Modelo.modeloCampeonato.fkIdTipoCampeonato
+  name: fkIdTipoCampeonato
+  nameWithType: modeloCampeonato.fkIdTipoCampeonato
+  fullName: Polideportivo.Modelo.modeloCampeonato.fkIdTipoCampeonato
+- uid: Polideportivo.Modelo.modeloCampeonato.#ctor*
+  commentId: Overload:Polideportivo.Modelo.modeloCampeonato.#ctor
+  name: modeloCampeonato
+  nameWithType: modeloCampeonato.modeloCampeonato
+  fullName: Polideportivo.Modelo.modeloCampeonato.modeloCampeonato

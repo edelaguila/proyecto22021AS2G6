@@ -2,13 +2,6 @@
 using Polideportivo.Controlador;
 using Polideportivo.Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Polideportivo.Vista.utilidadForms;
 
@@ -16,17 +9,17 @@ namespace Polideportivo.Vista
 {
     public partial class formJugadorEventos : Form
     {
-        modeloJugador modelo = new modeloJugador();
+        private modeloJugador modelo = new modeloJugador();
 
         public formJugadorEventos()
         {
             InitializeComponent();
         }
 
+        private formJugador formOriginal = new formJugador();
 
-        formJugador formOriginal = new formJugador();
+        private modeloJugador modeloOriginal = new modeloJugador();
 
-        modeloJugador modeloOriginal = new modeloJugador();
         public formJugadorEventos(modeloJugador modelo, formJugador form)
         {
             // Este constructor es el que se utiliza para modificar datos
@@ -46,9 +39,7 @@ namespace Polideportivo.Vista
             modeloOriginal = modelo;
             // Modificar el texto del label
             lblJugadorEvento.Text = "MODIFICAR JUGADOR";
-
         }
-
 
         public formJugadorEventos(formJugador form)
         {
@@ -67,12 +58,9 @@ namespace Polideportivo.Vista
             lblJugadorEvento.Text = "AGREGAR JUGADOR";
         }
 
-
-
         // Actualizar el combobox de roles dependiendo del deporte seleccionado
         private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             if (cboDeporte.SelectedIndex > -1)
             {
                 // Llenar la combobox de rol dependiendo del deporte elegido
@@ -98,7 +86,6 @@ namespace Polideportivo.Vista
             cerrarForm(this);
         }
 
-
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
             if (validarFormEventos())
@@ -109,7 +96,6 @@ namespace Polideportivo.Vista
                 formOriginal.actualizarTablaJugadores();
                 cerrarForm(this);
             }
-            
         }
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
@@ -123,9 +109,6 @@ namespace Polideportivo.Vista
                 formOriginal.actualizarTablaJugadores();
                 cerrarForm(this);
             }
-            
-            
-            
         }
 
         private void llenarModeloConDatosIngresados()

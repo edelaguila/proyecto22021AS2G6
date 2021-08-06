@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Polideportivo.Modelo
+﻿namespace Polideportivo.Modelo
 {
     public class modeloEquipo
     {
@@ -12,7 +6,9 @@ namespace Polideportivo.Modelo
         public string nombre { get; set; }
         public int fkIdDeporte { get; set; }
 
-        public modeloEquipo() { }
+        public modeloEquipo()
+        {
+        }
 
         public modeloEquipo(int Id, string Nombre, int IdDeporte)
         {

@@ -1,5 +1,4 @@
-﻿using Polideportivo.AccesoDatos;
-using Polideportivo.Controlador;
+﻿using Polideportivo.Controlador;
 using Polideportivo.Modelo;
 using System;
 using System.Windows.Forms;
@@ -9,10 +8,6 @@ namespace Polideportivo.Vista
 {
     public partial class formEntrenador : Form
     {
-
-
-
-
         public formEntrenador()
         {
             InitializeComponent();
@@ -27,44 +22,37 @@ namespace Polideportivo.Vista
             // Modificar el texto del título
         }
 
-
-
         private void formDeporte_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'vwEntrenador.vwentrenador' Puede moverla o quitarla según sea necesario.
             this.vwentrenadorTableAdapter.Fill(this.vwEntrenador.vwentrenador);
-            // TODO: esta línea de código carga datos en la tabla 'vwEntrenador.vwentrenador' Puede moverla o quitarla según sea necesario.
             cboBuscar.SelectedIndex = 0;
-
         }
-       
+
         private void button1_Click(object sender, EventArgs e)
         {
             modeloDeporte modelo = new modeloDeporte();
             controladorDeporte db = new controladorDeporte();
         }
 
-
         public void actualizarTablaEntrenador()
         {
             this.vwentrenadorTableAdapter.Fill(this.vwEntrenador.vwentrenador);
         }
 
+        private modeloEntrenador modeloFila = new modeloEntrenador();
 
-        modeloEntrenador modeloFila = new modeloEntrenador();
         private void tablaEntrenador_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = stringAInt(tablaEntrenador.SelectedRows[0].Cells[0].Value.ToString());
             string nombre = tablaEntrenador.SelectedRows[0].Cells[1].Value.ToString();
             txtNombre.Text = nombre;
             modeloFila.pkId = id;
-
         }
-         private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboDeporte.SelectedIndex > -1)
             {
-               
                 // Llenar la combobox de equipo dependiendo del deporte elegido
                 modeloEquipo modeloequipo = new modeloEquipo();
                 modeloequipo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());

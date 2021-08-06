@@ -1,21 +1,16 @@
-﻿using Polideportivo.Modelo;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dapper;
-using System.Data.Odbc;
-using System.Data;
-using static Polideportivo.Vista.utilidadForms;
-using Polideportivo.Vista;
+﻿using Dapper;
 using Polideportivo.Conexion;
+using Polideportivo.Modelo;
+using System.Collections.Generic;
+using System.Data.Odbc;
+using System.Linq;
 
 namespace Polideportivo.AccesoDatos
 {
-    class controladorJugador
+    internal class controladorJugador
     {
-        ConexionODBC ODBC = new ConexionODBC();
+        private ConexionODBC ODBC = new ConexionODBC();
+
         public modeloJugador agregarJugador(modeloJugador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -73,7 +68,6 @@ namespace Polideportivo.AccesoDatos
             return sqlresultado;
         }
 
-
         public List<modeloJugador> mostrarJugadoresPorDeporte()
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -103,8 +97,5 @@ namespace Polideportivo.AccesoDatos
             }
             return modelo;
         }
-
-
-
     }
 }

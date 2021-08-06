@@ -1,0 +1,64 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.Datos.vwEquipo.vwequipoRowChangeEventHandler
+  commentId: T:Polideportivo.Datos.vwEquipo.vwequipoRowChangeEventHandler
+  id: vwEquipo.vwequipoRowChangeEventHandler
+  parent: Polideportivo.Datos
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: vwEquipo.vwequipoRowChangeEventHandler
+  nameWithType: vwEquipo.vwequipoRowChangeEventHandler
+  fullName: Polideportivo.Datos.vwEquipo.vwequipoRowChangeEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Polideportivo/Datos/vwEquipo.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: vwequipoRowChangeEventHandler
+    path: Datos/vwEquipo.Designer.cs
+    startLine: 271
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Datos
+  syntax:
+    content: public delegate void vwequipoRowChangeEventHandler(object sender, vwEquipo.vwequipoRowChangeEvent e);
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: Polideportivo.Datos.vwEquipo.vwequipoRowChangeEvent
+    content.vb: Public Delegate Sub vwequipoRowChangeEventHandler(sender As Object, e As vwEquipo.vwequipoRowChangeEvent)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: Polideportivo.Datos
+  commentId: N:Polideportivo.Datos
+  name: Polideportivo.Datos
+  nameWithType: Polideportivo.Datos
+  fullName: Polideportivo.Datos
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Polideportivo.Datos.vwEquipo.vwequipoRowChangeEvent
+  commentId: T:Polideportivo.Datos.vwEquipo.vwequipoRowChangeEvent
+  parent: Polideportivo.Datos
+  name: vwEquipo.vwequipoRowChangeEvent
+  nameWithType: vwEquipo.vwequipoRowChangeEvent
+  fullName: Polideportivo.Datos.vwEquipo.vwequipoRowChangeEvent
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

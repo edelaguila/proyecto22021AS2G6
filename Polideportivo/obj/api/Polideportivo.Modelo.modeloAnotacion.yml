@@ -1,0 +1,589 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.Modelo.modeloAnotacion
+  commentId: T:Polideportivo.Modelo.modeloAnotacion
+  id: modeloAnotacion
+  parent: Polideportivo.Modelo
+  children:
+  - Polideportivo.Modelo.modeloAnotacion.#ctor
+  - Polideportivo.Modelo.modeloAnotacion.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  - Polideportivo.Modelo.modeloAnotacion.cantidad
+  - Polideportivo.Modelo.modeloAnotacion.fkIdJugador
+  - Polideportivo.Modelo.modeloAnotacion.fkIdPartido
+  - Polideportivo.Modelo.modeloAnotacion.pkId
+  langs:
+  - csharp
+  - vb
+  name: modeloAnotacion
+  nameWithType: modeloAnotacion
+  fullName: Polideportivo.Modelo.modeloAnotacion
+  type: Class
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloAnotacion.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: modeloAnotacion
+    path: Modelo/modeloAnotacion.cs
+    startLine: 2
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public class modeloAnotacion
+    content.vb: Public Class modeloAnotacion
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Polideportivo.Modelo.modeloAnotacion.pkId
+  commentId: P:Polideportivo.Modelo.modeloAnotacion.pkId
+  id: pkId
+  parent: Polideportivo.Modelo.modeloAnotacion
+  langs:
+  - csharp
+  - vb
+  name: pkId
+  nameWithType: modeloAnotacion.pkId
+  fullName: Polideportivo.Modelo.modeloAnotacion.pkId
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloAnotacion.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: pkId
+    path: Modelo/modeloAnotacion.cs
+    startLine: 4
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public int pkId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property pkId As Integer
+  overload: Polideportivo.Modelo.modeloAnotacion.pkId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Modelo.modeloAnotacion.cantidad
+  commentId: P:Polideportivo.Modelo.modeloAnotacion.cantidad
+  id: cantidad
+  parent: Polideportivo.Modelo.modeloAnotacion
+  langs:
+  - csharp
+  - vb
+  name: cantidad
+  nameWithType: modeloAnotacion.cantidad
+  fullName: Polideportivo.Modelo.modeloAnotacion.cantidad
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloAnotacion.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: cantidad
+    path: Modelo/modeloAnotacion.cs
+    startLine: 5
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public int cantidad { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property cantidad As Integer
+  overload: Polideportivo.Modelo.modeloAnotacion.cantidad*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Modelo.modeloAnotacion.fkIdJugador
+  commentId: P:Polideportivo.Modelo.modeloAnotacion.fkIdJugador
+  id: fkIdJugador
+  parent: Polideportivo.Modelo.modeloAnotacion
+  langs:
+  - csharp
+  - vb
+  name: fkIdJugador
+  nameWithType: modeloAnotacion.fkIdJugador
+  fullName: Polideportivo.Modelo.modeloAnotacion.fkIdJugador
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloAnotacion.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: fkIdJugador
+    path: Modelo/modeloAnotacion.cs
+    startLine: 6
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public int fkIdJugador { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property fkIdJugador As Integer
+  overload: Polideportivo.Modelo.modeloAnotacion.fkIdJugador*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Modelo.modeloAnotacion.fkIdPartido
+  commentId: P:Polideportivo.Modelo.modeloAnotacion.fkIdPartido
+  id: fkIdPartido
+  parent: Polideportivo.Modelo.modeloAnotacion
+  langs:
+  - csharp
+  - vb
+  name: fkIdPartido
+  nameWithType: modeloAnotacion.fkIdPartido
+  fullName: Polideportivo.Modelo.modeloAnotacion.fkIdPartido
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloAnotacion.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: fkIdPartido
+    path: Modelo/modeloAnotacion.cs
+    startLine: 7
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public int fkIdPartido { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property fkIdPartido As Integer
+  overload: Polideportivo.Modelo.modeloAnotacion.fkIdPartido*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Modelo.modeloAnotacion.#ctor
+  commentId: M:Polideportivo.Modelo.modeloAnotacion.#ctor
+  id: '#ctor'
+  parent: Polideportivo.Modelo.modeloAnotacion
+  langs:
+  - csharp
+  - vb
+  name: modeloAnotacion()
+  nameWithType: modeloAnotacion.modeloAnotacion()
+  fullName: Polideportivo.Modelo.modeloAnotacion.modeloAnotacion()
+  type: Constructor
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloAnotacion.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: .ctor
+    path: Modelo/modeloAnotacion.cs
+    startLine: 9
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public modeloAnotacion()
+    content.vb: Public Sub New
+  overload: Polideportivo.Modelo.modeloAnotacion.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Modelo.modeloAnotacion.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Polideportivo.Modelo.modeloAnotacion.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32)'
+  parent: Polideportivo.Modelo.modeloAnotacion
+  langs:
+  - csharp
+  - vb
+  name: modeloAnotacion(Int32, Int32, Int32, Int32)
+  nameWithType: modeloAnotacion.modeloAnotacion(Int32, Int32, Int32, Int32)
+  fullName: Polideportivo.Modelo.modeloAnotacion.modeloAnotacion(System.Int32, System.Int32, System.Int32, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: Polideportivo/Modelo/modeloAnotacion.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: .ctor
+    path: Modelo/modeloAnotacion.cs
+    startLine: 13
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Modelo
+  syntax:
+    content: public modeloAnotacion(int Id, int Cantidad, int IdJugador, int IdPartido)
+    parameters:
+    - id: Id
+      type: System.Int32
+    - id: Cantidad
+      type: System.Int32
+    - id: IdJugador
+      type: System.Int32
+    - id: IdPartido
+      type: System.Int32
+    content.vb: Public Sub New(Id As Integer, Cantidad As Integer, IdJugador As Integer, IdPartido As Integer)
+  overload: Polideportivo.Modelo.modeloAnotacion.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Polideportivo.Modelo
+  commentId: N:Polideportivo.Modelo
+  name: Polideportivo.Modelo
+  nameWithType: Polideportivo.Modelo
+  fullName: Polideportivo.Modelo
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Polideportivo.Modelo.modeloAnotacion.pkId*
+  commentId: Overload:Polideportivo.Modelo.modeloAnotacion.pkId
+  name: pkId
+  nameWithType: modeloAnotacion.pkId
+  fullName: Polideportivo.Modelo.modeloAnotacion.pkId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Polideportivo.Modelo.modeloAnotacion.cantidad*
+  commentId: Overload:Polideportivo.Modelo.modeloAnotacion.cantidad
+  name: cantidad
+  nameWithType: modeloAnotacion.cantidad
+  fullName: Polideportivo.Modelo.modeloAnotacion.cantidad
+- uid: Polideportivo.Modelo.modeloAnotacion.fkIdJugador*
+  commentId: Overload:Polideportivo.Modelo.modeloAnotacion.fkIdJugador
+  name: fkIdJugador
+  nameWithType: modeloAnotacion.fkIdJugador
+  fullName: Polideportivo.Modelo.modeloAnotacion.fkIdJugador
+- uid: Polideportivo.Modelo.modeloAnotacion.fkIdPartido*
+  commentId: Overload:Polideportivo.Modelo.modeloAnotacion.fkIdPartido
+  name: fkIdPartido
+  nameWithType: modeloAnotacion.fkIdPartido
+  fullName: Polideportivo.Modelo.modeloAnotacion.fkIdPartido
+- uid: Polideportivo.Modelo.modeloAnotacion.#ctor*
+  commentId: Overload:Polideportivo.Modelo.modeloAnotacion.#ctor
+  name: modeloAnotacion
+  nameWithType: modeloAnotacion.modeloAnotacion
+  fullName: Polideportivo.Modelo.modeloAnotacion.modeloAnotacion

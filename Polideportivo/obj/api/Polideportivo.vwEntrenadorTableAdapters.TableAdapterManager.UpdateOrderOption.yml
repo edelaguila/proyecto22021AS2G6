@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption
+  commentId: T:Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption
+  id: TableAdapterManager.UpdateOrderOption
+  parent: Polideportivo.vwEntrenadorTableAdapters
+  children:
+  - Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  - Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  langs:
+  - csharp
+  - vb
+  name: TableAdapterManager.UpdateOrderOption
+  nameWithType: TableAdapterManager.UpdateOrderOption
+  fullName: Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption
+  type: Enum
+  source:
+    remote:
+      path: Polideportivo/vwEntrenador1.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: UpdateOrderOption
+    path: vwEntrenador1.Designer.cs
+    startLine: 1186
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.vwEntrenadorTableAdapters
+  summary: "\nUpdate Order Option\n"
+  example: []
+  syntax:
+    content: public enum UpdateOrderOption
+    content.vb: Public Enum UpdateOrderOption
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  commentId: F:Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  id: InsertUpdateDelete
+  parent: Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption
+  langs:
+  - csharp
+  - vb
+  name: InsertUpdateDelete
+  nameWithType: TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  fullName: Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+  type: Field
+  source:
+    remote:
+      path: Polideportivo/vwEntrenador1.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: InsertUpdateDelete
+    path: vwEntrenador1.Designer.cs
+    startLine: 1189
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.vwEntrenadorTableAdapters
+  syntax:
+    content: InsertUpdateDelete = 0
+    return:
+      type: Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  commentId: F:Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  id: UpdateInsertDelete
+  parent: Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption
+  langs:
+  - csharp
+  - vb
+  name: UpdateInsertDelete
+  nameWithType: TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  fullName: Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption.UpdateInsertDelete
+  type: Field
+  source:
+    remote:
+      path: Polideportivo/vwEntrenador1.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: UpdateInsertDelete
+    path: vwEntrenador1.Designer.cs
+    startLine: 1191
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.vwEntrenadorTableAdapters
+  syntax:
+    content: UpdateInsertDelete = 1
+    return:
+      type: Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Polideportivo.vwEntrenadorTableAdapters
+  commentId: N:Polideportivo.vwEntrenadorTableAdapters
+  name: Polideportivo.vwEntrenadorTableAdapters
+  nameWithType: Polideportivo.vwEntrenadorTableAdapters
+  fullName: Polideportivo.vwEntrenadorTableAdapters
+- uid: Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption
+  commentId: T:Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption
+  parent: Polideportivo.vwEntrenadorTableAdapters
+  name: TableAdapterManager.UpdateOrderOption
+  nameWithType: TableAdapterManager.UpdateOrderOption
+  fullName: Polideportivo.vwEntrenadorTableAdapters.TableAdapterManager.UpdateOrderOption

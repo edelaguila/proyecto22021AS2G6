@@ -1,12 +1,5 @@
 ﻿using Polideportivo.Vista;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Polideportivo
@@ -23,12 +16,12 @@ namespace Polideportivo
             panelLateralInterno.AutoScroll = true;
         }
 
-
         protected override void OnResizeBegin(EventArgs e)
         {
             SuspendLayout();
             base.OnResizeBegin(e);
         }
+
         protected override void OnResizeEnd(EventArgs e)
         {
             ResumeLayout();
@@ -74,14 +67,10 @@ namespace Polideportivo
 
                 separadorLogo.Width = 220;
             }
-                  
         }
-
 
         private Form formActivo = null;
         private string formPrincipalAnterior = "";
-
-       
 
         private void btnDeportes_Click(object sender, EventArgs e)
         {
@@ -107,6 +96,7 @@ namespace Polideportivo
         {
             gestorDeFormActivo(new formRol(), "ROLES");
         }
+
         private void btnMenuEntrenador_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formEntrenador(), "ENTRENADOR");
@@ -131,10 +121,8 @@ namespace Polideportivo
                 formPrincipalAnterior = formHijoActual;
                 cerrarFormActivo();
                 abrirFormHijo(formHijo, panelPrincipal);
-                
             }
         }
-
 
         private void gestorFormMenuActivo(Form formHijo, string formHijoActual)
         {
@@ -150,11 +138,9 @@ namespace Polideportivo
                 formPrincipalAnterior = formHijoActual;
                 cerrarFormActivo();
                 abrirFormHijo(formHijo, panelPrincipal);
-
             }
         }
 
-        
         private void abrirFormHijo(Form formHijo, Panel panel)
         {
             formActivo = formHijo;
@@ -167,39 +153,27 @@ namespace Polideportivo
             formHijo.Show();
         }
 
-
-
-      
-
-
         private void cerrarFormActivo()
         {
-            if(formActivo != null)
+            if (formActivo != null)
             {
                 formActivo.Close();
                 formActivo = null;
             }
-            
         }
 
         private void MenuSuperiorPanel_Paint(object sender, PaintEventArgs e)
         {
-
         }
-
 
         private void panelPrincipal_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
         }
 
        
     }
-
-
 }

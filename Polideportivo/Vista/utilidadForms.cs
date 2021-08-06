@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Polideportivo.Vista
 {
-    class utilidadForms 
+    internal class utilidadForms
     {
         public static void abrirForm(Form formEvento)
         {
-
             //formEvento.TopLevel = false;
             formEvento.FormBorderStyle = FormBorderStyle.None;
             //formEvento.Dock = DockStyle.Fill;
@@ -19,6 +13,7 @@ namespace Polideportivo.Vista
             formEvento.BringToFront();
             formEvento.Show();
         }
+
         public static void cerrarForm(Form formEvento)
         {
             formEvento.Close();
@@ -36,8 +31,6 @@ namespace Polideportivo.Vista
             {
                 return 0;
             }
-            
         }
-
     }
 }

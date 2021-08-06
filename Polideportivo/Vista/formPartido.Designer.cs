@@ -306,7 +306,6 @@ namespace Polideportivo.Vista
             this.btnModificarJugador.TabIndex = 28;
             this.btnModificarJugador.Text = "    M O D I F I C A R";
             this.btnModificarJugador.UseVisualStyleBackColor = false;
-            this.btnModificarJugador.Click += new System.EventHandler(this.btnModificarJugador_Click);
             // 
             // btnAgregarJugador
             // 
@@ -327,7 +326,6 @@ namespace Polideportivo.Vista
             this.btnAgregarJugador.TabIndex = 27;
             this.btnAgregarJugador.Text = "     A G R E G A R";
             this.btnAgregarJugador.UseVisualStyleBackColor = false;
-            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
             // 
             // vwPartido
             // 

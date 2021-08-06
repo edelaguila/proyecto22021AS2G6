@@ -46,7 +46,7 @@ namespace Polideportivo.AccesoDatos
             {
                 var sqlinsertar =
                 "UPDATE partido SET equipo1 = ?equipo1?, equipo2 = ?equipo2?, " +
-                "campo = ?campo?, fecha = ?fecha?, estado = ?estado? " +
+                "campo = ?campo?, fecha = ?fecha? " +
                 "fase = ?fase?, fkIdCampeonato = ?fkIdCampeonato?, fkIdEmpleado = ?fkIdEmpleado? " +
                 "fkIdResultado = ?fkIdResultado?, " + "fkIdEstado = ?fkIdEstado?, " +
                 "WHERE pkId = ?pkId?;";
@@ -56,7 +56,6 @@ namespace Polideportivo.AccesoDatos
                     equipo2 = modelo.equipo2,
                     campo = modelo.campo,
                     fecha = modelo.fecha,
-                    estado = modelo.estado,
                     fase = modelo.fase,
                     fkIdCampeonato = modelo.fkIdCampeonato,
                     fkIdEmpleado = modelo.fkIdEmpleado,

@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.Datos.vwPartidoTableAdapters
+  commentId: N:Polideportivo.Datos.vwPartidoTableAdapters
+  id: Polideportivo.Datos.vwPartidoTableAdapters
+  children:
+  - Polideportivo.Datos.vwPartidoTableAdapters.TableAdapterManager
+  - Polideportivo.Datos.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+  - Polideportivo.Datos.vwPartidoTableAdapters.vwpartidoTableAdapter
+  langs:
+  - csharp
+  - vb
+  name: Polideportivo.Datos.vwPartidoTableAdapters
+  nameWithType: Polideportivo.Datos.vwPartidoTableAdapters
+  fullName: Polideportivo.Datos.vwPartidoTableAdapters
+  type: Namespace
+  assemblies:
+  - Polideportivo
+references:
+- uid: Polideportivo.Datos.vwPartidoTableAdapters.vwpartidoTableAdapter
+  commentId: T:Polideportivo.Datos.vwPartidoTableAdapters.vwpartidoTableAdapter
+  name: vwpartidoTableAdapter
+  nameWithType: vwpartidoTableAdapter
+  fullName: Polideportivo.Datos.vwPartidoTableAdapters.vwpartidoTableAdapter
+- uid: Polideportivo.Datos.vwPartidoTableAdapters.TableAdapterManager
+  commentId: T:Polideportivo.Datos.vwPartidoTableAdapters.TableAdapterManager
+  name: TableAdapterManager
+  nameWithType: TableAdapterManager
+  fullName: Polideportivo.Datos.vwPartidoTableAdapters.TableAdapterManager
+- uid: Polideportivo.Datos.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+  commentId: T:Polideportivo.Datos.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+  parent: Polideportivo.Datos.vwPartidoTableAdapters
+  name: TableAdapterManager.UpdateOrderOption
+  nameWithType: TableAdapterManager.UpdateOrderOption
+  fullName: Polideportivo.Datos.vwPartidoTableAdapters.TableAdapterManager.UpdateOrderOption
+- uid: Polideportivo.Datos.vwPartidoTableAdapters
+  commentId: N:Polideportivo.Datos.vwPartidoTableAdapters
+  name: Polideportivo.Datos.vwPartidoTableAdapters
+  nameWithType: Polideportivo.Datos.vwPartidoTableAdapters
+  fullName: Polideportivo.Datos.vwPartidoTableAdapters

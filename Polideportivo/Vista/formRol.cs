@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Polideportivo.Controlador;
+using Polideportivo.Modelo;
+using System;
 using System.Windows.Forms;
+using static Polideportivo.Vista.utilidadForms;
 
 namespace Polideportivo.Vista
 {
     public partial class formRol : Form
     {
-        int id;
-        string nombre;
-        int fkIdDeporte;
+        private int id;
+        private string nombre;
+        private int fkIdDeporte;
 
         public formRol()
         {
@@ -21,12 +24,6 @@ namespace Polideportivo.Vista
             cboDeporte.ValueMember = "pkId";
             cboDeporte.SelectedItem = cboDeporte.Items[0];
         }
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    modeloRol modelo = new modeloRol();
-        //    controladorRol db = new controladorRol();
-        //}
 
         public void actualizarTablaRol()
         {

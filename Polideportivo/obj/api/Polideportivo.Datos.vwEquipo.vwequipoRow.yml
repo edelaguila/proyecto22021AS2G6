@@ -1,0 +1,2484 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.Datos.vwEquipo.vwequipoRow
+  commentId: T:Polideportivo.Datos.vwEquipo.vwequipoRow
+  id: vwEquipo.vwequipoRow
+  parent: Polideportivo.Datos
+  children:
+  - Polideportivo.Datos.vwEquipo.vwequipoRow.deporte
+  - Polideportivo.Datos.vwEquipo.vwequipoRow.nombre
+  - Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdDeporte
+  - Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdEquipo
+  langs:
+  - csharp
+  - vb
+  name: vwEquipo.vwequipoRow
+  nameWithType: vwEquipo.vwequipoRow
+  fullName: Polideportivo.Datos.vwEquipo.vwequipoRow
+  type: Class
+  source:
+    remote:
+      path: Polideportivo/Datos/vwEquipo.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: vwequipoRow
+    path: Datos/vwEquipo.Designer.cs
+    startLine: 589
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Datos
+  summary: "\nRepresents strongly named DataRow class.\n"
+  example: []
+  syntax:
+    content: 'public class vwequipoRow : DataRow'
+    content.vb: >-
+      Public Class vwequipoRow
+          Inherits DataRow
+  inheritance:
+  - System.Object
+  - System.Data.DataRow
+  inheritedMembers:
+  - System.Data.DataRow.AcceptChanges
+  - System.Data.DataRow.BeginEdit
+  - System.Data.DataRow.CancelEdit
+  - System.Data.DataRow.Delete
+  - System.Data.DataRow.EndEdit
+  - System.Data.DataRow.SetColumnError(System.Int32,System.String)
+  - System.Data.DataRow.SetColumnError(System.String,System.String)
+  - System.Data.DataRow.SetColumnError(System.Data.DataColumn,System.String)
+  - System.Data.DataRow.GetColumnError(System.Int32)
+  - System.Data.DataRow.GetColumnError(System.String)
+  - System.Data.DataRow.GetColumnError(System.Data.DataColumn)
+  - System.Data.DataRow.ClearErrors
+  - System.Data.DataRow.GetColumnsInError
+  - System.Data.DataRow.GetChildRows(System.String)
+  - System.Data.DataRow.GetChildRows(System.String,System.Data.DataRowVersion)
+  - System.Data.DataRow.GetChildRows(System.Data.DataRelation)
+  - System.Data.DataRow.GetChildRows(System.Data.DataRelation,System.Data.DataRowVersion)
+  - System.Data.DataRow.GetParentRow(System.String)
+  - System.Data.DataRow.GetParentRow(System.String,System.Data.DataRowVersion)
+  - System.Data.DataRow.GetParentRow(System.Data.DataRelation)
+  - System.Data.DataRow.GetParentRow(System.Data.DataRelation,System.Data.DataRowVersion)
+  - System.Data.DataRow.GetParentRows(System.String)
+  - System.Data.DataRow.GetParentRows(System.String,System.Data.DataRowVersion)
+  - System.Data.DataRow.GetParentRows(System.Data.DataRelation)
+  - System.Data.DataRow.GetParentRows(System.Data.DataRelation,System.Data.DataRowVersion)
+  - System.Data.DataRow.HasVersion(System.Data.DataRowVersion)
+  - System.Data.DataRow.IsNull(System.Int32)
+  - System.Data.DataRow.IsNull(System.String)
+  - System.Data.DataRow.IsNull(System.Data.DataColumn)
+  - System.Data.DataRow.IsNull(System.Data.DataColumn,System.Data.DataRowVersion)
+  - System.Data.DataRow.RejectChanges
+  - System.Data.DataRow.SetNull(System.Data.DataColumn)
+  - System.Data.DataRow.SetParentRow(System.Data.DataRow)
+  - System.Data.DataRow.SetParentRow(System.Data.DataRow,System.Data.DataRelation)
+  - System.Data.DataRow.SetAdded
+  - System.Data.DataRow.SetModified
+  - System.Data.DataRow.RowError
+  - System.Data.DataRow.RowState
+  - System.Data.DataRow.Table
+  - System.Data.DataRow.Item(System.Int32)
+  - System.Data.DataRow.Item(System.String)
+  - System.Data.DataRow.Item(System.Data.DataColumn)
+  - System.Data.DataRow.Item(System.Int32,System.Data.DataRowVersion)
+  - System.Data.DataRow.Item(System.String,System.Data.DataRowVersion)
+  - System.Data.DataRow.Item(System.Data.DataColumn,System.Data.DataRowVersion)
+  - System.Data.DataRow.ItemArray
+  - System.Data.DataRow.HasErrors
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdEquipo
+  commentId: P:Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdEquipo
+  id: pkIdEquipo
+  parent: Polideportivo.Datos.vwEquipo.vwequipoRow
+  langs:
+  - csharp
+  - vb
+  name: pkIdEquipo
+  nameWithType: vwEquipo.vwequipoRow.pkIdEquipo
+  fullName: Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdEquipo
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Datos/vwEquipo.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: pkIdEquipo
+    path: Datos/vwEquipo.Designer.cs
+    startLine: 600
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Datos
+  syntax:
+    content: public int pkIdEquipo { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property pkIdEquipo As Integer
+  overload: Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdEquipo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Datos.vwEquipo.vwequipoRow.nombre
+  commentId: P:Polideportivo.Datos.vwEquipo.vwequipoRow.nombre
+  id: nombre
+  parent: Polideportivo.Datos.vwEquipo.vwequipoRow
+  langs:
+  - csharp
+  - vb
+  name: nombre
+  nameWithType: vwEquipo.vwequipoRow.nombre
+  fullName: Polideportivo.Datos.vwEquipo.vwequipoRow.nombre
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Datos/vwEquipo.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: nombre
+    path: Datos/vwEquipo.Designer.cs
+    startLine: 611
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Datos
+  syntax:
+    content: public string nombre { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property nombre As String
+  overload: Polideportivo.Datos.vwEquipo.vwequipoRow.nombre*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdDeporte
+  commentId: P:Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdDeporte
+  id: pkIdDeporte
+  parent: Polideportivo.Datos.vwEquipo.vwequipoRow
+  langs:
+  - csharp
+  - vb
+  name: pkIdDeporte
+  nameWithType: vwEquipo.vwequipoRow.pkIdDeporte
+  fullName: Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdDeporte
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Datos/vwEquipo.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: pkIdDeporte
+    path: Datos/vwEquipo.Designer.cs
+    startLine: 622
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Datos
+  syntax:
+    content: public int pkIdDeporte { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property pkIdDeporte As Integer
+  overload: Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdDeporte*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Polideportivo.Datos.vwEquipo.vwequipoRow.deporte
+  commentId: P:Polideportivo.Datos.vwEquipo.vwequipoRow.deporte
+  id: deporte
+  parent: Polideportivo.Datos.vwEquipo.vwequipoRow
+  langs:
+  - csharp
+  - vb
+  name: deporte
+  nameWithType: vwEquipo.vwequipoRow.deporte
+  fullName: Polideportivo.Datos.vwEquipo.vwequipoRow.deporte
+  type: Property
+  source:
+    remote:
+      path: Polideportivo/Datos/vwEquipo.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: deporte
+    path: Datos/vwEquipo.Designer.cs
+    startLine: 633
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Datos
+  syntax:
+    content: public string deporte { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property deporte As String
+  overload: Polideportivo.Datos.vwEquipo.vwequipoRow.deporte*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Polideportivo.Datos
+  commentId: N:Polideportivo.Datos
+  name: Polideportivo.Datos
+  nameWithType: Polideportivo.Datos
+  fullName: Polideportivo.Datos
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Data.DataRow
+  commentId: T:System.Data.DataRow
+  parent: System.Data
+  isExternal: true
+  name: DataRow
+  nameWithType: DataRow
+  fullName: System.Data.DataRow
+- uid: System.Data.DataRow.AcceptChanges
+  commentId: M:System.Data.DataRow.AcceptChanges
+  parent: System.Data.DataRow
+  isExternal: true
+  name: AcceptChanges()
+  nameWithType: DataRow.AcceptChanges()
+  fullName: System.Data.DataRow.AcceptChanges()
+  spec.csharp:
+  - uid: System.Data.DataRow.AcceptChanges
+    name: AcceptChanges
+    nameWithType: DataRow.AcceptChanges
+    fullName: System.Data.DataRow.AcceptChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.AcceptChanges
+    name: AcceptChanges
+    nameWithType: DataRow.AcceptChanges
+    fullName: System.Data.DataRow.AcceptChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.BeginEdit
+  commentId: M:System.Data.DataRow.BeginEdit
+  parent: System.Data.DataRow
+  isExternal: true
+  name: BeginEdit()
+  nameWithType: DataRow.BeginEdit()
+  fullName: System.Data.DataRow.BeginEdit()
+  spec.csharp:
+  - uid: System.Data.DataRow.BeginEdit
+    name: BeginEdit
+    nameWithType: DataRow.BeginEdit
+    fullName: System.Data.DataRow.BeginEdit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.BeginEdit
+    name: BeginEdit
+    nameWithType: DataRow.BeginEdit
+    fullName: System.Data.DataRow.BeginEdit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.CancelEdit
+  commentId: M:System.Data.DataRow.CancelEdit
+  parent: System.Data.DataRow
+  isExternal: true
+  name: CancelEdit()
+  nameWithType: DataRow.CancelEdit()
+  fullName: System.Data.DataRow.CancelEdit()
+  spec.csharp:
+  - uid: System.Data.DataRow.CancelEdit
+    name: CancelEdit
+    nameWithType: DataRow.CancelEdit
+    fullName: System.Data.DataRow.CancelEdit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.CancelEdit
+    name: CancelEdit
+    nameWithType: DataRow.CancelEdit
+    fullName: System.Data.DataRow.CancelEdit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.Delete
+  commentId: M:System.Data.DataRow.Delete
+  parent: System.Data.DataRow
+  isExternal: true
+  name: Delete()
+  nameWithType: DataRow.Delete()
+  fullName: System.Data.DataRow.Delete()
+  spec.csharp:
+  - uid: System.Data.DataRow.Delete
+    name: Delete
+    nameWithType: DataRow.Delete
+    fullName: System.Data.DataRow.Delete
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.Delete
+    name: Delete
+    nameWithType: DataRow.Delete
+    fullName: System.Data.DataRow.Delete
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.EndEdit
+  commentId: M:System.Data.DataRow.EndEdit
+  parent: System.Data.DataRow
+  isExternal: true
+  name: EndEdit()
+  nameWithType: DataRow.EndEdit()
+  fullName: System.Data.DataRow.EndEdit()
+  spec.csharp:
+  - uid: System.Data.DataRow.EndEdit
+    name: EndEdit
+    nameWithType: DataRow.EndEdit
+    fullName: System.Data.DataRow.EndEdit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.EndEdit
+    name: EndEdit
+    nameWithType: DataRow.EndEdit
+    fullName: System.Data.DataRow.EndEdit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.SetColumnError(System.Int32,System.String)
+  commentId: M:System.Data.DataRow.SetColumnError(System.Int32,System.String)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: SetColumnError(Int32, String)
+  nameWithType: DataRow.SetColumnError(Int32, String)
+  fullName: System.Data.DataRow.SetColumnError(System.Int32, System.String)
+  spec.csharp:
+  - uid: System.Data.DataRow.SetColumnError(System.Int32,System.String)
+    name: SetColumnError
+    nameWithType: DataRow.SetColumnError
+    fullName: System.Data.DataRow.SetColumnError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.SetColumnError(System.Int32,System.String)
+    name: SetColumnError
+    nameWithType: DataRow.SetColumnError
+    fullName: System.Data.DataRow.SetColumnError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.SetColumnError(System.String,System.String)
+  commentId: M:System.Data.DataRow.SetColumnError(System.String,System.String)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: SetColumnError(String, String)
+  nameWithType: DataRow.SetColumnError(String, String)
+  fullName: System.Data.DataRow.SetColumnError(System.String, System.String)
+  spec.csharp:
+  - uid: System.Data.DataRow.SetColumnError(System.String,System.String)
+    name: SetColumnError
+    nameWithType: DataRow.SetColumnError
+    fullName: System.Data.DataRow.SetColumnError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.SetColumnError(System.String,System.String)
+    name: SetColumnError
+    nameWithType: DataRow.SetColumnError
+    fullName: System.Data.DataRow.SetColumnError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.SetColumnError(System.Data.DataColumn,System.String)
+  commentId: M:System.Data.DataRow.SetColumnError(System.Data.DataColumn,System.String)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: SetColumnError(DataColumn, String)
+  nameWithType: DataRow.SetColumnError(DataColumn, String)
+  fullName: System.Data.DataRow.SetColumnError(System.Data.DataColumn, System.String)
+  spec.csharp:
+  - uid: System.Data.DataRow.SetColumnError(System.Data.DataColumn,System.String)
+    name: SetColumnError
+    nameWithType: DataRow.SetColumnError
+    fullName: System.Data.DataRow.SetColumnError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.SetColumnError(System.Data.DataColumn,System.String)
+    name: SetColumnError
+    nameWithType: DataRow.SetColumnError
+    fullName: System.Data.DataRow.SetColumnError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetColumnError(System.Int32)
+  commentId: M:System.Data.DataRow.GetColumnError(System.Int32)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetColumnError(Int32)
+  nameWithType: DataRow.GetColumnError(Int32)
+  fullName: System.Data.DataRow.GetColumnError(System.Int32)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetColumnError(System.Int32)
+    name: GetColumnError
+    nameWithType: DataRow.GetColumnError
+    fullName: System.Data.DataRow.GetColumnError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetColumnError(System.Int32)
+    name: GetColumnError
+    nameWithType: DataRow.GetColumnError
+    fullName: System.Data.DataRow.GetColumnError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetColumnError(System.String)
+  commentId: M:System.Data.DataRow.GetColumnError(System.String)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetColumnError(String)
+  nameWithType: DataRow.GetColumnError(String)
+  fullName: System.Data.DataRow.GetColumnError(System.String)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetColumnError(System.String)
+    name: GetColumnError
+    nameWithType: DataRow.GetColumnError
+    fullName: System.Data.DataRow.GetColumnError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetColumnError(System.String)
+    name: GetColumnError
+    nameWithType: DataRow.GetColumnError
+    fullName: System.Data.DataRow.GetColumnError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetColumnError(System.Data.DataColumn)
+  commentId: M:System.Data.DataRow.GetColumnError(System.Data.DataColumn)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetColumnError(DataColumn)
+  nameWithType: DataRow.GetColumnError(DataColumn)
+  fullName: System.Data.DataRow.GetColumnError(System.Data.DataColumn)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetColumnError(System.Data.DataColumn)
+    name: GetColumnError
+    nameWithType: DataRow.GetColumnError
+    fullName: System.Data.DataRow.GetColumnError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetColumnError(System.Data.DataColumn)
+    name: GetColumnError
+    nameWithType: DataRow.GetColumnError
+    fullName: System.Data.DataRow.GetColumnError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.ClearErrors
+  commentId: M:System.Data.DataRow.ClearErrors
+  parent: System.Data.DataRow
+  isExternal: true
+  name: ClearErrors()
+  nameWithType: DataRow.ClearErrors()
+  fullName: System.Data.DataRow.ClearErrors()
+  spec.csharp:
+  - uid: System.Data.DataRow.ClearErrors
+    name: ClearErrors
+    nameWithType: DataRow.ClearErrors
+    fullName: System.Data.DataRow.ClearErrors
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.ClearErrors
+    name: ClearErrors
+    nameWithType: DataRow.ClearErrors
+    fullName: System.Data.DataRow.ClearErrors
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetColumnsInError
+  commentId: M:System.Data.DataRow.GetColumnsInError
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetColumnsInError()
+  nameWithType: DataRow.GetColumnsInError()
+  fullName: System.Data.DataRow.GetColumnsInError()
+  spec.csharp:
+  - uid: System.Data.DataRow.GetColumnsInError
+    name: GetColumnsInError
+    nameWithType: DataRow.GetColumnsInError
+    fullName: System.Data.DataRow.GetColumnsInError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetColumnsInError
+    name: GetColumnsInError
+    nameWithType: DataRow.GetColumnsInError
+    fullName: System.Data.DataRow.GetColumnsInError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetChildRows(System.String)
+  commentId: M:System.Data.DataRow.GetChildRows(System.String)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetChildRows(String)
+  nameWithType: DataRow.GetChildRows(String)
+  fullName: System.Data.DataRow.GetChildRows(System.String)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetChildRows(System.String)
+    name: GetChildRows
+    nameWithType: DataRow.GetChildRows
+    fullName: System.Data.DataRow.GetChildRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetChildRows(System.String)
+    name: GetChildRows
+    nameWithType: DataRow.GetChildRows
+    fullName: System.Data.DataRow.GetChildRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetChildRows(System.String,System.Data.DataRowVersion)
+  commentId: M:System.Data.DataRow.GetChildRows(System.String,System.Data.DataRowVersion)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetChildRows(String, DataRowVersion)
+  nameWithType: DataRow.GetChildRows(String, DataRowVersion)
+  fullName: System.Data.DataRow.GetChildRows(System.String, System.Data.DataRowVersion)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetChildRows(System.String,System.Data.DataRowVersion)
+    name: GetChildRows
+    nameWithType: DataRow.GetChildRows
+    fullName: System.Data.DataRow.GetChildRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetChildRows(System.String,System.Data.DataRowVersion)
+    name: GetChildRows
+    nameWithType: DataRow.GetChildRows
+    fullName: System.Data.DataRow.GetChildRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetChildRows(System.Data.DataRelation)
+  commentId: M:System.Data.DataRow.GetChildRows(System.Data.DataRelation)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetChildRows(DataRelation)
+  nameWithType: DataRow.GetChildRows(DataRelation)
+  fullName: System.Data.DataRow.GetChildRows(System.Data.DataRelation)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetChildRows(System.Data.DataRelation)
+    name: GetChildRows
+    nameWithType: DataRow.GetChildRows
+    fullName: System.Data.DataRow.GetChildRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetChildRows(System.Data.DataRelation)
+    name: GetChildRows
+    nameWithType: DataRow.GetChildRows
+    fullName: System.Data.DataRow.GetChildRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetChildRows(System.Data.DataRelation,System.Data.DataRowVersion)
+  commentId: M:System.Data.DataRow.GetChildRows(System.Data.DataRelation,System.Data.DataRowVersion)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetChildRows(DataRelation, DataRowVersion)
+  nameWithType: DataRow.GetChildRows(DataRelation, DataRowVersion)
+  fullName: System.Data.DataRow.GetChildRows(System.Data.DataRelation, System.Data.DataRowVersion)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetChildRows(System.Data.DataRelation,System.Data.DataRowVersion)
+    name: GetChildRows
+    nameWithType: DataRow.GetChildRows
+    fullName: System.Data.DataRow.GetChildRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetChildRows(System.Data.DataRelation,System.Data.DataRowVersion)
+    name: GetChildRows
+    nameWithType: DataRow.GetChildRows
+    fullName: System.Data.DataRow.GetChildRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetParentRow(System.String)
+  commentId: M:System.Data.DataRow.GetParentRow(System.String)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetParentRow(String)
+  nameWithType: DataRow.GetParentRow(String)
+  fullName: System.Data.DataRow.GetParentRow(System.String)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetParentRow(System.String)
+    name: GetParentRow
+    nameWithType: DataRow.GetParentRow
+    fullName: System.Data.DataRow.GetParentRow
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetParentRow(System.String)
+    name: GetParentRow
+    nameWithType: DataRow.GetParentRow
+    fullName: System.Data.DataRow.GetParentRow
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetParentRow(System.String,System.Data.DataRowVersion)
+  commentId: M:System.Data.DataRow.GetParentRow(System.String,System.Data.DataRowVersion)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetParentRow(String, DataRowVersion)
+  nameWithType: DataRow.GetParentRow(String, DataRowVersion)
+  fullName: System.Data.DataRow.GetParentRow(System.String, System.Data.DataRowVersion)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetParentRow(System.String,System.Data.DataRowVersion)
+    name: GetParentRow
+    nameWithType: DataRow.GetParentRow
+    fullName: System.Data.DataRow.GetParentRow
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetParentRow(System.String,System.Data.DataRowVersion)
+    name: GetParentRow
+    nameWithType: DataRow.GetParentRow
+    fullName: System.Data.DataRow.GetParentRow
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetParentRow(System.Data.DataRelation)
+  commentId: M:System.Data.DataRow.GetParentRow(System.Data.DataRelation)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetParentRow(DataRelation)
+  nameWithType: DataRow.GetParentRow(DataRelation)
+  fullName: System.Data.DataRow.GetParentRow(System.Data.DataRelation)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetParentRow(System.Data.DataRelation)
+    name: GetParentRow
+    nameWithType: DataRow.GetParentRow
+    fullName: System.Data.DataRow.GetParentRow
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetParentRow(System.Data.DataRelation)
+    name: GetParentRow
+    nameWithType: DataRow.GetParentRow
+    fullName: System.Data.DataRow.GetParentRow
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetParentRow(System.Data.DataRelation,System.Data.DataRowVersion)
+  commentId: M:System.Data.DataRow.GetParentRow(System.Data.DataRelation,System.Data.DataRowVersion)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetParentRow(DataRelation, DataRowVersion)
+  nameWithType: DataRow.GetParentRow(DataRelation, DataRowVersion)
+  fullName: System.Data.DataRow.GetParentRow(System.Data.DataRelation, System.Data.DataRowVersion)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetParentRow(System.Data.DataRelation,System.Data.DataRowVersion)
+    name: GetParentRow
+    nameWithType: DataRow.GetParentRow
+    fullName: System.Data.DataRow.GetParentRow
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetParentRow(System.Data.DataRelation,System.Data.DataRowVersion)
+    name: GetParentRow
+    nameWithType: DataRow.GetParentRow
+    fullName: System.Data.DataRow.GetParentRow
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetParentRows(System.String)
+  commentId: M:System.Data.DataRow.GetParentRows(System.String)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetParentRows(String)
+  nameWithType: DataRow.GetParentRows(String)
+  fullName: System.Data.DataRow.GetParentRows(System.String)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetParentRows(System.String)
+    name: GetParentRows
+    nameWithType: DataRow.GetParentRows
+    fullName: System.Data.DataRow.GetParentRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetParentRows(System.String)
+    name: GetParentRows
+    nameWithType: DataRow.GetParentRows
+    fullName: System.Data.DataRow.GetParentRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetParentRows(System.String,System.Data.DataRowVersion)
+  commentId: M:System.Data.DataRow.GetParentRows(System.String,System.Data.DataRowVersion)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetParentRows(String, DataRowVersion)
+  nameWithType: DataRow.GetParentRows(String, DataRowVersion)
+  fullName: System.Data.DataRow.GetParentRows(System.String, System.Data.DataRowVersion)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetParentRows(System.String,System.Data.DataRowVersion)
+    name: GetParentRows
+    nameWithType: DataRow.GetParentRows
+    fullName: System.Data.DataRow.GetParentRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetParentRows(System.String,System.Data.DataRowVersion)
+    name: GetParentRows
+    nameWithType: DataRow.GetParentRows
+    fullName: System.Data.DataRow.GetParentRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetParentRows(System.Data.DataRelation)
+  commentId: M:System.Data.DataRow.GetParentRows(System.Data.DataRelation)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetParentRows(DataRelation)
+  nameWithType: DataRow.GetParentRows(DataRelation)
+  fullName: System.Data.DataRow.GetParentRows(System.Data.DataRelation)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetParentRows(System.Data.DataRelation)
+    name: GetParentRows
+    nameWithType: DataRow.GetParentRows
+    fullName: System.Data.DataRow.GetParentRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetParentRows(System.Data.DataRelation)
+    name: GetParentRows
+    nameWithType: DataRow.GetParentRows
+    fullName: System.Data.DataRow.GetParentRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.GetParentRows(System.Data.DataRelation,System.Data.DataRowVersion)
+  commentId: M:System.Data.DataRow.GetParentRows(System.Data.DataRelation,System.Data.DataRowVersion)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: GetParentRows(DataRelation, DataRowVersion)
+  nameWithType: DataRow.GetParentRows(DataRelation, DataRowVersion)
+  fullName: System.Data.DataRow.GetParentRows(System.Data.DataRelation, System.Data.DataRowVersion)
+  spec.csharp:
+  - uid: System.Data.DataRow.GetParentRows(System.Data.DataRelation,System.Data.DataRowVersion)
+    name: GetParentRows
+    nameWithType: DataRow.GetParentRows
+    fullName: System.Data.DataRow.GetParentRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.GetParentRows(System.Data.DataRelation,System.Data.DataRowVersion)
+    name: GetParentRows
+    nameWithType: DataRow.GetParentRows
+    fullName: System.Data.DataRow.GetParentRows
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.HasVersion(System.Data.DataRowVersion)
+  commentId: M:System.Data.DataRow.HasVersion(System.Data.DataRowVersion)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: HasVersion(DataRowVersion)
+  nameWithType: DataRow.HasVersion(DataRowVersion)
+  fullName: System.Data.DataRow.HasVersion(System.Data.DataRowVersion)
+  spec.csharp:
+  - uid: System.Data.DataRow.HasVersion(System.Data.DataRowVersion)
+    name: HasVersion
+    nameWithType: DataRow.HasVersion
+    fullName: System.Data.DataRow.HasVersion
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.HasVersion(System.Data.DataRowVersion)
+    name: HasVersion
+    nameWithType: DataRow.HasVersion
+    fullName: System.Data.DataRow.HasVersion
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.IsNull(System.Int32)
+  commentId: M:System.Data.DataRow.IsNull(System.Int32)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: IsNull(Int32)
+  nameWithType: DataRow.IsNull(Int32)
+  fullName: System.Data.DataRow.IsNull(System.Int32)
+  spec.csharp:
+  - uid: System.Data.DataRow.IsNull(System.Int32)
+    name: IsNull
+    nameWithType: DataRow.IsNull
+    fullName: System.Data.DataRow.IsNull
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.IsNull(System.Int32)
+    name: IsNull
+    nameWithType: DataRow.IsNull
+    fullName: System.Data.DataRow.IsNull
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.IsNull(System.String)
+  commentId: M:System.Data.DataRow.IsNull(System.String)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: IsNull(String)
+  nameWithType: DataRow.IsNull(String)
+  fullName: System.Data.DataRow.IsNull(System.String)
+  spec.csharp:
+  - uid: System.Data.DataRow.IsNull(System.String)
+    name: IsNull
+    nameWithType: DataRow.IsNull
+    fullName: System.Data.DataRow.IsNull
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.IsNull(System.String)
+    name: IsNull
+    nameWithType: DataRow.IsNull
+    fullName: System.Data.DataRow.IsNull
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.IsNull(System.Data.DataColumn)
+  commentId: M:System.Data.DataRow.IsNull(System.Data.DataColumn)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: IsNull(DataColumn)
+  nameWithType: DataRow.IsNull(DataColumn)
+  fullName: System.Data.DataRow.IsNull(System.Data.DataColumn)
+  spec.csharp:
+  - uid: System.Data.DataRow.IsNull(System.Data.DataColumn)
+    name: IsNull
+    nameWithType: DataRow.IsNull
+    fullName: System.Data.DataRow.IsNull
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.IsNull(System.Data.DataColumn)
+    name: IsNull
+    nameWithType: DataRow.IsNull
+    fullName: System.Data.DataRow.IsNull
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.IsNull(System.Data.DataColumn,System.Data.DataRowVersion)
+  commentId: M:System.Data.DataRow.IsNull(System.Data.DataColumn,System.Data.DataRowVersion)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: IsNull(DataColumn, DataRowVersion)
+  nameWithType: DataRow.IsNull(DataColumn, DataRowVersion)
+  fullName: System.Data.DataRow.IsNull(System.Data.DataColumn, System.Data.DataRowVersion)
+  spec.csharp:
+  - uid: System.Data.DataRow.IsNull(System.Data.DataColumn,System.Data.DataRowVersion)
+    name: IsNull
+    nameWithType: DataRow.IsNull
+    fullName: System.Data.DataRow.IsNull
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.IsNull(System.Data.DataColumn,System.Data.DataRowVersion)
+    name: IsNull
+    nameWithType: DataRow.IsNull
+    fullName: System.Data.DataRow.IsNull
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.RejectChanges
+  commentId: M:System.Data.DataRow.RejectChanges
+  parent: System.Data.DataRow
+  isExternal: true
+  name: RejectChanges()
+  nameWithType: DataRow.RejectChanges()
+  fullName: System.Data.DataRow.RejectChanges()
+  spec.csharp:
+  - uid: System.Data.DataRow.RejectChanges
+    name: RejectChanges
+    nameWithType: DataRow.RejectChanges
+    fullName: System.Data.DataRow.RejectChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.RejectChanges
+    name: RejectChanges
+    nameWithType: DataRow.RejectChanges
+    fullName: System.Data.DataRow.RejectChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.SetNull(System.Data.DataColumn)
+  commentId: M:System.Data.DataRow.SetNull(System.Data.DataColumn)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: SetNull(DataColumn)
+  nameWithType: DataRow.SetNull(DataColumn)
+  fullName: System.Data.DataRow.SetNull(System.Data.DataColumn)
+  spec.csharp:
+  - uid: System.Data.DataRow.SetNull(System.Data.DataColumn)
+    name: SetNull
+    nameWithType: DataRow.SetNull
+    fullName: System.Data.DataRow.SetNull
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.SetNull(System.Data.DataColumn)
+    name: SetNull
+    nameWithType: DataRow.SetNull
+    fullName: System.Data.DataRow.SetNull
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.SetParentRow(System.Data.DataRow)
+  commentId: M:System.Data.DataRow.SetParentRow(System.Data.DataRow)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: SetParentRow(DataRow)
+  nameWithType: DataRow.SetParentRow(DataRow)
+  fullName: System.Data.DataRow.SetParentRow(System.Data.DataRow)
+  spec.csharp:
+  - uid: System.Data.DataRow.SetParentRow(System.Data.DataRow)
+    name: SetParentRow
+    nameWithType: DataRow.SetParentRow
+    fullName: System.Data.DataRow.SetParentRow
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRow
+    name: DataRow
+    nameWithType: DataRow
+    fullName: System.Data.DataRow
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.SetParentRow(System.Data.DataRow)
+    name: SetParentRow
+    nameWithType: DataRow.SetParentRow
+    fullName: System.Data.DataRow.SetParentRow
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRow
+    name: DataRow
+    nameWithType: DataRow
+    fullName: System.Data.DataRow
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.SetParentRow(System.Data.DataRow,System.Data.DataRelation)
+  commentId: M:System.Data.DataRow.SetParentRow(System.Data.DataRow,System.Data.DataRelation)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: SetParentRow(DataRow, DataRelation)
+  nameWithType: DataRow.SetParentRow(DataRow, DataRelation)
+  fullName: System.Data.DataRow.SetParentRow(System.Data.DataRow, System.Data.DataRelation)
+  spec.csharp:
+  - uid: System.Data.DataRow.SetParentRow(System.Data.DataRow,System.Data.DataRelation)
+    name: SetParentRow
+    nameWithType: DataRow.SetParentRow
+    fullName: System.Data.DataRow.SetParentRow
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRow
+    name: DataRow
+    nameWithType: DataRow
+    fullName: System.Data.DataRow
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.SetParentRow(System.Data.DataRow,System.Data.DataRelation)
+    name: SetParentRow
+    nameWithType: DataRow.SetParentRow
+    fullName: System.Data.DataRow.SetParentRow
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataRow
+    name: DataRow
+    nameWithType: DataRow
+    fullName: System.Data.DataRow
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRelation
+    name: DataRelation
+    nameWithType: DataRelation
+    fullName: System.Data.DataRelation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.SetAdded
+  commentId: M:System.Data.DataRow.SetAdded
+  parent: System.Data.DataRow
+  isExternal: true
+  name: SetAdded()
+  nameWithType: DataRow.SetAdded()
+  fullName: System.Data.DataRow.SetAdded()
+  spec.csharp:
+  - uid: System.Data.DataRow.SetAdded
+    name: SetAdded
+    nameWithType: DataRow.SetAdded
+    fullName: System.Data.DataRow.SetAdded
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.SetAdded
+    name: SetAdded
+    nameWithType: DataRow.SetAdded
+    fullName: System.Data.DataRow.SetAdded
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.SetModified
+  commentId: M:System.Data.DataRow.SetModified
+  parent: System.Data.DataRow
+  isExternal: true
+  name: SetModified()
+  nameWithType: DataRow.SetModified()
+  fullName: System.Data.DataRow.SetModified()
+  spec.csharp:
+  - uid: System.Data.DataRow.SetModified
+    name: SetModified
+    nameWithType: DataRow.SetModified
+    fullName: System.Data.DataRow.SetModified
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.DataRow.SetModified
+    name: SetModified
+    nameWithType: DataRow.SetModified
+    fullName: System.Data.DataRow.SetModified
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.RowError
+  commentId: P:System.Data.DataRow.RowError
+  parent: System.Data.DataRow
+  isExternal: true
+  name: RowError
+  nameWithType: DataRow.RowError
+  fullName: System.Data.DataRow.RowError
+- uid: System.Data.DataRow.RowState
+  commentId: P:System.Data.DataRow.RowState
+  parent: System.Data.DataRow
+  isExternal: true
+  name: RowState
+  nameWithType: DataRow.RowState
+  fullName: System.Data.DataRow.RowState
+- uid: System.Data.DataRow.Table
+  commentId: P:System.Data.DataRow.Table
+  parent: System.Data.DataRow
+  isExternal: true
+  name: Table
+  nameWithType: DataRow.Table
+  fullName: System.Data.DataRow.Table
+- uid: System.Data.DataRow.Item(System.Int32)
+  commentId: P:System.Data.DataRow.Item(System.Int32)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: Item[Int32]
+  nameWithType: DataRow.Item[Int32]
+  fullName: System.Data.DataRow.Item[System.Int32]
+  nameWithType.vb: DataRow.Item(Int32)
+  fullName.vb: System.Data.DataRow.Item(System.Int32)
+  name.vb: Item(Int32)
+  spec.csharp:
+  - uid: System.Data.DataRow.Item(System.Int32)
+    name: Item
+    nameWithType: DataRow.Item
+    fullName: System.Data.DataRow.Item
+    isExternal: true
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: System.Data.DataRow.Item(System.Int32)
+    name: Item
+    nameWithType: DataRow.Item
+    fullName: System.Data.DataRow.Item
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.Item(System.String)
+  commentId: P:System.Data.DataRow.Item(System.String)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: Item[String]
+  nameWithType: DataRow.Item[String]
+  fullName: System.Data.DataRow.Item[System.String]
+  nameWithType.vb: DataRow.Item(String)
+  fullName.vb: System.Data.DataRow.Item(System.String)
+  name.vb: Item(String)
+  spec.csharp:
+  - uid: System.Data.DataRow.Item(System.String)
+    name: Item
+    nameWithType: DataRow.Item
+    fullName: System.Data.DataRow.Item
+    isExternal: true
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: System.Data.DataRow.Item(System.String)
+    name: Item
+    nameWithType: DataRow.Item
+    fullName: System.Data.DataRow.Item
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.Item(System.Data.DataColumn)
+  commentId: P:System.Data.DataRow.Item(System.Data.DataColumn)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: Item[DataColumn]
+  nameWithType: DataRow.Item[DataColumn]
+  fullName: System.Data.DataRow.Item[System.Data.DataColumn]
+  nameWithType.vb: DataRow.Item(DataColumn)
+  fullName.vb: System.Data.DataRow.Item(System.Data.DataColumn)
+  name.vb: Item(DataColumn)
+  spec.csharp:
+  - uid: System.Data.DataRow.Item(System.Data.DataColumn)
+    name: Item
+    nameWithType: DataRow.Item
+    fullName: System.Data.DataRow.Item
+    isExternal: true
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: System.Data.DataRow.Item(System.Data.DataColumn)
+    name: Item
+    nameWithType: DataRow.Item
+    fullName: System.Data.DataRow.Item
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.Item(System.Int32,System.Data.DataRowVersion)
+  commentId: P:System.Data.DataRow.Item(System.Int32,System.Data.DataRowVersion)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: Item[Int32, DataRowVersion]
+  nameWithType: DataRow.Item[Int32, DataRowVersion]
+  fullName: System.Data.DataRow.Item[System.Int32, System.Data.DataRowVersion]
+  nameWithType.vb: DataRow.Item(Int32, DataRowVersion)
+  fullName.vb: System.Data.DataRow.Item(System.Int32, System.Data.DataRowVersion)
+  name.vb: Item(Int32, DataRowVersion)
+  spec.csharp:
+  - uid: System.Data.DataRow.Item(System.Int32,System.Data.DataRowVersion)
+    name: Item
+    nameWithType: DataRow.Item
+    fullName: System.Data.DataRow.Item
+    isExternal: true
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: System.Data.DataRow.Item(System.Int32,System.Data.DataRowVersion)
+    name: Item
+    nameWithType: DataRow.Item
+    fullName: System.Data.DataRow.Item
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.Item(System.String,System.Data.DataRowVersion)
+  commentId: P:System.Data.DataRow.Item(System.String,System.Data.DataRowVersion)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: Item[String, DataRowVersion]
+  nameWithType: DataRow.Item[String, DataRowVersion]
+  fullName: System.Data.DataRow.Item[System.String, System.Data.DataRowVersion]
+  nameWithType.vb: DataRow.Item(String, DataRowVersion)
+  fullName.vb: System.Data.DataRow.Item(System.String, System.Data.DataRowVersion)
+  name.vb: Item(String, DataRowVersion)
+  spec.csharp:
+  - uid: System.Data.DataRow.Item(System.String,System.Data.DataRowVersion)
+    name: Item
+    nameWithType: DataRow.Item
+    fullName: System.Data.DataRow.Item
+    isExternal: true
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: System.Data.DataRow.Item(System.String,System.Data.DataRowVersion)
+    name: Item
+    nameWithType: DataRow.Item
+    fullName: System.Data.DataRow.Item
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.Item(System.Data.DataColumn,System.Data.DataRowVersion)
+  commentId: P:System.Data.DataRow.Item(System.Data.DataColumn,System.Data.DataRowVersion)
+  parent: System.Data.DataRow
+  isExternal: true
+  name: Item[DataColumn, DataRowVersion]
+  nameWithType: DataRow.Item[DataColumn, DataRowVersion]
+  fullName: System.Data.DataRow.Item[System.Data.DataColumn, System.Data.DataRowVersion]
+  nameWithType.vb: DataRow.Item(DataColumn, DataRowVersion)
+  fullName.vb: System.Data.DataRow.Item(System.Data.DataColumn, System.Data.DataRowVersion)
+  name.vb: Item(DataColumn, DataRowVersion)
+  spec.csharp:
+  - uid: System.Data.DataRow.Item(System.Data.DataColumn,System.Data.DataRowVersion)
+    name: Item
+    nameWithType: DataRow.Item
+    fullName: System.Data.DataRow.Item
+    isExternal: true
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: System.Data.DataRow.Item(System.Data.DataColumn,System.Data.DataRowVersion)
+    name: Item
+    nameWithType: DataRow.Item
+    fullName: System.Data.DataRow.Item
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.DataColumn
+    name: DataColumn
+    nameWithType: DataColumn
+    fullName: System.Data.DataColumn
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.DataRowVersion
+    name: DataRowVersion
+    nameWithType: DataRowVersion
+    fullName: System.Data.DataRowVersion
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.DataRow.ItemArray
+  commentId: P:System.Data.DataRow.ItemArray
+  parent: System.Data.DataRow
+  isExternal: true
+  name: ItemArray
+  nameWithType: DataRow.ItemArray
+  fullName: System.Data.DataRow.ItemArray
+- uid: System.Data.DataRow.HasErrors
+  commentId: P:System.Data.DataRow.HasErrors
+  parent: System.Data.DataRow
+  isExternal: true
+  name: HasErrors
+  nameWithType: DataRow.HasErrors
+  fullName: System.Data.DataRow.HasErrors
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Data
+  commentId: N:System.Data
+  isExternal: true
+  name: System.Data
+  nameWithType: System.Data
+  fullName: System.Data
+- uid: Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdEquipo*
+  commentId: Overload:Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdEquipo
+  name: pkIdEquipo
+  nameWithType: vwEquipo.vwequipoRow.pkIdEquipo
+  fullName: Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdEquipo
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Polideportivo.Datos.vwEquipo.vwequipoRow.nombre*
+  commentId: Overload:Polideportivo.Datos.vwEquipo.vwequipoRow.nombre
+  name: nombre
+  nameWithType: vwEquipo.vwequipoRow.nombre
+  fullName: Polideportivo.Datos.vwEquipo.vwequipoRow.nombre
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdDeporte*
+  commentId: Overload:Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdDeporte
+  name: pkIdDeporte
+  nameWithType: vwEquipo.vwequipoRow.pkIdDeporte
+  fullName: Polideportivo.Datos.vwEquipo.vwequipoRow.pkIdDeporte
+- uid: Polideportivo.Datos.vwEquipo.vwequipoRow.deporte*
+  commentId: Overload:Polideportivo.Datos.vwEquipo.vwequipoRow.deporte
+  name: deporte
+  nameWithType: vwEquipo.vwequipoRow.deporte
+  fullName: Polideportivo.Datos.vwEquipo.vwequipoRow.deporte

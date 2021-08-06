@@ -1,0 +1,64 @@
+### YamlMime:ManagedReference
+items:
+- uid: Polideportivo.Datos.vwDeportes.deporteRowChangeEventHandler
+  commentId: T:Polideportivo.Datos.vwDeportes.deporteRowChangeEventHandler
+  id: vwDeportes.deporteRowChangeEventHandler
+  parent: Polideportivo.Datos
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: vwDeportes.deporteRowChangeEventHandler
+  nameWithType: vwDeportes.deporteRowChangeEventHandler
+  fullName: Polideportivo.Datos.vwDeportes.deporteRowChangeEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Polideportivo/Datos/vwDeportes.Designer.cs
+      branch: Jorge
+      repo: git@github.com:jegnzc/proyecto22021AS2G6.git
+    id: deporteRowChangeEventHandler
+    path: Datos/vwDeportes.Designer.cs
+    startLine: 271
+  assemblies:
+  - Polideportivo
+  namespace: Polideportivo.Datos
+  syntax:
+    content: public delegate void deporteRowChangeEventHandler(object sender, vwDeportes.deporteRowChangeEvent e);
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: Polideportivo.Datos.vwDeportes.deporteRowChangeEvent
+    content.vb: Public Delegate Sub deporteRowChangeEventHandler(sender As Object, e As vwDeportes.deporteRowChangeEvent)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: Polideportivo.Datos
+  commentId: N:Polideportivo.Datos
+  name: Polideportivo.Datos
+  nameWithType: Polideportivo.Datos
+  fullName: Polideportivo.Datos
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Polideportivo.Datos.vwDeportes.deporteRowChangeEvent
+  commentId: T:Polideportivo.Datos.vwDeportes.deporteRowChangeEvent
+  parent: Polideportivo.Datos
+  name: vwDeportes.deporteRowChangeEvent
+  nameWithType: vwDeportes.deporteRowChangeEvent
+  fullName: Polideportivo.Datos.vwDeportes.deporteRowChangeEvent
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

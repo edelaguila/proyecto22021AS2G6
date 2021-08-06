@@ -118,6 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnMenuEmpleado.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAYZJREFUWEft
+        ljsvBGEUhmcpVihcOuISeivxE2jEzxCVVVG4VDoFKjQupYSEUAi1CP9CoiFKIaFQjOdM3p18MVaz8c1s
+        8j3Jk5nzzmzOydmdzEaBQMADcRx34g4+yG3LdDlfGKQV7zVUn7Rh77BFt+UHQ0zjDZYUWVbCW5xSlB8M
+        sYibKlPItnBBZX4wRGaDhrJCbND9DfbIDSzGb9BgEHuKd/FF2kNSjKe40LClQTzBR3zHOaziqzK7NqDb
+        /UJjG86+ziUcwhG8xiscVraCdk+/PuYPmh7jssoE6nFTZQL1Kh6p9AdNn7FXZQL1mqkygdreLE8q/UHT
+        WMcKjuo8HfBHntzrlVpTDmNY0bk7oJvnOmBTbXDe/CUvxgZd3JxjMTbo4uYcwwYz0PMT2/HPDWIHfij2
+        B00vcA8nsd4GJ3AfzxX7g6bdeIhvuK44xTJdO8Auxf6heeb1ZtTLvRMGbJQwYKM0w4CzeIllRZaV0f76
+        zyjKD4ZowzP8whp2forp0IFA4F+Iom8KGIxac/pdIQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnMenuPartido.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAABW5JREFUWEfd

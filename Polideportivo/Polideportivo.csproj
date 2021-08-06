@@ -225,6 +225,12 @@
     <Compile Include="Vista\formRol.Designer.cs">
       <DependentUpon>formRol.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\formTipoFalta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formTipoFalta.Designer.cs">
+      <DependentUpon>formTipoFalta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\utilidadForms.cs" />
     <Compile Include="Datos\vwCampeonato.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -321,6 +327,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\formRol.resx">
       <DependentUpon>formRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formTipoFalta.resx">
+      <DependentUpon>formTipoFalta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>

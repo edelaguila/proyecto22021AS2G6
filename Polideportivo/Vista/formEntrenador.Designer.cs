@@ -43,7 +43,7 @@ namespace Polideportivo.Vista
             this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwentrenadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwEntrenador = new Polideportivo.vwEntrenador();
+            this.vwEntrenador = new Polideportivo.Datos.vwEntrenador();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.cboDeporte = new System.Windows.Forms.ComboBox();
@@ -61,7 +61,13 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarEntrenador = new System.Windows.Forms.Button();
             this.btnAgregarEntrenador = new System.Windows.Forms.Button();
-            this.vwentrenadorTableAdapter = new Polideportivo.vwEntrenadorTableAdapters.vwentrenadorTableAdapter();
+            this.vwentrenadorTableAdapter = new Polideportivo.Datos.vwEntrenadorTableAdapters.vwentrenadorTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pkIdEquipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEntrenador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwentrenadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwEntrenador)).BeginInit();
@@ -500,7 +506,7 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.Label label2;
         private vwEntrenador vwEntrenador;
         private System.Windows.Forms.BindingSource vwentrenadorBindingSource;
-        private vwEntrenadorTableAdapters.vwentrenadorTableAdapter vwentrenadorTableAdapter;
+        private Polideportivo.Datos.vwEntrenadorTableAdapters.vwentrenadorTableAdapter vwentrenadorTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEquipoDataGridViewTextBoxColumn;

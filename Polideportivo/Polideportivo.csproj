@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\ConexionODBC.cs" />
+    <Compile Include="Controlador\controladorEstado.cs" />
     <Compile Include="Controlador\controladorAnotacion.cs" />
     <Compile Include="Controlador\controladorCampeonato.cs" />
     <Compile Include="Controlador\controladorDeporte.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Controlador\controladorPuesto.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
     <Compile Include="Controlador\controladorTipoCampeonato.cs" />
+    <Compile Include="Modelo\modeloEstado.cs" />
     <Compile Include="Modelo\modeloAnotacion.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />
     <Compile Include="Modelo\modeloDeporte.cs" />
@@ -249,22 +251,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwPartido.xsd</DependentUpon>
     </Compile>
-    <Compile Include="vwEmpleado.Designer.cs">
+    <Compile Include="Datos\vwEntrenador.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwEntrenador.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\vwEmpleado.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>vwEmpleado.xsd</DependentUpon>
     </Compile>
-    <Compile Include="vwEntrenador1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>vwEntrenador1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="vwPartido.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>vwPartido.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="vwRol.Designer.cs">
+    <Compile Include="Datos\vwRol.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>vwRol.xsd</DependentUpon>
@@ -388,48 +385,37 @@
     <None Include="Datos\vwPartido.xss">
       <DependentUpon>vwPartido.xsd</DependentUpon>
     </None>
-    <None Include="vwEmpleado.xsc">
+    <None Include="Datos\vwEntrenador.xsc">
+      <DependentUpon>vwEntrenador.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\vwEmpleado.xsc">
       <DependentUpon>vwEmpleado.xsd</DependentUpon>
     </None>
-    <None Include="vwEmpleado.xsd">
+    <None Include="Datos\vwEmpleado.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>vwEmpleado.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="vwEmpleado.xss">
+    <None Include="Datos\vwEmpleado.xss">
       <DependentUpon>vwEmpleado.xsd</DependentUpon>
     </None>
-    <None Include="vwEntrenador1.xsc">
-      <DependentUpon>vwEntrenador1.xsd</DependentUpon>
-    </None>
-    <None Include="vwEntrenador1.xsd">
+    <None Include="Datos\vwEntrenador.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>vwEntrenador1.Designer.cs</LastGenOutput>
+      <LastGenOutput>vwEntrenador.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="vwEntrenador1.xss">
-      <DependentUpon>vwEntrenador1.xsd</DependentUpon>
+    <None Include="Datos\vwEntrenador.xss">
+      <DependentUpon>vwEntrenador.xsd</DependentUpon>
     </None>
-    <None Include="vwPartido.xsc">
-      <DependentUpon>vwPartido.xsd</DependentUpon>
-    </None>
-    <None Include="vwPartido.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>vwPartido.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="vwPartido.xss">
-      <DependentUpon>vwPartido.xsd</DependentUpon>
-    </None>
-    <None Include="vwRol.xsc">
+    <None Include="Datos\vwRol.xsc">
       <DependentUpon>vwRol.xsd</DependentUpon>
     </None>
-    <None Include="vwRol.xsd">
+    <None Include="Datos\vwRol.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>vwRol.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="vwRol.xss">
+    <None Include="Datos\vwRol.xss">
       <DependentUpon>vwRol.xsd</DependentUpon>
     </None>
   </ItemGroup>

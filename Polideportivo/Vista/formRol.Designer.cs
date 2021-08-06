@@ -39,7 +39,7 @@ namespace Polideportivo.Vista
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwrolBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwRol = new Polideportivo.vwRol();
+            this.vwRol = new Polideportivo.Datos.vwRol();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.cboDeporte = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarRol = new System.Windows.Forms.Button();
             this.btnAgregarRol = new System.Windows.Forms.Button();
-            this.vwrolTableAdapter = new Polideportivo.vwRolTableAdapters.vwrolTableAdapter();
+            this.vwrolTableAdapter = new Polideportivo.Datos.vwRolTableAdapters.vwrolTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaRol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwrolBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwRol)).BeginInit();
@@ -448,9 +448,9 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDeporteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
-        private vwRol vwRol;
+        private Polideportivo.Datos.vwRol vwRol;
         private System.Windows.Forms.BindingSource vwrolBindingSource;
-        private vwRolTableAdapters.vwrolTableAdapter vwrolTableAdapter;
+        private Polideportivo.Datos.vwRolTableAdapters.vwrolTableAdapter vwrolTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

@@ -156,12 +156,12 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `bdpolideportivo`.`puestoEmpleaado`
+-- Table `bdpolideportivo`.`puestoEmpleado`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `bdpolideportivo`.`puestoEmpleaado` ;
+DROP TABLE IF EXISTS `bdpolideportivo`.`puestoEmpleado` ;
 
-CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`puestoEmpleaado` (
-  `pkId` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`puestoEmpleado` (
+  `pkId` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL,
   PRIMARY KEY (`pkId`))
 ENGINE = InnoDB;
@@ -180,7 +180,7 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`empleado` (
   INDEX `fk_empleado_puestoEmpleaado1_idx` (`fkIdPuestoEmpleado` ASC) VISIBLE,
   CONSTRAINT `fk_empleado_puestoEmpleaado1`
     FOREIGN KEY (`fkIdPuestoEmpleado`)
-    REFERENCES `bdpolideportivo`.`puestoEmpleaado` (`pkId`)
+    REFERENCES `bdpolideportivo`.`puestoEmpleado` (`pkId`)
     ON DELETE SET NULL
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -499,3 +499,24 @@ CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY D
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+ALTER TABLE anotacion AUTO_INCREMENT = 1;
+ALTER TABLE campeonato AUTO_INCREMENT = 1;
+ALTER TABLE deporte AUTO_INCREMENT = 1;
+ALTER TABLE empleado AUTO_INCREMENT = 1;
+
+ALTER TABLE entrenador AUTO_INCREMENT = 1;
+ALTER TABLE equipo AUTO_INCREMENT = 1;
+ALTER TABLE infraccion AUTO_INCREMENT = 1;
+ALTER TABLE jugador AUTO_INCREMENT = 1;
+
+ALTER TABLE participante AUTO_INCREMENT = 1;
+ALTER TABLE partido AUTO_INCREMENT = 1;
+ALTER TABLE posicion AUTO_INCREMENT = 1;
+ALTER TABLE resultado AUTO_INCREMENT = 1;
+
+ALTER TABLE rol AUTO_INCREMENT = 1;
+ALTER TABLE tipocampeonato AUTO_INCREMENT = 1;
+ALTER TABLE tipofalta AUTO_INCREMENT = 1;
+ALTER TABLE usuario AUTO_INCREMENT = 1;

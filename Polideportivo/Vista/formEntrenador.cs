@@ -121,5 +121,10 @@ namespace Polideportivo.Vista
         {
             // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
         }
+
+        private void tablaEntrenador_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

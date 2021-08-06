@@ -40,8 +40,8 @@ namespace Polideportivo.Controlador
             if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "UPDATE entrenador SET nombre = ?nombre? ," +
-                "fkIdPuestoEmpleado = ?fkIdEmpleado? " +
+                "UPDATE empleado SET nombre = ?nombre?," +
+                "fkIdPuestoEmpleado = ?fkIdPuestoEmpleado? " +
                 "WHERE pkId = ?pkId?;";
                 var ValorDeVariables = new
                 {

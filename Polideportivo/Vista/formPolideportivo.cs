@@ -1,8 +1,7 @@
-﻿using Polideportivo.Vista;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
-namespace Polideportivo
+namespace Vista
 {
     public partial class formPolideportivo : Form
     {
@@ -101,6 +100,7 @@ namespace Polideportivo
         {
             gestorDeFormActivo(new formEntrenador(), "ENTRENADOR");
         }
+
         private void btnMenuEmpleado_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formEmpleado(), "EMPLEADO");
@@ -176,11 +176,10 @@ namespace Polideportivo
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
         }
 
-
+        private void lblMenuTitulo_Click(object sender, EventArgs e)
+        {
+        }
     }
-
-       
-    }
+}

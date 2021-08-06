@@ -1,0 +1,642 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/CORE i7 6TA WIN10/Documents/RespaldoGithub/Actual/proyecto22021AS2G6/Polideportivo",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "85C6iC8M4CrLh4Z48E+KZKsKxOnP2H3ZJdcvVEZ30mo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "8gApDOOfiWqq7O2SGjodnn/SAj5VJUkDuYfamrLsxnM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "/A31ut60TNWqBOtK10BuwvIagM/XBIXQ8c57orKmAxA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.controladorAnotacion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorAnotacion.html",
+          "hash": "ETxcVZiUuJxQwMXdYfIT7Gg9AI37O5JrIUnWgkFqImo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.controladorCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorCampeonato.html",
+          "hash": "Vr99JYz4u1SZyHvlxHq31CQtVBIb6J5m2VMbbAwtIRQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.controladorDeporte.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorDeporte.html",
+          "hash": "b+/g29F+Pjs0P788wE6+ykzpjo/FNDmIWDcxN7HlEoo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.controladorEmpleado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorEmpleado.html",
+          "hash": "NMDypk6gxaOgrpHcSMetu3gkEreQz9S9QSWFF5IFHpM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.controladorEntrenador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorEntrenador.html",
+          "hash": "MQKWVPmLQplNmwuxcqbInmOsZFfDmCQiKR7orOcxCaQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.controladorEquipo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorEquipo.html",
+          "hash": "g0CgfSvNeymy9i/CosOAcFm51VL3c8D4sPc88qpOZW8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.controladorEstado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorEstado.html",
+          "hash": "4kb4odTE2crYu1adXlRSXR+DLtRaYZOHbgT6uxmxkH4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.controladorJugador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorJugador.html",
+          "hash": "Yx/vl5xv9f/slDup5dRjncclreGT9SNe+IJG8w1v0VU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.controladorPartido.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorPartido.html",
+          "hash": "NOX7cUZwQ1UV1zuRrrW1joPVsWH0+NLYxozLJ4FY8Zg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.controladorPuesto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorPuesto.html",
+          "hash": "cdTCKC36qNGZt6s98Tng43SiE4tMal00YQTsnPBkb+M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.controladorRol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorRol.html",
+          "hash": "rkRaOXfm7WhyIxej2/r+WmYK7TZJuTsHN2lCD8JBo+U="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.controladorTipoCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.controladorTipoCampeonato.html",
+          "hash": "qG0fpony1nTUc6OX9Dwat8E0r7Ji2M8KQ8Y8fplVPIA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Controlador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Controlador.html",
+          "hash": "SETkvBltpsfC9Koczfq85XiUf4YbEp5ictHJRXmuBIU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.modeloAnotacion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloAnotacion.html",
+          "hash": "VhfpXfSaxtfGDSOPeLY2jTFsL8TUiw66ve27u2v47iw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.modeloCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloCampeonato.html",
+          "hash": "ATgVm1Xkh9tNSnmIczf8dd8hzP9fx31sQ4qrKd5OYxo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.modeloDeporte.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloDeporte.html",
+          "hash": "fSZrmoKx9v+KuV0By/TeglSXOlb4teODhCznHaTfeZo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.modeloEmpleado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloEmpleado.html",
+          "hash": "/PiS/pSaQrQSC/gAgZ9YLZOYuR6diFMlr7jNzQBW4zI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.modeloEntrenador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloEntrenador.html",
+          "hash": "JFXn8XTpe6kK9ayiZOlZ0ZckJUgXp/xQ4KOv00ppj4M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.modeloEquipo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloEquipo.html",
+          "hash": "/lrYFtRK08U43wABpLD+8qKinEtchF7XFBwPb4Rylik="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.modeloEstado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloEstado.html",
+          "hash": "UV2M4DIbIunSrN6FtGMfzAGg4LqYgAs8L93/3kc4teY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.modeloJugador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloJugador.html",
+          "hash": "yIvMrwlaPHs5w37TYMVKDI2DMtpMVkRdxGzu6Zi2il8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.modeloPartido.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloPartido.html",
+          "hash": "n1IGJdI2LWNBHtRQOateS5t5BfWe7dXk9KDaDmOiYHE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.modeloPuesto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloPuesto.html",
+          "hash": "VDQRQC+WwLaLv5SCIMu65IQESu7E9XLSiPPvO7evNVo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.modeloRol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloRol.html",
+          "hash": "WveCnOK9+7sNcLzK9n0QrWly+SOC/ybD3NSn6gLWQgg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.modeloTipoCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.modeloTipoCampeonato.html",
+          "hash": "fPP5BvibdrM5uDfzwN1HD1GyMvl84/3d8zyqeu/Y7LA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Modelo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Modelo.html",
+          "hash": "rnkv3NMMyzBaX6OW85hrQiqCkG2oZ4TWJgPsGLw7i1o="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formAviso.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formAviso.html",
+          "hash": "d0yGYrxenyNsdXcyhONaq5tA3i8Bh9TbmtwMpJOKoEM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formCampeonato.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formCampeonato.html",
+          "hash": "FzKMlkMgMKtMx23gd3QFUlUOCl09TeCqApWjIGI0W10="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formCampeonatoEventos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formCampeonatoEventos.html",
+          "hash": "TU6lAR7cyTuVjcXfetjvps30wCs5NxC9J74THXqjD98="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formDeporte.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formDeporte.html",
+          "hash": "Sqbqme0ONuS4/QZTQZG596b4QBt14mngF8+dfhbG/UU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formEmpleado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formEmpleado.html",
+          "hash": "yqU/nd6zSBoDb0KVhFGMcqLFqxq4vfVBd39XIgf5GW4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formEntrenador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formEntrenador.html",
+          "hash": "ckNBRE1zej7QWc1xsAVrHQ3h5cqJGunPaTy7ILIOKds="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formEquipo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formEquipo.html",
+          "hash": "6uzPns5PGBoI5+s/4eENdF9LWRnl6ire0HtHBQSVU6o="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formEquipoEventos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formEquipoEventos.html",
+          "hash": "skOAh6xHAIpChKXVMq1Jfd03NmmIYQXCIi6JPntOwsY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formError.html",
+          "hash": "yuy7J//T7s0vherSmB/7lAxEg1jPYqmnMJfuc/zz+o4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formJugador.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formJugador.html",
+          "hash": "tIqKPNMltZ2JYCI2ifqOehtoYpK/3cq281ebNkMqkOk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formJugadorEventos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formJugadorEventos.html",
+          "hash": "1Id+NqdTyaZFvvO8oVjbSYJjJJsShco9ycRXcfVZskE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formPartido.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formPartido.html",
+          "hash": "9Gs7i1x6JBaXA2PhI6RT+cMaIYGCSjqZYtvt2Un94vw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formPartidoEventos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formPartidoEventos.html",
+          "hash": "b+I3imrsIUrFAQNNPAnOJyqJmc8YRy1NCc2tEIeZ3kk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formPolideportivo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formPolideportivo.html",
+          "hash": "ZHvQvvs9/Q2TwS84he4tWJ3dixQStm5AKTkWepqxtjg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.formRol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.formRol.html",
+          "hash": "HV+w/ETAnB46dRd6UJuQrCVOo+NSPms7MYTHIRl2XcI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.utilidadForms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.utilidadForms.html",
+          "hash": "jek/b/30I/xczZW11srvwO7Rtgg9uk7ikVkluxKUG78="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Vista.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vista.html",
+          "hash": "24cjHadHyCpShlTdISUNwTGo4fMDEMqTRV6Fvsno1uI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "aZEJ0z7uVnBBg4udwjEdu/uS4aqJhhIXKbB4j1XJ0Zs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Oa9PuD4E1hvZnCkVjUgzNBX6S00Zo5YilamTERTZo54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 43,
+          "skipped_file_count": 43
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

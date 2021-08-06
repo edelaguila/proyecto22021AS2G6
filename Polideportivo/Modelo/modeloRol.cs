@@ -1,6 +1,6 @@
-﻿namespace Polideportivo.Modelo
+﻿namespace Modelo
 {
-    internal class modeloRol
+    public class modeloRol
     {
         public int pkId { get; set; }
         public string nombre { get; set; }

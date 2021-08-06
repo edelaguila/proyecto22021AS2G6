@@ -1,16 +1,16 @@
-﻿using Polideportivo.AccesoDatos;
-using Polideportivo.Controlador;
-using Polideportivo.Modelo;
+﻿using Controlador;
+using Modelo;
 using System;
 using System.Windows.Forms;
-using static Polideportivo.Vista.utilidadForms;
+using static Vista.utilidadForms;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
     public partial class formEmpleado : Form
     {
         private int id;
         private string nombre;
+
         public formEmpleado()
         {
             InitializeComponent();
@@ -26,15 +26,12 @@ namespace Polideportivo.Vista
             // Modificar el texto del título
         }
 
-
-
         private void formEmpleado_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'vwEmpleado.vwempleado' Puede moverla o quitarla según sea necesario.
             this.vwempleadoTableAdapter.Fill(this.vwEmpleado.vwempleado);
 
             cboBuscar.SelectedIndex = 0;
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,12 +40,12 @@ namespace Polideportivo.Vista
             controladorEmpleado db = new controladorEmpleado();
         }
 
-
         public void actualizarTablaEmpleado
  ()
         {
             this.vwempleadoTableAdapter.Fill(this.vwEmpleado.vwempleado);
         }
+
         private void llenarModeloConFilaSeleccionada()
         {
             id = stringAInt(tablaEmpleado.SelectedRows[0].Cells[0].Value.ToString());
@@ -56,13 +53,12 @@ namespace Polideportivo.Vista
             modeloFila.pkId = id;
         }
 
-        modeloEntrenador modeloFila = new modeloEntrenador();
+        private modeloEntrenador modeloFila = new modeloEntrenador();
+
         private void tablaEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             llenarModeloConFilaSeleccionada();
             txtNombre.Text = nombre;
-
         }
 
         private void btnAgregarEmpleado_Click(object sender, EventArgs e)
@@ -121,7 +117,5 @@ namespace Polideportivo.Vista
         {
             // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
         }
-
-        
     }
 }

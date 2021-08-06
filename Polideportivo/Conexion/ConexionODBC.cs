@@ -1,8 +1,8 @@
-﻿using Polideportivo.Vista;
+﻿using Vista;
 using System.Data.Odbc;
-using static Polideportivo.Vista.utilidadForms;
+using static Vista.utilidadForms;
 
-namespace Polideportivo.Conexion
+namespace Conexion
 {
     internal class ConexionODBC
     {

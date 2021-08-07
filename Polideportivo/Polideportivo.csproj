@@ -441,4 +441,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\docfx.console.2.58.0\build\docfx.console.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\docfx.console.2.58.0\build\docfx.console.targets'))" />
   </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties docfx_1json__JsonSchema="" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

@@ -1,6 +1,44 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Conexion
+  name: Conexion
+  href: api/Conexion.html
+  commentId: N:Conexion
+  fullName: Conexion
+  nameWithType: Conexion
+- uid: Conexion.ConexionODBC
+  name: ConexionODBC
+  href: api/Conexion.ConexionODBC.html
+  commentId: T:Conexion.ConexionODBC
+  fullName: Conexion.ConexionODBC
+  nameWithType: ConexionODBC
+- uid: Conexion.ConexionODBC.abrirConexion
+  name: abrirConexion()
+  href: api/Conexion.ConexionODBC.html#Conexion_ConexionODBC_abrirConexion
+  commentId: M:Conexion.ConexionODBC.abrirConexion
+  fullName: Conexion.ConexionODBC.abrirConexion()
+  nameWithType: ConexionODBC.abrirConexion()
+- uid: Conexion.ConexionODBC.abrirConexion*
+  name: abrirConexion
+  href: api/Conexion.ConexionODBC.html#Conexion_ConexionODBC_abrirConexion_
+  commentId: Overload:Conexion.ConexionODBC.abrirConexion
+  isSpec: "True"
+  fullName: Conexion.ConexionODBC.abrirConexion
+  nameWithType: ConexionODBC.abrirConexion
+- uid: Conexion.ConexionODBC.cerrarConexion(System.Data.Odbc.OdbcConnection)
+  name: cerrarConexion(OdbcConnection)
+  href: api/Conexion.ConexionODBC.html#Conexion_ConexionODBC_cerrarConexion_System_Data_Odbc_OdbcConnection_
+  commentId: M:Conexion.ConexionODBC.cerrarConexion(System.Data.Odbc.OdbcConnection)
+  fullName: Conexion.ConexionODBC.cerrarConexion(System.Data.Odbc.OdbcConnection)
+  nameWithType: ConexionODBC.cerrarConexion(OdbcConnection)
+- uid: Conexion.ConexionODBC.cerrarConexion*
+  name: cerrarConexion
+  href: api/Conexion.ConexionODBC.html#Conexion_ConexionODBC_cerrarConexion_
+  commentId: Overload:Conexion.ConexionODBC.cerrarConexion
+  isSpec: "True"
+  fullName: Conexion.ConexionODBC.cerrarConexion
+  nameWithType: ConexionODBC.cerrarConexion
 - uid: Controlador
   name: Controlador
   href: api/Controlador.html

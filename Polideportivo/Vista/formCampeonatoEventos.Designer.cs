@@ -158,7 +158,7 @@ namespace Vista
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(119, 167);
+            this.label2.Location = new System.Drawing.Point(119, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 18);
             this.label2.TabIndex = 34;
@@ -170,7 +170,7 @@ namespace Vista
             this.lblFechaInicio.BackColor = System.Drawing.Color.Transparent;
             this.lblFechaInicio.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaInicio.ForeColor = System.Drawing.Color.White;
-            this.lblFechaInicio.Location = new System.Drawing.Point(118, 102);
+            this.lblFechaInicio.Location = new System.Drawing.Point(118, 103);
             this.lblFechaInicio.Name = "lblFechaInicio";
             this.lblFechaInicio.Size = new System.Drawing.Size(51, 18);
             this.lblFechaInicio.TabIndex = 33;
@@ -179,6 +179,7 @@ namespace Vista
             // dateFechaFinal
             // 
             this.dateFechaFinal.CalendarFont = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateFechaFinal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateFechaFinal.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateFechaFinal.Location = new System.Drawing.Point(121, 188);
             this.dateFechaFinal.Name = "dateFechaFinal";
@@ -189,7 +190,8 @@ namespace Vista
             // dateFechaInicio
             // 
             this.dateFechaInicio.CalendarFont = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateFechaInicio.CustomFormat = "dd - yyyy";
+            this.dateFechaInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateFechaInicio.CustomFormat = "";
             this.dateFechaInicio.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateFechaInicio.Location = new System.Drawing.Point(121, 123);
             this.dateFechaInicio.Name = "dateFechaInicio";
@@ -264,7 +266,7 @@ namespace Vista
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(138, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(104, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.TabIndex = 24;
@@ -276,11 +278,11 @@ namespace Vista
             this.lblJugadorEvento.BackColor = System.Drawing.Color.Transparent;
             this.lblJugadorEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJugadorEvento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblJugadorEvento.Location = new System.Drawing.Point(172, 20);
+            this.lblJugadorEvento.Location = new System.Drawing.Point(138, 20);
             this.lblJugadorEvento.Name = "lblJugadorEvento";
-            this.lblJugadorEvento.Size = new System.Drawing.Size(239, 25);
+            this.lblJugadorEvento.Size = new System.Drawing.Size(289, 25);
             this.lblJugadorEvento.TabIndex = 23;
-            this.lblJugadorEvento.Text = "AGREGAR JUGADOR";
+            this.lblJugadorEvento.Text = "AGREGAR CAMPEONATO";
             // 
             // btnSalir
             // 

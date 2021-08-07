@@ -4,7 +4,10 @@ using static Vista.utilidadForms;
 
 namespace Conexion
 {
-    internal class ConexionODBC
+    /// <summary>
+    /// Conexion ODBC
+    /// </summary>
+    public class ConexionODBC
     {
         private string dsn = "Dsn=bdpolideportivo";
 

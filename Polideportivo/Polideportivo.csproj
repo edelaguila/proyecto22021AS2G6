@@ -112,6 +112,7 @@
     <Compile Include="Controlador\controladorEntrenador.cs" />
     <Compile Include="Controlador\controladorEquipo.cs" />
     <Compile Include="Controlador\controladorJugador.cs" />
+    <Compile Include="Controlador\controladorParticipante.cs" />
     <Compile Include="Controlador\controladorPartido.cs" />
     <Compile Include="Controlador\controladorPuesto.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="Modelo\modeloEmpleado.cs" />
     <Compile Include="Modelo\modeloEntrenador.cs" />
     <Compile Include="Modelo\modeloEquipo.cs" />
+    <Compile Include="Modelo\modeloParticipante.cs" />
     <Compile Include="Modelo\modeloPartido.cs" />
     <Compile Include="Modelo\modeloPuesto.cs" />
     <Compile Include="Modelo\modeloRol.cs" />
@@ -200,6 +202,18 @@
     </Compile>
     <Compile Include="Vista\formJugadorEventos.Designer.cs">
       <DependentUpon>formJugadorEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\formParticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formParticipante.Designer.cs">
+      <DependentUpon>formParticipante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\formParticipanteEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formParticipanteEventos.Designer.cs">
+      <DependentUpon>formParticipanteEventos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\formPartido.cs">
       <SubType>Form</SubType>
@@ -311,6 +325,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formJugadorEventos.resx">
       <DependentUpon>formJugadorEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formParticipante.resx">
+      <DependentUpon>formParticipante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formParticipanteEventos.resx">
+      <DependentUpon>formParticipanteEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formPartido.resx">
       <DependentUpon>formPartido.cs</DependentUpon>

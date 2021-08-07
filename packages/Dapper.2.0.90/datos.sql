@@ -17,6 +17,16 @@ INSERT INTO jugador(pkId, nombre, anotaciones, fotografia, fkIdEquipo, fkIdRol) 
 INSERT INTO jugador(pkId, nombre, anotaciones, fotografia, fkIdEquipo, fkIdRol) VALUES (NULL, "Basket Jorge", "90", NULL, 2, 3);
 INSERT INTO jugador(pkId, nombre, anotaciones, fotografia, fkIdEquipo, fkIdRol) VALUES (NULL, "Basket Luis", "50", NULL, 2, 3);
 INSERT INTO campeonato(pkId, nombre, fechaInicio, fechaFinal, fkIdDeporte, fkIdTipoCampeonato) VALUES  (NULL, "LaLiga", "2021-01-01", "2021-01-01", 1, 1);
+INSERT INTO puestoempleado(pkId, nombre) VALUES  (NULL, "Trabajador");
+INSERT INTO puestoempleado(pkId, nombre) VALUES  (NULL, "Conserje");
+INSERT INTO puestoempleado(pkId, nombre) VALUES  (NULL, "Secretaria");
+INSERT INTO empleado(pkId, nombre, fkIdPuestoEmpleado) VALUES (NULL, "Jorge", 1);
+INSERT INTO estado(pkId, nombre) VALUES (NULL, "En espera");
+INSERT INTO estado(pkId, nombre) VALUES (NULL, "Finalizado");
+
+select * from partido;
+select * from vwpartido;
+INSERT INTO partido(pkId, equipo1, equipo2, anotacionesEquipo1, anotacionesEquipo2, campo, fecha, fase, fkIdCampeonato, fkIdEmpleado, fkIdEstado ) VALUES (NULL, "Madrid", "Barcelona", "2","4", "mateo",'2015-12-29 19:48' ,"final", 1 ,1, 1);
 
 /* Vista de jugador */
 DROP VIEW  IF EXISTS `vwJugador`;
@@ -40,6 +50,20 @@ B.pkId as pkIdDeporte, B.nombre AS deporte
 FROM equipo A
 INNER JOIN deporte B ON B.pkId = A.fkIdDeporte ORDER BY pkIdEquipo ASC;
 
+SELECT * FROM partido;
+DROP VIEW IF EXISTS `vwPartido`;
+CREATE VIEW `vwPartido` AS
+SELECT 
+A.pkId AS pkIdPartido, A.equipo1, A.equipo2, A.campo, A.anotacionesEquipo1, A.anotacionesEquipo2, A.fecha, A.fase,
+B.pkId AS pkIdCampeonato, B.nombre AS campeonato,
+C.pkId AS pkIdEmpleado, C.nombre AS empleado,
+D.pkId AS pkIdEstado, D.nombre AS estado
+FROM partido A
+INNER JOIN campeonato B ON B.pkId = A.fkIdCampeonato
+INNER JOIN empleado C ON C.pkId = A.fkIdEmpleado
+INNER JOIN estado D ON D.pkId = A.fkIdEstado
+ORDER BY pkIdPartido;
+select * from estado;
 
 /* Vista de campeonato */
 DROP VIEW IF EXISTS `vwcampeonato`;

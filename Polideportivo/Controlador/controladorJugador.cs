@@ -8,7 +8,7 @@ using System.Linq;
 namespace Controlador
 {
     /// <summary>
-    /// El controlador gestiona la tabla de jugadores de la base de datos
+    /// Clase que gestiona la tabla de jugadores de la base de datos
     /// </summary>
     public class controladorJugador
     {

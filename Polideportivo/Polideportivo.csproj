@@ -115,6 +115,7 @@
     <Compile Include="Controlador\controladorEntrenador.cs" />
     <Compile Include="Controlador\controladorEquipo.cs" />
     <Compile Include="Controlador\controladorJugador.cs" />
+    <Compile Include="Controlador\controladorParticipante.cs" />
     <Compile Include="Controlador\controladorPartido.cs" />
     <Compile Include="Controlador\controladorPuesto.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="Modelo\modeloEmpleado.cs" />
     <Compile Include="Modelo\modeloEntrenador.cs" />
     <Compile Include="Modelo\modeloEquipo.cs" />
+    <Compile Include="Modelo\modeloParticipante.cs" />
     <Compile Include="Modelo\modeloPartido.cs" />
     <Compile Include="Modelo\modeloPuesto.cs" />
     <Compile Include="Modelo\modeloRol.cs" />
@@ -206,6 +208,18 @@
     <Compile Include="Vista\formJugadorEventos.Designer.cs">
       <DependentUpon>formJugadorEventos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\formParticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formParticipante.Designer.cs">
+      <DependentUpon>formParticipante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\formParticipanteEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formParticipanteEventos.Designer.cs">
+      <DependentUpon>formParticipanteEventos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\formPartido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,11 +279,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwJugador.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Datos\vwPartido.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>vwPartido.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Datos\vwEntrenador.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -289,6 +298,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>vwTipoFalta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="vwPartido.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwPartido.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Vista\formCampeonato.resx">
       <DependentUpon>formCampeonato.cs</DependentUpon>
@@ -323,6 +337,12 @@
     <EmbeddedResource Include="Vista\formJugadorEventos.resx">
       <DependentUpon>formJugadorEventos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formParticipante.resx">
+      <DependentUpon>formParticipante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formParticipanteEventos.resx">
+      <DependentUpon>formParticipanteEventos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\formPartido.resx">
       <DependentUpon>formPartido.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,9 +375,6 @@
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="api\index.md" />
-    <None Include="articles\intro.md" />
-    <None Include="articles\toc.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -407,17 +424,6 @@
     <None Include="Datos\vwJugador.xss">
       <DependentUpon>vwJugador.xsd</DependentUpon>
     </None>
-    <None Include="Datos\vwPartido.xsc">
-      <DependentUpon>vwPartido.xsd</DependentUpon>
-    </None>
-    <None Include="Datos\vwPartido.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>vwPartido.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Datos\vwPartido.xss">
-      <DependentUpon>vwPartido.xsd</DependentUpon>
-    </None>
     <None Include="Datos\vwEntrenador.xsc">
       <DependentUpon>vwEntrenador.xsd</DependentUpon>
     </None>
@@ -461,6 +467,17 @@
     </None>
     <None Include="Datos\vwTipoFalta.xss">
       <DependentUpon>vwTipoFalta.xsd</DependentUpon>
+    </None>
+    <None Include="vwPartido.xsc">
+      <DependentUpon>vwPartido.xsd</DependentUpon>
+    </None>
+    <None Include="vwPartido.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwPartido.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vwPartido.xss">
+      <DependentUpon>vwPartido.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

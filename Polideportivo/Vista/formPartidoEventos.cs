@@ -25,8 +25,8 @@ namespace Vista
             btnAgregarPartido.Visible = false;
             formOriginal = form;
             txtFase.Text = modelo.fase;
-            txtEquipo1.Text = modelo.equipo1;
-            txtEquipo2.Text = modelo.equipo2;
+            txtAnotacionesE1.Text = modelo.anotacionesEquipo1.ToString();
+            txtAnotacionesE2.Text = modelo.anotacionesEquipo2.ToString();
             txtCampo.Text = modelo.campo;
             // Llenar combobox de deportes
             controladorCampeonato campeonato = new controladorCampeonato();
@@ -37,7 +37,7 @@ namespace Vista
             // Para obtener el Id original que se va a modificar
             modeloOriginal = modelo;
             // Modificar el texto del label
-            lblJugadorEvento.Text = "MODIFICAR JUGADOR";
+            lblJugadorEvento.Text = "MODIFICAR PARTIDO";
         }
 
         public formPartidoEventos(formPartido form)
@@ -53,7 +53,18 @@ namespace Vista
             cboCampeonato.ValueMember = "pkId";
             cboCampeonato.SelectedIndex = -1;
 
-            //CORREGIIIIIIIIIIIIIIR
+            controladorEquipo equipo1 = new controladorEquipo();
+            cboEquipo2.DataSource = equipo1.mostrarEquipo();
+            cboEquipo2.DisplayMember = "nombre";
+            cboEquipo2.ValueMember = "nombre";
+            cboEquipo2.SelectedIndex = -1;
+
+            controladorEquipo equipo2 = new controladorEquipo();
+            cboEquipo1.DataSource = equipo2.mostrarEquipo();
+            cboEquipo1.DisplayMember = "nombre";
+            cboEquipo1.ValueMember = "nombre";
+            cboEquipo1.SelectedIndex = -1;
+
             controladorEmpleado empleado = new controladorEmpleado();
             cboEmpleado.DataSource = empleado.mostrarEmpleado();
             cboEmpleado.DisplayMember = "nombre";
@@ -67,10 +78,6 @@ namespace Vista
             cboEstado.SelectedIndex = -1;
             formOriginal = form;
 
-
-            cboEmpleado.DisplayMember = "nombre";
-            cboEmpleado.ValueMember = "pkId";
-            cboEmpleado.SelectedIndex = -1;
             formOriginal = form;
             //Modificar el texto del título
             lblJugadorEvento.Text = "AGREGAR PARTIDO";
@@ -106,16 +113,21 @@ namespace Vista
 
         private void btnAgregarPartido_Click(object sender, EventArgs e)
         {
-            controladorPartido modeloAgregar = new controladorPartido();
+            controladorPartido controlador = new controladorPartido();
             modeloPartido modelo = new modeloPartido();
             modelo.fase = txtFase.Text;
-            modelo.equipo1 = txtEquipo1.Text;
-            modelo.equipo2 = txtEquipo2.Text;
             modelo.campo = txtCampo.Text;
+            modelo.equipo1 = cboEquipo1.Text;
+            modelo.equipo2 = cboEquipo2.Text;
+            string fecha = dateFecha.Value.ToString("yyyy-MM-dd");
+            string hora = dateHora.Value.ToString("HH:mm");
+            modelo.fecha = fecha + " " + hora;
+            modelo.anotacionesEquipo1 = stringAInt(txtAnotacionesE1.ToString());
+            modelo.anotacionesEquipo2 = stringAInt(txtAnotacionesE2.ToString());
             modelo.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
             modelo.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
             modelo.fkIdEstado = stringAInt(cboEstado.SelectedValue.ToString());
-            modeloAgregar.agregarPartido(modelo);
+            controlador.agregarPartido(modelo);
             formOriginal.actualizarTablaPartido();
             cerrarForm(this);
         }
@@ -126,7 +138,7 @@ namespace Vista
             modeloJugador modelo = new modeloJugador();
             modelo.pkId = modeloOriginal.pkId;
             modelo.nombre = txtFase.Text;
-            modelo.anotaciones = stringAInt(txtEquipo1.Text);
+            //modelo.anotaciones = stringAInt(txtEquipo1.Text);
             modelo.fkIdDeporte = stringAInt(cboCampeonato.SelectedValue.ToString());
             modelo.fkIdEquipo = stringAInt(cboEmpleado.SelectedValue.ToString());
             modeloModificar.modificarJugador(modelo);
@@ -135,6 +147,18 @@ namespace Vista
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void cdrFecha_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
         }
     }

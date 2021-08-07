@@ -81,6 +81,19 @@ namespace Controlador
             return sqlresultado;
         }
 
+        public List<modeloEquipo> mostrarEquipo()
+        {
+            List<modeloEquipo> sqlresultado = new List<modeloEquipo>();
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                string sqlconsulta = "SELECT * FROM equipo;";
+                sqlresultado = conexionODBC.Query<modeloEquipo>(sqlconsulta).ToList();
+                ODBC.cerrarConexion(conexionODBC);
+            }
+            return sqlresultado;
+        }
+
         public List<modeloEquipo> mostrarEquipoPorDeporte(modeloEquipo modelo)
         {
             List<modeloEquipo> sqlresultado = new List<modeloEquipo>();

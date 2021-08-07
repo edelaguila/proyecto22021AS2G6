@@ -116,6 +116,7 @@
     <Compile Include="Controlador\controladorPuesto.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
     <Compile Include="Controlador\controladorTipoCampeonato.cs" />
+    <Compile Include="Controlador\controladorTipoFalta.cs" />
     <Compile Include="Modelo\modeloEstado.cs" />
     <Compile Include="Modelo\modeloAnotacion.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="Modelo\modeloRol.cs" />
     <Compile Include="Modelo\modeloJugador.cs" />
     <Compile Include="Modelo\modeloTipoCampeonato.cs" />
+    <Compile Include="Modelo\modeloTipoFalta.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -225,6 +227,12 @@
     <Compile Include="Vista\formRol.Designer.cs">
       <DependentUpon>formRol.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\formTipoFalta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formTipoFalta.Designer.cs">
+      <DependentUpon>formTipoFalta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\utilidadForms.cs" />
     <Compile Include="Datos\vwCampeonato.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -265,6 +273,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>vwRol.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\vwTipoFalta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwTipoFalta.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Vista\formCampeonato.resx">
       <DependentUpon>formCampeonato.cs</DependentUpon>
@@ -322,10 +335,12 @@
     <EmbeddedResource Include="Vista\formRol.resx">
       <DependentUpon>formRol.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formTipoFalta.resx">
+      <DependentUpon>formTipoFalta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="docfx.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -419,7 +434,17 @@
     <None Include="Datos\vwRol.xss">
       <DependentUpon>vwRol.xsd</DependentUpon>
     </None>
-    <None Include="toc.yml" />
+    <None Include="Datos\vwTipoFalta.xsc">
+      <DependentUpon>vwTipoFalta.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\vwTipoFalta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwTipoFalta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\vwTipoFalta.xss">
+      <DependentUpon>vwTipoFalta.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config">
@@ -430,9 +455,4 @@
     <Folder Include="Imagenes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties docfx_1json__JsonSchema="" />
-    </VisualStudio>
-  </ProjectExtensions>
 </Project>

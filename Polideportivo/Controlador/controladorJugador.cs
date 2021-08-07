@@ -7,10 +7,18 @@ using System.Linq;
 
 namespace Controlador
 {
+    /// <summary>
+    /// Clase que gestiona la tabla de jugadores de la base de datos
+    /// </summary>
     public class controladorJugador
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
+        /// <summary>
+        /// Método que sirve para agregar nuevos jugadores a la base de datos
+        /// </summary>
+        /// <param name="modelo"></param>
+        /// <returns></returns>
         public modeloJugador agregarJugador(modeloJugador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -33,7 +41,7 @@ namespace Controlador
         }
 
         /// <summary>
-        /// Prueba de modificar
+        /// Método que sirve para modificar jugadores
         /// </summary>
         /// <param name="modelo"></param>
         /// <returns></returns>

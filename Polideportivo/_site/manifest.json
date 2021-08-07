@@ -940,12 +940,21 @@
       "version": ""
     },
     {
+<<<<<<< HEAD
       "type": "ManagedReference",
       "source_relative_path": "api/Datos.vwRol.vwrolRowChangeEvent.yml",
       "output": {
         ".html": {
           "relative_path": "api/Datos.vwRol.vwrolRowChangeEvent.html",
           "hash": "Op/m4th42cVedOX3rSO0TRNjb5PD4cqGqewbxVazoi8="
+=======
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "/A31ut60TNWqBOtK10BuwvIagM/XBIXQ8c57orKmAxA="
+>>>>>>> f6f53d3904f7923df4a1d1e44f41abc3a65b146c
         }
       },
       "is_incremental": false,
@@ -953,11 +962,19 @@
     },
     {
       "type": "ManagedReference",
+<<<<<<< HEAD
       "source_relative_path": "api/Datos.vwRol.vwrolRowChangeEventHandler.yml",
       "output": {
         ".html": {
           "relative_path": "api/Datos.vwRol.vwrolRowChangeEventHandler.html",
           "hash": "jRZO+54mp8EmwOZkab+JnBDmebBtGrNmOdewfVk7cpg="
+=======
+      "source_relative_path": "obj/api/Conexion.ConexionODBC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Conexion.ConexionODBC.html",
+          "hash": "7PofOJ5g7TUY4yyVgxHpaJdOqbJmwc2nZjbsqqlxFoM="
+>>>>>>> f6f53d3904f7923df4a1d1e44f41abc3a65b146c
         }
       },
       "is_incremental": false,
@@ -965,11 +982,19 @@
     },
     {
       "type": "ManagedReference",
+<<<<<<< HEAD
       "source_relative_path": "api/Datos.vwRol.yml",
       "output": {
         ".html": {
           "relative_path": "api/Datos.vwRol.html",
           "hash": "vGLcigYGcaRGrDuodq7sGDmhyPhFLLTFwHtVYs8uuC0="
+=======
+      "source_relative_path": "obj/api/Conexion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Conexion.html",
+          "hash": "rGwWTqjQwsz4llabMxrpjWiMpVG7P2CBi30mTfJV9lE="
+>>>>>>> f6f53d3904f7923df4a1d1e44f41abc3a65b146c
         }
       },
       "is_incremental": false,
@@ -1064,8 +1089,13 @@
       "source_relative_path": "api/Modelo.modeloDeporte.yml",
       "output": {
         ".html": {
+<<<<<<< HEAD
           "relative_path": "api/Modelo.modeloDeporte.html",
           "hash": "WqZSTb2pM6IFxiL2gH1DzhhHW+Vm6A5KWp959SlxfGw="
+=======
+          "relative_path": "api/Controlador.controladorJugador.html",
+          "hash": "za34aIClJrRgJcDSrSrMyNzHNchgJX2IfAGtt8UmvlI="
+>>>>>>> f6f53d3904f7923df4a1d1e44f41abc3a65b146c
         }
       },
       "is_incremental": false,
@@ -1124,8 +1154,13 @@
       "source_relative_path": "api/Modelo.modeloJugador.yml",
       "output": {
         ".html": {
+<<<<<<< HEAD
           "relative_path": "api/Modelo.modeloJugador.html",
           "hash": "c/ICSs0apezuBc2xCgpxb+A7Tl3OOB7cXea2I9g9F5c="
+=======
+          "relative_path": "api/Controlador.html",
+          "hash": "FJq4KhL2y0HXiDrAQqfqh/9FZ6CmepVzhPiMErf4llU="
+>>>>>>> f6f53d3904f7923df4a1d1e44f41abc3a65b146c
         }
       },
       "is_incremental": false,
@@ -1621,6 +1656,7 @@
         }
       },
       "is_incremental": false,
+<<<<<<< HEAD
       "version": ""
     },
     {
@@ -1633,6 +1669,8 @@
         }
       },
       "is_incremental": false,
+=======
+>>>>>>> f6f53d3904f7923df4a1d1e44f41abc3a65b146c
       "version": ""
     },
     {
@@ -1641,6 +1679,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
+<<<<<<< HEAD
           "hash": "Ne535ixtxIyCUqLYMr+pTkoBnkKrqjdTvJ7ITEJOtxA="
         }
       },
@@ -1678,6 +1717,9 @@
         ".html": {
           "relative_path": "index.html",
           "hash": "c1AFPI7NE9Cl0+MYO1wDZz1oeUYT8JyF6HCTr9GbqtY="
+=======
+          "hash": "4S3MhAmY7Q3MVlvyRelRs+8AJoBkm9hhgJ74MPNxd6A="
+>>>>>>> f6f53d3904f7923df4a1d1e44f41abc3a65b146c
         }
       },
       "is_incremental": false,
@@ -1689,7 +1731,11 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
+<<<<<<< HEAD
           "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
+=======
+          "hash": "dptXFveAROtBm6eGktoUfpg5I5Y68LZDPz1goww6wSs="
+>>>>>>> f6f53d3904f7923df4a1d1e44f41abc3a65b146c
         }
       },
       "is_incremental": false,
@@ -1710,14 +1756,24 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
+<<<<<<< HEAD
           "total_file_count": 3,
           "skipped_file_count": 0
+=======
+          "total_file_count": 2,
+          "skipped_file_count": 1
+>>>>>>> f6f53d3904f7923df4a1d1e44f41abc3a65b146c
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
+<<<<<<< HEAD
           "total_file_count": 135,
           "skipped_file_count": 0
+=======
+          "total_file_count": 45,
+          "skipped_file_count": 43
+>>>>>>> f6f53d3904f7923df4a1d1e44f41abc3a65b146c
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

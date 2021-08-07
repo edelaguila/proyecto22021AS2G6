@@ -46,6 +46,7 @@ namespace Vista
             this.vwempleadoTableAdapter.Fill(this.vwEmpleado.vwempleado);
         }
 
+        private modeloEmpleado modeloFila = new modeloEmpleado();
         private void llenarModeloConFilaSeleccionada()
         {
             id = stringAInt(tablaEmpleado.SelectedRows[0].Cells[0].Value.ToString());
@@ -53,7 +54,7 @@ namespace Vista
             modeloFila.pkId = id;
         }
 
-        private modeloEntrenador modeloFila = new modeloEntrenador();
+
 
         private void tablaEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -70,14 +71,13 @@ namespace Vista
             modeloAgregar.agregarEmpleado(modelo);
             actualizarTablaEmpleado();
         }
-
         private void btnModificarEmpleado_Click(object sender, EventArgs e)
         {
-            controladorEmpleado modeloModificar = new controladorEmpleado();
+           controladorEmpleado modeloModificar = new controladorEmpleado();
             modeloEmpleado modelo = new modeloEmpleado();
-            modelo.nombre = txtNombre.Text;
-            modelo.fkIdPuestoEmpleado = stringAInt(cboPuesto.SelectedValue.ToString());
-            modeloModificar.modificarEmpleado(modelo);
+            modeloFila.nombre = txtNombre.Text;
+            modeloFila.fkIdPuestoEmpleado = stringAInt(cboPuesto.SelectedValue.ToString());
+            modeloModificar.modificarEmpleado(modeloFila);
             actualizarTablaEmpleado();
         }
 

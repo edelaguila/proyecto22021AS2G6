@@ -31,8 +31,8 @@ namespace Vista
 
         private void formPartido_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'vwPartido.vwpartido' Puede moverla o quitarla según sea necesario.
-            this.vwpartidoTableAdapter.Fill(this.vwPartido.vwpartido);
+            // TODO: esta línea de código carga datos en la tabla 'vwPartidos.vwpartido' Puede moverla o quitarla según sea necesario.
+            this.vwpartidoTableAdapter.Fill(this.vwPartidos.vwpartido);
             cboBuscar.SelectedIndex = 0;
             tablaPartidos.CurrentCell = tablaPartidos.Rows[0].Cells[1];
             llenarModeloConFilaSeleccionada();
@@ -40,7 +40,7 @@ namespace Vista
 
         public void actualizarTablaPartido()
         {
-            this.vwpartidoTableAdapter.Fill(this.vwPartido.vwpartido);
+            this.vwpartidoTableAdapter.Fill(this.vwPartidos.vwpartido);
         }
 
         private void tablapartidos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -93,6 +93,7 @@ namespace Vista
             equipo1 = tablaPartidos.SelectedRows[0].Cells[2].Value.ToString();
             equipo2 = tablaPartidos.SelectedRows[0].Cells[3].Value.ToString();
             campo = tablaPartidos.SelectedRows[0].Cells[4].Value.ToString();
+            fecha = tablaPartidos.SelectedRows[0].Cells[9].Value.ToString();
             fkIdEstado = stringAInt(tablaPartidos.SelectedRows[0].Cells[5].Value.ToString());
             fkIdCampeonato = stringAInt(tablaPartidos.SelectedRows[0].Cells[6].Value.ToString());
             fkIdEmpleado = stringAInt(tablaPartidos.SelectedRows[0].Cells[7].Value.ToString());
@@ -103,7 +104,7 @@ namespace Vista
             modeloFila.fkIdEstado = fkIdEstado;
             modeloFila.fkIdCampeonato = fkIdCampeonato;
             modeloFila.fkIdEmpleado = fkIdEmpleado;
-            modeloFila.fkIdResultado = fkIdResultado;
+
         }
 
         private void filtrarTabla()
@@ -121,6 +122,11 @@ namespace Vista
         private void btnAgregarPartido_Click_1(object sender, EventArgs e)
         {
             abrirForm(new formPartidoEventos(this));
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            abrirForm(new formPartidoEventos(modeloFila, this));
         }
     }
 }

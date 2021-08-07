@@ -17,20 +17,21 @@ namespace Controlador
             if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "INSERT INTO jugador (pkId, equipo1, equipo2, campo, fecha, fase, fkIdCampeonato, " +
-                "fkIdEmpleado, fkIdResultado, fkIdEstado) " +
-                "VALUES (NULL, ?equipo1?, ?equipo2?, ?campo?, ?fecha?, ?fase?, ?fkIdCampeonato?, " +
-                "?fkIdEmpleado?, ?fkIdResultado?, ?fkIdEstado?);";
+                "INSERT INTO partido (pkId, equipo1, equipo2,anotacionesEquipo1, anotacionesEquipo2, campo, fecha, fase, fkIdCampeonato, " +
+                "fkIdEmpleado, fkIdEstado) " +
+                "VALUES (NULL, ?equipo1?, ?equipo2?,  ?anotacionesEquipo1?, ?anotacionesEquipo2?,?campo?, ?fecha?, ?fase?, ?fkIdCampeonato?, " +
+                "?fkIdEmpleado?, ?fkIdEstado?);";
                 var ValorDeVariables = new
                 {
                     equipo1 = modelo.equipo1,
                     equipo2 = modelo.equipo2,
+                    anotacionesEquipo1 = modelo.anotacionesEquipo1,
+                    anotacionesEquipo2 = modelo.anotacionesEquipo2,
                     campo = modelo.campo,
                     fecha = modelo.fecha,
                     fase = modelo.fase,
                     fkIdCampeonato = modelo.fkIdCampeonato,
                     fkIdEmpleado = modelo.fkIdEmpleado,
-                    fkIdResultado = modelo.fkIdResultado,
                     fkIdEstado = modelo.fkIdEstado
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
@@ -48,7 +49,7 @@ namespace Controlador
                 "UPDATE partido SET equipo1 = ?equipo1?, equipo2 = ?equipo2?, " +
                 "campo = ?campo?, fecha = ?fecha? " +
                 "fase = ?fase?, fkIdCampeonato = ?fkIdCampeonato?, fkIdEmpleado = ?fkIdEmpleado? " +
-                "fkIdResultado = ?fkIdResultado?, " + "fkIdEstado = ?fkIdEstado?, " +
+                "anotacionesEquipo1 = ?anotacionesEquipo1?,  " + "anotacionesEquipo2 = ?anotacionesEquipo2?,  " + "fkIdEstado = ?fkIdEstado?, " +
                 "WHERE pkId = ?pkId?;";
                 var ValorDeVariables = new
                 {
@@ -59,7 +60,6 @@ namespace Controlador
                     fase = modelo.fase,
                     fkIdCampeonato = modelo.fkIdCampeonato,
                     fkIdEmpleado = modelo.fkIdEmpleado,
-                    fkIdResultado = modelo.fkIdResultado,
                     fkIdEstado = modelo.fkIdEstado,
                     pkId = modelo.pkId
                 };

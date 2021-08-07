@@ -34,6 +34,31 @@ namespace Vista
             cboCampeonato.DisplayMember = "nombre";
             cboCampeonato.ValueMember = "pkId";
             cboCampeonato.SelectedIndex = -1;
+
+            controladorEquipo equipo1 = new controladorEquipo();
+            cboEquipo2.DataSource = equipo1.mostrarEquipo();
+            cboEquipo2.DisplayMember = "nombre";
+            cboEquipo2.ValueMember = "nombre";
+            cboEquipo2.SelectedIndex = -1;
+
+            controladorEquipo equipo2 = new controladorEquipo();
+            cboEquipo1.DataSource = equipo2.mostrarEquipo();
+            cboEquipo1.DisplayMember = "nombre";
+            cboEquipo1.ValueMember = "nombre";
+            cboEquipo1.SelectedIndex = -1;
+
+            controladorEmpleado empleado = new controladorEmpleado();
+            cboEmpleado.DataSource = empleado.mostrarEmpleado();
+            cboEmpleado.DisplayMember = "nombre";
+            cboEmpleado.ValueMember = "pkId";
+            cboEmpleado.SelectedIndex = -1;
+
+            controladorEstado estado = new controladorEstado();
+            cboEstado.DataSource = estado.mostrarEstado();
+            cboEstado.DisplayMember = "nombre";
+            cboEstado.ValueMember = "pkId";
+            cboEstado.SelectedIndex = -1;
+            formOriginal = form;
             // Para obtener el Id original que se va a modificar
             modeloOriginal = modelo;
             // Modificar el texto del label
@@ -134,14 +159,21 @@ namespace Vista
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
-            controladorJugador modeloModificar = new controladorJugador();
-            modeloJugador modelo = new modeloJugador();
-            modelo.pkId = modeloOriginal.pkId;
-            modelo.nombre = txtFase.Text;
-            //modelo.anotaciones = stringAInt(txtEquipo1.Text);
-            modelo.fkIdDeporte = stringAInt(cboCampeonato.SelectedValue.ToString());
-            modelo.fkIdEquipo = stringAInt(cboEmpleado.SelectedValue.ToString());
-            modeloModificar.modificarJugador(modelo);
+            controladorPartido controlador = new controladorPartido();
+            modeloPartido modelo = new modeloPartido();
+            modeloOriginal.fase = txtFase.Text;
+            modeloOriginal.campo = txtCampo.Text;
+            modeloOriginal.equipo1 = cboEquipo1.Text;
+            modeloOriginal.equipo2 = cboEquipo2.Text;
+            string fecha = dateFecha.Value.ToString("yyyy-MM-dd");
+            string hora = dateHora.Value.ToString("HH:mm");
+            modeloOriginal.fecha = fecha + " " + hora;
+            modeloOriginal.anotacionesEquipo1 = stringAInt(txtAnotacionesE1.ToString());
+            modeloOriginal.anotacionesEquipo2 = stringAInt(txtAnotacionesE2.ToString());
+            modeloOriginal.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
+            modeloOriginal.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
+            modeloOriginal.fkIdEstado = stringAInt(cboEstado.SelectedValue.ToString());
+            controlador.modificarPartido(modelo);
             formOriginal.actualizarTablaPartido();
             cerrarForm(this);
         }

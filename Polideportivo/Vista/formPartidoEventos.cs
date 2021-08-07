@@ -113,19 +113,21 @@ namespace Vista
 
         private void btnAgregarPartido_Click(object sender, EventArgs e)
         {
-            controladorPartido modeloAgregar = new controladorPartido();
+            controladorPartido controlador = new controladorPartido();
             modeloPartido modelo = new modeloPartido();
             modelo.fase = txtFase.Text;
             modelo.campo = txtCampo.Text;
             modelo.equipo1 = cboEquipo1.Text;
             modelo.equipo2 = cboEquipo2.Text;
-           // modelo.fecha = fechaHora.Value.ToString("yyyy-MM-dd HH:mm:ss");
+            string fecha = dateFecha.Value.ToString("yyyy-MM-dd");
+            string hora = dateHora.Value.ToString("HH:mm");
+            modelo.fecha = fecha + " " + hora;
             modelo.anotacionesEquipo1 = stringAInt(txtAnotacionesE1.ToString());
             modelo.anotacionesEquipo2 = stringAInt(txtAnotacionesE2.ToString());
             modelo.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
             modelo.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
             modelo.fkIdEstado = stringAInt(cboEstado.SelectedValue.ToString());
-            modeloAgregar.agregarPartido(modelo);
+            controlador.agregarPartido(modelo);
             formOriginal.actualizarTablaPartido();
             cerrarForm(this);
         }
@@ -150,17 +152,14 @@ namespace Vista
 
         private void cdrFecha_ValueChanged(object sender, EventArgs e)
         {
-
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

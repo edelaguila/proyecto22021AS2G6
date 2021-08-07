@@ -10,7 +10,7 @@ namespace Modelo
         public int anotacionesEquipo1 { get; set; }
         public int anotacionesEquipo2 { get; set; }
         public string campo { get; set; }
-        public DateTime fecha { get; set; }
+        public string fecha { get; set; }
         public string fase { get; set; }
         public int fkIdCampeonato { get; set; }
         public int fkIdEmpleado { get; set; }
@@ -20,7 +20,7 @@ namespace Modelo
         {
         }
 
-        public modeloPartido(int Id, string Equipo1, string Equipo2, string Campo, DateTime Fecha, string Estado, string Fase, int IdCampeonato, int IdEmpleado, int IdResultado, int IdEstado, int anotacion1,int anotacion2)
+        public modeloPartido(int Id, string Equipo1, string Equipo2, string Campo, string Fecha, string Estado, string Fase, int IdCampeonato, int IdEmpleado, int IdResultado, int IdEstado, int anotacion1, int anotacion2)
         {
             pkId = Id;
             equipo1 = Equipo1;

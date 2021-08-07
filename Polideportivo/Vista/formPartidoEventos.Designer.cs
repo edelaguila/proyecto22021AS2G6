@@ -51,12 +51,14 @@ namespace Vista
             this.label2 = new System.Windows.Forms.Label();
             this.btnModificarPartido = new System.Windows.Forms.Button();
             this.btnAgregarPartido = new System.Windows.Forms.Button();
-            this.lblRol = new System.Windows.Forms.Label();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblJugadorEvento = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.fechaHora = new System.Windows.Forms.DateTimePicker();
+            this.dateFecha = new System.Windows.Forms.DateTimePicker();
+            this.dateHora = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.parrotGradientPanel2.SuspendLayout();
             this.parrotGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,7 +68,7 @@ namespace Vista
             // txtFase
             // 
             this.txtFase.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFase.Location = new System.Drawing.Point(71, 271);
+            this.txtFase.Location = new System.Drawing.Point(71, 269);
             this.txtFase.Name = "txtFase";
             this.txtFase.Size = new System.Drawing.Size(121, 27);
             this.txtFase.TabIndex = 1;
@@ -77,7 +79,7 @@ namespace Vista
             this.lblEquipo.BackColor = System.Drawing.Color.Transparent;
             this.lblEquipo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEquipo.ForeColor = System.Drawing.Color.White;
-            this.lblEquipo.Location = new System.Drawing.Point(248, 195);
+            this.lblEquipo.Location = new System.Drawing.Point(254, 196);
             this.lblEquipo.Name = "lblEquipo";
             this.lblEquipo.Size = new System.Drawing.Size(86, 18);
             this.lblEquipo.TabIndex = 4;
@@ -89,7 +91,7 @@ namespace Vista
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(68, 250);
+            this.lblNombre.Location = new System.Drawing.Point(69, 250);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(43, 18);
             this.lblNombre.TabIndex = 0;
@@ -113,9 +115,9 @@ namespace Vista
             this.cboEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboEmpleado.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEmpleado.FormattingEnabled = true;
-            this.cboEmpleado.Location = new System.Drawing.Point(251, 216);
+            this.cboEmpleado.Location = new System.Drawing.Point(255, 215);
             this.cboEmpleado.Name = "cboEmpleado";
-            this.cboEmpleado.Size = new System.Drawing.Size(121, 27);
+            this.cboEmpleado.Size = new System.Drawing.Size(124, 27);
             this.cboEmpleado.TabIndex = 16;
             // 
             // label1
@@ -124,7 +126,7 @@ namespace Vista
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(68, 134);
+            this.label1.Location = new System.Drawing.Point(67, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 18);
             this.label1.TabIndex = 19;
@@ -136,7 +138,7 @@ namespace Vista
             this.cboCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboCampeonato.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCampeonato.FormattingEnabled = true;
-            this.cboCampeonato.Location = new System.Drawing.Point(71, 155);
+            this.cboCampeonato.Location = new System.Drawing.Point(71, 161);
             this.cboCampeonato.Name = "cboCampeonato";
             this.cboCampeonato.Size = new System.Drawing.Size(121, 27);
             this.cboCampeonato.TabIndex = 18;
@@ -146,13 +148,16 @@ namespace Vista
             this.parrotGradientPanel2.BottomLeft = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel2.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
+            this.parrotGradientPanel2.Controls.Add(this.label8);
+            this.parrotGradientPanel2.Controls.Add(this.label5);
+            this.parrotGradientPanel2.Controls.Add(this.dateHora);
+            this.parrotGradientPanel2.Controls.Add(this.dateFecha);
             this.parrotGradientPanel2.Controls.Add(this.txtAnotacionesE1);
             this.parrotGradientPanel2.Controls.Add(this.txtAnotacionesE2);
             this.parrotGradientPanel2.Controls.Add(this.label7);
             this.parrotGradientPanel2.Controls.Add(this.label6);
             this.parrotGradientPanel2.Controls.Add(this.cboEquipo1);
             this.parrotGradientPanel2.Controls.Add(this.cboEquipo2);
-            this.parrotGradientPanel2.Controls.Add(this.fechaHora);
             this.parrotGradientPanel2.Controls.Add(this.cboEstado);
             this.parrotGradientPanel2.Controls.Add(this.label4);
             this.parrotGradientPanel2.Controls.Add(this.label3);
@@ -162,7 +167,6 @@ namespace Vista
             this.parrotGradientPanel2.Controls.Add(this.btnAgregarPartido);
             this.parrotGradientPanel2.Controls.Add(this.cboCampeonato);
             this.parrotGradientPanel2.Controls.Add(this.label1);
-            this.parrotGradientPanel2.Controls.Add(this.lblRol);
             this.parrotGradientPanel2.Controls.Add(this.txtFase);
             this.parrotGradientPanel2.Controls.Add(this.cboEmpleado);
             this.parrotGradientPanel2.Controls.Add(this.lblNombre);
@@ -174,7 +178,7 @@ namespace Vista
             this.parrotGradientPanel2.Name = "parrotGradientPanel2";
             this.parrotGradientPanel2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighSpeed;
             this.parrotGradientPanel2.PrimerColor = System.Drawing.Color.White;
-            this.parrotGradientPanel2.Size = new System.Drawing.Size(450, 431);
+            this.parrotGradientPanel2.Size = new System.Drawing.Size(450, 478);
             this.parrotGradientPanel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             this.parrotGradientPanel2.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
             this.parrotGradientPanel2.TabIndex = 10;
@@ -185,7 +189,7 @@ namespace Vista
             // txtAnotacionesE1
             // 
             this.txtAnotacionesE1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnotacionesE1.Location = new System.Drawing.Point(71, 104);
+            this.txtAnotacionesE1.Location = new System.Drawing.Point(71, 107);
             this.txtAnotacionesE1.Name = "txtAnotacionesE1";
             this.txtAnotacionesE1.Size = new System.Drawing.Size(121, 27);
             this.txtAnotacionesE1.TabIndex = 48;
@@ -193,9 +197,9 @@ namespace Vista
             // txtAnotacionesE2
             // 
             this.txtAnotacionesE2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnotacionesE2.Location = new System.Drawing.Point(248, 104);
+            this.txtAnotacionesE2.Location = new System.Drawing.Point(255, 107);
             this.txtAnotacionesE2.Name = "txtAnotacionesE2";
-            this.txtAnotacionesE2.Size = new System.Drawing.Size(121, 27);
+            this.txtAnotacionesE2.Size = new System.Drawing.Size(124, 27);
             this.txtAnotacionesE2.TabIndex = 47;
             // 
             // label7
@@ -204,7 +208,7 @@ namespace Vista
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(68, 83);
+            this.label7.Location = new System.Drawing.Point(67, 88);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 18);
             this.label7.TabIndex = 46;
@@ -216,7 +220,7 @@ namespace Vista
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(245, 83);
+            this.label6.Location = new System.Drawing.Point(252, 87);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 18);
             this.label6.TabIndex = 45;
@@ -240,7 +244,7 @@ namespace Vista
             this.cboEquipo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboEquipo2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEquipo2.FormattingEnabled = true;
-            this.cboEquipo2.Location = new System.Drawing.Point(248, 53);
+            this.cboEquipo2.Location = new System.Drawing.Point(255, 53);
             this.cboEquipo2.Name = "cboEquipo2";
             this.cboEquipo2.Size = new System.Drawing.Size(124, 27);
             this.cboEquipo2.TabIndex = 41;
@@ -251,9 +255,9 @@ namespace Vista
             this.cboEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboEstado.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(251, 155);
+            this.cboEstado.Location = new System.Drawing.Point(255, 161);
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(121, 27);
+            this.cboEstado.Size = new System.Drawing.Size(124, 27);
             this.cboEstado.TabIndex = 39;
             this.cboEstado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -263,7 +267,7 @@ namespace Vista
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(248, 134);
+            this.label4.Location = new System.Drawing.Point(255, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 18);
             this.label4.TabIndex = 36;
@@ -284,7 +288,7 @@ namespace Vista
             // txtCampo
             // 
             this.txtCampo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCampo.Location = new System.Drawing.Point(71, 216);
+            this.txtCampo.Location = new System.Drawing.Point(71, 215);
             this.txtCampo.Name = "txtCampo";
             this.txtCampo.Size = new System.Drawing.Size(121, 27);
             this.txtCampo.TabIndex = 34;
@@ -295,7 +299,7 @@ namespace Vista
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(248, 32);
+            this.label2.Location = new System.Drawing.Point(255, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 18);
             this.label2.TabIndex = 33;
@@ -312,10 +316,10 @@ namespace Vista
             this.btnModificarPartido.ForeColor = System.Drawing.Color.Black;
             this.btnModificarPartido.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarPartido.Image")));
             this.btnModificarPartido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarPartido.Location = new System.Drawing.Point(84, 362);
+            this.btnModificarPartido.Location = new System.Drawing.Point(71, 408);
             this.btnModificarPartido.Name = "btnModificarPartido";
             this.btnModificarPartido.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnModificarPartido.Size = new System.Drawing.Size(291, 36);
+            this.btnModificarPartido.Size = new System.Drawing.Size(308, 36);
             this.btnModificarPartido.TabIndex = 30;
             this.btnModificarPartido.Text = "    M O D I F I C A R";
             this.btnModificarPartido.UseVisualStyleBackColor = false;
@@ -332,7 +336,7 @@ namespace Vista
             this.btnAgregarPartido.ForeColor = System.Drawing.Color.Black;
             this.btnAgregarPartido.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarPartido.Image")));
             this.btnAgregarPartido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarPartido.Location = new System.Drawing.Point(84, 362);
+            this.btnAgregarPartido.Location = new System.Drawing.Point(84, 408);
             this.btnAgregarPartido.Name = "btnAgregarPartido";
             this.btnAgregarPartido.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btnAgregarPartido.Size = new System.Drawing.Size(291, 36);
@@ -340,18 +344,6 @@ namespace Vista
             this.btnAgregarPartido.Text = "     A G R E G A R";
             this.btnAgregarPartido.UseVisualStyleBackColor = false;
             this.btnAgregarPartido.Click += new System.EventHandler(this.btnAgregarPartido_Click);
-            // 
-            // lblRol
-            // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.BackColor = System.Drawing.Color.Transparent;
-            this.lblRol.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.ForeColor = System.Drawing.Color.White;
-            this.lblRol.Location = new System.Drawing.Point(245, 257);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(102, 18);
-            this.lblRol.TabIndex = 9;
-            this.lblRol.Text = "FECHA/HORA";
             // 
             // parrotGradientPanel1
             // 
@@ -411,20 +403,61 @@ namespace Vista
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // fechaHora
+            // dateFecha
             // 
-            this.fechaHora.CustomFormat = "yyyy-MM-dd HH:mm:ss";
-            this.fechaHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechaHora.Location = new System.Drawing.Point(248, 278);
-            this.fechaHora.Name = "fechaHora";
-            this.fechaHora.Size = new System.Drawing.Size(127, 20);
-            this.fechaHora.TabIndex = 40;
+            this.dateFecha.CalendarFont = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateFecha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateFecha.CustomFormat = "";
+            this.dateFecha.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateFecha.Location = new System.Drawing.Point(71, 345);
+            this.dateFecha.Name = "dateFecha";
+            this.dateFecha.Size = new System.Drawing.Size(228, 23);
+            this.dateFecha.TabIndex = 51;
+            this.dateFecha.Value = new System.DateTime(2021, 8, 3, 19, 48, 0, 0);
+            // 
+            // dateHora
+            // 
+            this.dateHora.CalendarFont = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateHora.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateHora.CustomFormat = "HH:mm";
+            this.dateHora.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateHora.Location = new System.Drawing.Point(315, 345);
+            this.dateHora.Name = "dateHora";
+            this.dateHora.ShowUpDown = true;
+            this.dateHora.Size = new System.Drawing.Size(64, 23);
+            this.dateHora.TabIndex = 52;
+            this.dateHora.Value = new System.DateTime(2021, 8, 3, 19, 48, 0, 0);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(312, 324);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 18);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "HORA";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(68, 324);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 18);
+            this.label8.TabIndex = 54;
+            this.label8.Text = "FECHA";
             // 
             // formPartidoEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 493);
+            this.ClientSize = new System.Drawing.Size(450, 540);
             this.Controls.Add(this.parrotGradientPanel2);
             this.Controls.Add(this.parrotGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -461,13 +494,15 @@ namespace Vista
         private System.Windows.Forms.TextBox txtCampo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboEstado;
-        private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboEquipo1;
         private System.Windows.Forms.ComboBox cboEquipo2;
         private System.Windows.Forms.TextBox txtAnotacionesE1;
         private System.Windows.Forms.TextBox txtAnotacionesE2;
-        private System.Windows.Forms.DateTimePicker fechaHora;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dateHora;
+        private System.Windows.Forms.DateTimePicker dateFecha;
     }
 }

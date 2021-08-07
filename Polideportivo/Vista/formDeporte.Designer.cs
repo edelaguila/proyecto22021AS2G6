@@ -1,7 +1,7 @@
 ﻿
-using Polideportivo.Datos;
+using Datos;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
     partial class formDeporte
     {
@@ -39,7 +39,7 @@ namespace Polideportivo.Vista
             this.pkIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwDeporteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwDeportes = new Polideportivo.Datos.vwDeportes();
+            this.vwDeportes = new Datos.vwDeportes();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombreDeporte = new System.Windows.Forms.TextBox();
@@ -53,7 +53,7 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarDeporte = new System.Windows.Forms.Button();
             this.btnAgregarDeporte = new System.Windows.Forms.Button();
-            this.deporteTableAdapter = new Polideportivo.Datos.vwDeportesTableAdapters.deporteTableAdapter();
+            this.deporteTableAdapter = new Datos.vwDeportesTableAdapters.deporteTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDeportes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwDeporteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwDeportes)).BeginInit();

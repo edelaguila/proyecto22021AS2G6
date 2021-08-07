@@ -1,8 +1,8 @@
 ﻿using System.Windows.Forms;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
-    internal class utilidadForms
+    public class utilidadForms
     {
         public static void abrirForm(Form formEvento)
         {

@@ -1,5 +1,5 @@
 ﻿
-namespace Polideportivo.Vista
+namespace Vista
 {
     partial class formJugadorEventos
     {

@@ -1,6 +1,6 @@
-﻿namespace Polideportivo.Modelo
+﻿namespace Modelo
 {
-    internal class modeloTipoCampeonato
+    public class modeloTipoCampeonato
     {
         public int pkId { get; set; }
         public string tipo { get; set; }

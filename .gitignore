@@ -2,7 +2,13 @@
 *.suo
 *.exe
 *.pdb
+.vs
+*/**/obj
 AppSettings.config
+docfx.json
+filterConfig.yml
+toc.yml
+index.md
 /Polideportivo/connectionStrings.config
 */**/bin/Debug
 */**/bin/Release
@@ -10,3 +16,8 @@ AppSettings.config
 */**/obj/Release
 */**/Properties/Settings.settings
 */**/Properties/Settings.Designer.cs
+docfx.console.2.58.0
+*/**/api
+*/**/obj/api
+*/**/obj
+*/**/articles

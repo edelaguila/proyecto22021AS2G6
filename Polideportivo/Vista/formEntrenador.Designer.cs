@@ -1,7 +1,4 @@
-﻿
-using Polideportivo.Datos;
-
-namespace Polideportivo.Vista
+﻿namespace Vista
 {
     partial class formEntrenador
     {
@@ -43,7 +40,7 @@ namespace Polideportivo.Vista
             this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwentrenadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwEntrenador = new Polideportivo.Datos.vwEntrenador();
+            this.vwEntrenador = new Datos.vwEntrenador();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.cboDeporte = new System.Windows.Forms.ComboBox();
@@ -61,7 +58,7 @@ namespace Polideportivo.Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarEntrenador = new System.Windows.Forms.Button();
             this.btnAgregarEntrenador = new System.Windows.Forms.Button();
-            this.vwentrenadorTableAdapter = new Polideportivo.Datos.vwEntrenadorTableAdapters.vwentrenadorTableAdapter();
+            this.vwentrenadorTableAdapter = new Datos.vwEntrenadorTableAdapters.vwentrenadorTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkIdEquipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,8 +77,8 @@ namespace Polideportivo.Vista
             // 
             // tablaEntrenador
             // 
-            this.tablaEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tablaEntrenador.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tablaEntrenador.AutoGenerateColumns = false;
             this.tablaEntrenador.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -344,7 +341,7 @@ namespace Polideportivo.Vista
             // 
             // panelBuscarCol
             // 
-            this.panelBuscarCol.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelBuscarCol.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBuscarCol.BackColor = System.Drawing.Color.White;
             this.panelBuscarCol.Controls.Add(this.cboBuscar);
@@ -356,8 +353,8 @@ namespace Polideportivo.Vista
             // 
             // cboBuscar
             // 
-            this.cboBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.cboBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -382,7 +379,7 @@ namespace Polideportivo.Vista
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.txtFiltrar);
@@ -394,8 +391,8 @@ namespace Polideportivo.Vista
             // 
             // txtFiltrar
             // 
-            this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFiltrar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -504,9 +501,9 @@ namespace Polideportivo.Vista
         private System.Windows.Forms.ComboBox cboEquipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEntrenadorDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label2;
-        private vwEntrenador vwEntrenador;
+        private Datos.vwEntrenador vwEntrenador;
         private System.Windows.Forms.BindingSource vwentrenadorBindingSource;
-        private Polideportivo.Datos.vwEntrenadorTableAdapters.vwentrenadorTableAdapter vwentrenadorTableAdapter;
+        private Datos.vwEntrenadorTableAdapters.vwentrenadorTableAdapter vwentrenadorTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEquipoDataGridViewTextBoxColumn;

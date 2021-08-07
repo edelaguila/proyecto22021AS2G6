@@ -1,29 +1,28 @@
-
-﻿using Polideportivo.AccesoDatos;
-using Polideportivo.Modelo;
+using Controlador;
+using Modelo;
 using System;
 using System.Windows.Forms;
-using static Polideportivo.Vista.utilidadForms;
+using static Vista.utilidadForms;
 
-namespace Polideportivo.Vista
+namespace Vista
 {
     public partial class formPartido : Form
     {
-
         // Se declaran los campos que se van a llenar a partir de la fila seleccionada de la tabla
-        int id;
-        string equipo1;
-        string equipo2;
-        string campo;
-        string fecha;
-        string fase;
-        int fkIdCampeonato;
-        int fkIdEmpleado;
-        int fkIdResultado;
-        int fkIdEstado;
+        private int id;
+
+        private string equipo1;
+        private string equipo2;
+        private string campo;
+        private string fecha;
+        private string fase;
+        private int fkIdCampeonato;
+        private int fkIdEmpleado;
+        private int fkIdResultado;
+        private int fkIdEstado;
 
         // Se declara un modelo jugador para que guarde los datos de la fila sin perderlos
-        modeloPartido modeloFila = new modeloPartido();
+        private modeloPartido modeloFila = new modeloPartido();
 
         public formPartido()
         {
@@ -39,22 +38,15 @@ namespace Polideportivo.Vista
             llenarModeloConFilaSeleccionada();
         }
 
-
-
         public void actualizarTablaPartido()
         {
             this.vwpartidoTableAdapter.Fill(this.vwPartidos.vwpartido);
         }
 
-
-
-
         private void tablapartidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             llenarModeloConFilaSeleccionada();
         }
-
-
 
         private void btnAgregarPartido_Click(object sender, EventArgs e)
         {
@@ -64,15 +56,12 @@ namespace Polideportivo.Vista
         private void btnModificar_Click(object sender, EventArgs e)
         {
             abrirForm(new formPartidoEventos(modeloFila, this));
-
         }
 
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
             filtrarTabla();
         }
-
-
 
         private void cboBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -99,13 +88,14 @@ namespace Polideportivo.Vista
 
         public void llenarModeloConFilaSeleccionada()
         {
-            id= stringAInt(tablaPartidos.SelectedRows[0].Cells[0].Value.ToString());
+            id = stringAInt(tablaPartidos.SelectedRows[0].Cells[0].Value.ToString());
             fase = tablaPartidos.SelectedRows[0].Cells[1].Value.ToString();
             equipo1 = tablaPartidos.SelectedRows[0].Cells[2].Value.ToString();
             equipo2 = tablaPartidos.SelectedRows[0].Cells[3].Value.ToString();
             campo = tablaPartidos.SelectedRows[0].Cells[4].Value.ToString();
+            fecha = tablaPartidos.SelectedRows[0].Cells[9].Value.ToString();
             fkIdEstado = stringAInt(tablaPartidos.SelectedRows[0].Cells[5].Value.ToString());
-            fkIdCampeonato= stringAInt(tablaPartidos.SelectedRows[0].Cells[6].Value.ToString());
+            fkIdCampeonato = stringAInt(tablaPartidos.SelectedRows[0].Cells[6].Value.ToString());
             fkIdEmpleado = stringAInt(tablaPartidos.SelectedRows[0].Cells[7].Value.ToString());
             fkIdResultado = stringAInt(tablaPartidos.SelectedRows[0].Cells[8].Value.ToString());
             modeloFila.pkId = id;
@@ -114,7 +104,6 @@ namespace Polideportivo.Vista
             modeloFila.fkIdEstado = fkIdEstado;
             modeloFila.fkIdCampeonato = fkIdCampeonato;
             modeloFila.fkIdEmpleado = fkIdEmpleado;
-            modeloFila.fkIdResultado = fkIdResultado;
 
         }
 
@@ -133,6 +122,11 @@ namespace Polideportivo.Vista
         private void btnAgregarPartido_Click_1(object sender, EventArgs e)
         {
             abrirForm(new formPartidoEventos(this));
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            abrirForm(new formPartidoEventos(modeloFila, this));
         }
     }
 }

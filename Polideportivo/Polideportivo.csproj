@@ -103,11 +103,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bdpolideportivoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Conexion\ConexionODBC.cs" />
     <Compile Include="Controlador\controladorEstado.cs" />
     <Compile Include="Controlador\controladorAnotacion.cs" />
@@ -119,10 +114,8 @@
     <Compile Include="Controlador\controladorJugador.cs" />
     <Compile Include="Controlador\controladorPartido.cs" />
     <Compile Include="Controlador\controladorPuesto.cs" />
-    <Compile Include="Controlador\controladorResultado.cs" />
     <Compile Include="Controlador\controladorRol.cs" />
     <Compile Include="Controlador\controladorTipoCampeonato.cs" />
-    <Compile Include="Modelo\modeloResultado.cs" />
     <Compile Include="Modelo\modeloEstado.cs" />
     <Compile Include="Modelo\modeloAnotacion.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />
@@ -337,17 +330,6 @@
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bdpolideportivoDataSet.xsc">
-      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bdpolideportivoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bdpolideportivoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bdpolideportivoDataSet.xss">
-      <DependentUpon>bdpolideportivoDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

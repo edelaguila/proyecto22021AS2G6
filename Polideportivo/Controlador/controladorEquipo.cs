@@ -1,13 +1,13 @@
 ﻿using Dapper;
-using Polideportivo.Conexion;
-using Polideportivo.Modelo;
+using Conexion;
+using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
 
-namespace Polideportivo.Controlador
+namespace Controlador
 {
-    internal class controladorEquipo
+    public class controladorEquipo
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
@@ -78,6 +78,19 @@ namespace Polideportivo.Controlador
                 ODBC.cerrarConexion(conexionODBC);
             }
 
+            return sqlresultado;
+        }
+
+        public List<modeloEquipo> mostrarEquipo()
+        {
+            List<modeloEquipo> sqlresultado = new List<modeloEquipo>();
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                string sqlconsulta = "SELECT * FROM equipo;";
+                sqlresultado = conexionODBC.Query<modeloEquipo>(sqlconsulta).ToList();
+                ODBC.cerrarConexion(conexionODBC);
+            }
             return sqlresultado;
         }
 

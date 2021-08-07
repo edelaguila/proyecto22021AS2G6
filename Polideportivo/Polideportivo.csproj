@@ -341,9 +341,6 @@
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="api\index.md" />
-    <None Include="articles\intro.md" />
-    <None Include="articles\toc.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

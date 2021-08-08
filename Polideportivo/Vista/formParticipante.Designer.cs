@@ -36,7 +36,7 @@ namespace Vista
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formParticipante));
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.tablaPartidos = new Zuby.ADGV.AdvancedDataGridView();
+            this.tablaParticipantes = new Zuby.ADGV.AdvancedDataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.panelBuscarCol = new System.Windows.Forms.Panel();
@@ -49,7 +49,7 @@ namespace Vista
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregarPartido = new System.Windows.Forms.Button();
             this.parrotGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPartidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaParticipantes)).BeginInit();
             this.panelBuscarCol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,7 +61,7 @@ namespace Vista
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.Black;
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
-            this.parrotGradientPanel1.Controls.Add(this.tablaPartidos);
+            this.parrotGradientPanel1.Controls.Add(this.tablaParticipantes);
             this.parrotGradientPanel1.Controls.Add(this.btnEliminar);
             this.parrotGradientPanel1.Controls.Add(this.btnActualizar);
             this.parrotGradientPanel1.Controls.Add(this.panelBuscarCol);
@@ -82,16 +82,16 @@ namespace Vista
             this.parrotGradientPanel1.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.CornflowerBlue;
             // 
-            // tablaPartidos
+            // tablaParticipantes
             // 
-            this.tablaPartidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tablaParticipantes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tablaPartidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tablaPartidos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tablaPartidos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tablaPartidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tablaPartidos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tablaParticipantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tablaParticipantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tablaParticipantes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tablaParticipantes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tablaParticipantes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,8 +99,8 @@ namespace Vista
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaPartidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.tablaPartidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaParticipantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.tablaParticipantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,16 +109,16 @@ namespace Vista
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaPartidos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.tablaPartidos.FilterAndSortEnabled = true;
-            this.tablaPartidos.Location = new System.Drawing.Point(69, 157);
-            this.tablaPartidos.Name = "tablaPartidos";
-            this.tablaPartidos.ReadOnly = true;
-            this.tablaPartidos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tablaPartidos.RowHeadersVisible = false;
-            this.tablaPartidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaPartidos.Size = new System.Drawing.Size(768, 413);
-            this.tablaPartidos.TabIndex = 34;
+            this.tablaParticipantes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.tablaParticipantes.FilterAndSortEnabled = true;
+            this.tablaParticipantes.Location = new System.Drawing.Point(69, 157);
+            this.tablaParticipantes.Name = "tablaParticipantes";
+            this.tablaParticipantes.ReadOnly = true;
+            this.tablaParticipantes.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tablaParticipantes.RowHeadersVisible = false;
+            this.tablaParticipantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tablaParticipantes.Size = new System.Drawing.Size(768, 413);
+            this.tablaParticipantes.TabIndex = 34;
             // 
             // btnEliminar
             // 
@@ -139,7 +139,6 @@ namespace Vista
             this.btnEliminar.TabIndex = 33;
             this.btnEliminar.Text = "   E L I M I N A R";
             this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminarPartido_Click);
             // 
             // btnActualizar
             // 
@@ -266,7 +265,6 @@ namespace Vista
             this.btnModificar.TabIndex = 28;
             this.btnModificar.Text = "    M O D I F I C A R";
             this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // btnAgregarPartido
             // 
@@ -287,7 +285,6 @@ namespace Vista
             this.btnAgregarPartido.TabIndex = 27;
             this.btnAgregarPartido.Text = "     A G R E G A R";
             this.btnAgregarPartido.UseVisualStyleBackColor = false;
-            this.btnAgregarPartido.Click += new System.EventHandler(this.btnAgregarPartido_Click_1);
             // 
             // formParticipante
             // 
@@ -298,9 +295,9 @@ namespace Vista
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formParticipante";
             this.Text = "formJugadorPlantilla1";
-            this.Load += new System.EventHandler(this.formPartido_Load);
+            this.Load += new System.EventHandler(this.formParticipante_Load);
             this.parrotGradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPartidos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaParticipantes)).EndInit();
             this.panelBuscarCol.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -323,7 +320,6 @@ namespace Vista
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEstadoDataGridViewTextBoxColumn;
-        private Zuby.ADGV.AdvancedDataGridView tablaPartidos;
+        private Zuby.ADGV.AdvancedDataGridView tablaParticipantes;
     }
 }

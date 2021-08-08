@@ -23,10 +23,25 @@ INSERT INTO puestoempleado(pkId, nombre) VALUES  (NULL, "Secretaria");
 INSERT INTO empleado(pkId, nombre, fkIdPuestoEmpleado) VALUES (NULL, "Jorge", 1);
 INSERT INTO estado(pkId, nombre) VALUES (NULL, "En espera");
 INSERT INTO estado(pkId, nombre) VALUES (NULL, "Finalizado");
-
-select * from partido;
-select * from vwpartido;
 INSERT INTO partido(pkId, equipo1, equipo2, anotacionesEquipo1, anotacionesEquipo2, campo, fecha, fase, fkIdCampeonato, fkIdEmpleado, fkIdEstado ) VALUES (NULL, "Madrid", "Barcelona", "2","4", "mateo",'2015-12-29 19:48' ,"final", 1 ,1, 1);
+INSERT INTO fase(pkId, nombre) VALUES(NULL, "Finales");
+INSERT INTO fase(pkId, nombre) VALUES(NULL, "Semifinales");
+INSERT INTO fase(pkId, nombre) VALUES(NULL, "Cuartos de final");
+INSERT INTO fase(pkId, nombre) VALUES(NULL, "Octavos de final");
+select * from fase;
+
+select * from participante;
+
+/* Vista de tipofalta */
+DROP VIEW IF EXISTS vwTipoFalta;
+CREATE VIEW vwTipoFalta AS
+SELECT 
+A.pkId AS pkIdTipoFalta, A.tipo, 
+B.pkId as pkIdDeporte, B.nombre AS deporte
+FROM tipofalta A
+INNER JOIN deporte B ON B.pkId = A.fkIdDeporte 
+ORDER BY pkIdTipoFalta ASC;
+
 
 /* Vista de jugador */
 DROP VIEW  IF EXISTS `vwJugador`;

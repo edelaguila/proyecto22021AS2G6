@@ -9,17 +9,6 @@ namespace Vista
     public partial class formParticipante : Form
     {
         // Se declaran los campos que se van a llenar a partir de la fila seleccionada de la tabla
-        private int id;
-
-        private string equipo1;
-        private string equipo2;
-        private string campo;
-        private string fecha;
-        private string fase;
-        private int fkIdCampeonato;
-        private int fkIdEmpleado;
-        private int fkIdResultado;
-        private int fkIdEstado;
 
         // Se declara un modelo jugador para que guarde los datos de la fila sin perderlos
         private modeloParticipante modeloFila = new modeloParticipante();
@@ -29,10 +18,10 @@ namespace Vista
             InitializeComponent();
         }
 
-        private void formPartido_Load(object sender, EventArgs e)
+        private void formParticipante_Load(object sender, EventArgs e)
         {
             cboBuscar.SelectedIndex = 0;
-            tablaPartidos.CurrentCell = tablaPartidos.Rows[0].Cells[1];
+            tablaParticipantes.CurrentCell = tablaParticipantes.Rows[0].Cells[1];
             llenarModeloConFilaSeleccionada();
         }
 
@@ -43,16 +32,6 @@ namespace Vista
         private void tablapartidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             llenarModeloConFilaSeleccionada();
-        }
-
-        private void btnAgregarPartido_Click(object sender, EventArgs e)
-        {
-            abrirForm(new formParticipanteEventos(this));
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            abrirForm(new formParticipanteEventos(modeloFila, this));
         }
 
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
@@ -97,16 +76,6 @@ namespace Vista
             {
                 //vwpartidoBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
             }
-        }
-
-        private void btnAgregarPartido_Click_1(object sender, EventArgs e)
-        {
-            abrirForm(new formParticipanteEventos(this));
-        }
-
-        private void btnModificar_Click_1(object sender, EventArgs e)
-        {
-            abrirForm(new formParticipanteEventos(modeloFila, this));
         }
     }
 }

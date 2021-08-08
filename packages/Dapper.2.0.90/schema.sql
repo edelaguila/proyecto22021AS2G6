@@ -29,7 +29,6 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`deporte` (
   PRIMARY KEY (`pkId`),
   UNIQUE INDEX `nombre_UNIQUE` (`nombre` ASC) VISIBLE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -51,7 +50,6 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`equipo` (
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -73,7 +71,6 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`rol` (
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -104,7 +101,6 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`jugador` (
     ON DELETE SET NULL
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -117,9 +113,9 @@ DROP TABLE IF EXISTS `bdpolideportivo`.`tipocampeonato` ;
 CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`tipocampeonato` (
   `pkId` INT NOT NULL AUTO_INCREMENT,
   `tipo` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`pkId`))
+  PRIMARY KEY (`pkId`),
+  UNIQUE INDEX `tipo_UNIQUE` (`tipo` ASC) VISIBLE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -150,7 +146,6 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`campeonato` (
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -163,9 +158,9 @@ DROP TABLE IF EXISTS `bdpolideportivo`.`puestoempleado` ;
 CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`puestoempleado` (
   `pkId` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`pkId`))
+  PRIMARY KEY (`pkId`),
+  UNIQUE INDEX `nombre_UNIQUE` (`nombre` ASC) VISIBLE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -196,9 +191,10 @@ COLLATE = utf8mb4_0900_ai_ci;
 DROP TABLE IF EXISTS `bdpolideportivo`.`estado` ;
 
 CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`estado` (
-  `pkId` INT NOT NULL,
+  `pkId` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`pkId`))
+  PRIMARY KEY (`pkId`),
+  UNIQUE INDEX `nombre_UNIQUE` (`nombre` ASC) VISIBLE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -240,7 +236,6 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`partido` (
     ON DELETE SET NULL
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -286,7 +281,6 @@ CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`entrenador` (
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -339,21 +333,47 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
+-- Table `bdpolideportivo`.`fase`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `bdpolideportivo`.`fase` ;
+
+CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`fase` (
+  `pkId` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NULL,
+  PRIMARY KEY (`pkId`),
+  UNIQUE INDEX `nombre_UNIQUE` (`nombre` ASC) VISIBLE)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `bdpolideportivo`.`participante`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `bdpolideportivo`.`participante` ;
 
 CREATE TABLE IF NOT EXISTS `bdpolideportivo`.`participante` (
-  `id` INT NOT NULL,
-  `equipos` VARCHAR(45) NULL DEFAULT NULL,
+  `pkId` INT NOT NULL AUTO_INCREMENT,
+  `puntos` INT NULL,
   `estado` VARCHAR(45) NULL DEFAULT NULL,
-  `fase` VARCHAR(45) NULL DEFAULT NULL,
-  `campeonato_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_participante_campeonato1_idx` (`campeonato_id` ASC) VISIBLE,
+  `fkIdCampeonato` INT NOT NULL,
+  `fkIdEquipo` INT NOT NULL,
+  `fkIdFase` INT NULL,
+  PRIMARY KEY (`pkId`),
+  INDEX `fk_participante_campeonato1_idx` (`fkIdCampeonato` ASC) VISIBLE,
+  INDEX `fk_participante_equipo1_idx` (`fkIdEquipo` ASC) VISIBLE,
+  INDEX `fk_participante_fase1_idx` (`fkIdFase` ASC) VISIBLE,
   CONSTRAINT `fk_participante_campeonato1`
-    FOREIGN KEY (`campeonato_id`)
-    REFERENCES `bdpolideportivo`.`campeonato` (`pkId`))
+    FOREIGN KEY (`fkIdCampeonato`)
+    REFERENCES `bdpolideportivo`.`campeonato` (`pkId`),
+  CONSTRAINT `fk_participante_equipo1`
+    FOREIGN KEY (`fkIdEquipo`)
+    REFERENCES `bdpolideportivo`.`equipo` (`pkId`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_participante_fase1`
+    FOREIGN KEY (`fkIdFase`)
+    REFERENCES `bdpolideportivo`.`fase` (`pkId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -495,6 +515,7 @@ CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY D
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
 
 
 ALTER TABLE anotacion AUTO_INCREMENT = 1;

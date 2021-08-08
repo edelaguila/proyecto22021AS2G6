@@ -439,7 +439,6 @@ namespace Vista
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboDeporte;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEntrenadorDataGridViewTextBoxColumn;
         private vwTipoFalta vwTipoFalta;
         private System.Windows.Forms.BindingSource vwtipofaltaBindingSource;
         private Datos.vwTipoFaltaTableAdapters.vwtipofaltaTableAdapter vwtipofaltaTableAdapter;

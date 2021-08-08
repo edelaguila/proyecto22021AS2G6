@@ -443,11 +443,6 @@ namespace Vista
         private System.Windows.Forms.ComboBox cboBuscarRol;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
-        
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdRolDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDeporteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
         private Datos.vwRol vwRol;
         private System.Windows.Forms.BindingSource vwrolBindingSource;
         private Datos.vwRolTableAdapters.vwrolTableAdapter vwrolTableAdapter;

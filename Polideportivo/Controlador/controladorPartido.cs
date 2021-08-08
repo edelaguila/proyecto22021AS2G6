@@ -47,9 +47,9 @@ namespace Controlador
             {
                 var sqlinsertar =
                 "UPDATE partido SET equipo1 = ?equipo1?, equipo2 = ?equipo2?, " +
-                "campo = ?campo?, fecha = ?fecha? " +
-                "fase = ?fase?, fkIdCampeonato = ?fkIdCampeonato?, fkIdEmpleado = ?fkIdEmpleado? " +
-                "anotacionesEquipo1 = ?anotacionesEquipo1?,  " + "anotacionesEquipo2 = ?anotacionesEquipo2?,  " + "fkIdEstado = ?fkIdEstado?, " +
+                "campo = ?campo?, fecha = ?fecha?, " +
+                "fase = ?fase?, fkIdCampeonato = ?fkIdCampeonato?, fkIdEmpleado = ?fkIdEmpleado?, " +
+                "anotacionesEquipo1 = ?anotacionesEquipo1?,  " + "anotacionesEquipo2 = ?anotacionesEquipo2?,  " + "fkIdEstado = ?fkIdEstado? " +
                 "WHERE pkId = ?pkId?;";
                 var ValorDeVariables = new
                 {
@@ -61,6 +61,8 @@ namespace Controlador
                     fkIdCampeonato = modelo.fkIdCampeonato,
                     fkIdEmpleado = modelo.fkIdEmpleado,
                     fkIdEstado = modelo.fkIdEstado,
+                    anotacionesEquipo1 = modelo.anotacionesEquipo1,
+                    anotacionesEquipo2 = modelo.anotacionesEquipo2,
                     pkId = modelo.pkId
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);

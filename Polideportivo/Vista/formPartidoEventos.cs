@@ -33,32 +33,31 @@ namespace Vista
             cboCampeonato.DataSource = campeonato.mostrarCampeonato();
             cboCampeonato.DisplayMember = "nombre";
             cboCampeonato.ValueMember = "pkId";
-            cboCampeonato.SelectedIndex = -1;
+            //cboCampeonato.SelectedIndex = -1;
 
             controladorEquipo equipo1 = new controladorEquipo();
             cboEquipo2.DataSource = equipo1.mostrarEquipo();
             cboEquipo2.DisplayMember = "nombre";
             cboEquipo2.ValueMember = "nombre";
-            cboEquipo2.SelectedIndex = -1;
+            //cboEquipo2.SelectedIndex = -1;
 
             controladorEquipo equipo2 = new controladorEquipo();
             cboEquipo1.DataSource = equipo2.mostrarEquipo();
             cboEquipo1.DisplayMember = "nombre";
             cboEquipo1.ValueMember = "nombre";
-            cboEquipo1.SelectedIndex = -1;
+            //cboEquipo1.SelectedIndex = -1;
 
             controladorEmpleado empleado = new controladorEmpleado();
             cboEmpleado.DataSource = empleado.mostrarEmpleado();
             cboEmpleado.DisplayMember = "nombre";
             cboEmpleado.ValueMember = "pkId";
-            cboEmpleado.SelectedIndex = -1;
+            //cboEmpleado.SelectedIndex = -1;
 
             controladorEstado estado = new controladorEstado();
             cboEstado.DataSource = estado.mostrarEstado();
             cboEstado.DisplayMember = "nombre";
             cboEstado.ValueMember = "pkId";
-            cboEstado.SelectedIndex = -1;
-            formOriginal = form;
+            //cboEstado.SelectedIndex = -1;
             // Para obtener el Id original que se va a modificar
             modeloOriginal = modelo;
             // Modificar el texto del label
@@ -157,7 +156,7 @@ namespace Vista
             cerrarForm(this);
         }
 
-        private void btnModificarJugador_Click(object sender, EventArgs e)
+        private void btnModificarPartido_Click(object sender, EventArgs e)
         {
             controladorPartido controlador = new controladorPartido();
             modeloPartido modelo = new modeloPartido();
@@ -173,7 +172,7 @@ namespace Vista
             modeloOriginal.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
             modeloOriginal.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
             modeloOriginal.fkIdEstado = stringAInt(cboEstado.SelectedValue.ToString());
-            controlador.modificarPartido(modelo);
+            controlador.modificarPartido(modeloOriginal);
             formOriginal.actualizarTablaPartido();
             cerrarForm(this);
         }

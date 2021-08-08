@@ -323,7 +323,7 @@ namespace Vista
             this.btnModificarPartido.TabIndex = 30;
             this.btnModificarPartido.Text = "    M O D I F I C A R";
             this.btnModificarPartido.UseVisualStyleBackColor = false;
-            this.btnModificarPartido.Click += new System.EventHandler(this.btnModificarJugador_Click);
+            this.btnModificarPartido.Click += new System.EventHandler(this.btnModificarPartido_Click);
             // 
             // btnAgregarPartido
             // 

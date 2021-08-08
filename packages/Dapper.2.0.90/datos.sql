@@ -122,6 +122,7 @@ CREATE VIEW `vwcampeonato` AS
         JOIN `tipocampeonato` `c` ON ((`c`.`pkId` = `a`.`fkIdTipoCampeonato`)))
     ORDER BY `a`.`pkId`;
 
+DROP TABLE vwrol;
 /* Vista de Rol*/
 DROP VIEW IF EXISTS `vwRol`;
 CREATE VIEW `vwRol` AS
@@ -141,3 +142,4 @@ C.pkId AS pkIdDeporte, C.nombre AS deporte
 FROM entrenador A
 INNER JOIN equipo B ON B.pkId = A.fkIdEquipo
 INNER JOIN deporte C ON B.fkIdDeporte = C.pkId ORDER BY pkIdEntrenador ASC;
+select * from rol;

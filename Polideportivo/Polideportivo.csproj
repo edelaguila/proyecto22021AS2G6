@@ -294,12 +294,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwTipoFalta.xsd</DependentUpon>
     </Compile>
-    <Compile Include="vwPartido.Designer.cs">
+    <Compile Include="Datos\vwPartido.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>vwPartido.xsd</DependentUpon>
     </Compile>
-    <Compile Include="vwRol.Designer.cs">
+    <Compile Include="Datos\vwRol.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>vwRol.xsd</DependentUpon>
@@ -457,26 +457,26 @@
     <None Include="Datos\vwTipoFalta.xss">
       <DependentUpon>vwTipoFalta.xsd</DependentUpon>
     </None>
-    <None Include="vwPartido.xsc">
+    <None Include="Datos\vwPartido.xsc">
       <DependentUpon>vwPartido.xsd</DependentUpon>
     </None>
-    <None Include="vwPartido.xsd">
+    <None Include="Datos\vwPartido.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>vwPartido.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="vwPartido.xss">
+    <None Include="Datos\vwPartido.xss">
       <DependentUpon>vwPartido.xsd</DependentUpon>
     </None>
-    <None Include="vwRol.xsc">
+    <None Include="Datos\vwRol.xsc">
       <DependentUpon>vwRol.xsd</DependentUpon>
     </None>
-    <None Include="vwRol.xsd">
+    <None Include="Datos\vwRol.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>vwRol.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="vwRol.xss">
+    <None Include="Datos\vwRol.xss">
       <DependentUpon>vwRol.xsd</DependentUpon>
     </None>
   </ItemGroup>

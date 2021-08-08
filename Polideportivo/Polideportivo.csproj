@@ -38,6 +38,9 @@
     <Reference Include="AdvancedDataGridView, Version=1.2.25902.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DG.AdvancedDataGridView.1.2.25902.3\lib\net40\AdvancedDataGridView.dll</HintPath>
     </Reference>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.2.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.2\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
@@ -75,14 +78,14 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Extensions" />
@@ -118,6 +121,7 @@
     <Compile Include="Controlador\controladorRol.cs" />
     <Compile Include="Controlador\controladorTipoCampeonato.cs" />
     <Compile Include="Controlador\controladorTipoFalta.cs" />
+    <Compile Include="Controlador\controladorUsuario.cs" />
     <Compile Include="Modelo\modeloEstado.cs" />
     <Compile Include="Modelo\modeloAnotacion.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />
@@ -132,6 +136,7 @@
     <Compile Include="Modelo\modeloJugador.cs" />
     <Compile Include="Modelo\modeloTipoCampeonato.cs" />
     <Compile Include="Modelo\modeloTipoFalta.cs" />
+    <Compile Include="Modelo\modeloUsuario.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -247,6 +252,12 @@
     <Compile Include="Vista\formTipoFalta.Designer.cs">
       <DependentUpon>formTipoFalta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\formUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formUsuario.Designer.cs">
+      <DependentUpon>formUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\utilidadForms.cs" />
     <Compile Include="Datos\vwCampeonato.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -292,6 +303,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>vwPartido.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="vwRol.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwRol.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Vista\formCampeonato.resx">
       <DependentUpon>formCampeonato.cs</DependentUpon>
@@ -357,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formTipoFalta.resx">
       <DependentUpon>formTipoFalta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formUsuario.resx">
+      <DependentUpon>formUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>
@@ -464,6 +483,17 @@
     </None>
     <None Include="vwPartido.xss">
       <DependentUpon>vwPartido.xsd</DependentUpon>
+    </None>
+    <None Include="vwRol.xsc">
+      <DependentUpon>vwRol.xsd</DependentUpon>
+    </None>
+    <None Include="vwRol.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwRol.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vwRol.xss">
+      <DependentUpon>vwRol.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

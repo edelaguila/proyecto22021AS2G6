@@ -16,7 +16,7 @@ namespace Vista
         {
             InitializeComponent();
             btnAgregarRol.Visible = true;
-            btnModificarRol.Visible = false;
+            btnModificarRol.Visible = true;
             // Llenar combobox de deportes
             controladorDeporte deportes = new controladorDeporte();
             cboDeporte.DataSource = deportes.mostrarDeportes();
@@ -24,10 +24,30 @@ namespace Vista
             cboDeporte.ValueMember = "pkId";
             cboDeporte.SelectedItem = cboDeporte.Items[0];
         }
-
         public void actualizarTablaRol()
         {
             this.vwrolTableAdapter.Fill(this.vwRol.vwrol);
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            modeloEmpleado modelo = new modeloEmpleado();
+            controladorEmpleado db = new controladorEmpleado();
+        }
+
+        private modeloRol modeloFila = new modeloRol();
+        private void llenarModeloConFilaSeleccionada()
+        {
+            id = stringAInt(tablaRol.SelectedRows[0].Cells[0].Value.ToString());
+            nombre = tablaRol.SelectedRows[0].Cells[1].Value.ToString();
+            modeloFila.pkId = id;
+        }
+
+
+
+        private void tablaRol_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            llenarModeloConFilaSeleccionada();
+            txtNombreRol.Text = nombre;
         }
 
         private void btnAgregarRol_Click(object sender, EventArgs e)
@@ -39,50 +59,66 @@ namespace Vista
             modeloAgregar.agregarRol(modelo);
             actualizarTablaRol();
         }
-
         private void btnModificarRol_Click(object sender, EventArgs e)
         {
+            controladorRol modeloModificar = new controladorRol();
+            modeloRol modelo = new modeloRol();
+            modeloFila.nombre = txtNombreRol.Text;
+            modeloFila.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
+            modeloModificar.modificarRol(modeloFila);
+            actualizarTablaRol();
         }
 
-        private void btnElinimarRol_Click(object sender, EventArgs e)
+        private void txtFiltrarRol_TextChanged(object sender, EventArgs e)
         {
-        }
-
-        private void btnActualizarRol_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void tablaRol_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void tablaRol_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void tablaRol_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-        }
-
-        private void txtFiltrar_TextChanged(object sender, EventArgs e)
-        {
+            if (string.IsNullOrEmpty(txtFiltrarRol.Text))
+            {
+                vwrolBindingSource.Filter = string.Empty;
+            }
+            else
+            {
+                vwrolBindingSource.Filter = string.Format("{0}='{1}'", cboBuscarRol.Text, txtFiltrarRol.Text);
+            }
         }
 
         private void cboBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtFiltrarRol.Text = "";
         }
 
-        private void txtNombreRol_TextChanged(object sender, EventArgs e)
+        private void btnActualizar_Click(object sender, EventArgs e)
         {
+            actualizarTablaRol();
+        }
+
+        private void btnEliminarEmpleado_Click(object sender, EventArgs e)
+        {
+            int id = stringAInt(tablaRol.SelectedRows[0].Cells[0].Value.ToString());
+            controladorEmpleado controlador = new controladorEmpleado();
+            modeloEmpleado modelo = new modeloEmpleado();
+            modelo.pkId = id;
+            controlador.eliminarEmpleado(modelo);
+            actualizarTablaRol();
+        }
+
+        private void tablaEmpleado_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
+        }
+
+        private void tablaRol_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void formRol_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'vwRol.vwrol' Puede moverla o quitarla según sea necesario.
             this.vwrolTableAdapter.Fill(this.vwRol.vwrol);
-        }
 
-        private void txtNombreDeporte_TextChanged(object sender, EventArgs e)
-        {
         }
     }
 }
+
+
+

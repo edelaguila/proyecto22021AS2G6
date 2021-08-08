@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="vwParticipante" targetNamespace="http://tempuri.org/vwParticipante.xsd" xmlns:mstns="http://tempuri.org/vwParticipante.xsd" xmlns="http://tempuri.org/vwParticipante.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bdpolideportivoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bdpolideportivoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Polideportivo.Properties.Settings.GlobalReference.Default.bdpolideportivoConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwparticipanteTableAdapter" GeneratorDataComponentClassName="vwparticipanteTableAdapter" Name="vwparticipante" UserDataComponentName="vwparticipanteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdpolideportivoConnectionString (Settings)" DbObjectName="bdpolideportivo.vwparticipante" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `pkIdParticipante`, `puntos`, `pkIdCampeonato`, `campeonato`, `pkIdEquipo`, `equipo`, `pkIdFase`, `fase`, `pkIdEstadoParticipante`, `estado` FROM `bdpolideportivo`.`vwparticipante`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="pkIdParticipante" DataSetColumn="pkIdParticipante" />
+              <Mapping SourceColumn="puntos" DataSetColumn="puntos" />
+              <Mapping SourceColumn="pkIdCampeonato" DataSetColumn="pkIdCampeonato" />
+              <Mapping SourceColumn="campeonato" DataSetColumn="campeonato" />
+              <Mapping SourceColumn="pkIdEquipo" DataSetColumn="pkIdEquipo" />
+              <Mapping SourceColumn="equipo" DataSetColumn="equipo" />
+              <Mapping SourceColumn="pkIdFase" DataSetColumn="pkIdFase" />
+              <Mapping SourceColumn="fase" DataSetColumn="fase" />
+              <Mapping SourceColumn="pkIdEstadoParticipante" DataSetColumn="pkIdEstadoParticipante" />
+              <Mapping SourceColumn="estado" DataSetColumn="estado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="vwParticipante" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="vwParticipante" msprop:Generator_UserDSName="vwParticipante">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwparticipante" msprop:Generator_TableClassName="vwparticipanteDataTable" msprop:Generator_TableVarName="tablevwparticipante" msprop:Generator_TablePropName="vwparticipante" msprop:Generator_RowDeletingName="vwparticipanteRowDeleting" msprop:Generator_RowChangingName="vwparticipanteRowChanging" msprop:Generator_RowEvHandlerName="vwparticipanteRowChangeEventHandler" msprop:Generator_RowDeletedName="vwparticipanteRowDeleted" msprop:Generator_UserTableName="vwparticipante" msprop:Generator_RowChangedName="vwparticipanteRowChanged" msprop:Generator_RowEvArgName="vwparticipanteRowChangeEvent" msprop:Generator_RowClassName="vwparticipanteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pkIdParticipante" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdParticipante" msprop:Generator_ColumnPropNameInRow="pkIdParticipante" msprop:Generator_ColumnPropNameInTable="pkIdParticipanteColumn" msprop:Generator_UserColumnName="pkIdParticipante" type="xs:int" />
+              <xs:element name="puntos" msprop:Generator_ColumnVarNameInTable="columnpuntos" msprop:Generator_ColumnPropNameInRow="puntos" msprop:Generator_ColumnPropNameInTable="puntosColumn" msprop:Generator_UserColumnName="puntos" type="xs:int" minOccurs="0" />
+              <xs:element name="pkIdCampeonato" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdCampeonato" msprop:Generator_ColumnPropNameInRow="pkIdCampeonato" msprop:Generator_ColumnPropNameInTable="pkIdCampeonatoColumn" msprop:Generator_UserColumnName="pkIdCampeonato" type="xs:int" />
+              <xs:element name="campeonato" msprop:Generator_ColumnVarNameInTable="columncampeonato" msprop:Generator_ColumnPropNameInRow="campeonato" msprop:Generator_ColumnPropNameInTable="campeonatoColumn" msprop:Generator_UserColumnName="campeonato">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pkIdEquipo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdEquipo" msprop:Generator_ColumnPropNameInRow="pkIdEquipo" msprop:Generator_ColumnPropNameInTable="pkIdEquipoColumn" msprop:Generator_UserColumnName="pkIdEquipo" type="xs:int" />
+              <xs:element name="equipo" msprop:Generator_ColumnVarNameInTable="columnequipo" msprop:Generator_ColumnPropNameInRow="equipo" msprop:Generator_ColumnPropNameInTable="equipoColumn" msprop:Generator_UserColumnName="equipo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pkIdFase" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdFase" msprop:Generator_ColumnPropNameInRow="pkIdFase" msprop:Generator_ColumnPropNameInTable="pkIdFaseColumn" msprop:Generator_UserColumnName="pkIdFase" type="xs:int" />
+              <xs:element name="fase" msprop:Generator_ColumnVarNameInTable="columnfase" msprop:Generator_ColumnPropNameInRow="fase" msprop:Generator_ColumnPropNameInTable="faseColumn" msprop:Generator_UserColumnName="fase" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pkIdEstadoParticipante" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdEstadoParticipante" msprop:Generator_ColumnPropNameInRow="pkIdEstadoParticipante" msprop:Generator_ColumnPropNameInTable="pkIdEstadoParticipanteColumn" msprop:Generator_UserColumnName="pkIdEstadoParticipante" type="xs:int" />
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwparticipante" />
+      <xs:field xpath="mstns:pkIdParticipante" />
+      <xs:field xpath="mstns:pkIdCampeonato" />
+      <xs:field xpath="mstns:pkIdEquipo" />
+      <xs:field xpath="mstns:pkIdFase" />
+      <xs:field xpath="mstns:pkIdEstadoParticipante" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

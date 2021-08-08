@@ -304,6 +304,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwRol.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Datos\vwParticipante.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vwParticipante.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Vista\formCampeonato.resx">
       <DependentUpon>formCampeonato.cs</DependentUpon>
     </EmbeddedResource>
@@ -478,6 +483,17 @@
     </None>
     <None Include="Datos\vwRol.xss">
       <DependentUpon>vwRol.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\vwParticipante.xsc">
+      <DependentUpon>vwParticipante.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\vwParticipante.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vwParticipante.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\vwParticipante.xss">
+      <DependentUpon>vwParticipante.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

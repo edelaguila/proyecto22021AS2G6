@@ -20,6 +20,8 @@ namespace Vista
 
         private void formParticipante_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'vwParticipante.vwparticipante' Puede moverla o quitarla según sea necesario.
+            this.vwparticipanteTableAdapter.Fill(this.vwParticipante.vwparticipante);
             cboBuscar.SelectedIndex = 0;
             tablaParticipantes.CurrentCell = tablaParticipantes.Rows[0].Cells[1];
             llenarModeloConFilaSeleccionada();
@@ -76,6 +78,18 @@ namespace Vista
             {
                 //vwpartidoBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
             }
+        }
+
+        private void btnAgregarPartido_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void tablaParticipantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }

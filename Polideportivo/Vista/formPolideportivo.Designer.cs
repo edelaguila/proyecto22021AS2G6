@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formPolideportivo));
             this.panelLateralWrapper = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.panelLateralInterno = new System.Windows.Forms.Panel();
+            this.btnMenuParticipante = new System.Windows.Forms.Button();
+            this.btnResultados = new System.Windows.Forms.Button();
             this.btnMenuFalta = new System.Windows.Forms.Button();
             this.btnMenuEmpleado = new System.Windows.Forms.Button();
             this.btnMenuPartido = new System.Windows.Forms.Button();
@@ -53,7 +55,6 @@
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.Maximizar = new System.Windows.Forms.PictureBox();
             this.lblTituloPrincipal = new System.Windows.Forms.Label();
-            this.btnResultados = new System.Windows.Forms.Button();
             this.panelLateralWrapper.SuspendLayout();
             this.panelLateralInterno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -91,6 +92,7 @@
             // panelLateralInterno
             // 
             this.panelLateralInterno.BackColor = System.Drawing.Color.Transparent;
+            this.panelLateralInterno.Controls.Add(this.btnMenuParticipante);
             this.panelLateralInterno.Controls.Add(this.btnResultados);
             this.panelLateralInterno.Controls.Add(this.btnMenuFalta);
             this.panelLateralInterno.Controls.Add(this.btnMenuEmpleado);
@@ -108,6 +110,52 @@
             this.panelLateralInterno.Name = "panelLateralInterno";
             this.panelLateralInterno.Size = new System.Drawing.Size(250, 595);
             this.panelLateralInterno.TabIndex = 0;
+            this.panelLateralInterno.MouseHover += new System.EventHandler(this.panelLateralInterno_MouseHover);
+            // 
+            // btnMenuParticipante
+            // 
+            this.btnMenuParticipante.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMenuParticipante.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuParticipante.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenuParticipante.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnMenuParticipante.FlatAppearance.BorderSize = 0;
+            this.btnMenuParticipante.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(116)))), ((int)(((byte)(154)))));
+            this.btnMenuParticipante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(135)))), ((int)(((byte)(164)))));
+            this.btnMenuParticipante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuParticipante.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuParticipante.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenuParticipante.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuParticipante.Image")));
+            this.btnMenuParticipante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuParticipante.Location = new System.Drawing.Point(13, 700);
+            this.btnMenuParticipante.Name = "btnMenuParticipante";
+            this.btnMenuParticipante.Size = new System.Drawing.Size(221, 53);
+            this.btnMenuParticipante.TabIndex = 22;
+            this.btnMenuParticipante.Text = "            PARTICIPANTES";
+            this.btnMenuParticipante.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuParticipante.UseVisualStyleBackColor = false;
+            this.btnMenuParticipante.Click += new System.EventHandler(this.btnMenuParticipante_Click);
+            // 
+            // btnResultados
+            // 
+            this.btnResultados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResultados.BackColor = System.Drawing.Color.Transparent;
+            this.btnResultados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResultados.FlatAppearance.BorderSize = 0;
+            this.btnResultados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
+            this.btnResultados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
+            this.btnResultados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResultados.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResultados.ForeColor = System.Drawing.Color.Transparent;
+            this.btnResultados.Image = ((System.Drawing.Image)(resources.GetObject("btnResultados.Image")));
+            this.btnResultados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResultados.Location = new System.Drawing.Point(14, 510);
+            this.btnResultados.Name = "btnResultados";
+            this.btnResultados.Size = new System.Drawing.Size(221, 53);
+            this.btnResultados.TabIndex = 21;
+            this.btnResultados.Text = "RESULTADOS";
+            this.btnResultados.UseVisualStyleBackColor = false;
             // 
             // btnMenuFalta
             // 
@@ -508,27 +556,6 @@
             this.lblTituloPrincipal.TabIndex = 1;
             this.lblTituloPrincipal.Text = "POLIDEPORTIVO";
             // 
-            // btnResultados
-            // 
-            this.btnResultados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnResultados.BackColor = System.Drawing.Color.Transparent;
-            this.btnResultados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResultados.FlatAppearance.BorderSize = 0;
-            this.btnResultados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
-            this.btnResultados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
-            this.btnResultados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResultados.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResultados.ForeColor = System.Drawing.Color.Transparent;
-            this.btnResultados.Image = ((System.Drawing.Image)(resources.GetObject("btnResultados.Image")));
-            this.btnResultados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResultados.Location = new System.Drawing.Point(14, 510);
-            this.btnResultados.Name = "btnResultados";
-            this.btnResultados.Size = new System.Drawing.Size(221, 53);
-            this.btnResultados.TabIndex = 21;
-            this.btnResultados.Text = "RESULTADOS";
-            this.btnResultados.UseVisualStyleBackColor = false;
-            // 
             // formPolideportivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -586,6 +613,7 @@
         private System.Windows.Forms.Button btnMenuEmpleado;
         private System.Windows.Forms.Button btnMenuFalta;
         private System.Windows.Forms.Button btnResultados;
+        private System.Windows.Forms.Button btnMenuParticipante;
     }
 }
 

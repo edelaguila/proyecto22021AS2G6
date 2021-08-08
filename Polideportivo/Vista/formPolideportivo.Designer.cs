@@ -53,6 +53,7 @@
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.Maximizar = new System.Windows.Forms.PictureBox();
             this.lblTituloPrincipal = new System.Windows.Forms.Label();
+            this.btnResultados = new System.Windows.Forms.Button();
             this.panelLateralWrapper.SuspendLayout();
             this.panelLateralInterno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -90,6 +91,7 @@
             // panelLateralInterno
             // 
             this.panelLateralInterno.BackColor = System.Drawing.Color.Transparent;
+            this.panelLateralInterno.Controls.Add(this.btnResultados);
             this.panelLateralInterno.Controls.Add(this.btnMenuFalta);
             this.panelLateralInterno.Controls.Add(this.btnMenuEmpleado);
             this.panelLateralInterno.Controls.Add(this.btnMenuPartido);
@@ -121,7 +123,7 @@
             this.btnMenuFalta.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuFalta.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuFalta.Image")));
             this.btnMenuFalta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuFalta.Location = new System.Drawing.Point(13, 573);
+            this.btnMenuFalta.Location = new System.Drawing.Point(13, 627);
             this.btnMenuFalta.Name = "btnMenuFalta";
             this.btnMenuFalta.Size = new System.Drawing.Size(221, 53);
             this.btnMenuFalta.TabIndex = 20;
@@ -143,7 +145,7 @@
             this.btnMenuEmpleado.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEmpleado.Image")));
             this.btnMenuEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuEmpleado.Location = new System.Drawing.Point(13, 512);
+            this.btnMenuEmpleado.Location = new System.Drawing.Point(13, 569);
             this.btnMenuEmpleado.Name = "btnMenuEmpleado";
             this.btnMenuEmpleado.Size = new System.Drawing.Size(221, 53);
             this.btnMenuEmpleado.TabIndex = 19;
@@ -506,6 +508,27 @@
             this.lblTituloPrincipal.TabIndex = 1;
             this.lblTituloPrincipal.Text = "POLIDEPORTIVO";
             // 
+            // btnResultados
+            // 
+            this.btnResultados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResultados.BackColor = System.Drawing.Color.Transparent;
+            this.btnResultados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResultados.FlatAppearance.BorderSize = 0;
+            this.btnResultados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
+            this.btnResultados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
+            this.btnResultados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResultados.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResultados.ForeColor = System.Drawing.Color.Transparent;
+            this.btnResultados.Image = ((System.Drawing.Image)(resources.GetObject("btnResultados.Image")));
+            this.btnResultados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResultados.Location = new System.Drawing.Point(14, 510);
+            this.btnResultados.Name = "btnResultados";
+            this.btnResultados.Size = new System.Drawing.Size(221, 53);
+            this.btnResultados.TabIndex = 21;
+            this.btnResultados.Text = "RESULTADOS";
+            this.btnResultados.UseVisualStyleBackColor = false;
+            // 
             // formPolideportivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -562,6 +585,7 @@
         private System.Windows.Forms.Button btnMenuPartido;
         private System.Windows.Forms.Button btnMenuEmpleado;
         private System.Windows.Forms.Button btnMenuFalta;
+        private System.Windows.Forms.Button btnResultados;
     }
 }
 

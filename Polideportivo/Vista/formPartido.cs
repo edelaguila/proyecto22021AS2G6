@@ -33,6 +33,8 @@ namespace Vista
         {
             // TODO: esta línea de código carga datos en la tabla 'vwPartido.vwpartido' Puede moverla o quitarla según sea necesario.
             this.vwpartidoTableAdapter.Fill(this.vwPartido.vwpartido);
+            // TODO: esta línea de código carga datos en la tabla 'vwPartido.vwpartido' Puede moverla o quitarla según sea necesario.
+            this.vwpartidoTableAdapter.Fill(this.vwPartido.vwpartido);
             // TODO: esta línea de código carga datos en la tabla 'vwPartidos.vwpartido' Puede moverla o quitarla según sea necesario.
             //this.vwpartidoTableAdapter.Fill(this.vwPartidos.vwpartido);
             cboBuscar.SelectedIndex = 0;
@@ -103,7 +105,7 @@ namespace Vista
             modeloFila.pkId = id;
             modeloFila.equipo1 = equipo1;
             modeloFila.equipo2 = equipo2;
-            modeloFila.fkIdEstado = fkIdEstado;
+            modeloFila.fkIdEstadoPartido = fkIdEstado;
             modeloFila.fkIdCampeonato = fkIdCampeonato;
             modeloFila.fkIdEmpleado = fkIdEmpleado;
         }

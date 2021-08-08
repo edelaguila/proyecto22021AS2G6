@@ -14,7 +14,7 @@ namespace Modelo
         public string fase { get; set; }
         public int fkIdCampeonato { get; set; }
         public int fkIdEmpleado { get; set; }
-        public int fkIdEstado { get; set; }
+        public int fkIdEstadoPartido { get; set; }
 
         public modeloPartido()
         {
@@ -30,7 +30,7 @@ namespace Modelo
             fase = Fase;
             fkIdCampeonato = IdCampeonato;
             fkIdEmpleado = IdEmpleado;
-            fkIdEstado = IdEstado;
+            fkIdEstadoPartido = IdEstado;
             anotacionesEquipo1 = anotacion1;
             anotacionesEquipo2 = anotacion2;
 

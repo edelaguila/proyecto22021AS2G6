@@ -150,7 +150,7 @@ namespace Vista
             modelo.anotacionesEquipo2 = stringAInt(txtAnotacionesE2.ToString());
             modelo.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
             modelo.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
-            modelo.fkIdEstado = stringAInt(cboEstado.SelectedValue.ToString());
+            modelo.fkIdEstadoPartido = stringAInt(cboEstado.SelectedValue.ToString());
             controlador.agregarPartido(modelo);
             formOriginal.actualizarTablaPartido();
             cerrarForm(this);
@@ -171,7 +171,7 @@ namespace Vista
             modeloOriginal.anotacionesEquipo2 = stringAInt(txtAnotacionesE2.ToString());
             modeloOriginal.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
             modeloOriginal.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
-            modeloOriginal.fkIdEstado = stringAInt(cboEstado.SelectedValue.ToString());
+            modeloOriginal.fkIdEstadoPartido = stringAInt(cboEstado.SelectedValue.ToString());
             controlador.modificarPartido(modeloOriginal);
             formOriginal.actualizarTablaPartido();
             cerrarForm(this);

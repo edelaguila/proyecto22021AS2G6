@@ -72,7 +72,7 @@ namespace Controlador
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
-                string sqlconsulta = "SELECT * FROM estado;";
+                string sqlconsulta = "SELECT * FROM estadoPartido;";
                 sqlresultado = conexionODBC.Query<modeloEstado>(sqlconsulta).ToList();
                 ODBC.cerrarConexion(conexionODBC);
             }

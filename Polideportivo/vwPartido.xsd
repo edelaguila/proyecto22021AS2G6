@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="bdpolideportivoConnectionString (Settings)" DbObjectName="bdpolideportivo.vwpartido" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `pkIdPartido`, `equipo1`, `equipo2`, `anotacionesEquipo1`, `anotacionesEquipo2`, `campo`, `fecha`, `fase`, `pkIdCampeonato`, `campeonato`, `pkIdEmpleado`, `empleado`, `pkIdEstado`, `estado` FROM `bdpolideportivo`.`vwpartido`</CommandText>
+                    <CommandText>SELECT `pkIdPartido`, `equipo1`, `equipo2`, `campo`, `anotacionesEquipo1`, `anotacionesEquipo2`, `fecha`, `fase`, `pkIdCampeonato`, `campeonato`, `pkIdEmpleado`, `empleado`, `pkIdEstadoPartido`, `estado` FROM `bdpolideportivo`.`vwpartido`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -22,16 +22,16 @@
               <Mapping SourceColumn="pkIdPartido" DataSetColumn="pkIdPartido" />
               <Mapping SourceColumn="equipo1" DataSetColumn="equipo1" />
               <Mapping SourceColumn="equipo2" DataSetColumn="equipo2" />
+              <Mapping SourceColumn="campo" DataSetColumn="campo" />
               <Mapping SourceColumn="anotacionesEquipo1" DataSetColumn="anotacionesEquipo1" />
               <Mapping SourceColumn="anotacionesEquipo2" DataSetColumn="anotacionesEquipo2" />
-              <Mapping SourceColumn="campo" DataSetColumn="campo" />
               <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
               <Mapping SourceColumn="fase" DataSetColumn="fase" />
               <Mapping SourceColumn="pkIdCampeonato" DataSetColumn="pkIdCampeonato" />
               <Mapping SourceColumn="campeonato" DataSetColumn="campeonato" />
               <Mapping SourceColumn="pkIdEmpleado" DataSetColumn="pkIdEmpleado" />
               <Mapping SourceColumn="empleado" DataSetColumn="empleado" />
-              <Mapping SourceColumn="pkIdEstado" DataSetColumn="pkIdEstado" />
+              <Mapping SourceColumn="pkIdEstadoPartido" DataSetColumn="pkIdEstadoPartido" />
               <Mapping SourceColumn="estado" DataSetColumn="estado" />
             </Mappings>
             <Sources />
@@ -62,8 +62,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="anotacionesEquipo1" msprop:Generator_ColumnVarNameInTable="columnanotacionesEquipo1" msprop:Generator_ColumnPropNameInRow="anotacionesEquipo1" msprop:Generator_ColumnPropNameInTable="anotacionesEquipo1Column" msprop:Generator_UserColumnName="anotacionesEquipo1" type="xs:int" minOccurs="0" />
-              <xs:element name="anotacionesEquipo2" msprop:Generator_ColumnVarNameInTable="columnanotacionesEquipo2" msprop:Generator_ColumnPropNameInRow="anotacionesEquipo2" msprop:Generator_ColumnPropNameInTable="anotacionesEquipo2Column" msprop:Generator_UserColumnName="anotacionesEquipo2" type="xs:int" minOccurs="0" />
               <xs:element name="campo" msprop:Generator_ColumnVarNameInTable="columncampo" msprop:Generator_ColumnPropNameInRow="campo" msprop:Generator_ColumnPropNameInTable="campoColumn" msprop:Generator_UserColumnName="campo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -71,6 +69,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="anotacionesEquipo1" msprop:Generator_ColumnVarNameInTable="columnanotacionesEquipo1" msprop:Generator_ColumnPropNameInRow="anotacionesEquipo1" msprop:Generator_ColumnPropNameInTable="anotacionesEquipo1Column" msprop:Generator_UserColumnName="anotacionesEquipo1" type="xs:int" minOccurs="0" />
+              <xs:element name="anotacionesEquipo2" msprop:Generator_ColumnVarNameInTable="columnanotacionesEquipo2" msprop:Generator_ColumnPropNameInRow="anotacionesEquipo2" msprop:Generator_ColumnPropNameInTable="anotacionesEquipo2Column" msprop:Generator_UserColumnName="anotacionesEquipo2" type="xs:int" minOccurs="0" />
               <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" />
               <xs:element name="fase" msprop:Generator_ColumnVarNameInTable="columnfase" msprop:Generator_ColumnPropNameInRow="fase" msprop:Generator_ColumnPropNameInTable="faseColumn" msprop:Generator_UserColumnName="fase">
                 <xs:simpleType>
@@ -95,7 +95,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="pkIdEstado" msprop:Generator_ColumnVarNameInTable="columnpkIdEstado" msprop:Generator_ColumnPropNameInRow="pkIdEstado" msprop:Generator_ColumnPropNameInTable="pkIdEstadoColumn" msprop:Generator_UserColumnName="pkIdEstado" type="xs:int" />
+              <xs:element name="pkIdEstadoPartido" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpkIdEstadoPartido" msprop:Generator_ColumnPropNameInRow="pkIdEstadoPartido" msprop:Generator_ColumnPropNameInTable="pkIdEstadoPartidoColumn" msprop:Generator_UserColumnName="pkIdEstadoPartido" type="xs:int" />
               <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -113,7 +113,7 @@
       <xs:field xpath="mstns:pkIdPartido" />
       <xs:field xpath="mstns:pkIdCampeonato" />
       <xs:field xpath="mstns:pkIdEmpleado" />
-      <xs:field xpath="mstns:pkIdEstado" />
+      <xs:field xpath="mstns:pkIdEstadoPartido" />
     </xs:unique>
   </xs:element>
 </xs:schema>

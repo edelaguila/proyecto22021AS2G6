@@ -193,10 +193,7 @@ namespace Vista
         {
         }
 
-        private void panelLateralInterno_MouseHover(object sender, EventArgs e)
-        {
-            panelLateralInterno.Focus();
-        }
+        //Evento Hover -> panelLateralInterno.Focus();
 
         private void panelLateralInterno_MouseWheel(object sender, MouseEventArgs e)
         {

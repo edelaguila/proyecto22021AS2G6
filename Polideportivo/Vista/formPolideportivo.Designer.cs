@@ -43,7 +43,7 @@
             this.panelMenuFaltas = new System.Windows.Forms.FlowLayoutPanel();
             this.btnMenuFalta = new System.Windows.Forms.Button();
             this.panelMenuParticipante = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnMenuParticipante = new System.Windows.Forms.Button();
+            this.btnSubMenuParticipante = new System.Windows.Forms.Button();
             this.panelMenuEmpleado = new System.Windows.Forms.FlowLayoutPanel();
             this.btnMenuEmpleado = new System.Windows.Forms.Button();
             this.panelMenuEntrenador = new System.Windows.Forms.FlowLayoutPanel();
@@ -66,6 +66,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.separadorLogo = new ReaLTaiizor.Controls.AirSeparator();
             this.panelLateralWrapper = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.panelSubmenuCampeonatos = new System.Windows.Forms.FlowLayoutPanel();
             this.panelPrincipalWrapper.SuspendLayout();
             this.panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +90,7 @@
             this.panelMenuTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelLateralWrapper.SuspendLayout();
+            this.panelSubmenuCampeonatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPrincipalWrapper
@@ -123,7 +125,6 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(900, 595);
             this.panelPrincipal.TabIndex = 0;
-            this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipal_Paint);
             // 
             // pictureBox1
             // 
@@ -160,7 +161,6 @@
             this.MenuSuperiorPanel.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.MenuSuperiorPanel.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.MenuSuperiorPanel.TopRight = System.Drawing.Color.DarkBlue;
-            this.MenuSuperiorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuSuperiorPanel_Paint);
             // 
             // btnLateral
             // 
@@ -256,9 +256,8 @@
             this.panelLateralInterno.Controls.Add(this.panelMenuRoles);
             this.panelLateralInterno.Controls.Add(this.panelMenuEntrenador);
             this.panelLateralInterno.Controls.Add(this.panelMenuEmpleado);
-            this.panelLateralInterno.Controls.Add(this.panelMenuParticipante);
             this.panelLateralInterno.Controls.Add(this.panelMenuFaltas);
-            this.panelLateralInterno.Location = new System.Drawing.Point(12, 23);
+            this.panelLateralInterno.Location = new System.Drawing.Point(15, 3);
             this.panelLateralInterno.Name = "panelLateralInterno";
             this.panelLateralInterno.Size = new System.Drawing.Size(250, 595);
             this.panelLateralInterno.TabIndex = 1;
@@ -268,9 +267,9 @@
             this.panelMenuFaltas.AutoSize = true;
             this.panelMenuFaltas.Controls.Add(this.btnMenuFalta);
             this.panelMenuFaltas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuFaltas.Location = new System.Drawing.Point(3, 739);
+            this.panelMenuFaltas.Location = new System.Drawing.Point(3, 667);
             this.panelMenuFaltas.Name = "panelMenuFaltas";
-            this.panelMenuFaltas.Size = new System.Drawing.Size(251, 59);
+            this.panelMenuFaltas.Size = new System.Drawing.Size(245, 53);
             this.panelMenuFaltas.TabIndex = 21;
             // 
             // btnMenuFalta
@@ -286,7 +285,8 @@
             this.btnMenuFalta.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuFalta.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuFalta.Image")));
             this.btnMenuFalta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuFalta.Location = new System.Drawing.Point(3, 3);
+            this.btnMenuFalta.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuFalta.Margin = new System.Windows.Forms.Padding(0);
             this.btnMenuFalta.Name = "btnMenuFalta";
             this.btnMenuFalta.Size = new System.Drawing.Size(245, 53);
             this.btnMenuFalta.TabIndex = 20;
@@ -297,43 +297,44 @@
             // panelMenuParticipante
             // 
             this.panelMenuParticipante.AutoSize = true;
-            this.panelMenuParticipante.Controls.Add(this.btnMenuParticipante);
-            this.panelMenuParticipante.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuParticipante.Location = new System.Drawing.Point(3, 674);
+            this.panelMenuParticipante.Controls.Add(this.btnSubMenuParticipante);
+            this.panelMenuParticipante.Location = new System.Drawing.Point(0, 0);
+            this.panelMenuParticipante.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenuParticipante.Name = "panelMenuParticipante";
-            this.panelMenuParticipante.Size = new System.Drawing.Size(251, 59);
+            this.panelMenuParticipante.Size = new System.Drawing.Size(245, 53);
             this.panelMenuParticipante.TabIndex = 23;
             // 
-            // btnMenuParticipante
+            // btnSubMenuParticipante
             // 
-            this.btnMenuParticipante.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenuParticipante.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenuParticipante.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenuParticipante.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnMenuParticipante.FlatAppearance.BorderSize = 0;
-            this.btnMenuParticipante.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(116)))), ((int)(((byte)(154)))));
-            this.btnMenuParticipante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(135)))), ((int)(((byte)(164)))));
-            this.btnMenuParticipante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuParticipante.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuParticipante.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMenuParticipante.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuParticipante.Image")));
-            this.btnMenuParticipante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuParticipante.Location = new System.Drawing.Point(3, 3);
-            this.btnMenuParticipante.Name = "btnMenuParticipante";
-            this.btnMenuParticipante.Size = new System.Drawing.Size(245, 53);
-            this.btnMenuParticipante.TabIndex = 22;
-            this.btnMenuParticipante.Text = "            PARTICIPANTES";
-            this.btnMenuParticipante.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuParticipante.UseVisualStyleBackColor = false;
-            this.btnMenuParticipante.Click += new System.EventHandler(this.btnMenuParticipante_Click);
+            this.btnSubMenuParticipante.BackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuParticipante.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubMenuParticipante.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSubMenuParticipante.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSubMenuParticipante.FlatAppearance.BorderSize = 0;
+            this.btnSubMenuParticipante.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(116)))), ((int)(((byte)(154)))));
+            this.btnSubMenuParticipante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(135)))), ((int)(((byte)(164)))));
+            this.btnSubMenuParticipante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubMenuParticipante.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubMenuParticipante.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuParticipante.Image = ((System.Drawing.Image)(resources.GetObject("btnSubMenuParticipante.Image")));
+            this.btnSubMenuParticipante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubMenuParticipante.Location = new System.Drawing.Point(0, 0);
+            this.btnSubMenuParticipante.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSubMenuParticipante.Name = "btnSubMenuParticipante";
+            this.btnSubMenuParticipante.Size = new System.Drawing.Size(245, 53);
+            this.btnSubMenuParticipante.TabIndex = 22;
+            this.btnSubMenuParticipante.Text = "            PARTICIPANTES";
+            this.btnSubMenuParticipante.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubMenuParticipante.UseVisualStyleBackColor = false;
+            this.btnSubMenuParticipante.Click += new System.EventHandler(this.btnSubMenuParticipante_Click);
             // 
             // panelMenuEmpleado
             // 
             this.panelMenuEmpleado.AutoSize = true;
             this.panelMenuEmpleado.Controls.Add(this.btnMenuEmpleado);
-            this.panelMenuEmpleado.Location = new System.Drawing.Point(3, 609);
+            this.panelMenuEmpleado.Location = new System.Drawing.Point(3, 608);
             this.panelMenuEmpleado.Name = "panelMenuEmpleado";
-            this.panelMenuEmpleado.Size = new System.Drawing.Size(251, 59);
+            this.panelMenuEmpleado.Size = new System.Drawing.Size(245, 53);
             this.panelMenuEmpleado.TabIndex = 23;
             // 
             // btnMenuEmpleado
@@ -349,7 +350,8 @@
             this.btnMenuEmpleado.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEmpleado.Image")));
             this.btnMenuEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuEmpleado.Location = new System.Drawing.Point(3, 3);
+            this.btnMenuEmpleado.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuEmpleado.Margin = new System.Windows.Forms.Padding(0);
             this.btnMenuEmpleado.Name = "btnMenuEmpleado";
             this.btnMenuEmpleado.Size = new System.Drawing.Size(245, 53);
             this.btnMenuEmpleado.TabIndex = 19;
@@ -362,9 +364,9 @@
             this.panelMenuEntrenador.AutoSize = true;
             this.panelMenuEntrenador.Controls.Add(this.btnMenuEntrenador);
             this.panelMenuEntrenador.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuEntrenador.Location = new System.Drawing.Point(3, 544);
+            this.panelMenuEntrenador.Location = new System.Drawing.Point(3, 549);
             this.panelMenuEntrenador.Name = "panelMenuEntrenador";
-            this.panelMenuEntrenador.Size = new System.Drawing.Size(251, 59);
+            this.panelMenuEntrenador.Size = new System.Drawing.Size(245, 53);
             this.panelMenuEntrenador.TabIndex = 30;
             // 
             // btnMenuEntrenador
@@ -380,7 +382,8 @@
             this.btnMenuEntrenador.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuEntrenador.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEntrenador.Image")));
             this.btnMenuEntrenador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuEntrenador.Location = new System.Drawing.Point(3, 3);
+            this.btnMenuEntrenador.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuEntrenador.Margin = new System.Windows.Forms.Padding(0);
             this.btnMenuEntrenador.Name = "btnMenuEntrenador";
             this.btnMenuEntrenador.Size = new System.Drawing.Size(245, 53);
             this.btnMenuEntrenador.TabIndex = 15;
@@ -393,9 +396,9 @@
             this.panelMenuRoles.AutoSize = true;
             this.panelMenuRoles.Controls.Add(this.btnRol);
             this.panelMenuRoles.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuRoles.Location = new System.Drawing.Point(3, 479);
+            this.panelMenuRoles.Location = new System.Drawing.Point(3, 490);
             this.panelMenuRoles.Name = "panelMenuRoles";
-            this.panelMenuRoles.Size = new System.Drawing.Size(251, 59);
+            this.panelMenuRoles.Size = new System.Drawing.Size(245, 53);
             this.panelMenuRoles.TabIndex = 29;
             // 
             // btnRol
@@ -411,7 +414,8 @@
             this.btnRol.ForeColor = System.Drawing.Color.Transparent;
             this.btnRol.Image = ((System.Drawing.Image)(resources.GetObject("btnRol.Image")));
             this.btnRol.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRol.Location = new System.Drawing.Point(3, 3);
+            this.btnRol.Location = new System.Drawing.Point(0, 0);
+            this.btnRol.Margin = new System.Windows.Forms.Padding(0);
             this.btnRol.Name = "btnRol";
             this.btnRol.Size = new System.Drawing.Size(245, 53);
             this.btnRol.TabIndex = 10;
@@ -425,9 +429,9 @@
             this.panelMenuJugadores.AutoSize = true;
             this.panelMenuJugadores.Controls.Add(this.btnMenuJugador);
             this.panelMenuJugadores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuJugadores.Location = new System.Drawing.Point(3, 414);
+            this.panelMenuJugadores.Location = new System.Drawing.Point(3, 431);
             this.panelMenuJugadores.Name = "panelMenuJugadores";
-            this.panelMenuJugadores.Size = new System.Drawing.Size(251, 59);
+            this.panelMenuJugadores.Size = new System.Drawing.Size(245, 53);
             this.panelMenuJugadores.TabIndex = 28;
             // 
             // btnMenuJugador
@@ -444,7 +448,8 @@
             this.btnMenuJugador.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuJugador.Image")));
             this.btnMenuJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuJugador.Location = new System.Drawing.Point(3, 3);
+            this.btnMenuJugador.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuJugador.Margin = new System.Windows.Forms.Padding(0);
             this.btnMenuJugador.Name = "btnMenuJugador";
             this.btnMenuJugador.Size = new System.Drawing.Size(245, 53);
             this.btnMenuJugador.TabIndex = 9;
@@ -457,9 +462,9 @@
             this.panelMenuEquipos.AutoSize = true;
             this.panelMenuEquipos.Controls.Add(this.btnMenuEquipo);
             this.panelMenuEquipos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuEquipos.Location = new System.Drawing.Point(3, 349);
+            this.panelMenuEquipos.Location = new System.Drawing.Point(3, 372);
             this.panelMenuEquipos.Name = "panelMenuEquipos";
-            this.panelMenuEquipos.Size = new System.Drawing.Size(251, 59);
+            this.panelMenuEquipos.Size = new System.Drawing.Size(245, 53);
             this.panelMenuEquipos.TabIndex = 27;
             // 
             // btnMenuEquipo
@@ -475,7 +480,8 @@
             this.btnMenuEquipo.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuEquipo.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuEquipo.Image")));
             this.btnMenuEquipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuEquipo.Location = new System.Drawing.Point(3, 3);
+            this.btnMenuEquipo.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuEquipo.Margin = new System.Windows.Forms.Padding(0);
             this.btnMenuEquipo.Name = "btnMenuEquipo";
             this.btnMenuEquipo.Size = new System.Drawing.Size(245, 53);
             this.btnMenuEquipo.TabIndex = 11;
@@ -489,9 +495,9 @@
             this.panelMenuDeportes.AutoSize = true;
             this.panelMenuDeportes.Controls.Add(this.btnDeportes);
             this.panelMenuDeportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuDeportes.Location = new System.Drawing.Point(3, 284);
+            this.panelMenuDeportes.Location = new System.Drawing.Point(3, 313);
             this.panelMenuDeportes.Name = "panelMenuDeportes";
-            this.panelMenuDeportes.Size = new System.Drawing.Size(251, 59);
+            this.panelMenuDeportes.Size = new System.Drawing.Size(245, 53);
             this.panelMenuDeportes.TabIndex = 26;
             // 
             // btnDeportes
@@ -508,7 +514,8 @@
             this.btnDeportes.ForeColor = System.Drawing.Color.Transparent;
             this.btnDeportes.Image = ((System.Drawing.Image)(resources.GetObject("btnDeportes.Image")));
             this.btnDeportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeportes.Location = new System.Drawing.Point(3, 3);
+            this.btnDeportes.Location = new System.Drawing.Point(0, 0);
+            this.btnDeportes.Margin = new System.Windows.Forms.Padding(0);
             this.btnDeportes.Name = "btnDeportes";
             this.btnDeportes.Size = new System.Drawing.Size(245, 53);
             this.btnDeportes.TabIndex = 17;
@@ -522,9 +529,9 @@
             this.panelMenuPartidos.AutoSize = true;
             this.panelMenuPartidos.Controls.Add(this.btnMenuPartido);
             this.panelMenuPartidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuPartidos.Location = new System.Drawing.Point(3, 219);
+            this.panelMenuPartidos.Location = new System.Drawing.Point(3, 254);
             this.panelMenuPartidos.Name = "panelMenuPartidos";
-            this.panelMenuPartidos.Size = new System.Drawing.Size(251, 59);
+            this.panelMenuPartidos.Size = new System.Drawing.Size(245, 53);
             this.panelMenuPartidos.TabIndex = 25;
             // 
             // btnMenuPartido
@@ -540,7 +547,8 @@
             this.btnMenuPartido.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuPartido.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuPartido.Image")));
             this.btnMenuPartido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuPartido.Location = new System.Drawing.Point(3, 3);
+            this.btnMenuPartido.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuPartido.Margin = new System.Windows.Forms.Padding(0);
             this.btnMenuPartido.Name = "btnMenuPartido";
             this.btnMenuPartido.Size = new System.Drawing.Size(245, 53);
             this.btnMenuPartido.TabIndex = 18;
@@ -552,12 +560,13 @@
             // panelMenuCampeonato
             // 
             this.panelMenuCampeonato.AutoSize = true;
+            this.panelMenuCampeonato.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelMenuCampeonato.Controls.Add(this.btnMenuCampeonato);
-            this.panelMenuCampeonato.Controls.Add(this.btnMenuPosiciones);
+            this.panelMenuCampeonato.Controls.Add(this.panelSubmenuCampeonatos);
             this.panelMenuCampeonato.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuCampeonato.Location = new System.Drawing.Point(3, 95);
+            this.panelMenuCampeonato.Location = new System.Drawing.Point(3, 89);
             this.panelMenuCampeonato.Name = "panelMenuCampeonato";
-            this.panelMenuCampeonato.Size = new System.Drawing.Size(251, 118);
+            this.panelMenuCampeonato.Size = new System.Drawing.Size(245, 159);
             this.panelMenuCampeonato.TabIndex = 24;
             // 
             // btnMenuPosiciones
@@ -573,7 +582,8 @@
             this.btnMenuPosiciones.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuPosiciones.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuPosiciones.Image")));
             this.btnMenuPosiciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuPosiciones.Location = new System.Drawing.Point(3, 62);
+            this.btnMenuPosiciones.Location = new System.Drawing.Point(0, 53);
+            this.btnMenuPosiciones.Margin = new System.Windows.Forms.Padding(0);
             this.btnMenuPosiciones.Name = "btnMenuPosiciones";
             this.btnMenuPosiciones.Size = new System.Drawing.Size(245, 53);
             this.btnMenuPosiciones.TabIndex = 21;
@@ -593,7 +603,8 @@
             this.btnMenuCampeonato.ForeColor = System.Drawing.Color.Transparent;
             this.btnMenuCampeonato.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuCampeonato.Image")));
             this.btnMenuCampeonato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuCampeonato.Location = new System.Drawing.Point(3, 3);
+            this.btnMenuCampeonato.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuCampeonato.Margin = new System.Windows.Forms.Padding(0);
             this.btnMenuCampeonato.Name = "btnMenuCampeonato";
             this.btnMenuCampeonato.Size = new System.Drawing.Size(245, 53);
             this.btnMenuCampeonato.TabIndex = 12;
@@ -607,7 +618,8 @@
             this.panelMenuTitulo.Controls.Add(this.pictureBox2);
             this.panelMenuTitulo.Controls.Add(this.label1);
             this.panelMenuTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuTitulo.Location = new System.Drawing.Point(3, 3);
+            this.panelMenuTitulo.Location = new System.Drawing.Point(0, 0);
+            this.panelMenuTitulo.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenuTitulo.Name = "panelMenuTitulo";
             this.panelMenuTitulo.Size = new System.Drawing.Size(245, 86);
             this.panelMenuTitulo.TabIndex = 23;
@@ -674,6 +686,18 @@
             this.panelLateralWrapper.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.panelLateralWrapper.TopRight = System.Drawing.Color.Navy;
             // 
+            // panelSubmenuCampeonatos
+            // 
+            this.panelSubmenuCampeonatos.AutoSize = true;
+            this.panelSubmenuCampeonatos.Controls.Add(this.panelMenuParticipante);
+            this.panelSubmenuCampeonatos.Controls.Add(this.btnMenuPosiciones);
+            this.panelSubmenuCampeonatos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubmenuCampeonatos.Location = new System.Drawing.Point(0, 53);
+            this.panelSubmenuCampeonatos.Margin = new System.Windows.Forms.Padding(0);
+            this.panelSubmenuCampeonatos.Name = "panelSubmenuCampeonatos";
+            this.panelSubmenuCampeonatos.Size = new System.Drawing.Size(245, 106);
+            this.panelSubmenuCampeonatos.TabIndex = 13;
+            // 
             // formPolideportivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -708,10 +732,13 @@
             this.panelMenuDeportes.ResumeLayout(false);
             this.panelMenuPartidos.ResumeLayout(false);
             this.panelMenuCampeonato.ResumeLayout(false);
+            this.panelMenuCampeonato.PerformLayout();
             this.panelMenuTitulo.ResumeLayout(false);
             this.panelMenuTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelLateralWrapper.ResumeLayout(false);
+            this.panelSubmenuCampeonatos.ResumeLayout(false);
+            this.panelSubmenuCampeonatos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -750,10 +777,11 @@
         private System.Windows.Forms.FlowLayoutPanel panelMenuEmpleado;
         private System.Windows.Forms.Button btnMenuEmpleado;
         private System.Windows.Forms.FlowLayoutPanel panelMenuParticipante;
-        private System.Windows.Forms.Button btnMenuParticipante;
+        private System.Windows.Forms.Button btnSubMenuParticipante;
         private System.Windows.Forms.FlowLayoutPanel panelMenuFaltas;
         private System.Windows.Forms.Button btnMenuFalta;
         private ReaLTaiizor.Controls.ParrotGradientPanel panelLateralWrapper;
+        private System.Windows.Forms.FlowLayoutPanel panelSubmenuCampeonatos;
     }
 }
 

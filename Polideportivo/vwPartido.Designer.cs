@@ -285,11 +285,11 @@ namespace Polideportivo {
             
             private global::System.Data.DataColumn columnequipo2;
             
+            private global::System.Data.DataColumn columncampo;
+            
             private global::System.Data.DataColumn columnanotacionesEquipo1;
             
             private global::System.Data.DataColumn columnanotacionesEquipo2;
-            
-            private global::System.Data.DataColumn columncampo;
             
             private global::System.Data.DataColumn columnfecha;
             
@@ -303,7 +303,7 @@ namespace Polideportivo {
             
             private global::System.Data.DataColumn columnempleado;
             
-            private global::System.Data.DataColumn columnpkIdEstado;
+            private global::System.Data.DataColumn columnpkIdEstadoPartido;
             
             private global::System.Data.DataColumn columnestado;
             
@@ -366,6 +366,14 @@ namespace Polideportivo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn campoColumn {
+                get {
+                    return this.columncampo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn anotacionesEquipo1Column {
                 get {
                     return this.columnanotacionesEquipo1;
@@ -377,14 +385,6 @@ namespace Polideportivo {
             public global::System.Data.DataColumn anotacionesEquipo2Column {
                 get {
                     return this.columnanotacionesEquipo2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn campoColumn {
-                get {
-                    return this.columncampo;
                 }
             }
             
@@ -438,9 +438,9 @@ namespace Polideportivo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn pkIdEstadoColumn {
+            public global::System.Data.DataColumn pkIdEstadoPartidoColumn {
                 get {
-                    return this.columnpkIdEstado;
+                    return this.columnpkIdEstadoPartido;
                 }
             }
             
@@ -489,22 +489,22 @@ namespace Polideportivo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwpartidoRow AddvwpartidoRow(string equipo1, string equipo2, int anotacionesEquipo1, int anotacionesEquipo2, string campo, System.DateTime fecha, string fase, string campeonato, string empleado, int pkIdEstado, string estado) {
+            public vwpartidoRow AddvwpartidoRow(string equipo1, string equipo2, string campo, int anotacionesEquipo1, int anotacionesEquipo2, System.DateTime fecha, string fase, string campeonato, string empleado, string estado) {
                 vwpartidoRow rowvwpartidoRow = ((vwpartidoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         equipo1,
                         equipo2,
+                        campo,
                         anotacionesEquipo1,
                         anotacionesEquipo2,
-                        campo,
                         fecha,
                         fase,
                         null,
                         campeonato,
                         null,
                         empleado,
-                        pkIdEstado,
+                        null,
                         estado};
                 rowvwpartidoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowvwpartidoRow);
@@ -513,12 +513,12 @@ namespace Polideportivo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwpartidoRow FindBypkIdPartidopkIdCampeonatopkIdEmpleadopkIdEstado(int pkIdPartido, int pkIdCampeonato, int pkIdEmpleado, int pkIdEstado) {
+            public vwpartidoRow FindBypkIdPartidopkIdCampeonatopkIdEmpleadopkIdEstadoPartido(int pkIdPartido, int pkIdCampeonato, int pkIdEmpleado, int pkIdEstadoPartido) {
                 return ((vwpartidoRow)(this.Rows.Find(new object[] {
                             pkIdPartido,
                             pkIdCampeonato,
                             pkIdEmpleado,
-                            pkIdEstado})));
+                            pkIdEstadoPartido})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -541,16 +541,16 @@ namespace Polideportivo {
                 this.columnpkIdPartido = base.Columns["pkIdPartido"];
                 this.columnequipo1 = base.Columns["equipo1"];
                 this.columnequipo2 = base.Columns["equipo2"];
+                this.columncampo = base.Columns["campo"];
                 this.columnanotacionesEquipo1 = base.Columns["anotacionesEquipo1"];
                 this.columnanotacionesEquipo2 = base.Columns["anotacionesEquipo2"];
-                this.columncampo = base.Columns["campo"];
                 this.columnfecha = base.Columns["fecha"];
                 this.columnfase = base.Columns["fase"];
                 this.columnpkIdCampeonato = base.Columns["pkIdCampeonato"];
                 this.columncampeonato = base.Columns["campeonato"];
                 this.columnpkIdEmpleado = base.Columns["pkIdEmpleado"];
                 this.columnempleado = base.Columns["empleado"];
-                this.columnpkIdEstado = base.Columns["pkIdEstado"];
+                this.columnpkIdEstadoPartido = base.Columns["pkIdEstadoPartido"];
                 this.columnestado = base.Columns["estado"];
             }
             
@@ -563,12 +563,12 @@ namespace Polideportivo {
                 base.Columns.Add(this.columnequipo1);
                 this.columnequipo2 = new global::System.Data.DataColumn("equipo2", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnequipo2);
+                this.columncampo = new global::System.Data.DataColumn("campo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncampo);
                 this.columnanotacionesEquipo1 = new global::System.Data.DataColumn("anotacionesEquipo1", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnanotacionesEquipo1);
                 this.columnanotacionesEquipo2 = new global::System.Data.DataColumn("anotacionesEquipo2", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnanotacionesEquipo2);
-                this.columncampo = new global::System.Data.DataColumn("campo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncampo);
                 this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha);
                 this.columnfase = new global::System.Data.DataColumn("fase", typeof(string), null, global::System.Data.MappingType.Element);
@@ -581,15 +581,15 @@ namespace Polideportivo {
                 base.Columns.Add(this.columnpkIdEmpleado);
                 this.columnempleado = new global::System.Data.DataColumn("empleado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnempleado);
-                this.columnpkIdEstado = new global::System.Data.DataColumn("pkIdEstado", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpkIdEstado);
+                this.columnpkIdEstadoPartido = new global::System.Data.DataColumn("pkIdEstadoPartido", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpkIdEstadoPartido);
                 this.columnestado = new global::System.Data.DataColumn("estado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnestado);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnpkIdPartido,
                                 this.columnpkIdCampeonato,
                                 this.columnpkIdEmpleado,
-                                this.columnpkIdEstado}, true));
+                                this.columnpkIdEstadoPartido}, true));
                 this.columnpkIdPartido.AutoIncrement = true;
                 this.columnpkIdPartido.AutoIncrementSeed = -1;
                 this.columnpkIdPartido.AutoIncrementStep = -1;
@@ -615,7 +615,10 @@ namespace Polideportivo {
                 this.columnpkIdEmpleado.AllowDBNull = false;
                 this.columnempleado.AllowDBNull = false;
                 this.columnempleado.MaxLength = 45;
-                this.columnpkIdEstado.AllowDBNull = false;
+                this.columnpkIdEstadoPartido.AutoIncrement = true;
+                this.columnpkIdEstadoPartido.AutoIncrementSeed = -1;
+                this.columnpkIdEstadoPartido.AutoIncrementStep = -1;
+                this.columnpkIdEstadoPartido.AllowDBNull = false;
                 this.columnestado.MaxLength = 45;
             }
             
@@ -792,6 +795,17 @@ namespace Polideportivo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string campo {
+                get {
+                    return ((string)(this[this.tablevwpartido.campoColumn]));
+                }
+                set {
+                    this[this.tablevwpartido.campoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int anotacionesEquipo1 {
                 get {
                     try {
@@ -819,17 +833,6 @@ namespace Polideportivo {
                 }
                 set {
                     this[this.tablevwpartido.anotacionesEquipo2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string campo {
-                get {
-                    return ((string)(this[this.tablevwpartido.campoColumn]));
-                }
-                set {
-                    this[this.tablevwpartido.campoColumn] = value;
                 }
             }
             
@@ -901,12 +904,12 @@ namespace Polideportivo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int pkIdEstado {
+            public int pkIdEstadoPartido {
                 get {
-                    return ((int)(this[this.tablevwpartido.pkIdEstadoColumn]));
+                    return ((int)(this[this.tablevwpartido.pkIdEstadoPartidoColumn]));
                 }
                 set {
-                    this[this.tablevwpartido.pkIdEstadoColumn] = value;
+                    this[this.tablevwpartido.pkIdEstadoPartidoColumn] = value;
                 }
             }
             
@@ -1125,16 +1128,16 @@ namespace Polideportivo.vwPartidoTableAdapters {
             tableMapping.ColumnMappings.Add("pkIdPartido", "pkIdPartido");
             tableMapping.ColumnMappings.Add("equipo1", "equipo1");
             tableMapping.ColumnMappings.Add("equipo2", "equipo2");
+            tableMapping.ColumnMappings.Add("campo", "campo");
             tableMapping.ColumnMappings.Add("anotacionesEquipo1", "anotacionesEquipo1");
             tableMapping.ColumnMappings.Add("anotacionesEquipo2", "anotacionesEquipo2");
-            tableMapping.ColumnMappings.Add("campo", "campo");
             tableMapping.ColumnMappings.Add("fecha", "fecha");
             tableMapping.ColumnMappings.Add("fase", "fase");
             tableMapping.ColumnMappings.Add("pkIdCampeonato", "pkIdCampeonato");
             tableMapping.ColumnMappings.Add("campeonato", "campeonato");
             tableMapping.ColumnMappings.Add("pkIdEmpleado", "pkIdEmpleado");
             tableMapping.ColumnMappings.Add("empleado", "empleado");
-            tableMapping.ColumnMappings.Add("pkIdEstado", "pkIdEstado");
+            tableMapping.ColumnMappings.Add("pkIdEstadoPartido", "pkIdEstadoPartido");
             tableMapping.ColumnMappings.Add("estado", "estado");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -1152,9 +1155,9 @@ namespace Polideportivo.vwPartidoTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `pkIdPartido`, `equipo1`, `equipo2`, `anotacionesEquipo1`, `anotacionesEqu" +
-                "ipo2`, `campo`, `fecha`, `fase`, `pkIdCampeonato`, `campeonato`, `pkIdEmpleado`," +
-                " `empleado`, `pkIdEstado`, `estado` FROM `bdpolideportivo`.`vwpartido`";
+            this._commandCollection[0].CommandText = "SELECT `pkIdPartido`, `equipo1`, `equipo2`, `campo`, `anotacionesEquipo1`, `anota" +
+                "cionesEquipo2`, `fecha`, `fase`, `pkIdCampeonato`, `campeonato`, `pkIdEmpleado`," +
+                " `empleado`, `pkIdEstadoPartido`, `estado` FROM `bdpolideportivo`.`vwpartido`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -18,9 +18,9 @@ namespace Controlador
             {
                 var sqlinsertar =
                 "INSERT INTO partido (pkId, equipo1, equipo2,anotacionesEquipo1, anotacionesEquipo2, campo, fecha, fase, fkIdCampeonato, " +
-                "fkIdEmpleado, fkIdEstado) " +
+                "fkIdEmpleado, fkIdEstadoPartido) " +
                 "VALUES (NULL, ?equipo1?, ?equipo2?,  ?anotacionesEquipo1?, ?anotacionesEquipo2?,?campo?, ?fecha?, ?fase?, ?fkIdCampeonato?, " +
-                "?fkIdEmpleado?, ?fkIdEstado?);";
+                "?fkIdEmpleado?, ?fkIdEstadoPartido?);";
                 var ValorDeVariables = new
                 {
                     equipo1 = modelo.equipo1,
@@ -32,7 +32,7 @@ namespace Controlador
                     fase = modelo.fase,
                     fkIdCampeonato = modelo.fkIdCampeonato,
                     fkIdEmpleado = modelo.fkIdEmpleado,
-                    fkIdEstado = modelo.fkIdEstado
+                    fkIdEstadoPartido = modelo.fkIdEstadoPartido
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
@@ -49,7 +49,7 @@ namespace Controlador
                 "UPDATE partido SET equipo1 = ?equipo1?, equipo2 = ?equipo2?, " +
                 "campo = ?campo?, fecha = ?fecha?, " +
                 "fase = ?fase?, fkIdCampeonato = ?fkIdCampeonato?, fkIdEmpleado = ?fkIdEmpleado?, " +
-                "anotacionesEquipo1 = ?anotacionesEquipo1?,  " + "anotacionesEquipo2 = ?anotacionesEquipo2?,  " + "fkIdEstado = ?fkIdEstado? " +
+                "anotacionesEquipo1 = ?anotacionesEquipo1?,  " + "anotacionesEquipo2 = ?anotacionesEquipo2?,  " + "fkIdEstadoPartido = ?fkIdEstadoPartido? " +
                 "WHERE pkId = ?pkId?;";
                 var ValorDeVariables = new
                 {
@@ -60,7 +60,7 @@ namespace Controlador
                     fase = modelo.fase,
                     fkIdCampeonato = modelo.fkIdCampeonato,
                     fkIdEmpleado = modelo.fkIdEmpleado,
-                    fkIdEstado = modelo.fkIdEstado,
+                    fkIdEstadoPartido = modelo.fkIdEstadoPartido,
                     anotacionesEquipo1 = modelo.anotacionesEquipo1,
                     anotacionesEquipo2 = modelo.anotacionesEquipo2,
                     pkId = modelo.pkId

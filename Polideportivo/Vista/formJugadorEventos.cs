@@ -65,8 +65,8 @@ namespace Vista
                 // Llenar la combobox de rol dependiendo del deporte elegido
                 modeloRol modelorol = new modeloRol();
                 modelorol.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-                controladorRol rol = new controladorRol(modelorol);
-                cboRol.DataSource = rol.mostrarRolesPorDeporte();
+                controladorRol rol = new controladorRol();
+                cboRol.DataSource = rol.mostrarRolesPorDeporte(modelorol);
                 cboRol.DisplayMember = "nombre";
                 cboRol.ValueMember = "pkId";
 

@@ -91,13 +91,13 @@ namespace Vista
             actualizarTablaRol();
         }
 
-        private void btnEliminarEmpleado_Click(object sender, EventArgs e)
+        private void btnEliminarRol_Click(object sender, EventArgs e)
         {
             int id = stringAInt(tablaRol.SelectedRows[0].Cells[0].Value.ToString());
-            controladorEmpleado controlador = new controladorEmpleado();
-            modeloEmpleado modelo = new modeloEmpleado();
+            controladorRol controlador = new controladorRol();
+            modeloRol modelo = new modeloRol();
             modelo.pkId = id;
-            controlador.eliminarEmpleado(modelo);
+            controlador.eliminarRol(modelo);
             actualizarTablaRol();
         }
 

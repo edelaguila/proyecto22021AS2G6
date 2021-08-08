@@ -289,11 +289,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vwEmpleado.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Datos\vwRol.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>vwRol.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Datos\vwTipoFalta.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -450,17 +445,6 @@
     </None>
     <None Include="Datos\vwEntrenador.xss">
       <DependentUpon>vwEntrenador.xsd</DependentUpon>
-    </None>
-    <None Include="Datos\vwRol.xsc">
-      <DependentUpon>vwRol.xsd</DependentUpon>
-    </None>
-    <None Include="Datos\vwRol.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>vwRol.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Datos\vwRol.xss">
-      <DependentUpon>vwRol.xsd</DependentUpon>
     </None>
     <None Include="Datos\vwTipoFalta.xsc">
       <DependentUpon>vwTipoFalta.xsd</DependentUpon>

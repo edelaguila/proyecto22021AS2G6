@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Vista
@@ -13,7 +14,12 @@ namespace Vista
             panelLateralInterno.AutoScroll = false;
             panelLateralInterno.VerticalScroll.Visible = false;
             panelLateralInterno.AutoScroll = true;
+            panelLateralInterno.AutoScrollPosition = new Point(panelLateralInterno.AutoScrollPosition.X, 0);
+            panelLateralInterno.VerticalScroll.Value = 0;
+
             this.panelLateralInterno.MouseWheel += panelLateralInterno_MouseWheel;
+            panelMenuCampeonato.Select();
+            //
         }
 
         protected override void OnResizeBegin(EventArgs e)
@@ -90,6 +96,21 @@ namespace Vista
         private void btnMenuCampeonato_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formCampeonato(), "CAMPEONATO");
+            if (btnMenuPosiciones.Visible == false)
+            {
+                anterior = btnMenuPosiciones.BackColor;
+                btnMenuPosiciones.BackColor = Color.FromArgb(25, btnMenuPosiciones.BackColor);
+                btnMenuPosiciones.Visible = true;
+            }
+            else
+            {
+                btnMenuPosiciones.BackColor = anterior;
+                btnMenuPosiciones.Visible = false;
+            }
+        }
+
+        private void gestorDeSubMenu()
+        {
         }
 
         private void btnRol_Click(object sender, EventArgs e)
@@ -199,5 +220,22 @@ namespace Vista
         {
             panelLateralInterno.Invalidate();
         }
+
+        private Color anterior;
+
+        //private void button6_Click(object sender, EventArgs e)
+        //{
+        //    if (button5.Visible == false)
+        //    {
+        //        anterior = button6.BackColor;
+        //        button6.BackColor = Color.FromArgb(25, button6.BackColor);
+        //        button5.Visible = true;
+        //    }
+        //    else
+        //    {
+        //        button6.BackColor = anterior;
+        //        button5.Visible = false;
+        //    }
+        //}
     }
 }

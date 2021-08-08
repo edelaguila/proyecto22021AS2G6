@@ -21,16 +21,26 @@ INSERT INTO puestoempleado(pkId, nombre) VALUES  (NULL, "Trabajador");
 INSERT INTO puestoempleado(pkId, nombre) VALUES  (NULL, "Conserje");
 INSERT INTO puestoempleado(pkId, nombre) VALUES  (NULL, "Secretaria");
 INSERT INTO empleado(pkId, nombre, fkIdPuestoEmpleado) VALUES (NULL, "Jorge", 1);
-INSERT INTO estado(pkId, nombre) VALUES (NULL, "En espera");
-INSERT INTO estado(pkId, nombre) VALUES (NULL, "Finalizado");
+INSERT INTO estadoPartido(pkId, nombre) VALUES (NULL, "En espera");
+INSERT INTO estadoPartido(pkId, nombre) VALUES (NULL, "Finalizado");
 INSERT INTO partido(pkId, equipo1, equipo2, anotacionesEquipo1, anotacionesEquipo2, campo, fecha, fase, fkIdCampeonato, fkIdEmpleado, fkIdEstado ) VALUES (NULL, "Madrid", "Barcelona", "2","4", "mateo",'2015-12-29 19:48' ,"final", 1 ,1, 1);
 INSERT INTO fase(pkId, nombre) VALUES(NULL, "Finales");
 INSERT INTO fase(pkId, nombre) VALUES(NULL, "Semifinales");
 INSERT INTO fase(pkId, nombre) VALUES(NULL, "Cuartos de final");
 INSERT INTO fase(pkId, nombre) VALUES(NULL, "Octavos de final");
-select * from fase;
+INSERT INTO estadoParticipante(pkId, nombre) VALUES (NULL, "Eliminado");
+INSERT INTO estadoParticipante(pkId, nombre) VALUES (NULL, "Activo");
+INSERT INTO participante(pkId, puntos, fkIdCampeonato, fkIdEquipo, fkIdFase, fkIdEstadoParticipante) VALUES(NULL, 15,1,1,1,1);
 
 select * from participante;
+
+DROP VIEW IF EXISTS `vwParticipante`;
+CREATE VIEW `vwParticipante` AS
+SELECT 
+A.pkId AS pkIdPartido, A.puntos, A.estado,
+B.pkId AS pkIdCampeonato, B.nombre AS campeonato
+FROM participante A
+INNER JOIN campeonato B ON B.pkId = A.fkIdCampeonato;
 
 /* Vista de tipofalta */
 DROP VIEW IF EXISTS vwTipoFalta;
@@ -76,7 +86,7 @@ D.pkId AS pkIdEstado, D.nombre AS estado
 FROM partido A
 INNER JOIN campeonato B ON B.pkId = A.fkIdCampeonato
 INNER JOIN empleado C ON C.pkId = A.fkIdEmpleado
-INNER JOIN estado D ON D.pkId = A.fkIdEstado
+INNER JOIN estadopartido D ON D.pkId = A.fkIdEstado
 ORDER BY pkIdPartido;
 select * from estado;
 

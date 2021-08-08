@@ -149,19 +149,19 @@ namespace Vista
         // Submenús
         private void btnSubMenuParticipante_Click(object sender, EventArgs e)
         {
-            gestorDeFormActivo(new formParticipante(), "PARTICIPANTES DE CAMPEONATOS");
+            gestorDeFormActivoSubmenu(new formParticipante(), "PARTICIPANTES DE CAMPEONATOS");
             botonSeleccionadoDentroDeSubmenu(panelMenuCampeonato, btnSubMenuParticipante);
         }
 
         private void btnSubMenuPosiciones_Click(object sender, EventArgs e)
         {
-            gestorDeFormActivo(new formParticipante(), "TABLA DE POSICIONES");
+            gestorDeFormActivoSubmenu(new formParticipante(), "TABLA DE POSICIONES");
             botonSeleccionadoDentroDeSubmenu(panelMenuCampeonato, btnSubMenuPosiciones);
         }
 
         private void btnSubMenuPartidosResultado_Click(object sender, EventArgs e)
         {
-            gestorDeFormActivo(new formParticipante(), "RESULTADOS DE PARTIDOS");
+            gestorDeFormActivoSubmenu(new formParticipante(), "RESULTADOS DE PARTIDOS");
             botonSeleccionadoDentroDeSubmenu(panelMenuPartidos, btnSubMenuPartidosResultado);
         }
 
@@ -175,6 +175,20 @@ namespace Vista
                 lblTituloPrincipal.Text = "POLIDEPORTIVO";
                 subMenuActivo = null;
                 botonSeleccionado.BackColor = Color.Transparent;
+            }
+            else
+            {
+                formPrincipalAnterior = formHijoActual;
+                cerrarFormActivo();
+                abrirFormHijo(formHijo, panelPrincipal);
+            }
+        }
+
+        private void gestorDeFormActivoSubmenu(Form formHijo, string formHijoActual)
+        {
+            lblTituloPrincipal.Text = formHijoActual;
+            if (formPrincipalAnterior == formHijoActual)
+            {
             }
             else
             {

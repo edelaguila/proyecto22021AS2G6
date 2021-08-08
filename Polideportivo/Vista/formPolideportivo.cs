@@ -20,6 +20,7 @@ namespace Vista
             this.panelLateralInterno.MouseWheel += panelLateralInterno_MouseWheel;
             panelMenuCampeonato.Select();
             panelSubmenuCampeonatos.Visible = false;
+            panelSubMenuPartidos.Visible = false;
             //
         }
 
@@ -78,68 +79,61 @@ namespace Vista
 
         private Form formActivo = null;
         private string formPrincipalAnterior = "";
+        private bool subMenuActivo = false;
 
         private void btnDeportes_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formDeporte(), "DEPORTES");
-            cerrarOtrosSubmenus();
             botonSeleccionadoSinSubmenu(panelMenuDeportes);
         }
 
         private void btnMenuJugador_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formJugador(), "JUGADORES");
-            cerrarOtrosSubmenus();
             botonSeleccionadoSinSubmenu(panelMenuJugadores);
         }
 
         private void btnMenuEquipo_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formEquipo(), "EQUIPO");
-            cerrarOtrosSubmenus();
             botonSeleccionadoSinSubmenu(panelMenuEquipos);
         }
 
         private void btnMenuCampeonato_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formCampeonato(), "CAMPEONATO");
-            cerrarOtrosSubmenus();
-            botonSeleccionadoConSubmenu(panelMenuCampeonato, panelSubmenuCampeonatos);
             gestorDeSubMenu(panelSubmenuCampeonatos);
+            botonSeleccionadoConSubmenu(panelMenuCampeonato, panelSubmenuCampeonatos);
+        }
+
+        private void btnMenuPartido_Click(object sender, EventArgs e)
+        {
+            gestorDeFormActivo(new formPartido(), "PARTIDO");
+            gestorDeSubMenu(panelSubMenuPartidos);
+            botonSeleccionadoConSubmenu(panelMenuPartidos, panelSubMenuPartidos);
         }
 
         private void btnRol_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formRol(), "ROLES");
-            cerrarOtrosSubmenus();
             botonSeleccionadoSinSubmenu(panelMenuRoles);
         }
 
         private void btnMenuEntrenador_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formEntrenador(), "ENTRENADOR");
-            cerrarOtrosSubmenus();
             botonSeleccionadoSinSubmenu(panelMenuEntrenador);
         }
 
         private void btnMenuEmpleado_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formEmpleado(), "EMPLEADO");
-            cerrarOtrosSubmenus();
             botonSeleccionadoSinSubmenu(panelMenuEmpleado);
-        }
-
-        private void btnMenuPartido_Click(object sender, EventArgs e)
-        {
-            gestorDeFormActivo(new formPartido(), "PARTIDO");
-            cerrarOtrosSubmenus();
-            botonSeleccionadoSinSubmenu(panelMenuPartidos);
         }
 
         private void btnMenuFalta_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formTipoFalta(), "TIPOS DE FALTAS");
-            cerrarOtrosSubmenus();
             botonSeleccionadoSinSubmenu(panelMenuFaltas);
         }
 
@@ -147,7 +141,13 @@ namespace Vista
         private void btnSubMenuParticipante_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formParticipante(), "PARTICIPANTES DE CAMPEONATOS");
-            botonSeleccionadoDentroDeSubmenu(panelMenuParticipante, panelMenuCampeonato);
+            botonSeleccionadoDentroDeSubmenu(panelMenuCampeonato, btnSubMenuParticipante);
+        }
+
+        private void btnSubMenuPosiciones_Click(object sender, EventArgs e)
+        {
+            gestorDeFormActivo(new formParticipante(), "TABLA DE POSICIONES");
+            botonSeleccionadoDentroDeSubmenu(panelMenuCampeonato, btnSubMenuPosiciones);
         }
 
         private void gestorDeFormActivo(Form formHijo, string formHijoActual)
@@ -201,7 +201,7 @@ namespace Vista
             btn.BackColor = Color.FromArgb(18, 57, 112);
         }
 
-        private void botonSeleccionadoDentroDeSubmenu(FlowLayoutPanel btn, FlowLayoutPanel btnPrincipal)
+        private void botonSeleccionadoDentroDeSubmenu(FlowLayoutPanel btnPrincipal, Button btn)
         {
             resetearColores();
             btn.BackColor = Color.FromArgb(18, 57, 112);
@@ -210,6 +210,8 @@ namespace Vista
 
         private void resetearColores()
         {
+            btnSubMenuPosiciones.BackColor = Color.Transparent;
+            btnSubMenuParticipante.BackColor = Color.Transparent;
             panelMenuEquipos.BackColor = Color.Transparent;
             panelMenuCampeonato.BackColor = Color.Transparent;
             panelMenuDeportes.BackColor = Color.Transparent;
@@ -217,29 +219,19 @@ namespace Vista
             panelMenuEntrenador.BackColor = Color.Transparent;
             panelMenuFaltas.BackColor = Color.Transparent;
             panelMenuJugadores.BackColor = Color.Transparent;
-            panelMenuParticipante.BackColor = Color.Transparent;
             panelMenuPartidos.BackColor = Color.Transparent;
             panelMenuRoles.BackColor = Color.Transparent;
-        }
-
-        private Color anterior;
-
-        private void cerrarOtrosSubmenus()
-        {
-            panelSubmenuCampeonatos.Visible = false;
+            panelSubmenuCampeonatos.BackColor = Color.Transparent;
         }
 
         private void gestorDeSubMenu(FlowLayoutPanel subpanel)
         {
             if (subpanel.Visible == false)
             {
-                anterior = subpanel.BackColor;
-                //subpanel.BackColor = Color.FromArgb(25, btnMenuPosiciones.BackColor);
                 subpanel.Visible = true;
             }
             else
             {
-                subpanel.BackColor = anterior;
                 subpanel.Visible = false;
             }
         }

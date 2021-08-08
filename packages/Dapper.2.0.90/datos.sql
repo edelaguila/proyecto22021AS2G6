@@ -48,6 +48,14 @@ INNER JOIN fase D ON D.pkId = A.fkIdFase
 INNER JOIN estadoparticipante E ON E.pkId = A.fkIdEstadoParticipante;
 select * from vwParticipante;
 
+DROP VIEW IF EXISTS `vwParticipante`;
+CREATE VIEW `vwParticipante` AS
+SELECT 
+A.pkId AS pkIdPartido, A.puntos, A.estado,
+B.pkId AS pkIdCampeonato, B.nombre AS campeonato
+FROM participante A
+INNER JOIN campeonato B ON B.pkId = A.fkIdCampeonato;
+
 /* Vista de tipofalta */
 DROP VIEW IF EXISTS vwTipoFalta;
 CREATE VIEW vwTipoFalta AS

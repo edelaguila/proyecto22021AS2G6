@@ -49,9 +49,9 @@ namespace Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificarRol = new System.Windows.Forms.Button();
             this.btnAgregarRol = new System.Windows.Forms.Button();
-            this.vwRol = new Polideportivo.vwRol();
+            this.vwRol = new Datos.vwRol();
             this.vwrolBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwrolTableAdapter = new Polideportivo.vwRolTableAdapters.vwrolTableAdapter();
+            this.vwrolTableAdapter = new Datos.vwRolTableAdapters.vwrolTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -443,9 +443,9 @@ namespace Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDeporteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox cboDeporte;
-        private Polideportivo.vwRol vwRol;
+        private Datos.vwRol vwRol;
         private System.Windows.Forms.BindingSource vwrolBindingSource;
-        private Polideportivo.vwRolTableAdapters.vwrolTableAdapter vwrolTableAdapter;
+        private Datos.vwRolTableAdapters.vwrolTableAdapter vwrolTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

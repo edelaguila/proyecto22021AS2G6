@@ -49,9 +49,9 @@ namespace Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregarPartido = new System.Windows.Forms.Button();
-            this.vwPartido = new Polideportivo.vwPartido();
+            this.vwPartido = new Datos.vwPartido();
             this.vwpartidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwpartidoTableAdapter = new Polideportivo.vwPartidoTableAdapters.vwpartidoTableAdapter();
+            this.vwpartidoTableAdapter = new Datos.vwPartidoTableAdapters.vwpartidoTableAdapter();
             this.pkIdPartidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.equipo1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.equipo2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -512,7 +512,7 @@ namespace Vista
         private Zuby.ADGV.AdvancedDataGridView tablaPartidos;
         private vwPartido vwPartido;
         private System.Windows.Forms.BindingSource vwpartidoBindingSource;
-        private Polideportivo.vwPartidoTableAdapters.vwpartidoTableAdapter vwpartidoTableAdapter;
+        private Datos.vwPartidoTableAdapters.vwpartidoTableAdapter vwpartidoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdPartidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipo1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipo2DataGridViewTextBoxColumn;

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Polideportivo {
+namespace Datos {
     
     
     /// <summary>
@@ -1001,7 +1001,7 @@ namespace Polideportivo {
         }
     }
 }
-namespace Polideportivo.vwPartidoTableAdapters {
+namespace Datos.vwPartidoTableAdapters {
     
     
     /// <summary>

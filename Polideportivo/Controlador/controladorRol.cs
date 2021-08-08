@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Conexion;
 using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
@@ -8,57 +9,69 @@ namespace Controlador
 {
     public class controladorRol
     {
-        public OdbcConnection pruebas = new OdbcConnection("DSN=bdpolideportivo");
+        private ConexionODBC ConexionODBC = new ConexionODBC();
+        public controladorRol()
+        {
+        }
 
-        public modeloRol modelo;
 
         public modeloRol agregarRol(modeloRol modelo)
         {
-            pruebas.Open();
-
-            var sqlinsertar =
-               "INSERT INTO rol (nombre, fkIdDeporte) " +
-               "VALUES (?nombre?, ?fkIdDeporte?);";
-            var ValorDeVariables = new
-            {
-                nombre = modelo.nombre,
-                fkIdDeporte = modelo.fkIdDeporte
-            };
-            var resultadoinsertar = pruebas.Execute(sqlinsertar, ValorDeVariables);
-            pruebas.Close();
-            return modelo;
-        }
-
-        public modeloRol modificarRol(modeloRol modelo)
-        {
-            pruebas.Open();
+            OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
+            if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "UPDATE jugador SET nombre = ?nombre?, " +
-                "fkIdDeporte = ?fkIdDeporte?" +
-                " WHERE pkId = ?pkId?;";
+               "INSERT INTO rol (nombre, fkIdDeporte) " +
+               "VALUES (?nombre?, ?fkIdDeporte?);";
                 var ValorDeVariables = new
                 {
                     nombre = modelo.nombre,
                     fkIdDeporte = modelo.fkIdDeporte
                 };
-                pruebas.Close();
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ConexionODBC.cerrarConexion(conexionODBC);
+            }
+                return modelo;
+        }
+
+        public modeloRol modificarRol(modeloRol modelo)
+        {
+            OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                var sqlinsertar =
+                "UPDATE rol SET nombre = ?nombre?, " +
+                "fkIdDeporte = ?fkIdDeporte?" +
+                " WHERE pkId = ?pkId?;";
+                var ValorDeVariables = new
+                {
+                    nombre = modelo.nombre,
+                    fkIdDeporte = modelo.fkIdDeporte,
+                    pkId = modelo.pkId
+                };
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ConexionODBC.cerrarConexion(conexionODBC);
             }
             return modelo;
         }
-        public List<modeloRol> mostrarRol()
+       
+        public List<modeloRol> mostrarRoles()
         {
-            pruebas.Open();
+            OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
             List<modeloRol> sqlresultado = new List<modeloRol>();
-            
+            if (conexionODBC != null)
+            {
                 string sqlconsulta = "SELECT * FROM tablaRol;";
-                sqlresultado = pruebas.Query<modeloRol>(sqlconsulta).ToList();
-            pruebas.Close();
+                sqlresultado = conexionODBC.Query<modeloRol>(sqlconsulta).ToList();
+                ConexionODBC.cerrarConexion(conexionODBC);
+            }
             return sqlresultado;
         }
+
         public modeloRol eliminarRol(modeloRol modelo)
         {
-            pruebas.Open();
+            OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
+            if (conexionODBC != null)
             {
                 var sqlinsertar =
                 "DELETE FROM rol WHERE pkId = ?pkId?;";
@@ -67,32 +80,28 @@ namespace Controlador
                     pkId = modelo.pkId
 
                 };
-                pruebas.Close();
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ConexionODBC.cerrarConexion(conexionODBC);
             }
             return modelo;
         }
 
 
-        public controladorRol()
+ 
+        public List<modeloRol> mostrarRolesPorDeporte(modeloRol modelo)
         {
-        }
-
-        public controladorRol(modeloRol Modelo)
-        {
-            modelo = Modelo;
-        }
-
-        public List<modeloRol> mostrarRolesPorDeporte()
-        {
-            pruebas.Open();
-            //string sqlconsulta = "SELECT pkId, nombre, fkIdDeporte FROM rol WHERE fkIdDeporte = 1;";
-            string sqlconsulta = "SELECT pkId, nombre, fkIdDeporte FROM rol WHERE fkIdDeporte = ?fkIdDeporte?;";
-            var parameters = new
+            OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
+            List<modeloRol> sqlresultado = new List<modeloRol>();
+            if (conexionODBC != null)
             {
-                fkIdDeporte = modelo.fkIdDeporte
-            };
-            var sqlresultado = pruebas.Query<modeloRol>(sqlconsulta, parameters).ToList();
-            pruebas.Close();
+                string sqlconsulta = "SELECT pkId, nombre, fkIdDeporte FROM rol WHERE fkIdDeporte = ?fkIdDeporte?;";
+                var parameters = new
+                {
+                    fkIdDeporte = modelo.fkIdDeporte
+                };
+                sqlresultado = conexionODBC.Query<modeloRol>(sqlconsulta, parameters).ToList();
+                ConexionODBC.cerrarConexion(conexionODBC);
+            }
             return sqlresultado;
         }
     }

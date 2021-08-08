@@ -110,7 +110,6 @@
             this.panelLateralInterno.Name = "panelLateralInterno";
             this.panelLateralInterno.Size = new System.Drawing.Size(250, 595);
             this.panelLateralInterno.TabIndex = 0;
-            this.panelLateralInterno.MouseHover += new System.EventHandler(this.panelLateralInterno_MouseHover);
             // 
             // btnMenuParticipante
             // 

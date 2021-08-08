@@ -24,10 +24,12 @@ namespace Vista
             cboDeporte.ValueMember = "pkId";
             cboDeporte.SelectedItem = cboDeporte.Items[0];
         }
+
         public void actualizarTablaRol()
         {
             this.vwrolTableAdapter.Fill(this.vwRol.vwrol);
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             modeloEmpleado modelo = new modeloEmpleado();
@@ -35,14 +37,13 @@ namespace Vista
         }
 
         private modeloRol modeloFila = new modeloRol();
+
         private void llenarModeloConFilaSeleccionada()
         {
             id = stringAInt(tablaRol.SelectedRows[0].Cells[0].Value.ToString());
             nombre = tablaRol.SelectedRows[0].Cells[1].Value.ToString();
             modeloFila.pkId = id;
         }
-
-
 
         private void tablaRol_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -59,6 +60,7 @@ namespace Vista
             modeloAgregar.agregarRol(modelo);
             actualizarTablaRol();
         }
+
         private void btnModificarRol_Click(object sender, EventArgs e)
         {
             controladorRol modeloModificar = new controladorRol();
@@ -108,17 +110,14 @@ namespace Vista
 
         private void tablaRol_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void formRol_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'vwRol.vwrol' Puede moverla o quitarla según sea necesario.
             this.vwrolTableAdapter.Fill(this.vwRol.vwrol);
-
+            // TODO: esta línea de código carga datos en la tabla 'vwRol.vwrol' Puede moverla o quitarla según sea necesario.
+            this.vwrolTableAdapter.Fill(this.vwRol.vwrol);
         }
     }
 }
-
-
-

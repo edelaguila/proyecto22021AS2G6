@@ -1,5 +1,6 @@
 ﻿using Controlador;
 using Modelo;
+using Datos;
 using System;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
@@ -10,6 +11,7 @@ namespace Vista
     {
         private int id;
         private string nombre;
+
         public formTipoFalta()
         {
             InitializeComponent();
@@ -25,22 +27,19 @@ namespace Vista
             // Modificar el texto del título
         }
 
-
-
         private void formTipoFalta_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'vwTipoFalta.vwtipofalta' Puede moverla o quitarla según sea necesario.
             this.vwtipofaltaTableAdapter.Fill(this.vwTipoFalta.vwtipofalta);
             cboBuscar.SelectedIndex = 0;
-
         }
-
 
         public void actualizarTablaTipoFalta
  ()
         {
             this.vwtipofaltaTableAdapter.Fill(this.vwTipoFalta.vwtipofalta);
         }
+
         private void llenarModeloConFilaSeleccionada()
         {
             id = stringAInt(tablaTipoFalta.SelectedRows[0].Cells[0].Value.ToString());
@@ -48,7 +47,8 @@ namespace Vista
             modeloFila.pkId = id;
         }
 
-        modeloTipoFalta modeloFila = new modeloTipoFalta();
+        private modeloTipoFalta modeloFila = new modeloTipoFalta();
+
         private void tablaTipoFalta_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             llenarModeloConFilaSeleccionada();
@@ -114,9 +114,6 @@ namespace Vista
 
         private void parrotGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
-
-    
     }
 }

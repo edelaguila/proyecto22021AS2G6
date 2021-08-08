@@ -13,6 +13,7 @@ namespace Vista
             panelLateralInterno.AutoScroll = false;
             panelLateralInterno.VerticalScroll.Visible = false;
             panelLateralInterno.AutoScroll = true;
+            this.panelLateralInterno.MouseWheel += panelLateralInterno_MouseWheel;
         }
 
         protected override void OnResizeBegin(EventArgs e)
@@ -110,9 +111,15 @@ namespace Vista
         {
             gestorDeFormActivo(new formPartido(), "PARTIDO");
         }
+
         private void btnMenuFalta_Click(object sender, EventArgs e)
         {
-            gestorDeFormActivo(new formTipoFalta(), "Falta");
+            gestorDeFormActivo(new formTipoFalta(), "TIPOS DE FALTAS");
+        }
+
+        private void btnMenuParticipante_Click(object sender, EventArgs e)
+        {
+            gestorDeFormActivo(new formParticipante(), "PARTICIPANTES DE CAMPEONATOS");
         }
 
         private void gestorDeFormActivo(Form formHijo, string formHijoActual)
@@ -186,6 +193,14 @@ namespace Vista
         {
         }
 
-        
+        private void panelLateralInterno_MouseHover(object sender, EventArgs e)
+        {
+            panelLateralInterno.Focus();
+        }
+
+        private void panelLateralInterno_MouseWheel(object sender, MouseEventArgs e)
+        {
+            panelLateralInterno.Invalidate();
+        }
     }
 }

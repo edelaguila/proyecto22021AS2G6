@@ -1,16 +1,16 @@
-﻿namespace Modelo
+﻿namespace Modelo.DTO
 {
-    public class modeloEquipo
+    public class dtoEquipo
     {
         public int pkId { get; set; }
         public string nombre { get; set; }
         public int fkIdDeporte { get; set; }
 
-        public modeloEquipo()
+        public dtoEquipo()
         {
         }
 
-        public modeloEquipo(int Id, string Nombre, int IdDeporte)
+        public dtoEquipo(int Id, string Nombre, int IdDeporte)
         {
             pkId = Id;
             nombre = Nombre;

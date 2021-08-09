@@ -1,6 +1,7 @@
 ﻿using Conexion;
 using Dapper;
 using Modelo;
+using Modelo.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
@@ -8,13 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controlador
+namespace Modelo.DAO
 {
-    class controladorUsuario
+    class daoUsuario
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
-        public modeloUsuario agregarUsuario(modeloUsuario modelo)
+        public dtoUsuario agregarUsuario(dtoUsuario modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
@@ -29,15 +30,11 @@ namespace Controlador
                     contraseña = modelo.contraseña,
                     telefono = modelo.telefono,
                     tipo = modelo.tipo,
-                    
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
             }
             return modelo;
         }
-
-  
-
     }
 }

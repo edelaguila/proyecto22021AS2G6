@@ -134,7 +134,7 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnActualizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnActualizarEquipo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAjJJREFUSEvt
         Vb9rFEEUPvE3MVjZCVoIFoHdPVKlS6FYiT/gwEAgWnjEwIHZGS6Nylko/gsWGhS12MqZSQ6s0gSLVFZC
@@ -174,7 +174,7 @@
         /BcjHIZnYuSpeILivwA70mYSh+Q5hVMaxXEOALohBVHQA8mzAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnModificarJugador.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnModificarEquipo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAp1JREFUSEvV
         lUmLFDEUx0vFDUT8BDrouHZXUtU9OuhBDwpePAmDHl1ghJGWqSTtoCNSCIoHPbiAu+DBhUZnOkn1XMWb
@@ -191,7 +191,7 @@
         gl95jnrN+Bm1AwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnAgregarJugador.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAgregarEquipo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAA1dJREFUSEvl
         VVlrU0EUjrviihsoLlWLrTSde9M81Lq1D6KiDy5YQVHwRdFiMffeSUpdalwKbi9WEGrdilprtE3m3jRW

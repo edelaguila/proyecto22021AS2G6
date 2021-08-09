@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelo
+namespace Modelo.DTO
 {
-    public class modeloParticipante
+    public class dtoParticipante
     {
         public int pkId { get; set; }
         public int puntos { get; set; }
@@ -15,11 +15,11 @@ namespace Modelo
         public int fkIdEquipo { get; set; }
         public int fkIdFase { get; set; }
 
-        public modeloParticipante()
+        public dtoParticipante()
         {
         }
 
-        public modeloParticipante(int pkId, int puntos, string estado, int fkIdCampeonato, int fkIdEquipo, int fkIdFase)
+        public dtoParticipante(int pkId, int puntos, string estado, int fkIdCampeonato, int fkIdEquipo, int fkIdFase)
         {
             this.pkId = pkId;
             this.puntos = puntos;

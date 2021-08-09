@@ -1,5 +1,7 @@
 using Controlador;
 using Modelo;
+using Modelo.DAO;
+using Modelo.DTO;
 using System;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
@@ -24,7 +26,7 @@ namespace Vista
         private int anotacionesEquipo2;
 
         // Se declara un modelo jugador para que guarde los datos de la fila sin perderlos
-        private modeloResultado modeloFila = new modeloResultado();
+        private dtoPartido modeloFila = new dtoPartido();
 
         public formResultado()
         {
@@ -35,7 +37,7 @@ namespace Vista
         {
             // TODO: esta línea de código carga datos en la tabla 'vwPartido.vwpartido' Puede moverla o quitarla según sea necesario.
             this.vwpartidoTableAdapter.Fill(this.vwPartido.vwpartido);
-            
+
             cboBuscar.SelectedIndex = 0;
             tablaPartidos.CurrentCell = tablaPartidos.Rows[0].Cells[1];
             llenarModeloConFilaSeleccionada();
@@ -79,7 +81,7 @@ namespace Vista
         private void btnEliminarPartido_Click(object sender, EventArgs e)
         {
             llenarModeloConFilaSeleccionada();
-            controladorResultado controlador = new controladorResultado();
+            daoPartido controlador = new daoPartido();
             controlador.eliminarPartido(modeloFila);
             actualizarTablaResultado();
         }

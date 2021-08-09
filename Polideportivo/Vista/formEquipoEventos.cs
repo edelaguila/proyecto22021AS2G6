@@ -4,27 +4,29 @@ using System;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
 using Modelo.DAO;
+using Modelo.DTO;
 
 namespace Vista
 {
     public partial class formEquipoEventos : Form
     {
-        private controladorEquipo controlador = new controladorEquipo();
-        private modeloEquipo modelo = new modeloEquipo();
+        private daoEquipo controlador = new daoEquipo();
+        private dtoEquipo modelo = new dtoEquipo();
 
         public formEquipoEventos()
         {
             InitializeComponent();
         }
 
-        private formEquipo formOriginal = new formEquipo();
+        private controladorEquipo formOriginal = new controladorEquipo();
 
-        private modeloEquipo modeloOriginal = new modeloEquipo();
+        private dtoEquipo modeloOriginal = new dtoEquipo();
 
-        public formEquipoEventos(modeloEquipo modelo, formEquipo form)
+        public formEquipoEventos(dtoEquipo modelo, controladorEquipo form)
         {
             // Este constructor es el que se utiliza para modificar datos
             InitializeComponent();
+            //controladorEquipoEventos controladorEmpleado = new controladorEquipoEventos(this);
             btnModificarEquipo.Visible = true;
             btnAgregarEquipo.Visible = false;
             formOriginal = form;
@@ -37,7 +39,7 @@ namespace Vista
             lblEquipoEvento.Text = "MODIFICAR JUGADOR";
         }
 
-        public formEquipoEventos(formEquipo form)
+        public formEquipoEventos(controladorEquipo form)
         {
             // Este constructor es el que se utiliza para agregar datos
             InitializeComponent();

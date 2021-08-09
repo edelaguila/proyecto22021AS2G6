@@ -121,8 +121,6 @@
             this.tablaEntrenador.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaEntrenador.Size = new System.Drawing.Size(400, 407);
             this.tablaEntrenador.TabIndex = 5;
-            this.tablaEntrenador.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEntrenador_CellClick);
-            this.tablaEntrenador.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEntrenador_CellContentClick);
             this.tablaEntrenador.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.tablaEntrenador_DataError);
             // 
             // dataGridViewTextBoxColumn1
@@ -248,7 +246,6 @@
             this.cboDeporte.Name = "cboDeporte";
             this.cboDeporte.Size = new System.Drawing.Size(226, 27);
             this.cboDeporte.TabIndex = 39;
-            this.cboDeporte.SelectedIndexChanged += new System.EventHandler(this.cboDeporte_SelectedIndexChanged);
             // 
             // cboEquipo
             // 
@@ -316,7 +313,6 @@
             this.btnEliminarEntrenador.TabIndex = 33;
             this.btnEliminarEntrenador.Text = "   E L I M I N A R";
             this.btnEliminarEntrenador.UseVisualStyleBackColor = false;
-            this.btnEliminarEntrenador.Click += new System.EventHandler(this.btnEliminarEntrenador_Click);
             // 
             // btnActualizarEntrenador
             // 
@@ -337,7 +333,6 @@
             this.btnActualizarEntrenador.TabIndex = 32;
             this.btnActualizarEntrenador.Text = "      A C T U A L I Z A R";
             this.btnActualizarEntrenador.UseVisualStyleBackColor = false;
-            this.btnActualizarEntrenador.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // panelBuscarCol
             // 
@@ -366,7 +361,6 @@
             this.cboBuscar.Name = "cboBuscar";
             this.cboBuscar.Size = new System.Drawing.Size(364, 26);
             this.cboBuscar.TabIndex = 32;
-            this.cboBuscar.SelectedIndexChanged += new System.EventHandler(this.cboBuscar_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
@@ -400,7 +394,6 @@
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(353, 20);
             this.txtFiltrar.TabIndex = 1;
-            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
             // pictureBox1
             // 
@@ -430,7 +423,6 @@
             this.btnModificarEntrenador.TabIndex = 28;
             this.btnModificarEntrenador.Text = "    M O D I F I C A R";
             this.btnModificarEntrenador.UseVisualStyleBackColor = false;
-            this.btnModificarEntrenador.Click += new System.EventHandler(this.btnModificarEntrenador_Click);
             // 
             // btnAgregarEntrenador
             // 
@@ -451,7 +443,6 @@
             this.btnAgregarEntrenador.TabIndex = 27;
             this.btnAgregarEntrenador.Text = "     A G R E G A R";
             this.btnAgregarEntrenador.UseVisualStyleBackColor = false;
-            this.btnAgregarEntrenador.Click += new System.EventHandler(this.btnAgregarEntrenador_Click);
             // 
             // vwentrenadorTableAdapter
             // 
@@ -466,7 +457,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formEntrenador";
             this.Text = "formEntrenador";
-            this.Load += new System.EventHandler(this.formDeporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaEntrenador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwentrenadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwEntrenador)).EndInit();
@@ -482,33 +472,33 @@
         }
 
         #endregion
-        private Zuby.ADGV.AdvancedDataGridView tablaEntrenador;
-        private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private System.Windows.Forms.Button btnAgregarEntrenador;
-        private System.Windows.Forms.Button btnModificarEntrenador;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtFiltrar;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnActualizarEntrenador;
-        private System.Windows.Forms.Button btnEliminarEntrenador;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Panel panelBuscarCol;
-        private System.Windows.Forms.ComboBox cboBuscar;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboDeporte;
-        private System.Windows.Forms.ComboBox cboEquipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEntrenadorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label2;
-        private Datos.vwEntrenador vwEntrenador;
-        private System.Windows.Forms.BindingSource vwentrenadorBindingSource;
-        private Datos.vwEntrenadorTableAdapters.vwentrenadorTableAdapter vwentrenadorTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEquipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDeporteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
+        public Zuby.ADGV.AdvancedDataGridView tablaEntrenador;
+        public ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
+        public System.Windows.Forms.Button btnAgregarEntrenador;
+        public System.Windows.Forms.Button btnModificarEntrenador;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.TextBox txtFiltrar;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button btnActualizarEntrenador;
+        public System.Windows.Forms.Button btnEliminarEntrenador;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.Label lblNombre;
+        public System.Windows.Forms.Panel panelBuscarCol;
+        public System.Windows.Forms.ComboBox cboBuscar;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ComboBox cboDeporte;
+        public System.Windows.Forms.ComboBox cboEquipo;
+        public System.Windows.Forms.DataGridViewTextBoxColumn pkIdEntrenadorDataGridViewTextBoxColumn;
+        public System.Windows.Forms.Label label2;
+        public Datos.vwEntrenador vwEntrenador;
+        public System.Windows.Forms.BindingSource vwentrenadorBindingSource;
+        public Datos.vwEntrenadorTableAdapters.vwentrenadorTableAdapter vwentrenadorTableAdapter;
+        public System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        public System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        public System.Windows.Forms.DataGridViewTextBoxColumn pkIdEquipoDataGridViewTextBoxColumn;
+        public System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
+        public System.Windows.Forms.DataGridViewTextBoxColumn pkIdDeporteDataGridViewTextBoxColumn;
+        public System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
     }
 }

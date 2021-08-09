@@ -1,10 +1,4 @@
-﻿using Dapper;
-using Conexion;
-using Modelo;
-using System.Collections.Generic;
-using System.Data.Odbc;
-using System.Linq;
-using Vista;
+﻿using Vista;
 using System;
 using System.Windows.Forms;
 using Modelo.DTO;

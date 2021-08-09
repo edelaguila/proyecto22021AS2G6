@@ -5,23 +5,26 @@ using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
 
-namespace Controlador
+using Modelo.DTO;
+
+namespace Modelo.DAO
 {
-    public class controladorEstado
+    public class daoTipoFalta
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
-        public modeloEstado agregarEstado(modeloEstado modelo)
+        public dtoTipoFalta agregarTipoFalta(dtoTipoFalta modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "INSERT INTO estado (pkId, nombre) " +
-                "VALUES (NULL, ?nombre?);";
+                "INSERT INTO tipofalta (pkId, tipo, fkIdDeporte) " +
+                "VALUES (NULL, ?tipo?, ?fkIdDeporte?);";
                 var ValorDeVariables = new
                 {
-                    nombre = modelo.nombre
+                    tipo = modelo.tipo,
+                    fkIdDeporte = modelo.fkIdDeporte,
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
@@ -29,17 +32,19 @@ namespace Controlador
             return modelo;
         }
 
-        public modeloEstado modificarEstado(modeloEstado modelo)
+        public dtoTipoFalta modificarTipoFalta(dtoTipoFalta modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "UPDATE estado SET nombre = ?nombre? " +
+                "UPDATE tipofalta SET tipo = ?tipo?," +
+                "fkIdDeporte = ?fkIdDeporte? " +
                 "WHERE pkId = ?pkId?;";
                 var ValorDeVariables = new
                 {
-                    nombre = modelo.nombre,
+                    tipo = modelo.tipo,
+                    fkIdDeporte = modelo.fkIdDeporte,
                     pkId = modelo.pkId
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
@@ -48,13 +53,13 @@ namespace Controlador
             return modelo;
         }
 
-        public modeloEstado eliminarEstado(modeloEstado modelo)
+        public dtoTipoFalta eliminarTipoFalta(dtoTipoFalta modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "DELETE FROM estado WHERE pkId = ?pkId?;";
+                "DELETE FROM tipofalta WHERE pkId = ?pkId?;";
 
                 var ValorDeVariables = new
                 {
@@ -66,14 +71,14 @@ namespace Controlador
             return modelo;
         }
 
-        public List<modeloEstado> mostrarEstado()
+        public List<dtoTipoFalta> mostrarTipoFalta()
         {
-            List<modeloEstado> sqlresultado = new List<modeloEstado>();
+            List<dtoTipoFalta> sqlresultado = new List<dtoTipoFalta>();
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
-                string sqlconsulta = "SELECT * FROM estadoPartido;";
-                sqlresultado = conexionODBC.Query<modeloEstado>(sqlconsulta).ToList();
+                string sqlconsulta = "SELECT * FROM tipofalta;";
+                sqlresultado = conexionODBC.Query<dtoTipoFalta>(sqlconsulta).ToList();
                 ODBC.cerrarConexion(conexionODBC);
             }
             return sqlresultado;

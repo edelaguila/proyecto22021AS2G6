@@ -1,5 +1,7 @@
 using Controlador;
 using Modelo;
+using Modelo.DAO;
+using Modelo.DTO;
 using System;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
@@ -11,7 +13,7 @@ namespace Vista
         // Se declaran los campos que se van a llenar a partir de la fila seleccionada de la tabla
 
         // Se declara un modelo jugador para que guarde los datos de la fila sin perderlos
-        private modeloParticipante modeloFila = new modeloParticipante();
+        private dtoParticipante modeloFila = new dtoParticipante();
 
         public formParticipante()
         {
@@ -54,7 +56,7 @@ namespace Vista
         private void btnEliminarPartido_Click(object sender, EventArgs e)
         {
             llenarModeloConFilaSeleccionada();
-            controladorParticipante controlador = new controladorParticipante();
+            daoParticipante controlador = new daoParticipante();
 
             actualizarTablaPartido();
         }

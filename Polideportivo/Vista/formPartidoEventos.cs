@@ -49,7 +49,7 @@ namespace Vista
             cboEquipo1.ValueMember = "nombre";
             //cboEquipo1.SelectedIndex = -1;
 
-            controladorEmpleado empleado = new controladorEmpleado();
+            daoEmpleado empleado = new daoEmpleado();
             cboEmpleado.DataSource = empleado.mostrarEmpleado();
             cboEmpleado.DisplayMember = "nombre";
             cboEmpleado.ValueMember = "pkId";
@@ -91,7 +91,7 @@ namespace Vista
             cboEquipo1.ValueMember = "nombre";
             cboEquipo1.SelectedIndex = -1;
 
-            controladorEmpleado empleado = new controladorEmpleado();
+            daoEmpleado empleado = new daoEmpleado();
             cboEmpleado.DataSource = empleado.mostrarEmpleado();
             cboEmpleado.DisplayMember = "nombre";
             cboEmpleado.ValueMember = "pkId";

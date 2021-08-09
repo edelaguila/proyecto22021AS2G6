@@ -4,21 +4,22 @@ using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
+using Modelo.DTO;
 
 namespace Controlador
 {
-    public class controladorPuesto
+    public class daoPuesto
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
-        public List<modeloPuesto> mostrarPuesto()
+        public List<dtoPuesto> mostrarPuesto()
         {
-            List<modeloPuesto> sqlresultado = new List<modeloPuesto>();
+            List<dtoPuesto> sqlresultado = new List<dtoPuesto>();
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
                 string sqlconsulta = "SELECT * FROM puestoempleado;";
-                sqlresultado = conexionODBC.Query<modeloPuesto>(sqlconsulta).ToList();
+                sqlresultado = conexionODBC.Query<dtoPuesto>(sqlconsulta).ToList();
                 ODBC.cerrarConexion(conexionODBC);
             }
 

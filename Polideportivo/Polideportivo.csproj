@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\ConexionODBC.cs" />
+    <Compile Include="Controlador\controladorResultado.cs" />
     <Compile Include="Controlador\controladorEstado.cs" />
     <Compile Include="Controlador\controladorAnotacion.cs" />
     <Compile Include="Controlador\controladorCampeonato.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="Controlador\controladorTipoCampeonato.cs" />
     <Compile Include="Controlador\controladorTipoFalta.cs" />
     <Compile Include="Controlador\controladorUsuario.cs" />
+    <Compile Include="Modelo\modeloResultado.cs" />
     <Compile Include="Modelo\modeloEstado.cs" />
     <Compile Include="Modelo\modeloAnotacion.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />
@@ -226,6 +228,12 @@
     <Compile Include="Vista\formPartido.Designer.cs">
       <DependentUpon>formPartido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\formResultado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formResultado.Designer.cs">
+      <DependentUpon>formResultado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\formPartidoEventos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +248,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\formResultadoEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formResultadoEvento.Designer.cs">
+      <DependentUpon>formResultadoEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\formRol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,6 +365,9 @@
     <EmbeddedResource Include="Vista\formPartido.resx">
       <DependentUpon>formPartido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formResultado.resx">
+      <DependentUpon>formResultado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\formPartidoEventos.resx">
       <DependentUpon>formPartidoEventos.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,6 +385,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\formResultadoEvento.resx">
+      <DependentUpon>formResultadoEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\formRol.resx">
       <DependentUpon>formRol.cs</DependentUpon>
     </EmbeddedResource>

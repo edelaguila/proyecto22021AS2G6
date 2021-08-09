@@ -110,6 +110,12 @@ namespace Vista
             cerrarOtrosSubmenusActivos();
         }
 
+        private void btnSubMenuPartidosResultado_Click(object sender, EventArgs e)
+        {
+            gestorDeFormActivo(new formResultado(), "RESULTADO");
+            botonSeleccionadoSinSubmenu(panelMenuRoles);
+        }
+
         private void btnMenuEntrenador_Click(object sender, EventArgs e)
         {
             botonSeleccionadoSinSubmenu(panelMenuEntrenador);
@@ -304,5 +310,7 @@ namespace Vista
         {
             panelLateralInterno.Invalidate();
         }
+
+        
     }
 }

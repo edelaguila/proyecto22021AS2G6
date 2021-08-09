@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -20,7 +22,6 @@ namespace Vista
             panelMenuCampeonato.Select();
             panelSubmenuCampeonatos.Visible = false;
             panelSubMenuPartidos.Visible = false;
-            //
         }
 
         protected override void OnResizeBegin(EventArgs e)

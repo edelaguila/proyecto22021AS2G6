@@ -1,6 +1,7 @@
 ﻿using Vista;
 using System.Data.Odbc;
 using static Vista.utilidadForms;
+using System;
 
 namespace Conexion
 {

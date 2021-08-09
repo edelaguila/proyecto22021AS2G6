@@ -23,31 +23,12 @@ namespace Vista
         public formJugador()
         {
             InitializeComponent();
-        }
-
-        private void formJugador_Load(object sender, EventArgs e)
-        {
-            this.vwjugadorTableAdapter.Fill(this.vwJugador.vwjugador);
-            // Se asigna la primera opción posible en la combobox de filtración
-            cboBuscar.SelectedIndex = 0;
-            // Se asigna la primera fila posible de la tabla y se llena el modelo
-            tablaJugadores.CurrentCell = tablaJugadores.Rows[0].Cells[1];
-            llenarModeloConFilaSeleccionada();
+            controladorJugador controladorJugador = new controladorJugador(this);
         }
 
         public void actualizarTablaJugadores()
         {
             this.vwjugadorTableAdapter.Fill(this.vwJugador.vwjugador);
-        }
-
-        private void tablaJugadores_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            llenarModeloConFilaSeleccionada();
-        }
-
-        private void btnAgregarJugador_Click(object sender, EventArgs e)
-        {
-            abrirForm(new formJugadorEventos(this));
         }
 
         private void btnModificarJugador_Click(object sender, EventArgs e)
@@ -63,11 +44,6 @@ namespace Vista
         private void cboBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtFiltrar.Text = "";
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            actualizarTablaJugadores();
         }
 
         private void btnEliminarJugador_Click(object sender, EventArgs e)

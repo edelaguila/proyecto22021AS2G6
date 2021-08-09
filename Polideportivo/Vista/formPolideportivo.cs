@@ -119,6 +119,12 @@ namespace Vista
             botonSeleccionadoSinSubmenu(panelMenuRoles);
         }
 
+        private void btnSubMenuPartidosResultado_Click(object sender, EventArgs e)
+        {
+            gestorDeFormActivo(new formResultado(), "RESULTADO");
+            botonSeleccionadoSinSubmenu(panelMenuRoles);
+        }
+
         private void btnMenuEntrenador_Click(object sender, EventArgs e)
         {
             gestorDeFormActivo(new formEntrenador(), "ENTRENADOR");
@@ -242,5 +248,7 @@ namespace Vista
         {
             panelLateralInterno.Invalidate();
         }
+
+        
     }
 }

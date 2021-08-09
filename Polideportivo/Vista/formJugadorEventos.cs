@@ -1,6 +1,7 @@
 ﻿using Controlador;
 using Modelo;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
 
@@ -9,11 +10,6 @@ namespace Vista
     public partial class formJugadorEventos : Form
     {
         private modeloJugador modelo = new modeloJugador();
-
-        public formJugadorEventos()
-        {
-            InitializeComponent();
-        }
 
         private formJugador formOriginal = new formJugador();
 
@@ -40,21 +36,28 @@ namespace Vista
             lblJugadorEvento.Text = "MODIFICAR JUGADOR";
         }
 
+        // Este constructor es el que se utiliza para agregar datos
         public formJugadorEventos(formJugador form)
         {
-            // Este constructor es el que se utiliza para agregar datos
+            formOriginal = form;
             InitializeComponent();
             btnAgregarJugador.Visible = true;
             btnModificarJugador.Visible = false;
             // Llenar combobox de deportes
             controladorDeporte deportes = new controladorDeporte();
-            cboDeporte.DataSource = deportes.mostrarDeportes();
-            cboDeporte.DisplayMember = "nombre";
-            cboDeporte.ValueMember = "pkId";
-            cboDeporte.SelectedItem = cboDeporte.Items[0];
-            formOriginal = form;
-            // Modificar el texto del título
-            lblJugadorEvento.Text = "AGREGAR JUGADOR";
+            List<modeloDeporte> lista = deportes.mostrarDeportes();
+            if (lista != null)
+            {
+                cboDeporte.DataSource = deportes.mostrarDeportes();
+                cboDeporte.DisplayMember = "nombre";
+                cboDeporte.ValueMember = "pkId";
+                // Modificar el texto del título
+                lblJugadorEvento.Text = "AGREGAR JUGADOR";
+            }
+            else
+            {
+                cerrarForm(this);
+            }
         }
 
         // Actualizar el combobox de roles dependiendo del deporte seleccionado
@@ -91,7 +94,6 @@ namespace Vista
             {
                 controladorJugador modeloAgregar = new controladorJugador();
                 llenarModeloConDatosIngresados();
-                modeloAgregar.agregarJugador(modelo);
                 formOriginal.actualizarTablaJugadores();
                 cerrarForm(this);
             }

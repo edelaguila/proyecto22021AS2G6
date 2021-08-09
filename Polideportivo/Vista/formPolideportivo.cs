@@ -16,7 +16,6 @@ namespace Vista
             panelLateralInterno.AutoScroll = true;
             panelLateralInterno.AutoScrollPosition = new Point(panelLateralInterno.AutoScrollPosition.X, 0);
             panelLateralInterno.VerticalScroll.Value = 0;
-
             this.panelLateralInterno.MouseWheel += panelLateralInterno_MouseWheel;
             panelMenuCampeonato.Select();
             panelSubmenuCampeonatos.Visible = false;
@@ -64,9 +63,11 @@ namespace Vista
         {
             if (panelLateralInterno.Width == 250)
             {
-                panelLateralInterno.Width = 77;
-                panelLateralWrapper.Width = 105;
-                separadorLogo.Width = 57;
+                panelLateralInterno.Width = 55;
+                panelLateralWrapper.Width = 92;
+                separadorLogo.Width = 51;
+                separadorLogo.Location = new Point(2, 64);
+                imgTitulo.Location = new Point(6, 16);
             }
             else
             {
@@ -74,6 +75,8 @@ namespace Vista
                 panelLateralWrapper.Width = 280;
 
                 separadorLogo.Width = 220;
+                separadorLogo.Location = new Point(12, 64);
+                imgTitulo.Location = new Point(29, 16);
             }
         }
 

@@ -36,8 +36,9 @@ namespace Controlador
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
+                return modelo;
             }
-            return modelo;
+            return null;
         }
 
         /// <summary>

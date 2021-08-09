@@ -30,6 +30,7 @@ namespace Vista
 
         private void btnErrorEntendido_Click(object sender, EventArgs e)
         {
+            cerrarForm(this);
         }
 
         private void lblError_Click(object sender, EventArgs e)

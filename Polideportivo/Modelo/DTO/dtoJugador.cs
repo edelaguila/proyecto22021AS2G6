@@ -1,6 +1,12 @@
-﻿namespace Modelo
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Modelo.DTO
 {
-    public class modeloJugador
+    public class dtoJugador
     {
         public int pkId { get; set; }
         public string nombre { get; set; }
@@ -9,11 +15,11 @@
         public int fkIdRol { get; set; }
         public int fkIdDeporte { get; set; }
 
-        public modeloJugador()
+        public dtoJugador()
         {
         }
 
-        public modeloJugador(int Id, string Nombre, int Anotaciones, int IdEquipo, int IdRol, int IdDeporte)
+        public dtoJugador(int Id, string Nombre, int Anotaciones, int IdEquipo, int IdRol, int IdDeporte)
         {
             pkId = Id;
             nombre = Nombre;

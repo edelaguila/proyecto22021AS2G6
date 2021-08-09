@@ -49,7 +49,7 @@ namespace Vista
             this.vwJugador = new Datos.vwJugador();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.btnEliminarJugador = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnActualizarJugador = new System.Windows.Forms.Button();
             this.panelBuscarCol = new System.Windows.Forms.Panel();
             this.cboBuscar = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -222,7 +222,7 @@ namespace Vista
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
             this.parrotGradientPanel1.Controls.Add(this.btnEliminarJugador);
-            this.parrotGradientPanel1.Controls.Add(this.btnActualizar);
+            this.parrotGradientPanel1.Controls.Add(this.btnActualizarJugador);
             this.parrotGradientPanel1.Controls.Add(this.panelBuscarCol);
             this.parrotGradientPanel1.Controls.Add(this.panel2);
             this.parrotGradientPanel1.Controls.Add(this.btnModificarJugador);
@@ -261,27 +261,26 @@ namespace Vista
             this.btnEliminarJugador.TabIndex = 33;
             this.btnEliminarJugador.Text = "   E L I M I N A R";
             this.btnEliminarJugador.UseVisualStyleBackColor = false;
-            this.btnEliminarJugador.Click += new System.EventHandler(this.btnEliminarJugador_Click);
             // 
-            // btnActualizar
+            // btnActualizarJugador
             // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.BackColor = System.Drawing.Color.White;
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(392, 36);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnActualizar.Size = new System.Drawing.Size(210, 36);
-            this.btnActualizar.TabIndex = 32;
-            this.btnActualizar.Text = "      A C T U A L I Z A R";
-            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizarJugador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizarJugador.BackColor = System.Drawing.Color.White;
+            this.btnActualizarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizarJugador.FlatAppearance.BorderSize = 0;
+            this.btnActualizarJugador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnActualizarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarJugador.ForeColor = System.Drawing.Color.Black;
+            this.btnActualizarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarJugador.Image")));
+            this.btnActualizarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizarJugador.Location = new System.Drawing.Point(392, 36);
+            this.btnActualizarJugador.Name = "btnActualizarJugador";
+            this.btnActualizarJugador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnActualizarJugador.Size = new System.Drawing.Size(210, 36);
+            this.btnActualizarJugador.TabIndex = 32;
+            this.btnActualizarJugador.Text = "      A C T U A L I Z A R";
+            this.btnActualizarJugador.UseVisualStyleBackColor = false;
             // 
             // panelBuscarCol
             // 
@@ -315,7 +314,6 @@ namespace Vista
             this.cboBuscar.Name = "cboBuscar";
             this.cboBuscar.Size = new System.Drawing.Size(263, 26);
             this.cboBuscar.TabIndex = 32;
-            this.cboBuscar.SelectedIndexChanged += new System.EventHandler(this.cboBuscar_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
@@ -358,7 +356,6 @@ namespace Vista
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(252, 20);
             this.txtFiltrar.TabIndex = 1;
-            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
             // pictureBox1
             // 
@@ -388,7 +385,6 @@ namespace Vista
             this.btnModificarJugador.TabIndex = 28;
             this.btnModificarJugador.Text = "    M O D I F I C A R";
             this.btnModificarJugador.UseVisualStyleBackColor = false;
-            this.btnModificarJugador.Click += new System.EventHandler(this.btnModificarJugador_Click);
             // 
             // btnAgregarJugador
             // 
@@ -437,7 +433,6 @@ namespace Vista
         }
 
         #endregion
-        private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelBuscarCol;
@@ -457,10 +452,11 @@ namespace Vista
         public System.Windows.Forms.Button btnModificarJugador;
         public System.Windows.Forms.TextBox txtFiltrar;
         public System.Windows.Forms.ComboBox cboBuscar;
-        public System.Windows.Forms.Button btnActualizar;
+        public System.Windows.Forms.Button btnActualizarJugador;
         public System.Windows.Forms.Button btnEliminarJugador;
         public vwJugador vwJugador;
         public System.Windows.Forms.BindingSource vwjugadorBindingSource;
         public Datos.vwJugadorTableAdapters.vwjugadorTableAdapter vwjugadorTableAdapter;
+        public ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
     }
 }

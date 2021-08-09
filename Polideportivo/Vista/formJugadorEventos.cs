@@ -1,5 +1,7 @@
 ﻿using Controlador;
 using Modelo;
+using Modelo.DAO;
+using Modelo.DTO;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -9,13 +11,13 @@ namespace Vista
 {
     public partial class formJugadorEventos : Form
     {
-        private modeloJugador modelo = new modeloJugador();
+        private dtoJugador modelo = new dtoJugador();
 
-        private formJugador formOriginal = new formJugador();
+        private controladorJugador formOriginal = new controladorJugador();
 
-        private modeloJugador modeloOriginal = new modeloJugador();
+        private dtoJugador modeloOriginal = new dtoJugador();
 
-        public formJugadorEventos(modeloJugador modelo, formJugador form)
+        public formJugadorEventos(dtoJugador modelo, controladorJugador form)
         {
             // Este constructor es el que se utiliza para modificar datos
             InitializeComponent();
@@ -37,7 +39,7 @@ namespace Vista
         }
 
         // Este constructor es el que se utiliza para agregar datos
-        public formJugadorEventos(formJugador form)
+        public formJugadorEventos(controladorJugador form)
         {
             formOriginal = form;
             InitializeComponent();
@@ -108,10 +110,10 @@ namespace Vista
         {
             if (validarFormEventos())
             {
-                controladorJugador modeloModificar = new controladorJugador();
+                daoJugador daoJugador = new daoJugador();
                 llenarModeloConDatosIngresados();
 
-                modeloModificar.modificarJugador(modelo);
+                daoJugador.modificarJugador(modelo);
                 formOriginal.actualizarTablaJugadores();
                 cerrarForm(this);
             }

@@ -1,8 +1,10 @@
 ﻿using Controlador;
 using Modelo;
+using Modelo.DTO;
 using System;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
+using Modelo.DAO;
 
 namespace Vista
 {
@@ -13,11 +15,11 @@ namespace Vista
             InitializeComponent();
         }
 
-        private formPartido formOriginal = new formPartido();
+        private controladorPartido formOriginal = new controladorPartido();
 
-        private modeloPartido modeloOriginal;
+        private dtoPartido modeloOriginal;
 
-        public formPartidoEventos(modeloPartido modelo, formPartido form)
+        public formPartidoEventos(dtoPartido modelo, controladorPartido form)
         {
             // Este constructor es el que se utiliza para modificar datos
             InitializeComponent();
@@ -64,7 +66,7 @@ namespace Vista
             lblJugadorEvento.Text = "MODIFICAR PARTIDO";
         }
 
-        public formPartidoEventos(formPartido form)
+        public formPartidoEventos(controladorPartido form)
         {
             // Este constructor es el que se utiliza para agregar datos
             InitializeComponent();
@@ -137,8 +139,8 @@ namespace Vista
 
         private void btnAgregarPartido_Click(object sender, EventArgs e)
         {
-            controladorPartido controlador = new controladorPartido();
-            modeloPartido modelo = new modeloPartido();
+            daoPartido daoPartido = new daoPartido();
+            dtoPartido modelo = new dtoPartido();
             modelo.fase = txtFase.Text;
             modelo.campo = txtCampo.Text;
             modelo.equipo1 = cboEquipo1.Text;
@@ -151,15 +153,15 @@ namespace Vista
             modelo.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
             modelo.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
             modelo.fkIdEstadoPartido = stringAInt(cboEstado.SelectedValue.ToString());
-            controlador.agregarPartido(modelo);
+            daoPartido.agregarPartido(modelo);
             formOriginal.actualizarTablaPartido();
             cerrarForm(this);
         }
 
         private void btnModificarPartido_Click(object sender, EventArgs e)
         {
-            controladorPartido controlador = new controladorPartido();
-            modeloPartido modelo = new modeloPartido();
+            daoPartido daoPartido = new daoPartido();
+            dtoPartido modelo = new dtoPartido();
             modeloOriginal.fase = txtFase.Text;
             modeloOriginal.campo = txtCampo.Text;
             modeloOriginal.equipo1 = cboEquipo1.Text;
@@ -172,7 +174,7 @@ namespace Vista
             modeloOriginal.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
             modeloOriginal.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
             modeloOriginal.fkIdEstadoPartido = stringAInt(cboEstado.SelectedValue.ToString());
-            controlador.modificarPartido(modeloOriginal);
+            daoPartido.modificarPartido(modeloOriginal);
             formOriginal.actualizarTablaPartido();
             cerrarForm(this);
         }

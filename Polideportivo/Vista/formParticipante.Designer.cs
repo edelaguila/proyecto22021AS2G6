@@ -38,6 +38,8 @@ namespace Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formParticipante));
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.tablaParticipantes = new Zuby.ADGV.AdvancedDataGridView();
+            this.vwparticipanteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vwParticipante = new Datos.vwParticipante();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.panelBuscarCol = new System.Windows.Forms.Panel();
@@ -49,27 +51,25 @@ namespace Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregarPartido = new System.Windows.Forms.Button();
-            this.vwParticipante = new Datos.vwParticipante();
-            this.vwparticipanteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vwparticipanteTableAdapter = new Datos.vwParticipanteTableAdapters.vwparticipanteTableAdapter();
+            this.pkIdEquipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkIdParticipanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puntosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkIdCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.campeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pkIdEquipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkIdFaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.faseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkIdEstadoParticipanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parrotGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaParticipantes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwparticipanteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwParticipante)).BeginInit();
             this.panelBuscarCol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwParticipante)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwparticipanteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // parrotGradientPanel1
@@ -119,12 +119,12 @@ namespace Vista
             this.tablaParticipantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tablaParticipantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaParticipantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pkIdEquipoDataGridViewTextBoxColumn,
+            this.equipoDataGridViewTextBoxColumn,
             this.pkIdParticipanteDataGridViewTextBoxColumn,
             this.puntosDataGridViewTextBoxColumn,
             this.pkIdCampeonatoDataGridViewTextBoxColumn,
             this.campeonatoDataGridViewTextBoxColumn,
-            this.pkIdEquipoDataGridViewTextBoxColumn,
-            this.equipoDataGridViewTextBoxColumn,
             this.pkIdFaseDataGridViewTextBoxColumn,
             this.faseDataGridViewTextBoxColumn,
             this.pkIdEstadoParticipanteDataGridViewTextBoxColumn,
@@ -149,6 +149,16 @@ namespace Vista
             this.tablaParticipantes.Size = new System.Drawing.Size(768, 413);
             this.tablaParticipantes.TabIndex = 34;
             this.tablaParticipantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaParticipantes_CellContentClick);
+            // 
+            // vwparticipanteBindingSource
+            // 
+            this.vwparticipanteBindingSource.DataMember = "vwparticipante";
+            this.vwparticipanteBindingSource.DataSource = this.vwParticipante;
+            // 
+            // vwParticipante
+            // 
+            this.vwParticipante.DataSetName = "vwParticipante";
+            this.vwParticipante.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnEliminar
             // 
@@ -318,19 +328,28 @@ namespace Vista
             this.btnAgregarPartido.UseVisualStyleBackColor = false;
             this.btnAgregarPartido.Click += new System.EventHandler(this.btnAgregarPartido_Click);
             // 
-            // vwParticipante
-            // 
-            this.vwParticipante.DataSetName = "vwParticipante";
-            this.vwParticipante.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vwparticipanteBindingSource
-            // 
-            this.vwparticipanteBindingSource.DataMember = "vwparticipante";
-            this.vwparticipanteBindingSource.DataSource = this.vwParticipante;
-            // 
             // vwparticipanteTableAdapter
             // 
             this.vwparticipanteTableAdapter.ClearBeforeFill = true;
+            // 
+            // pkIdEquipoDataGridViewTextBoxColumn
+            // 
+            this.pkIdEquipoDataGridViewTextBoxColumn.DataPropertyName = "pkIdEquipo";
+            this.pkIdEquipoDataGridViewTextBoxColumn.HeaderText = "pkIdEquipo";
+            this.pkIdEquipoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdEquipoDataGridViewTextBoxColumn.Name = "pkIdEquipoDataGridViewTextBoxColumn";
+            this.pkIdEquipoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdEquipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdEquipoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // equipoDataGridViewTextBoxColumn
+            // 
+            this.equipoDataGridViewTextBoxColumn.DataPropertyName = "equipo";
+            this.equipoDataGridViewTextBoxColumn.HeaderText = "equipo";
+            this.equipoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.equipoDataGridViewTextBoxColumn.Name = "equipoDataGridViewTextBoxColumn";
+            this.equipoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.equipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // pkIdParticipanteDataGridViewTextBoxColumn
             // 
@@ -340,6 +359,7 @@ namespace Vista
             this.pkIdParticipanteDataGridViewTextBoxColumn.Name = "pkIdParticipanteDataGridViewTextBoxColumn";
             this.pkIdParticipanteDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdParticipanteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdParticipanteDataGridViewTextBoxColumn.Visible = false;
             // 
             // puntosDataGridViewTextBoxColumn
             // 
@@ -358,6 +378,7 @@ namespace Vista
             this.pkIdCampeonatoDataGridViewTextBoxColumn.Name = "pkIdCampeonatoDataGridViewTextBoxColumn";
             this.pkIdCampeonatoDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdCampeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdCampeonatoDataGridViewTextBoxColumn.Visible = false;
             // 
             // campeonatoDataGridViewTextBoxColumn
             // 
@@ -368,24 +389,6 @@ namespace Vista
             this.campeonatoDataGridViewTextBoxColumn.ReadOnly = true;
             this.campeonatoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // pkIdEquipoDataGridViewTextBoxColumn
-            // 
-            this.pkIdEquipoDataGridViewTextBoxColumn.DataPropertyName = "pkIdEquipo";
-            this.pkIdEquipoDataGridViewTextBoxColumn.HeaderText = "pkIdEquipo";
-            this.pkIdEquipoDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.pkIdEquipoDataGridViewTextBoxColumn.Name = "pkIdEquipoDataGridViewTextBoxColumn";
-            this.pkIdEquipoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pkIdEquipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // equipoDataGridViewTextBoxColumn
-            // 
-            this.equipoDataGridViewTextBoxColumn.DataPropertyName = "equipo";
-            this.equipoDataGridViewTextBoxColumn.HeaderText = "equipo";
-            this.equipoDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.equipoDataGridViewTextBoxColumn.Name = "equipoDataGridViewTextBoxColumn";
-            this.equipoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.equipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
             // pkIdFaseDataGridViewTextBoxColumn
             // 
             this.pkIdFaseDataGridViewTextBoxColumn.DataPropertyName = "pkIdFase";
@@ -394,6 +397,7 @@ namespace Vista
             this.pkIdFaseDataGridViewTextBoxColumn.Name = "pkIdFaseDataGridViewTextBoxColumn";
             this.pkIdFaseDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdFaseDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdFaseDataGridViewTextBoxColumn.Visible = false;
             // 
             // faseDataGridViewTextBoxColumn
             // 
@@ -412,6 +416,7 @@ namespace Vista
             this.pkIdEstadoParticipanteDataGridViewTextBoxColumn.Name = "pkIdEstadoParticipanteDataGridViewTextBoxColumn";
             this.pkIdEstadoParticipanteDataGridViewTextBoxColumn.ReadOnly = true;
             this.pkIdEstadoParticipanteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdEstadoParticipanteDataGridViewTextBoxColumn.Visible = false;
             // 
             // estadoDataGridViewTextBoxColumn
             // 
@@ -434,13 +439,13 @@ namespace Vista
             this.Load += new System.EventHandler(this.formParticipante_Load);
             this.parrotGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablaParticipantes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwparticipanteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwParticipante)).EndInit();
             this.panelBuscarCol.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwParticipante)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwparticipanteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -462,12 +467,12 @@ namespace Vista
         private vwParticipante vwParticipante;
         private System.Windows.Forms.BindingSource vwparticipanteBindingSource;
         private Datos.vwParticipanteTableAdapters.vwparticipanteTableAdapter vwparticipanteTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEquipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdParticipanteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn puntosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdCampeonatoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn campeonatoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEquipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdFaseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn faseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEstadoParticipanteDataGridViewTextBoxColumn;

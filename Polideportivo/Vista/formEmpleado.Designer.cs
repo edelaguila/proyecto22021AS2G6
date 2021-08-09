@@ -32,8 +32,8 @@ namespace Vista
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formEmpleado));
             this.tablaEmpleado = new Zuby.ADGV.AdvancedDataGridView();
             this.pkIdEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,14 +79,14 @@ namespace Vista
             this.tablaEmpleado.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tablaEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tablaEmpleado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tablaEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.pkIdEmpleadoDataGridViewTextBoxColumn,
@@ -94,15 +94,15 @@ namespace Vista
             this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn,
             this.puestoempleadoDataGridViewTextBoxColumn});
             this.tablaEmpleado.DataSource = this.vwempleadoBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaEmpleado.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaEmpleado.DefaultCellStyle = dataGridViewCellStyle2;
             this.tablaEmpleado.FilterAndSortEnabled = true;
             this.tablaEmpleado.Location = new System.Drawing.Point(85, 143);
             this.tablaEmpleado.Name = "tablaEmpleado";
@@ -112,7 +112,6 @@ namespace Vista
             this.tablaEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaEmpleado.Size = new System.Drawing.Size(400, 407);
             this.tablaEmpleado.TabIndex = 5;
-            this.tablaEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEmpleado_CellClick);
             // 
             // pkIdEmpleadoDataGridViewTextBoxColumn
             // 
@@ -257,7 +256,6 @@ namespace Vista
             this.btnEliminarEmpleado.TabIndex = 33;
             this.btnEliminarEmpleado.Text = "   E L I M I N A R";
             this.btnEliminarEmpleado.UseVisualStyleBackColor = false;
-            this.btnEliminarEmpleado.Click += new System.EventHandler(this.btnEliminarEmpleado_Click);
             // 
             // btnActualizarEmpleado
             // 
@@ -278,7 +276,6 @@ namespace Vista
             this.btnActualizarEmpleado.TabIndex = 32;
             this.btnActualizarEmpleado.Text = "      A C T U A L I Z A R";
             this.btnActualizarEmpleado.UseVisualStyleBackColor = false;
-            this.btnActualizarEmpleado.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // panelBuscarCol
             // 
@@ -307,7 +304,6 @@ namespace Vista
             this.cboBuscar.Name = "cboBuscar";
             this.cboBuscar.Size = new System.Drawing.Size(364, 26);
             this.cboBuscar.TabIndex = 32;
-            this.cboBuscar.SelectedIndexChanged += new System.EventHandler(this.cboBuscar_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
@@ -341,7 +337,6 @@ namespace Vista
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(353, 20);
             this.txtFiltrar.TabIndex = 1;
-            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
             // pictureBox1
             // 
@@ -371,7 +366,6 @@ namespace Vista
             this.btnModificarEmpleado.TabIndex = 28;
             this.btnModificarEmpleado.Text = "    M O D I F I C A R";
             this.btnModificarEmpleado.UseVisualStyleBackColor = false;
-            this.btnModificarEmpleado.Click += new System.EventHandler(this.btnModificarEmpleado_Click);
             // 
             // btnAgregarEmpleado
             // 
@@ -392,7 +386,6 @@ namespace Vista
             this.btnAgregarEmpleado.TabIndex = 27;
             this.btnAgregarEmpleado.Text = "     A G R E G A R";
             this.btnAgregarEmpleado.UseVisualStyleBackColor = false;
-            this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
             // 
             // vwempleadoTableAdapter
             // 
@@ -407,7 +400,6 @@ namespace Vista
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formEmpleado";
             this.Text = "formEmpleado";
-            this.Load += new System.EventHandler(this.formEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaEmpleado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwempleadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwEmpleado)).EndInit();
@@ -423,29 +415,29 @@ namespace Vista
         }
 
         #endregion
-        private Zuby.ADGV.AdvancedDataGridView tablaEmpleado;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private System.Windows.Forms.Button btnAgregarEmpleado;
-        private System.Windows.Forms.Button btnModificarEmpleado;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtFiltrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnActualizarEmpleado;
-        private System.Windows.Forms.Button btnEliminarEmpleado;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel panelBuscarCol;
-        private System.Windows.Forms.ComboBox cboBuscar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboPuesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEntrenadorDataGridViewTextBoxColumn;
-        private vwEmpleado vwEmpleado;
-        private System.Windows.Forms.BindingSource vwempleadoBindingSource;
-        private Datos.vwEmpleadoTableAdapters.vwempleadoTableAdapter vwempleadoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEmpleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdPuestoEmpleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn puestoempleadoDataGridViewTextBoxColumn;
+        public Zuby.ADGV.AdvancedDataGridView tablaEmpleado;
+        public System.Windows.Forms.Button btnAgregarEmpleado;
+        public System.Windows.Forms.Button btnModificarEmpleado;
+        public System.Windows.Forms.TextBox txtFiltrar;
+        public System.Windows.Forms.Button btnActualizarEmpleado;
+        public System.Windows.Forms.Button btnEliminarEmpleado;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.ComboBox cboBuscar;
+        public System.Windows.Forms.ComboBox cboPuesto;
+        public vwEmpleado vwEmpleado;
+        public System.Windows.Forms.BindingSource vwempleadoBindingSource;
+        public Datos.vwEmpleadoTableAdapters.vwempleadoTableAdapter vwempleadoTableAdapter;
     }
 }

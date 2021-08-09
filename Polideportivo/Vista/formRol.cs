@@ -33,8 +33,8 @@ namespace Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            modeloEmpleado modelo = new modeloEmpleado();
-            controladorEmpleado db = new controladorEmpleado();
+            dtoEmpleado modelo = new dtoEmpleado();
+            daoEmpleado db = new daoEmpleado();
         }
 
         private modeloRol modeloFila = new modeloRol();

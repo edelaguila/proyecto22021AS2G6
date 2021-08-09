@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Modelo.DTO
+﻿namespace Modelo.DTO
 {
     public class dtoPartido
     {

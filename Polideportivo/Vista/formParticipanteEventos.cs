@@ -31,8 +31,8 @@ namespace Vista
             txtNombre.Text = modelo.nombre;
             txtAnotaciones.Text = modelo.anotaciones.ToString();
             // Llenar combobox de deportes
-            controladorDeporte deportes = new controladorDeporte();
-            cboDeporte.DataSource = deportes.mostrarDeportes();
+            daoDeporte daoDeporte = new daoDeporte();
+            cboDeporte.DataSource = daoDeporte.mostrarDeportes();
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
             cboDeporte.SelectedItem = cboDeporte.Items[0];
@@ -49,8 +49,8 @@ namespace Vista
             btnAgregarJugador.Visible = true;
             btnModificarJugador.Visible = false;
             // Llenar combobox de deportes
-            controladorDeporte deportes = new controladorDeporte();
-            cboDeporte.DataSource = deportes.mostrarDeportes();
+            daoDeporte daoDeporte = new daoDeporte();
+            cboDeporte.DataSource = daoDeporte.mostrarDeportes();
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
             cboDeporte.SelectedItem = cboDeporte.Items[0];

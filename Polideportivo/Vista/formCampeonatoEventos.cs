@@ -1,6 +1,7 @@
 ﻿using Controlador;
 using Modelo;
 using System;
+using Modelo.DAO;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
 
@@ -25,8 +26,8 @@ namespace Vista
             btnAgregarCampeonato.Visible = false;
             formOriginal = form;
             // Llenar combobox de deportes
-            controladorDeporte deportes = new controladorDeporte();
-            cboDeporte.DataSource = deportes.mostrarDeportes();
+            daoDeporte daoDeporte = new daoDeporte();
+            cboDeporte.DataSource = daoDeporte.mostrarDeportes();
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
             // Llenar combobox de tipo de campeonatos
@@ -49,8 +50,8 @@ namespace Vista
             btnModificarCampeonato.Visible = false;
             btnAgregarCampeonato.Visible = true;
             // Llenar combobox de deportes
-            controladorDeporte deportes = new controladorDeporte();
-            cboDeporte.DataSource = deportes.mostrarDeportes();
+            daoDeporte daoDeporte = new daoDeporte();
+            cboDeporte.DataSource = daoDeporte.mostrarDeportes();
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
             // Llenar combobox de tipo de campeonatos

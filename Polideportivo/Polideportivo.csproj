@@ -123,14 +123,15 @@
     <Compile Include="Controlador\controladorTipoCampeonato.cs" />
     <Compile Include="Controlador\controladorTipoFalta.cs" />
     <Compile Include="Controlador\controladorUsuario.cs" />
+    <Compile Include="Modelo\DAO\daoDeporte.cs" />
     <Compile Include="Modelo\DAO\daoJugador.cs" />
     <Compile Include="Modelo\DAO\daoPartido.cs" />
     <Compile Include="Modelo\DTO\dtoJugador.cs" />
     <Compile Include="Modelo\modeloResultado.cs" />
     <Compile Include="Modelo\modeloEstado.cs" />
-    <Compile Include="Modelo\modeloAnotacion.cs" />
+    <Compile Include="Modelo\DTO\dtoAnotacion.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />
-    <Compile Include="Modelo\modeloDeporte.cs" />
+    <Compile Include="Modelo\DTO\dtoDeporte.cs" />
     <Compile Include="Modelo\modeloEmpleado.cs" />
     <Compile Include="Modelo\modeloEntrenador.cs" />
     <Compile Include="Modelo\modeloEquipo.cs" />

@@ -4,83 +4,119 @@ using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
+using Modelo.DTO;
+using Modelo.DAO;
+using Vista;
+using System;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using static Vista.utilidadForms;
 
 namespace Controlador
 {
     public class controladorDeporte
     {
-        private ConexionODBC ODBC = new ConexionODBC();
+        private int id;
+        private string nombre;
+        private dtoDeporte modeloFila = new dtoDeporte();
+        private formDeporte vista;
 
-        public modeloDeporte agregarDeporte(modeloDeporte modelo)
+        public controladorDeporte()
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "INSERT INTO deporte (pkId, nombre) " +
-                "VALUES (NULL, ?nombre?);";
-                var ValorDeVariables = new
-                {
-                    nombre = modelo.nombre
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-                return modelo;
-            }
-            return null;
         }
 
-        public modeloDeporte modificarDeporte(modeloDeporte modelo)
+        public controladorDeporte(formDeporte Vista)
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "UPDATE deporte SET nombre = ?nombre? " +
-                "WHERE pkId = ?pkId?;";
-                var ValorDeVariables = new
-                {
-                    nombre = modelo.nombre,
-                    pkId = modelo.pkId
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-                return modelo;
-            }
-            return null;
+            vista = Vista;
+            // Creación de eventos
+            vista.Load += new EventHandler(cargarForm);
+            vista.tablaDeportes.CellClick += new DataGridViewCellEventHandler(clickCeldaDeLaTabla);
+            vista.btnActualizarDeporte.Click += new EventHandler(clickActualizarDeporte);
+            vista.btnAgregarDeporte.Click += new EventHandler(clickAgregarDeporte);
+            vista.btnModificarDeporte.Click += new EventHandler(clickModificarDeporte);
+            vista.btnEliminarDeporte.Click += new EventHandler(clickEliminarDeporte);
+            vista.txtFiltrar.TextChanged += new EventHandler(cambioEnTextoFiltrarDeporte);
+            vista.cboBuscar.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarDeporte);
         }
 
-        public modeloDeporte eliminarDeporte(modeloDeporte modelo)
+        private void clickAgregarDeporte(object sender, EventArgs e)
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "DELETE FROM deporte WHERE pkId = ?pkId?;";
-
-                var ValorDeVariables = new
-                {
-                    pkId = modelo.pkId
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-                return modelo;
-            }
-            return null;
+            daoDeporte daoDeporte = new daoDeporte();
+            dtoDeporte dtoDeporte = new dtoDeporte();
+            dtoDeporte.nombre = vista.txtNombreDeporte.Text;
+            daoDeporte.agregarDeporte(dtoDeporte);
+            actualizarTablaDeporte();
         }
 
-        public List<modeloDeporte> mostrarDeportes()
+        private void clickModificarDeporte(object sender, EventArgs e)
         {
-            List<modeloDeporte> sqlresultado = new List<modeloDeporte>();
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
+            daoDeporte daoDeporte = new daoDeporte();
+            modeloFila.nombre = vista.txtNombreDeporte.Text;
+            daoDeporte.modificarDeporte(modeloFila);
+            actualizarTablaDeporte();
+        }
+
+        private void cambioEnTextoFiltrarDeporte(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(vista.txtFiltrar.Text))
             {
-                string sqlconsulta = "SELECT * FROM deporte;";
-                sqlresultado = conexionODBC.Query<modeloDeporte>(sqlconsulta).ToList();
-                ODBC.cerrarConexion(conexionODBC);
-                return sqlresultado;
+                vista.vwDeporteBindingSource.Filter = string.Empty;
             }
-            return null;
+            else
+            {
+                vista.vwDeporteBindingSource.Filter = string.Format("{0}='{1}'", vista.cboBuscar.Text, vista.txtFiltrar.Text);
+            }
+        }
+
+        private void clickActualizarDeporte(object sender, EventArgs e)
+        {
+            actualizarTablaDeporte();
+        }
+
+        private void clickEliminarDeporte(object sender, EventArgs e)
+        {
+            daoDeporte daoDeporte = new daoDeporte();
+            dtoDeporte dtoDeporte = new dtoDeporte();
+            int id = stringAInt(vista.tablaDeportes.SelectedRows[0].Cells[0].Value.ToString());
+            dtoDeporte.pkId = id;
+            daoDeporte.eliminarDeporte(dtoDeporte);
+            actualizarTablaDeporte();
+        }
+
+        private void opcionSeleccionadaBuscarDeporte(object sender, EventArgs e)
+        {
+            vista.txtFiltrar.Text = "";
+        }
+
+        private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
+        {
+            llenarModeloConFilaSeleccionada();
+            vista.txtNombreDeporte.Text = nombre;
+        }
+
+        private void llenarModeloConFilaSeleccionada()
+        {
+            id = stringAInt(vista.tablaDeportes.SelectedRows[0].Cells[0].Value.ToString());
+            nombre = vista.tablaDeportes.SelectedRows[0].Cells[1].Value.ToString();
+            modeloFila.pkId = id;
+        }
+
+        private void cargarForm(object sender, EventArgs e)
+        {
+            try
+            {
+                vista.deporteTableAdapter.Fill(vista.vwDeportes.deporte);
+                vista.cboBuscar.SelectedIndex = 0;
+            }
+            catch (MySqlException error)
+            {
+                abrirForm(new formError(error));
+            }
+        }
+
+        public void actualizarTablaDeporte()
+        {
+            vista.deporteTableAdapter.Fill(vista.vwDeportes.deporte);
         }
     }
 }

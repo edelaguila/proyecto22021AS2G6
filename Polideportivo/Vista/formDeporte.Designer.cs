@@ -106,8 +106,6 @@ namespace Vista
             this.tablaDeportes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaDeportes.Size = new System.Drawing.Size(400, 407);
             this.tablaDeportes.TabIndex = 5;
-            this.tablaDeportes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDeporte_CellClick);
-            this.tablaDeportes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDeportes_CellContentClick);
             this.tablaDeportes.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.tablaDeportes_DataError);
             // 
             // pkIdDataGridViewTextBoxColumn
@@ -187,7 +185,6 @@ namespace Vista
             this.txtNombreDeporte.Name = "txtNombreDeporte";
             this.txtNombreDeporte.Size = new System.Drawing.Size(226, 27);
             this.txtNombreDeporte.TabIndex = 34;
-            this.txtNombreDeporte.TextChanged += new System.EventHandler(this.txtNombreDeporte_TextChanged);
             // 
             // btnEliminarDeporte
             // 
@@ -208,7 +205,6 @@ namespace Vista
             this.btnEliminarDeporte.TabIndex = 33;
             this.btnEliminarDeporte.Text = "   E L I M I N A R";
             this.btnEliminarDeporte.UseVisualStyleBackColor = false;
-            this.btnEliminarDeporte.Click += new System.EventHandler(this.btnEliminarDeporte_Click);
             // 
             // btnActualizarDeporte
             // 
@@ -229,7 +225,6 @@ namespace Vista
             this.btnActualizarDeporte.TabIndex = 32;
             this.btnActualizarDeporte.Text = "      A C T U A L I Z A R";
             this.btnActualizarDeporte.UseVisualStyleBackColor = false;
-            this.btnActualizarDeporte.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // panelBuscarCol
             // 
@@ -258,7 +253,6 @@ namespace Vista
             this.cboBuscar.Name = "cboBuscar";
             this.cboBuscar.Size = new System.Drawing.Size(364, 26);
             this.cboBuscar.TabIndex = 32;
-            this.cboBuscar.SelectedIndexChanged += new System.EventHandler(this.cboBuscar_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
@@ -292,7 +286,6 @@ namespace Vista
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(353, 20);
             this.txtFiltrar.TabIndex = 1;
-            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
             // pictureBox1
             // 
@@ -302,7 +295,6 @@ namespace Vista
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnModificarDeporte
             // 
@@ -323,7 +315,6 @@ namespace Vista
             this.btnModificarDeporte.TabIndex = 28;
             this.btnModificarDeporte.Text = "    M O D I F I C A R";
             this.btnModificarDeporte.UseVisualStyleBackColor = false;
-            this.btnModificarDeporte.Click += new System.EventHandler(this.btnModificarDeporte_Click);
             // 
             // btnAgregarDeporte
             // 
@@ -344,7 +335,6 @@ namespace Vista
             this.btnAgregarDeporte.TabIndex = 27;
             this.btnAgregarDeporte.Text = "     A G R E G A R";
             this.btnAgregarDeporte.UseVisualStyleBackColor = false;
-            this.btnAgregarDeporte.Click += new System.EventHandler(this.btnAgregarDeporte_Click);
             // 
             // deporteTableAdapter
             // 
@@ -359,7 +349,6 @@ namespace Vista
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formDeporte";
             this.Text = "formDeporte";
-            this.Load += new System.EventHandler(this.formDeporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaDeportes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwDeporteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwDeportes)).EndInit();
@@ -375,24 +364,24 @@ namespace Vista
         }
 
         #endregion
-        private Zuby.ADGV.AdvancedDataGridView tablaDeportes;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private System.Windows.Forms.Button btnAgregarDeporte;
-        private System.Windows.Forms.Button btnModificarDeporte;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtFiltrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnActualizarDeporte;
-        private System.Windows.Forms.Button btnEliminarDeporte;
-        private vwDeportes vwDeportes;
-        private System.Windows.Forms.BindingSource vwDeporteBindingSource;
-        private Datos.vwDeportesTableAdapters.deporteTableAdapter deporteTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox txtNombreDeporte;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel panelBuscarCol;
-        private System.Windows.Forms.ComboBox cboBuscar;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public Zuby.ADGV.AdvancedDataGridView tablaDeportes;
+        public System.Windows.Forms.Button btnAgregarDeporte;
+        public System.Windows.Forms.Button btnModificarDeporte;
+        public System.Windows.Forms.TextBox txtFiltrar;
+        public System.Windows.Forms.Button btnActualizarDeporte;
+        public System.Windows.Forms.Button btnEliminarDeporte;
+        public vwDeportes vwDeportes;
+        public System.Windows.Forms.BindingSource vwDeporteBindingSource;
+        public Datos.vwDeportesTableAdapters.deporteTableAdapter deporteTableAdapter;
+        public System.Windows.Forms.TextBox txtNombreDeporte;
+        public System.Windows.Forms.ComboBox cboBuscar;
     }
 }

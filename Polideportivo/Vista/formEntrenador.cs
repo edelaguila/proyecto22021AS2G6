@@ -1,5 +1,6 @@
 ﻿using Controlador;
 using Modelo;
+using Modelo.DAO;
 using System;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
@@ -14,8 +15,8 @@ namespace Vista
             // Este constructor es el que se utiliza para agregar datos
             btnAgregarEntrenador.Visible = true;
             // Llenar combobox de deportes
-            controladorDeporte deportes = new controladorDeporte();
-            cboDeporte.DataSource = deportes.mostrarDeportes();
+            daoDeporte daoDeporte = new daoDeporte();
+            cboDeporte.DataSource = daoDeporte.mostrarDeportes();
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
             cboDeporte.SelectedIndex = -1;
@@ -30,8 +31,6 @@ namespace Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            modeloDeporte modelo = new modeloDeporte();
-            controladorDeporte db = new controladorDeporte();
         }
 
         public void actualizarTablaEntrenador()

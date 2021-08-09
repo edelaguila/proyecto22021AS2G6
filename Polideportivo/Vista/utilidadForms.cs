@@ -6,12 +6,15 @@ namespace Vista
     {
         public static void abrirForm(Form formEvento)
         {
-            //formEvento.TopLevel = false;
-            formEvento.FormBorderStyle = FormBorderStyle.None;
-            //formEvento.Dock = DockStyle.Fill;
-            formEvento.StartPosition = FormStartPosition.CenterScreen;
-            formEvento.BringToFront();
-            formEvento.Show();
+            if (!formEvento.IsDisposed)
+            {
+                //formEvento.TopLevel = false;
+                formEvento.FormBorderStyle = FormBorderStyle.None;
+                //formEvento.Dock = DockStyle.Fill;
+                formEvento.StartPosition = FormStartPosition.CenterScreen;
+                formEvento.BringToFront();
+                formEvento.Show();
+            }
         }
 
         public static void cerrarForm(Form formEvento)

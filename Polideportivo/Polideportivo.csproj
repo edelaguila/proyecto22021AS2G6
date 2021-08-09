@@ -523,6 +523,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Imagenes\" />
+    <Folder Include="Modelo\DAO\" />
+    <Folder Include="Modelo\DTO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

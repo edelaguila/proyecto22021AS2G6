@@ -1,6 +1,7 @@
 ﻿using Vista;
 using System.Data.Odbc;
 using static Vista.utilidadForms;
+using System;
 
 namespace Conexion
 {
@@ -13,7 +14,7 @@ namespace Conexion
 
         /// <summary>
         /// Inicia la conexión hacia ODBC con el DSN especificado.
-        /// </summary>
+        /// </summary>}}
         /// <returns></returns>
         public OdbcConnection abrirConexion()
         {

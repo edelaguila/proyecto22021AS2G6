@@ -38,8 +38,6 @@ namespace Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formPartido));
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.tablaPartidos = new Zuby.ADGV.AdvancedDataGridView();
-            this.vwpartidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwPartido = new Datos.vwPartido();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.panelBuscarCol = new System.Windows.Forms.Panel();
@@ -51,7 +49,6 @@ namespace Vista
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregarPartido = new System.Windows.Forms.Button();
-            this.vwpartidoTableAdapter = new Datos.vwPartidoTableAdapters.vwpartidoTableAdapter();
             this.pkIdPartidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.equipo1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.equipo2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,14 +63,17 @@ namespace Vista
             this.empleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkIdEstadoPartidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwpartidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vwPartido = new Datos.vwPartido();
+            this.vwpartidoTableAdapter = new Datos.vwPartidoTableAdapters.vwpartidoTableAdapter();
             this.parrotGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPartidos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwpartidoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwPartido)).BeginInit();
             this.panelBuscarCol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwpartidoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwPartido)).BeginInit();
             this.SuspendLayout();
             // 
             // parrotGradientPanel1
@@ -156,16 +156,6 @@ namespace Vista
             this.tablaPartidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaPartidos.Size = new System.Drawing.Size(768, 413);
             this.tablaPartidos.TabIndex = 34;
-            // 
-            // vwpartidoBindingSource
-            // 
-            this.vwpartidoBindingSource.DataMember = "vwpartido";
-            this.vwpartidoBindingSource.DataSource = this.vwPartido;
-            // 
-            // vwPartido
-            // 
-            this.vwPartido.DataSetName = "vwPartido";
-            this.vwPartido.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnEliminar
             // 
@@ -336,10 +326,6 @@ namespace Vista
             this.btnAgregarPartido.UseVisualStyleBackColor = false;
             this.btnAgregarPartido.Click += new System.EventHandler(this.btnAgregarPartido_Click_1);
             // 
-            // vwpartidoTableAdapter
-            // 
-            this.vwpartidoTableAdapter.ClearBeforeFill = true;
-            // 
             // pkIdPartidoDataGridViewTextBoxColumn
             // 
             this.pkIdPartidoDataGridViewTextBoxColumn.DataPropertyName = "pkIdPartido";
@@ -472,6 +458,20 @@ namespace Vista
             this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
             this.estadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
+            // vwpartidoBindingSource
+            // 
+            this.vwpartidoBindingSource.DataMember = "vwpartido";
+            this.vwpartidoBindingSource.DataSource = this.vwPartido;
+            // 
+            // vwPartido
+            // 
+            this.vwPartido.DataSetName = "vwPartido";
+            this.vwPartido.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vwpartidoTableAdapter
+            // 
+            this.vwpartidoTableAdapter.ClearBeforeFill = true;
+            // 
             // formPartido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,13 +484,13 @@ namespace Vista
             this.Load += new System.EventHandler(this.formPartido_Load);
             this.parrotGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablaPartidos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwpartidoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwPartido)).EndInit();
             this.panelBuscarCol.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwpartidoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwPartido)).EndInit();
             this.ResumeLayout(false);
 
         }

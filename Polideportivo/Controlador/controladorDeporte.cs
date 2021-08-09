@@ -25,8 +25,9 @@ namespace Controlador
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
+                return modelo;
             }
-            return modelo;
+            return null;
         }
 
         public modeloDeporte modificarDeporte(modeloDeporte modelo)
@@ -44,8 +45,9 @@ namespace Controlador
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
+                return modelo;
             }
-            return modelo;
+            return null;
         }
 
         public modeloDeporte eliminarDeporte(modeloDeporte modelo)
@@ -62,8 +64,9 @@ namespace Controlador
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
+                return modelo;
             }
-            return modelo;
+            return null;
         }
 
         public List<modeloDeporte> mostrarDeportes()
@@ -75,8 +78,9 @@ namespace Controlador
                 string sqlconsulta = "SELECT * FROM deporte;";
                 sqlresultado = conexionODBC.Query<modeloDeporte>(sqlconsulta).ToList();
                 ODBC.cerrarConexion(conexionODBC);
+                return sqlresultado;
             }
-            return sqlresultado;
+            return null;
         }
     }
 }

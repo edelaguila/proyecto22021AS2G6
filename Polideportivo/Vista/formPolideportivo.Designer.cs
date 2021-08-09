@@ -42,7 +42,7 @@
             this.panelLateralInterno = new System.Windows.Forms.FlowLayoutPanel();
             this.panelMenuTitulo = new System.Windows.Forms.Panel();
             this.separadorLogo = new ReaLTaiizor.Controls.AirSeparator();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.imgTitulo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMenuCampeonato = new System.Windows.Forms.FlowLayoutPanel();
             this.btnMenuCampeonato = new System.Windows.Forms.Button();
@@ -79,7 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).BeginInit();
             this.panelLateralInterno.SuspendLayout();
             this.panelMenuTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTitulo)).BeginInit();
             this.panelMenuCampeonato.SuspendLayout();
             this.panelSubmenuCampeonatos.SuspendLayout();
             this.panelMenuPartidos.SuspendLayout();
@@ -103,6 +103,7 @@
             this.panelPrincipalWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPrincipalWrapper.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.Low;
             this.panelPrincipalWrapper.Location = new System.Drawing.Point(280, 77);
+            this.panelPrincipalWrapper.Margin = new System.Windows.Forms.Padding(0);
             this.panelPrincipalWrapper.Name = "panelPrincipalWrapper";
             this.panelPrincipalWrapper.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighSpeed;
             this.panelPrincipalWrapper.PrimerColor = System.Drawing.Color.White;
@@ -123,6 +124,7 @@
             this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelPrincipal.Controls.Add(this.pictureBox1);
             this.panelPrincipal.Location = new System.Drawing.Point(31, 23);
+            this.panelPrincipal.Margin = new System.Windows.Forms.Padding(0);
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(900, 595);
             this.panelPrincipal.TabIndex = 0;
@@ -247,6 +249,8 @@
             // 
             // panelLateralInterno
             // 
+            this.panelLateralInterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelLateralInterno.BackColor = System.Drawing.Color.Transparent;
             this.panelLateralInterno.Controls.Add(this.panelMenuTitulo);
             this.panelLateralInterno.Controls.Add(this.panelMenuCampeonato);
@@ -258,17 +262,18 @@
             this.panelLateralInterno.Controls.Add(this.panelMenuEntrenador);
             this.panelLateralInterno.Controls.Add(this.panelMenuEmpleado);
             this.panelLateralInterno.Controls.Add(this.panelMenuFaltas);
-            this.panelLateralInterno.Location = new System.Drawing.Point(15, 3);
+            this.panelLateralInterno.Location = new System.Drawing.Point(20, 2);
+            this.panelLateralInterno.Margin = new System.Windows.Forms.Padding(0);
             this.panelLateralInterno.Name = "panelLateralInterno";
             this.panelLateralInterno.Size = new System.Drawing.Size(250, 595);
             this.panelLateralInterno.TabIndex = 1;
             // 
             // panelMenuTitulo
             // 
+            this.panelMenuTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMenuTitulo.Controls.Add(this.separadorLogo);
-            this.panelMenuTitulo.Controls.Add(this.pictureBox2);
+            this.panelMenuTitulo.Controls.Add(this.imgTitulo);
             this.panelMenuTitulo.Controls.Add(this.label1);
-            this.panelMenuTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenuTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelMenuTitulo.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenuTitulo.Name = "panelMenuTitulo";
@@ -292,16 +297,16 @@
             this.separadorLogo.Text = "airSeparator1";
             this.separadorLogo.Transparent = false;
             // 
-            // pictureBox2
+            // imgTitulo
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(29, 16);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
+            this.imgTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.imgTitulo.Image = ((System.Drawing.Image)(resources.GetObject("imgTitulo.Image")));
+            this.imgTitulo.Location = new System.Drawing.Point(29, 16);
+            this.imgTitulo.Name = "imgTitulo";
+            this.imgTitulo.Size = new System.Drawing.Size(40, 40);
+            this.imgTitulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgTitulo.TabIndex = 23;
+            this.imgTitulo.TabStop = false;
             // 
             // label1
             // 
@@ -319,21 +324,23 @@
             // 
             // panelMenuCampeonato
             // 
+            this.panelMenuCampeonato.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMenuCampeonato.AutoSize = true;
             this.panelMenuCampeonato.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelMenuCampeonato.Controls.Add(this.btnMenuCampeonato);
             this.panelMenuCampeonato.Controls.Add(this.panelSubmenuCampeonatos);
-            this.panelMenuCampeonato.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuCampeonato.Location = new System.Drawing.Point(3, 89);
+            this.panelMenuCampeonato.Location = new System.Drawing.Point(0, 86);
+            this.panelMenuCampeonato.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenuCampeonato.Name = "panelMenuCampeonato";
             this.panelMenuCampeonato.Size = new System.Drawing.Size(245, 159);
             this.panelMenuCampeonato.TabIndex = 24;
             // 
             // btnMenuCampeonato
             // 
+            this.btnMenuCampeonato.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMenuCampeonato.BackColor = System.Drawing.Color.Transparent;
             this.btnMenuCampeonato.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenuCampeonato.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMenuCampeonato.FlatAppearance.BorderSize = 0;
             this.btnMenuCampeonato.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(111)))), ((int)(((byte)(127)))));
             this.btnMenuCampeonato.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(132)))), ((int)(((byte)(151)))));
@@ -347,7 +354,8 @@
             this.btnMenuCampeonato.Name = "btnMenuCampeonato";
             this.btnMenuCampeonato.Size = new System.Drawing.Size(245, 53);
             this.btnMenuCampeonato.TabIndex = 12;
-            this.btnMenuCampeonato.Text = "      CAMPEONATOS";
+            this.btnMenuCampeonato.Text = "           CAMPEONATOS";
+            this.btnMenuCampeonato.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuCampeonato.UseVisualStyleBackColor = false;
             this.btnMenuCampeonato.Click += new System.EventHandler(this.btnMenuCampeonato_Click);
             // 
@@ -380,7 +388,8 @@
             this.btnSubMenuPosiciones.Name = "btnSubMenuPosiciones";
             this.btnSubMenuPosiciones.Size = new System.Drawing.Size(245, 53);
             this.btnSubMenuPosiciones.TabIndex = 21;
-            this.btnSubMenuPosiciones.Text = "POSICIONES";
+            this.btnSubMenuPosiciones.Text = "           POSICIONES";
+            this.btnSubMenuPosiciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSubMenuPosiciones.UseVisualStyleBackColor = false;
             this.btnSubMenuPosiciones.Click += new System.EventHandler(this.btnSubMenuPosiciones_Click);
             // 
@@ -402,18 +411,19 @@
             this.btnSubMenuParticipante.Name = "btnSubMenuParticipante";
             this.btnSubMenuParticipante.Size = new System.Drawing.Size(245, 53);
             this.btnSubMenuParticipante.TabIndex = 22;
-            this.btnSubMenuParticipante.Text = "            PARTICIPANTES";
+            this.btnSubMenuParticipante.Text = "           PARTICIPANTES";
             this.btnSubMenuParticipante.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSubMenuParticipante.UseVisualStyleBackColor = false;
             this.btnSubMenuParticipante.Click += new System.EventHandler(this.btnSubMenuParticipante_Click);
             // 
             // panelMenuPartidos
             // 
+            this.panelMenuPartidos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMenuPartidos.AutoSize = true;
             this.panelMenuPartidos.Controls.Add(this.btnMenuPartido);
             this.panelMenuPartidos.Controls.Add(this.panelSubMenuPartidos);
-            this.panelMenuPartidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuPartidos.Location = new System.Drawing.Point(3, 254);
+            this.panelMenuPartidos.Location = new System.Drawing.Point(0, 245);
+            this.panelMenuPartidos.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenuPartidos.Name = "panelMenuPartidos";
             this.panelMenuPartidos.Size = new System.Drawing.Size(245, 106);
             this.panelMenuPartidos.TabIndex = 25;
@@ -436,7 +446,7 @@
             this.btnMenuPartido.Name = "btnMenuPartido";
             this.btnMenuPartido.Size = new System.Drawing.Size(245, 53);
             this.btnMenuPartido.TabIndex = 18;
-            this.btnMenuPartido.Text = "             PARTIDOS";
+            this.btnMenuPartido.Text = "           PARTIDOS";
             this.btnMenuPartido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuPartido.UseVisualStyleBackColor = false;
             this.btnMenuPartido.Click += new System.EventHandler(this.btnMenuPartido_Click);
@@ -471,17 +481,18 @@
             this.btnSubMenuPartidosResultado.Name = "btnSubMenuPartidosResultado";
             this.btnSubMenuPartidosResultado.Size = new System.Drawing.Size(245, 53);
             this.btnSubMenuPartidosResultado.TabIndex = 23;
-            this.btnSubMenuPartidosResultado.Text = "            RESULTADOS";
+            this.btnSubMenuPartidosResultado.Text = "           RESULTADOS";
             this.btnSubMenuPartidosResultado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSubMenuPartidosResultado.UseVisualStyleBackColor = false;
             this.btnSubMenuPartidosResultado.Click += new System.EventHandler(this.btnSubMenuPartidosResultado_Click);
             // 
             // panelMenuDeportes
             // 
+            this.panelMenuDeportes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMenuDeportes.AutoSize = true;
             this.panelMenuDeportes.Controls.Add(this.btnDeportes);
-            this.panelMenuDeportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuDeportes.Location = new System.Drawing.Point(3, 366);
+            this.panelMenuDeportes.Location = new System.Drawing.Point(0, 351);
+            this.panelMenuDeportes.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenuDeportes.Name = "panelMenuDeportes";
             this.panelMenuDeportes.Size = new System.Drawing.Size(245, 53);
             this.panelMenuDeportes.TabIndex = 26;
@@ -505,17 +516,18 @@
             this.btnDeportes.Name = "btnDeportes";
             this.btnDeportes.Size = new System.Drawing.Size(245, 53);
             this.btnDeportes.TabIndex = 17;
-            this.btnDeportes.Text = "            DEPORTES";
+            this.btnDeportes.Text = "           DEPORTES";
             this.btnDeportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeportes.UseVisualStyleBackColor = false;
             this.btnDeportes.Click += new System.EventHandler(this.btnDeportes_Click);
             // 
             // panelMenuEquipos
             // 
+            this.panelMenuEquipos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMenuEquipos.AutoSize = true;
             this.panelMenuEquipos.Controls.Add(this.btnMenuEquipo);
-            this.panelMenuEquipos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuEquipos.Location = new System.Drawing.Point(3, 425);
+            this.panelMenuEquipos.Location = new System.Drawing.Point(0, 404);
+            this.panelMenuEquipos.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenuEquipos.Name = "panelMenuEquipos";
             this.panelMenuEquipos.Size = new System.Drawing.Size(245, 53);
             this.panelMenuEquipos.TabIndex = 27;
@@ -538,17 +550,18 @@
             this.btnMenuEquipo.Name = "btnMenuEquipo";
             this.btnMenuEquipo.Size = new System.Drawing.Size(245, 53);
             this.btnMenuEquipo.TabIndex = 11;
-            this.btnMenuEquipo.Text = "             EQUIPOS";
+            this.btnMenuEquipo.Text = "           EQUIPOS";
             this.btnMenuEquipo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuEquipo.UseVisualStyleBackColor = false;
             this.btnMenuEquipo.Click += new System.EventHandler(this.btnMenuEquipo_Click);
             // 
             // panelMenuJugadores
             // 
+            this.panelMenuJugadores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMenuJugadores.AutoSize = true;
             this.panelMenuJugadores.Controls.Add(this.btnMenuJugador);
-            this.panelMenuJugadores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuJugadores.Location = new System.Drawing.Point(3, 484);
+            this.panelMenuJugadores.Location = new System.Drawing.Point(0, 457);
+            this.panelMenuJugadores.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenuJugadores.Name = "panelMenuJugadores";
             this.panelMenuJugadores.Size = new System.Drawing.Size(245, 53);
             this.panelMenuJugadores.TabIndex = 28;
@@ -572,16 +585,18 @@
             this.btnMenuJugador.Name = "btnMenuJugador";
             this.btnMenuJugador.Size = new System.Drawing.Size(245, 53);
             this.btnMenuJugador.TabIndex = 9;
-            this.btnMenuJugador.Text = "      JUGADORES";
+            this.btnMenuJugador.Text = "           JUGADORES";
+            this.btnMenuJugador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuJugador.UseVisualStyleBackColor = false;
             this.btnMenuJugador.Click += new System.EventHandler(this.btnMenuJugador_Click);
             // 
             // panelMenuRoles
             // 
+            this.panelMenuRoles.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMenuRoles.AutoSize = true;
             this.panelMenuRoles.Controls.Add(this.btnRol);
-            this.panelMenuRoles.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuRoles.Location = new System.Drawing.Point(3, 543);
+            this.panelMenuRoles.Location = new System.Drawing.Point(0, 510);
+            this.panelMenuRoles.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenuRoles.Name = "panelMenuRoles";
             this.panelMenuRoles.Size = new System.Drawing.Size(245, 53);
             this.panelMenuRoles.TabIndex = 29;
@@ -604,17 +619,18 @@
             this.btnRol.Name = "btnRol";
             this.btnRol.Size = new System.Drawing.Size(245, 53);
             this.btnRol.TabIndex = 10;
-            this.btnRol.Text = "             ROLES";
+            this.btnRol.Text = "           ROLES";
             this.btnRol.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRol.UseVisualStyleBackColor = false;
             this.btnRol.Click += new System.EventHandler(this.btnRol_Click);
             // 
             // panelMenuEntrenador
             // 
+            this.panelMenuEntrenador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMenuEntrenador.AutoSize = true;
             this.panelMenuEntrenador.Controls.Add(this.btnMenuEntrenador);
-            this.panelMenuEntrenador.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuEntrenador.Location = new System.Drawing.Point(3, 602);
+            this.panelMenuEntrenador.Location = new System.Drawing.Point(0, 563);
+            this.panelMenuEntrenador.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenuEntrenador.Name = "panelMenuEntrenador";
             this.panelMenuEntrenador.Size = new System.Drawing.Size(245, 53);
             this.panelMenuEntrenador.TabIndex = 30;
@@ -637,15 +653,18 @@
             this.btnMenuEntrenador.Name = "btnMenuEntrenador";
             this.btnMenuEntrenador.Size = new System.Drawing.Size(245, 53);
             this.btnMenuEntrenador.TabIndex = 15;
-            this.btnMenuEntrenador.Text = "          ENTRENADOR";
+            this.btnMenuEntrenador.Text = "           ENTRENADOR";
+            this.btnMenuEntrenador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuEntrenador.UseVisualStyleBackColor = false;
             this.btnMenuEntrenador.Click += new System.EventHandler(this.btnMenuEntrenador_Click);
             // 
             // panelMenuEmpleado
             // 
+            this.panelMenuEmpleado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMenuEmpleado.AutoSize = true;
             this.panelMenuEmpleado.Controls.Add(this.btnMenuEmpleado);
-            this.panelMenuEmpleado.Location = new System.Drawing.Point(3, 661);
+            this.panelMenuEmpleado.Location = new System.Drawing.Point(0, 616);
+            this.panelMenuEmpleado.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenuEmpleado.Name = "panelMenuEmpleado";
             this.panelMenuEmpleado.Size = new System.Drawing.Size(245, 53);
             this.panelMenuEmpleado.TabIndex = 23;
@@ -668,16 +687,18 @@
             this.btnMenuEmpleado.Name = "btnMenuEmpleado";
             this.btnMenuEmpleado.Size = new System.Drawing.Size(245, 53);
             this.btnMenuEmpleado.TabIndex = 19;
-            this.btnMenuEmpleado.Text = "EMPLEADO";
+            this.btnMenuEmpleado.Text = "           EMPLEADO";
+            this.btnMenuEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuEmpleado.UseVisualStyleBackColor = false;
             this.btnMenuEmpleado.Click += new System.EventHandler(this.btnMenuEmpleado_Click);
             // 
             // panelMenuFaltas
             // 
+            this.panelMenuFaltas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMenuFaltas.AutoSize = true;
             this.panelMenuFaltas.Controls.Add(this.btnMenuFalta);
-            this.panelMenuFaltas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuFaltas.Location = new System.Drawing.Point(3, 720);
+            this.panelMenuFaltas.Location = new System.Drawing.Point(0, 669);
+            this.panelMenuFaltas.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenuFaltas.Name = "panelMenuFaltas";
             this.panelMenuFaltas.Size = new System.Drawing.Size(245, 53);
             this.panelMenuFaltas.TabIndex = 21;
@@ -700,7 +721,8 @@
             this.btnMenuFalta.Name = "btnMenuFalta";
             this.btnMenuFalta.Size = new System.Drawing.Size(245, 53);
             this.btnMenuFalta.TabIndex = 20;
-            this.btnMenuFalta.Text = "FALTAS";
+            this.btnMenuFalta.Text = "           FALTAS";
+            this.btnMenuFalta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuFalta.UseVisualStyleBackColor = false;
             this.btnMenuFalta.Click += new System.EventHandler(this.btnMenuFalta_Click);
             // 
@@ -713,6 +735,7 @@
             this.panelLateralWrapper.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLateralWrapper.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.Low;
             this.panelLateralWrapper.Location = new System.Drawing.Point(0, 77);
+            this.panelLateralWrapper.Margin = new System.Windows.Forms.Padding(0);
             this.panelLateralWrapper.Name = "panelLateralWrapper";
             this.panelLateralWrapper.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighSpeed;
             this.panelLateralWrapper.PrimerColor = System.Drawing.Color.White;
@@ -750,7 +773,7 @@
             this.panelLateralInterno.PerformLayout();
             this.panelMenuTitulo.ResumeLayout(false);
             this.panelMenuTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTitulo)).EndInit();
             this.panelMenuCampeonato.ResumeLayout(false);
             this.panelMenuCampeonato.PerformLayout();
             this.panelSubmenuCampeonatos.ResumeLayout(false);
@@ -783,7 +806,7 @@
         private System.Windows.Forms.FlowLayoutPanel panelLateralInterno;
         private System.Windows.Forms.Panel panelMenuTitulo;
         private ReaLTaiizor.Controls.AirSeparator separadorLogo;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox imgTitulo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel panelMenuCampeonato;
         private System.Windows.Forms.Button btnMenuCampeonato;

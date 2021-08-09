@@ -1,5 +1,6 @@
 ﻿using Controlador;
 using Modelo;
+using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 using System.Data.Odbc;
@@ -28,7 +29,7 @@ namespace Vista
             {
                 this.vwcampeonatoTableAdapter.Fill(this.vwCampeonato.vwcampeonato);
             }
-            catch (OdbcException error)
+            catch (MySqlException error)
             {
                 abrirForm(new formError(error));
             }

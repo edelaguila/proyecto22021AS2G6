@@ -1,5 +1,6 @@
 ﻿using Controlador;
 using Modelo;
+using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
@@ -18,8 +19,15 @@ namespace Vista
 
         private void formDeporte_Load(object sender, EventArgs e)
         {
-            this.deporteTableAdapter.Fill(this.vwDeportes.deporte);
-            cboBuscar.SelectedIndex = 0;
+            try
+            {
+                this.deporteTableAdapter.Fill(this.vwDeportes.deporte);
+                cboBuscar.SelectedIndex = 0;
+            }
+            catch (MySqlException error)
+            {
+                abrirForm(new formError(error));
+            }
         }
 
         //private void button1_Click(object sender, EventArgs e)

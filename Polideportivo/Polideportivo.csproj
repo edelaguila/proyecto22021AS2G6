@@ -113,6 +113,8 @@
     <Compile Include="Controlador\controladorAnotacion.cs" />
     <Compile Include="Controlador\controladorCampeonato.cs" />
     <Compile Include="Controlador\controladorDeporte.cs" />
+    <Compile Include="Controlador\controladorRol.cs" />
+    <Compile Include="Modelo\DAO\daoAnotacion.cs" />
     <Compile Include="Modelo\DAO\daoEmpleado.cs" />
     <Compile Include="Controlador\controladorEntrenador.cs" />
     <Compile Include="Controlador\controladorEquipo.cs" />
@@ -120,7 +122,7 @@
     <Compile Include="Controlador\controladorParticipante.cs" />
     <Compile Include="Controlador\controladorPartido.cs" />
     <Compile Include="Modelo\DAO\daoPuesto.cs" />
-    <Compile Include="Controlador\controladorRol.cs" />
+    <Compile Include="Modelo\DAO\daoRol.cs" />
     <Compile Include="Controlador\controladorTipoCampeonato.cs" />
     <Compile Include="Controlador\controladorTipoFalta.cs" />
     <Compile Include="Controlador\controladorUsuario.cs" />
@@ -139,7 +141,7 @@
     <Compile Include="Modelo\modeloParticipante.cs" />
     <Compile Include="Modelo\DTO\dtoPartido.cs" />
     <Compile Include="Modelo\DTO\dtoPuesto.cs" />
-    <Compile Include="Modelo\modeloRol.cs" />
+    <Compile Include="Modelo\DTO\dtoRol.cs" />
     <Compile Include="Modelo\modeloTipoCampeonato.cs" />
     <Compile Include="Modelo\modeloTipoFalta.cs" />
     <Compile Include="Modelo\modeloUsuario.cs" />

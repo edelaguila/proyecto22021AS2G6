@@ -1,108 +1,122 @@
-﻿using Dapper;
-using Conexion;
-using Modelo;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.Odbc;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Vista;
+using Modelo.DAO;
+using Modelo.DTO;
+using static Vista.utilidadForms;
+using System.Windows.Forms;
 
 namespace Controlador
 {
-    public class controladorRol
+    class controladorRol
     {
-        private ConexionODBC ConexionODBC = new ConexionODBC();
+        private int id;
+        private string nombre;
+        private int fkIdDeporte;
+
+        private formRol vista;
+        private dtoRol modeloFila = new dtoRol();
+
         public controladorRol()
         {
         }
 
-
-        public modeloRol agregarRol(modeloRol modelo)
+        public controladorRol(formRol Vista)
         {
-            OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-               "INSERT INTO rol (nombre, fkIdDeporte) " +
-               "VALUES (?nombre?, ?fkIdDeporte?);";
-                var ValorDeVariables = new
-                {
-                    nombre = modelo.nombre,
-                    fkIdDeporte = modelo.fkIdDeporte
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ConexionODBC.cerrarConexion(conexionODBC);
-            }
-                return modelo;
+            vista = Vista;
+            // Llenar combobox de deportes
+            daoDeporte daoDeporte = new daoDeporte();
+            vista.cboDeporte.DataSource = daoDeporte.mostrarDeportes();
+            vista.cboDeporte.DisplayMember = "nombre";
+            vista.cboDeporte.ValueMember = "pkId";
+            vista.cboDeporte.SelectedItem = vista.cboDeporte.Items[0];
+            // Creación de eventos
+            vista.Load += new EventHandler(cargarForm);
+            vista.tablaRol.CellClick += new DataGridViewCellEventHandler(clickCeldaDeLaTabla);
+            vista.btnActualizarRol.Click += new EventHandler(clickActualizarRol);
+            vista.btnAgregarRol.Click += new EventHandler(clickAgregarRol);
+            vista.btnModificarRol.Click += new EventHandler(clickModificarRol);
+            vista.btnEliminarRol.Click += new EventHandler(clickEliminarRol);
+            vista.txtFiltrarRol.TextChanged += new EventHandler(cambioEnTextoFiltrarRol);
+            vista.cboBuscarRol.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarRol);
         }
 
-        public modeloRol modificarRol(modeloRol modelo)
+        private void cargarForm(object sender, EventArgs e)
         {
-            OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "UPDATE rol SET nombre = ?nombre?, " +
-                "fkIdDeporte = ?fkIdDeporte?" +
-                " WHERE pkId = ?pkId?;";
-                var ValorDeVariables = new
-                {
-                    nombre = modelo.nombre,
-                    fkIdDeporte = modelo.fkIdDeporte,
-                    pkId = modelo.pkId
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ConexionODBC.cerrarConexion(conexionODBC);
-            }
-            return modelo;
-        }
-       
-        public List<modeloRol> mostrarRoles()
-        {
-            OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
-            List<modeloRol> sqlresultado = new List<modeloRol>();
-            if (conexionODBC != null)
-            {
-                string sqlconsulta = "SELECT * FROM tablaRol;";
-                sqlresultado = conexionODBC.Query<modeloRol>(sqlconsulta).ToList();
-                ConexionODBC.cerrarConexion(conexionODBC);
-            }
-            return sqlresultado;
+            vista.vwrolTableAdapter.Fill(vista.vwRol.vwrol);
         }
 
-        public modeloRol eliminarRol(modeloRol modelo)
+        private void clickEliminarRol(object sender, EventArgs e)
         {
-            OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "DELETE FROM rol WHERE pkId = ?pkId?;";
-                var ValorDeVariables = new
-                {
-                    pkId = modelo.pkId
-
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ConexionODBC.cerrarConexion(conexionODBC);
-            }
-            return modelo;
+            int id = stringAInt(vista.tablaRol.SelectedRows[0].Cells[0].Value.ToString());
+            daoRol controlador = new daoRol();
+            dtoRol modelo = new dtoRol();
+            modelo.pkId = id;
+            controlador.eliminarRol(modelo);
+            actualizarTablaRol();
         }
 
-
- 
-        public List<modeloRol> mostrarRolesPorDeporte(modeloRol modelo)
+        private void clickActualizarRol(object sender, EventArgs e)
         {
-            OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
-            List<modeloRol> sqlresultado = new List<modeloRol>();
-            if (conexionODBC != null)
+            actualizarTablaRol();
+        }
+
+        private void opcionSeleccionadaBuscarRol(object sender, EventArgs e)
+        {
+            vista.txtFiltrarRol.Text = "";
+        }
+
+        private void cambioEnTextoFiltrarRol(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(vista.txtFiltrarRol.Text))
             {
-                string sqlconsulta = "SELECT pkId, nombre, fkIdDeporte FROM rol WHERE fkIdDeporte = ?fkIdDeporte?;";
-                var parameters = new
-                {
-                    fkIdDeporte = modelo.fkIdDeporte
-                };
-                sqlresultado = conexionODBC.Query<modeloRol>(sqlconsulta, parameters).ToList();
-                ConexionODBC.cerrarConexion(conexionODBC);
+                vista.vwrolBindingSource.Filter = string.Empty;
             }
-            return sqlresultado;
+            else
+            {
+                vista.vwrolBindingSource.Filter = string.Format("{0}='{1}'", vista.cboBuscarRol.Text, vista.txtFiltrarRol.Text);
+            }
+        }
+
+        private void clickModificarRol(object sender, EventArgs e)
+        {
+            daoRol modeloModificar = new daoRol();
+            dtoRol modelo = new dtoRol();
+            modeloFila.nombre = vista.txtNombreRol.Text;
+            modeloFila.fkIdDeporte = stringAInt(vista.cboDeporte.SelectedValue.ToString());
+            modeloModificar.modificarRol(modeloFila);
+            actualizarTablaRol();
+        }
+
+        private void clickAgregarRol(object sender, EventArgs e)
+        {
+            daoRol modeloAgregar = new daoRol();
+            dtoRol modelo = new dtoRol();
+            modelo.nombre = vista.txtNombreRol.Text;
+            modelo.fkIdDeporte = stringAInt(vista.cboDeporte.SelectedValue.ToString());
+            modeloAgregar.agregarRol(modelo);
+            actualizarTablaRol();
+        }
+
+        private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
+        {
+            llenarModeloConFilaSeleccionada();
+            vista.txtNombreRol.Text = nombre;
+        }
+
+        public void actualizarTablaRol()
+        {
+            vista.vwrolTableAdapter.Fill(vista.vwRol.vwrol);
+        }
+
+        private void llenarModeloConFilaSeleccionada()
+        {
+            id = stringAInt(vista.tablaRol.SelectedRows[0].Cells[0].Value.ToString());
+            nombre = vista.tablaRol.SelectedRows[0].Cells[1].Value.ToString();
+            modeloFila.pkId = id;
         }
     }
 }

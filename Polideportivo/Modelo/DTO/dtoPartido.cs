@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Modelo
+namespace Modelo.DTO
 {
-    public class modeloPartido
+    public class dtoPartido
     {
         public int pkId { get; set; }
         public string equipo1 { get; set; }
@@ -16,11 +16,11 @@ namespace Modelo
         public int fkIdEmpleado { get; set; }
         public int fkIdEstadoPartido { get; set; }
 
-        public modeloPartido()
+        public dtoPartido()
         {
         }
 
-        public modeloPartido(int Id, string Equipo1, string Equipo2, string Campo, string Fecha, string Estado, string Fase, int IdCampeonato, int IdEmpleado, int IdResultado, int IdEstado, int anotacion1, int anotacion2)
+        public dtoPartido(int Id, string Equipo1, string Equipo2, string Campo, string Fecha, string Estado, string Fase, int IdCampeonato, int IdEmpleado, int IdResultado, int IdEstado, int anotacion1, int anotacion2)
         {
             pkId = Id;
             equipo1 = Equipo1;

@@ -4,101 +4,134 @@ using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
+using Vista;
+using System;
+using System.Windows.Forms;
+using Modelo.DTO;
+using Modelo.DAO;
+using static Vista.utilidadForms;
 
 namespace Controlador
 {
     public class controladorPartido
     {
-        private ConexionODBC ODBC = new ConexionODBC();
+        private formPartido vista;
 
-        public modeloPartido agregarPartido(modeloPartido modelo)
+        // Se declaran los campos que se van a llenar a partir de la fila seleccionada de la tabla
+        private int id;
+
+        private string equipo1;
+        private string equipo2;
+        private string campo;
+        private string fecha;
+        private string fase;
+        private int fkIdCampeonato;
+        private int fkIdEmpleado;
+        private int fkIdResultado;
+        private int fkIdEstado;
+
+        private dtoPartido modeloFila = new dtoPartido();
+
+        public controladorPartido(formPartido Vista)
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "INSERT INTO partido (pkId, equipo1, equipo2,anotacionesEquipo1, anotacionesEquipo2, campo, fecha, fase, fkIdCampeonato, " +
-                "fkIdEmpleado, fkIdEstadoPartido) " +
-                "VALUES (NULL, ?equipo1?, ?equipo2?,  ?anotacionesEquipo1?, ?anotacionesEquipo2?,?campo?, ?fecha?, ?fase?, ?fkIdCampeonato?, " +
-                "?fkIdEmpleado?, ?fkIdEstadoPartido?);";
-                var ValorDeVariables = new
-                {
-                    equipo1 = modelo.equipo1,
-                    equipo2 = modelo.equipo2,
-                    anotacionesEquipo1 = modelo.anotacionesEquipo1,
-                    anotacionesEquipo2 = modelo.anotacionesEquipo2,
-                    campo = modelo.campo,
-                    fecha = modelo.fecha,
-                    fase = modelo.fase,
-                    fkIdCampeonato = modelo.fkIdCampeonato,
-                    fkIdEmpleado = modelo.fkIdEmpleado,
-                    fkIdEstadoPartido = modelo.fkIdEstadoPartido
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return modelo;
+            vista = Vista;
+            // Creación de eventos
+            vista.Load += new EventHandler(cargarForm);
+            vista.tablaPartidos.CellClick += new DataGridViewCellEventHandler(clickCeldaDeLaTabla);
+            vista.btnActualizar.Click += new EventHandler(clickActualizarPartido);
+            vista.btnAgregarPartido.Click += new EventHandler(clickAgregarPartido);
+            vista.btnModificar.Click += new EventHandler(clickModificarPartido);
+            vista.btnEliminar.Click += new EventHandler(clickEliminarPartido);
+            vista.txtFiltrar.TextChanged += new EventHandler(cambioEnTextoFiltrarPartido);
+            vista.cboBuscar.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarPartido);
         }
 
-        public modeloPartido modificarPartido(modeloPartido modelo)
+        public controladorPartido()
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "UPDATE partido SET equipo1 = ?equipo1?, equipo2 = ?equipo2?, " +
-                "campo = ?campo?, fecha = ?fecha?, " +
-                "fase = ?fase?, fkIdCampeonato = ?fkIdCampeonato?, fkIdEmpleado = ?fkIdEmpleado?, " +
-                "anotacionesEquipo1 = ?anotacionesEquipo1?,  " + "anotacionesEquipo2 = ?anotacionesEquipo2?,  " + "fkIdEstadoPartido = ?fkIdEstadoPartido? " +
-                "WHERE pkId = ?pkId?;";
-                var ValorDeVariables = new
-                {
-                    equipo1 = modelo.equipo1,
-                    equipo2 = modelo.equipo2,
-                    campo = modelo.campo,
-                    fecha = modelo.fecha,
-                    fase = modelo.fase,
-                    fkIdCampeonato = modelo.fkIdCampeonato,
-                    fkIdEmpleado = modelo.fkIdEmpleado,
-                    fkIdEstadoPartido = modelo.fkIdEstadoPartido,
-                    anotacionesEquipo1 = modelo.anotacionesEquipo1,
-                    anotacionesEquipo2 = modelo.anotacionesEquipo2,
-                    pkId = modelo.pkId
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return modelo;
         }
 
-        public List<modeloPartido> mostrarPartidos()
+        private void cargarForm(object sender, EventArgs e)
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            List<modeloPartido> sqlresultado = new List<modeloPartido>();
-            if (conexionODBC != null)
-            {
-                string sqlconsulta = "SELECT * FROM tablapartidos;";
-                sqlresultado = conexionODBC.Query<modeloPartido>(sqlconsulta).ToList();
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return sqlresultado;
+            // TODO: esta línea de código carga datos en la tabla 'vwPartido.vwpartido' Puede moverla o quitarla según sea necesario.
+            vista.vwpartidoTableAdapter.Fill(vista.vwPartido.vwpartido);
+            vista.cboBuscar.SelectedIndex = 0;
+            vista.tablaPartidos.CurrentCell = vista.tablaPartidos.Rows[0].Cells[1];
+            llenarModeloConFilaSeleccionada();
         }
 
-        public modeloPartido eliminarPartido(modeloPartido modelo)
+        private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
+            llenarModeloConFilaSeleccionada();
+        }
+
+        private void clickActualizarPartido(object sender, EventArgs e)
+        {
+            actualizarTablaPartido();
+        }
+
+        private void clickAgregarPartido(object sender, EventArgs e)
+        {
+            abrirForm(new formPartidoEventos(this));
+        }
+
+        private void clickModificarPartido(object sender, EventArgs e)
+        {
+            abrirForm(new formPartidoEventos(modeloFila, this));
+        }
+
+        private void opcionSeleccionadaBuscarPartido(object sender, EventArgs e)
+        {
+            vista.txtFiltrar.Text = "";
+        }
+
+        private void clickEliminarPartido(object sender, EventArgs e)
+        {
+            llenarModeloConFilaSeleccionada();
+            daoPartido daoPartido = new daoPartido();
+            daoPartido.eliminarPartido(modeloFila);
+            actualizarTablaPartido();
+        }
+
+        private void cambioEnTextoFiltrarPartido(object sender, EventArgs e)
+        {
+            filtrarTabla();
+        }
+
+        public void actualizarTablaPartido()
+        {
+            vista.vwpartidoTableAdapter.Fill(vista.vwPartido.vwpartido);
+        }
+
+        public void llenarModeloConFilaSeleccionada()
+        {
+            id = stringAInt(vista.tablaPartidos.SelectedRows[0].Cells[0].Value.ToString());
+            fase = vista.tablaPartidos.SelectedRows[0].Cells[1].Value.ToString();
+            equipo1 = vista.tablaPartidos.SelectedRows[0].Cells[2].Value.ToString();
+            equipo2 = vista.tablaPartidos.SelectedRows[0].Cells[3].Value.ToString();
+            campo = vista.tablaPartidos.SelectedRows[0].Cells[4].Value.ToString();
+            fecha = vista.tablaPartidos.SelectedRows[0].Cells[9].Value.ToString();
+            fkIdEstado = stringAInt(vista.tablaPartidos.SelectedRows[0].Cells[5].Value.ToString());
+            fkIdCampeonato = stringAInt(vista.tablaPartidos.SelectedRows[0].Cells[6].Value.ToString());
+            fkIdEmpleado = stringAInt(vista.tablaPartidos.SelectedRows[0].Cells[7].Value.ToString());
+            fkIdResultado = stringAInt(vista.tablaPartidos.SelectedRows[0].Cells[8].Value.ToString());
+            modeloFila.pkId = id;
+            modeloFila.equipo1 = equipo1;
+            modeloFila.equipo2 = equipo2;
+            modeloFila.fkIdEstadoPartido = fkIdEstado;
+            modeloFila.fkIdCampeonato = fkIdCampeonato;
+            modeloFila.fkIdEmpleado = fkIdEmpleado;
+        }
+
+        private void filtrarTabla()
+        {
+            if (string.IsNullOrEmpty(vista.txtFiltrar.Text))
             {
-                var sqlinsertar =
-                "DELETE FROM partido WHERE pkId = ?pkId?;";
-                var ValorDeVariables = new
-                {
-                    pkId = modelo.pkId
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
+                vista.vwpartidoBindingSource.Filter = string.Empty;
             }
-            return modelo;
+            else
+            {
+                vista.vwpartidoBindingSource.Filter = string.Format("{0}='{1}'", vista.cboBuscar.Text, vista.txtFiltrar.Text);
+            }
         }
     }
 }

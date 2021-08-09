@@ -4,6 +4,7 @@ using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
+using Modelo.DTO;
 
 namespace Controlador
 {
@@ -71,14 +72,14 @@ namespace Controlador
             return modelo;
         }
 
-        public List<modeloPartido> mostrarPartidos()
+        public List<dtoPartido> mostrarPartidos()
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
-            List<modeloPartido> sqlresultado = new List<modeloPartido>();
+            List<dtoPartido> sqlresultado = new List<dtoPartido>();
             if (conexionODBC != null)
             {
                 string sqlconsulta = "SELECT * FROM tablapartidos;";
-                sqlresultado = conexionODBC.Query<modeloPartido>(sqlconsulta).ToList();
+                sqlresultado = conexionODBC.Query<dtoPartido>(sqlconsulta).ToList();
                 ODBC.cerrarConexion(conexionODBC);
             }
             return sqlresultado;

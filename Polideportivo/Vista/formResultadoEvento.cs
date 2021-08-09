@@ -1,5 +1,6 @@
 ﻿using Controlador;
 using Modelo;
+using Modelo.DTO;
 using System;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
@@ -109,29 +110,6 @@ namespace Vista
             lblJugadorEvento.Text = "AGREGAR PARTIDO";
         }
 
-        // Actualizar el combobox de roles dependiendo del deporte seleccionado
-        //private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    if (cboCampeonato.SelectedIndex > -1)
-        //    {
-        //        // Llenar la combobox de rol dependiendo del deporte elegido
-        //        modeloRol modelorol = new modeloRol();
-        //        modelorol.fkIdDeporte = stringAInt(cboCampeonato.SelectedValue.ToString());
-        //        controladorRol rol = new controladorRol(modelorol);
-        //        cboResultado.DataSource = rol.mostrarRolesPorDeporte();
-        //        cboResultado.DisplayMember = "nombre";
-        //        cboResultado.ValueMember = "pkId";
-
-        //        // Llenar la combobox de equipo dependiendo del deporte elegido
-        //        modeloEquipo modeloequipo = new modeloEquipo();
-        //        modeloequipo.fkIdDeporte = stringAInt(cboCampeonato.SelectedValue.ToString());
-        //        controladorEquipo equipo = new controladorEquipo(modeloequipo);
-        //        cboEmpleado.DataSource = equipo.mostrarEquipoPorDeporte();
-        //        cboEmpleado.DisplayMember = "nombre";
-        //        cboEmpleado.ValueMember = "pkId";
-        //    }
-        //}
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             cerrarForm(this);
@@ -139,23 +117,6 @@ namespace Vista
 
         private void btnAgregarPartido_Click(object sender, EventArgs e)
         {
-            controladorPartido controlador = new controladorPartido();
-            modeloPartido modelo = new modeloPartido();
-            modelo.fase = txtFase.Text;
-            modelo.campo = txtCampo.Text;
-            modelo.equipo1 = cboEquipo1.Text;
-            modelo.equipo2 = cboEquipo2.Text;
-            string fecha = dateFecha.Value.ToString("yyyy-MM-dd");
-            string hora = dateHora.Value.ToString("HH:mm");
-            modelo.fecha = fecha + " " + hora;
-            modelo.anotacionesEquipo1 = stringAInt(txtAnotacionesE1.ToString());
-            modelo.anotacionesEquipo2 = stringAInt(txtAnotacionesE2.ToString());
-            modelo.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
-            modelo.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
-            modelo.fkIdEstadoPartido = stringAInt(cboEstado.SelectedValue.ToString());
-            controlador.agregarPartido(modelo);
-            formOriginal.actualizarTablaResultado();
-            cerrarForm(this);
         }
 
         private void btnModificarResultado_Click(object sender, EventArgs e)
@@ -167,9 +128,9 @@ namespace Vista
             formOriginal.actualizarTablaResultado();
             cerrarForm(this);
 
-            
             cerrarForm(this);
         }
+
         private void llenarModeloConDatosIngresados()
         {
             modelo.fase = txtFase.Text;

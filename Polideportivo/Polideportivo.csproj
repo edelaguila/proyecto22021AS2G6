@@ -124,6 +124,7 @@
     <Compile Include="Controlador\controladorTipoFalta.cs" />
     <Compile Include="Controlador\controladorUsuario.cs" />
     <Compile Include="Modelo\DAO\daoJugador.cs" />
+    <Compile Include="Modelo\DAO\daoPartido.cs" />
     <Compile Include="Modelo\DTO\dtoJugador.cs" />
     <Compile Include="Modelo\modeloResultado.cs" />
     <Compile Include="Modelo\modeloEstado.cs" />
@@ -134,7 +135,7 @@
     <Compile Include="Modelo\modeloEntrenador.cs" />
     <Compile Include="Modelo\modeloEquipo.cs" />
     <Compile Include="Modelo\modeloParticipante.cs" />
-    <Compile Include="Modelo\modeloPartido.cs" />
+    <Compile Include="Modelo\DTO\dtoPartido.cs" />
     <Compile Include="Modelo\modeloPuesto.cs" />
     <Compile Include="Modelo\modeloRol.cs" />
     <Compile Include="Modelo\modeloTipoCampeonato.cs" />

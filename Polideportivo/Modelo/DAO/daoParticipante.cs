@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controlador
+namespace Modelo.DAO
 {
-    public class controladorParticipante
+    public class daoParticipante
     {
     }
 }

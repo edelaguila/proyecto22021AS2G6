@@ -1,6 +1,7 @@
 ﻿using Controlador;
 using Modelo;
 using Modelo.DAO;
+using Modelo.DTO;
 using System;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
@@ -12,117 +13,12 @@ namespace Vista
         public formEntrenador()
         {
             InitializeComponent();
-            // Este constructor es el que se utiliza para agregar datos
-            btnAgregarEntrenador.Visible = true;
-            // Llenar combobox de deportes
-            daoDeporte daoDeporte = new daoDeporte();
-            cboDeporte.DataSource = daoDeporte.mostrarDeportes();
-            cboDeporte.DisplayMember = "nombre";
-            cboDeporte.ValueMember = "pkId";
-            cboDeporte.SelectedIndex = -1;
-            // Modificar el texto del título
-        }
-
-        private void formDeporte_Load(object sender, EventArgs e)
-        {
-            this.vwentrenadorTableAdapter.Fill(this.vwEntrenador.vwentrenador);
-            cboBuscar.SelectedIndex = 0;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        public void actualizarTablaEntrenador()
-        {
-            this.vwentrenadorTableAdapter.Fill(this.vwEntrenador.vwentrenador);
-        }
-
-        private modeloEntrenador modeloFila = new modeloEntrenador();
-
-        private void tablaEntrenador_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int id = stringAInt(tablaEntrenador.SelectedRows[0].Cells[0].Value.ToString());
-            string nombre = tablaEntrenador.SelectedRows[0].Cells[1].Value.ToString();
-            txtNombre.Text = nombre;
-            modeloFila.pkId = id;
-        }
-
-        private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cboDeporte.SelectedIndex > -1)
-            {
-                // Llenar la combobox de equipo dependiendo del deporte elegido
-                modeloEquipo modeloequipo = new modeloEquipo();
-                modeloequipo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-                controladorEquipo equipo = new controladorEquipo();
-                cboEquipo.DataSource = equipo.mostrarEquipoPorDeporte(modeloequipo);
-                cboEquipo.DisplayMember = "nombre";
-                cboEquipo.ValueMember = "pkId";
-            }
-        }
-
-        private void btnAgregarEntrenador_Click(object sender, EventArgs e)
-        {
-            controladorEntrenador modeloAgregar = new controladorEntrenador();
-            modeloEntrenador modelo = new modeloEntrenador();
-            modelo.nombre = txtNombre.Text;
-            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-            modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
-            modeloAgregar.agregarEntrenador(modelo);
-            actualizarTablaEntrenador();
-        }
-
-        private void btnModificarEntrenador_Click(object sender, EventArgs e)
-        {
-            controladorEntrenador modeloModificar = new controladorEntrenador();
-            modeloEntrenador modelo = new modeloEntrenador();
-            modelo.nombre = txtNombre.Text;
-            modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-            modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
-            modeloModificar.modificarEntrenador(modelo);
-            actualizarTablaEntrenador();
-        }
-
-        private void txtFiltrar_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtFiltrar.Text))
-            {
-                vwentrenadorBindingSource.Filter = string.Empty;
-            }
-            else
-            {
-                vwentrenadorBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
-            }
-        }
-
-        private void cboBuscar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtFiltrar.Text = "";
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            actualizarTablaEntrenador();
-        }
-
-        private void btnEliminarEntrenador_Click(object sender, EventArgs e)
-        {
-            int id = stringAInt(tablaEntrenador.SelectedRows[0].Cells[0].Value.ToString());
-            controladorEntrenador controlador = new controladorEntrenador();
-            modeloEntrenador modelo = new modeloEntrenador();
-            modelo.pkId = id;
-            controlador.eliminarEntrenador(modelo);
-            actualizarTablaEntrenador();
+            controladorEntrenador controladorEntrenador = new controladorEntrenador(this);
         }
 
         private void tablaEntrenador_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
-        }
-
-        private void tablaEntrenador_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
         }
     }
 }

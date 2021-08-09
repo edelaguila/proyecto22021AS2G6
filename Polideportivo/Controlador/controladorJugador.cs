@@ -1,13 +1,5 @@
-﻿using Dapper;
-using Conexion;
-using Modelo;
-using System.Collections.Generic;
-using System.Data.Odbc;
-using System.Linq;
-using Vista;
+﻿using Vista;
 using System;
-using Datos.vwJugadorTableAdapters;
-using Datos;
 using static Vista.utilidadForms;
 using System.Windows.Forms;
 using Modelo.DTO;

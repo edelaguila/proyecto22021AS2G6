@@ -1,114 +1,100 @@
-﻿using Dapper;
-using Conexion;
-using Modelo;
-using System.Collections.Generic;
-using System.Data.Odbc;
-using System.Linq;
+﻿using Modelo.DAO;
+using Modelo.DTO;
+using System;
+using System.Windows.Forms;
+using Vista;
+using static Vista.utilidadForms;
 
 namespace Controlador
 {
     public class controladorEquipo
     {
-        private ConexionODBC ODBC = new ConexionODBC();
+        private formEquipo vista;
+        private daoEquipo daoEquipo = new daoEquipo();
+        private dtoEquipo modeloFila = new dtoEquipo();
 
-        public modeloEquipo agregarEquipo(modeloEquipo modelo)
+        public controladorEquipo()
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "INSERT INTO equipo (pkId, nombre, fkIdDeporte) " +
-                "VALUES (NULL, ?nombre?, ?fkIdDeporte?);";
-                var ValorDeVariables = new
-                {
-                    nombre = modelo.nombre,
-                    fkIdDeporte = modelo.fkIdDeporte
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return modelo;
         }
 
-        public modeloEquipo modificarEquipo(modeloEquipo modelo)
+        public controladorEquipo(formEquipo Vista)
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "UPDATE equipo SET nombre = ?nombre?, fkIdDeporte = ?fkIdDeporte? " +
-                "WHERE pkId = ?pkId?;";
-                var ValorDeVariables = new
-                {
-                    nombre = modelo.nombre,
-                    fkIdDeporte = modelo.fkIdDeporte,
-                    pkId = modelo.pkId
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return modelo;
+            vista = Vista;
+            // Creación de eventos
+            vista.Load += new EventHandler(cargarForm);
+            vista.tablaEquipo.CellClick += new DataGridViewCellEventHandler(clickCeldaDeLaTabla);
+            vista.btnActualizarEquipo.Click += new EventHandler(clickActualizarEquipo);
+            vista.btnAgregarEquipo.Click += new EventHandler(clickAgregarEquipo);
+            vista.btnModificarEquipo.Click += new EventHandler(clickModificarEquipo);
+            vista.btnEliminarEquipo.Click += new EventHandler(clickEliminarEquipo);
+            vista.txtFiltrar.TextChanged += new EventHandler(cambioEnTextoFiltrarEquipo);
+            vista.cboBuscar.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarEquipo);
         }
 
-        public modeloEquipo eliminarEquipo(modeloEquipo modelo)
+        private void clickActualizarEquipo(object sender, EventArgs e)
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "DELETE FROM equipo WHERE pkId = ?pkId?;";
-                var ValorDeVariables = new
-                {
-                    pkId = modelo.pkId
-                };
-                var resultadoinsertar = conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return modelo;
+            actualizarTablaJugadores();
         }
 
-        public List<modeloEquipo> mostrarEquipos()
+        private void cambioEnTextoFiltrarEquipo(object sender, EventArgs e)
         {
-            List<modeloEquipo> sqlresultado = new List<modeloEquipo>();
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                string sqlconsulta = "SELECT * FROM tablajugadores;";
-                sqlresultado = conexionODBC.Query<modeloEquipo>(sqlconsulta).ToList();
-                ODBC.cerrarConexion(conexionODBC);
-            }
-
-            return sqlresultado;
+            filtrarTabla();
         }
 
-        public List<modeloEquipo> mostrarEquipo()
+        private void opcionSeleccionadaBuscarEquipo(object sender, EventArgs e)
         {
-            List<modeloEquipo> sqlresultado = new List<modeloEquipo>();
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                string sqlconsulta = "SELECT * FROM equipo;";
-                sqlresultado = conexionODBC.Query<modeloEquipo>(sqlconsulta).ToList();
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return sqlresultado;
+            vista.txtFiltrar.Text = "";
         }
 
-        public List<modeloEquipo> mostrarEquipoPorDeporte(modeloEquipo modelo)
+        private void clickEliminarEquipo(object sender, EventArgs e)
         {
-            List<modeloEquipo> sqlresultado = new List<modeloEquipo>();
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
+            llenarModeloConFilaSeleccionada();
+            daoEquipo.eliminarEquipo(modeloFila);
+            actualizarTablaJugadores();
+        }
+
+        private void clickModificarEquipo(object sender, EventArgs e)
+        {
+            abrirForm(new formEquipoEventos(modeloFila, this));
+        }
+
+        private void clickAgregarEquipo(object sender, EventArgs e)
+        {
+            abrirForm(new formEquipoEventos(this));
+        }
+
+        private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
+        {
+            llenarModeloConFilaSeleccionada();
+        }
+
+        private void cargarForm(object sender, EventArgs e)
+        {
+            actualizarTablaJugadores();
+        }
+
+        private void filtrarTabla()
+        {
+            if (string.IsNullOrEmpty(vista.txtFiltrar.Text))
             {
-                string sqlconsulta = "SELECT pkId, nombre, fkIdDeporte FROM equipo WHERE fkIdDeporte = ?fkIdDeporte?;";
-                var valorDeVariables = new
-                {
-                    fkIdDeporte = modelo.fkIdDeporte
-                };
-                sqlresultado = conexionODBC.Query<modeloEquipo>(sqlconsulta, valorDeVariables).ToList();
-                ODBC.cerrarConexion(conexionODBC);
+                vista.vwequipoBindingSource.Filter = string.Empty;
             }
-            return sqlresultado;
+            else
+            {
+                vista.vwequipoBindingSource.Filter = string.Format("{0}='{1}'", vista.cboBuscar.Text, vista.txtFiltrar.Text);
+            }
+        }
+
+        public void actualizarTablaJugadores()
+        {
+            vista.vwequipoTableAdapter.Fill(vista.vwEquipo.vwequipo);
+        }
+
+        public void llenarModeloConFilaSeleccionada()
+        {
+            modeloFila.pkId = stringAInt(vista.tablaEquipo.SelectedRows[0].Cells[0].Value.ToString());
+            modeloFila.nombre = vista.tablaEquipo.SelectedRows[0].Cells[1].Value.ToString();
+            modeloFila.fkIdDeporte = stringAInt(vista.tablaEquipo.SelectedRows[0].Cells[2].Value.ToString());
         }
     }
 }

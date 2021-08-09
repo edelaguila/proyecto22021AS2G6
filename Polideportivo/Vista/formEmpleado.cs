@@ -16,6 +16,7 @@ namespace Vista
         public formEmpleado()
         {
             InitializeComponent();
+            controladorEmpleado controladorEmpleado = new controladorEmpleado(this);
             // Llenar combobox de deportes
             daoPuesto daoPuesto = new daoPuesto();
             cboPuesto.DataSource = daoPuesto.mostrarPuesto();

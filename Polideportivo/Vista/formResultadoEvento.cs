@@ -1,5 +1,6 @@
 ﻿using Controlador;
 using Modelo;
+using Modelo.DAO;
 using Modelo.DTO;
 using System;
 using System.Windows.Forms;
@@ -14,13 +15,13 @@ namespace Vista
             InitializeComponent();
         }
 
-        private modeloResultado modelo = new modeloResultado();
+        private dtoPartido modelo = new dtoPartido();
 
         private formResultado formOriginal = new formResultado();
 
-        private modeloResultado modeloOriginal;
+        private dtoPartido modeloOriginal;
 
-        public formResultadoEvento(modeloResultado modelo, formResultado form)
+        public formResultadoEvento(dtoPartido modelo, formResultado form)
         {
             // Este constructor es el que se utiliza para modificar datos
             InitializeComponent();
@@ -38,13 +39,13 @@ namespace Vista
             cboCampeonato.ValueMember = "pkId";
             //cboCampeonato.SelectedIndex = -1;
 
-            controladorEquipo equipo1 = new controladorEquipo();
+            daoEquipo equipo1 = new daoEquipo();
             cboEquipo2.DataSource = equipo1.mostrarEquipo();
             cboEquipo2.DisplayMember = "nombre";
             cboEquipo2.ValueMember = "nombre";
             //cboEquipo2.SelectedIndex = -1;
 
-            controladorEquipo equipo2 = new controladorEquipo();
+            daoEquipo equipo2 = new daoEquipo();
             cboEquipo1.DataSource = equipo2.mostrarEquipo();
             cboEquipo1.DisplayMember = "nombre";
             cboEquipo1.ValueMember = "nombre";
@@ -56,7 +57,7 @@ namespace Vista
             cboEmpleado.ValueMember = "pkId";
             //cboEmpleado.SelectedIndex = -1;
 
-            controladorEstado estado = new controladorEstado();
+            daoEstadoPartido estado = new daoEstadoPartido();
             cboEstado.DataSource = estado.mostrarEstado();
             cboEstado.DisplayMember = "nombre";
             cboEstado.ValueMember = "pkId";
@@ -80,13 +81,13 @@ namespace Vista
             cboCampeonato.ValueMember = "pkId";
             cboCampeonato.SelectedIndex = -1;
 
-            controladorEquipo equipo1 = new controladorEquipo();
+            daoEquipo equipo1 = new daoEquipo();
             cboEquipo2.DataSource = equipo1.mostrarEquipo();
             cboEquipo2.DisplayMember = "nombre";
             cboEquipo2.ValueMember = "nombre";
             cboEquipo2.SelectedIndex = -1;
 
-            controladorEquipo equipo2 = new controladorEquipo();
+            daoEquipo equipo2 = new daoEquipo();
             cboEquipo1.DataSource = equipo2.mostrarEquipo();
             cboEquipo1.DisplayMember = "nombre";
             cboEquipo1.ValueMember = "nombre";
@@ -98,7 +99,7 @@ namespace Vista
             cboEmpleado.ValueMember = "pkId";
             cboEmpleado.SelectedIndex = -1;
 
-            controladorEstado estado = new controladorEstado();
+            daoEstadoPartido estado = new daoEstadoPartido();
             cboEstado.DataSource = estado.mostrarEstado();
             cboEstado.DisplayMember = "nombre";
             cboEstado.ValueMember = "pkId";
@@ -121,7 +122,7 @@ namespace Vista
 
         private void btnModificarResultado_Click(object sender, EventArgs e)
         {
-            controladorResultado modeloModificar = new controladorResultado();
+            daoPartido modeloModificar = new daoPartido();
             llenarModeloConDatosIngresados();
 
             modeloModificar.modificarPartido(modelo);

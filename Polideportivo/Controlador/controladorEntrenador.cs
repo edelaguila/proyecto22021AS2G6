@@ -1,90 +1,129 @@
-﻿using Dapper;
-using Conexion;
-using Modelo;
-using System.Collections.Generic;
-using System.Data.Odbc;
-using System.Linq;
+﻿using System;
+using Vista;
+using Modelo.DAO;
+using Modelo.DTO;
+using static Vista.utilidadForms;
+using System.Windows.Forms;
 
 namespace Controlador
 {
-    public class controladorEntrenador
+    class controladorEntrenador
     {
-        private ConexionODBC ODBC = new ConexionODBC();
+        private formEntrenador vista;
+        private dtoEntrenador modeloFila = new dtoEntrenador();
 
-        public modeloEntrenador agregarEntrenador(modeloEntrenador modelo)
+        public controladorEntrenador()
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-
-                "INSERT INTO entrenador (pkId, nombre, fkIdEquipo) " +
-
-                "VALUES (NULL, ?nombre?, ?fkIdEquipo?);";
-                var ValorDeVariables = new
-                {
-                    nombre = modelo.nombre,
-                    fkIdEquipo = modelo.fkIdEquipo,
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-
-                ODBC.cerrarConexion(conexionODBC);
-            }
-
-            return modelo;
         }
 
-        public modeloEntrenador modificarEntrenador(modeloEntrenador modelo)
+        public controladorEntrenador(formEntrenador Vista)
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "UPDATE entrenador SET nombre = ?nombre? ," +
-                "fkIdEquipo = ?fkIdEquipo? " +
-                "WHERE pkId = ?pkId?;";
-                var ValorDeVariables = new
-                {
-                    nombre = modelo.nombre,
-                    fkIdEquipo = modelo.fkIdEquipo,
-                    pkId = modelo.pkId
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return modelo;
+            vista = Vista;
+            // Creación de eventos
+            vista.Load += new EventHandler(cargarForm);
+            vista.tablaEntrenador.CellClick += new DataGridViewCellEventHandler(clickCeldaDeLaTabla);
+            vista.btnActualizarEntrenador.Click += new EventHandler(clickActualizarEntrenador);
+            vista.btnAgregarEntrenador.Click += new EventHandler(clickAgregarEntrenador);
+            vista.btnModificarEntrenador.Click += new EventHandler(clickModificarEntrenador);
+            vista.btnEliminarEntrenador.Click += new EventHandler(clickEliminarEntrenador);
+            vista.txtFiltrar.TextChanged += new EventHandler(cambioEnTextoFiltrarEntrenador);
+            vista.cboBuscar.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarEntrenador);
+            vista.cboDeporte.SelectedIndexChanged += new EventHandler(opcionSeleccionadaDeporte);
+            // Llenar combobox de deportes
+            daoDeporte daoDeporte = new daoDeporte();
+            vista.cboDeporte.DataSource = daoDeporte.mostrarDeportes();
+            vista.cboDeporte.DisplayMember = "nombre";
+            vista.cboDeporte.ValueMember = "pkId";
+            vista.cboDeporte.SelectedIndex = -1;
         }
 
-        public modeloEntrenador eliminarEntrenador(modeloEntrenador modelo)
+        private void clickEliminarEntrenador(object sender, EventArgs e)
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "DELETE FROM entrenador WHERE pkId = ?pkId?;";
-
-                var ValorDeVariables = new
-                {
-                    pkId = modelo.pkId
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return modelo;
+            int id = stringAInt(vista.tablaEntrenador.SelectedRows[0].Cells[0].Value.ToString());
+            daoEntrenador daoEntrenador = new daoEntrenador();
+            dtoEntrenador modelo = new dtoEntrenador();
+            modelo.pkId = id;
+            daoEntrenador.eliminarEntrenador(modelo);
+            actualizarTablaEntrenador();
         }
 
-        public List<modeloEntrenador> mostrarEntrenador()
+        private void clickActualizarEntrenador(object sender, EventArgs e)
         {
-            List<modeloEntrenador> sqlresultado = new List<modeloEntrenador>();
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
+            actualizarTablaEntrenador();
+        }
+
+        private void opcionSeleccionadaBuscarEntrenador(object sender, EventArgs e)
+        {
+            vista.txtFiltrar.Text = "";
+        }
+
+        private void cambioEnTextoFiltrarEntrenador(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(vista.txtFiltrar.Text))
             {
-                string sqlconsulta = "SELECT * FROM entrenador;";
-                sqlresultado = conexionODBC.Query<modeloEntrenador>(sqlconsulta).ToList();
-                ODBC.cerrarConexion(conexionODBC);
+                vista.vwentrenadorBindingSource.Filter = string.Empty;
             }
-            return sqlresultado;
+            else
+            {
+                vista.vwentrenadorBindingSource.Filter = string.Format("{0}='{1}'", vista.cboBuscar.Text, vista.txtFiltrar.Text);
+            }
+        }
+
+        private void clickModificarEntrenador(object sender, EventArgs e)
+        {
+            daoEntrenador daoEntrenador = new daoEntrenador();
+            dtoEntrenador modelo = new dtoEntrenador();
+            modelo.pkId = modeloFila.pkId;
+            modelo.nombre = vista.txtNombre.Text;
+            modelo.fkIdDeporte = stringAInt(vista.cboDeporte.SelectedValue.ToString());
+            modelo.fkIdEquipo = stringAInt(vista.cboEquipo.SelectedValue.ToString());
+            daoEntrenador.modificarEntrenador(modelo);
+            actualizarTablaEntrenador();
+        }
+
+        private void clickAgregarEntrenador(object sender, EventArgs e)
+        {
+            daoEntrenador daoEntrenador = new daoEntrenador();
+            dtoEntrenador modelo = new dtoEntrenador();
+            modelo.nombre = vista.txtNombre.Text;
+            modelo.fkIdDeporte = stringAInt(vista.cboDeporte.SelectedValue.ToString());
+            modelo.fkIdEquipo = stringAInt(vista.cboEquipo.SelectedValue.ToString());
+            daoEntrenador.agregarEntrenador(modelo);
+            actualizarTablaEntrenador();
+        }
+
+        private void opcionSeleccionadaDeporte(object sender, EventArgs e)
+        {
+            if (vista.cboDeporte.SelectedIndex > -1)
+            {
+                // Llenar la combobox de equipo dependiendo del deporte elegido
+                dtoEquipo dtoEquipo = new dtoEquipo();
+                dtoEquipo.fkIdDeporte = stringAInt(vista.cboDeporte.SelectedValue.ToString());
+                daoEquipo equipo = new daoEquipo();
+                vista.cboEquipo.DataSource = equipo.mostrarEquipoPorDeporte(dtoEquipo);
+                vista.cboEquipo.DisplayMember = "nombre";
+                vista.cboEquipo.ValueMember = "pkId";
+            }
+            vista.txtFiltrar.Text = "";
+        }
+
+        private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = stringAInt(vista.tablaEntrenador.SelectedRows[0].Cells[0].Value.ToString());
+            string nombre = vista.tablaEntrenador.SelectedRows[0].Cells[1].Value.ToString();
+            vista.txtNombre.Text = nombre;
+            modeloFila.pkId = id;
+        }
+
+        private void cargarForm(object sender, EventArgs e)
+        {
+            vista.vwentrenadorTableAdapter.Fill(vista.vwEntrenador.vwentrenador);
+            vista.cboBuscar.SelectedIndex = 0;
+        }
+
+        public void actualizarTablaEntrenador()
+        {
+            vista.vwentrenadorTableAdapter.Fill(vista.vwEntrenador.vwentrenador);
         }
     }
 }

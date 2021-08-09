@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelo
+namespace Modelo.DTO
 {
-    public class modeloTipoFalta
+    public class dtoTipoFalta
     {
         public int pkId { get; set; }
         public string tipo { get; set; }
         public int fkIdDeporte { get; set; }
 
-        public modeloTipoFalta()
+        public dtoTipoFalta()
         {
         }
 
-        public modeloTipoFalta(int Id, string Tipo, int IdDeporte)
+        public dtoTipoFalta(int Id, string Tipo, int IdDeporte)
         {
             pkId = Id;
             tipo = Tipo;

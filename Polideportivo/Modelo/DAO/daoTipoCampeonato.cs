@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
 
-namespace Controlador
+namespace Modelo.DAO
 {
-    public class controladorTipoCampeonato
+    public class daoTipoCampeonato
     {
         private ConexionODBC ODBC = new ConexionODBC();
 

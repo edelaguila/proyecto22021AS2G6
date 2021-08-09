@@ -76,9 +76,9 @@ namespace Vista
                 cboRol.ValueMember = "pkId";
 
                 // Llenar la combobox de equipo dependiendo del deporte elegido
-                modeloEquipo modeloequipo = new modeloEquipo();
+                dtoEquipo modeloequipo = new dtoEquipo();
                 modeloequipo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
-                controladorEquipo equipo = new controladorEquipo();
+                daoEquipo equipo = new daoEquipo();
                 cboEquipo.DataSource = equipo.mostrarEquipoPorDeporte(modeloequipo);
                 cboEquipo.DisplayMember = "nombre";
                 cboEquipo.ValueMember = "pkId";

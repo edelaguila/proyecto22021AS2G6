@@ -4,70 +4,66 @@ using Modelo;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
+using Modelo.DTO;
 
-namespace Controlador
+namespace Modelo.DAO
 {
-    /// <summary>
-    /// Controlador para anotaciones
-    /// </summary>
-    public class controladorAnotacion
+    public class daoEntrenador
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
-        /// <summary>
-        /// Controlador para anotaciones
-        /// </summary>
-        public modeloAnotacion agregarAnotacion(modeloAnotacion modelo)
+        public dtoEntrenador agregarEntrenador(dtoEntrenador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
+
             if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "INSERT INTO anotacion (pkId, cantidad, fkIdJugador, fkIdPartido) " +
-                "VALUES (NULL, ?cantidad?, ?fkIdJugador?, ?fkIdPartido?);";
+
+                "INSERT INTO entrenador (pkId, nombre, fkIdEquipo) " +
+
+                "VALUES (NULL, ?nombre?, ?fkIdEquipo?);";
                 var ValorDeVariables = new
                 {
-                    cantidad = modelo.cantidad,
-                    fkIdJugador = modelo.fkIdJugador,
-                    fkIdPartido = modelo.fkIdPartido
+                    nombre = modelo.nombre,
+                    fkIdEquipo = modelo.fkIdEquipo,
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+
                 ODBC.cerrarConexion(conexionODBC);
             }
 
             return modelo;
         }
 
-        public modeloAnotacion modificarAnotacion(modeloAnotacion modelo)
+        public dtoEntrenador modificarEntrenador(dtoEntrenador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "UPDATE anotacion SET cantidad = ?cantidad? ," +
-                "fkIdJugador = ?fkIdJugador?, fkIdPartido = ?fkIdPartido?, " +
+                "UPDATE entrenador SET nombre = ?nombre? ," +
+                "fkIdEquipo = ?fkIdEquipo? " +
                 "WHERE pkId = ?pkId?;";
                 var ValorDeVariables = new
                 {
-                    cantidad = modelo.cantidad,
-                    fkIdJugador = modelo.fkIdJugador,
-                    fkIdPartido = modelo.fkIdPartido,
+                    nombre = modelo.nombre,
+                    fkIdEquipo = modelo.fkIdEquipo,
                     pkId = modelo.pkId
                 };
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
             }
-
             return modelo;
         }
 
-        public modeloAnotacion eliminarAnotacion(modeloAnotacion modelo)
+        public dtoEntrenador eliminarEntrenador(dtoEntrenador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "DELETE FROM antotacion WHERE pkId = ?pkId?;";
+                "DELETE FROM entrenador WHERE pkId = ?pkId?;";
 
                 var ValorDeVariables = new
                 {
@@ -76,18 +72,17 @@ namespace Controlador
                 conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                 ODBC.cerrarConexion(conexionODBC);
             }
-
             return modelo;
         }
 
-        public List<modeloAnotacion> mostrarAnotacion()
+        public List<dtoEntrenador> mostrarEntrenador()
         {
-            List<modeloAnotacion> sqlresultado = new List<modeloAnotacion>();
+            List<dtoEntrenador> sqlresultado = new List<dtoEntrenador>();
             OdbcConnection conexionODBC = ODBC.abrirConexion();
             if (conexionODBC != null)
             {
-                string sqlconsulta = "SELECT * FROM anotacion;";
-                sqlresultado = conexionODBC.Query<modeloAnotacion>(sqlconsulta).ToList();
+                string sqlconsulta = "SELECT * FROM entrenador;";
+                sqlresultado = conexionODBC.Query<dtoEntrenador>(sqlconsulta).ToList();
                 ODBC.cerrarConexion(conexionODBC);
             }
             return sqlresultado;

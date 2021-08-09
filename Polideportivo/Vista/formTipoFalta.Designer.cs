@@ -112,7 +112,6 @@ namespace Vista
             this.tablaTipoFalta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaTipoFalta.Size = new System.Drawing.Size(400, 407);
             this.tablaTipoFalta.TabIndex = 5;
-            this.tablaTipoFalta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaTipoFalta_CellClick);
             // 
             // pkIdTipoFaltaDataGridViewTextBoxColumn
             // 
@@ -189,7 +188,6 @@ namespace Vista
             this.parrotGradientPanel1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.parrotGradientPanel1.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.CornflowerBlue;
-            this.parrotGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.parrotGradientPanel1_Paint);
             // 
             // cboDeporte
             // 
@@ -257,7 +255,6 @@ namespace Vista
             this.btnEliminarFalta.TabIndex = 33;
             this.btnEliminarFalta.Text = "   E L I M I N A R";
             this.btnEliminarFalta.UseVisualStyleBackColor = false;
-            this.btnEliminarFalta.Click += new System.EventHandler(this.btnEliminarTipoFalta_Click);
             // 
             // btnActualizarFalta
             // 
@@ -278,7 +275,6 @@ namespace Vista
             this.btnActualizarFalta.TabIndex = 32;
             this.btnActualizarFalta.Text = "      A C T U A L I Z A R";
             this.btnActualizarFalta.UseVisualStyleBackColor = false;
-            this.btnActualizarFalta.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // panelBuscarCol
             // 
@@ -307,7 +303,6 @@ namespace Vista
             this.cboBuscar.Name = "cboBuscar";
             this.cboBuscar.Size = new System.Drawing.Size(364, 26);
             this.cboBuscar.TabIndex = 32;
-            this.cboBuscar.SelectedIndexChanged += new System.EventHandler(this.cboBuscar_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
@@ -341,7 +336,6 @@ namespace Vista
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(353, 20);
             this.txtFiltrar.TabIndex = 1;
-            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
             // pictureBox1
             // 
@@ -371,7 +365,6 @@ namespace Vista
             this.btnModificarFalta.TabIndex = 28;
             this.btnModificarFalta.Text = "    M O D I F I C A R";
             this.btnModificarFalta.UseVisualStyleBackColor = false;
-            this.btnModificarFalta.Click += new System.EventHandler(this.btnModificarTipoFalta_Click);
             // 
             // btnAgregarFalta
             // 
@@ -392,7 +385,6 @@ namespace Vista
             this.btnAgregarFalta.TabIndex = 27;
             this.btnAgregarFalta.Text = "     A G R E G A R";
             this.btnAgregarFalta.UseVisualStyleBackColor = false;
-            this.btnAgregarFalta.Click += new System.EventHandler(this.btnAgregarTipoFalta_Click);
             // 
             // vwtipofaltaTableAdapter
             // 
@@ -407,7 +399,6 @@ namespace Vista
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formTipoFalta";
             this.Text = "formTipoFalta";
-            this.Load += new System.EventHandler(this.formTipoFalta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaTipoFalta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwtipofaltaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwTipoFalta)).EndInit();
@@ -423,28 +414,28 @@ namespace Vista
         }
 
         #endregion
-        private Zuby.ADGV.AdvancedDataGridView tablaTipoFalta;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private System.Windows.Forms.Button btnAgregarFalta;
-        private System.Windows.Forms.Button btnModificarFalta;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtFiltrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnActualizarFalta;
-        private System.Windows.Forms.Button btnEliminarFalta;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel panelBuscarCol;
-        private System.Windows.Forms.ComboBox cboBuscar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboDeporte;
-        private vwTipoFalta vwTipoFalta;
-        private System.Windows.Forms.BindingSource vwtipofaltaBindingSource;
-        private Datos.vwTipoFaltaTableAdapters.vwtipofaltaTableAdapter vwtipofaltaTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdTipoFaltaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDeporteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
+        public vwTipoFalta vwTipoFalta;
+        public System.Windows.Forms.BindingSource vwtipofaltaBindingSource;
+        public Datos.vwTipoFaltaTableAdapters.vwtipofaltaTableAdapter vwtipofaltaTableAdapter;
+        public Zuby.ADGV.AdvancedDataGridView tablaTipoFalta;
+        public System.Windows.Forms.Button btnAgregarFalta;
+        public System.Windows.Forms.Button btnModificarFalta;
+        public System.Windows.Forms.TextBox txtFiltrar;
+        public System.Windows.Forms.Button btnActualizarFalta;
+        public System.Windows.Forms.Button btnEliminarFalta;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.ComboBox cboBuscar;
+        public System.Windows.Forms.ComboBox cboDeporte;
     }
 }

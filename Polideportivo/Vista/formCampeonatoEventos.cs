@@ -4,6 +4,7 @@ using System;
 using Modelo.DAO;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
+using Modelo.DTO;
 
 namespace Vista
 {
@@ -31,7 +32,7 @@ namespace Vista
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
             // Llenar combobox de tipo de campeonatos
-            controladorTipoCampeonato tipo = new controladorTipoCampeonato();
+            daoTipoCampeonato tipo = new daoTipoCampeonato();
             cboTipo.DataSource = tipo.mostrarTipoDeCampeonatos();
             cboTipo.DisplayMember = "tipo";
             cboTipo.ValueMember = "pkId";
@@ -55,7 +56,7 @@ namespace Vista
             cboDeporte.DisplayMember = "nombre";
             cboDeporte.ValueMember = "pkId";
             // Llenar combobox de tipo de campeonatos
-            controladorTipoCampeonato tipo = new controladorTipoCampeonato();
+            daoTipoCampeonato tipo = new daoTipoCampeonato();
             cboTipo.DataSource = tipo.mostrarTipoDeCampeonatos();
             cboTipo.DisplayMember = "tipo";
             cboTipo.ValueMember = "pkId";
@@ -70,7 +71,7 @@ namespace Vista
             if (cboDeporte.SelectedIndex > -1)
             {
                 // Llenar la combobox de equipo dependiendo del deporte elegido
-                modeloEquipo modeloequipo = new modeloEquipo();
+                dtoEquipo modeloequipo = new dtoEquipo();
                 modeloequipo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
             }
         }

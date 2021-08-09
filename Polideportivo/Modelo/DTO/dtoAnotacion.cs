@@ -1,17 +1,17 @@
-﻿namespace Modelo
+﻿namespace Modelo.DTO
 {
-    public class modeloAnotacion
+    public class dtoAnotacion
     {
         public int pkId { get; set; }
         public int cantidad { get; set; }
         public int fkIdJugador { get; set; }
         public int fkIdPartido { get; set; }
 
-        public modeloAnotacion()
+        public dtoAnotacion()
         {
         }
 
-        public modeloAnotacion(int Id, int Cantidad, int IdJugador, int IdPartido)
+        public dtoAnotacion(int Id, int Cantidad, int IdJugador, int IdPartido)
         {
             pkId = Id;
             cantidad = Cantidad;

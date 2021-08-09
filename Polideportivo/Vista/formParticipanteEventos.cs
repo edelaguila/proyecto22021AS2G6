@@ -1,5 +1,7 @@
 ﻿using Controlador;
 using Modelo;
+using Modelo.DAO;
+using Modelo.DTO;
 using System;
 using System.Windows.Forms;
 using static Vista.utilidadForms;
@@ -8,18 +10,18 @@ namespace Vista
 {
     public partial class formParticipanteEventos : Form
     {
-        private modeloJugador modelo = new modeloJugador();
+        private dtoJugador modelo = new dtoJugador();
 
         public formParticipanteEventos()
         {
             InitializeComponent();
         }
 
-        private formJugador formOriginal = new formJugador();
+        private formParticipante formOriginal = new formParticipante();
 
-        private modeloJugador modeloOriginal = new modeloJugador();
+        private dtoJugador modeloOriginal = new dtoJugador();
 
-        public formParticipanteEventos(modeloJugador modelo, formJugador form)
+        public formParticipanteEventos(dtoJugador modelo, formParticipante form)
         {
             // Este constructor es el que se utiliza para modificar datos
             InitializeComponent();
@@ -40,7 +42,7 @@ namespace Vista
             lblJugadorEvento.Text = "MODIFICAR JUGADOR";
         }
 
-        public formParticipanteEventos(formJugador form)
+        public formParticipanteEventos(formParticipante form)
         {
             // Este constructor es el que se utiliza para agregar datos
             InitializeComponent();
@@ -88,10 +90,10 @@ namespace Vista
         {
             if (validarFormEventos())
             {
-                controladorJugador modeloAgregar = new controladorJugador();
+                daoJugador daoJugador = new daoJugador();
                 llenarModeloConDatosIngresados();
-                modeloAgregar.agregarJugador(modelo);
-                formOriginal.actualizarTablaJugadores();
+                daoJugador.agregarJugador(modelo);
+                formOriginal.actualizarTablaPartido();
                 cerrarForm(this);
             }
         }
@@ -105,11 +107,10 @@ namespace Vista
         {
             if (validarFormEventos())
             {
-                controladorJugador modeloModificar = new controladorJugador();
+                daoJugador daoJugador = new daoJugador();
                 llenarModeloConDatosIngresados();
-
-                modeloModificar.modificarJugador(modelo);
-                formOriginal.actualizarTablaJugadores();
+                daoJugador.modificarJugador(modelo);
+                formOriginal.actualizarTablaPartido();
                 cerrarForm(this);
             }
         }

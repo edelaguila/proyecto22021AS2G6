@@ -10,6 +10,8 @@ using Datos.vwJugadorTableAdapters;
 using Datos;
 using static Vista.utilidadForms;
 using System.Windows.Forms;
+using Modelo.DTO;
+using Modelo.DAO;
 
 namespace Controlador
 {
@@ -20,14 +22,13 @@ namespace Controlador
     {
         private formJugador vista;
         private int id;
-
         private string nombre;
         private int anotaciones;
         private int fkIdEquipo;
         private int fkIdRol;
         private int fkIdDeporte;
 
-        private modeloJugador modeloFila = new modeloJugador();
+        private dtoJugador modeloFila = new dtoJugador();
 
         public controladorJugador()
         {
@@ -37,10 +38,14 @@ namespace Controlador
         {
             vista = Vista;
             // Creación de eventos
-            Vista.Load += new EventHandler(cargarForm);
+            vista.Load += new EventHandler(cargarForm);
             vista.tablaJugadores.CellClick += new DataGridViewCellEventHandler(clickCeldaDeLaTabla);
-            vista.btnActualizar.Click += new EventHandler(clickActualizarJugador);
+            vista.btnActualizarJugador.Click += new EventHandler(clickActualizarJugador);
             vista.btnAgregarJugador.Click += new EventHandler(clickAgregarJugador);
+            vista.btnModificarJugador.Click += new EventHandler(clickModificarJugador);
+            vista.btnEliminarJugador.Click += new EventHandler(clickEliminarJugador);
+            vista.txtFiltrar.TextChanged += new EventHandler(cambioEnTextoFiltrarJugador);
+            vista.cboBuscar.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarJugador);
         }
 
         private void cargarForm(object sender, EventArgs e)
@@ -50,10 +55,10 @@ namespace Controlador
             vista.cboBuscar.SelectedIndex = 0;
             // Se asigna la primera fila posible de la tabla y se llena el modelo
             vista.tablaJugadores.CurrentCell = vista.tablaJugadores.Rows[0].Cells[1];
-            vista.llenarModeloConFilaSeleccionada();
+            llenarModeloConFilaSeleccionada();
         }
 
-        private void clickCeldaDeLaTabla(object sender, System.Windows.Forms.DataGridViewCellEventArgs e)
+        private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
         {
             llenarModeloConFilaSeleccionada();
         }
@@ -65,7 +70,30 @@ namespace Controlador
 
         private void clickAgregarJugador(object sender, EventArgs e)
         {
-            abrirForm(new formJugadorEventos(vista));
+            abrirForm(new formJugadorEventos(this));
+        }
+
+        private void clickModificarJugador(object sender, EventArgs e)
+        {
+            abrirForm(new formJugadorEventos(modeloFila, this));
+        }
+
+        private void opcionSeleccionadaBuscarJugador(object sender, EventArgs e)
+        {
+            vista.txtFiltrar.Text = "";
+        }
+
+        private void clickEliminarJugador(object sender, EventArgs e)
+        {
+            llenarModeloConFilaSeleccionada();
+            daoJugador daoJugador = new daoJugador();
+            daoJugador.eliminarJugador(modeloFila);
+            actualizarTablaJugadores();
+        }
+
+        private void cambioEnTextoFiltrarJugador(object sender, EventArgs e)
+        {
+            filtrarTabla();
         }
 
         public void actualizarTablaJugadores()
@@ -89,104 +117,16 @@ namespace Controlador
             modeloFila.fkIdDeporte = fkIdDeporte;
         }
 
-        private ConexionODBC ODBC = new ConexionODBC();
-
-        /// <summary>
-        /// Método que sirve para agregar nuevos jugadores a la base de datos
-        /// </summary>
-        /// <param name="modelo"></param>
-        /// <returns></returns>
-        public modeloJugador agregarJugador(modeloJugador modelo)
+        private void filtrarTabla()
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
+            if (string.IsNullOrEmpty(vista.txtFiltrar.Text))
             {
-                var sqlinsertar =
-                "INSERT INTO jugador (pkId, nombre, anotaciones, fkIdEquipo, fkIdRol) " +
-                "VALUES (NULL, ?nombre?, ?anotaciones?, ?fkIdEquipo?, ?fkIdRol?);";
-                var ValorDeVariables = new
-                {
-                    nombre = modelo.nombre,
-                    anotaciones = modelo.anotaciones,
-                    fkIdEquipo = modelo.fkIdEquipo,
-                    fkIdRol = modelo.fkIdRol
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-                return modelo;
+                vista.vwjugadorBindingSource.Filter = string.Empty;
             }
-            return null;
-        }
-
-        /// <summary>
-        /// Método que sirve para modificar jugadores
-        /// </summary>
-        /// <param name="modelo"></param>
-        /// <returns></returns>
-        public modeloJugador modificarJugador(modeloJugador modelo)
-        {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
+            else
             {
-                var sqlinsertar =
-                "UPDATE jugador SET nombre = ?nombre?, anotaciones = ?anotaciones?, " +
-                "fkIdEquipo = ?fkIdEquipo?, fkIdRol = ?fkIdRol?" +
-                " WHERE pkId = ?pkId?;";
-                var ValorDeVariables = new
-                {
-                    nombre = modelo.nombre,
-                    anotaciones = modelo.anotaciones,
-                    fkIdEquipo = modelo.fkIdEquipo,
-                    fkIdRol = modelo.fkIdRol,
-                    pkId = modelo.pkId
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
+                vista.vwjugadorBindingSource.Filter = string.Format("{0}='{1}'", vista.cboBuscar.Text, vista.txtFiltrar.Text);
             }
-            return modelo;
-        }
-
-        public List<modeloJugador> mostrarJugadores()
-        {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            List<modeloJugador> sqlresultado = new List<modeloJugador>();
-            if (conexionODBC != null)
-            {
-                string sqlconsulta = "SELECT * FROM tablajugadores;";
-                sqlresultado = conexionODBC.Query<modeloJugador>(sqlconsulta).ToList();
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return sqlresultado;
-        }
-
-        public List<modeloJugador> mostrarJugadoresPorDeporte()
-        {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            List<modeloJugador> sqlresultado = new List<modeloJugador>();
-            if (conexionODBC != null)
-            {
-                string sqlconsulta = "SELECT * FROM tablajugadores;";
-                sqlresultado = conexionODBC.Query<modeloJugador>(sqlconsulta).ToList();
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return sqlresultado;
-        }
-
-        public modeloJugador eliminarJugador(modeloJugador modelo)
-        {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "DELETE FROM jugador WHERE pkId = ?pkId?;";
-                var ValorDeVariables = new
-                {
-                    pkId = modelo.pkId
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return modelo;
         }
     }
 }

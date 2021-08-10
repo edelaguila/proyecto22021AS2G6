@@ -32,8 +32,8 @@ namespace Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formUsuario));
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.Lbl = new System.Windows.Forms.Label();
-            this.parrotGradientPanel2 = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.btnNuevoUsuario = new System.Windows.Forms.Button();
+            this.panelUsuario = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.btnRegistrarUsuario = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@ namespace Vista
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.lblIniciarSesion = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.parrotGradientPanel2.SuspendLayout();
+            this.panelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.parrotGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
@@ -67,50 +67,50 @@ namespace Vista
             this.Lbl.TabIndex = 0;
             this.Lbl.Text = "NOMBRE USUARIO";
             // 
-            // parrotGradientPanel2
+            // panelUsuario
             // 
-            this.parrotGradientPanel2.BottomLeft = System.Drawing.Color.MidnightBlue;
-            this.parrotGradientPanel2.BottomRight = System.Drawing.Color.MidnightBlue;
-            this.parrotGradientPanel2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
-            this.parrotGradientPanel2.Controls.Add(this.btnNuevoUsuario);
-            this.parrotGradientPanel2.Controls.Add(this.pictureBox2);
-            this.parrotGradientPanel2.Controls.Add(this.txtContraseña);
-            this.parrotGradientPanel2.Controls.Add(this.label1);
-            this.parrotGradientPanel2.Controls.Add(this.btnIngresar);
-            this.parrotGradientPanel2.Controls.Add(this.txtNombre);
-            this.parrotGradientPanel2.Controls.Add(this.Lbl);
-            this.parrotGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parrotGradientPanel2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.Low;
-            this.parrotGradientPanel2.Location = new System.Drawing.Point(0, 62);
-            this.parrotGradientPanel2.Name = "parrotGradientPanel2";
-            this.parrotGradientPanel2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighSpeed;
-            this.parrotGradientPanel2.PrimerColor = System.Drawing.Color.White;
-            this.parrotGradientPanel2.Size = new System.Drawing.Size(413, 297);
-            this.parrotGradientPanel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.parrotGradientPanel2.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
-            this.parrotGradientPanel2.TabIndex = 10;
-            this.parrotGradientPanel2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.parrotGradientPanel2.TopLeft = System.Drawing.Color.DeepSkyBlue;
-            this.parrotGradientPanel2.TopRight = System.Drawing.Color.CornflowerBlue;
+            this.panelUsuario.BottomLeft = System.Drawing.Color.MidnightBlue;
+            this.panelUsuario.BottomRight = System.Drawing.Color.MidnightBlue;
+            this.panelUsuario.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
+            this.panelUsuario.Controls.Add(this.btnRegistrarUsuario);
+            this.panelUsuario.Controls.Add(this.pictureBox2);
+            this.panelUsuario.Controls.Add(this.txtContraseña);
+            this.panelUsuario.Controls.Add(this.label1);
+            this.panelUsuario.Controls.Add(this.btnIngresar);
+            this.panelUsuario.Controls.Add(this.txtNombre);
+            this.panelUsuario.Controls.Add(this.Lbl);
+            this.panelUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelUsuario.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.Low;
+            this.panelUsuario.Location = new System.Drawing.Point(0, 62);
+            this.panelUsuario.Name = "panelUsuario";
+            this.panelUsuario.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighSpeed;
+            this.panelUsuario.PrimerColor = System.Drawing.Color.White;
+            this.panelUsuario.Size = new System.Drawing.Size(413, 297);
+            this.panelUsuario.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.panelUsuario.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
+            this.panelUsuario.TabIndex = 10;
+            this.panelUsuario.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.panelUsuario.TopLeft = System.Drawing.Color.DeepSkyBlue;
+            this.panelUsuario.TopRight = System.Drawing.Color.CornflowerBlue;
             // 
-            // btnNuevoUsuario
+            // btnRegistrarUsuario
             // 
-            this.btnNuevoUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNuevoUsuario.BackColor = System.Drawing.Color.White;
-            this.btnNuevoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevoUsuario.FlatAppearance.BorderSize = 0;
-            this.btnNuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoUsuario.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoUsuario.ForeColor = System.Drawing.Color.Black;
-            this.btnNuevoUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoUsuario.Image")));
-            this.btnNuevoUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoUsuario.Location = new System.Drawing.Point(84, 225);
-            this.btnNuevoUsuario.Name = "btnNuevoUsuario";
-            this.btnNuevoUsuario.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnNuevoUsuario.Size = new System.Drawing.Size(243, 36);
-            this.btnNuevoUsuario.TabIndex = 33;
-            this.btnNuevoUsuario.Text = " CREAR NUEVO USUARIO";
-            this.btnNuevoUsuario.UseVisualStyleBackColor = false;
+            this.btnRegistrarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrarUsuario.BackColor = System.Drawing.Color.White;
+            this.btnRegistrarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrarUsuario.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarUsuario.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarUsuario.ForeColor = System.Drawing.Color.Black;
+            this.btnRegistrarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarUsuario.Image")));
+            this.btnRegistrarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrarUsuario.Location = new System.Drawing.Point(84, 225);
+            this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
+            this.btnRegistrarUsuario.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnRegistrarUsuario.Size = new System.Drawing.Size(243, 36);
+            this.btnRegistrarUsuario.TabIndex = 33;
+            this.btnRegistrarUsuario.Text = " CREAR NUEVO USUARIO";
+            this.btnRegistrarUsuario.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
             // 
@@ -213,13 +213,14 @@ namespace Vista
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 359);
-            this.Controls.Add(this.parrotGradientPanel2);
+            this.Controls.Add(this.panelUsuario);
             this.Controls.Add(this.parrotGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formUsuario";
-            this.parrotGradientPanel2.ResumeLayout(false);
-            this.parrotGradientPanel2.PerformLayout();
+            this.panelUsuario.ResumeLayout(false);
+            this.panelUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.parrotGradientPanel1.ResumeLayout(false);
             this.parrotGradientPanel1.PerformLayout();
@@ -229,7 +230,6 @@ namespace Vista
         }
 
         #endregion
-        private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel2;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.Label Lbl;
@@ -239,6 +239,7 @@ namespace Vista
         public System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.TextBox txtContraseña;
         public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Button btnNuevoUsuario;
+        public System.Windows.Forms.Button btnRegistrarUsuario;
+        public ReaLTaiizor.Controls.ParrotGradientPanel panelUsuario;
     }
 }

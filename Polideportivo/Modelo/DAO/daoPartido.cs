@@ -20,10 +20,10 @@ namespace Modelo.DAO
             if (conexionODBC != null)
             {
                 var sqlinsertar =
-                "INSERT INTO partido (pkId, equipo1, equipo2,anotacionesEquipo1, anotacionesEquipo2, campo, fecha, fase, fkIdCampeonato, " +
-                "fkIdEmpleado, fkIdEstadoPartido) " +
-                "VALUES (NULL, ?equipo1?, ?equipo2?,  ?anotacionesEquipo1?, ?anotacionesEquipo2?,?campo?, ?fecha?, ?fase?, ?fkIdCampeonato?, " +
-                "?fkIdEmpleado?, ?fkIdEstadoPartido?);";
+                "INSERT INTO partido (pkId, equipo1, equipo2,anotacionesEquipo1, anotacionesEquipo2, campo, fecha, fkIdCampeonato, " +
+                "fkIdEmpleado, fkIdEstadoPartido, fkIdFase) " +
+                "VALUES (NULL, ?equipo1?, ?equipo2?,  ?anotacionesEquipo1?, ?anotacionesEquipo2?,?campo?, ?fecha?,  ?fkIdCampeonato?, " +
+                "?fkIdEmpleado?, ?fkIdEstadoPartido?, ?fkIdFase?);";
                 var ValorDeVariables = new
                 {
                     equipo1 = modelo.equipo1,
@@ -32,7 +32,7 @@ namespace Modelo.DAO
                     anotacionesEquipo2 = modelo.anotacionesEquipo2,
                     campo = modelo.campo,
                     fecha = modelo.fecha,
-                    fase = modelo.fase,
+                    fkIdFase = modelo.fkIdFase,
                     fkIdCampeonato = modelo.fkIdCampeonato,
                     fkIdEmpleado = modelo.fkIdEmpleado,
                     fkIdEstadoPartido = modelo.fkIdEstadoPartido
@@ -51,8 +51,8 @@ namespace Modelo.DAO
                 var sqlinsertar =
                 "UPDATE partido SET equipo1 = ?equipo1?, equipo2 = ?equipo2?, " +
                 "campo = ?campo?, fecha = ?fecha?, " +
-                "fase = ?fase?, fkIdCampeonato = ?fkIdCampeonato?, fkIdEmpleado = ?fkIdEmpleado?, " +
-                "anotacionesEquipo1 = ?anotacionesEquipo1?,  " + "anotacionesEquipo2 = ?anotacionesEquipo2?,  " + "fkIdEstadoPartido = ?fkIdEstadoPartido? " +
+                 "fkIdCampeonato = ?fkIdCampeonato?, fkIdEmpleado = ?fkIdEmpleado?, " +
+                "anotacionesEquipo1 = ?anotacionesEquipo1?,  " + "anotacionesEquipo2 = ?anotacionesEquipo2?,  " + "fkIdEstadoPartido = ?fkIdEstadoPartido?, " + "fkIdFase = ?fkIdFase? " +
                 "WHERE pkId = ?pkId?;";
                 var ValorDeVariables = new
                 {
@@ -60,10 +60,33 @@ namespace Modelo.DAO
                     equipo2 = modelo.equipo2,
                     campo = modelo.campo,
                     fecha = modelo.fecha,
-                    fase = modelo.fase,
+                    fkIdFase = modelo.fkIdFase,
                     fkIdCampeonato = modelo.fkIdCampeonato,
                     fkIdEmpleado = modelo.fkIdEmpleado,
                     fkIdEstadoPartido = modelo.fkIdEstadoPartido,
+                    anotacionesEquipo1 = modelo.anotacionesEquipo1,
+                    anotacionesEquipo2 = modelo.anotacionesEquipo2,
+                    pkId = modelo.pkId
+                };
+                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
+                ODBC.cerrarConexion(conexionODBC);
+            }
+            return modelo;
+        }
+
+        public dtoPartido modificarResultado(dtoPartido modelo)
+        {
+            OdbcConnection conexionODBC = ODBC.abrirConexion();
+            if (conexionODBC != null)
+            {
+                var sqlinsertar =
+                "UPDATE partido SET equipo1 = ?equipo1?, equipo2 = ?equipo2?, " +
+                "anotacionesEquipo1 = ?anotacionesEquipo1?,  anotacionesEquipo2 = ?anotacionesEquipo2?" +
+                " WHERE pkId = ?pkId?;";
+                var ValorDeVariables = new
+                {
+                    equipo1 = modelo.equipo1,
+                    equipo2 = modelo.equipo2,
                     anotacionesEquipo1 = modelo.anotacionesEquipo1,
                     anotacionesEquipo2 = modelo.anotacionesEquipo2,
                     pkId = modelo.pkId

@@ -23,6 +23,7 @@ namespace Controlador
         private int fkIdEmpleado;
         private int fkIdResultado;
         private int fkIdEstado;
+        private int fkIdFase;
 
         private dtoPartido modeloFila = new dtoPartido();
 
@@ -99,7 +100,6 @@ namespace Controlador
         public void llenarModeloConFilaSeleccionada()
         {
             id = stringAInt(vista.tablaPartidos.SelectedRows[0].Cells[0].Value.ToString());
-            fase = vista.tablaPartidos.SelectedRows[0].Cells[1].Value.ToString();
             equipo1 = vista.tablaPartidos.SelectedRows[0].Cells[2].Value.ToString();
             equipo2 = vista.tablaPartidos.SelectedRows[0].Cells[3].Value.ToString();
             campo = vista.tablaPartidos.SelectedRows[0].Cells[4].Value.ToString();
@@ -108,12 +108,14 @@ namespace Controlador
             fkIdCampeonato = stringAInt(vista.tablaPartidos.SelectedRows[0].Cells[6].Value.ToString());
             fkIdEmpleado = stringAInt(vista.tablaPartidos.SelectedRows[0].Cells[7].Value.ToString());
             fkIdResultado = stringAInt(vista.tablaPartidos.SelectedRows[0].Cells[8].Value.ToString());
+            fkIdFase = stringAInt(vista.tablaPartidos.SelectedRows[0].Cells[10].Value.ToString());
             modeloFila.pkId = id;
             modeloFila.equipo1 = equipo1;
             modeloFila.equipo2 = equipo2;
             modeloFila.fkIdEstadoPartido = fkIdEstado;
             modeloFila.fkIdCampeonato = fkIdCampeonato;
             modeloFila.fkIdEmpleado = fkIdEmpleado;
+            modeloFila.fkIdFase = fkIdFase;
         }
 
         private void filtrarTabla()

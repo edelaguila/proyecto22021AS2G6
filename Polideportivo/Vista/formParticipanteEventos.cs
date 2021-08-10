@@ -28,8 +28,8 @@ namespace Vista
             btnModificarJugador.Visible = true;
             btnAgregarJugador.Visible = false;
             formOriginal = form;
-            txtNombre.Text = modelo.nombre;
-            txtAnotaciones.Text = modelo.anotaciones.ToString();
+            txtPuntos.Text = modelo.nombre;
+            //txtAnotaciones.Text = modelo.anotaciones.ToString();
             // Llenar combobox de deportes
             daoDeporte daoDeporte = new daoDeporte();
             cboDeporte.DataSource = daoDeporte.mostrarDeportes();
@@ -68,9 +68,9 @@ namespace Vista
                 dtoRol modelorol = new dtoRol();
                 modelorol.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
                 daoRol rol = new daoRol();
-                cboRol.DataSource = rol.mostrarRolesPorDeporte(modelorol);
-                cboRol.DisplayMember = "nombre";
-                cboRol.ValueMember = "pkId";
+                cboEstadoPartido.DataSource = rol.mostrarRolesPorDeporte(modelorol);
+                cboEstadoPartido.DisplayMember = "nombre";
+                cboEstadoPartido.ValueMember = "pkId";
                 // Llenar la combobox de equipo dependiendo del deporte elegido
                 dtoEquipo modeloequipo = new dtoEquipo();
                 modeloequipo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
@@ -121,17 +121,17 @@ namespace Vista
         private void llenarModeloConDatosIngresados()
         {
             modelo.pkId = modeloOriginal.pkId;
-            modelo.nombre = txtNombre.Text;
-            modelo.anotaciones = stringAInt(txtAnotaciones.Text);
+            modelo.nombre = txtPuntos.Text;
+           // modelo.anotaciones = stringAInt(txtAnotaciones.Text);
             modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
             modelo.fkIdEquipo = stringAInt(cboEquipo.SelectedValue.ToString());
-            modelo.fkIdRol = stringAInt(cboRol.SelectedValue.ToString());
+            modelo.fkIdRol = stringAInt(cboEstadoPartido.SelectedValue.ToString());
         }
 
         private bool validarFormEventos()
         {
             bool validado = false;
-            if (txtNombre.Text != "" && cboDeporte.SelectedValue != null
+            if (txtPuntos.Text != "" && cboDeporte.SelectedValue != null
                  && cboEquipo.SelectedValue != null/* && cboRol.SelectedValue != null*/)
             {
                 validado = true;

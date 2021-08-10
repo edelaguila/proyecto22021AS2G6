@@ -15,53 +15,46 @@ namespace Controlador
         private daoEquipo daoEquipo = new daoEquipo();
         private dtoEquipo modelo = new dtoEquipo();
         private formEquipoEventos vista;
-        private dtoEquipo modeloOriginal = new dtoEquipo();
-        private controladorEquipo formoriginal;
-        //Modificar
+        private controladorEquipo padre;
 
-        public controladorEquipoEventos(dtoEquipo modelo, formEquipoEventos Vista, controladorEquipo formOriginal)
+        public controladorEquipoEventos(formEquipoEventos Vista, controladorEquipo Padre, string tipo)
         {
             vista = Vista;
-            formoriginal = formOriginal;
-            vista.btnModificarEquipo.Visible = true;
-            vista.btnAgregarEquipo.Visible = false;
-            vista.txtNombre.Text = modelo.nombre;
+            padre = Padre;
             // Llenar combobox de deportes
-            vista.llenarCboDeporte();
-            // Para obtener el Id original que se va a modificar
-            modeloOriginal = modelo;
-            // Modificar el texto del label
-            vista.lblEquipoEvento.Text = "MODIFICAR JUGADOR";
-            ////// Creación de eventos
-            //vista.Load += new EventHandler(cargarForm);
-            //vista.tablaEquipo.CellClick += new DataGridViewCellEventHandler(clickCeldaDeLaTabla);
-            //vista.btnActualizarEquipo.Click += new EventHandler(clickActualizarEquipo);
-            //vista.btnModificarEquipo.Click += new EventHandler(clickModificarEquipo);
-            //vista.btnEliminarEquipo.Click += new EventHandler(clickEliminarEquipo);
-            //vista.txtFiltrar.TextChanged += new EventHandler(cambioEnTextoFiltrarEquipo);
-            //vista.cboBuscar.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarEquipo);
+            llenarCboDeporte();
+            vista.cboDeporte.SelectedIndex = -1;
+            vista.lblEquipoEvento.Text = tipo;
+            if (tipo == "MODIFICAR JUGADOR")
+            {
+                vista.btnModificarEquipo.Visible = true;
+                vista.btnAgregarEquipo.Visible = false;
+                vista.btnModificarEquipo.Click += new EventHandler(clickModificarEquipo);
+                modelo = padre.modeloFila;
+                vista.txtNombre.Text = modelo.nombre;
+            }
+            else if (tipo == "AGREGAR JUGADOR")
+            {
+                vista.btnAgregarEquipo.Visible = true;
+                vista.btnModificarEquipo.Visible = false;
+                vista.btnAgregarEquipo.Click += new EventHandler(clickAgregarEquipo);
+            }
+            vista.btnSalir.Click += new EventHandler(clickSalir);
         }
 
-        //agregar
-        public controladorEquipoEventos(formEquipoEventos Vista, controladorEquipo formOriginal)
+        private void clickModificarEquipo(object sender, EventArgs e)
         {
-            vista = Vista;
-            formoriginal = formOriginal;
-            vista.btnAgregarEquipo.Visible = true;
-            vista.btnModificarEquipo.Visible = false;
-            // Llenar combobox de deportes
-            vista.llenarCboDeporte();
-            vista.cboDeporte.SelectedIndex = -1;
-            // Modificar el texto del título
-            vista.lblEquipoEvento.Text = "AGREGAR JUGADOR";
-            vista.btnAgregarEquipo.Click += new EventHandler(clickAgregarEquipo);
+            llenarModeloConOpcionesSeleccionadas();
+            daoEquipo.modificarEquipo(modelo);
+            padre.actualizarTablaJugadores();
+            cerrarForm(vista);
         }
 
         private void clickAgregarEquipo(object sender, EventArgs e)
         {
             llenarModeloConOpcionesSeleccionadas();
             daoEquipo.agregarEquipo(modelo);
-            formoriginal.actualizarTablaJugadores();
+            padre.actualizarTablaJugadores();
             cerrarForm(vista);
         }
 
@@ -75,9 +68,14 @@ namespace Controlador
 
         private void llenarModeloConOpcionesSeleccionadas()
         {
-            modelo.pkId = modeloOriginal.pkId;
+            modelo.pkId = modelo.pkId;
             modelo.nombre = vista.txtNombre.Text;
             modelo.fkIdDeporte = stringAInt(vista.cboDeporte.SelectedValue.ToString());
+        }
+
+        private void clickSalir(object sender, EventArgs e)
+        {
+            cerrarForm(vista);
         }
     }
 }

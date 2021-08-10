@@ -11,7 +11,7 @@ namespace Controlador
     {
         private formEquipo vista;
         private daoEquipo daoEquipo = new daoEquipo();
-        private dtoEquipo modeloFila = new dtoEquipo();
+        public dtoEquipo modeloFila = new dtoEquipo();
 
         public controladorEquipo()
         {
@@ -55,12 +55,12 @@ namespace Controlador
 
         private void clickModificarEquipo(object sender, EventArgs e)
         {
-            abrirForm(new formEquipoEventos(modeloFila, this));
+            abrirForm(new formEquipoEventos(this, "MODIFICAR JUGADOR"));
         }
 
         private void clickAgregarEquipo(object sender, EventArgs e)
         {
-            abrirForm(new formEquipoEventos(this));
+            abrirForm(new formEquipoEventos(this, "AGREGAR JUGADOR"));
         }
 
         private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)

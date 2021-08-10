@@ -36,8 +36,6 @@ namespace Vista
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formDeporte));
             this.tablaDeportes = new Zuby.ADGV.AdvancedDataGridView();
-            this.pkIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwDeporteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vwDeportes = new Datos.vwDeportes();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
@@ -54,6 +52,8 @@ namespace Vista
             this.btnModificarDeporte = new System.Windows.Forms.Button();
             this.btnAgregarDeporte = new System.Windows.Forms.Button();
             this.deporteTableAdapter = new Datos.vwDeportesTableAdapters.deporteTableAdapter();
+            this.pkIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDeportes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwDeporteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwDeportes)).BeginInit();
@@ -107,24 +107,6 @@ namespace Vista
             this.tablaDeportes.Size = new System.Drawing.Size(400, 407);
             this.tablaDeportes.TabIndex = 5;
             this.tablaDeportes.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.tablaDeportes_DataError);
-            // 
-            // pkIdDataGridViewTextBoxColumn
-            // 
-            this.pkIdDataGridViewTextBoxColumn.DataPropertyName = "pkId";
-            this.pkIdDataGridViewTextBoxColumn.HeaderText = "pkId";
-            this.pkIdDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.pkIdDataGridViewTextBoxColumn.Name = "pkIdDataGridViewTextBoxColumn";
-            this.pkIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pkIdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // vwDeporteBindingSource
             // 
@@ -340,6 +322,25 @@ namespace Vista
             // 
             this.deporteTableAdapter.ClearBeforeFill = true;
             // 
+            // pkIdDataGridViewTextBoxColumn
+            // 
+            this.pkIdDataGridViewTextBoxColumn.DataPropertyName = "pkId";
+            this.pkIdDataGridViewTextBoxColumn.HeaderText = "pkId";
+            this.pkIdDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdDataGridViewTextBoxColumn.Name = "pkIdDataGridViewTextBoxColumn";
+            this.pkIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // formDeporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,8 +368,6 @@ namespace Vista
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel panelBuscarCol;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -383,5 +382,7 @@ namespace Vista
         public Datos.vwDeportesTableAdapters.deporteTableAdapter deporteTableAdapter;
         public System.Windows.Forms.TextBox txtNombreDeporte;
         public System.Windows.Forms.ComboBox cboBuscar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
     }
 }

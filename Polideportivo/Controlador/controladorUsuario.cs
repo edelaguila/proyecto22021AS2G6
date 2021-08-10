@@ -38,15 +38,15 @@ namespace Controlador
         {
             daoUsuario daoTipoUsuario = new daoUsuario();
             List<dtoUsuario> lista = daoTipoUsuario.mostrarUsuario();
-            if (lista != null)
-                string nombre = txtNombre.Text;
-            string contraseña = txtContraseña.Text;
+            string nombre = modelo.txtNombre.Text;
+            string contraseña = vista.txtContraseña.Text;
             bool esvalido = false;
             string usuarioValidar = nombre;
             string contraseñaValidar = contraseña;
             if (usuarioValidar == usuario.Usuario && contraseñaValidar == usuario.contraseña)
             {
                 esvalido = true;
+                formPolideportivo.Show();
             }
             return esvalido;
         }

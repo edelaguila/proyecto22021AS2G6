@@ -15,11 +15,11 @@ namespace Vista
             InitializeComponent();
         }
 
-        private formCampeonato formOriginal = new formCampeonato();
+        private controladorCampeonato formOriginal;
 
-        private modeloCampeonato modeloOriginal;
+        private dtoCampeonato modeloOriginal;
 
-        public formCampeonatoEventos(modeloCampeonato modelo, formCampeonato form)
+        public formCampeonatoEventos(dtoCampeonato modelo, controladorCampeonato form)
         {
             // Este constructor es el que se utiliza para modificar datos
             InitializeComponent();
@@ -40,10 +40,11 @@ namespace Vista
             // Para obtener el Id original que se va a modificar
             modeloOriginal = modelo;
             // Modificar el texto del label
+            txtNombre.Text = modelo.nombre;
             lblJugadorEvento.Text = "MODIFICAR CAMPEONATO";
         }
 
-        public formCampeonatoEventos(formCampeonato form)
+        public formCampeonatoEventos(controladorCampeonato form)
         {
             formOriginal = form;
             // Este constructor es el que se utiliza para agregar datos
@@ -84,7 +85,7 @@ namespace Vista
         private void btnAgregarJugador_Click(object sender, EventArgs e)
         {
             controladorJugador modeloAgregar = new controladorJugador();
-            modeloCampeonato modelo = new modeloCampeonato();
+            dtoCampeonato modelo = new dtoCampeonato();
             //modelo.nombre = txtNombre.Text;
             //modelo.anotaciones = stringAInt(txtAnotaciones.Text);
             //modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
@@ -105,7 +106,7 @@ namespace Vista
 
         private void btnModificarCampeonato_Click(object sender, EventArgs e)
         {
-            controladorCampeonato controlador = new controladorCampeonato();
+            daoCampeonato controlador = new daoCampeonato();
             modeloOriginal.nombre = txtNombre.Text;
             modeloOriginal.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
             modeloOriginal.fkIdTipoCampeonato = stringAInt(cboTipo.SelectedValue.ToString());
@@ -118,8 +119,8 @@ namespace Vista
 
         private void btnAgregarCampeonato_Click(object sender, EventArgs e)
         {
-            controladorCampeonato controlador = new controladorCampeonato();
-            modeloCampeonato modelo = new modeloCampeonato();
+            daoCampeonato controlador = new daoCampeonato();
+            dtoCampeonato modelo = new dtoCampeonato();
             modelo.nombre = txtNombre.Text;
             modelo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
             modelo.fkIdTipoCampeonato = stringAInt(cboTipo.SelectedValue.ToString());

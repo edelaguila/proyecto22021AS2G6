@@ -1,15 +1,15 @@
 ﻿namespace Modelo
 {
-    public class modeloTipoCampeonato
+    public class dtoTipoCampeonato
     {
         public int pkId { get; set; }
         public string tipo { get; set; }
 
-        public modeloTipoCampeonato()
+        public dtoTipoCampeonato()
         {
         }
 
-        public modeloTipoCampeonato(int Id, string Tipo)
+        public dtoTipoCampeonato(int Id, string Tipo)
         {
             pkId = Id;
             tipo = Tipo;

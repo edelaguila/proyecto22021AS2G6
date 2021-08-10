@@ -94,8 +94,9 @@ namespace Vista
         {
             if (validarFormEventos())
             {
-                controladorJugador modeloAgregar = new controladorJugador();
+                daoJugador modeloAgregar = new daoJugador();
                 llenarModeloConDatosIngresados();
+                modeloAgregar.agregarJugador(modelo);
                 formOriginal.actualizarTablaJugadores();
                 cerrarForm(this);
             }

@@ -111,6 +111,7 @@
     <Compile Include="Controlador\controladorEntrenador.cs" />
     <Compile Include="Controlador\controladorEquipo.cs" />
     <Compile Include="Controlador\controladorEquipoEventos.cs" />
+    <Compile Include="Controlador\controladorUsuario.cs" />
     <Compile Include="Modelo\DAO\daoEstadoPartido.cs" />
     <Compile Include="Controlador\controladorTipoFalta.cs" />
     <Compile Include="Modelo\DAO\daoAnotacion.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Modelo\DAO\daoRol.cs" />
     <Compile Include="Modelo\DAO\daoTipoCampeonato.cs" />
     <Compile Include="Modelo\DAO\daoTipoFalta.cs" />
+    <Compile Include="Modelo\DAO\daoTipoUsuario.cs" />
     <Compile Include="Modelo\DAO\daoUsuario.cs" />
     <Compile Include="Modelo\DAO\daoDeporte.cs" />
     <Compile Include="Modelo\DAO\daoJugador.cs" />
@@ -134,6 +136,7 @@
     <Compile Include="Modelo\DTO\dtoJugador.cs" />
     <Compile Include="Modelo\DTO\dtoEstadoPartido.cs" />
     <Compile Include="Modelo\DTO\dtoAnotacion.cs" />
+    <Compile Include="Modelo\DTO\dtoTipoUsuario.cs" />
     <Compile Include="Modelo\modeloCampeonato.cs" />
     <Compile Include="Modelo\DTO\dtoDeporte.cs" />
     <Compile Include="Modelo\DTO\dtoEmpleado.cs" />
@@ -279,6 +282,12 @@
     <Compile Include="Vista\formUsuario.Designer.cs">
       <DependentUpon>formUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\formUsuarioEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formUsuarioEventos.Designer.cs">
+      <DependentUpon>formUsuarioEventos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\utilidadForms.cs" />
     <Compile Include="Datos\vwCampeonato.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -403,6 +412,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formUsuario.resx">
       <DependentUpon>formUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formUsuarioEventos.resx">
+      <DependentUpon>formUsuarioEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>

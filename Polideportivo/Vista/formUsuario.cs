@@ -1,6 +1,5 @@
 ﻿using Controlador;
 using Modelo;
-using Modelo.DAO;
 using Modelo.DTO;
 using System;
 using System.Windows.Forms;
@@ -10,25 +9,15 @@ namespace Vista
 {
     public partial class formUsuario : Form
     {
-        private daoEquipo controlador = new daoEquipo();
-        private dtoEquipo modelo = new dtoEquipo();
-
         public formUsuario()
         {
             InitializeComponent();
+            controladorUsuario controladorUsuario = new controladorUsuario(this);
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void tablaUsuarios_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            cerrarForm(this);
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void btnAgregarEquipo_Click(object sender, EventArgs e)
-        {
+            // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
         }
     }
 }

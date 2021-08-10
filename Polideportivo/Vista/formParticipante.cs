@@ -18,6 +18,7 @@ namespace Vista
         public formParticipante()
         {
             InitializeComponent();
+            controladorParticipante controladorParticipante = new controladorParticipante(this);
         }
 
         private void formParticipante_Load(object sender, EventArgs e)
@@ -74,16 +75,17 @@ namespace Vista
         {
             if (string.IsNullOrEmpty(txtFiltrar.Text))
             {
-                //vwpartidoBindingSource.Filter = string.Empty;
+                vwparticipanteBindingSource.Filter = string.Empty;
             }
             else
             {
-                //vwpartidoBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
+                vwparticipanteBindingSource.Filter = string.Format("{0}='{1}'", cboBuscar.Text, txtFiltrar.Text);
             }
         }
 
         private void btnAgregarPartido_Click(object sender, EventArgs e)
         {
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

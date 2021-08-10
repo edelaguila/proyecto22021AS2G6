@@ -54,7 +54,6 @@ namespace Vista
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 27);
             this.txtNombre.TabIndex = 1;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblNombre
             // 
@@ -115,7 +114,6 @@ namespace Vista
             this.cboDeporte.Name = "cboDeporte";
             this.cboDeporte.Size = new System.Drawing.Size(121, 27);
             this.cboDeporte.TabIndex = 32;
-            this.cboDeporte.SelectedIndexChanged += new System.EventHandler(this.cboDeporte_SelectedIndexChanged);
             // 
             // btnModificarEquipo
             // 
@@ -135,7 +133,6 @@ namespace Vista
             this.btnModificarEquipo.TabIndex = 30;
             this.btnModificarEquipo.Text = "    MODIFICAR";
             this.btnModificarEquipo.UseVisualStyleBackColor = false;
-            this.btnModificarEquipo.Click += new System.EventHandler(this.btnModificarEquipo_Click);
             // 
             // btnAgregarEquipo
             // 
@@ -212,7 +209,6 @@ namespace Vista
             this.btnSalir.Size = new System.Drawing.Size(32, 32);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.TabStop = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // formEquipoEventos
             // 
@@ -239,12 +235,12 @@ namespace Vista
         private System.Windows.Forms.Label lblDeporte;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel2;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.Button btnModificarEquipo;
         public System.Windows.Forms.ComboBox cboDeporte;
         public System.Windows.Forms.Button btnAgregarEquipo;
         public System.Windows.Forms.Label lblEquipoEvento;
+        public System.Windows.Forms.PictureBox btnSalir;
     }
 }

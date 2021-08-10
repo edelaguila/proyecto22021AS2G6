@@ -151,11 +151,6 @@ namespace Vista
         }
 
         // Submenús
-        private void btnSubMenuParticipante_Click(object sender, EventArgs e)
-        {
-            gestorDeFormActivoSubmenu(new formParticipante(), "PARTICIPANTES DE CAMPEONATOS");
-            botonSeleccionadoDentroDeSubmenu(panelMenuCampeonato, btnSubMenuParticipante);
-        }
 
         private void btnSubMenuPosiciones_Click(object sender, EventArgs e)
         {
@@ -251,7 +246,6 @@ namespace Vista
         private void resetearColores()
         {
             btnSubMenuPosiciones.BackColor = Color.Transparent;
-            btnSubMenuParticipante.BackColor = Color.Transparent;
             btnSubMenuPartidosResultado.BackColor = Color.Transparent;
             panelMenuEquipos.BackColor = Color.Transparent;
             panelMenuCampeonato.BackColor = Color.Transparent;

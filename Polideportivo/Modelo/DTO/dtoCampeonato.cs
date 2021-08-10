@@ -1,6 +1,6 @@
-﻿namespace Modelo
+﻿namespace Modelo.DTO
 {
-    public class modeloCampeonato
+    public class dtoCampeonato
     {
         public int pkId { get; set; }
         public string nombre { get; set; }
@@ -9,11 +9,11 @@
         public int fkIdDeporte { get; set; }
         public int fkIdTipoCampeonato { get; set; }
 
-        public modeloCampeonato()
+        public dtoCampeonato()
         {
         }
 
-        public modeloCampeonato(int Id, string Nombre, string FechaInicio, string FechaFinal, int FkIdDeporte
+        public dtoCampeonato(int Id, string Nombre, string FechaInicio, string FechaFinal, int FkIdDeporte
             , int FkIdTipoCampeonato)
         {
             pkId = Id;

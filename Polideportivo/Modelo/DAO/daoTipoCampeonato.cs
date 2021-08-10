@@ -11,14 +11,14 @@ namespace Modelo.DAO
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
-        public List<modeloTipoCampeonato> mostrarTipoDeCampeonatos()
+        public List<dtoTipoCampeonato> mostrarTipoDeCampeonatos()
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
-            List<modeloTipoCampeonato> sqlresultado = new List<modeloTipoCampeonato>();
+            List<dtoTipoCampeonato> sqlresultado = new List<dtoTipoCampeonato>();
             if (conexionODBC != null)
             {
                 string sqlconsulta = "SELECT * FROM tipocampeonato;";
-                sqlresultado = conexionODBC.Query<modeloTipoCampeonato>(sqlconsulta).ToList();
+                sqlresultado = conexionODBC.Query<dtoTipoCampeonato>(sqlconsulta).ToList();
                 ODBC.cerrarConexion(conexionODBC);
             }
             return sqlresultado;

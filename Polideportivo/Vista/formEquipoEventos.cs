@@ -13,44 +13,21 @@ namespace Vista
         private daoEquipo controlador = new daoEquipo();
         private dtoEquipo modelo = new dtoEquipo();
 
-        public formEquipoEventos()
-        {
-            InitializeComponent();
-        }
-
         private controladorEquipo formOriginal = new controladorEquipo();
-
         private dtoEquipo modeloOriginal = new dtoEquipo();
 
         public formEquipoEventos(dtoEquipo modelo, controladorEquipo form)
         {
             // Este constructor es el que se utiliza para modificar datos
             InitializeComponent();
-            //controladorEquipoEventos controladorEmpleado = new controladorEquipoEventos(this);
-            btnModificarEquipo.Visible = true;
-            btnAgregarEquipo.Visible = false;
-            formOriginal = form;
-            txtNombre.Text = modelo.nombre;
-            // Llenar combobox de deportes
-            llenarCboDeporte();
-            // Para obtener el Id original que se va a modificar
-            modeloOriginal = modelo;
-            // Modificar el texto del label
-            lblEquipoEvento.Text = "MODIFICAR JUGADOR";
+            controladorEquipoEventos controladorEmpleado = new controladorEquipoEventos(modelo, this, form);
         }
 
         public formEquipoEventos(controladorEquipo form)
         {
             // Este constructor es el que se utiliza para agregar datos
             InitializeComponent();
-            btnAgregarEquipo.Visible = true;
-            btnModificarEquipo.Visible = false;
-            // Llenar combobox de deportes
-            llenarCboDeporte();
-            cboDeporte.SelectedIndex = -1;
-            formOriginal = form;
-            // Modificar el texto del título
-            lblEquipoEvento.Text = "AGREGAR JUGADOR";
+            controladorEquipoEventos controladorEmpleado = new controladorEquipoEventos(this, form);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -58,15 +35,7 @@ namespace Vista
             cerrarForm(this);
         }
 
-        private void btnAgregarJugador_Click(object sender, EventArgs e)
-        {
-            llenarModeloConOpcionesSeleccionadas();
-            controlador.agregarEquipo(modelo);
-            formOriginal.actualizarTablaJugadores();
-            cerrarForm(this);
-        }
-
-        private void btnModificarJugador_Click(object sender, EventArgs e)
+        private void btnModificarEquipo_Click(object sender, EventArgs e)
         {
             llenarModeloConOpcionesSeleccionadas();
             controlador.modificarEquipo(modelo);
@@ -74,7 +43,7 @@ namespace Vista
             cerrarForm(this);
         }
 
-        private void llenarCboDeporte()
+        public void llenarCboDeporte()
         {
             daoDeporte daoDeporte = new daoDeporte();
             cboDeporte.DataSource = daoDeporte.mostrarDeportes();
@@ -90,6 +59,10 @@ namespace Vista
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
     }

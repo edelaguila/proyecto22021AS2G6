@@ -1,94 +1,128 @@
-﻿using Dapper;
-using Conexion;
-using Modelo;
-using System.Data.Odbc;
-using System.Linq;
+﻿using Modelo.DAO;
+using Modelo.DTO;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Vista;
+using static Vista.utilidadForms;
 
 namespace Controlador
 {
     public class controladorCampeonato
     {
-        private ConexionODBC ODBC = new ConexionODBC();
+        private formCampeonato vista;
 
-        public modeloCampeonato AgregarCampeonato(modeloCampeonato modelo)
+        private int id;
+        private string nombre;
+        private string fechaInicio;
+        private string fechaFinal;
+        private int fkIdDeporte;
+        private int fkIdTipoCampeonato;
+
+        private dtoCampeonato modeloFila = new dtoCampeonato();
+
+        public controladorCampeonato(formCampeonato Vista)
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "INSERT INTO campeonato(pkId, nombre, fechaInicio, fechaFinal, fkIdDeporte, fkIdTipoCampeonato)" +
-                " VALUES  (NULL, ?nombre?, ?fechaInicio?, ?fechaFinal?, ?fkIdDeporte?, " +
-                "?fkIdTipoCampeonato?);";
-                var ValorDeVariables = new
-                {
-                    nombre = modelo.nombre,
-                    fechaInicio = modelo.fechaInicio,
-                    fechaFinal = modelo.fechaFinal,
-                    fkIdDeporte = modelo.fkIdDeporte,
-                    fkIdTipoCampeonato = modelo.fkIdTipoCampeonato
-                };
-
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-            }
-            return modelo;
+            vista = Vista;
+            // Eventos
+            vista.Load += new EventHandler(cargarForm);
+            vista.tablaCampeonatos.CellClick += new DataGridViewCellEventHandler(clickCeldaDeLaTabla);
+            vista.btnActualizar.Click += new EventHandler(clickActualizarCampeonato);
+            vista.btnAgregarCampeonato.Click += new EventHandler(clickAgregarCampeonato);
+            vista.btnModificarCampeonato.Click += new EventHandler(clickModificarCampeonato);
+            vista.btnEliminarCampeonato.Click += new EventHandler(clickEliminarCampeonato);
+            vista.txtFiltrar.TextChanged += new EventHandler(cambioEnTextoFiltrarCampeonato);
+            vista.cboBuscar.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarCampeonato);
         }
 
-        public modeloCampeonato ModificarCampeonato(modeloCampeonato modelo)
+        private void opcionSeleccionadaBuscarCampeonato(object sender, EventArgs e)
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "UPDATE campeonato SET nombre = ?nombre?, fechaInicio = ?fechaInicio?, " +
-                "fechaFinal = ?fechaFinal?, fkIdDeporte = ?fkIdDeporte?, fkIdTipoCampeonato = ?fkIdTipoCampeonato?" +
-                " WHERE pkId = ?pkId?;";
-                var ValorDeVariables = new
-                {
-                    pkId = modelo.pkId,
-                    nombre = modelo.nombre,
-                    fechaInicio = modelo.fechaInicio,
-                    fechaFinal = modelo.fechaFinal,
-                    fkIdDeporte = modelo.fkIdDeporte,
-                    fkIdTipoCampeonato = modelo.fkIdTipoCampeonato
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-            }
-
-            return modelo;
+            vista.txtFiltrar.Text = "";
         }
 
-        public modeloCampeonato eliminarCampeonato(modeloCampeonato modelo)
+        private void clickActualizarCampeonato(object sender, EventArgs e)
         {
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
-            {
-                var sqlinsertar =
-                "DELETE FROM campeonato WHERE pkId = ?pkId?;";
-                var ValorDeVariables = new
-                {
-                    pkId = modelo.pkId
-                };
-                conexionODBC.Execute(sqlinsertar, ValorDeVariables);
-                ODBC.cerrarConexion(conexionODBC);
-            }
-
-            return modelo;
+            actualizarTabla();
         }
 
-        public List<modeloCampeonato> mostrarCampeonato()
+        private void clickEliminarCampeonato(object sender, EventArgs e)
         {
-            List<modeloCampeonato> sqlresultado = new List<modeloCampeonato>();
-            OdbcConnection conexionODBC = ODBC.abrirConexion();
-            if (conexionODBC != null)
+            llenarModeloConFilaSeleccionada();
+            daoCampeonato controlador = new daoCampeonato();
+            controlador.eliminarCampeonato(modeloFila);
+            actualizarTabla();
+        }
+
+        private void clickAgregarCampeonato(object sender, EventArgs e)
+        {
+            abrirForm(new formCampeonatoEventos(this));
+        }
+
+        private void clickModificarCampeonato(object sender, EventArgs e)
+        {
+            llenarModeloConFilaSeleccionada();
+            abrirForm(new formCampeonatoEventos(modeloFila, this));
+        }
+
+        private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
+        {
+            llenarModeloConFilaSeleccionada();
+        }
+
+        private void cargarForm(object sender, EventArgs e)
+        {
+            try
             {
-                string sqlconsulta = "SELECT * FROM campeonato;";
-                sqlresultado = conexionODBC.Query<modeloCampeonato>(sqlconsulta).ToList();
-                ODBC.cerrarConexion(conexionODBC);
+                vista.vwcampeonatoTableAdapter.Fill(vista.vwCampeonato.vwcampeonato);
             }
-            return sqlresultado;
+            catch (MySqlException error)
+            {
+                abrirForm(new formError(error));
+            }
+
+            vista.cboBuscar.SelectedIndex = 0;
+        }
+
+        public void actualizarTabla()
+        {
+            vista.vwcampeonatoTableAdapter.Fill(vista.vwCampeonato.vwcampeonato);
+        }
+
+        private void cambioEnTextoFiltrarCampeonato(object sender, EventArgs e)
+        {
+            filtrarTabla();
+        }
+
+        private void filtrarTabla()
+        {
+            if (string.IsNullOrEmpty(vista.txtFiltrar.Text))
+            {
+                vista.vwcampeonatoBindingSource.Filter = string.Empty;
+            }
+            else
+            {
+                vista.vwcampeonatoBindingSource.Filter = string.Format("{0}='{1}'", vista.cboBuscar.Text, vista.txtFiltrar.Text);
+            }
+        }
+
+        public void llenarModeloConFilaSeleccionada()
+        {
+            id = stringAInt(vista.tablaCampeonatos.SelectedRows[0].Cells[0].Value.ToString());
+            nombre = vista.tablaCampeonatos.SelectedRows[0].Cells[1].Value.ToString();
+            fechaInicio = vista.tablaCampeonatos.SelectedRows[0].Cells[2].Value.ToString();
+            fechaFinal = vista.tablaCampeonatos.SelectedRows[0].Cells[3].Value.ToString();
+            fkIdDeporte = stringAInt(vista.tablaCampeonatos.SelectedRows[0].Cells[4].Value.ToString());
+            fkIdTipoCampeonato = stringAInt(vista.tablaCampeonatos.SelectedRows[0].Cells[6].Value.ToString());
+            modeloFila.pkId = id;
+            modeloFila.nombre = nombre;
+            modeloFila.fechaInicio = fechaInicio;
+            modeloFila.fechaFinal = fechaFinal;
+            modeloFila.fkIdDeporte = fkIdDeporte;
+            modeloFila.fkIdTipoCampeonato = fkIdTipoCampeonato;
         }
     }
 }

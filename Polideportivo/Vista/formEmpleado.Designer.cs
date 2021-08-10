@@ -36,10 +36,6 @@ namespace Vista
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formEmpleado));
             this.tablaEmpleado = new Zuby.ADGV.AdvancedDataGridView();
-            this.pkIdEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.puestoempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwempleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vwEmpleado = new Datos.vwEmpleado();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
@@ -58,6 +54,10 @@ namespace Vista
             this.btnModificarEmpleado = new System.Windows.Forms.Button();
             this.btnAgregarEmpleado = new System.Windows.Forms.Button();
             this.vwempleadoTableAdapter = new Datos.vwEmpleadoTableAdapters.vwempleadoTableAdapter();
+            this.pkIdEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.puestoempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwempleadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwEmpleado)).BeginInit();
@@ -112,43 +112,6 @@ namespace Vista
             this.tablaEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaEmpleado.Size = new System.Drawing.Size(400, 407);
             this.tablaEmpleado.TabIndex = 5;
-            // 
-            // pkIdEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.pkIdEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "pkIdEmpleado";
-            this.pkIdEmpleadoDataGridViewTextBoxColumn.HeaderText = "pkIdEmpleado";
-            this.pkIdEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.pkIdEmpleadoDataGridViewTextBoxColumn.Name = "pkIdEmpleadoDataGridViewTextBoxColumn";
-            this.pkIdEmpleadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pkIdEmpleadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // pkIdPuestoEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "pkIdPuestoEmpleado";
-            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.HeaderText = "pkIdPuestoEmpleado";
-            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.Name = "pkIdPuestoEmpleadoDataGridViewTextBoxColumn";
-            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // puestoempleadoDataGridViewTextBoxColumn
-            // 
-            this.puestoempleadoDataGridViewTextBoxColumn.DataPropertyName = "puestoempleado";
-            this.puestoempleadoDataGridViewTextBoxColumn.HeaderText = "Puestoempleado";
-            this.puestoempleadoDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.puestoempleadoDataGridViewTextBoxColumn.Name = "puestoempleadoDataGridViewTextBoxColumn";
-            this.puestoempleadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.puestoempleadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // vwempleadoBindingSource
             // 
@@ -391,6 +354,44 @@ namespace Vista
             // 
             this.vwempleadoTableAdapter.ClearBeforeFill = true;
             // 
+            // pkIdEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.pkIdEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "pkIdEmpleado";
+            this.pkIdEmpleadoDataGridViewTextBoxColumn.HeaderText = "pkIdEmpleado";
+            this.pkIdEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdEmpleadoDataGridViewTextBoxColumn.Name = "pkIdEmpleadoDataGridViewTextBoxColumn";
+            this.pkIdEmpleadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdEmpleadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdEmpleadoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // pkIdPuestoEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "pkIdPuestoEmpleado";
+            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.HeaderText = "pkIdPuestoEmpleado";
+            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.Name = "pkIdPuestoEmpleadoDataGridViewTextBoxColumn";
+            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdPuestoEmpleadoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // puestoempleadoDataGridViewTextBoxColumn
+            // 
+            this.puestoempleadoDataGridViewTextBoxColumn.DataPropertyName = "puestoempleado";
+            this.puestoempleadoDataGridViewTextBoxColumn.HeaderText = "Puestoempleado";
+            this.puestoempleadoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.puestoempleadoDataGridViewTextBoxColumn.Name = "puestoempleadoDataGridViewTextBoxColumn";
+            this.puestoempleadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.puestoempleadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // formEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,10 +424,6 @@ namespace Vista
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEntrenadorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEmpleadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdPuestoEmpleadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn puestoempleadoDataGridViewTextBoxColumn;
         public Zuby.ADGV.AdvancedDataGridView tablaEmpleado;
         public System.Windows.Forms.Button btnAgregarEmpleado;
         public System.Windows.Forms.Button btnModificarEmpleado;
@@ -439,5 +436,9 @@ namespace Vista
         public vwEmpleado vwEmpleado;
         public System.Windows.Forms.BindingSource vwempleadoBindingSource;
         public Datos.vwEmpleadoTableAdapters.vwempleadoTableAdapter vwempleadoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEmpleadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdPuestoEmpleadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn puestoempleadoDataGridViewTextBoxColumn;
     }
 }

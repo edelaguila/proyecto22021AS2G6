@@ -36,10 +36,6 @@ namespace Vista
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formTipoFalta));
             this.tablaTipoFalta = new Zuby.ADGV.AdvancedDataGridView();
-            this.pkIdTipoFaltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwtipofaltaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vwTipoFalta = new Datos.vwTipoFalta();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
@@ -58,6 +54,10 @@ namespace Vista
             this.btnModificarFalta = new System.Windows.Forms.Button();
             this.btnAgregarFalta = new System.Windows.Forms.Button();
             this.vwtipofaltaTableAdapter = new Datos.vwTipoFaltaTableAdapters.vwtipofaltaTableAdapter();
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pkIdDeporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablaTipoFalta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwtipofaltaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwTipoFalta)).BeginInit();
@@ -112,42 +112,6 @@ namespace Vista
             this.tablaTipoFalta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaTipoFalta.Size = new System.Drawing.Size(400, 407);
             this.tablaTipoFalta.TabIndex = 5;
-            // 
-            // pkIdTipoFaltaDataGridViewTextBoxColumn
-            // 
-            this.pkIdTipoFaltaDataGridViewTextBoxColumn.DataPropertyName = "pkIdTipoFalta";
-            this.pkIdTipoFaltaDataGridViewTextBoxColumn.HeaderText = "pkIdTipoFalta";
-            this.pkIdTipoFaltaDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.pkIdTipoFaltaDataGridViewTextBoxColumn.Name = "pkIdTipoFaltaDataGridViewTextBoxColumn";
-            this.pkIdTipoFaltaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pkIdTipoFaltaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // tipoDataGridViewTextBoxColumn
-            // 
-            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
-            this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
-            this.tipoDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
-            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // pkIdDeporteDataGridViewTextBoxColumn
-            // 
-            this.pkIdDeporteDataGridViewTextBoxColumn.DataPropertyName = "pkIdDeporte";
-            this.pkIdDeporteDataGridViewTextBoxColumn.HeaderText = "pkIdDeporte";
-            this.pkIdDeporteDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.pkIdDeporteDataGridViewTextBoxColumn.Name = "pkIdDeporteDataGridViewTextBoxColumn";
-            this.pkIdDeporteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pkIdDeporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // deporteDataGridViewTextBoxColumn
-            // 
-            this.deporteDataGridViewTextBoxColumn.DataPropertyName = "deporte";
-            this.deporteDataGridViewTextBoxColumn.HeaderText = "deporte";
-            this.deporteDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.deporteDataGridViewTextBoxColumn.Name = "deporteDataGridViewTextBoxColumn";
-            this.deporteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // vwtipofaltaBindingSource
             // 
@@ -390,6 +354,44 @@ namespace Vista
             // 
             this.vwtipofaltaTableAdapter.ClearBeforeFill = true;
             // 
+            // pkIdTipoFaltaDataGridViewTextBoxColumn
+            // 
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.DataPropertyName = "pkIdTipoFalta";
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.HeaderText = "pkIdTipoFalta";
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.Name = "pkIdTipoFaltaDataGridViewTextBoxColumn";
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdTipoFaltaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
+            this.tipoDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // pkIdDeporteDataGridViewTextBoxColumn
+            // 
+            this.pkIdDeporteDataGridViewTextBoxColumn.DataPropertyName = "pkIdDeporte";
+            this.pkIdDeporteDataGridViewTextBoxColumn.HeaderText = "pkIdDeporte";
+            this.pkIdDeporteDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdDeporteDataGridViewTextBoxColumn.Name = "pkIdDeporteDataGridViewTextBoxColumn";
+            this.pkIdDeporteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdDeporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdDeporteDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // deporteDataGridViewTextBoxColumn
+            // 
+            this.deporteDataGridViewTextBoxColumn.DataPropertyName = "deporte";
+            this.deporteDataGridViewTextBoxColumn.HeaderText = "deporte";
+            this.deporteDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.deporteDataGridViewTextBoxColumn.Name = "deporteDataGridViewTextBoxColumn";
+            this.deporteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deporteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // formTipoFalta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,10 +423,6 @@ namespace Vista
         private System.Windows.Forms.Panel panelBuscarCol;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdTipoFaltaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDeporteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
         public vwTipoFalta vwTipoFalta;
         public System.Windows.Forms.BindingSource vwtipofaltaBindingSource;
         public Datos.vwTipoFaltaTableAdapters.vwtipofaltaTableAdapter vwtipofaltaTableAdapter;
@@ -437,5 +435,9 @@ namespace Vista
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.ComboBox cboBuscar;
         public System.Windows.Forms.ComboBox cboDeporte;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdTipoFaltaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdDeporteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deporteDataGridViewTextBoxColumn;
     }
 }

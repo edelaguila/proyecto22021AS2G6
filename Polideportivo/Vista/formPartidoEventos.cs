@@ -31,7 +31,7 @@ namespace Vista
             txtAnotacionesE2.Text = modelo.anotacionesEquipo2.ToString();
             txtCampo.Text = modelo.campo;
             // Llenar combobox de deportes
-            controladorCampeonato campeonato = new controladorCampeonato();
+            daoCampeonato campeonato = new daoCampeonato();
             cboCampeonato.DataSource = campeonato.mostrarCampeonato();
             cboCampeonato.DisplayMember = "nombre";
             cboCampeonato.ValueMember = "pkId";
@@ -73,7 +73,7 @@ namespace Vista
             btnAgregarPartido.Visible = true;
             btnModificarPartido.Visible = false;
             // Llenar combobox
-            controladorCampeonato campeonato = new controladorCampeonato();
+            daoCampeonato campeonato = new daoCampeonato();
             cboCampeonato.DataSource = campeonato.mostrarCampeonato();
             cboCampeonato.DisplayMember = "nombre";
             cboCampeonato.ValueMember = "pkId";

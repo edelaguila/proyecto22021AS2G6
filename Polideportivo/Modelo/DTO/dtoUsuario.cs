@@ -12,19 +12,19 @@ namespace Modelo.DTO
         public string nombre { get; set; }
         public string contraseña { get; set; }
         public int telefono { get; set; }
-        public string tipo { get; set; }
+        public int fkIdTipo { get; set; }
 
         public dtoUsuario()
         {
         }
 
-        public dtoUsuario(int Id, string Nombre, string Contraseña, int Telefono, string Tipo)
+        public dtoUsuario(int Id, string Nombre, string Contraseña, int Telefono, int IdTipo)
         {
             pkId = Id;
             nombre = Nombre;
             contraseña = Contraseña;
             telefono = Telefono;
-            tipo = Tipo;
+            fkIdTipo = IdTipo;
         }
     }
 }

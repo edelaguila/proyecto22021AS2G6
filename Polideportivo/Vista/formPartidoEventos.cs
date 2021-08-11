@@ -26,8 +26,7 @@ namespace Vista
             btnModificarPartido.Visible = true;
             btnAgregarPartido.Visible = false;
             formOriginal = form;
-            txtAnotacionesE1.Text = modelo.anotacionesEquipo1.ToString();
-            txtAnotacionesE2.Text = modelo.anotacionesEquipo2.ToString();
+
             txtCampo.Text = modelo.campo;
             // Llenar combobox de deportes
             daoCampeonato campeonato = new daoCampeonato();
@@ -138,8 +137,7 @@ namespace Vista
             string fecha = dateFecha.Value.ToString("yyyy-MM-dd");
             string hora = dateHora.Value.ToString("HH:mm");
             modelo.fecha = fecha + " " + hora;
-            modelo.anotacionesEquipo1 = stringAInt(txtAnotacionesE1.ToString());
-            modelo.anotacionesEquipo2 = stringAInt(txtAnotacionesE2.ToString());
+
             modelo.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
             modelo.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
             modelo.fkIdEstadoPartido = stringAInt(cboEstado.SelectedValue.ToString());
@@ -159,8 +157,6 @@ namespace Vista
             string fecha = dateFecha.Value.ToString("yyyy-MM-dd");
             string hora = dateHora.Value.ToString("HH:mm");
             modeloOriginal.fecha = fecha + " " + hora;
-            modeloOriginal.anotacionesEquipo1 = stringAInt(txtAnotacionesE1.ToString());
-            modeloOriginal.anotacionesEquipo2 = stringAInt(txtAnotacionesE2.ToString());
             modeloOriginal.fkIdCampeonato = stringAInt(cboCampeonato.SelectedValue.ToString());
             modeloOriginal.fkIdEmpleado = stringAInt(cboEmpleado.SelectedValue.ToString());
             modeloOriginal.fkIdEstadoPartido = stringAInt(cboEstado.SelectedValue.ToString());

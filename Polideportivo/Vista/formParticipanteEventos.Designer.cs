@@ -37,16 +37,16 @@ namespace Vista
             this.cboEquipo = new System.Windows.Forms.ComboBox();
             this.lblRol = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboEstadoPartido = new System.Windows.Forms.ComboBox();
-            this.cboDeporte = new System.Windows.Forms.ComboBox();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.cboCampeonato = new System.Windows.Forms.ComboBox();
             this.parrotGradientPanel2 = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.btnModificarJugador = new System.Windows.Forms.Button();
-            this.btnAgregarJugador = new System.Windows.Forms.Button();
+            this.cboFase = new System.Windows.Forms.ComboBox();
+            this.btnModificarParticipante = new System.Windows.Forms.Button();
+            this.btnAgregarParticipante = new System.Windows.Forms.Button();
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblJugadorEvento = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.cboFase = new System.Windows.Forms.ComboBox();
             this.parrotGradientPanel2.SuspendLayout();
             this.parrotGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -132,28 +132,27 @@ namespace Vista
             this.label1.TabIndex = 19;
             this.label1.Text = "CAMPEONATO";
             // 
-            // cboEstadoPartido
+            // cboEstado
             // 
-            this.cboEstadoPartido.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEstadoPartido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboEstadoPartido.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEstadoPartido.FormattingEnabled = true;
-            this.cboEstadoPartido.Location = new System.Drawing.Point(222, 162);
-            this.cboEstadoPartido.Name = "cboEstadoPartido";
-            this.cboEstadoPartido.Size = new System.Drawing.Size(121, 27);
-            this.cboEstadoPartido.TabIndex = 17;
+            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboEstado.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(222, 162);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(121, 27);
+            this.cboEstado.TabIndex = 17;
             // 
-            // cboDeporte
+            // cboCampeonato
             // 
-            this.cboDeporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDeporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboDeporte.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboDeporte.FormattingEnabled = true;
-            this.cboDeporte.Location = new System.Drawing.Point(222, 56);
-            this.cboDeporte.Name = "cboDeporte";
-            this.cboDeporte.Size = new System.Drawing.Size(121, 27);
-            this.cboDeporte.TabIndex = 18;
-            this.cboDeporte.SelectedIndexChanged += new System.EventHandler(this.cboDeporte_SelectedIndexChanged);
+            this.cboCampeonato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCampeonato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboCampeonato.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCampeonato.FormattingEnabled = true;
+            this.cboCampeonato.Location = new System.Drawing.Point(222, 56);
+            this.cboCampeonato.Name = "cboCampeonato";
+            this.cboCampeonato.Size = new System.Drawing.Size(121, 27);
+            this.cboCampeonato.TabIndex = 18;
             // 
             // parrotGradientPanel2
             // 
@@ -161,10 +160,10 @@ namespace Vista
             this.parrotGradientPanel2.BottomRight = System.Drawing.Color.MidnightBlue;
             this.parrotGradientPanel2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
             this.parrotGradientPanel2.Controls.Add(this.cboFase);
-            this.parrotGradientPanel2.Controls.Add(this.btnModificarJugador);
-            this.parrotGradientPanel2.Controls.Add(this.btnAgregarJugador);
-            this.parrotGradientPanel2.Controls.Add(this.cboDeporte);
-            this.parrotGradientPanel2.Controls.Add(this.cboEstadoPartido);
+            this.parrotGradientPanel2.Controls.Add(this.btnModificarParticipante);
+            this.parrotGradientPanel2.Controls.Add(this.btnAgregarParticipante);
+            this.parrotGradientPanel2.Controls.Add(this.cboCampeonato);
+            this.parrotGradientPanel2.Controls.Add(this.cboEstado);
             this.parrotGradientPanel2.Controls.Add(this.label1);
             this.parrotGradientPanel2.Controls.Add(this.lblRol);
             this.parrotGradientPanel2.Controls.Add(this.txtPuntos);
@@ -186,45 +185,56 @@ namespace Vista
             this.parrotGradientPanel2.TopLeft = System.Drawing.Color.DeepSkyBlue;
             this.parrotGradientPanel2.TopRight = System.Drawing.Color.CornflowerBlue;
             // 
-            // btnModificarJugador
+            // cboFase
             // 
-            this.btnModificarJugador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificarJugador.BackColor = System.Drawing.Color.White;
-            this.btnModificarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarJugador.FlatAppearance.BorderSize = 0;
-            this.btnModificarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarJugador.ForeColor = System.Drawing.Color.Black;
-            this.btnModificarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarJugador.Image")));
-            this.btnModificarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarJugador.Location = new System.Drawing.Point(52, 218);
-            this.btnModificarJugador.Name = "btnModificarJugador";
-            this.btnModificarJugador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnModificarJugador.Size = new System.Drawing.Size(291, 36);
-            this.btnModificarJugador.TabIndex = 30;
-            this.btnModificarJugador.Text = "    M O D I F I C A R";
-            this.btnModificarJugador.UseVisualStyleBackColor = false;
-            this.btnModificarJugador.Click += new System.EventHandler(this.btnModificarJugador_Click);
+            this.cboFase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboFase.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboFase.FormattingEnabled = true;
+            this.cboFase.Location = new System.Drawing.Point(52, 109);
+            this.cboFase.Name = "cboFase";
+            this.cboFase.Size = new System.Drawing.Size(121, 27);
+            this.cboFase.TabIndex = 31;
             // 
-            // btnAgregarJugador
+            // btnModificarParticipante
             // 
-            this.btnAgregarJugador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarJugador.BackColor = System.Drawing.Color.White;
-            this.btnAgregarJugador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarJugador.FlatAppearance.BorderSize = 0;
-            this.btnAgregarJugador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarJugador.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarJugador.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarJugador.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarJugador.Image")));
-            this.btnAgregarJugador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarJugador.Location = new System.Drawing.Point(52, 218);
-            this.btnAgregarJugador.Name = "btnAgregarJugador";
-            this.btnAgregarJugador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnAgregarJugador.Size = new System.Drawing.Size(291, 36);
-            this.btnAgregarJugador.TabIndex = 29;
-            this.btnAgregarJugador.Text = "     A G R E G A R";
-            this.btnAgregarJugador.UseVisualStyleBackColor = false;
-            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
+            this.btnModificarParticipante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificarParticipante.BackColor = System.Drawing.Color.White;
+            this.btnModificarParticipante.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarParticipante.FlatAppearance.BorderSize = 0;
+            this.btnModificarParticipante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarParticipante.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarParticipante.ForeColor = System.Drawing.Color.Black;
+            this.btnModificarParticipante.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarParticipante.Image")));
+            this.btnModificarParticipante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarParticipante.Location = new System.Drawing.Point(52, 218);
+            this.btnModificarParticipante.Name = "btnModificarParticipante";
+            this.btnModificarParticipante.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnModificarParticipante.Size = new System.Drawing.Size(291, 36);
+            this.btnModificarParticipante.TabIndex = 30;
+            this.btnModificarParticipante.Text = "    M O D I F I C A R";
+            this.btnModificarParticipante.UseVisualStyleBackColor = false;
+            this.btnModificarParticipante.Click += new System.EventHandler(this.btnModificarJugador_Click);
+            // 
+            // btnAgregarParticipante
+            // 
+            this.btnAgregarParticipante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarParticipante.BackColor = System.Drawing.Color.White;
+            this.btnAgregarParticipante.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarParticipante.FlatAppearance.BorderSize = 0;
+            this.btnAgregarParticipante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarParticipante.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarParticipante.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarParticipante.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarParticipante.Image")));
+            this.btnAgregarParticipante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarParticipante.Location = new System.Drawing.Point(52, 218);
+            this.btnAgregarParticipante.Name = "btnAgregarParticipante";
+            this.btnAgregarParticipante.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnAgregarParticipante.Size = new System.Drawing.Size(291, 36);
+            this.btnAgregarParticipante.TabIndex = 29;
+            this.btnAgregarParticipante.Text = "     A G R E G A R";
+            this.btnAgregarParticipante.UseVisualStyleBackColor = false;
+            this.btnAgregarParticipante.Click += new System.EventHandler(this.btnAgregarParticipante_Click_1);
             // 
             // parrotGradientPanel1
             // 
@@ -284,17 +294,6 @@ namespace Vista
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // cboFase
-            // 
-            this.cboFase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboFase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboFase.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFase.FormattingEnabled = true;
-            this.cboFase.Location = new System.Drawing.Point(52, 109);
-            this.cboFase.Name = "cboFase";
-            this.cboFase.Size = new System.Drawing.Size(121, 27);
-            this.cboFase.TabIndex = 31;
-            // 
             // formParticipanteEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,14 +323,14 @@ namespace Vista
         private System.Windows.Forms.ComboBox cboEquipo;
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboEstadoPartido;
-        private System.Windows.Forms.ComboBox cboDeporte;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.ComboBox cboCampeonato;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel2;
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.Label lblJugadorEvento;
-        private System.Windows.Forms.Button btnModificarJugador;
-        private System.Windows.Forms.Button btnAgregarJugador;
+        private System.Windows.Forms.Button btnModificarParticipante;
+        private System.Windows.Forms.Button btnAgregarParticipante;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cboFase;
     }

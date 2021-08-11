@@ -29,12 +29,11 @@ namespace Modelo.DAO
                     "VALUES (NULL, ?puntos?, ?fkIdCampeonato?, ?fkIdEquipo?, ?fkIdFase?, ?fkIdEstadoParticipante?);";
                     var ValorDeVariables = new
                     {
-                        nombre = modelo.puntos,
-                        anotaciones = modelo.fkIdCampeonato,
-                        fkIdEquipo = modelo.fkIdEquipo,
-                        fkIdFase = modelo.fkIdFase,
+                        puntos = modelo.puntos,
                         fkIdCampeonato = modelo.fkIdCampeonato,
-                        fkIdEstadoParticiapante = modelo.fkIdFase
+                        fkIdEquipo = modelo.fkIdEquipo,
+                        fkIdEstadoParticipante = modelo.fkIdEstadoParticipante,
+                        fkIdFase = modelo.fkIdFase
                     };
                     conexionODBC.Execute(sqlinsertar, ValorDeVariables);
                     ODBC.cerrarConexion(conexionODBC);
@@ -48,14 +47,14 @@ namespace Modelo.DAO
             /// </summary>
             /// <param name="modelo"></param>
             /// <returns></returns>
-            public dtoParticipante modificarParticpantes(dtoParticipante modelo)
+            public dtoParticipante modificarParticipantes(dtoParticipante modelo)
             {
                 OdbcConnection conexionODBC = ODBC.abrirConexion();
                 if (conexionODBC != null)
                 {
                     var sqlinsertar =
                     "UPDATE participante SET puntos = ?puntos?, fkIdCampeonato = ?fkIdCampeonato?, " +
-                    "fkIdEquipo = ?fkIdEquipo?, fkIdEstadoParticipante = ?fkIdEstadoParticipante?" +
+                    "fkIdEquipo = ?fkIdEquipo?, fkIdEstadoParticipante = ?fkIdEstadoParticipante?, fkIdFase = ?fkIdFase?" +
                     " WHERE pkId = ?pkId?;";
                     var ValorDeVariables = new
                     {
@@ -63,6 +62,7 @@ namespace Modelo.DAO
                         fkIdCampeonato = modelo.fkIdCampeonato,
                         fkIdEquipo = modelo.fkIdEquipo,
                         fkIdEstadoParticipante = modelo.fkIdEstadoParticipante,
+                        fkIdFase = modelo.fkIdFase,
                         pkId = modelo.pkId
                     };
                     conexionODBC.Execute(sqlinsertar, ValorDeVariables);
@@ -71,7 +71,7 @@ namespace Modelo.DAO
                 return modelo;
             }
 
-            public List<dtoParticipante> mostrarParticiapante()
+            public List<dtoParticipante> mostrarParticipante()
             {
                 OdbcConnection conexionODBC = ODBC.abrirConexion();
                 List<dtoParticipante> sqlresultado = new List<dtoParticipante>();
@@ -97,7 +97,7 @@ namespace Modelo.DAO
             //    return sqlresultado;
             //}
 
-            public dtoParticipante eliminarParticiapante(dtoParticipante modelo)
+            public dtoParticipante eliminarParticipante(dtoParticipante modelo)
             {
                 OdbcConnection conexionODBC = ODBC.abrirConexion();
                 if (conexionODBC != null)
@@ -113,5 +113,6 @@ namespace Modelo.DAO
                 }
                 return modelo;
             }
-        }
+
+    }
     }

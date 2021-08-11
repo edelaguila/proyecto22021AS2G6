@@ -37,15 +37,15 @@ namespace Vista
             //cboCampeonato.SelectedIndex = -1;
 
             daoEquipo equipo1 = new daoEquipo();
-            cboEquipo2.DataSource = equipo1.mostrarEquipo();
-            cboEquipo2.DisplayMember = "nombre";
-            cboEquipo2.ValueMember = "nombre";
+            cboEquipo1.DataSource = equipo1.mostrarEquipo();
+            cboEquipo1.DisplayMember = "nombre";
+            cboEquipo1.ValueMember = "nombre";
             //cboEquipo2.SelectedIndex = -1;
 
             daoEquipo equipo2 = new daoEquipo();
-            cboEquipo1.DataSource = equipo2.mostrarEquipo();
-            cboEquipo1.DisplayMember = "nombre";
-            cboEquipo1.ValueMember = "nombre";
+            cboEquipo2.DataSource = equipo2.mostrarEquipo();
+            cboEquipo2.DisplayMember = "nombre";
+            cboEquipo2.ValueMember = "nombre";
             //cboEquipo1.SelectedIndex = -1;
 
             daoEmpleado empleado = new daoEmpleado();

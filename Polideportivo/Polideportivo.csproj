@@ -112,6 +112,8 @@
     <Compile Include="Controlador\controladorEntrenador.cs" />
     <Compile Include="Controlador\controladorEquipo.cs" />
     <Compile Include="Controlador\controladorEquipoEventos.cs" />
+    <Compile Include="Controlador\controladorParticipante.cs" />
+    <Compile Include="Modelo\DAO\daoEstadoParticipante.cs" />
     <Compile Include="Controlador\controladorUsuarioIniciar.cs" />
     <Compile Include="Controlador\controladorUsuarioRegistrar.cs" />
     <Compile Include="Modelo\DAO\daoFase.cs" />
@@ -136,6 +138,7 @@
     <Compile Include="Modelo\DAO\daoDeporte.cs" />
     <Compile Include="Modelo\DAO\daoJugador.cs" />
     <Compile Include="Modelo\DAO\daoPartido.cs" />
+    <Compile Include="Modelo\DTO\dtoEstadoParticipante.cs" />
     <Compile Include="Modelo\DTO\dtoFase.cs" />
     <Compile Include="Modelo\DTO\dtoJugador.cs" />
     <Compile Include="Modelo\DTO\dtoEstadoPartido.cs" />

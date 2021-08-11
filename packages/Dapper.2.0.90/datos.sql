@@ -23,7 +23,7 @@ INSERT INTO puestoempleado(pkId, nombre) VALUES  (NULL, "Secretaria");
 INSERT INTO empleado(pkId, nombre, fkIdPuestoEmpleado) VALUES (NULL, "Jorge", 1);
 INSERT INTO estadoPartido(pkId, nombre) VALUES (NULL, "En espera");
 INSERT INTO estadoPartido(pkId, nombre) VALUES (NULL, "Finalizado");
-INSERT INTO partido(pkId, equipo1, equipo2, anotacionesEquipo1, anotacionesEquipo2, campo, fecha, fase, fkIdCampeonato, fkIdEmpleado, fkIdEstadoPartido) VALUES (NULL, "Madrid", "Barcelona", "2","4", "mateo",'2015-12-29 19:48' ,"final", 1 ,1, 1);
+INSERT INTO partido(pkId, equipo1, equipo2, anotacionesEquipo1, anotacionesEquipo2, campo, fecha, fkIdFase, fkIdCampeonato, fkIdEmpleado, fkIdEstadoPartido) VALUES (NULL, "Madrid", "Barcelona", "2","4", "mateo",'2015-12-29 19:48' ,1, 1 ,1, 1);
 INSERT INTO fase(pkId, nombre) VALUES(NULL, "Finales");
 INSERT INTO fase(pkId, nombre) VALUES(NULL, "Semifinales");
 INSERT INTO fase(pkId, nombre) VALUES(NULL, "Cuartos de final");
@@ -31,7 +31,7 @@ INSERT INTO fase(pkId, nombre) VALUES(NULL, "Octavos de final");
 INSERT INTO estadoParticipante(pkId, nombre) VALUES (NULL, "Eliminado");
 INSERT INTO estadoParticipante(pkId, nombre) VALUES (NULL, "Activo");
 INSERT INTO participante(pkId, puntos, fkIdCampeonato, fkIdEquipo, fkIdFase, fkIdEstadoParticipante) VALUES(NULL, 15,1,1,1,1);
-
+select * from entrenador;
 select * from participante;
 DROP VIEW IF EXISTS `vwParticipante`;
 CREATE VIEW `vwParticipante` AS
@@ -45,9 +45,10 @@ FROM participante A
 INNER JOIN campeonato B ON B.pkId = A.fkIdCampeonato
 INNER JOIN equipo C ON C.pkId = A.fkIdEquipo
 INNER JOIN fase D ON D.pkId = A.fkIdFase
-INNER JOIN estadoparticipante E ON E.pkId = A.fkIdEstadoParticipante;
+INNER JOIN estadoparticipante E ON E.pkId = A.fkIdEstadoParticipante
+ORDER BY A.puntos ASC;
 select * from vwParticipante;
-
+select * from participante;
 DROP VIEW IF EXISTS `vwParticipante`;
 CREATE VIEW `vwParticipante` AS
 SELECT 
@@ -143,3 +144,13 @@ FROM entrenador A
 INNER JOIN equipo B ON B.pkId = A.fkIdEquipo
 INNER JOIN deporte C ON B.fkIdDeporte = C.pkId ORDER BY pkIdEntrenador ASC;
 select * from rol;
+select * from campeonato;
+/* Vista de tipofalta */
+DROP VIEW IF EXISTS vwTipoFalta;
+CREATE VIEW vwTipoFalta AS
+SELECT 
+A.pkId AS pkIdTipoFalta, A.tipo, 
+B.pkId as pkIdDeporte, B.nombre AS deporte
+FROM tipofalta A
+INNER JOIN deporte B ON B.pkId = A.fkIdDeporte 
+ORDER BY pkIdTipoFalta ASC;

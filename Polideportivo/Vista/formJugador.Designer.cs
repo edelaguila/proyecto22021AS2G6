@@ -405,6 +405,7 @@ namespace Vista
             this.btnAgregarJugador.TabIndex = 27;
             this.btnAgregarJugador.Text = "     A G R E G A R";
             this.btnAgregarJugador.UseVisualStyleBackColor = false;
+            this.btnAgregarJugador.Click += new System.EventHandler(this.btnAgregarJugador_Click);
             // 
             // vwjugadorTableAdapter
             // 

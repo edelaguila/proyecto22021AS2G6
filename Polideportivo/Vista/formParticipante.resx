@@ -191,7 +191,7 @@
         gl95jnrN+Bm1AwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnAgregarPartido.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAgregarParticipante.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAA1dJREFUSEvl
         VVlrU0EUjrviihsoLlWLrTSde9M81Lq1D6KiDy5YQVHwRdFiMffeSUpdalwKbi9WEGrdilprtE3m3jRW
@@ -213,5 +213,8 @@
   </data>
   <metadata name="vwparticipanteTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>358, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>85</value>
   </metadata>
 </root>

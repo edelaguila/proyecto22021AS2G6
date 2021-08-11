@@ -50,11 +50,11 @@ namespace Vista
             this.txtFiltrar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnAgregarPartido = new System.Windows.Forms.Button();
+            this.btnAgregarParticipante = new System.Windows.Forms.Button();
             this.vwparticipanteTableAdapter = new Datos.vwParticipanteTableAdapters.vwparticipanteTableAdapter();
+            this.pkIdParticipanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkIdEquipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pkIdParticipanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puntosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pkIdCampeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.campeonatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,7 +83,7 @@ namespace Vista
             this.parrotGradientPanel1.Controls.Add(this.panelBuscarCol);
             this.parrotGradientPanel1.Controls.Add(this.panel2);
             this.parrotGradientPanel1.Controls.Add(this.btnModificar);
-            this.parrotGradientPanel1.Controls.Add(this.btnAgregarPartido);
+            this.parrotGradientPanel1.Controls.Add(this.btnAgregarParticipante);
             this.parrotGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.Low;
             this.parrotGradientPanel1.Location = new System.Drawing.Point(0, 0);
@@ -119,9 +119,9 @@ namespace Vista
             this.tablaParticipantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tablaParticipantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaParticipantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pkIdParticipanteDataGridViewTextBoxColumn,
             this.pkIdEquipoDataGridViewTextBoxColumn,
             this.equipoDataGridViewTextBoxColumn,
-            this.pkIdParticipanteDataGridViewTextBoxColumn,
             this.puntosDataGridViewTextBoxColumn,
             this.pkIdCampeonatoDataGridViewTextBoxColumn,
             this.campeonatoDataGridViewTextBoxColumn,
@@ -148,7 +148,6 @@ namespace Vista
             this.tablaParticipantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaParticipantes.Size = new System.Drawing.Size(768, 413);
             this.tablaParticipantes.TabIndex = 34;
-            this.tablaParticipantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaParticipantes_CellContentClick);
             // 
             // vwparticipanteBindingSource
             // 
@@ -199,7 +198,6 @@ namespace Vista
             this.btnActualizar.TabIndex = 32;
             this.btnActualizar.Text = "      A C T U A L I Z A R";
             this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // panelBuscarCol
             // 
@@ -232,7 +230,6 @@ namespace Vista
             this.cboBuscar.Name = "cboBuscar";
             this.cboBuscar.Size = new System.Drawing.Size(263, 26);
             this.cboBuscar.TabIndex = 32;
-            this.cboBuscar.SelectedIndexChanged += new System.EventHandler(this.cboBuscar_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
@@ -275,7 +272,6 @@ namespace Vista
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(252, 20);
             this.txtFiltrar.TabIndex = 1;
-            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
             // pictureBox1
             // 
@@ -305,32 +301,40 @@ namespace Vista
             this.btnModificar.TabIndex = 28;
             this.btnModificar.Text = "    M O D I F I C A R";
             this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnAgregarPartido
+            // btnAgregarParticipante
             // 
-            this.btnAgregarPartido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarPartido.BackColor = System.Drawing.Color.White;
-            this.btnAgregarPartido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarPartido.FlatAppearance.BorderSize = 0;
-            this.btnAgregarPartido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAgregarPartido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarPartido.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarPartido.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarPartido.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarPartido.Image")));
-            this.btnAgregarPartido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarPartido.Location = new System.Drawing.Point(392, 85);
-            this.btnAgregarPartido.Name = "btnAgregarPartido";
-            this.btnAgregarPartido.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnAgregarPartido.Size = new System.Drawing.Size(210, 36);
-            this.btnAgregarPartido.TabIndex = 27;
-            this.btnAgregarPartido.Text = "     A G R E G A R";
-            this.btnAgregarPartido.UseVisualStyleBackColor = false;
-            this.btnAgregarPartido.Click += new System.EventHandler(this.btnAgregarPartido_Click);
+            this.btnAgregarParticipante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarParticipante.BackColor = System.Drawing.Color.White;
+            this.btnAgregarParticipante.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarParticipante.FlatAppearance.BorderSize = 0;
+            this.btnAgregarParticipante.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAgregarParticipante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarParticipante.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarParticipante.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarParticipante.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarParticipante.Image")));
+            this.btnAgregarParticipante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarParticipante.Location = new System.Drawing.Point(392, 85);
+            this.btnAgregarParticipante.Name = "btnAgregarParticipante";
+            this.btnAgregarParticipante.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnAgregarParticipante.Size = new System.Drawing.Size(210, 36);
+            this.btnAgregarParticipante.TabIndex = 27;
+            this.btnAgregarParticipante.Text = "     A G R E G A R";
+            this.btnAgregarParticipante.UseVisualStyleBackColor = false;
             // 
             // vwparticipanteTableAdapter
             // 
             this.vwparticipanteTableAdapter.ClearBeforeFill = true;
+            // 
+            // pkIdParticipanteDataGridViewTextBoxColumn
+            // 
+            this.pkIdParticipanteDataGridViewTextBoxColumn.DataPropertyName = "pkIdParticipante";
+            this.pkIdParticipanteDataGridViewTextBoxColumn.HeaderText = "pkIdParticipante";
+            this.pkIdParticipanteDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.pkIdParticipanteDataGridViewTextBoxColumn.Name = "pkIdParticipanteDataGridViewTextBoxColumn";
+            this.pkIdParticipanteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pkIdParticipanteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.pkIdParticipanteDataGridViewTextBoxColumn.Visible = false;
             // 
             // pkIdEquipoDataGridViewTextBoxColumn
             // 
@@ -350,16 +354,6 @@ namespace Vista
             this.equipoDataGridViewTextBoxColumn.Name = "equipoDataGridViewTextBoxColumn";
             this.equipoDataGridViewTextBoxColumn.ReadOnly = true;
             this.equipoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // pkIdParticipanteDataGridViewTextBoxColumn
-            // 
-            this.pkIdParticipanteDataGridViewTextBoxColumn.DataPropertyName = "pkIdParticipante";
-            this.pkIdParticipanteDataGridViewTextBoxColumn.HeaderText = "pkIdParticipante";
-            this.pkIdParticipanteDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.pkIdParticipanteDataGridViewTextBoxColumn.Name = "pkIdParticipanteDataGridViewTextBoxColumn";
-            this.pkIdParticipanteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pkIdParticipanteDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.pkIdParticipanteDataGridViewTextBoxColumn.Visible = false;
             // 
             // puntosDataGridViewTextBoxColumn
             // 
@@ -436,7 +430,6 @@ namespace Vista
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formParticipante";
             this.Text = "formJugadorPlantilla1";
-            this.Load += new System.EventHandler(this.formParticipante_Load);
             this.parrotGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablaParticipantes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwparticipanteBindingSource)).EndInit();
@@ -452,24 +445,24 @@ namespace Vista
 
         #endregion
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private System.Windows.Forms.Button btnAgregarPartido;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtFiltrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelBuscarCol;
-        private System.Windows.Forms.ComboBox cboBuscar;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label1;
-        private Zuby.ADGV.AdvancedDataGridView tablaParticipantes;
-        private vwParticipante vwParticipante;
-        private System.Windows.Forms.BindingSource vwparticipanteBindingSource;
-        private Datos.vwParticipanteTableAdapters.vwparticipanteTableAdapter vwparticipanteTableAdapter;
+        public System.Windows.Forms.Button btnAgregarParticipante;
+        public System.Windows.Forms.Button btnModificar;
+        public System.Windows.Forms.TextBox txtFiltrar;
+        public System.Windows.Forms.ComboBox cboBuscar;
+        public System.Windows.Forms.Button btnActualizar;
+        public System.Windows.Forms.Button btnEliminar;
+        public Zuby.ADGV.AdvancedDataGridView tablaParticipantes;
+        public vwParticipante vwParticipante;
+        public System.Windows.Forms.BindingSource vwparticipanteBindingSource;
+        public Datos.vwParticipanteTableAdapters.vwparticipanteTableAdapter vwparticipanteTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdParticipanteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdEquipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pkIdParticipanteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn puntosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pkIdCampeonatoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn campeonatoDataGridViewTextBoxColumn;

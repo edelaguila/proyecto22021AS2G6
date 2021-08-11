@@ -19,5 +19,10 @@ namespace Vista
         {
             // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
         }
+
+        private void btnAgregarJugador_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

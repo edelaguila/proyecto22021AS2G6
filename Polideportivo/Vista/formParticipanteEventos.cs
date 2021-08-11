@@ -11,15 +11,11 @@ namespace Vista
 {
     public partial class formParticipanteEventos : Form
     {
-   
-
         private dtoParticipante modelo = new dtoParticipante();
 
         private controladorParticipante formOriginal = new controladorParticipante();
 
         private dtoParticipante modeloOriginal = new dtoParticipante();
-
-
 
         public formParticipanteEventos(dtoParticipante modelo, controladorParticipante form)
         {
@@ -65,7 +61,7 @@ namespace Vista
         public formParticipanteEventos(controladorParticipante form)
         {
             // Este constructor es el que se utiliza para agregar datos
-            
+
             InitializeComponent();
             btnAgregarParticipante.Visible = true;
             btnModificarParticipante.Visible = false;
@@ -76,32 +72,42 @@ namespace Vista
             cboCampeonato.DataSource = campeonato.mostrarCampeonato();
             cboCampeonato.DisplayMember = "nombre";
             cboCampeonato.ValueMember = "pkId";
-            cboCampeonato.SelectedItem = cboCampeonato.Items[0];
+            if (cboCampeonato.SelectedIndex != -1)
+            {
+                cboCampeonato.SelectedItem = cboCampeonato.Items[0];
+            }
 
             daoEquipo equipo = new daoEquipo();
             cboEquipo.DataSource = equipo.mostrarEquipo();
             cboEquipo.DisplayMember = "nombre";
             cboEquipo.ValueMember = "pkId";
-            cboEquipo.SelectedItem = cboEquipo.Items[0];
+            if (cboEquipo.SelectedIndex != -1)
+            {
+                cboEquipo.SelectedItem = cboEquipo.Items[0];
+            }
 
             daoFase fase = new daoFase();
             cboFase.DataSource = fase.mostrarFase();
             cboFase.DisplayMember = "nombre";
             cboFase.ValueMember = "pkId";
-            cboFase.SelectedItem = cboFase.Items[0];
+            if (cboFase.SelectedIndex != -1)
+            {
+                cboFase.SelectedItem = cboFase.Items[0];
+            }
 
             daoEstadoParticipante estado = new daoEstadoParticipante();
             cboEstado.DataSource = estado.mostrarEstadoParticipante();
             cboEstado.DisplayMember = "nombre";
             cboEstado.ValueMember = "pkId";
-            cboEstado.SelectedItem = cboEstado.Items[0];
+            if (cboEstado.SelectedIndex != -1)
+            {
+                cboEstado.SelectedItem = cboEstado.Items[0];
+            }
 
             formOriginal = form;
             // Modificar el texto del título
             lblJugadorEvento.Text = "AGREGAR PARTICIPANTE";
         }
-
-      
 
         // Actualizar el combobox de roles dependiendo del deporte seleccionado
         //private void cboDeporte_SelectedIndexChanged(object sender, EventArgs e)

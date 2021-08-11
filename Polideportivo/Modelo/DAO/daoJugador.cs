@@ -17,8 +17,8 @@ namespace Modelo.DAO
         /// <summary>
         /// Método que sirve para agregar nuevos jugadores a la base de datos
         /// </summary>
-        /// <param name="modelo"></param>
-        /// <returns></returns>
+        /// <param name="modelo">Recibe el modelo de jugador que se desea ingresar</param>
+        /// <returns>Retorna el jugador ingresado para ser agregado a la tabla</returns>
         public dtoJugador agregarJugador(dtoJugador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -44,8 +44,8 @@ namespace Modelo.DAO
         /// <summary>
         /// Método que sirve para modificar jugadores
         /// </summary>
-        /// <param name="modelo"></param>
-        /// <returns></returns>
+        /// <param name="modelo">Recibe el modelo de jugador para poder modificarlo</param>
+        /// <returns>Retorna el jugador modificado para ser modificado en la tabla</returns>
         public dtoJugador modificarJugador(dtoJugador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -68,7 +68,10 @@ namespace Modelo.DAO
             }
             return modelo;
         }
-
+        /// <summary>
+        /// Metodo que sirve para mostrar los jugadores 
+        /// </summary>
+        /// <returns>Retorna la consulta a la base de datos que son los jugadores de la tablaJugadores</returns>
         public List<dtoJugador> mostrarJugadores()
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -81,7 +84,10 @@ namespace Modelo.DAO
             }
             return sqlresultado;
         }
-
+        /// <summary>
+        /// Metodo que sirve para mostrar los jugadores por el deporte que se selecciono
+        /// </summary>
+        /// <returns>retorna la consulta a la base de datos</returns>
         public List<dtoJugador> mostrarJugadoresPorDeporte()
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -94,7 +100,11 @@ namespace Modelo.DAO
             }
             return sqlresultado;
         }
-
+        /// <summary>
+        /// Metodo que sirve para eliminar el jugador seleccionado de la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo del jugador seleccionado</param>
+        /// <returns>Retorna el modelo del jugador seleccionado para eliminarlo</returns>
         public dtoJugador eliminarJugador(dtoJugador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();

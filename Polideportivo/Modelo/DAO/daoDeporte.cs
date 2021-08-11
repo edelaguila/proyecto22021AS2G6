@@ -11,6 +11,11 @@ namespace Modelo.DAO
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
+        /// <summary>
+        /// Método que sirve para agregar nuevos deportes a la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo del deporte que se desea ingresar</param>
+        /// <returns>Retorna el deporte ingresado para ser agregado a la tabla</returns>
         public dtoDeporte agregarDeporte(dtoDeporte modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -29,7 +34,11 @@ namespace Modelo.DAO
             }
             return null;
         }
-
+        /// <summary>
+        /// Método que sirve para modificar Deportes
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de deporte para poder modificarlo</param>
+        /// <returns>Retorna el deporte modificado para ser modificado en la tabla</returns>
         public dtoDeporte modificarDeporte(dtoDeporte modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -50,6 +59,11 @@ namespace Modelo.DAO
             return null;
         }
 
+        /// <summary>
+        /// Metodo que sirve para eliminar el deporte seleccionado de la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo del deporte seleccionado</param>
+        /// <returns>Retorna el modelo del deporte seleccionado para eliminarlo</returns>
         public dtoDeporte eliminarDeporte(dtoDeporte modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -68,7 +82,10 @@ namespace Modelo.DAO
             }
             return null;
         }
-
+        /// <summary>
+        /// Metodo que sirve para mostrar los deportes
+        /// </summary>
+        /// <returns>Retorna la consulta a la base de datos que son los deportes de la tabladeportes</returns>
         public List<dtoDeporte> mostrarDeportes()
         {
             List<dtoDeporte> sqlresultado = new List<dtoDeporte>();

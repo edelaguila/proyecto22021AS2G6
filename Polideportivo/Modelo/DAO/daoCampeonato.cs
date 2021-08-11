@@ -11,6 +11,11 @@ namespace Modelo.DAO
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
+        /// <summary>
+        ///  Método que sirve para agregar nuevos campeonatos a la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de Campeonato que se desea ingresar</param>
+        /// <returns>Retorna el campeonato ingresado para ser agregado a la tabla</returns>
         public dtoCampeonato AgregarCampeonato(dtoCampeonato modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -35,6 +40,11 @@ namespace Modelo.DAO
             return modelo;
         }
 
+        /// <summary>
+        /// Método que sirve para modificar campeonatos 
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de campeonato que se desea modificar</param>
+        /// <returns>Retorna el jugador seleccionado para ser modificado en la tabla</returns>
         public dtoCampeonato ModificarCampeonato(dtoCampeonato modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -60,6 +70,11 @@ namespace Modelo.DAO
             return modelo;
         }
 
+        /// <summary>
+        /// Método que sirve para eliminar campeonatos
+        /// </summary>
+        /// <param name="modelo">Reibe el modelo del campeonato seleccionado</param>
+        /// <returns>Retorna el modelo del jugador seleccionado para ser eliminado</returns>
         public dtoCampeonato eliminarCampeonato(dtoCampeonato modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -78,6 +93,10 @@ namespace Modelo.DAO
             return modelo;
         }
 
+        /// <summary>
+        /// Método que sirve para mostrar los campeonatos 
+        /// </summary>
+        /// <returns>Retorna los campeonatos para ser mostrados en la tabla</returns>
         public List<dtoCampeonato> mostrarCampeonato()
         {
             List<dtoCampeonato> sqlresultado = new List<dtoCampeonato>();

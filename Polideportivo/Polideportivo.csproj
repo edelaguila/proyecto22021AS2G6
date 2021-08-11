@@ -114,6 +114,8 @@
     <Compile Include="Controlador\controladorEquipoEventos.cs" />
     <Compile Include="Controlador\controladorParticipante.cs" />
     <Compile Include="Modelo\DAO\daoEstadoParticipante.cs" />
+    <Compile Include="Controlador\controladorUsuarioIniciar.cs" />
+    <Compile Include="Controlador\controladorUsuarioRegistrar.cs" />
     <Compile Include="Modelo\DAO\daoFase.cs" />
     <Compile Include="Modelo\DAO\daoEstadoPartido.cs" />
     <Compile Include="Controlador\controladorTipoFalta.cs" />
@@ -131,6 +133,7 @@
     <Compile Include="Modelo\DAO\daoRol.cs" />
     <Compile Include="Modelo\DAO\daoTipoCampeonato.cs" />
     <Compile Include="Modelo\DAO\daoTipoFalta.cs" />
+    <Compile Include="Modelo\DAO\daoTipoUsuario.cs" />
     <Compile Include="Modelo\DAO\daoUsuario.cs" />
     <Compile Include="Modelo\DAO\daoDeporte.cs" />
     <Compile Include="Modelo\DAO\daoJugador.cs" />
@@ -140,6 +143,7 @@
     <Compile Include="Modelo\DTO\dtoJugador.cs" />
     <Compile Include="Modelo\DTO\dtoEstadoPartido.cs" />
     <Compile Include="Modelo\DTO\dtoAnotacion.cs" />
+    <Compile Include="Modelo\DTO\dtoTipoUsuario.cs" />
     <Compile Include="Modelo\DTO\dtoCampeonato.cs" />
     <Compile Include="Modelo\DTO\dtoDeporte.cs" />
     <Compile Include="Modelo\DTO\dtoEmpleado.cs" />
@@ -279,11 +283,17 @@
     <Compile Include="Vista\formTipoFalta.Designer.cs">
       <DependentUpon>formTipoFalta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\formUsuario.cs">
+    <Compile Include="Vista\formUsuarioIniciar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\formUsuario.Designer.cs">
-      <DependentUpon>formUsuario.cs</DependentUpon>
+    <Compile Include="Vista\formUsuarioIniciar.Designer.cs">
+      <DependentUpon>formUsuarioIniciar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\formUsuarioRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\formUsuarioRegistrar.Designer.cs">
+      <DependentUpon>formUsuarioRegistrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\utilidadForms.cs" />
     <Compile Include="Datos\vwCampeonato.Designer.cs">
@@ -407,8 +417,11 @@
     <EmbeddedResource Include="Vista\formTipoFalta.resx">
       <DependentUpon>formTipoFalta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\formUsuario.resx">
-      <DependentUpon>formUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\formUsuarioIniciar.resx">
+      <DependentUpon>formUsuarioIniciar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formUsuarioRegistrar.resx">
+      <DependentUpon>formUsuarioRegistrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\utilidadForms.resx">
       <DependentUpon>utilidadForms.cs</DependentUpon>

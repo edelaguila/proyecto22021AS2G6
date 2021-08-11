@@ -17,6 +17,17 @@ namespace Vista
             }
         }
 
+        public static void abrirFormDentroDePanel(Form formHijo, Panel panel)
+        {
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            panel.Controls.Add(formHijo);
+            panel.Tag = formHijo;
+            formHijo.BringToFront();
+            formHijo.Show();
+        }
+
         public static void cerrarForm(Form formEvento)
         {
             formEvento.Close();

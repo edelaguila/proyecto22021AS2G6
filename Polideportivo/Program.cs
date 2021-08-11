@@ -14,7 +14,7 @@ namespace Polideportivo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formPolideportivo());
+            Application.Run(new formUsuario());
         }
     }
 }

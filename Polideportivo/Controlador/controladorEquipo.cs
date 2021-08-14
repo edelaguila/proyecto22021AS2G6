@@ -33,17 +33,23 @@ namespace Controlador
             vista.txtFiltrar.TextChanged += new EventHandler(cambioEnTextoFiltrarEquipo);
             vista.cboBuscar.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarEquipo);
         }
-
+        /// <summary>
+        /// Método que actualiza la tabla Equipo
+        /// </summary>
         private void clickActualizarEquipo(object sender, EventArgs e)
         {
             actualizarTablaJugadores();
         }
-
+        /// <summary>
+        /// Método para filtrar la tabla como el usuario desee
+        /// </summary>
         private void cambioEnTextoFiltrarEquipo(object sender, EventArgs e)
         {
             filtrarTabla();
         }
-
+        /// <summary>
+        /// Filtra la tablaEquipo con lo que el usuario ingrese en el textbox
+        /// </summary>
         private void opcionSeleccionadaBuscarEquipo(object sender, EventArgs e)
         {
             vista.txtFiltrar.Text = "";
@@ -71,17 +77,23 @@ namespace Controlador
         {
             abrirForm(new formEquipoEventos(this, "AGREGAR JUGADOR"));
         }
-
+        /// <summary>
+        /// Llena el modelo con la fila de la tablaEquipo seleccionada 
+        /// </summary>
         private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
         {
             llenarModeloConFilaSeleccionada();
         }
-
+        /// <summary>
+        /// Actualiza lo que es la tabla de equipo
+        /// </summary>
         private void cargarForm(object sender, EventArgs e)
         {
             actualizarTablaJugadores();
         }
-
+        /// <summary>
+        /// Filtra la tablaEquipo con los botones de arriba dependeiendo el que se seleccione 
+        /// </summary>
         private void filtrarTabla()
         {
             if (string.IsNullOrEmpty(vista.txtFiltrar.Text))
@@ -93,7 +105,9 @@ namespace Controlador
                 vista.vwequipoBindingSource.Filter = string.Format("{0}='{1}'", vista.cboBuscar.Text, vista.txtFiltrar.Text);
             }
         }
-
+        /// <summary>
+        /// Actualiza la tablaJugadores y la llena con las tablas
+        /// </summary>
         public void actualizarTablaJugadores()
         {
             vista.vwequipoTableAdapter.Fill(vista.vwEquipo.vwequipo);

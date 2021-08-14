@@ -44,7 +44,9 @@ namespace Controlador
         public controladorPartido()
         {
         }
-
+        /// <summary>
+        /// Método que sirve para cargar la tablaPartido con las vistas creadas en la base de datos
+        /// </summary>
         private void cargarForm(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'vwPartido.vwpartido' Puede moverla o quitarla según sea necesario.
@@ -53,32 +55,44 @@ namespace Controlador
             vista.tablaPartidos.CurrentCell = vista.tablaPartidos.Rows[0].Cells[1];
             llenarModeloConFilaSeleccionada();
         }
-
+        /// <summary>
+        /// Método para llenar la tabla con la fila seleccionada
+        /// </summary>
         private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
         {
             llenarModeloConFilaSeleccionada();
         }
-
+        /// <summary>
+        ///Método que actualiza la tablaPartido 
+        /// </summary>
         private void clickActualizarPartido(object sender, EventArgs e)
         {
             actualizarTablaPartido();
         }
-
+        /// <summary>
+        /// Método que abre el formPartidoEventos para agregar nuevos partidos
+        /// </summary>
         private void clickAgregarPartido(object sender, EventArgs e)
         {
             abrirForm(new formPartidoEventos(this));
         }
-
+        /// <summary>
+        /// Método que abre el formPartidoEventos para modificar el partido seleccionado en la tabla 
+        /// </summary>
         private void clickModificarPartido(object sender, EventArgs e)
         {
             abrirForm(new formPartidoEventos(modeloFila, this));
         }
-
+        /// <summary>
+        /// Filtra dentro de la tabla con el texto que se ingrese dentro del textbox
+        /// </summary>
         private void opcionSeleccionadaBuscarPartido(object sender, EventArgs e)
         {
             vista.txtFiltrar.Text = "";
         }
-
+        /// <summary>
+        /// Método para eliminar el partido seleccionado dentro de la tabla
+        /// </summary>
         private void clickEliminarPartido(object sender, EventArgs e)
         {
             llenarModeloConFilaSeleccionada();
@@ -86,17 +100,23 @@ namespace Controlador
             daoPartido.eliminarPartido(modeloFila);
             actualizarTablaPartido();
         }
-
+        /// <summary>
+        /// Método que sirve para filtrar la tabla
+        /// </summary>
         private void cambioEnTextoFiltrarPartido(object sender, EventArgs e)
         {
             filtrarTabla();
         }
-
+        /// <summary>
+        /// Método para actualizar la tablaPartido
+        /// </summary>
         public void actualizarTablaPartido()
         {
             vista.vwpartidoTableAdapter.Fill(vista.vwPartido.vwpartido);
         }
-
+        /// <summary>
+        /// Llena la tabla de partido con lo que se tiene ingresado en el dtoPartido
+        /// </summary>
         public void llenarModeloConFilaSeleccionada()
         {
             id = stringAInt(vista.tablaPartidos.SelectedRows[0].Cells[0].Value.ToString());
@@ -117,7 +137,9 @@ namespace Controlador
             modeloFila.fkIdEmpleado = fkIdEmpleado;
             modeloFila.fkIdFase = fkIdFase;
         }
-
+        /// <summary>
+        /// Método para filtrar la tabla con los datos que se deseen ver
+        /// </summary>
         private void filtrarTabla()
         {
             if (string.IsNullOrEmpty(vista.txtFiltrar.Text))

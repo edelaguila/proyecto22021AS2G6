@@ -76,7 +76,11 @@ namespace Vista
                 modeloequipo.fkIdDeporte = stringAInt(cboDeporte.SelectedValue.ToString());
             }
         }
-
+        /// <summary>
+        /// Cerrar el form presionando el bot
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
             cerrarForm(this);
@@ -116,7 +120,11 @@ namespace Vista
             formOriginal.actualizarTabla();
             cerrarForm(this);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregarCampeonato_Click(object sender, EventArgs e)
         {
             daoCampeonato controlador = new daoCampeonato();

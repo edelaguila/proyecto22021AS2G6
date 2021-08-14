@@ -8,6 +8,9 @@ namespace Vista
 {
     public partial class formPolideportivo : Form
     {
+        /// <summary>
+        /// Inicializa los componentes dentro del form lo que son los páneles
+        /// </summary>
         public formPolideportivo()
         {
 
@@ -36,31 +39,52 @@ namespace Vista
             ResumeLayout();
             base.OnResizeEnd(e);
         }
-
+        /// <summary>
+        /// Al presionar el botón de restaurar restaura la ventana a su tamaño original
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Restaurar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
             Maximizar.Visible = true;
             Restaurar.Visible = false;
         }
-
+        /// <summary>
+        /// Al presionar el botón de minimizar, minimiza la ventana del form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Minimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
-
+        /// <summary>
+        /// Al presionar el botón de maximizar, maximiza la ventana del form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Maximizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
             Maximizar.Visible = false;
             Restaurar.Visible = true;
         }
-
+        /// <summary>
+        /// Al presionar el boton de salir, finaliza el programa
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// Da las instrucciones de tamaño de lo que es los páneles laterales del menú
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLateral_Click(object sender, EventArgs e)
         {
             if (panelLateralInterno.Width == 250)
@@ -164,7 +188,11 @@ namespace Vista
             gestorDeFormActivoSubmenu(new formResultado(), "RESULTADO");
             botonSeleccionadoDentroDeSubmenu(panelMenuPartidos, btnSubMenuPartidosResultado);
         }
-
+        /// <summary>
+        /// Su función es para gestionar los forms activos a la hora de seleccionar otro
+        /// </summary>
+        /// <param name="formHijo"></param>
+        /// <param name="formHijoActual"></param>
         private void gestorDeFormActivo(Form formHijo, string formHijoActual)
         {
             lblTituloPrincipal.Text = formHijoActual;
@@ -183,7 +211,11 @@ namespace Vista
                 abrirFormHijo(formHijo, panelPrincipal);
             }
         }
-
+        /// <summary>
+        /// Su función es gestionar los submenus del menú
+        /// </summary>
+        /// <param name="formHijo"></param>
+        /// <param name="formHijoActual"></param>
         private void gestorDeFormActivoSubmenu(Form formHijo, string formHijoActual)
         {
             lblTituloPrincipal.Text = formHijoActual;
@@ -198,6 +230,11 @@ namespace Vista
             }
         }
 
+        /// <summary>
+        /// Funcíon para que los forms queden dentro del panel de dentro sin necesidad de cerrar la barra lateral del menú
+        /// </summary>
+        /// <param name="formHijo"></param>
+        /// <param name="panel"></param>
         private void abrirFormHijo(Form formHijo, Panel panel)
         {
             formActivo = formHijo;
@@ -209,7 +246,9 @@ namespace Vista
             formHijo.BringToFront();
             formHijo.Show();
         }
-
+        /// <summary>
+        /// Su función es cerrar el form que se abrió al presionar dos veces en el botón
+        /// </summary>
         private void cerrarFormActivo()
         {
             if (formActivo != null)

@@ -121,12 +121,20 @@ namespace Vista
         }
 
        
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
             cerrarForm(this);
         }
-
+        /// <summary>
+        /// Método que manda a llamar al daoPartido al método agregarPartido que sirve para agregar partidos dentro de la tablaPartido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregarPartido_Click(object sender, EventArgs e)
         {
             daoPartido daoPartido = new daoPartido();
@@ -146,7 +154,11 @@ namespace Vista
             formOriginal.actualizarTablaPartido();
             cerrarForm(this);
         }
-
+        /// <summary>
+        /// Método que manda a llamar al daoPartido que contiene el método modificarPartido que sirve para modificar partidos dentro de la tablaPartido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnModificarPartido_Click(object sender, EventArgs e)
         {
             daoPartido daoPartido = new daoPartido();

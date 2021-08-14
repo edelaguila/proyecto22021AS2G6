@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace Modelo.DAO
 {
+    /// <summary>
+    /// Clase utilizada para agregar, modificar, eliminar o mostrar los campos de jugadores en la base de datos.
+    /// </summary>
     class daoJugador
     {
         private ConexionODBC ODBC = new ConexionODBC();

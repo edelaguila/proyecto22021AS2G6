@@ -9,6 +9,9 @@ using Modelo.DTO;
 
 namespace Modelo.DAO
 {
+    /// <summary>
+    /// Clase utilizada para agregar, modificar, eliminar o mostrar los campos de partidos en la base de datos.
+    /// </summary>
     public class daoEstadoPartido
     {
         private ConexionODBC ODBC = new ConexionODBC();

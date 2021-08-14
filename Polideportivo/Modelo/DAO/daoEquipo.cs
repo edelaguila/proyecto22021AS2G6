@@ -7,6 +7,9 @@ using Modelo.DTO;
 
 namespace Modelo.DAO
 {
+    /// <summary>
+    /// Clase utilizada para agregar, modificar, eliminar o mostrar los campos de equipos en la base de datos.
+    /// </summary>
     public class daoEquipo
     {
         private ConexionODBC ODBC = new ConexionODBC();

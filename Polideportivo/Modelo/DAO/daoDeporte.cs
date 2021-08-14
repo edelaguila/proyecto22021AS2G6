@@ -7,6 +7,9 @@ using System.Linq;
 
 namespace Modelo.DAO
 {
+    /// <summary>
+    /// Clase utilizada para agregar, modificar, eliminar o mostrar los campos de deportes en la base de datos.
+    /// </summary>
     class daoDeporte
     {
         private ConexionODBC ODBC = new ConexionODBC();

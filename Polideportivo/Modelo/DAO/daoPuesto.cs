@@ -8,6 +8,9 @@ using Modelo.DTO;
 
 namespace Controlador
 {
+    /// <summary>
+    /// Clase utilizada para agregar, modificar, eliminar o mostrar los campos de puestos en la base de datos.
+    /// </summary>
     public class daoPuesto
     {
         private ConexionODBC ODBC = new ConexionODBC();

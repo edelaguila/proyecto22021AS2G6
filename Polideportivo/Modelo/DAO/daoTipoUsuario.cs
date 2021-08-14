@@ -9,6 +9,9 @@ using Modelo.DTO;
 
 namespace Controlador
 {
+    /// <summary>
+    /// Clase utilizada para mostrar los campos de tipo usuario en la base de datos.
+    /// </summary>
     public class daoTipoUsuario
     {
         private ConexionODBC ODBC = new ConexionODBC();

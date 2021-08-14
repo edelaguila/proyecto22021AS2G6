@@ -20,5 +20,10 @@ namespace Vista
         {
             // Es necesario para que no den errores cuando se cambia rápidamente pestañas del menú
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

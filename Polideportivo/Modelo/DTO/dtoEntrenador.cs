@@ -17,11 +17,6 @@
             nombre = Nombre;
             fkIdEquipo = IdEquipo;
             fkIdDeporte = IdDeporte;
-
-            //para cuando sean ints
-            //int numeroValor = 0;
-            //int.TryParse(numero, out numeroValor);
-            //Numero = numeroValor;
         }
     }
 }

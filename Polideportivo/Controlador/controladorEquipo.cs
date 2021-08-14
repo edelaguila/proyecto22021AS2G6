@@ -7,6 +7,9 @@ using static Vista.utilidadForms;
 
 namespace Controlador
 {
+    /// <summary>
+    /// Clase que gestiona la tabla de equipos de la base de datos
+    /// </summary>
     public class controladorEquipo
     {
         private formEquipo vista;
@@ -45,19 +48,25 @@ namespace Controlador
         {
             vista.txtFiltrar.Text = "";
         }
-
+        /// <summary>
+        /// Manda a llamar al daoEquipo al metodo eliminarEqipo que sirve para eliminar equipos de la tablaEquipos
+        /// </summary>
         private void clickEliminarEquipo(object sender, EventArgs e)
         {
             llenarModeloConFilaSeleccionada();
             daoEquipo.eliminarEquipo(modeloFila);
             actualizarTablaJugadores();
         }
-
+        /// <summary>
+        /// Abre el formulario forEquipoEventos para modificar equipos de la tabla
+        /// </summary>
         private void clickModificarEquipo(object sender, EventArgs e)
         {
             abrirForm(new formEquipoEventos(this, "MODIFICAR JUGADOR"));
         }
-
+        /// <summary>
+        /// Abre el formulario forEquipoEventos para agregar nuevos equipos a la tabla
+        /// </summary>
         private void clickAgregarEquipo(object sender, EventArgs e)
         {
             abrirForm(new formEquipoEventos(this, "AGREGAR JUGADOR"));
@@ -89,7 +98,9 @@ namespace Controlador
         {
             vista.vwequipoTableAdapter.Fill(vista.vwEquipo.vwequipo);
         }
-
+        /// <summary>
+        /// Llena la tabla de equipo con lo que se tiene ingresado en el dtoEquipo
+        /// </summary>
         public void llenarModeloConFilaSeleccionada()
         {
             modeloFila.pkId = stringAInt(vista.tablaEquipo.SelectedRows[0].Cells[0].Value.ToString());

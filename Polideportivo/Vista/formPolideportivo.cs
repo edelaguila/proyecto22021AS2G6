@@ -10,6 +10,7 @@ namespace Vista
     {
         public formPolideportivo()
         {
+
             InitializeComponent();
             panelLateralInterno.HorizontalScroll.Maximum = 0;
             panelLateralInterno.VerticalScroll.Maximum = 0;

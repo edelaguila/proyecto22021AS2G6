@@ -9,10 +9,13 @@ namespace Modelo.DAO
 {
     class daoFase
     {
-       
             private ConexionODBC ODBC = new ConexionODBC();
-
-            public dtoFase agregarFase(dtoFase modelo)
+        /// <summary>
+        /// Método que sirve para agregar nuevas fases a la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de fase que se desea ingresar</param>
+        /// <returns>Retorna la fase ingresada para ser agregado a la tabla</returns>
+        public dtoFase agregarFase(dtoFase modelo)
             {
                 OdbcConnection conexionODBC = ODBC.abrirConexion();
                 if (conexionODBC != null)
@@ -30,7 +33,11 @@ namespace Modelo.DAO
                 }
                 return null;
             }
-
+            /// <summary>
+            /// Método que sirve para modificar fases de los campeonatos
+            /// </summary>
+            /// <param name="modelo">Recibe el modelo de la fase para poder modificarlo</param>
+            /// <returns>Retorna la fase para ser modificada en la tabla</returns>
             public dtoFase modificarFase(dtoFase modelo)
             {
                 OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -50,7 +57,11 @@ namespace Modelo.DAO
                 }
                 return null;
             }
-
+            /// <summary>
+            /// Método que sirve para eliminar la fase seleccionada de la base de datos 
+            /// </summary>
+            /// <param name="modelo">Recibe el modelo de la fase seleccionada</param>
+            /// <returns>Retorna el modelo de la fase seleccionada para eliminarla</returns>
             public dtoFase eliminarFase(dtoFase modelo)
             {
                 OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -69,7 +80,10 @@ namespace Modelo.DAO
                 }
                 return null;
             }
-
+            /// <summary>
+            /// Metodo que sirve para mostrar la fase
+            /// </summary>
+            /// <returns>Retorna la consulta a la base de datos que son las fases de la tablaFase</returns>
             public List<dtoFase> mostrarFase()
             {
                 List<dtoFase> sqlresultado = new List<dtoFase>();

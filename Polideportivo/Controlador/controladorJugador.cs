@@ -92,7 +92,9 @@ namespace Controlador
         {
             vista.vwjugadorTableAdapter.Fill(vista.vwJugador.vwjugador);
         }
-
+        /// <summary>
+        /// Metodo que sirve para llenar la tablaJugadores con los datos que tenemos dentro del dtoJugadores
+        /// </summary>
         public void llenarModeloConFilaSeleccionada()
         {
             id = stringAInt(vista.tablaJugadores.SelectedRows[0].Cells[0].Value.ToString());
@@ -108,7 +110,9 @@ namespace Controlador
             modeloFila.fkIdRol = fkIdRol;
             modeloFila.fkIdDeporte = fkIdDeporte;
         }
-
+        /// <summary>
+        /// Metodo que sirve para filtrar los datos dentro de la tablaJugadores
+        /// </summary>
         private void filtrarTabla()
         {
             if (string.IsNullOrEmpty(vista.txtFiltrar.Text))

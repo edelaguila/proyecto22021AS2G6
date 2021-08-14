@@ -12,7 +12,11 @@ namespace Modelo.DAO
     public class daoEstadoPartido
     {
         private ConexionODBC ODBC = new ConexionODBC();
-
+        /// <summary>
+        /// Método que sirve para agregar nuevos estados de partido a la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de estado partido que se desea ingresar</param>
+        /// <returns></returns>
         public dtoEstadoPartido agregarEstado(dtoEstadoPartido modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -30,7 +34,11 @@ namespace Modelo.DAO
             }
             return modelo;
         }
-
+        /// <summary>
+        /// Método que sirve para modificar los estados de partido
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de estado partido para poder modificarlo</param>
+        /// <returns>Retorna el estado partido para ser modificado en la tabla </returns>
         public dtoEstadoPartido modificarEstado(dtoEstadoPartido modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -49,7 +57,11 @@ namespace Modelo.DAO
             }
             return modelo;
         }
-
+        /// <summary>
+        /// Metodo que sirve para eliminar el estado partido seleccionado de la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo del estado partido seleccionado</param>
+        /// <returns>Retorna el modelo del estado partido seleccionado para eliminarlo</returns>
         public dtoEstadoPartido eliminarEstado(dtoEstadoPartido modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -67,7 +79,10 @@ namespace Modelo.DAO
             }
             return modelo;
         }
-
+        /// <summary>
+        /// Metodo que sirve para mostrar los estado partido
+        /// </summary>
+        /// <returns>Retorna la consulta a la base de datos que son los estados partido de la tablaEstadoPartido</returns>
         public List<dtoEstadoPartido> mostrarEstado()
         {
             List<dtoEstadoPartido> sqlresultado = new List<dtoEstadoPartido>();

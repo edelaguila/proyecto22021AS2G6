@@ -69,7 +69,7 @@ namespace Modelo.DAO
             return modelo;
         }
         /// <summary>
-        /// Metodo que sirve para mostrar los jugadores 
+        /// Método que sirve para mostrar los jugadores 
         /// </summary>
         /// <returns>Retorna la consulta a la base de datos que son los jugadores de la tablaJugadores</returns>
         public List<dtoJugador> mostrarJugadores()
@@ -85,9 +85,9 @@ namespace Modelo.DAO
             return sqlresultado;
         }
         /// <summary>
-        /// Metodo que sirve para mostrar los jugadores por el deporte que se selecciono
+        /// Metodo que sirve para mostrar los jugadores por el deporte que se seleccionó
         /// </summary>
-        /// <returns>retorna la consulta a la base de datos</returns>
+        /// <returns>Retorna la consulta a la base de datos</returns>
         public List<dtoJugador> mostrarJugadoresPorDeporte()
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();

@@ -13,6 +13,7 @@ namespace Vista
         {
             InitializeComponent();
             controladorUsuarioIniciar controladorUsuario = new controladorUsuarioIniciar(this);
+
         }
 
         private void tablaUsuarios_DataError(object sender, DataGridViewDataErrorEventArgs e)

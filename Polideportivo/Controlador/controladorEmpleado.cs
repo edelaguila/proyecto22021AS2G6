@@ -7,6 +7,9 @@ using static Vista.utilidadForms;
 
 namespace Controlador
 {
+    /// <summary>
+    /// Clase que gestiona la tabla de jugadores de la base de datos
+    /// </summary>
     class controladorEmpleado
     {
         private int id;
@@ -36,7 +39,9 @@ namespace Controlador
         {
             actualizarTablaEmpleado();
         }
-
+        /// <summary>
+        /// Metodo que sirve para eliminar empleados de la tablaEmpleado
+        /// </summary>
         private void clickEliminarEmpleado(object sender, EventArgs e)
         {
             int id = stringAInt(vista.tablaEmpleado.SelectedRows[0].Cells[0].Value.ToString());
@@ -71,7 +76,9 @@ namespace Controlador
                 vista.vwempleadoBindingSource.Filter = string.Format("{0}='{1}'", vista.cboBuscar.Text, vista.txtFiltrar.Text);
             }
         }
-
+        /// <summary>
+        /// Método que sirve para modificar empleados dentro de la tablaEmpleados
+        /// </summary>
         private void clickModificarEmpleado(object sender, EventArgs e)
         {
             daoEmpleado modeloModificar = new daoEmpleado();
@@ -80,7 +87,9 @@ namespace Controlador
             modeloModificar.modificarEmpleado(modeloFila);
             actualizarTablaEmpleado();
         }
-
+        /// <summary>
+        /// Metodo que sirve para agregar empleados a la tablaEmpleados
+        /// </summary>
         private void clickAgregarEmpleado(object sender, EventArgs e)
         {
             daoEmpleado modeloAgregar = new daoEmpleado();
@@ -101,7 +110,9 @@ namespace Controlador
         {
             vista.vwempleadoTableAdapter.Fill(vista.vwEmpleado.vwempleado);
         }
-
+        /// <summary>
+        /// Llena la tabla de empleado con lo que se tiene ingresado en el dtoDeporte
+        /// </summary>
         private void llenarModeloConFilaSeleccionada()
         {
             id = stringAInt(vista.tablaEmpleado.SelectedRows[0].Cells[0].Value.ToString());

@@ -16,7 +16,10 @@ namespace Controlador
         private dtoEquipo modelo = new dtoEquipo();
         private formEquipoEventos vista;
         private controladorEquipo padre;
-
+        /// <summary>
+        /// Metodo en el cual se configura lo que es el form dependiendo de lo que se selecciono en el formEquipo
+        /// en el cual llama 
+        /// </summary>
         public controladorEquipoEventos(formEquipoEventos Vista, controladorEquipo Padre, string tipo)
         {
             vista = Vista;
@@ -25,7 +28,7 @@ namespace Controlador
             llenarCboDeporte();
             vista.cboDeporte.SelectedIndex = -1;
             vista.lblEquipoEvento.Text = tipo;
-            if (tipo == "MODIFICAR JUGADOR")
+            if (tipo == "MODIFICAR EQUIPO")
             {
                 vista.btnModificarEquipo.Visible = true;
                 vista.btnAgregarEquipo.Visible = false;
@@ -33,7 +36,7 @@ namespace Controlador
                 modelo = padre.modeloFila;
                 vista.txtNombre.Text = modelo.nombre;
             }
-            else if (tipo == "AGREGAR JUGADOR")
+            else if (tipo == "AGREGAR EQUIPO")
             {
                 vista.btnAgregarEquipo.Visible = true;
                 vista.btnModificarEquipo.Visible = false;

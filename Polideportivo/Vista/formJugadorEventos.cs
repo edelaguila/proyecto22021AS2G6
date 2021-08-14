@@ -121,7 +121,7 @@ namespace Vista
         }
 
         /// <summary>
-        /// Hola
+        /// Llena el modelo de jugador con lo ingresado en los txt
         /// </summary>
         private void llenarModeloConDatosIngresados()
         {

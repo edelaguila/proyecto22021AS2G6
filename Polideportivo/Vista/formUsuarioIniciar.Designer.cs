@@ -131,6 +131,7 @@ namespace Vista
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(132, 27);
             this.txtContraseña.TabIndex = 32;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // label1
             // 

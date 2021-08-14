@@ -14,7 +14,11 @@ namespace Modelo.DAO
     class daoUsuario
     {
         private ConexionODBC ODBC = new ConexionODBC();
-
+        /// <summary>
+        /// Método que sirve para agregar nuevos usuario a la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de usuario que se desea ingresar</param>
+        /// <returns>Retorna el usuario ingresado para ser agregado a la tabla</returns>
         public dtoUsuario agregarUsuario(dtoUsuario modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -38,10 +42,10 @@ namespace Modelo.DAO
         }
 
         /// <summary>
-        /// Función que valida usuarios con la base de datos
+        /// Método que sirve para obtener datos de un usuario en especifico
         /// </summary>
-        /// <param name="modelo"></param>
-        /// <returns></returns>
+        /// <param name="usuario">Recibe el modelo de usuario que se desea ingresar</param>
+        /// <returns>Retorna el usuario ingresado para ser agregado a la tabla</returns>
         public List<string> obtenerDatosDeUsuario(string usuario)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -64,7 +68,10 @@ namespace Modelo.DAO
             }
             return null;
         }
-
+        /// <summary>
+        /// Método que sirve para mostrar los usuarios
+        /// </summary>
+        /// <returns>Retorna la consulta a la base de datos que son los usuarios de la tablaUsuarios</returns>
         public List<dtoUsuario> mostrarUsuario()
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();

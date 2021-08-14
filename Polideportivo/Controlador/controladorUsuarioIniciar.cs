@@ -24,10 +24,14 @@ namespace Controlador
             vista = Vista;
             // Creación de eventos
             vista.btnIngresar.Click += new EventHandler(clickIniciarUsuario);
+            vista.btnSalir.Click += new EventHandler(clickSalir);
             vista.btnRegistrarUsuario.Click += new EventHandler(clickRegistrarUsuario);
         }
 
-
+        public void clickSalir(object sender, EventArgs e)
+        {
+            cerrarForm(vista);
+        }
         public void clickRegistrarUsuario(object sender, EventArgs e)
         {
             abrirFormDentroDePanel(new formUsuarioRegistrar(), vista.panelUsuario);

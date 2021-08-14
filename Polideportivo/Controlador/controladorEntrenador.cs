@@ -36,7 +36,9 @@ namespace Controlador
             vista.cboDeporte.ValueMember = "pkId";
             vista.cboDeporte.SelectedIndex = -1;
         }
-
+        /// <summary>
+        /// Manda a llamar al daoEntrenador que sirve para eliminar entrenadores de la tablaEntrenadores
+        /// </summary>
         private void clickEliminarEntrenador(object sender, EventArgs e)
         {
             int id = stringAInt(vista.tablaEntrenador.SelectedRows[0].Cells[0].Value.ToString());
@@ -68,7 +70,9 @@ namespace Controlador
                 vista.vwentrenadorBindingSource.Filter = string.Format("{0}='{1}'", vista.cboBuscar.Text, vista.txtFiltrar.Text);
             }
         }
-
+        /// <summary>
+        /// Manda a llamar al daoEntrenador al método modificarEntrenador que sirve para modificar entrenadores dentro de la tablaEntrenadores
+        /// </summary>
         private void clickModificarEntrenador(object sender, EventArgs e)
         {
             daoEntrenador daoEntrenador = new daoEntrenador();
@@ -80,7 +84,9 @@ namespace Controlador
             daoEntrenador.modificarEntrenador(modelo);
             actualizarTablaEntrenador();
         }
-
+        /// <summary>
+        /// Manda a llamar al daoEntrenador al método agregarEntrenador que sirve para agregar entrenadores dentro de la tablaEntrenadores
+        /// </summary>
         private void clickAgregarEntrenador(object sender, EventArgs e)
         {
             daoEntrenador daoEntrenador = new daoEntrenador();

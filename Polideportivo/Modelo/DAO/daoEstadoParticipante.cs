@@ -10,7 +10,11 @@ namespace Modelo.DAO
     class daoEstadoParticipante
     {
         private ConexionODBC ODBC = new ConexionODBC();
-
+        /// <summary>
+        ///  Método que sirve para agregar nuevos estados de participante a la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de estado participante que se desea ingresar</param>
+        /// <returns>Retorna el estado participante ingresado para ser agregado a la tabla</returns>
         public dtoEstadoParticipante agregarEstadoParticipante(dtoEstadoParticipante modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -29,7 +33,11 @@ namespace Modelo.DAO
             }
             return null;
         }
-
+        /// <summary>
+        /// Metodo que sirve para modificar estados de participante
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de estado participante para poder modificarlo</param>
+        /// <returns>Retorna el estado participante para ser modificado en la tabla</returns>
         public dtoEstadoParticipante modificarEstadoParticipante(dtoEstadoParticipante modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -49,7 +57,11 @@ namespace Modelo.DAO
             }
             return null;
         }
-
+        /// <summary>
+        ///  Metodo que sirve para eliminar el estado participante seleccionado de la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo del estado participante seleccionado</param>
+        /// <returns>Retorna el modelo del estado participante seleccionado para eliminarlo</returns>
         public dtoEstadoParticipante eliminarEstadoParticipante(dtoEstadoParticipante modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -68,7 +80,10 @@ namespace Modelo.DAO
             }
             return null;
         }
-
+        /// <summary>
+        /// Método que sirve para mostrar el estado del participante
+        /// </summary>
+        /// <returns>Retorna la consulta a la base de datos</returns>
         public List<dtoEstadoParticipante> mostrarEstadoParticipante()
         {
             List<dtoEstadoParticipante> sqlresultado = new List<dtoEstadoParticipante>();

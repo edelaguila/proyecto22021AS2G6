@@ -1,6 +1,6 @@
 ﻿using Dapper;
 using Conexion;
-using Modelo;
+using Modelo.DTO;
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
@@ -10,6 +10,7 @@ namespace Modelo.DAO
     public class daoTipoCampeonato
     {
         private ConexionODBC ODBC = new ConexionODBC();
+
         /// <summary>
         /// Metodo que sirve para mostrar los tipos de campeonatos
         /// </summary>

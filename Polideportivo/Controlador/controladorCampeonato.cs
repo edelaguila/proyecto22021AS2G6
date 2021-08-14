@@ -12,6 +12,9 @@ using static Vista.utilidadForms;
 
 namespace Controlador
 {
+    /// <summary>
+    /// Clase que gestiona la tabla de campeonatos de la base de datos
+    /// </summary>
     public class controladorCampeonato
     {
         private formCampeonato vista;
@@ -28,7 +31,7 @@ namespace Controlador
         public controladorCampeonato(formCampeonato Vista)
         {
             vista = Vista;
-            // Eventos
+            // Creación de eventos
             vista.Load += new EventHandler(cargarForm);
             vista.tablaCampeonatos.CellClick += new DataGridViewCellEventHandler(clickCeldaDeLaTabla);
             vista.btnActualizar.Click += new EventHandler(clickActualizarCampeonato);

@@ -42,6 +42,8 @@ namespace Controlador
             dtoUsuario.fkIdTipo = stringAInt(vista.cboTipoUsuario.SelectedValue.ToString());
             dtoUsuario.telefono = stringAInt(vista.txtTelefonoUsuario.Text);
             daoUsuario.agregarUsuario(dtoUsuario);
+            vista.Hide();
+            abrirForm(new formUsuario());
         }
 
     }

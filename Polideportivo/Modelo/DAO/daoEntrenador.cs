@@ -12,6 +12,11 @@ namespace Modelo.DAO
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
+        /// <summary>
+        /// Método que sirve para agregar nuevos entrenadores a la base de datos 
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo del entrenador que se desea ingresar</param>
+        /// <returns>Retorna el entrenador ingresado para ser agregado a la tabla</returns>
         public dtoEntrenador agregarEntrenador(dtoEntrenador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -36,6 +41,11 @@ namespace Modelo.DAO
             return modelo;
         }
 
+        /// <summary>
+        /// Método que sirve para modificar a los entrenadores
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de entrenador para modificarlo</param>
+        /// <returns>Retorna el entrenador modificado para ser modificado en la tabla</returns>
         public dtoEntrenador modificarEntrenador(dtoEntrenador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -57,6 +67,11 @@ namespace Modelo.DAO
             return modelo;
         }
 
+        /// <summary>
+        /// Método que sirve para eliminar el entrenador seleccionado de la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo del entrenador seleccionado</param>
+        /// <returns>Retorna el modelo del entrenador seleccionado para eliminarlo </returns>
         public dtoEntrenador eliminarEntrenador(dtoEntrenador modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -75,6 +90,10 @@ namespace Modelo.DAO
             return modelo;
         }
 
+        /// <summary>
+        /// Método que sirve para mostrar los jugadores
+        /// </summary>
+        /// <returns>Retorna la consulta a la base de datos que son los jugadores de la tablaEntrenador</returns>
         public List<dtoEntrenador> mostrarEntrenador()
         {
             List<dtoEntrenador> sqlresultado = new List<dtoEntrenador>();

@@ -106,6 +106,7 @@ namespace Vista
             this.txtContraseñaUsuario.Name = "txtContraseñaUsuario";
             this.txtContraseñaUsuario.Size = new System.Drawing.Size(121, 27);
             this.txtContraseñaUsuario.TabIndex = 10;
+            this.txtContraseñaUsuario.UseSystemPasswordChar = true;
             // 
             // parrotGradientPanel2
             // 
@@ -189,15 +190,15 @@ namespace Vista
         }
 
         #endregion
-        private System.Windows.Forms.Label lblEquipo;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblAnotaciones;
-        private System.Windows.Forms.Label label1;
-        private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel2;
         public System.Windows.Forms.TextBox txtNombreUsuario;
         public System.Windows.Forms.TextBox txtContraseñaUsuario;
         public System.Windows.Forms.Button btnRegistrarUsuario;
         public System.Windows.Forms.TextBox txtTelefonoUsuario;
         public System.Windows.Forms.ComboBox cboTipoUsuario;
+        public System.Windows.Forms.Label lblEquipo;
+        public System.Windows.Forms.Label lblNombre;
+        public System.Windows.Forms.Label lblAnotaciones;
+        public System.Windows.Forms.Label label1;
+        public ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel2;
     }
 }

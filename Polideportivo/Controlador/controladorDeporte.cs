@@ -8,6 +8,9 @@ using static Vista.utilidadForms;
 
 namespace Controlador
 {
+    /// <summary>
+    /// Clase que gestiona la tabla de jugadores de la base de datos
+    /// </summary>
     public class controladorDeporte
     {
         private int id;
@@ -32,7 +35,9 @@ namespace Controlador
             vista.txtFiltrar.TextChanged += new EventHandler(cambioEnTextoFiltrarDeporte);
             vista.cboBuscar.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarDeporte);
         }
-
+        /// <summary>
+        /// Manda a llamar al daoDeporte al método agregarDeporte que sirve para agregar deportes dentro de la tablaDeportes
+        /// </summary>
         private void clickAgregarDeporte(object sender, EventArgs e)
         {
             daoDeporte daoDeporte = new daoDeporte();
@@ -41,7 +46,9 @@ namespace Controlador
             daoDeporte.agregarDeporte(dtoDeporte);
             actualizarTablaDeporte();
         }
-
+        /// <summary>
+        /// Manda a llamar al daoDeporte al método modificarDeporte que sirve para modificar deportes dentro de la tablaDeportes
+        /// </summary>
         private void clickModificarDeporte(object sender, EventArgs e)
         {
             daoDeporte daoDeporte = new daoDeporte();
@@ -66,7 +73,9 @@ namespace Controlador
         {
             actualizarTablaDeporte();
         }
-
+        /// <summary>
+        /// Manda a llamar al daoDeporte al metodo eliminarDeporte que sirve para eliminar deportes de la tablaDeportes
+        /// </summary>
         private void clickEliminarDeporte(object sender, EventArgs e)
         {
             daoDeporte daoDeporte = new daoDeporte();
@@ -87,7 +96,9 @@ namespace Controlador
             llenarModeloConFilaSeleccionada();
             vista.txtNombreDeporte.Text = nombre;
         }
-
+        /// <summary>
+        /// Llena la tabla de deporte con lo que se tiene ingresado en el dtoDeporte
+        /// </summary>
         private void llenarModeloConFilaSeleccionada()
         {
             id = stringAInt(vista.tablaDeportes.SelectedRows[0].Cells[0].Value.ToString());

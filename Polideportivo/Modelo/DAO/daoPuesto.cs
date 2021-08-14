@@ -11,7 +11,10 @@ namespace Controlador
     public class daoPuesto
     {
         private ConexionODBC ODBC = new ConexionODBC();
-
+        /// <summary>
+        /// Metodo que sirve para mostrar el puesto que tiene cada uno de los empleados
+        /// </summary>
+        /// <returns>Retorna los puestos existentes en la tablaPuesto</returns>
         public List<dtoPuesto> mostrarPuesto()
         {
             List<dtoPuesto> sqlresultado = new List<dtoPuesto>();

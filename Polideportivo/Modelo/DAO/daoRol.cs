@@ -15,7 +15,11 @@ namespace Modelo.DAO
         public daoRol()
         {
         }
-
+        /// <summary>
+        /// Método que sirve para agregar nuevos roles a la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de rol que se desea ingresar</param>
+        /// <returns>Retorna el rol ingresado para ser agregado a la tabla</returns>
         public dtoRol agregarRol(dtoRol modelo)
         {
             OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
@@ -34,7 +38,11 @@ namespace Modelo.DAO
             }
             return modelo;
         }
-
+        /// <summary>
+        /// Método que sirve para modificar roles
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de rol para poder modificarlo</param>
+        /// <returns>Retorna el rol modificado para ser modificado en la tabla</returns>
         public dtoRol modificarRol(dtoRol modelo)
         {
             OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
@@ -55,7 +63,10 @@ namespace Modelo.DAO
             }
             return modelo;
         }
-
+        /// <summary>
+        /// Metodo que sirve para mostrar los roles
+        /// </summary>
+        /// <returns>Retorna la consulta a la base de datos que son los roles de la tablaRoles</returns>
         public List<dtoRol> mostrarRoles()
         {
             OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
@@ -68,7 +79,11 @@ namespace Modelo.DAO
             }
             return sqlresultado;
         }
-
+        /// <summary>
+        /// Metodo que sirve para eliminar el rol seleccionado de la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo del rol seleccionado</param>
+        /// <returns>Retorna el modelo del rol seleccionado para eliminarlo</returns>
         public dtoRol eliminarRol(dtoRol modelo)
         {
             OdbcConnection conexionODBC = ConexionODBC.abrirConexion();
@@ -85,7 +100,10 @@ namespace Modelo.DAO
             }
             return modelo;
         }
-
+        /// <summary>
+        /// Metodo que sirve para mostrar los roles por el deporte que se seleccionó
+        /// </summary>
+        /// <returns>Retorna la consulta a la base de datos</returns>
         public List<dtoRol> mostrarRolesPorDeporte(dtoRol modelo)
         {
             OdbcConnection conexionODBC = ConexionODBC.abrirConexion();

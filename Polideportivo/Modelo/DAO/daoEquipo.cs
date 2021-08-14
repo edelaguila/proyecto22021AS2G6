@@ -11,6 +11,11 @@ namespace Modelo.DAO
     {
         private ConexionODBC ODBC = new ConexionODBC();
 
+        /// <summary>
+        /// Método que sirve para agregar nuevos equipos a la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de equipo que se desea ingresar</param>
+        /// <returns>Recibe el modelo de equipo que se desea ingresar</returns>
         public dtoEquipo agregarEquipo(dtoEquipo modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -30,6 +35,11 @@ namespace Modelo.DAO
             return modelo;
         }
 
+        /// <summary>
+        /// Método que sirve para modificar equipos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de equipo para poder modificarlo</param>
+        /// <returns>Retorna el equipo modificado para ser modificado en la tabla</returns>
         public dtoEquipo modificarEquipo(dtoEquipo modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -50,6 +60,11 @@ namespace Modelo.DAO
             return modelo;
         }
 
+        /// <summary>
+        /// Metodo que sirve para eliminar el equipo seleccionado de la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo del equipo seleccionado</param>
+        /// <returns>Retorna el modelo del equipo seleccionado para eliminarlo</returns>
         public dtoEquipo eliminarEquipo(dtoEquipo modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -67,6 +82,10 @@ namespace Modelo.DAO
             return modelo;
         }
 
+        /// <summary>
+        /// Metodo que sirve para mostrar los equipos
+        /// </summary>
+        /// <returns>Retorna la consulta a la base de datos que son los jugadores de la tablaEquipos</returns>
         public List<dtoEquipo> mostrarEquipos()
         {
             List<dtoEquipo> sqlresultado = new List<dtoEquipo>();
@@ -80,7 +99,10 @@ namespace Modelo.DAO
 
             return sqlresultado;
         }
-
+        /// <summary>
+        /// Metodo que sirve para mostrar los equipos
+        /// </summary>
+        /// <returns>Retorna la consulta a la base de datos que son los jugadores de la tablaEquipos</returns>
         public List<dtoEquipo> mostrarEquipo()
         {
             List<dtoEquipo> sqlresultado = new List<dtoEquipo>();
@@ -93,7 +115,10 @@ namespace Modelo.DAO
             }
             return sqlresultado;
         }
-
+        /// <summary>
+        /// Metodo que sirve para mostrar los jugadores por el deporte que se seleccionó
+        /// </summary>
+        /// <returns>Retorna el equipo ingresado para ser agregado a la tabla</returns>
         public List<dtoEquipo> mostrarEquipoPorDeporte(dtoEquipo modelo)
         {
             List<dtoEquipo> sqlresultado = new List<dtoEquipo>();

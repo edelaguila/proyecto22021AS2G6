@@ -10,11 +10,18 @@ using Vista;
 using static Vista.utilidadForms;
 namespace Controlador
 {
+    /// <summary>
+    /// Clase que gestiona la tabla de UsuarioRegistrar de la base de datos
+    /// </summary>
     public class controladorUsuarioRegistrar
     {
         formUsuarioRegistrar vista;
         daoUsuario daoUsuario = new daoUsuario();
         dtoUsuario dtoUsuario = new dtoUsuario();
+        /// <summary>
+        /// Método que sirve para cargar los eventos que van dentro de cada elemento en el formRegistrarUsuario
+        /// </summary>
+        /// <param name="Vista"></param>
         public controladorUsuarioRegistrar(formUsuarioRegistrar Vista)
         {
             vista = Vista;
@@ -22,7 +29,11 @@ namespace Controlador
             vista.btnRegistrarUsuario.Click += new EventHandler(clickUsuarioRegistrar);
             vista.Load += new EventHandler(cargarForm);
         }
-
+        /// <summary>
+        /// Método que sirve para cargar los datos dentro del form de registrar usuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void cargarForm(object sender , EventArgs e)
         {
             daoTipoUsuario daoTipoUsuario = new daoTipoUsuario();
@@ -31,7 +42,12 @@ namespace Controlador
             vista.cboTipoUsuario.ValueMember = "pkId";
             vista.cboTipoUsuario.SelectedIndex = -1;
         }
-
+        /// <summary>
+        /// Método que sirve para registrar nuevos usuarios y guardar todos sus datos dentro de la base de datos
+        /// los cuales contiene nombre, contraseña la cual se hashea gracias a BCrypt y tambien el telefono y su rol dentro de la empresa
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void clickUsuarioRegistrar(object sender, EventArgs e) 
         {
             var contraseñaSinHashear = vista.txtContraseñaUsuario.Text;

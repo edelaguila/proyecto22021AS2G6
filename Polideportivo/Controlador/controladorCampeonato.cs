@@ -25,9 +25,13 @@ namespace Controlador
         private string fechaFinal;
         private int fkIdDeporte;
         private int fkIdTipoCampeonato;
-
         private dtoCampeonato modeloFila = new dtoCampeonato();
 
+
+        /// <summary>
+        /// Método que sirve para cargar los eventos que van dentro de cada elemento en el formCampeonato
+        /// </summary>
+        /// <param name="Vista"></param>
         public controladorCampeonato(formCampeonato Vista)
         {
             vista = Vista;
@@ -42,16 +46,31 @@ namespace Controlador
             vista.cboBuscar.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarCampeonato);
         }
 
+        /// <summary>
+        /// Método que sirve para filtrar la tabla con lo ingresado en el textbox de filtrar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void opcionSeleccionadaBuscarCampeonato(object sender, EventArgs e)
         {
             vista.txtFiltrar.Text = "";
         }
 
+        /// <summary>
+        /// Método que manda a llamar la función de actualizar tabla, para que se actualice la tablaCampeonato
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickActualizarCampeonato(object sender, EventArgs e)
         {
             actualizarTabla();
         }
 
+        /// <summary>
+        /// Método que sirve para eliminar la opción seleccionada de la tabla 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickEliminarCampeonato(object sender, EventArgs e)
         {
             llenarModeloConFilaSeleccionada();
@@ -60,22 +79,42 @@ namespace Controlador
             actualizarTabla();
         }
 
+        /// <summary>
+        /// Método que manda a llamar el formCampeonatoEventos para poder agregar nuevos campeonatos a la tabla 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickAgregarCampeonato(object sender, EventArgs e)
         {
             abrirForm(new formCampeonatoEventos(this));
         }
 
+        /// <summary>
+        /// Método que manda a llamar el formCampeonatoEventos para poder modificar campeonatos de la tabla 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickModificarCampeonato(object sender, EventArgs e)
         {
             llenarModeloConFilaSeleccionada();
             abrirForm(new formCampeonatoEventos(modeloFila, this));
         }
 
+        /// <summary>
+        /// Método que sirve para llenar los modelos creados con los datos que estan seleccionados en la tabla 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
         {
             llenarModeloConFilaSeleccionada();
         }
 
+        /// <summary>
+        /// Método que sirve para cargar en las tablas las vistas creadas en la base de datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cargarForm(object sender, EventArgs e)
         {
             try
@@ -90,16 +129,27 @@ namespace Controlador
             vista.cboBuscar.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Método que sirve para actualizar los datos dentro de la tabla
+        /// </summary>
         public void actualizarTabla()
         {
             vista.vwcampeonatoTableAdapter.Fill(vista.vwCampeonato.vwcampeonato);
         }
 
+        /// <summary>
+        /// Método que manda a llamar el método filtrarTabla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cambioEnTextoFiltrarCampeonato(object sender, EventArgs e)
         {
             filtrarTabla();
         }
 
+        /// <summary>
+        /// Método que sirve para filtrar los datos que están dentro dentro de la tabla jugadores
+        /// </summary>
         private void filtrarTabla()
         {
             if (string.IsNullOrEmpty(vista.txtFiltrar.Text))
@@ -112,6 +162,9 @@ namespace Controlador
             }
         }
 
+        /// <summary>
+        /// Método que sirve para llenar la tabla con las vistas creadas en la base de datos, dependiendo de cada fila que se haya creado
+        /// </summary>
         public void llenarModeloConFilaSeleccionada()
         {
             id = stringAInt(vista.tablaCampeonatos.SelectedRows[0].Cells[0].Value.ToString());

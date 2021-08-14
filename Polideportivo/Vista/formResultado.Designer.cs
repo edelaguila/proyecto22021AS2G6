@@ -64,7 +64,6 @@ namespace Vista
             this.txtFiltrar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnAgregarPartido = new System.Windows.Forms.Button();
             this.vwpartidoTableAdapter = new Datos.vwPartidoTableAdapters.vwpartidoTableAdapter();
             this.parrotGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPartidos)).BeginInit();
@@ -87,7 +86,6 @@ namespace Vista
             this.parrotGradientPanel1.Controls.Add(this.panelBuscarCol);
             this.parrotGradientPanel1.Controls.Add(this.panel2);
             this.parrotGradientPanel1.Controls.Add(this.btnModificar);
-            this.parrotGradientPanel1.Controls.Add(this.btnAgregarPartido);
             this.parrotGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.Low;
             this.parrotGradientPanel1.Location = new System.Drawing.Point(0, 0);
@@ -446,29 +444,9 @@ namespace Vista
             this.btnModificar.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btnModificar.Size = new System.Drawing.Size(210, 36);
             this.btnModificar.TabIndex = 28;
-            this.btnModificar.Text = "    M O D I F I C A R";
+            this.btnModificar.Text = "    R E S U L T A D O";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
-            // 
-            // btnAgregarPartido
-            // 
-            this.btnAgregarPartido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarPartido.BackColor = System.Drawing.Color.White;
-            this.btnAgregarPartido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarPartido.FlatAppearance.BorderSize = 0;
-            this.btnAgregarPartido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAgregarPartido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarPartido.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarPartido.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarPartido.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarPartido.Image")));
-            this.btnAgregarPartido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarPartido.Location = new System.Drawing.Point(392, 85);
-            this.btnAgregarPartido.Name = "btnAgregarPartido";
-            this.btnAgregarPartido.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnAgregarPartido.Size = new System.Drawing.Size(210, 36);
-            this.btnAgregarPartido.TabIndex = 27;
-            this.btnAgregarPartido.Text = "     A G R E G A R";
-            this.btnAgregarPartido.UseVisualStyleBackColor = false;
             // 
             // vwpartidoTableAdapter
             // 
@@ -499,7 +477,6 @@ namespace Vista
 
         #endregion
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private System.Windows.Forms.Button btnAgregarPartido;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtFiltrar;

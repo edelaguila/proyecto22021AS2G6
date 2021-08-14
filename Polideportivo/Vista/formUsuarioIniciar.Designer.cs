@@ -162,6 +162,7 @@ namespace Vista
             this.btnIngresar.TabIndex = 29;
             this.btnIngresar.Text = "  INGRESAR";
             this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // parrotGradientPanel1
             // 

@@ -17,6 +17,7 @@ namespace Modelo.DTO
 
         public dtoJugador()
         {
+
         }
 
         public dtoJugador(int Id, string Nombre, int Anotaciones, int IdEquipo, int IdRol, int IdDeporte)

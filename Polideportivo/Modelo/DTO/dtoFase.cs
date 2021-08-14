@@ -13,10 +13,6 @@
         {
             pkId = Id;
             nombre = Nombre;
-            //para cuando sean ints
-            //int numeroValor = 0;
-            //int.TryParse(numero, out numeroValor);
-            //Numero = numeroValor;
         }
     }
 }

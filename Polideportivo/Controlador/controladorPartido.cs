@@ -16,14 +16,13 @@ namespace Controlador
 
         private string equipo1;
         private string equipo2;
-        private string campo;
-        private string fecha;
-        private string fase;
         private int fkIdCampeonato;
         private int fkIdEmpleado;
         private int fkIdResultado;
         private int fkIdEstado;
         private int fkIdFase;
+        private string campo;
+        private string fecha;
 
         private dtoPartido modeloFila = new dtoPartido();
 

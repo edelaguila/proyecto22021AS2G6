@@ -135,7 +135,7 @@ namespace Vista
         {
             cerrarForm(this);
         }
-
+        //Agrega un nuevo participante a la tabla con el daoParticipante llamando el método agregarParticipante
         private void btnAgregarParticipante_Click(object sender, EventArgs e)
         {
             if (validarFormEventos())
@@ -149,7 +149,7 @@ namespace Vista
         }
 
         /// <summary>
-        /// Modifica jugador
+        /// Modifica participante dentro de la tabla
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -166,7 +166,7 @@ namespace Vista
         }
 
         /// <summary>
-        /// Hola
+        /// Llena el modelo con los datos ingresados previamente en la base de datos 
         /// </summary>
         private void llenarModeloConDatosIngresados()
         {
@@ -177,7 +177,10 @@ namespace Vista
             modelo.fkIdFase = stringAInt(cboFase.SelectedValue.ToString());
             modelo.fkIdEstadoParticipante = stringAInt(cboEstado.SelectedValue.ToString());
         }
-
+        /// <summary>
+        /// Valida los forms con los combos y asi ser enviado al formParticipante
+        /// </summary>
+        /// <returns></returns>
         private bool validarFormEventos()
         {
             bool validado = false;
@@ -188,7 +191,11 @@ namespace Vista
             }
             return validado;
         }
-
+        /// <summary>
+        /// Método que manda a llamar al daoParticipante que contiene el método modificarParticipante que sirve para modificar participantes dentro de la tablaParticipante
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnModificarJugador_Click(object sender, EventArgs e)
         {
             if (validarFormEventos())
@@ -200,7 +207,11 @@ namespace Vista
                 cerrarForm(this);
             }
         }
-
+        /// <summary>
+        /// Método que manda a llamar al daoParticipante al método agregarParticipante que sirve para agregar participantes dentro de la tablaParticipante
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregarParticipante_Click_1(object sender, EventArgs e)
         {
             if (validarFormEventos())

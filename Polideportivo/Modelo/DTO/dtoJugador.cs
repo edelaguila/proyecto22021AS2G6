@@ -17,7 +17,6 @@ namespace Modelo.DTO
 
         public dtoJugador()
         {
-
         }
 
         public dtoJugador(int Id, string Nombre, int Anotaciones, int IdEquipo, int IdRol, int IdDeporte)
@@ -28,10 +27,6 @@ namespace Modelo.DTO
             fkIdEquipo = IdEquipo;
             fkIdRol = IdRol;
             fkIdDeporte = IdDeporte;
-            //para cuando sean ints
-            //int numeroValor = 0;
-            //int.TryParse(numero, out numeroValor);
-            //Numero = numeroValor;
         }
     }
 }

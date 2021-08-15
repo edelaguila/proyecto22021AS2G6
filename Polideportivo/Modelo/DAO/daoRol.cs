@@ -8,6 +8,9 @@ using Modelo.DTO;
 
 namespace Modelo.DAO
 {
+    /// <summary>
+    /// Clase utilizada para agregar, modificar, eliminar o mostrar los campos de roles en la base de datos.
+    /// </summary>
     public class daoRol
     {
         private ConexionODBC ConexionODBC = new ConexionODBC();

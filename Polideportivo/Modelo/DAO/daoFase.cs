@@ -7,6 +7,9 @@ using System.Linq;
 
 namespace Modelo.DAO
 {
+    /// <summary>
+    /// Clase utilizada para agregar, modificar, eliminar o mostrar los campos de fases en la base de datos.
+    /// </summary>
     class daoFase
     {
             private ConexionODBC ODBC = new ConexionODBC();

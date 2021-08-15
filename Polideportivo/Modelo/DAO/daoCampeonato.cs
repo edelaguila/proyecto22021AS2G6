@@ -7,6 +7,9 @@ using Modelo.DTO;
 
 namespace Modelo.DAO
 {
+    /// <summary>
+    /// Clase utilizada para agregar, modificar, eliminar o mostrar los campos de campeonatos en la base de datos.
+    /// </summary>
     public class daoCampeonato
     {
         private ConexionODBC ODBC = new ConexionODBC();
@@ -41,7 +44,7 @@ namespace Modelo.DAO
         }
 
         /// <summary>
-        /// Método que sirve para modificar campeonatos 
+        /// Método que sirve para modificar campeonatos
         /// </summary>
         /// <param name="modelo">Recibe el modelo de campeonato que se desea modificar</param>
         /// <returns>Retorna el jugador seleccionado para ser modificado en la tabla</returns>
@@ -94,7 +97,7 @@ namespace Modelo.DAO
         }
 
         /// <summary>
-        /// Método que sirve para mostrar los campeonatos 
+        /// Método que sirve para mostrar los campeonatos
         /// </summary>
         /// <returns>Retorna los campeonatos para ser mostrados en la tabla</returns>
         public List<dtoCampeonato> mostrarCampeonato()

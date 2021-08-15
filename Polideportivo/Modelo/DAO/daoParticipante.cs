@@ -9,7 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Modelo.DAO
-    { class daoParticipante
+    {
+    /// <summary>
+    /// Clase utilizada para agregar, modificar, eliminar o mostrar los campos de participantes en la base de datos.
+    /// </summary>
+    class daoParticipante
         {
        
             private ConexionODBC ODBC = new ConexionODBC();

@@ -7,6 +7,9 @@ using System.Windows.Forms;
 
 namespace Controlador
 {
+    /// <summary>
+    /// Clase que gestiona la tabla de entrenador de la base de datos
+    /// </summary>
     class controladorEntrenador
     {
         private formEntrenador vista;
@@ -15,7 +18,10 @@ namespace Controlador
         public controladorEntrenador()
         {
         }
-
+        /// <summary>
+        /// Método que sirve para cargar los eventos que van dentro de cada elemento en el formEntrenador
+        /// </summary>
+        /// <param name="Vista"></param>
         public controladorEntrenador(formEntrenador Vista)
         {
             vista = Vista;
@@ -37,8 +43,10 @@ namespace Controlador
             vista.cboDeporte.SelectedIndex = -1;
         }
         /// <summary>
-        /// Manda a llamar al daoEntrenador que sirve para eliminar entrenadores de la tablaEntrenadores
+        /// Método que manda a llamar al daoEntrenador que sirve para eliminar entrenadores de la tablaEntrenadores
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickEliminarEntrenador(object sender, EventArgs e)
         {
             int id = stringAInt(vista.tablaEntrenador.SelectedRows[0].Cells[0].Value.ToString());
@@ -48,17 +56,29 @@ namespace Controlador
             daoEntrenador.eliminarEntrenador(modelo);
             actualizarTablaEntrenador();
         }
-
+        /// <summary>
+        /// Método que manda a llamar la función de actualizar tabla, para que se actualice la tablaEntrenador
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickActualizarEntrenador(object sender, EventArgs e)
         {
             actualizarTablaEntrenador();
         }
-
+        /// <summary>
+        /// Método que sirve para filtrar la tabla con lo ingresado en el textbox de filtrar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void opcionSeleccionadaBuscarEntrenador(object sender, EventArgs e)
         {
             vista.txtFiltrar.Text = "";
         }
-
+        /// <summary>
+        /// Método que sirve para filtrar los datos que están dentro dentro de la tabla entrenadores
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cambioEnTextoFiltrarEntrenador(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(vista.txtFiltrar.Text))
@@ -71,8 +91,10 @@ namespace Controlador
             }
         }
         /// <summary>
-        /// Manda a llamar al daoEntrenador al método modificarEntrenador que sirve para modificar entrenadores dentro de la tablaEntrenadores
+        /// Método que manda a llamar al daoEntrenador al método modificarEntrenador que sirve para modificar entrenadores dentro de la tablaEntrenadores
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickModificarEntrenador(object sender, EventArgs e)
         {
             daoEntrenador daoEntrenador = new daoEntrenador();
@@ -85,8 +107,10 @@ namespace Controlador
             actualizarTablaEntrenador();
         }
         /// <summary>
-        /// Manda a llamar al daoEntrenador al método agregarEntrenador que sirve para agregar entrenadores dentro de la tablaEntrenadores
+        /// Método que manda a llamar al daoEntrenador al método agregarEntrenador que sirve para agregar entrenadores dentro de la tablaEntrenadores
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickAgregarEntrenador(object sender, EventArgs e)
         {
             daoEntrenador daoEntrenador = new daoEntrenador();
@@ -97,7 +121,12 @@ namespace Controlador
             daoEntrenador.agregarEntrenador(modelo);
             actualizarTablaEntrenador();
         }
-
+        /// <summary>
+        /// Método que sirve cuando se quiere modificar un dato de la tabla, envía los datos a los 
+        /// textbox y los combos del elemento seleccionado en la tabla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void opcionSeleccionadaDeporte(object sender, EventArgs e)
         {
             if (vista.cboDeporte.SelectedIndex > -1)
@@ -112,7 +141,11 @@ namespace Controlador
             }
             vista.txtFiltrar.Text = "";
         }
-
+        /// <summary>
+        /// Método que sirve para que se pueda seleccionar los datos que están dentro de la tabla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
         {
             int id = stringAInt(vista.tablaEntrenador.SelectedRows[0].Cells[0].Value.ToString());
@@ -120,13 +153,19 @@ namespace Controlador
             vista.txtNombre.Text = nombre;
             modeloFila.pkId = id;
         }
-
+        /// <summary>
+        /// Método que sirve para cargar los datos que van dentro de la tabla de entrenador
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cargarForm(object sender, EventArgs e)
         {
             vista.vwentrenadorTableAdapter.Fill(vista.vwEntrenador.vwentrenador);
             vista.cboBuscar.SelectedIndex = 0;
         }
-
+        /// <summary>
+        /// Método que sirve para actualizar los datos que están dentro de la tablaEntrenador
+        /// </summary>
         public void actualizarTablaEntrenador()
         {
             vista.vwentrenadorTableAdapter.Fill(vista.vwEntrenador.vwentrenador);

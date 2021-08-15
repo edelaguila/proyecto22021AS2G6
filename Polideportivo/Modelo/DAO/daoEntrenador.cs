@@ -8,6 +8,9 @@ using Modelo.DTO;
 
 namespace Modelo.DAO
 {
+    /// <summary>
+    /// Clase utilizada para agregar, modificar, eliminar o mostrar los campos de entrenadores en la base de datos.
+    /// </summary>
     public class daoEntrenador
     {
         private ConexionODBC ODBC = new ConexionODBC();

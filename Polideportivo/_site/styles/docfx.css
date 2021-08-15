@@ -4,8 +4,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Helvetica, sans-serif;
   height: 100%;
 }
-.inheritance {display: none;}
-
 button,
 a {
   color: #337ab7;

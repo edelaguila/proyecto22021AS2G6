@@ -1,4 +1,4 @@
-﻿namespace Modelo
+﻿namespace Modelo.DTO
 {
     public class dtoTipoCampeonato
     {

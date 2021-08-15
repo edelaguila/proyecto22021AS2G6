@@ -195,10 +195,46 @@
       <DependentUpon>reporteEmpleado.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="reportes\reporteEntrenador.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteEntrenador.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\reporteEquipo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteEquipo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\reporteJugador.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteJugador.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\reporteParticipante.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteParticipante.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="reportes\reportePartido.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>reportePartido.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\ReporteRols.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteRols.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\reporteTipoFalta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteTipoFalta.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Vista\formCampeonato.cs">
@@ -394,9 +430,33 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reporteEmpleado.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporteEntrenador.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteEntrenador.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporteEquipo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteEquipo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporteJugador.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteJugador.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporteParticipante.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteParticipante.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportes\reportePartido.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reportePartido.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\ReporteRols.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteRols.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporteTipoFalta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteTipoFalta.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formCampeonato.resx">
       <DependentUpon>formCampeonato.cs</DependentUpon>

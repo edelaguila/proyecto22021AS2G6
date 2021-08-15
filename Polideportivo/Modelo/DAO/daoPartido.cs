@@ -10,10 +10,17 @@ using System.Threading.Tasks;
 
 namespace Modelo.DAO
 {
+    /// <summary>
+    /// Clase utilizada para agregar, modificar, eliminar o mostrar los campos de partidos en la base de datos.
+    /// </summary>
     class daoPartido
     {
         private ConexionODBC ODBC = new ConexionODBC();
-
+        /// <summary>
+        /// Método que sirve para agregar nuevos partidos a la base de datos 
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de partidos que se desea ingresar</param>
+        /// <returns>Retorna el partido ingresado para ser agregado a la tabla</returns>
         public dtoPartido agregarPartido(dtoPartido modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -42,7 +49,11 @@ namespace Modelo.DAO
             }
             return modelo;
         }
-
+        /// <summary>
+        /// Método que sirve para modificar a los partidos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de epartido para modificarlo</param>
+        /// <returns>Retorna el partido modificado para ser modificado en la tabla</returns>
         public dtoPartido modificarPartido(dtoPartido modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -73,7 +84,11 @@ namespace Modelo.DAO
             }
             return modelo;
         }
-
+        /// <summary>
+        /// Método que sirve para modificar a los Resultados
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo de resultado para modificarlo</param>
+        /// <returns>Retorna el resultado modificado para ser modificado en la tabla</returns>
         public dtoPartido modificarResultado(dtoPartido modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -96,7 +111,10 @@ namespace Modelo.DAO
             }
             return modelo;
         }
-
+        /// <summary>
+        /// Método que sirve para mostrar los partidos
+        /// </summary>
+        /// <returns>Retorna la consulta a la base de datos que son los partudis de la tablaPartido</returns>
         public List<dtoPartido> mostrarPartidos()
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();
@@ -109,7 +127,11 @@ namespace Modelo.DAO
             }
             return sqlresultado;
         }
-
+        /// <summary>
+        /// Método que sirve para eliminar el partido seleccionado de la base de datos
+        /// </summary>
+        /// <param name="modelo">Recibe el modelo del partido seleccionado</param>
+        /// <returns>Retorna el modelo del partido seleccionado para eliminarlo </returns>
         public dtoPartido eliminarPartido(dtoPartido modelo)
         {
             OdbcConnection conexionODBC = ODBC.abrirConexion();

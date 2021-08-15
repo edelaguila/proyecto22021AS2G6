@@ -97,16 +97,28 @@ namespace Vista
             //Modificar el texto del título
             lblJugadorEvento.Text = "AGREGAR PARTIDO";
         }
-
+        /// <summary>
+        /// Método que al presionar el boton de salir del form, lo cierra
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
             cerrarForm(this);
         }
-
+        /// <summary>
+        /// Método que manda a llamar al daoPartido al método agregarPartido que sirve para agregar partidos dentro de la tablaPartido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregarPartido_Click(object sender, EventArgs e)
         {
         }
-
+        /// <summary>
+        /// Método que manda a llamar al daoResultado que contiene el método modificarResultado que sirve para modificar resultados dentro de la tablaPartido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnModificarResultado_Click(object sender, EventArgs e)
         {
             daoPartido modeloModificar = new daoPartido();
@@ -118,7 +130,9 @@ namespace Vista
 
             cerrarForm(this);
         }
-
+        /// <summary>
+        ///  Método que sirve para llenar el modelo con lo que se ingresó dentro del textox de resultado
+        /// </summary>
         private void llenarModeloConDatosIngresados()
         {
 

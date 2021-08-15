@@ -17,11 +17,13 @@ namespace Controlador
         private string nombre;
         private dtoDeporte modeloFila = new dtoDeporte();
         private formDeporte vista;
-
         public controladorDeporte()
         {
         }
-
+        /// <summary>
+        /// Método que sirve para cargar los eventos que van dentro de cada elemento en el formDeporte
+        /// </summary>
+        /// <param name="Vista"></param>
         public controladorDeporte(formDeporte Vista)
         {
             vista = Vista;
@@ -36,7 +38,7 @@ namespace Controlador
             vista.cboBuscar.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarDeporte);
         }
         /// <summary>
-        /// Manda a llamar al daoDeporte al método agregarDeporte que sirve para agregar deportes dentro de la tablaDeportes
+        /// Método que manda a llamar al daoDeporte al método agregarDeporte que sirve para agregar deportes dentro de la tablaDeportes
         /// </summary>
         private void clickAgregarDeporte(object sender, EventArgs e)
         {
@@ -47,7 +49,7 @@ namespace Controlador
             actualizarTablaDeporte();
         }
         /// <summary>
-        /// Manda a llamar al daoDeporte al método modificarDeporte que sirve para modificar deportes dentro de la tablaDeportes
+        /// Método que manda a llamar al daoDeporte que contiene el método modificarDeporte que sirve para modificar deportes dentro de la tablaDeportes
         /// </summary>
         private void clickModificarDeporte(object sender, EventArgs e)
         {
@@ -56,7 +58,11 @@ namespace Controlador
             daoDeporte.modificarDeporte(modeloFila);
             actualizarTablaDeporte();
         }
-
+        /// <summary>
+        /// Método que sirve para filtrar los datos que están dentro dentro de la tabla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cambioEnTextoFiltrarDeporte(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(vista.txtFiltrar.Text))
@@ -68,14 +74,20 @@ namespace Controlador
                 vista.vwDeporteBindingSource.Filter = string.Format("{0}='{1}'", vista.cboBuscar.Text, vista.txtFiltrar.Text);
             }
         }
-
+        /// <summary>
+        /// Método que manda a llamar la funcion actualizarTablaDeportes para poder actualizar los datos dentro de la tabla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickActualizarDeporte(object sender, EventArgs e)
         {
             actualizarTablaDeporte();
         }
         /// <summary>
-        /// Manda a llamar al daoDeporte al metodo eliminarDeporte que sirve para eliminar deportes de la tablaDeportes
+        ///  Método que manda a llamar al daoDeporte al metodo eliminarDeporte que sirve para eliminar deportes de la tablaDeportes
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickEliminarDeporte(object sender, EventArgs e)
         {
             daoDeporte daoDeporte = new daoDeporte();
@@ -85,12 +97,20 @@ namespace Controlador
             daoDeporte.eliminarDeporte(dtoDeporte);
             actualizarTablaDeporte();
         }
-
+        /// <summary>
+        /// Método que llama al txtFiltar para preparar el dato que tiene ingresado dentro
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void opcionSeleccionadaBuscarDeporte(object sender, EventArgs e)
         {
             vista.txtFiltrar.Text = "";
         }
-
+        /// <summary>
+        /// Método que sirve para llenar el modelo con lo que se ingresó dentro del textox de deporte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
         {
             llenarModeloConFilaSeleccionada();
@@ -105,7 +125,11 @@ namespace Controlador
             nombre = vista.tablaDeportes.SelectedRows[0].Cells[1].Value.ToString();
             modeloFila.pkId = id;
         }
-
+        /// <summary>
+        /// Método que sirve para cargar los datos dentro del form de deporte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cargarForm(object sender, EventArgs e)
         {
             try
@@ -118,7 +142,9 @@ namespace Controlador
                 abrirForm(new formError(error));
             }
         }
-
+        /// <summary>
+        /// Método que sirve para actualizar la tablaDeportes
+        /// </summary>
         public void actualizarTablaDeporte()
         {
             vista.deporteTableAdapter.Fill(vista.vwDeportes.deporte);

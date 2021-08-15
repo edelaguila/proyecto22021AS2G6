@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 
 namespace Modelo.DAO
 {
+    /// <summary>
+    /// Clase utilizada para agregar, modificar, eliminar o mostrar los campos de usuario en la base de datos.
+    /// </summary>
     class daoUsuario
     {
         private ConexionODBC ODBC = new ConexionODBC();

@@ -7,6 +7,9 @@ using System.Windows.Forms;
 
 namespace Controlador
 {
+    /// <summary>
+    /// Clase que gestiona la tabla de roles de la base de datos
+    /// </summary>
     class controladorRol
     {
         private int id;
@@ -19,7 +22,10 @@ namespace Controlador
         public controladorRol()
         {
         }
-
+        /// <summary>
+        /// Método que sirve para cargar los eventos que van dentro de cada elemento en el formRol
+        /// </summary>
+        /// <param name="Vista"></param>
         public controladorRol(formRol Vista)
         {
             vista = Vista;
@@ -39,12 +45,20 @@ namespace Controlador
             vista.txtFiltrarRol.TextChanged += new EventHandler(cambioEnTextoFiltrarRol);
             vista.cboBuscarRol.SelectedIndexChanged += new EventHandler(opcionSeleccionadaBuscarRol);
         }
-
+        /// <summary>
+        /// Método que sirve para cargar en las tablas las vistas creadas en la base de datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cargarForm(object sender, EventArgs e)
         {
             vista.vwrolTableAdapter.Fill(vista.vwRol.vwrol);
         }
-
+        /// <summary>
+        /// Método que sirve para eliminar la opción seleccionada de la tabla 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickEliminarRol(object sender, EventArgs e)
         {
             int id = stringAInt(vista.tablaRol.SelectedRows[0].Cells[0].Value.ToString());
@@ -54,17 +68,29 @@ namespace Controlador
             controlador.eliminarRol(modelo);
             actualizarTablaRol();
         }
-
+        /// <summary>
+        /// Método que manda a llamar la función de actualizar tabla, para que se actualice la tablaRoles
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickActualizarRol(object sender, EventArgs e)
         {
             actualizarTablaRol();
         }
-
+        /// <summary>
+        /// Método que sirve para buscar en la tabla roles lo ingresado en el txt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void opcionSeleccionadaBuscarRol(object sender, EventArgs e)
         {
             vista.txtFiltrarRol.Text = "";
         }
-
+        /// <summary>
+        /// Método que sirve para filtrar los datos que están dentro dentro de la tabla roles
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cambioEnTextoFiltrarRol(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(vista.txtFiltrarRol.Text))
@@ -76,7 +102,11 @@ namespace Controlador
                 vista.vwrolBindingSource.Filter = string.Format("{0}='{1}'", vista.cboBuscarRol.Text, vista.txtFiltrarRol.Text);
             }
         }
-
+        /// <summary>
+        /// Método que manda a llamar al daoRol que contiene el método modificarRol que sirve para modificar roles dentro de la tabla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickModificarRol(object sender, EventArgs e)
         {
             daoRol modeloModificar = new daoRol();
@@ -86,7 +116,11 @@ namespace Controlador
             modeloModificar.modificarRol(modeloFila);
             actualizarTablaRol();
         }
-
+        /// <summary>
+        /// Método que manda a llamar al daoRol al método agregarRol que sirve para agregar roles dentro de la tablaRoles
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickAgregarRol(object sender, EventArgs e)
         {
             daoRol modeloAgregar = new daoRol();
@@ -96,18 +130,26 @@ namespace Controlador
             modeloAgregar.agregarRol(modelo);
             actualizarTablaRol();
         }
-
+        /// <summary>
+        /// Método que sirve para llenar el modelo con lo que se ingresó dentro del textox de rol
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clickCeldaDeLaTabla(object sender, DataGridViewCellEventArgs e)
         {
             llenarModeloConFilaSeleccionada();
             vista.txtNombreRol.Text = nombre;
         }
-
+        /// <summary>
+        /// Método que sirve para actualizar la tablaRoles
+        /// </summary>
         public void actualizarTablaRol()
         {
             vista.vwrolTableAdapter.Fill(vista.vwRol.vwrol);
         }
-
+        /// <summary>
+        /// Llena la tabla de deporte con lo que se tiene ingresado en el dtoRol
+        /// </summary>
         private void llenarModeloConFilaSeleccionada()
         {
             id = stringAInt(vista.tablaRol.SelectedRows[0].Cells[0].Value.ToString());
